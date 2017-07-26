@@ -1,0 +1,3380 @@
+<Type Name="SyntaxFacts" FullName="Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts">
+  <TypeSignature Language="C#" Value="public class SyntaxFacts" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SyntaxFacts extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+    <AssemblyVersion>2.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+ Provides members for determining Syntax facts about characters and Unicode conversions.
+ </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyntaxFacts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowsLeadingImplicitLineContinuation">
+      <MemberSignature Language="C#" Value="public static bool AllowsLeadingImplicitLineContinuation (Microsoft.CodeAnalysis.SyntaxToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool AllowsLeadingImplicitLineContinuation(valuetype Microsoft.CodeAnalysis.SyntaxToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.AllowsLeadingImplicitLineContinuation(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">The token to test. This token must be parented by a SyntaxNode.</param>
+        <summary>
+ Indicates whether a newline may validly precede the specified SyntaxToken without requiring an explicit line continuation sequence ' _' or terminating the containing statement.
+ </summary>
+        <returns>True if implicit line continuation is allowed after token.</returns>
+        <remarks>
+          <para>Refer to "Statements in Visual Basic", 2010 version, http://msdn.microsoft.com/en-us/library/865x40k4(v=vs.100).aspx 
+ for examples.</para>
+          <para>Implicit line continuation may be used in Visual Basic: </para>
+          <list>
+            <item>After a comma (,).</item>
+            <item>After a less-than sign (&lt;) or before a greater-than sign (&gt;) when you specify an attribute.</item>
+            <item>After an open parenthesis (() or before a closing parenthesis ()).</item>
+            <item>After an open curly brace ({) or before a closing curly brace (}).</item>
+            <item>After an open embedded expression (&lt;%=) or before the close of an embedded expression (%&gt;) within an XML literal.</item>
+            <item>
+              <para>Before and after query operators (Aggregate, Distinct, From, Group By, Group Join, Join, Let, 
+ Order By, Select, Skip, Skip While, Take, Take While, Where, In, Into, On, Ascending, and Descending).</para>
+              <para>You cannot break a line between the keywords of query operators that are made up of multiple keywords 
+ (Order By, Group Join, Take While, and Skip While).</para>
+            </item>
+            <item>After the concatenation operator (&amp;).</item>
+            <item>After assignment operators (=, &amp;=, :=, +=, -=, *=, /=, \=, ^=, &lt;&lt;=, &gt;&gt;=).</item>
+            <item>After binary operators (+, -, /, *, Mod, &lt;&gt;, &lt;, &gt;, &lt;=, &gt;=, ^, &gt;&gt;, &lt;&lt;, And, AndAlso, Or, OrElse, Like, Xor) within an expression.</item>
+            <item>After the Is and IsNot operators.</item>
+            <item>After a less-than sign (&lt;) or before a greater-than sign (&gt;) when you specify an attribute.</item>
+            <item>
+              <para>Also after a greater-than sign (&gt;) when you specify an attribute.</para>
+              <para>However, you must include a line-continuation character (_) when you specify assembly-level or module-level attributes.</para>
+            </item>
+            <item>
+              <para>After a member qualifier character (.) and before the member name.</para>
+              <para>However, you must include a line-continuation character (_) following a member qualifier character when you are using the With statement or 
+ supplying values in the initialization list for a type.</para>
+            </item>
+            <item>
+              <para>After an XML axis property qualifier (. or ...).</para>
+              <para>However, you must include a line-continuation character (_) when you specify a member qualifier when you are using the With keyword.</para>
+            </item>
+            <item>After the From keyword in a collection initializer.</item>
+            <item>After the With keyword in a member initializer.</item>
+            <item>After the In keyword in a For Each statement.</item>
+          </list>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowsTrailingImplicitLineContinuation">
+      <MemberSignature Language="C#" Value="public static bool AllowsTrailingImplicitLineContinuation (Microsoft.CodeAnalysis.SyntaxToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool AllowsTrailingImplicitLineContinuation(valuetype Microsoft.CodeAnalysis.SyntaxToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.AllowsTrailingImplicitLineContinuation(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">The token to test. This token must be parented by a SyntaxNode.</param>
+        <summary>
+ Indicates whether a newline may validly follow the specified SyntaxToken without requiring an explicit line continuation sequence ' _' or terminating the containing statement.
+ </summary>
+        <returns>True if implicit line continuation is allowed after token.</returns>
+        <remarks>
+          <para>Refer to "Statements in Visual Basic", 2010 version, http://msdn.microsoft.com/en-us/library/865x40k4(v=vs.100).aspx 
+ for examples.</para>
+          <para>Implicit line continuation may be used in Visual Basic: </para>
+          <list>
+            <item>After a comma (,).</item>
+            <item>After a less-than sign (&lt;) or before a greater-than sign (&gt;) when you specify an attribute.</item>
+            <item>After an open parenthesis (() or before a closing parenthesis ()).</item>
+            <item>After an open curly brace ({) or before a closing curly brace (}).</item>
+            <item>After an open embedded expression (&lt;%=) or before the close of an embedded expression (%&gt;) within an XML literal.</item>
+            <item>
+              <para>Before and after query operators (Aggregate, Distinct, From, Group By, Group Join, Join, Let, 
+ Order By, Select, Skip, Skip While, Take, Take While, Where, In, Into, On, Ascending, and Descending).</para>
+              <para>You cannot break a line between the keywords of query operators that are made up of multiple keywords 
+ (Order By, Group Join, Take While, and Skip While).</para>
+            </item>
+            <item>After the concatenation operator (&amp;).</item>
+            <item>After assignment operators (=, &amp;=, :=, +=, -=, *=, /=, \=, ^=, &lt;&lt;=, &gt;&gt;=).</item>
+            <item>After binary operators (+, -, /, *, Mod, &lt;&gt;, &lt;, &gt;, &lt;=, &gt;=, ^, &gt;&gt;, &lt;&lt;, And, AndAlso, Or, OrElse, Like, Xor) within an expression.</item>
+            <item>After the Is and IsNot operators.</item>
+            <item>After a less-than sign (&lt;) or before a greater-than sign (&gt;) when you specify an attribute.</item>
+            <item>
+              <para>Also after a greater-than sign (&gt;) when you specify an attribute.</para>
+              <para>However, you must include a line-continuation character (_) when you specify assembly-level or module-level attributes.</para>
+            </item>
+            <item>
+              <para>After a member qualifier character (.) and before the member name.</para>
+              <para>However, you must include a line-continuation character (_) following a member qualifier character when you are using the With statement or 
+ supplying values in the initialization list for a type.</para>
+            </item>
+            <item>
+              <para>After an XML axis property qualifier (. or ...).</para>
+              <para>However, you must include a line-continuation character (_) when you specify a member qualifier when you are using the With keyword.</para>
+            </item>
+            <item>After the From keyword in a collection initializer.</item>
+            <item>After the With keyword in a member initializer.</item>
+            <item>After the In keyword in a For Each statement.</item>
+          </list>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityComparer">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEqualityComparer&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; EqualityComparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IEqualityComparer`1&lt;valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; EqualityComparer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.EqualityComparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEqualityComparer&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+ A custom equality comparer for <see cref="T:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" /></summary>
+        <value>To be added.</value>
+        <remarks>
+ PERF: The framework specializes EqualityComparer for enums, but only if the underlying type is System.Int32
+ Since SyntaxKind's underlying type is System.UInt16, ObjectEqualityComparer will be chosen instead.
+ </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessorStatementKind">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetAccessorStatementKind (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetAccessorStatementKind(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetAccessorStatementKind(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaseTypeStatementKind">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetBaseTypeStatementKind (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetBaseTypeStatementKind(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetBaseTypeStatementKind(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBinaryExpression">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetBinaryExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetBinaryExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetBinaryExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBlockName">
+      <MemberSignature Language="C#" Value="public static string GetBlockName (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string GetBlockName(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetBlockName(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+ Return keyword or punctuation text based on SyntaxKind
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextualKeywordKind">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetContextualKeywordKind (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetContextualKeywordKind(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetContextualKeywordKind(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextualKeywordKinds">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetContextualKeywordKinds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetContextualKeywordKinds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetContextualKeywordKinds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+ Get contextual keywords
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInstanceExpression">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetInstanceExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetInstanceExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetInstanceExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+ Return correspondent expression syntax for 'Me', 'MyBase' and 'MyClass' 
+ keywords or SyntaxKind.None for other syntax kinds
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeywordKind">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetKeywordKind (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetKeywordKind(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetKeywordKind(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeywordKinds">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetKeywordKinds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetKeywordKinds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetKeywordKinds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+ Get all reserved and contextual keywords
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLiteralExpression">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetLiteralExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetLiteralExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetLiteralExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperatorKind">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetOperatorKind (string operatorMetadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetOperatorKind(string operatorMetadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetOperatorKind(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operatorMetadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operatorMetadataName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreprocessorKeywordKind">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetPreprocessorKeywordKind (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetPreprocessorKeywordKind(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetPreprocessorKeywordKind(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreprocessorKeywordKinds">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetPreprocessorKeywordKinds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetPreprocessorKeywordKinds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetPreprocessorKeywordKinds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+ Get preprocessor keywords
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPunctuationKinds">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetPunctuationKinds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetPunctuationKinds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetPunctuationKinds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+ Get punctuations
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReservedKeywordKinds">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetReservedKeywordKinds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt; GetReservedKeywordKinds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetReservedKeywordKinds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.VisualBasic.SyntaxKind&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+ Get all reserved keywords
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText (Microsoft.CodeAnalysis.Accessibility accessibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string GetText(valuetype Microsoft.CodeAnalysis.Accessibility accessibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetText(Microsoft.CodeAnalysis.Accessibility)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessibility" Type="Microsoft.CodeAnalysis.Accessibility" />
+      </Parameters>
+      <Docs>
+        <param name="accessibility">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string GetText(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetText(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+ Return keyword or punctuation text based on SyntaxKind
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeStatementKind">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetTypeStatementKind (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetTypeStatementKind(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetTypeStatementKind(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnaryExpression">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetUnaryExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind GetUnaryExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.GetUnaryExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.SyntaxKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAccessibilityModifier">
+      <MemberSignature Language="C#" Value="public static bool IsAccessibilityModifier (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAccessibilityModifier(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAccessibilityModifier(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAccessorBlock">
+      <MemberSignature Language="C#" Value="public static bool IsAccessorBlock (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAccessorBlock(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAccessorBlock(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAccessorStatement">
+      <MemberSignature Language="C#" Value="public static bool IsAccessorStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAccessorStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAccessorStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAccessorStatementAccessorKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsAccessorStatementAccessorKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAccessorStatementAccessorKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAccessorStatementAccessorKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAccessorStatementKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsAccessorStatementKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAccessorStatementKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAccessorStatementKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This member is obsolete. Use IsAccessorStatementAccessorKeyword instead.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAddRemoveHandlerStatement">
+      <MemberSignature Language="C#" Value="public static bool IsAddRemoveHandlerStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAddRemoveHandlerStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAddRemoveHandlerStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAddRemoveHandlerStatementAddHandlerOrRemoveHandlerKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsAddRemoveHandlerStatementAddHandlerOrRemoveHandlerKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAddRemoveHandlerStatementAddHandlerOrRemoveHandlerKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAddRemoveHandlerStatementAddHandlerOrRemoveHandlerKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAddressOfOperand">
+      <MemberSignature Language="C#" Value="public static bool IsAddressOfOperand (Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAddressOfOperand(class Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAddressOfOperand(Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+ Returns true if the node is the operand of an AddressOf expression
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAnyToken">
+      <MemberSignature Language="C#" Value="public static bool IsAnyToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAnyToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAnyToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssignmentStatement">
+      <MemberSignature Language="C#" Value="public static bool IsAssignmentStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAssignmentStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAssignmentStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssignmentStatementOperatorToken">
+      <MemberSignature Language="C#" Value="public static bool IsAssignmentStatementOperatorToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAssignmentStatementOperatorToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAssignmentStatementOperatorToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAttributeName">
+      <MemberSignature Language="C#" Value="public static bool IsAttributeName (Microsoft.CodeAnalysis.SyntaxNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAttributeName(class Microsoft.CodeAnalysis.SyntaxNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAttributeName(Microsoft.CodeAnalysis.SyntaxNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.SyntaxNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+ Checks if the SyntaxNode is an attribute name. To be an attribute name, the syntax
+ must be parented by an Attribute and the node itself must be equal to the Attribute.Name
+ property.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAttributeTargetAttributeModifier">
+      <MemberSignature Language="C#" Value="public static bool IsAttributeTargetAttributeModifier (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsAttributeTargetAttributeModifier(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsAttributeTargetAttributeModifier(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBinaryExpression">
+      <MemberSignature Language="C#" Value="public static bool IsBinaryExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsBinaryExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsBinaryExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBinaryExpressionOperatorToken">
+      <MemberSignature Language="C#" Value="public static bool IsBinaryExpressionOperatorToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsBinaryExpressionOperatorToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsBinaryExpressionOperatorToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCaseBlock">
+      <MemberSignature Language="C#" Value="public static bool IsCaseBlock (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsCaseBlock(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsCaseBlock(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCaseStatement">
+      <MemberSignature Language="C#" Value="public static bool IsCaseStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsCaseStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsCaseStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsColon">
+      <MemberSignature Language="C#" Value="public static bool IsColon (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsColon(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsColon(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">The unicode character.</param>
+        <summary>
+ Determines if the unicode character is a colon character.
+ </summary>
+        <returns>A boolean value set to True if character is a colon character.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContextualKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsContextualKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsContextualKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsContextualKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+ Determine if the kind represents a contextual keyword
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContinueStatement">
+      <MemberSignature Language="C#" Value="public static bool IsContinueStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsContinueStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsContinueStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContinueStatementBlockKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsContinueStatementBlockKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsContinueStatementBlockKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsContinueStatementBlockKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCrefOperatorReferenceOperatorToken">
+      <MemberSignature Language="C#" Value="public static bool IsCrefOperatorReferenceOperatorToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsCrefOperatorReferenceOperatorToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsCrefOperatorReferenceOperatorToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCrefSignaturePartModifier">
+      <MemberSignature Language="C#" Value="public static bool IsCrefSignaturePartModifier (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsCrefSignaturePartModifier(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsCrefSignaturePartModifier(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeclareStatement">
+      <MemberSignature Language="C#" Value="public static bool IsDeclareStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDeclareStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsDeclareStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeclareStatementCharsetKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsDeclareStatementCharsetKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDeclareStatementCharsetKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsDeclareStatementCharsetKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeclareStatementKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsDeclareStatementKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDeclareStatementKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsDeclareStatementKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This member is obsolete. Use IsDeclareStatementSubOrFunctionKeyword instead.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeclareStatementSubOrFunctionKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsDeclareStatementSubOrFunctionKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDeclareStatementSubOrFunctionKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsDeclareStatementSubOrFunctionKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDelegateStatement">
+      <MemberSignature Language="C#" Value="public static bool IsDelegateStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDelegateStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsDelegateStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDelegateStatementKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsDelegateStatementKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDelegateStatementKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsDelegateStatementKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This member is obsolete. Use IsDelegateStatementSubOrFunctionKeyword instead.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDelegateStatementSubOrFunctionKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsDelegateStatementSubOrFunctionKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDelegateStatementSubOrFunctionKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsDelegateStatementSubOrFunctionKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDoLoopBlock">
+      <MemberSignature Language="C#" Value="public static bool IsDoLoopBlock (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDoLoopBlock(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsDoLoopBlock(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDoStatement">
+      <MemberSignature Language="C#" Value="public static bool IsDoStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsDoStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsDoStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEndBlockStatement">
+      <MemberSignature Language="C#" Value="public static bool IsEndBlockStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsEndBlockStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsEndBlockStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEndBlockStatementBlockKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsEndBlockStatementBlockKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsEndBlockStatementBlockKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsEndBlockStatementBlockKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExitStatement">
+      <MemberSignature Language="C#" Value="public static bool IsExitStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsExitStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsExitStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExitStatementBlockKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsExitStatementBlockKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsExitStatementBlockKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsExitStatementBlockKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHash">
+      <MemberSignature Language="C#" Value="public static bool IsHash (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsHash(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsHash(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">The unicode character.</param>
+        <summary>
+ Determines if the unicode character is a hash character.
+ </summary>
+        <returns>A boolean value set to True if character is a hash character.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdentifierPartCharacter">
+      <MemberSignature Language="C#" Value="public static bool IsIdentifierPartCharacter (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsIdentifierPartCharacter(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsIdentifierPartCharacter(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">The Unicode character.</param>
+        <summary>
+ Determines if the Unicode character can be a part of a Visual Basic identifier.
+ </summary>
+        <returns>A boolean value set to True if character can be part of a valid identifier.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdentifierStartCharacter">
+      <MemberSignature Language="C#" Value="public static bool IsIdentifierStartCharacter (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsIdentifierStartCharacter(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsIdentifierStartCharacter(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">The Unicode character.</param>
+        <summary>
+ Determines if the Unicode character can be the starting character of a Visual Basic identifier.
+ </summary>
+        <returns>A boolean value set to True if character can be part of a valid start character in an identifier.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIfDirectiveTrivia">
+      <MemberSignature Language="C#" Value="public static bool IsIfDirectiveTrivia (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsIfDirectiveTrivia(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsIfDirectiveTrivia(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIfDirectiveTriviaIfOrElseIfKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsIfDirectiveTriviaIfOrElseIfKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsIfDirectiveTriviaIfOrElseIfKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsIfDirectiveTriviaIfOrElseIfKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInNamespaceOrTypeContext">
+      <MemberSignature Language="C#" Value="public static bool IsInNamespaceOrTypeContext (Microsoft.CodeAnalysis.SyntaxNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsInNamespaceOrTypeContext(class Microsoft.CodeAnalysis.SyntaxNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsInNamespaceOrTypeContext(Microsoft.CodeAnalysis.SyntaxNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.SyntaxNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInstanceExpression">
+      <MemberSignature Language="C#" Value="public static bool IsInstanceExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsInstanceExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsInstanceExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+ Determine if the token instance represents 'Me', 'MyBase' or 'MyClass' keywords
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInTypeOnlyContext">
+      <MemberSignature Language="C#" Value="public static bool IsInTypeOnlyContext (Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsInTypeOnlyContext(class Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsInTypeOnlyContext(Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInvocationOrAddressOfOperand">
+      <MemberSignature Language="C#" Value="public static bool IsInvocationOrAddressOfOperand (Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsInvocationOrAddressOfOperand(class Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsInvocationOrAddressOfOperand(Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+ Returns true if the node is the operand of an AddressOf expression, or the object
+ of an invocation. This is used for special binding rules around the return value variable 
+ inside Functions and Property Get accessors.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInvoked">
+      <MemberSignature Language="C#" Value="public static bool IsInvoked (Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsInvoked(class Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsInvoked(Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+ Returns true if the node is the object of an invocation expression
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeywordEventContainerKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsKeywordEventContainerKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsKeywordEventContainerKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsKeywordEventContainerKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeywordKind">
+      <MemberSignature Language="C#" Value="public static bool IsKeywordKind (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsKeywordKind(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsKeywordKind(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLabel">
+      <MemberSignature Language="C#" Value="public static bool IsLabel (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLabel(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLabel(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLabelLabelToken">
+      <MemberSignature Language="C#" Value="public static bool IsLabelLabelToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLabelLabelToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLabelLabelToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLabelStatementLabelToken">
+      <MemberSignature Language="C#" Value="public static bool IsLabelStatementLabelToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLabelStatementLabelToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLabelStatementLabelToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLambdaHeader">
+      <MemberSignature Language="C#" Value="public static bool IsLambdaHeader (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLambdaHeader(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLambdaHeader(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLambdaHeaderKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsLambdaHeaderKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLambdaHeaderKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLambdaHeaderKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This member is obsolete. Use IsLambdaHeaderSubOrFunctionKeyword instead.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLambdaHeaderSubOrFunctionKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsLambdaHeaderSubOrFunctionKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLambdaHeaderSubOrFunctionKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLambdaHeaderSubOrFunctionKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLanguagePunctuation">
+      <MemberSignature Language="C#" Value="public static bool IsLanguagePunctuation (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLanguagePunctuation(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLanguagePunctuation(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiteralExpression">
+      <MemberSignature Language="C#" Value="public static bool IsLiteralExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLiteralExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLiteralExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiteralExpressionToken">
+      <MemberSignature Language="C#" Value="public static bool IsLiteralExpressionToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLiteralExpressionToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLiteralExpressionToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoopStatement">
+      <MemberSignature Language="C#" Value="public static bool IsLoopStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsLoopStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsLoopStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMemberAccessExpression">
+      <MemberSignature Language="C#" Value="public static bool IsMemberAccessExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsMemberAccessExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsMemberAccessExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMemberAccessExpressionOperatorToken">
+      <MemberSignature Language="C#" Value="public static bool IsMemberAccessExpressionOperatorToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsMemberAccessExpressionOperatorToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsMemberAccessExpressionOperatorToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMethodBlock">
+      <MemberSignature Language="C#" Value="public static bool IsMethodBlock (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsMethodBlock(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsMethodBlock(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMethodStatement">
+      <MemberSignature Language="C#" Value="public static bool IsMethodStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsMethodStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsMethodStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMethodStatementKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsMethodStatementKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsMethodStatementKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsMethodStatementKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This member is obsolete. Use IsMethodStatementSubOrFunctionKeyword instead.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMethodStatementSubOrFunctionKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsMethodStatementSubOrFunctionKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsMethodStatementSubOrFunctionKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsMethodStatementSubOrFunctionKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMultiLineLambdaExpression">
+      <MemberSignature Language="C#" Value="public static bool IsMultiLineLambdaExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsMultiLineLambdaExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsMultiLineLambdaExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsName">
+      <MemberSignature Language="C#" Value="public static bool IsName (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsName(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsName(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNamedArgumentName">
+      <MemberSignature Language="C#" Value="public static bool IsNamedArgumentName (Microsoft.CodeAnalysis.SyntaxNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsNamedArgumentName(class Microsoft.CodeAnalysis.SyntaxNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsNamedArgumentName(Microsoft.CodeAnalysis.SyntaxNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.SyntaxNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+ Is the node the name of a named argument of an invocation or object creation expression, 
+ but not an attribute.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNamespaceMemberDeclaration">
+      <MemberSignature Language="C#" Value="public static bool IsNamespaceMemberDeclaration (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsNamespaceMemberDeclaration(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsNamespaceMemberDeclaration(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNewLine">
+      <MemberSignature Language="C#" Value="public static bool IsNewLine (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsNewLine(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsNewLine(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">The Unicode character.</param>
+        <summary>
+ Determines if the Unicode character is a newline character.
+ </summary>
+        <returns>A boolean value set to True if character is a newline character.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOnErrorGoToStatement">
+      <MemberSignature Language="C#" Value="public static bool IsOnErrorGoToStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsOnErrorGoToStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsOnErrorGoToStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOperator">
+      <MemberSignature Language="C#" Value="public static bool IsOperator (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsOperator(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsOperator(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOperatorStatementOperatorToken">
+      <MemberSignature Language="C#" Value="public static bool IsOperatorStatementOperatorToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsOperatorStatementOperatorToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsOperatorStatementOperatorToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOptionStatementNameKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsOptionStatementNameKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsOptionStatementNameKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsOptionStatementNameKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOptionStatementValueKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsOptionStatementValueKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsOptionStatementValueKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsOptionStatementValueKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOrdering">
+      <MemberSignature Language="C#" Value="public static bool IsOrdering (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsOrdering(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsOrdering(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOrderingAscendingOrDescendingKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsOrderingAscendingOrDescendingKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsOrderingAscendingOrDescendingKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsOrderingAscendingOrDescendingKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPartitionClause">
+      <MemberSignature Language="C#" Value="public static bool IsPartitionClause (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPartitionClause(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPartitionClause(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPartitionClauseSkipOrTakeKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsPartitionClauseSkipOrTakeKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPartitionClauseSkipOrTakeKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPartitionClauseSkipOrTakeKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPartitionWhileClause">
+      <MemberSignature Language="C#" Value="public static bool IsPartitionWhileClause (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPartitionWhileClause(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPartitionWhileClause(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPartitionWhileClauseSkipOrTakeKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsPartitionWhileClauseSkipOrTakeKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPartitionWhileClauseSkipOrTakeKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPartitionWhileClauseSkipOrTakeKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPredefinedCastExpressionKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsPredefinedCastExpressionKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPredefinedCastExpressionKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPredefinedCastExpressionKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPredefinedType">
+      <MemberSignature Language="C#" Value="public static bool IsPredefinedType (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPredefinedType(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPredefinedType(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+ Helper to check whether the token is a predefined type
+ </summary>
+        <returns>True if it is a predefined type</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPreprocessorDirective">
+      <MemberSignature Language="C#" Value="public static bool IsPreprocessorDirective (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPreprocessorDirective(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPreprocessorDirective(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPreprocessorKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsPreprocessorKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPreprocessorKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPreprocessorKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+ Determine if the token instance represents a preprocessor keyword
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPreprocessorPunctuation">
+      <MemberSignature Language="C#" Value="public static bool IsPreprocessorPunctuation (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPreprocessorPunctuation(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPreprocessorPunctuation(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPunctuation">
+      <MemberSignature Language="C#" Value="public static bool IsPunctuation (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPunctuation(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPunctuation(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPunctuationOrKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsPunctuationOrKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsPunctuationOrKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsPunctuationOrKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReDimStatement">
+      <MemberSignature Language="C#" Value="public static bool IsReDimStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsReDimStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsReDimStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRelationalCaseClause">
+      <MemberSignature Language="C#" Value="public static bool IsRelationalCaseClause (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsRelationalCaseClause(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsRelationalCaseClause(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRelationalCaseClauseOperatorToken">
+      <MemberSignature Language="C#" Value="public static bool IsRelationalCaseClauseOperatorToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsRelationalCaseClauseOperatorToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsRelationalCaseClauseOperatorToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRelationalOperator">
+      <MemberSignature Language="C#" Value="public static bool IsRelationalOperator (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsRelationalOperator(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsRelationalOperator(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReservedKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsReservedKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsReservedKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsReservedKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+ Determine if the kind represents a reserved keyword
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReservedTupleElementName">
+      <MemberSignature Language="C#" Value="public static bool IsReservedTupleElementName (string elementName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsReservedTupleElementName(string elementName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsReservedTupleElementName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">To be added.</param>
+        <summary>
+ Checks whether the element name is reserved.
+
+ For example:
+ "Item3" is reserved.
+ "Rest", "ToString" and other members of System.ValueTuple are reserved.
+ Names that are not reserved return False.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsResumeStatement">
+      <MemberSignature Language="C#" Value="public static bool IsResumeStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsResumeStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsResumeStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSingleLineLambdaExpression">
+      <MemberSignature Language="C#" Value="public static bool IsSingleLineLambdaExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsSingleLineLambdaExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsSingleLineLambdaExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSpecialConstraint">
+      <MemberSignature Language="C#" Value="public static bool IsSpecialConstraint (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsSpecialConstraint(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsSpecialConstraint(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSpecialConstraintConstraintKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsSpecialConstraintConstraintKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsSpecialConstraintConstraintKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsSpecialConstraintConstraintKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStopOrEndStatement">
+      <MemberSignature Language="C#" Value="public static bool IsStopOrEndStatement (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsStopOrEndStatement(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsStopOrEndStatement(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStopOrEndStatementStopOrEndKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsStopOrEndStatementStopOrEndKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsStopOrEndStatementStopOrEndKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsStopOrEndStatementStopOrEndKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrivia">
+      <MemberSignature Language="C#" Value="public static bool IsTrivia (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind this);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsTrivia(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind this) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsTrivia(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="this" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="this">To be added.</param>
+        <summary>
+ Determine if the token instance represents a syntax trivia such as comment, whitespace, etc...
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTypeOfExpression">
+      <MemberSignature Language="C#" Value="public static bool IsTypeOfExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsTypeOfExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsTypeOfExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTypeOfExpressionOperatorToken">
+      <MemberSignature Language="C#" Value="public static bool IsTypeOfExpressionOperatorToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsTypeOfExpressionOperatorToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsTypeOfExpressionOperatorToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTypeParameterVarianceKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsTypeParameterVarianceKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsTypeParameterVarianceKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsTypeParameterVarianceKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnaryExpression">
+      <MemberSignature Language="C#" Value="public static bool IsUnaryExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsUnaryExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsUnaryExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnaryExpressionOperatorToken">
+      <MemberSignature Language="C#" Value="public static bool IsUnaryExpressionOperatorToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsUnaryExpressionOperatorToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsUnaryExpressionOperatorToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnderscore">
+      <MemberSignature Language="C#" Value="public static bool IsUnderscore (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsUnderscore(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsUnderscore(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">The unicode character.</param>
+        <summary>
+ Determines if the unicode character is a underscore character.
+ </summary>
+        <returns>A boolean value set to True if character is an underscore character.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidIdentifier">
+      <MemberSignature Language="C#" Value="public static bool IsValidIdentifier (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsValidIdentifier(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsValidIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The identifier name.</param>
+        <summary>
+ Determines if the name is a valid identifier.
+ </summary>
+        <returns>A boolean value set to True if name is valid identifier.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWhileOrUntilClause">
+      <MemberSignature Language="C#" Value="public static bool IsWhileOrUntilClause (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsWhileOrUntilClause(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsWhileOrUntilClause(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWhileOrUntilClauseWhileOrUntilKeyword">
+      <MemberSignature Language="C#" Value="public static bool IsWhileOrUntilClauseWhileOrUntilKeyword (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsWhileOrUntilClauseWhileOrUntilKeyword(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsWhileOrUntilClauseWhileOrUntilKeyword(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWhitespace">
+      <MemberSignature Language="C#" Value="public static bool IsWhitespace (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsWhitespace(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsWhitespace(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">The Unicode character.</param>
+        <summary>
+ Determines if Unicode character represents a whitespace.
+ </summary>
+        <returns>A boolean value set to True if character represents whitespace.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlCrefAttributeEndQuoteToken">
+      <MemberSignature Language="C#" Value="public static bool IsXmlCrefAttributeEndQuoteToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlCrefAttributeEndQuoteToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlCrefAttributeEndQuoteToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlCrefAttributeStartQuoteToken">
+      <MemberSignature Language="C#" Value="public static bool IsXmlCrefAttributeStartQuoteToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlCrefAttributeStartQuoteToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlCrefAttributeStartQuoteToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlMemberAccessExpression">
+      <MemberSignature Language="C#" Value="public static bool IsXmlMemberAccessExpression (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlMemberAccessExpression(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlMemberAccessExpression(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlMemberAccessExpressionToken2">
+      <MemberSignature Language="C#" Value="public static bool IsXmlMemberAccessExpressionToken2 (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlMemberAccessExpressionToken2(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlMemberAccessExpressionToken2(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlNameAttributeEndQuoteToken">
+      <MemberSignature Language="C#" Value="public static bool IsXmlNameAttributeEndQuoteToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlNameAttributeEndQuoteToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlNameAttributeEndQuoteToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlNameAttributeStartQuoteToken">
+      <MemberSignature Language="C#" Value="public static bool IsXmlNameAttributeStartQuoteToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlNameAttributeStartQuoteToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlNameAttributeStartQuoteToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlStringEndQuoteToken">
+      <MemberSignature Language="C#" Value="public static bool IsXmlStringEndQuoteToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlStringEndQuoteToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlStringEndQuoteToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlStringStartQuoteToken">
+      <MemberSignature Language="C#" Value="public static bool IsXmlStringStartQuoteToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlStringStartQuoteToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlStringStartQuoteToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlTextToken">
+      <MemberSignature Language="C#" Value="public static bool IsXmlTextToken (Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlTextToken(valuetype Microsoft.CodeAnalysis.VisualBasic.SyntaxKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlTextToken(Microsoft.CodeAnalysis.VisualBasic.SyntaxKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.VisualBasic.SyntaxKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXmlWhitespace">
+      <MemberSignature Language="C#" Value="public static bool IsXmlWhitespace (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool IsXmlWhitespace(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.IsXmlWhitespace(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">The unicode character</param>
+        <summary>
+ Determines if Unicode character represents a XML whitespace.
+ </summary>
+        <returns>A boolean value set to True if character represents XML whitespace.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeHalfWidthIdentifier">
+      <MemberSignature Language="C#" Value="public static string MakeHalfWidthIdentifier (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string MakeHalfWidthIdentifier(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.MakeHalfWidthIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">The text representing the original identifier.  This can be in full width or half width Unicode form.  </param>
+        <summary>
+ Creates a half width form Unicode character string. 
+ </summary>
+        <returns>A string representing the text in a half width Unicode form.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VarianceKindFromToken">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VarianceKind VarianceKindFromToken (Microsoft.CodeAnalysis.SyntaxToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.CodeAnalysis.VarianceKind VarianceKindFromToken(valuetype Microsoft.CodeAnalysis.SyntaxToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFacts.VarianceKindFromToken(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VarianceKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
