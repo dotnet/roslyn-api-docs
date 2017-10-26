@@ -1,0 +1,246 @@
+﻿<Type Name="AnalyzerFileReference" FullName="Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference">
+  <TypeSignature Language="C#" Value="public sealed class AnalyzerFileReference : Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference, IEquatable&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AnalyzerFileReference extends Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents analyzers stored in an analyzer assembly file.
+            </summary>
+    <remarks>
+            Analyzer are read from the file, owned by the reference, and doesn't change 
+            since the reference is accessed until the reference object is garbage collected.
+            
+            If you need to manage the lifetime of the analyzer reference (and the file stream) explicitly use <see cref="T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerImageReference" />.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnalyzerFileReference (string fullPath, Microsoft.CodeAnalysis.IAnalyzerAssemblyLoader assemblyLoader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fullPath, class Microsoft.CodeAnalysis.IAnalyzerAssemblyLoader assemblyLoader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.#ctor(System.String,Microsoft.CodeAnalysis.IAnalyzerAssemblyLoader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fullPath" Type="System.String" />
+        <Parameter Name="assemblyLoader" Type="Microsoft.CodeAnalysis.IAnalyzerAssemblyLoader" />
+      </Parameters>
+      <Docs>
+        <param name="fullPath">Full path of the analyzer assembly.</param>
+        <param name="assemblyLoader">Loader for obtaining the <see cref="T:System.Reflection.Assembly" /> from the <paramref name="fullPath" /></param>
+        <summary>
+            Creates an AnalyzerFileReference with the given <paramref name="fullPath" /> and <paramref name="assemblyLoader" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzerLoadFailed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerLoadFailureEventArgs&gt; AnalyzerLoadFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.CodeAnalysis.Diagnostics.AnalyzerLoadFailureEventArgs&gt; AnalyzerLoadFailed" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.AnalyzerLoadFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerLoadFailureEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public override string Display { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Display" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Equals(Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public override string FullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.FullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnalyzers">
+      <MemberSignature Language="C#" Value="public override System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; GetAnalyzers (string language);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; GetAnalyzers(string language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetAnalyzers(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="language">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnalyzersForAllLanguages">
+      <MemberSignature Language="C#" Value="public override System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; GetAnalyzersForAllLanguages ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; GetAnalyzersForAllLanguages() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetAnalyzersForAllLanguages" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly GetAssembly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Assembly GetAssembly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetAssembly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public override object Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,939 @@
+﻿<Type Name="SymbolDisplayFormat" FullName="Microsoft.CodeAnalysis.SymbolDisplayFormat">
+  <TypeSignature Language="C#" Value="public class SymbolDisplayFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SymbolDisplayFormat extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SymbolDisplayFormat" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Describes the formatting rules that should be used when displaying symbols.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymbolDisplayFormat (Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle globalNamespaceStyle = Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle.Omitted, Microsoft.CodeAnalysis.SymbolDisplayTypeQualificationStyle typeQualificationStyle = Microsoft.CodeAnalysis.SymbolDisplayTypeQualificationStyle.NameOnly, Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions genericsOptions = Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions.None, Microsoft.CodeAnalysis.SymbolDisplayMemberOptions memberOptions = Microsoft.CodeAnalysis.SymbolDisplayMemberOptions.None, Microsoft.CodeAnalysis.SymbolDisplayDelegateStyle delegateStyle = Microsoft.CodeAnalysis.SymbolDisplayDelegateStyle.NameOnly, Microsoft.CodeAnalysis.SymbolDisplayExtensionMethodStyle extensionMethodStyle = Microsoft.CodeAnalysis.SymbolDisplayExtensionMethodStyle.Default, Microsoft.CodeAnalysis.SymbolDisplayParameterOptions parameterOptions = Microsoft.CodeAnalysis.SymbolDisplayParameterOptions.None, Microsoft.CodeAnalysis.SymbolDisplayPropertyStyle propertyStyle = Microsoft.CodeAnalysis.SymbolDisplayPropertyStyle.NameOnly, Microsoft.CodeAnalysis.SymbolDisplayLocalOptions localOptions = Microsoft.CodeAnalysis.SymbolDisplayLocalOptions.None, Microsoft.CodeAnalysis.SymbolDisplayKindOptions kindOptions = Microsoft.CodeAnalysis.SymbolDisplayKindOptions.None, Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions miscellaneousOptions = Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.None);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle globalNamespaceStyle, valuetype Microsoft.CodeAnalysis.SymbolDisplayTypeQualificationStyle typeQualificationStyle, valuetype Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions genericsOptions, valuetype Microsoft.CodeAnalysis.SymbolDisplayMemberOptions memberOptions, valuetype Microsoft.CodeAnalysis.SymbolDisplayDelegateStyle delegateStyle, valuetype Microsoft.CodeAnalysis.SymbolDisplayExtensionMethodStyle extensionMethodStyle, valuetype Microsoft.CodeAnalysis.SymbolDisplayParameterOptions parameterOptions, valuetype Microsoft.CodeAnalysis.SymbolDisplayPropertyStyle propertyStyle, valuetype Microsoft.CodeAnalysis.SymbolDisplayLocalOptions localOptions, valuetype Microsoft.CodeAnalysis.SymbolDisplayKindOptions kindOptions, valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions miscellaneousOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.#ctor(Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle,Microsoft.CodeAnalysis.SymbolDisplayTypeQualificationStyle,Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions,Microsoft.CodeAnalysis.SymbolDisplayMemberOptions,Microsoft.CodeAnalysis.SymbolDisplayDelegateStyle,Microsoft.CodeAnalysis.SymbolDisplayExtensionMethodStyle,Microsoft.CodeAnalysis.SymbolDisplayParameterOptions,Microsoft.CodeAnalysis.SymbolDisplayPropertyStyle,Microsoft.CodeAnalysis.SymbolDisplayLocalOptions,Microsoft.CodeAnalysis.SymbolDisplayKindOptions,Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="globalNamespaceStyle" Type="Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle" />
+        <Parameter Name="typeQualificationStyle" Type="Microsoft.CodeAnalysis.SymbolDisplayTypeQualificationStyle" />
+        <Parameter Name="genericsOptions" Type="Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" />
+        <Parameter Name="memberOptions" Type="Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" />
+        <Parameter Name="delegateStyle" Type="Microsoft.CodeAnalysis.SymbolDisplayDelegateStyle" />
+        <Parameter Name="extensionMethodStyle" Type="Microsoft.CodeAnalysis.SymbolDisplayExtensionMethodStyle" />
+        <Parameter Name="parameterOptions" Type="Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" />
+        <Parameter Name="propertyStyle" Type="Microsoft.CodeAnalysis.SymbolDisplayPropertyStyle" />
+        <Parameter Name="localOptions" Type="Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" />
+        <Parameter Name="kindOptions" Type="Microsoft.CodeAnalysis.SymbolDisplayKindOptions" />
+        <Parameter Name="miscellaneousOptions" Type="Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />
+      </Parameters>
+      <Docs>
+        <param name="globalNamespaceStyle">
+            The settings that determine how the global namespace is displayed.
+            </param>
+        <param name="typeQualificationStyle">
+            The settings that determine how types are qualified (e.g. Nested vs Containing.Nested vs Namespace.Containing.Nested).
+            </param>
+        <param name="genericsOptions">
+            The settings that determine how generics (on types and methods) should be described (i.e. the level of detail).
+            </param>
+        <param name="memberOptions">
+            The settings that determine how fields, properties, events, and methods are displayed.
+            </param>
+        <param name="delegateStyle">
+            The settings that determine how delegates are displayed (e.g. name vs full signature).
+            </param>
+        <param name="extensionMethodStyle">
+            The settings that determine how extension methods are displayed.
+            </param>
+        <param name="parameterOptions">
+            The settings that determine how parameters (of methods, properties/indexers, and delegates) are displayed.
+            </param>
+        <param name="propertyStyle">
+            The settings that determine how properties are displayed. 
+            For example, "Prop" vs "Prop { get; set; }" in C# or "Prop" vs. "ReadOnly Prop" in Visual Basic.
+            </param>
+        <param name="localOptions">
+            The settings that determine how local variables are displayed.
+            </param>
+        <param name="kindOptions">
+            The settings that determine which kind keywords should be included when displaying symbols.
+            </param>
+        <param name="miscellaneousOptions">
+            The settings that determine other characteristics of how symbols are displayed.
+            </param>
+        <summary>
+            Constructs a new instance of <see cref="T:Microsoft.CodeAnalysis.SymbolDisplayFormat" /> accepting a variety of optional parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddGenericsOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat AddGenericsOptions (Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat AddGenericsOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.AddGenericsOptions(Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying additional parameters for how generic symbols will be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" />.
+            </summary>
+        <returns>A duplicate of the SymbolDisplayFormat, with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddKindOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat AddKindOptions (Microsoft.CodeAnalysis.SymbolDisplayKindOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat AddKindOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayKindOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.AddKindOptions(Microsoft.CodeAnalysis.SymbolDisplayKindOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayKindOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying additional parameters with which symbols belonging to kind keywords should be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayKindOptions" />.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayKindOptions" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLocalOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat AddLocalOptions (Microsoft.CodeAnalysis.SymbolDisplayLocalOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat AddLocalOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayLocalOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.AddLocalOptions(Microsoft.CodeAnalysis.SymbolDisplayLocalOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying additional parameters on how symbols belonging to locals should be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" />.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMemberOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat AddMemberOptions (Microsoft.CodeAnalysis.SymbolDisplayMemberOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat AddMemberOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayMemberOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.AddMemberOptions(Microsoft.CodeAnalysis.SymbolDisplayMemberOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying additional parameters for how members will be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" />.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMiscellaneousOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat AddMiscellaneousOptions (Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat AddMiscellaneousOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.AddMiscellaneousOptions(Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying additional parameters for how miscellaneous symbols will be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />.
+            </summary>
+        <returns>A duplicate of the SymbolDisplayFormat, with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameterOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat AddParameterOptions (Microsoft.CodeAnalysis.SymbolDisplayParameterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat AddParameterOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayParameterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.AddParameterOptions(Microsoft.CodeAnalysis.SymbolDisplayParameterOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying additional parameters on how parameters should be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" />.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with an additional set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CSharpErrorMessageFormat">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SymbolDisplayFormat CSharpErrorMessageFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.SymbolDisplayFormat CSharpErrorMessageFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.CSharpErrorMessageFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Formats a symbol description as in a C# compiler error message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CSharpShortErrorMessageFormat">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SymbolDisplayFormat CSharpShortErrorMessageFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.SymbolDisplayFormat CSharpShortErrorMessageFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.CSharpShortErrorMessageFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Formats a symbol description as in a C# compiler short error message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelegateStyle">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayDelegateStyle DelegateStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayDelegateStyle DelegateStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.DelegateStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayDelegateStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how delegates are displayed (e.g. name vs full signature).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionMethodStyle">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayExtensionMethodStyle ExtensionMethodStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayExtensionMethodStyle ExtensionMethodStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.ExtensionMethodStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayExtensionMethodStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how extension methods are displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullyQualifiedFormat">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SymbolDisplayFormat FullyQualifiedFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.SymbolDisplayFormat FullyQualifiedFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.FullyQualifiedFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Formats the names of all types and namespaces in a fully qualified style (including the global alias).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericsOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions GenericsOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions GenericsOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.GenericsOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how generics (on types and methods) should be described (i.e. the level of detail).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalNamespaceStyle">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle GlobalNamespaceStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle GlobalNamespaceStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.GlobalNamespaceStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how the global namespace is displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KindOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayKindOptions KindOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayKindOptions KindOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.KindOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayKindOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines which kind keywords should be included when displaying symbols.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayLocalOptions LocalOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayLocalOptions LocalOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.LocalOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayLocalOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how local variables are displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayMemberOptions MemberOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayMemberOptions MemberOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.MemberOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMemberOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how fields, properties, events, and methods are displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimallyQualifiedFormat">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SymbolDisplayFormat MinimallyQualifiedFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.SymbolDisplayFormat MinimallyQualifiedFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.MinimallyQualifiedFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Formats a symbol description in a form that suits <see cref="M:Microsoft.CodeAnalysis.ISymbol.ToMinimalDisplayString(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiscellaneousOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions MiscellaneousOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions MiscellaneousOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.MiscellaneousOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines other characteristics of how symbols are displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayParameterOptions ParameterOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayParameterOptions ParameterOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.ParameterOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayParameterOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how parameters (of methods, properties/indexers, and delegates) are displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyStyle">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayPropertyStyle PropertyStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayPropertyStyle PropertyStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.PropertyStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayPropertyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how properties are displayed. 
+            For example, "Prop" vs "Prop { get; set; }" in C# or "Prop" vs. "ReadOnly Prop" in Visual Basic.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGenericsOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveGenericsOptions (Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveGenericsOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.RemoveGenericsOptions(Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying which parameters should not be applied to how generic symbols will be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" /> stripped away from the original object.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" /> stripped away from the original object.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveKindOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveKindOptions (Microsoft.CodeAnalysis.SymbolDisplayKindOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveKindOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayKindOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.RemoveKindOptions(Microsoft.CodeAnalysis.SymbolDisplayKindOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayKindOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            The settings that determine other characteristics of how symbols are displayed.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayKindOptions" /> stripped away from the original object.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayKindOptions" /> stripped away from the original object.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveLocalOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveLocalOptions (Microsoft.CodeAnalysis.SymbolDisplayLocalOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveLocalOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayLocalOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.RemoveLocalOptions(Microsoft.CodeAnalysis.SymbolDisplayLocalOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying parameters that should not be applied when formatting symbols belonging to locals.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" /> stripped away from the original object.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" /> stripped away from the original object.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMemberOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveMemberOptions (Microsoft.CodeAnalysis.SymbolDisplayMemberOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveMemberOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayMemberOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.RemoveMemberOptions(Microsoft.CodeAnalysis.SymbolDisplayMemberOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying which parameters should not be applied to how members will be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" /> stripped away from the original object.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" /> stripped away from the original object.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMiscellaneousOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveMiscellaneousOptions (Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveMiscellaneousOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.RemoveMiscellaneousOptions(Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying which parameters should not be applied to how miscellaneous symbols will be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat without the specified <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />.
+            </summary>
+        <returns>A duplicate of the SymbolDisplayFormat, without the specified <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveParameterOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveParameterOptions (Microsoft.CodeAnalysis.SymbolDisplayParameterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat RemoveParameterOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayParameterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.RemoveParameterOptions(Microsoft.CodeAnalysis.SymbolDisplayParameterOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying parameters that should not be applied when formatting parameters.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" /> stripped away from the original object.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with a set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" /> stripped away from the original object.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeQualificationStyle">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayTypeQualificationStyle TypeQualificationStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolDisplayTypeQualificationStyle TypeQualificationStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.TypeQualificationStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayTypeQualificationStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines how types are qualified (e.g. Nested vs Containing.Nested vs Namespace.Containing.Nested).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualBasicErrorMessageFormat">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SymbolDisplayFormat VisualBasicErrorMessageFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.SymbolDisplayFormat VisualBasicErrorMessageFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.VisualBasicErrorMessageFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Formats a symbol description as in a Visual Basic compiler error message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualBasicShortErrorMessageFormat">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SymbolDisplayFormat VisualBasicShortErrorMessageFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.SymbolDisplayFormat VisualBasicShortErrorMessageFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.VisualBasicShortErrorMessageFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Formats a symbol description as in a Visual Basic compiler short error message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithGenericsOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat WithGenericsOptions (Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat WithGenericsOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.WithGenericsOptions(Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying how generic symbols will be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" />.
+            </summary>
+        <returns>A duplicate of the SymbolDisplayFormat, with a replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithGlobalNamespaceStyle">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat WithGlobalNamespaceStyle (Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat WithGlobalNamespaceStyle(valuetype Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.WithGlobalNamespaceStyle(Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">
+            An object specifying parameters on how namespace symbols should be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with replaced <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle" />.
+            </summary>
+        <returns>A duplicate of the SymbolDisplayFormat, with a replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithKindOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat WithKindOptions (Microsoft.CodeAnalysis.SymbolDisplayKindOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat WithKindOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayKindOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.WithKindOptions(Microsoft.CodeAnalysis.SymbolDisplayKindOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayKindOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying parameters with which symbols belonging to kind keywords should be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayKindOptions" />.
+            </summary>
+        <returns>
+            A duplicate of the SymbolDisplayFormat, with a replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayKindOptions" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithLocalOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat WithLocalOptions (Microsoft.CodeAnalysis.SymbolDisplayLocalOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat WithLocalOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayLocalOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.WithLocalOptions(Microsoft.CodeAnalysis.SymbolDisplayLocalOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying parameters on how symbols belonging to locals should be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" />.
+            </summary>
+        <returns>A duplicate of the SymbolDisplayFormat, with a replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayLocalOptions" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithMemberOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat WithMemberOptions (Microsoft.CodeAnalysis.SymbolDisplayMemberOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat WithMemberOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayMemberOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.WithMemberOptions(Microsoft.CodeAnalysis.SymbolDisplayMemberOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying how members will be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" />.
+            </summary>
+        <returns>A duplicate of the SymbolDisplayFormat, with a replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMemberOptions" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithMiscellaneousOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat WithMiscellaneousOptions (Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat WithMiscellaneousOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.WithMiscellaneousOptions(Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object representing how miscellaneous symbols will be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />.
+            </summary>
+        <returns>A duplicate of the SymbolDisplayFormat, with a replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithParameterOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolDisplayFormat WithParameterOptions (Microsoft.CodeAnalysis.SymbolDisplayParameterOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SymbolDisplayFormat WithParameterOptions(valuetype Microsoft.CodeAnalysis.SymbolDisplayParameterOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolDisplayFormat.WithParameterOptions(Microsoft.CodeAnalysis.SymbolDisplayParameterOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            An object specifying how parameters should be formatted.
+            </param>
+        <summary>
+            Creates a copy of the SymbolDisplayFormat but with replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" />.
+            </summary>
+        <returns>A duplicate of the SymbolDisplayFormat, with a replaced set of <seealso cref="T:Microsoft.CodeAnalysis.SymbolDisplayParameterOptions" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

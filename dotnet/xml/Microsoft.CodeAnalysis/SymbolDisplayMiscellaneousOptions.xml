@@ -1,0 +1,162 @@
+﻿<Type Name="SymbolDisplayMiscellaneousOptions" FullName="Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions">
+  <TypeSignature Language="C#" Value="public enum SymbolDisplayMiscellaneousOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SymbolDisplayMiscellaneousOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Specifies miscellaneous options about the format of symbol descriptions.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EscapeKeywordIdentifiers">
+      <MemberSignature Language="C#" Value="EscapeKeywordIdentifiers" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions EscapeKeywordIdentifiers = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.EscapeKeywordIdentifiers" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Escapes identifiers that are also keywords.
+            For example, "@true" instead of "true" in C# or
+            "[True]" instead of "True" in Visual Basic.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandNullable">
+      <MemberSignature Language="C#" Value="ExpandNullable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions ExpandNullable = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.ExpandNullable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Displays <see cref="T:System.Nullable`1" /> as a normal generic type, rather than with
+            the special question mark syntax.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies that no miscellaneous options should be applied.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAttributeSuffix">
+      <MemberSignature Language="C#" Value="RemoveAttributeSuffix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions RemoveAttributeSuffix = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.RemoveAttributeSuffix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Displays attributes names without the "Attribute" suffix, if possible.
+            </summary>
+        <remarks>
+            Has no effect outside <see cref="M:Microsoft.CodeAnalysis.ISymbol.ToMinimalDisplayString(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" /> and only applies
+            if the context location is one where an attribute ca be referenced without the suffix.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAsterisksInMultiDimensionalArrays">
+      <MemberSignature Language="C#" Value="UseAsterisksInMultiDimensionalArrays" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions UseAsterisksInMultiDimensionalArrays = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.UseAsterisksInMultiDimensionalArrays" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Displays asterisks between commas in multi-dimensional arrays.
+            For example, "int[][*,*]" instead of "int[][,]" in C# or
+            "Integer()(*,*)" instead of "Integer()(*,*) in Visual Basic.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseErrorTypeSymbolName">
+      <MemberSignature Language="C#" Value="UseErrorTypeSymbolName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions UseErrorTypeSymbolName = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.UseErrorTypeSymbolName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Displays "?" for erroneous types that lack names (perhaps due to faulty metadata).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSpecialTypes">
+      <MemberSignature Language="C#" Value="UseSpecialTypes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions UseSpecialTypes = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.UseSpecialTypes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Uses keywords for predefined types. 
+            For example, "int" instead of "System.Int32" in C#
+            or "Integer" instead of "System.Integer" in Visual Basic.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
