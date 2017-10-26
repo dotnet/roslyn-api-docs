@@ -1,0 +1,137 @@
+﻿<Type Name="DocumentationProvider" FullName="Microsoft.CodeAnalysis.DocumentationProvider">
+  <TypeSignature Language="C#" Value="public abstract class DocumentationProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DocumentationProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.DocumentationProvider" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A class used to provide XML documentation to the compiler for members from metadata. A
+            custom implementation of this class should be returned from a DocumentationResolver to provide XML
+            documentation comments from custom caches or locations.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DocumentationProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.DocumentationProvider Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.DocumentationProvider Default" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.DocumentationProvider.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.DocumentationProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public abstract bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationProvider.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>
+            DocumentationProviders are compared when determining whether an AssemblySymbol can be reused.
+            Hence, if multiple instances can represent the same documentation, it is imperative that
+            Equals (and GetHashCode) be overridden to capture this fact.  Otherwise, it is possible to end
+            up with multiple AssemblySymbols for the same assembly, which plays havoc with the type hierarchy.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocumentationForSymbol">
+      <MemberSignature Language="C#" Value="protected abstract string GetDocumentationForSymbol (string documentationMemberID, System.Globalization.CultureInfo preferredCulture, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetDocumentationForSymbol(string documentationMemberID, class System.Globalization.CultureInfo preferredCulture, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationProvider.GetDocumentationForSymbol(System.String,System.Globalization.CultureInfo,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentationMemberID" Type="System.String" />
+        <Parameter Name="preferredCulture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="documentationMemberID">The documentation member ID of the item to fetch.</param>
+        <param name="preferredCulture">The preferred culture to receive a comment in. Null if
+            there is no preference. This is a preference only, and providers may choose to provide
+            results from another culture if the preferred culture was unavailable.</param>
+        <param name="cancellationToken">A cancellation token for the search.</param>
+        <summary>
+            Fetches a documentation comment for the given member ID.
+            </summary>
+        <returns>A DocumentationComment.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public abstract int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationProvider.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            DocumentationProviders are compared when determining whether an AssemblySymbol can be reused.
+            Hence, if multiple instances can represent the same documentation, it is imperative that
+            GetHashCode (and Equals) be overridden to capture this fact.  Otherwise, it is possible to end
+            up with multiple AssemblySymbols for the same assembly, which plays havoc with the type hierarchy.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,535 @@
+﻿<Type Name="AssemblyIdentity" FullName="Microsoft.CodeAnalysis.AssemblyIdentity">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyIdentity : IEquatable&lt;Microsoft.CodeAnalysis.AssemblyIdentity&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyIdentity extends System.Object implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.AssemblyIdentity&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.AssemblyIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.AssemblyIdentity&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(), nq}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents an identity of an assembly as defined by CLI metadata specification.
+            </summary>
+    <remarks>
+            May represent assembly definition or assembly reference identity.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyIdentity (string name, Version version = null, string cultureName = null, System.Collections.Immutable.ImmutableArray&lt;byte&gt; publicKeyOrToken = null, bool hasPublicKey = false, bool isRetargetable = false, System.Reflection.AssemblyContentType contentType = System.Reflection.AssemblyContentType.Default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Version version, string cultureName, valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; publicKeyOrToken, bool hasPublicKey, bool isRetargetable, valuetype System.Reflection.AssemblyContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.#ctor(System.String,System.Version,System.String,System.Collections.Immutable.ImmutableArray{System.Byte},System.Boolean,System.Boolean,System.Reflection.AssemblyContentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="version" Type="System.Version" />
+        <Parameter Name="cultureName" Type="System.String" />
+        <Parameter Name="publicKeyOrToken" Type="System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;" />
+        <Parameter Name="hasPublicKey" Type="System.Boolean" />
+        <Parameter Name="isRetargetable" Type="System.Boolean" />
+        <Parameter Name="contentType" Type="System.Reflection.AssemblyContentType" />
+      </Parameters>
+      <Docs>
+        <param name="name">The simple name of the assembly.</param>
+        <param name="version">The version of the assembly.</param>
+        <param name="cultureName">
+            The name of the culture to associate with the assembly. 
+            Specify null, <see cref="F:System.String.Empty" />, or "neutral" (any casing) to represent <see cref="P:System.Globalization.CultureInfo.InvariantCulture" />.
+            The name can be an arbitrary string that doesn't contain NUL character, the legality of the culture name is not validated.
+            </param>
+        <param name="publicKeyOrToken">The public key or public key token of the assembly.</param>
+        <param name="hasPublicKey">Indicates whether <paramref name="publicKeyOrToken" /> represents a public key.</param>
+        <param name="isRetargetable">Indicates whether the assembly is retargetable.</param>
+        <param name="contentType">Specifies the binding model for how this object will be treated in comparisons.</param>
+        <summary>
+            Constructs an <see cref="T:Microsoft.CodeAnalysis.AssemblyIdentity" /> from its constituent parts.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hasPublicKey" /> is false and <paramref name="publicKeyOrToken" /> 
+            contains a value that is not the size of a public key token, 8 bytes.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="contentType" /> is not a value of the <see cref="T:System.Reflection.AssemblyContentType" /> enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyContentType ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.AssemblyContentType ContentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyContentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies assembly binding model for the assembly definition or reference;
+            that is how assembly references are matched to assembly definitions.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureName">
+      <MemberSignature Language="C#" Value="public string CultureName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CultureName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.CultureName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The culture name of the assembly, or empty if the culture is neutral.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.CodeAnalysis.AssemblyIdentity obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.AssemblyIdentity obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.Equals(Microsoft.CodeAnalysis.AssemblyIdentity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Microsoft.CodeAnalysis.AssemblyIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The object to be compared with the current instance.</param>
+        <summary>
+            Determines whether the specified instance is equal to the current instance.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The object to be compared with the current instance.</param>
+        <summary>
+            Determines whether the specified instance is equal to the current instance.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyNameFlags Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.AssemblyNameFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The AssemblyNameFlags.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAssemblyDefinition">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.AssemblyIdentity FromAssemblyDefinition (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.AssemblyIdentity FromAssemblyDefinition(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.FromAssemblyDefinition(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.AssemblyIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">The runtime assembly.</param>
+        <summary>
+            Retrieves assembly definition identity from given runtime assembly.
+            </summary>
+        <returns>Assembly definition identity.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assembly" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDisplayName">
+      <MemberSignature Language="C#" Value="public string GetDisplayName (bool fullKey = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetDisplayName(bool fullKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.GetDisplayName(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fullKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fullKey">True if the full public key should be included in the name. Otherwise public key token is used.</param>
+        <summary>
+            Returns the display name of the assembly identity.
+            </summary>
+        <returns>The display name.</returns>
+        <remarks>
+            Characters ',', '=', '"', '\'', '\' occurring in the simple name are escaped by backslash in the display name.
+            Any character '\t' is replaced by two characters '\' and 't',
+            Any character '\n' is replaced by two characters '\' and 'n',
+            Any character '\r' is replaced by two characters '\' and 'r',
+            The assembly name in the display name is enclosed in double quotes if it starts or ends with 
+            a whitespace character (' ', '\t', '\r', '\n').
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the hash code for the current instance.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPublicKey">
+      <MemberSignature Language="C#" Value="public bool HasPublicKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasPublicKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.HasPublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the assembly identity includes full public key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRetargetable">
+      <MemberSignature Language="C#" Value="public bool IsRetargetable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRetargetable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.IsRetargetable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value which specifies if the assembly is retargetable. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStrongName">
+      <MemberSignature Language="C#" Value="public bool IsStrongName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStrongName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.IsStrongName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the assembly identity has a strong name, ie. either a full public key or a token.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The simple name of the assembly.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.CodeAnalysis.AssemblyIdentity left, Microsoft.CodeAnalysis.AssemblyIdentity right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.CodeAnalysis.AssemblyIdentity left, class Microsoft.CodeAnalysis.AssemblyIdentity right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.op_Equality(Microsoft.CodeAnalysis.AssemblyIdentity,Microsoft.CodeAnalysis.AssemblyIdentity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.AssemblyIdentity" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.AssemblyIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="left">The operand appearing on the left side of the operator.</param>
+        <param name="right">The operand appearing on the right side of the operator.</param>
+        <summary>
+            Determines whether two <see cref="T:Microsoft.CodeAnalysis.AssemblyIdentity" /> instances are equal.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.CodeAnalysis.AssemblyIdentity left, Microsoft.CodeAnalysis.AssemblyIdentity right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.CodeAnalysis.AssemblyIdentity left, class Microsoft.CodeAnalysis.AssemblyIdentity right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.op_Inequality(Microsoft.CodeAnalysis.AssemblyIdentity,Microsoft.CodeAnalysis.AssemblyIdentity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.AssemblyIdentity" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.AssemblyIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="left">The operand appearing on the left side of the operator.</param>
+        <param name="right">The operand appearing on the right side of the operator.</param>
+        <summary>
+            Determines whether two <see cref="T:Microsoft.CodeAnalysis.AssemblyIdentity" /> instances are not equal.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKey">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;byte&gt; PublicKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; PublicKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.PublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Full public key or empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKeyToken">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;byte&gt; PublicKeyToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; PublicKeyToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.PublicKeyToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Low 8 bytes of SHA1 hash of the public key, or empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the display name of the current instance.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseDisplayName">
+      <MemberSignature Language="C#" Value="public static bool TryParseDisplayName (string displayName, out Microsoft.CodeAnalysis.AssemblyIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParseDisplayName(string displayName, [out] class Microsoft.CodeAnalysis.AssemblyIdentity&amp; identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.TryParseDisplayName(System.String,Microsoft.CodeAnalysis.AssemblyIdentity@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="identity" Type="Microsoft.CodeAnalysis.AssemblyIdentity&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">To be added.</param>
+        <param name="identity">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseDisplayName">
+      <MemberSignature Language="C#" Value="public static bool TryParseDisplayName (string displayName, out Microsoft.CodeAnalysis.AssemblyIdentity identity, out Microsoft.CodeAnalysis.AssemblyIdentityParts parts);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParseDisplayName(string displayName, [out] class Microsoft.CodeAnalysis.AssemblyIdentity&amp; identity, [out] valuetype Microsoft.CodeAnalysis.AssemblyIdentityParts&amp; parts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.TryParseDisplayName(System.String,Microsoft.CodeAnalysis.AssemblyIdentity@,Microsoft.CodeAnalysis.AssemblyIdentityParts@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="identity" Type="Microsoft.CodeAnalysis.AssemblyIdentity&amp;" RefType="out" />
+        <Parameter Name="parts" Type="Microsoft.CodeAnalysis.AssemblyIdentityParts&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Display name.</param>
+        <param name="identity">A full assembly identity.</param>
+        <param name="parts">
+            Parts of the assembly identity that were specified in the display name, 
+            or 0 if the parsing failed.
+            </param>
+        <summary>
+            Parses display name filling defaults for any basic properties that are missing.
+            </summary>
+        <returns>True if display name parsed correctly.</returns>
+        <remarks>
+            The simple name has to be non-empty.
+            A partially specified version might be missing build and/or revision number. The default value for these is 65535.
+            The default culture is neutral (<see cref="P:Microsoft.CodeAnalysis.AssemblyIdentity.CultureName" /> is <see cref="F:System.String.Empty" />.
+            If neither public key nor token is specified the identity is considered weak.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayName" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The version of the assembly.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

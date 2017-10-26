@@ -1,0 +1,826 @@
+﻿<Type Name="SyntaxTrivia" FullName="Microsoft.CodeAnalysis.SyntaxTrivia">
+  <TypeSignature Language="C#" Value="public struct SyntaxTrivia : IEquatable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SyntaxTrivia extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SyntaxTrivia" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(), nq}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a trivia in the syntax tree. This is the language agnostic equivalent of <see cref="T:Microsoft.CodeAnalysis.CSharp.SyntaxTrivia" /> and <see cref="T:Microsoft.CodeAnalysis.VisualBasic.SyntaxTrivia" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContainsDiagnostics">
+      <MemberSignature Language="C#" Value="public bool ContainsDiagnostics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContainsDiagnostics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.ContainsDiagnostics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether this trivia has any diagnostics on it. If this trivia is a structured trivia then the
+            returned value will indicate whether this trivia or any of its descendant nodes, tokens or trivia have any
+            diagnostics on them.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyAnnotationsTo">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTrivia CopyAnnotationsTo (Microsoft.CodeAnalysis.SyntaxTrivia trivia);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTrivia CopyAnnotationsTo(valuetype Microsoft.CodeAnalysis.SyntaxTrivia trivia) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.CopyAnnotationsTo(Microsoft.CodeAnalysis.SyntaxTrivia)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trivia" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+      </Parameters>
+      <Docs>
+        <param name="trivia">To be added.</param>
+        <summary>
+            Copies all SyntaxAnnotations, if any, from this SyntaxTrivia instance and attaches them to a new instance based on <paramref name="trivia" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.CodeAnalysis.SyntaxTrivia other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.SyntaxTrivia other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.Equals(Microsoft.CodeAnalysis.SyntaxTrivia)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>
+            Determines whether the supplied <see cref="T:Microsoft.CodeAnalysis.SyntaxTrivia" /> is equal to this
+            <see cref="T:Microsoft.CodeAnalysis.SyntaxTrivia" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>
+            Determines whether the supplied <see cref="T:Microsoft.CodeAnalysis.SyntaxTrivia" /> is equal to this
+            <see cref="T:Microsoft.CodeAnalysis.SyntaxTrivia" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullSpan">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Text.TextSpan FullSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextSpan FullSpan" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.FullSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The absolute span of this trivia in characters. If this trivia is a structured trivia then the returned span
+            will include spans of any leading or trailing trivia present on the child non-terminal node of this trivia.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnnotations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxAnnotation&gt; GetAnnotations (string annotationKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxAnnotation&gt; GetAnnotations(string annotationKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.GetAnnotations(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxAnnotation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationKind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="annotationKind">To be added.</param>
+        <summary>
+            Get all the annotations of the specified annotation kind.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnnotations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxAnnotation&gt; GetAnnotations (params string[] annotationKinds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxAnnotation&gt; GetAnnotations(string[] annotationKinds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.GetAnnotations(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxAnnotation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationKinds" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="annotationKinds">To be added.</param>
+        <summary>
+            Get all the annotations of the specified annotation kinds.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.GetDiagnostics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a list of all the diagnostics associated with this trivia.
+            This method does not filter diagnostics based on #pragmas and compiler options
+            like nowarn, warnaserror etc.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Serves as hash function for <see cref="T:Microsoft.CodeAnalysis.SyntaxTrivia" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Location GetLocation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Location GetLocation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.GetLocation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the location of this trivia.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStructure">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxNode GetStructure ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.SyntaxNode GetStructure() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.GetStructure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the child non-terminal node representing the syntax tree structure under this structured trivia.
+            </summary>
+        <returns>The child non-terminal node representing the syntax tree structure under this structured
+            trivia.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAnnotation">
+      <MemberSignature Language="C#" Value="public bool HasAnnotation (Microsoft.CodeAnalysis.SyntaxAnnotation annotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasAnnotation(class Microsoft.CodeAnalysis.SyntaxAnnotation annotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.HasAnnotation(Microsoft.CodeAnalysis.SyntaxAnnotation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotation" Type="Microsoft.CodeAnalysis.SyntaxAnnotation" />
+      </Parameters>
+      <Docs>
+        <param name="annotation">To be added.</param>
+        <summary>
+            Determines whether this trivia has the specific annotation.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAnnotations">
+      <MemberSignature Language="C#" Value="public bool HasAnnotations (string annotationKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasAnnotations(string annotationKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.HasAnnotations(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationKind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="annotationKind">To be added.</param>
+        <summary>
+            Determines where this trivia has annotations of the specified annotation kind.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAnnotations">
+      <MemberSignature Language="C#" Value="public bool HasAnnotations (params string[] annotationKinds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasAnnotations(string[] annotationKinds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.HasAnnotations(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationKinds" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="annotationKinds">To be added.</param>
+        <summary>
+            Determines where this trivia has any annotations of the specified annotation kinds.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasStructure">
+      <MemberSignature Language="C#" Value="public bool HasStructure { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasStructure" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.HasStructure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether this trivia is a structured trivia.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirective">
+      <MemberSignature Language="C#" Value="public bool IsDirective { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirective" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.IsDirective" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether this trivia represents a preprocessor directive.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentTo">
+      <MemberSignature Language="C#" Value="public bool IsEquivalentTo (Microsoft.CodeAnalysis.SyntaxTrivia trivia);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEquivalentTo(valuetype Microsoft.CodeAnalysis.SyntaxTrivia trivia) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.IsEquivalentTo(Microsoft.CodeAnalysis.SyntaxTrivia)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trivia" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+      </Parameters>
+      <Docs>
+        <param name="trivia">To be added.</param>
+        <summary>
+            Determines if this trivia is equivalent to the specified trivia.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPartOfStructuredTrivia">
+      <MemberSignature Language="C#" Value="public bool IsPartOfStructuredTrivia ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPartOfStructuredTrivia() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.IsPartOfStructuredTrivia" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Determines whether this trivia is a descendant of a structured trivia.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The language name that this trivia is syntax of.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.CodeAnalysis.SyntaxTrivia left, Microsoft.CodeAnalysis.SyntaxTrivia right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.CodeAnalysis.SyntaxTrivia left, valuetype Microsoft.CodeAnalysis.SyntaxTrivia right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.op_Equality(Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>
+            Determines whether two <see cref="T:Microsoft.CodeAnalysis.SyntaxTrivia" />s are equal.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.CodeAnalysis.SyntaxTrivia left, Microsoft.CodeAnalysis.SyntaxTrivia right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.CodeAnalysis.SyntaxTrivia left, valuetype Microsoft.CodeAnalysis.SyntaxTrivia right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.op_Inequality(Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>
+            Determines whether two <see cref="T:Microsoft.CodeAnalysis.SyntaxTrivia" />s are unequal.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawKind">
+      <MemberSignature Language="C#" Value="public int RawKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RawKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.RawKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An integer representing the language specific kind of this trivia.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Span">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Text.TextSpan Span { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextSpan Span" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.Span" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The absolute span of this trivia in characters. If this trivia is a structured trivia then the returned span
+            will not include spans of any leading or trailing trivia present on the child non-terminal node of this
+            trivia.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpanStart">
+      <MemberSignature Language="C#" Value="public int SpanStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SpanStart" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.SpanStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Same as accessing <see cref="P:Microsoft.CodeAnalysis.Text.TextSpan.Start" /> on <see cref="P:Microsoft.CodeAnalysis.SyntaxTrivia.Span" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Slight performance improvement.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyntaxTree">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTree SyntaxTree { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SyntaxTree SyntaxTree" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.SyntaxTree" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SyntaxTree which contains current SyntaxTrivia.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToFullString">
+      <MemberSignature Language="C#" Value="public string ToFullString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToFullString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.ToFullString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> 
+            Returns the full string representation of this trivia. If this trivia is structured trivia then the returned string will
+            include any leading or trailing trivia present on the StructuredTriviaSyntax node of this trivia.
+            </summary>
+        <returns>The full string representation of this trivia.</returns>
+        <remarks>The length of the returned string is always the same as FullSpan.Length</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxToken Token { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxToken Token" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTrivia.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The parent token that contains this token in its LeadingTrivia or TrailingTrivia collection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary> 
+            Returns the string representation of this trivia. If this trivia is structured trivia then the returned string
+            will not include any leading or trailing trivia present on the StructuredTriviaSyntax node of this trivia.
+            </summary>
+        <returns>The string representation of this trivia.</returns>
+        <remarks>The length of the returned string is always the same as Span.Length</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAdditionalAnnotations">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTrivia WithAdditionalAnnotations (params Microsoft.CodeAnalysis.SyntaxAnnotation[] annotations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTrivia WithAdditionalAnnotations(class Microsoft.CodeAnalysis.SyntaxAnnotation[] annotations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.WithAdditionalAnnotations(Microsoft.CodeAnalysis.SyntaxAnnotation[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotations" Type="Microsoft.CodeAnalysis.SyntaxAnnotation[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="annotations">To be added.</param>
+        <summary>
+            Creates a new SyntaxTrivia with the specified annotations.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAdditionalAnnotations">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTrivia WithAdditionalAnnotations (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxAnnotation&gt; annotations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTrivia WithAdditionalAnnotations(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxAnnotation&gt; annotations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.WithAdditionalAnnotations(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxAnnotation})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotations" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxAnnotation&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="annotations">To be added.</param>
+        <summary>
+            Creates a new SyntaxTrivia with the specified annotations.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithoutAnnotations">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTrivia WithoutAnnotations (params Microsoft.CodeAnalysis.SyntaxAnnotation[] annotations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTrivia WithoutAnnotations(class Microsoft.CodeAnalysis.SyntaxAnnotation[] annotations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.WithoutAnnotations(Microsoft.CodeAnalysis.SyntaxAnnotation[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotations" Type="Microsoft.CodeAnalysis.SyntaxAnnotation[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="annotations">To be added.</param>
+        <summary>
+            Creates a new SyntaxTrivia without the specified annotations.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithoutAnnotations">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTrivia WithoutAnnotations (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxAnnotation&gt; annotations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTrivia WithoutAnnotations(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxAnnotation&gt; annotations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.WithoutAnnotations(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxAnnotation})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotations" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxAnnotation&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="annotations">To be added.</param>
+        <summary>
+            Creates a new SyntaxTrivia without the specified annotations.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithoutAnnotations">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTrivia WithoutAnnotations (string annotationKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTrivia WithoutAnnotations(string annotationKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.WithoutAnnotations(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationKind" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="annotationKind">To be added.</param>
+        <summary>
+            Creates a new SyntaxTrivia without annotations of the specified kind.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTrivia.WriteTo(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>
+            Writes the full text of this trivia to the specified TextWriter.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

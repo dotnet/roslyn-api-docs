@@ -1,0 +1,1790 @@
+﻿<Type Name="CompilationOptions" FullName="Microsoft.CodeAnalysis.CompilationOptions">
+  <TypeSignature Language="C#" Value="public abstract class CompilationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CompilationOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CompilationOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents compilation options common to C# and VB.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssemblyIdentityComparer">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.AssemblyIdentityComparer AssemblyIdentityComparer { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.AssemblyIdentityComparer AssemblyIdentityComparer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.AssemblyIdentityComparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.AssemblyIdentityComparer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Used to compare assembly identities. May implement unification and portability policies specific to the target platform.
+            <see cref="P:Microsoft.CodeAnalysis.AssemblyIdentityComparer.Default" /> if not specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckOverflow">
+      <MemberSignature Language="C#" Value="public bool CheckOverflow { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckOverflow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.CheckOverflow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether bounds checking on integer arithmetic is enforced by default or not.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithAssemblyIdentityComparer">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithAssemblyIdentityComparer (Microsoft.CodeAnalysis.AssemblyIdentityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithAssemblyIdentityComparer(class Microsoft.CodeAnalysis.AssemblyIdentityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithAssemblyIdentityComparer(Microsoft.CodeAnalysis.AssemblyIdentityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="Microsoft.CodeAnalysis.AssemblyIdentityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithCheckOverflow">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithCheckOverflow (bool checkOverflow);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithCheckOverflow(bool checkOverflow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithCheckOverflow(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="checkOverflow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="checkOverflow">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithConcurrentBuild">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithConcurrentBuild (bool concurrent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithConcurrentBuild(bool concurrent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithConcurrentBuild(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="concurrent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="concurrent">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithCryptoKeyContainer">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithCryptoKeyContainer (string cryptoKeyContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithCryptoKeyContainer(string cryptoKeyContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithCryptoKeyContainer(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cryptoKeyContainer" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cryptoKeyContainer">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithCryptoKeyFile">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithCryptoKeyFile (string cryptoKeyFile);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithCryptoKeyFile(string cryptoKeyFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithCryptoKeyFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cryptoKeyFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cryptoKeyFile">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithCryptoPublicKey">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithCryptoPublicKey (System.Collections.Immutable.ImmutableArray&lt;byte&gt; cryptoPublicKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithCryptoPublicKey(valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; cryptoPublicKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithCryptoPublicKey(System.Collections.Immutable.ImmutableArray{System.Byte})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cryptoPublicKey" Type="System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="cryptoPublicKey">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithDelaySign">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithDelaySign (Nullable&lt;bool&gt; delaySign);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithDelaySign(valuetype System.Nullable`1&lt;bool&gt; delaySign) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithDelaySign(System.Nullable{System.Boolean})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delaySign" Type="System.Nullable&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="delaySign">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithDeterministic">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithDeterministic (bool deterministic);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithDeterministic(bool deterministic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithDeterministic(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deterministic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deterministic">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithFeatures">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithFeatures (System.Collections.Immutable.ImmutableArray&lt;string&gt; features);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithFeatures(valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; features) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithFeatures(System.Collections.Immutable.ImmutableArray{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="features" Type="System.Collections.Immutable.ImmutableArray&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="features">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithGeneralDiagnosticOption">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithGeneralDiagnosticOption (Microsoft.CodeAnalysis.ReportDiagnostic generalDiagnosticOption);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithGeneralDiagnosticOption(valuetype Microsoft.CodeAnalysis.ReportDiagnostic generalDiagnosticOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithGeneralDiagnosticOption(Microsoft.CodeAnalysis.ReportDiagnostic)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="generalDiagnosticOption" Type="Microsoft.CodeAnalysis.ReportDiagnostic" />
+      </Parameters>
+      <Docs>
+        <param name="generalDiagnosticOption">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithMainTypeName">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithMainTypeName (string mainTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithMainTypeName(string mainTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithMainTypeName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mainTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mainTypeName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithMetadataReferenceResolver">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithMetadataReferenceResolver (Microsoft.CodeAnalysis.MetadataReferenceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithMetadataReferenceResolver(class Microsoft.CodeAnalysis.MetadataReferenceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithMetadataReferenceResolver(Microsoft.CodeAnalysis.MetadataReferenceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolver" Type="Microsoft.CodeAnalysis.MetadataReferenceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="resolver">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithModuleName">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithModuleName (string moduleName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithModuleName(string moduleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithModuleName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="moduleName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithOptimizationLevel">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithOptimizationLevel (Microsoft.CodeAnalysis.OptimizationLevel value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithOptimizationLevel(valuetype Microsoft.CodeAnalysis.OptimizationLevel value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithOptimizationLevel(Microsoft.CodeAnalysis.OptimizationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="Microsoft.CodeAnalysis.OptimizationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithOutputKind">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithOutputKind (Microsoft.CodeAnalysis.OutputKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithOutputKind(valuetype Microsoft.CodeAnalysis.OutputKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithOutputKind(Microsoft.CodeAnalysis.OutputKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.OutputKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithPlatform">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithPlatform (Microsoft.CodeAnalysis.Platform platform);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithPlatform(valuetype Microsoft.CodeAnalysis.Platform platform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithPlatform(Microsoft.CodeAnalysis.Platform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="platform" Type="Microsoft.CodeAnalysis.Platform" />
+      </Parameters>
+      <Docs>
+        <param name="platform">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithPublicSign">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithPublicSign (bool publicSign);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithPublicSign(bool publicSign) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithPublicSign(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="publicSign" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="publicSign">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithReportSuppressedDiagnostics">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithReportSuppressedDiagnostics (bool reportSuppressedDiagnostics);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithReportSuppressedDiagnostics(bool reportSuppressedDiagnostics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithReportSuppressedDiagnostics(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reportSuppressedDiagnostics" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="reportSuppressedDiagnostics">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithScriptClassName">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithScriptClassName (string scriptClassName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithScriptClassName(string scriptClassName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithScriptClassName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptClassName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scriptClassName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithSourceReferenceResolver">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithSourceReferenceResolver (Microsoft.CodeAnalysis.SourceReferenceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithSourceReferenceResolver(class Microsoft.CodeAnalysis.SourceReferenceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithSourceReferenceResolver(Microsoft.CodeAnalysis.SourceReferenceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolver" Type="Microsoft.CodeAnalysis.SourceReferenceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="resolver">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithSpecificDiagnosticOptions">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithSpecificDiagnosticOptions (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,Microsoft.CodeAnalysis.ReportDiagnostic&gt;&gt; specificDiagnosticOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithSpecificDiagnosticOptions(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, valuetype Microsoft.CodeAnalysis.ReportDiagnostic&gt;&gt; specificDiagnosticOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithSpecificDiagnosticOptions(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,Microsoft.CodeAnalysis.ReportDiagnostic}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="specificDiagnosticOptions" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,Microsoft.CodeAnalysis.ReportDiagnostic&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="specificDiagnosticOptions">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithSpecificDiagnosticOptions">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithSpecificDiagnosticOptions (System.Collections.Immutable.ImmutableDictionary&lt;string,Microsoft.CodeAnalysis.ReportDiagnostic&gt; specificDiagnosticOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithSpecificDiagnosticOptions(class System.Collections.Immutable.ImmutableDictionary`2&lt;string, valuetype Microsoft.CodeAnalysis.ReportDiagnostic&gt; specificDiagnosticOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithSpecificDiagnosticOptions(System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="specificDiagnosticOptions" Type="System.Collections.Immutable.ImmutableDictionary&lt;System.String,Microsoft.CodeAnalysis.ReportDiagnostic&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="specificDiagnosticOptions">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithStrongNameProvider">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithStrongNameProvider (Microsoft.CodeAnalysis.StrongNameProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithStrongNameProvider(class Microsoft.CodeAnalysis.StrongNameProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithStrongNameProvider(Microsoft.CodeAnalysis.StrongNameProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="Microsoft.CodeAnalysis.StrongNameProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonWithXmlReferenceResolver">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.CompilationOptions CommonWithXmlReferenceResolver (Microsoft.CodeAnalysis.XmlReferenceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.CompilationOptions CommonWithXmlReferenceResolver(class Microsoft.CodeAnalysis.XmlReferenceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.CommonWithXmlReferenceResolver(Microsoft.CodeAnalysis.XmlReferenceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolver" Type="Microsoft.CodeAnalysis.XmlReferenceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="resolver">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConcurrentBuild">
+      <MemberSignature Language="C#" Value="public bool ConcurrentBuild { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConcurrentBuild" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.ConcurrentBuild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies whether building compilation may use multiple threads.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CryptoKeyContainer">
+      <MemberSignature Language="C#" Value="public string CryptoKeyContainer { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CryptoKeyContainer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The CSP container containing the key with which to sign the output.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            To sign the output supply either one of <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyFile" /> or <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyContainer" />.
+            but not both. If both are specified <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyContainer" /> is ignored.
+            </para>
+          <para>
+            This setting is obsolete and only supported on Microsoft Windows platform.
+            Use <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoPublicKey" /> to generate assemblies with strong name and 
+            a signing tool (Microsoft .NET Framework Strong Name Utility (sn.exe) or equivalent) to sign them.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CryptoKeyFile">
+      <MemberSignature Language="C#" Value="public string CryptoKeyFile { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CryptoKeyFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the file containing the public and private keys to use to generate strong name of the 
+            compilation assembly and to sign it.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            To sign the output supply either one of <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyFile" /> or <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyContainer" />.
+            but not both. If both are specified <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyContainer" /> is ignored.
+            </para>
+          <para>
+            If <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.PublicSign" /> is also set, <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyFile" /> must be the absolute
+            path to key file.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CryptoPublicKey">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;byte&gt; CryptoPublicKey { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; CryptoPublicKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoPublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies public key used to generate strong name for the compilation assembly, or empty if not specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If specified the values of <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyFile" /> and <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyContainer" />
+            must be null. If <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.PublicSign" /> is true the assembly is marked as fully signed
+            but only signed with the public key (aka "OSS signing").
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelaySign">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; DelaySign { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; DelaySign" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.DelaySign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Mark the compilation assembly as delay-signed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If true the resulting assembly is marked as delay signed.
+            
+            If false and <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoPublicKey" />, <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyFile" />, or <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyContainer" /> is specified
+            or attribute System.Reflection.AssemblyKeyFileAttribute or System.Reflection.AssemblyKeyNameAttribute is applied to the 
+            compilation assembly in source the resulting assembly is signed accordingly to the specified values/attributes.
+            
+            If null the semantics is specified by the value of attribute System.Reflection.AssemblyDelaySignAttribute 
+            applied to the compilation assembly in source. If the attribute is not present the value defaults to "false".
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deterministic">
+      <MemberSignature Language="C#" Value="public bool Deterministic { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Deterministic" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.Deterministic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies whether the compilation should be deterministic.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public abstract bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualsHelper">
+      <MemberSignature Language="C#" Value="protected bool EqualsHelper (Microsoft.CodeAnalysis.CompilationOptions other);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool EqualsHelper(class Microsoft.CodeAnalysis.CompilationOptions other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.EqualsHelper(Microsoft.CodeAnalysis.CompilationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.CompilationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; Errors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Errors collection related to an incompatible set of compilation options
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Features">
+      <MemberSignature Language="C#" Value="protected System.Collections.Immutable.ImmutableArray&lt;string&gt; Features { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; Features" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.Features" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A set of strings designating experimental compiler features that are to be enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneralDiagnosticOption">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ReportDiagnostic GeneralDiagnosticOption { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.ReportDiagnostic GeneralDiagnosticOption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.GeneralDiagnosticOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ReportDiagnostic</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Global warning report option
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public abstract int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCodeHelper">
+      <MemberSignature Language="C#" Value="protected int GetHashCodeHelper ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int32 GetHashCodeHelper() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.GetHashCodeHelper" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public abstract string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the source language ("C#" or "Visual Basic").
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MainTypeName">
+      <MemberSignature Language="C#" Value="public string MainTypeName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MainTypeName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.MainTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The full name of a type that declares static Main method. Must be a valid non-generic namespace-qualified name.
+            Null if any static Main method is a candidate for an entry point.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataReferenceResolver">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.MetadataReferenceResolver MetadataReferenceResolver { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.MetadataReferenceResolver MetadataReferenceResolver" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.MetadataReferenceResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.MetadataReferenceResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Resolves paths to metadata references specified in source via #r directives.
+            Null if the compilation can't contain references to metadata other than those explicitly passed to its factory (such as #r directives in sources). 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleName">
+      <MemberSignature Language="C#" Value="public string ModuleName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModuleName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.ModuleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the primary module, or null if a default name should be used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            The name usually (but not necessarily) includes an extension, e.g. "MyModule.dll".
+            
+            If <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.ModuleName" /> is null the actual name written to metadata  
+            is derived from the name of the compilation (<see cref="P:Microsoft.CodeAnalysis.Compilation.AssemblyName" />)
+            by appending a default extension for <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.OutputKind" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.CodeAnalysis.CompilationOptions left, Microsoft.CodeAnalysis.CompilationOptions right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.CodeAnalysis.CompilationOptions left, class Microsoft.CodeAnalysis.CompilationOptions right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.op_Equality(Microsoft.CodeAnalysis.CompilationOptions,Microsoft.CodeAnalysis.CompilationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.CompilationOptions" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.CompilationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.CodeAnalysis.CompilationOptions left, Microsoft.CodeAnalysis.CompilationOptions right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.CodeAnalysis.CompilationOptions left, class Microsoft.CodeAnalysis.CompilationOptions right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.op_Inequality(Microsoft.CodeAnalysis.CompilationOptions,Microsoft.CodeAnalysis.CompilationOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.CompilationOptions" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.CompilationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptimizationLevel">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.OptimizationLevel OptimizationLevel { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.OptimizationLevel OptimizationLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.OptimizationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.OptimizationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies whether or not optimizations should be performed on the output IL.
+            This is independent of whether or not PDB information is generated.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.OutputKind OutputKind { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.OutputKind OutputKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.OutputKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.OutputKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The kind of assembly generated when emitted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Platform">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Platform Platform { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Platform Platform" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.Platform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Platform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies which version of the common language runtime (CLR) can run the assembly.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicSign">
+      <MemberSignature Language="C#" Value="public bool PublicSign { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PublicSign" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.PublicSign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Mark the compilation assembly as fully signed, but only sign with the public key.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If true, the assembly is marked as signed, but is only signed with the public key.
+            </para>
+          <para>
+            The key must be provided through either an absolute path in <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoKeyFile" />
+            or directly via <see cref="P:Microsoft.CodeAnalysis.CompilationOptions.CryptoPublicKey" />.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportSuppressedDiagnostics">
+      <MemberSignature Language="C#" Value="public bool ReportSuppressedDiagnostics { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReportSuppressedDiagnostics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.ReportSuppressedDiagnostics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether diagnostics suppressed in source, i.e. <see cref="P:Microsoft.CodeAnalysis.Diagnostic.IsSuppressed" /> is true, should be reported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptClassName">
+      <MemberSignature Language="C#" Value="public string ScriptClassName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScriptClassName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.ScriptClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The full name of a global implicit class (script class). This class implicitly encapsulates top-level statements, 
+            type declarations, and member declarations. Could be a namespace qualified name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceReferenceResolver">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SourceReferenceResolver SourceReferenceResolver { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SourceReferenceResolver SourceReferenceResolver" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.SourceReferenceResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SourceReferenceResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the resolver for resolving source document references for the compilation.
+            Null if the compilation is not allowed to contain source file references, such as #line pragmas and #load directives.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecificDiagnosticOptions">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableDictionary&lt;string,Microsoft.CodeAnalysis.ReportDiagnostic&gt; SpecificDiagnosticOptions { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Immutable.ImmutableDictionary`2&lt;string, valuetype Microsoft.CodeAnalysis.ReportDiagnostic&gt; SpecificDiagnosticOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.SpecificDiagnosticOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableDictionary&lt;System.String,Microsoft.CodeAnalysis.ReportDiagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Warning report option for each warning.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrongNameProvider">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.StrongNameProvider StrongNameProvider { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.StrongNameProvider StrongNameProvider" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.StrongNameProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.StrongNameProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Provides strong name and signature the source assembly.
+            Null if assembly signing is not supported.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WarningLevel">
+      <MemberSignature Language="C#" Value="public int WarningLevel { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WarningLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.WarningLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Global warning level (from 0 to 4).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAssemblyIdentityComparer">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithAssemblyIdentityComparer (Microsoft.CodeAnalysis.AssemblyIdentityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithAssemblyIdentityComparer(class Microsoft.CodeAnalysis.AssemblyIdentityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithAssemblyIdentityComparer(Microsoft.CodeAnalysis.AssemblyIdentityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="Microsoft.CodeAnalysis.AssemblyIdentityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithConcurrentBuild">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithConcurrentBuild (bool concurrent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithConcurrentBuild(bool concurrent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithConcurrentBuild(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="concurrent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="concurrent">To be added.</param>
+        <summary>
+            Creates a new options instance with the concurrent build property set accordingly.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCryptoKeyContainer">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithCryptoKeyContainer (string cryptoKeyContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithCryptoKeyContainer(string cryptoKeyContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithCryptoKeyContainer(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cryptoKeyContainer" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cryptoKeyContainer">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCryptoKeyFile">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithCryptoKeyFile (string cryptoKeyFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithCryptoKeyFile(string cryptoKeyFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithCryptoKeyFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cryptoKeyFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cryptoKeyFile">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCryptoPublicKey">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithCryptoPublicKey (System.Collections.Immutable.ImmutableArray&lt;byte&gt; cryptoPublicKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithCryptoPublicKey(valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; cryptoPublicKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithCryptoPublicKey(System.Collections.Immutable.ImmutableArray{System.Byte})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cryptoPublicKey" Type="System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="cryptoPublicKey">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithDelaySign">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithDelaySign (Nullable&lt;bool&gt; delaySign);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithDelaySign(valuetype System.Nullable`1&lt;bool&gt; delaySign) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithDelaySign(System.Nullable{System.Boolean})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delaySign" Type="System.Nullable&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="delaySign">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithDeterministic">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithDeterministic (bool deterministic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithDeterministic(bool deterministic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithDeterministic(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deterministic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deterministic">To be added.</param>
+        <summary>
+            Creates a new options instance with the deterministic property set accordingly.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithGeneralDiagnosticOption">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithGeneralDiagnosticOption (Microsoft.CodeAnalysis.ReportDiagnostic value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithGeneralDiagnosticOption(valuetype Microsoft.CodeAnalysis.ReportDiagnostic value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithGeneralDiagnosticOption(Microsoft.CodeAnalysis.ReportDiagnostic)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="Microsoft.CodeAnalysis.ReportDiagnostic" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Creates a new options instance with the specified general diagnostic option.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithMainTypeName">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithMainTypeName (string mainTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithMainTypeName(string mainTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithMainTypeName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mainTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mainTypeName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithMetadataReferenceResolver">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithMetadataReferenceResolver (Microsoft.CodeAnalysis.MetadataReferenceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithMetadataReferenceResolver(class Microsoft.CodeAnalysis.MetadataReferenceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithMetadataReferenceResolver(Microsoft.CodeAnalysis.MetadataReferenceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolver" Type="Microsoft.CodeAnalysis.MetadataReferenceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="resolver">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithModuleName">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithModuleName (string moduleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithModuleName(string moduleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithModuleName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="moduleName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithOptimizationLevel">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithOptimizationLevel (Microsoft.CodeAnalysis.OptimizationLevel value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithOptimizationLevel(valuetype Microsoft.CodeAnalysis.OptimizationLevel value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithOptimizationLevel(Microsoft.CodeAnalysis.OptimizationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="Microsoft.CodeAnalysis.OptimizationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Creates a new options instance with optimizations enabled or disabled.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithOutputKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithOutputKind (Microsoft.CodeAnalysis.OutputKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithOutputKind(valuetype Microsoft.CodeAnalysis.OutputKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithOutputKind(Microsoft.CodeAnalysis.OutputKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.OutputKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+            Creates a new options instance with the specified output kind.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithOverflowChecks">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithOverflowChecks (bool checkOverflow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithOverflowChecks(bool checkOverflow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithOverflowChecks(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="checkOverflow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="checkOverflow">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithPlatform">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithPlatform (Microsoft.CodeAnalysis.Platform platform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithPlatform(valuetype Microsoft.CodeAnalysis.Platform platform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithPlatform(Microsoft.CodeAnalysis.Platform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="platform" Type="Microsoft.CodeAnalysis.Platform" />
+      </Parameters>
+      <Docs>
+        <param name="platform">To be added.</param>
+        <summary>
+            Creates a new options instance with the specified platform.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithPublicSign">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithPublicSign (bool publicSign);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithPublicSign(bool publicSign) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithPublicSign(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="publicSign" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="publicSign">To be added.</param>
+        <summary>
+            Creates a new options instance with the specified public sign setting.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithReportSuppressedDiagnostics">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithReportSuppressedDiagnostics (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithReportSuppressedDiagnostics(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithReportSuppressedDiagnostics(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Creates a new options instance with the specified suppressed diagnostics reporting option.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithScriptClassName">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithScriptClassName (string scriptClassName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithScriptClassName(string scriptClassName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithScriptClassName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptClassName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scriptClassName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithSourceReferenceResolver">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithSourceReferenceResolver (Microsoft.CodeAnalysis.SourceReferenceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithSourceReferenceResolver(class Microsoft.CodeAnalysis.SourceReferenceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithSourceReferenceResolver(Microsoft.CodeAnalysis.SourceReferenceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolver" Type="Microsoft.CodeAnalysis.SourceReferenceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="resolver">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithSpecificDiagnosticOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithSpecificDiagnosticOptions (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,Microsoft.CodeAnalysis.ReportDiagnostic&gt;&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithSpecificDiagnosticOptions(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, valuetype Microsoft.CodeAnalysis.ReportDiagnostic&gt;&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithSpecificDiagnosticOptions(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,Microsoft.CodeAnalysis.ReportDiagnostic}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,Microsoft.CodeAnalysis.ReportDiagnostic&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Creates a new options instance with the specified diagnostic-specific options.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithSpecificDiagnosticOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithSpecificDiagnosticOptions (System.Collections.Immutable.ImmutableDictionary&lt;string,Microsoft.CodeAnalysis.ReportDiagnostic&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithSpecificDiagnosticOptions(class System.Collections.Immutable.ImmutableDictionary`2&lt;string, valuetype Microsoft.CodeAnalysis.ReportDiagnostic&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithSpecificDiagnosticOptions(System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Collections.Immutable.ImmutableDictionary&lt;System.String,Microsoft.CodeAnalysis.ReportDiagnostic&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Creates a new options instance with the specified diagnostic-specific options.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithStrongNameProvider">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithStrongNameProvider (Microsoft.CodeAnalysis.StrongNameProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithStrongNameProvider(class Microsoft.CodeAnalysis.StrongNameProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithStrongNameProvider(Microsoft.CodeAnalysis.StrongNameProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="Microsoft.CodeAnalysis.StrongNameProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithXmlReferenceResolver">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions WithXmlReferenceResolver (Microsoft.CodeAnalysis.XmlReferenceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationOptions WithXmlReferenceResolver(class Microsoft.CodeAnalysis.XmlReferenceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationOptions.WithXmlReferenceResolver(Microsoft.CodeAnalysis.XmlReferenceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolver" Type="Microsoft.CodeAnalysis.XmlReferenceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="resolver">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlReferenceResolver">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.XmlReferenceResolver XmlReferenceResolver { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.XmlReferenceResolver XmlReferenceResolver" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationOptions.XmlReferenceResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.XmlReferenceResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the resolver for resolving XML document references for the compilation.
+            Null if the compilation is not allowed to contain XML file references, such as XML doc comment include tags and permission sets stored in an XML file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
