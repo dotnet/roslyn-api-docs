@@ -1,0 +1,536 @@
+﻿<Type Name="INamedTypeSymbol" FullName="Microsoft.CodeAnalysis.INamedTypeSymbol">
+  <TypeSignature Language="C#" Value="public interface INamedTypeSymbol : IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;, Microsoft.CodeAnalysis.ITypeSymbol" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INamedTypeSymbol implements class Microsoft.CodeAnalysis.INamespaceOrTypeSymbol, class Microsoft.CodeAnalysis.ISymbol, class Microsoft.CodeAnalysis.ITypeSymbol, class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.INamedTypeSymbol" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.ITypeSymbol</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a type other than an array, a pointer, a type parameter.
+            </summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Arity">
+      <MemberSignature Language="C#" Value="public int Arity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Arity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.Arity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the arity of this type, or the number of type parameters it takes.
+            A non-generic type has zero arity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedSymbol">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol AssociatedSymbol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISymbol AssociatedSymbol" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.AssociatedSymbol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For implicitly declared delegate types returns the EventSymbol that caused this
+            delegate type to be generated.
+            For all other types returns null.
+            Note, the set of possible associated symbols might be expanded in the future to 
+            reflect changes in the languages.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Construct">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol Construct (params Microsoft.CodeAnalysis.ITypeSymbol[] typeArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.INamedTypeSymbol Construct(class Microsoft.CodeAnalysis.ITypeSymbol[] typeArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.INamedTypeSymbol.Construct(Microsoft.CodeAnalysis.ITypeSymbol[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeArguments" Type="Microsoft.CodeAnalysis.ITypeSymbol[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="typeArguments">The immediate type arguments to be replaced for type
+            parameters in the type.</param>
+        <summary>
+            Returns a constructed type given its type arguments.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstructedFrom">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol ConstructedFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamedTypeSymbol ConstructedFrom" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.ConstructedFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the type symbol that this type was constructed from. This type symbol
+            has the same containing type (if any), but has type arguments that are the same
+            as the type parameters (although its containing type might not).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constructors">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt; Constructors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IMethodSymbol&gt; Constructors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.Constructors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the both instance and static constructors for this type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstructUnboundGenericType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol ConstructUnboundGenericType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.INamedTypeSymbol ConstructUnboundGenericType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.INamedTypeSymbol.ConstructUnboundGenericType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns an unbound generic type of this named type.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelegateInvokeMethod">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol DelegateInvokeMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol DelegateInvokeMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.DelegateInvokeMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For delegate types, gets the delegate's invoke method.  Returns null on
+            all other kinds of types.  Note that it is possible to have an ill-formed
+            delegate type imported from metadata which does not have an Invoke method.
+            Such a type will be classified as a delegate but its DelegateInvokeMethod
+            would be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumUnderlyingType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol EnumUnderlyingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamedTypeSymbol EnumUnderlyingType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.EnumUnderlyingType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            For enum types, gets the underlying type. Returns null on all other
+            kinds of types.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeArgumentCustomModifiers">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt; GetTypeArgumentCustomModifiers (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CustomModifier&gt; GetTypeArgumentCustomModifiers(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.INamedTypeSymbol.GetTypeArgumentCustomModifiers(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">To be added.</param>
+        <summary>
+            Returns custom modifiers for the type argument that has been substituted for the type parameter. 
+            The modifiers correspond to the type argument at the same ordinal within the <see cref="P:Microsoft.CodeAnalysis.INamedTypeSymbol.TypeArguments" />
+            array. Returns an empty array if there are no modifiers.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceConstructors">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt; InstanceConstructors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IMethodSymbol&gt; InstanceConstructors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.InstanceConstructors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the instance constructors for this type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsComImport">
+      <MemberSignature Language="C#" Value="public bool IsComImport { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsComImport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.IsComImport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies that the class or interface is imported from another module.  See
+            <see cref="F:System.Reflection.TypeAttributes.Import" /> and <see cref="T:System.Runtime.InteropServices.ComImportAttribute" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenericType">
+      <MemberSignature Language="C#" Value="public bool IsGenericType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenericType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.IsGenericType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if this type or some containing type has type parameters.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImplicitClass">
+      <MemberSignature Language="C#" Value="public bool IsImplicitClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImplicitClass" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.IsImplicitClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if the type is the implicit class that holds onto invalid global members (like methods or
+            statements in a non script file).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsScriptClass">
+      <MemberSignature Language="C#" Value="public bool IsScriptClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsScriptClass" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.IsScriptClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if the type is a Script class. 
+            It might be an interactive submission class or a Script class in a csx file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnboundGenericType">
+      <MemberSignature Language="C#" Value="public bool IsUnboundGenericType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnboundGenericType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.IsUnboundGenericType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if this is a reference to an <em>unbound</em> generic type. A generic type is
+            considered <em>unbound</em> if all of the type argument lists in its fully qualified
+            name are empty. Note that the type arguments of an unbound generic type will be
+            returned as error types because they do not really have type arguments.  An unbound
+            generic type yields null for its BaseType and an empty result for its Interfaces.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; MemberNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; MemberNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.MemberNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns collection of names of members declared within this type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MightContainExtensionMethods">
+      <MemberSignature Language="C#" Value="public bool MightContainExtensionMethods { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MightContainExtensionMethods" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.MightContainExtensionMethods" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines if the symbol might contain extension methods. 
+            If false, the symbol does not contain extension methods. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalDefinition">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol OriginalDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamedTypeSymbol OriginalDefinition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.OriginalDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the original definition of this type symbol. If this symbol is derived from another
+            symbol by (say) type substitution, this gets the original symbol, as it was defined in
+            source or metadata.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticConstructors">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt; StaticConstructors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IMethodSymbol&gt; StaticConstructors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.StaticConstructors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the static constructors for this type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TupleElements">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IFieldSymbol&gt; TupleElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IFieldSymbol&gt; TupleElements" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.TupleElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IFieldSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Returns fields that represent tuple elements for types that are tuples.
+            
+             If this type is not a tuple, then returns default.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TupleUnderlyingType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol TupleUnderlyingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamedTypeSymbol TupleUnderlyingType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.TupleUnderlyingType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this is a tuple type symbol, returns the symbol for its underlying type.
+            Otherwise, returns null.
+            The type argument corresponding to the type of the extension field (VT[8].Rest),
+            which is at the 8th (one based) position is always a symbol for another tuple, 
+            rather than its underlying type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeArguments">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt; TypeArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ITypeSymbol&gt; TypeArguments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.TypeArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the type arguments that have been substituted for the type parameters. 
+            If nothing has been substituted for a give type parameters,
+            then the type parameter itself is consider the type argument.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeParameterSymbol&gt; TypeParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ITypeParameterSymbol&gt; TypeParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.INamedTypeSymbol.TypeParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeParameterSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the type parameters that this type has. If this is a non-generic type,
+            returns an empty ImmutableArray.  
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

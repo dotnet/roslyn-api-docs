@@ -1,0 +1,241 @@
+﻿<Type Name="IFieldSymbol" FullName="Microsoft.CodeAnalysis.IFieldSymbol">
+  <TypeSignature Language="C#" Value="public interface IFieldSymbol : IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;, Microsoft.CodeAnalysis.ISymbol" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFieldSymbol implements class Microsoft.CodeAnalysis.ISymbol, class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.IFieldSymbol" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.ISymbol</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a field in a class, struct or enum.
+            </summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssociatedSymbol">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol AssociatedSymbol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISymbol AssociatedSymbol" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.AssociatedSymbol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this field serves as a backing variable for an automatically generated
+            property or a field-like event, returns that 
+            property/event. Otherwise returns null.
+            Note, the set of possible associated symbols might be expanded in the future to 
+            reflect changes in the languages.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstantValue">
+      <MemberSignature Language="C#" Value="public object ConstantValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ConstantValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.ConstantValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the constant value of this field
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrespondingTupleField">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IFieldSymbol CorrespondingTupleField { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IFieldSymbol CorrespondingTupleField" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.CorrespondingTupleField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IFieldSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this field represents a tuple element, returns a corresponding default element field.
+            Otherwise returns null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            A tuple type will always have default elements such as Item1, Item2, Item3...
+            This API allows matching a field that represents a named element, such as "Alice" 
+            to the corresponding default element field such as "Item1"
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomModifiers">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt; CustomModifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CustomModifier&gt; CustomModifiers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.CustomModifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns custom modifiers associated with the field, or an empty array if there are none.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasConstantValue">
+      <MemberSignature Language="C#" Value="public bool HasConstantValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasConstantValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.HasConstantValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns false if the field wasn't declared as "const", or constant value was omitted or erroneous.
+            True otherwise.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConst">
+      <MemberSignature Language="C#" Value="public bool IsConst { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConst" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.IsConst" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this field was declared as "const" (i.e. is a constant declaration).
+            Also returns true for an enum member.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this field was declared as "readonly". 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVolatile">
+      <MemberSignature Language="C#" Value="public bool IsVolatile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVolatile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.IsVolatile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this field was declared as "volatile". 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalDefinition">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IFieldSymbol OriginalDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IFieldSymbol OriginalDefinition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.OriginalDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IFieldSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the original definition of this symbol. If this symbol is derived from another
+            symbol by (say) type substitution, this gets the original symbol, as it was defined in
+            source or metadata.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ITypeSymbol Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ITypeSymbol Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IFieldSymbol.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of this field.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

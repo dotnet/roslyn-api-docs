@@ -1,0 +1,364 @@
+﻿<Type Name="MetadataReferenceProperties" FullName="Microsoft.CodeAnalysis.MetadataReferenceProperties">
+  <TypeSignature Language="C#" Value="public struct MetadataReferenceProperties : IEquatable&lt;Microsoft.CodeAnalysis.MetadataReferenceProperties&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MetadataReferenceProperties extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.MetadataReferenceProperties" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.MetadataReferenceProperties&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Information about a metadata reference.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetadataReferenceProperties (Microsoft.CodeAnalysis.MetadataImageKind kind = Microsoft.CodeAnalysis.MetadataImageKind.Assembly, System.Collections.Immutable.ImmutableArray&lt;string&gt; aliases = null, bool embedInteropTypes = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.MetadataImageKind kind, valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; aliases, bool embedInteropTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReferenceProperties.#ctor(Microsoft.CodeAnalysis.MetadataImageKind,System.Collections.Immutable.ImmutableArray{System.String},System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.MetadataImageKind" />
+        <Parameter Name="aliases" Type="System.Collections.Immutable.ImmutableArray&lt;System.String&gt;" />
+        <Parameter Name="embedInteropTypes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="kind">The image kind - assembly or module.</param>
+        <param name="aliases">Assembly aliases. Can't be set for a module.</param>
+        <param name="embedInteropTypes">True to embed interop types from the referenced assembly to the referencing compilation. Must be false for a module.</param>
+        <summary>
+            Initializes reference properties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Aliases">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;string&gt; Aliases { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; Aliases" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.Aliases" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Aliases for the metadata reference. Empty if the reference has no aliases.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            In C# these aliases can be used in "extern alias" syntax to disambiguate type names. 
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.MetadataReferenceProperties Assembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties Assembly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.MetadataReferenceProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default properties for an assembly reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmbedInteropTypes">
+      <MemberSignature Language="C#" Value="public bool EmbedInteropTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EmbedInteropTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.EmbedInteropTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if interop types defined in the referenced metadata should be embedded into the compilation referencing the metadata.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.CodeAnalysis.MetadataReferenceProperties other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReferenceProperties.Equals(Microsoft.CodeAnalysis.MetadataReferenceProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReferenceProperties.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReferenceProperties.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalAlias">
+      <MemberSignature Language="C#" Value="public static string GlobalAlias { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string GlobalAlias" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.GlobalAlias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Alias that represents a global declaration space.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Namespaces in references whose <see cref="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.Aliases" /> contain <see cref="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.GlobalAlias" /> are available in global declaration space.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.MetadataImageKind Kind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.MetadataImageKind Kind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.Kind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.MetadataImageKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The image kind (assembly or module) the reference refers to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.MetadataReferenceProperties Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties Module" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.MetadataReferenceProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default properties for a module reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.CodeAnalysis.MetadataReferenceProperties left, Microsoft.CodeAnalysis.MetadataReferenceProperties right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties left, valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReferenceProperties.op_Equality(Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.MetadataReferenceProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.CodeAnalysis.MetadataReferenceProperties left, Microsoft.CodeAnalysis.MetadataReferenceProperties right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties left, valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReferenceProperties.op_Inequality(Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.MetadataReferenceProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAliases">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.MetadataReferenceProperties WithAliases (System.Collections.Generic.IEnumerable&lt;string&gt; aliases);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties WithAliases(class System.Collections.Generic.IEnumerable`1&lt;string&gt; aliases) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReferenceProperties.WithAliases(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.MetadataReferenceProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="aliases" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="aliases">To be added.</param>
+        <summary>
+            Returns <see cref="T:Microsoft.CodeAnalysis.MetadataReferenceProperties" /> with specified aliases.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.Kind" /> is <see cref="F:Microsoft.CodeAnalysis.MetadataImageKind.Module" />, as modules can't be aliased.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAliases">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.MetadataReferenceProperties WithAliases (System.Collections.Immutable.ImmutableArray&lt;string&gt; aliases);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties WithAliases(valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; aliases) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReferenceProperties.WithAliases(System.Collections.Immutable.ImmutableArray{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.MetadataReferenceProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="aliases" Type="System.Collections.Immutable.ImmutableArray&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="aliases">To be added.</param>
+        <summary>
+            Returns <see cref="T:Microsoft.CodeAnalysis.MetadataReferenceProperties" /> with specified aliases.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.Kind" /> is <see cref="F:Microsoft.CodeAnalysis.MetadataImageKind.Module" />, as modules can't be aliased.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WithEmbedInteropTypes">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.MetadataReferenceProperties WithEmbedInteropTypes (bool embedInteropTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties WithEmbedInteropTypes(bool embedInteropTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReferenceProperties.WithEmbedInteropTypes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.MetadataReferenceProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="embedInteropTypes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="embedInteropTypes">To be added.</param>
+        <summary>
+            Returns <see cref="T:Microsoft.CodeAnalysis.MetadataReferenceProperties" /> with <see cref="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.EmbedInteropTypes" /> set to specified value.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.Kind" /> is <see cref="F:Microsoft.CodeAnalysis.MetadataImageKind.Module" />, as interop types can't be embedded from modules.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
