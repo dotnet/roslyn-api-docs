@@ -1,0 +1,277 @@
+﻿<Type Name="ITypeSymbol" FullName="Microsoft.CodeAnalysis.ITypeSymbol">
+  <TypeSignature Language="C#" Value="public interface ITypeSymbol : IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;, Microsoft.CodeAnalysis.INamespaceOrTypeSymbol" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeSymbol implements class Microsoft.CodeAnalysis.INamespaceOrTypeSymbol, class Microsoft.CodeAnalysis.ISymbol, class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ITypeSymbol" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.INamespaceOrTypeSymbol</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a type.
+            </summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllInterfaces">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt; AllInterfaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.INamedTypeSymbol&gt; AllInterfaces" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.AllInterfaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of all interfaces of which this type is a declared subtype, excluding this type
+            itself. This includes all declared base interfaces, all declared base interfaces of base
+            types, and all declared base interfaces of those results (recursively). This also is the effective
+            interface set of a type parameter. Each result
+            appears exactly once in the list. This list is topologically sorted by the inheritance
+            relationship: if interface type A extends interface type B, then A precedes B in the
+            list. This is not quite the same as "all interfaces of which this type is a proper
+            subtype" because it does not take into account variance: AllInterfaces for
+            <c><![CDATA[IEnumerable<string>]]></c> will not include <c><![CDATA[IEnumerable<object>]]></c>;
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol BaseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamedTypeSymbol BaseType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.BaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The declared base type of this type, or null. The object type, interface types,
+            and pointer types do not have a base type. The base type of a type parameter
+            is its effective base class.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindImplementationForInterfaceMember">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol FindImplementationForInterfaceMember (Microsoft.CodeAnalysis.ISymbol interfaceMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.ISymbol FindImplementationForInterfaceMember(class Microsoft.CodeAnalysis.ISymbol interfaceMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ITypeSymbol.FindImplementationForInterfaceMember(Microsoft.CodeAnalysis.ISymbol)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="interfaceMember" Type="Microsoft.CodeAnalysis.ISymbol" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceMember">
+            Must be a non-null interface property, method, or event.
+            </param>
+        <summary>
+            Returns the corresponding symbol in this type or a base type that implements 
+            interfaceMember (either implicitly or explicitly), or null if no such symbol exists
+            (which might be either because this type doesn't implement the container of
+            interfaceMember, or this type doesn't supply a member that successfully implements
+            interfaceMember).
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interfaces">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt; Interfaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.INamedTypeSymbol&gt; Interfaces" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.Interfaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the set of interfaces that this type directly implements. This set does not include
+            interfaces that are base interfaces of directly implemented interfaces. This does
+            include the interfaces declared as constraints on type parameters.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAnonymousType">
+      <MemberSignature Language="C#" Value="public bool IsAnonymousType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAnonymousType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.IsAnonymousType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Is this a symbol for an anonymous type (including anonymous VB delegate).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReferenceType">
+      <MemberSignature Language="C#" Value="public bool IsReferenceType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReferenceType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.IsReferenceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if this type is known to be a reference type. It is never the case that
+            <see cref="P:Microsoft.CodeAnalysis.ITypeSymbol.IsReferenceType" /> and <see cref="P:Microsoft.CodeAnalysis.ITypeSymbol.IsValueType" /> both return true. However, for an unconstrained type
+            parameter, <see cref="P:Microsoft.CodeAnalysis.ITypeSymbol.IsReferenceType" /> and <see cref="P:Microsoft.CodeAnalysis.ITypeSymbol.IsValueType" /> will both return false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTupleType">
+      <MemberSignature Language="C#" Value="public bool IsTupleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTupleType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.IsTupleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Is this a symbol for a tuple .
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValueType">
+      <MemberSignature Language="C#" Value="public bool IsValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValueType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.IsValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if this type is known to be a value type. It is never the case that
+            <see cref="P:Microsoft.CodeAnalysis.ITypeSymbol.IsReferenceType" /> and <see cref="P:Microsoft.CodeAnalysis.ITypeSymbol.IsValueType" /> both return true. However, for an unconstrained type
+            parameter, <see cref="P:Microsoft.CodeAnalysis.ITypeSymbol.IsReferenceType" /> and <see cref="P:Microsoft.CodeAnalysis.ITypeSymbol.IsValueType" /> will both return false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalDefinition">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ITypeSymbol OriginalDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ITypeSymbol OriginalDefinition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.OriginalDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The original definition of this symbol. If this symbol is constructed from another
+            symbol by type substitution then <see cref="P:Microsoft.CodeAnalysis.ITypeSymbol.OriginalDefinition" /> gets the original symbol as it was defined in
+            source or metadata.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecialType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SpecialType SpecialType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SpecialType SpecialType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.SpecialType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SpecialType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An enumerated value that identifies certain 'special' types such as <see cref="T:System.Object" />. 
+            Returns <see cref="F:Microsoft.CodeAnalysis.SpecialType.None" /> if the type is not special.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TypeKind TypeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.TypeKind TypeKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.TypeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.TypeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An enumerated value that identifies whether this type is an array, pointer, enum, and so on.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

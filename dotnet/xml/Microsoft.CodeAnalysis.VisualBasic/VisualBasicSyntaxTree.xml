@@ -1,0 +1,736 @@
+﻿<Type Name="VisualBasicSyntaxTree" FullName="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree">
+  <TypeSignature Language="C#" Value="public abstract class VisualBasicSyntaxTree : Microsoft.CodeAnalysis.SyntaxTree" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit VisualBasicSyntaxTree extends Microsoft.CodeAnalysis.SyntaxTree" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.SyntaxTree</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+ The parsed representation of a Visual Basic source document.
+ </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected VisualBasicSyntaxTree ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyspecialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneNodeAsRoot&lt;T&gt;">
+      <MemberSignature Language="C#" Value="protected T CloneNodeAsRoot&lt;T&gt; (T node) where T : Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode;" />
+      <MemberSignature Language="ILAsm" Value=".method familyinstance !!T CloneNodeAsRoot&lt;(class Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode) T&gt;(!!T node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.CloneNodeAsRoot``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="node" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Type of the syntax node.</typeparam>
+        <param name="node">The original syntax node.</param>
+        <summary>
+ Produces a clone of a <see cref="T:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode" /> which will have current syntax tree as its parent.
+ 
+ Caller must guarantee that if the same instance of <see cref="T:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode" /> makes multiple calls
+ to this function, only one result is observable.
+ </summary>
+        <returns>A clone of the original syntax node that has current <see cref="T:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree" /> as its parent.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree Create (Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode root, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options = null, string path = &quot;&quot;, System.Text.Encoding encoding = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.CodeAnalysis.SyntaxTree Create(class Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode root, class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.Create(Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode,Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions,System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="path">To be added.</param>
+        <param name="encoding">To be added.</param>
+        <summary>
+ Creates a new syntax tree from a syntax node.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChangedSpans">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; GetChangedSpans (Microsoft.CodeAnalysis.SyntaxTree oldTree);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; GetChangedSpans(class Microsoft.CodeAnalysis.SyntaxTree oldTree) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetChangedSpans(Microsoft.CodeAnalysis.SyntaxTree)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldTree" Type="Microsoft.CodeAnalysis.SyntaxTree" />
+      </Parameters>
+      <Docs>
+        <param name="oldTree">The old tree. Cannot be <c>Nothing</c>.</param>
+        <summary>
+ Produces a pessimistic list of spans that denote the regions of text in this tree that
+ are changed from the text of the old tree.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>The list is pessimistic because it may claim more or larger regions than actually changed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChanges">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextChange&gt; GetChanges (Microsoft.CodeAnalysis.SyntaxTree oldTree);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextChange&gt; GetChanges(class Microsoft.CodeAnalysis.SyntaxTree oldTree) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetChanges(Microsoft.CodeAnalysis.SyntaxTree)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextChange&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldTree" Type="Microsoft.CodeAnalysis.SyntaxTree" />
+      </Parameters>
+      <Docs>
+        <param name="oldTree">The old tree. Cannot be <c>Nothing</c>.</param>
+        <summary>
+ Gets a list of text changes that when applied to the old tree produce this tree.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>The list of changes may be different than the original changes that produced this tree.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCompilationUnitRoot">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.VisualBasic.Syntax.CompilationUnitSyntax GetCompilationUnitRoot (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class Microsoft.CodeAnalysis.VisualBasic.Syntax.CompilationUnitSyntax GetCompilationUnitRoot(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetCompilationUnitRoot(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.Syntax.CompilationUnitSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+ Gets the root of the syntax tree statically typed as <see cref="T:Microsoft.CodeAnalysis.VisualBasic.Syntax.CompilationUnitSyntax" />.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>
+ Ensure that <see cref="P:Microsoft.CodeAnalysis.SyntaxTree.HasCompilationUnitRoot" /> is true for this tree prior to invoking this method.
+ </remarks>
+        <exception cref="T:System.InvalidCastException">Throws this exception if <see cref="P:Microsoft.CodeAnalysis.SyntaxTree.HasCompilationUnitRoot" /> is false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (Microsoft.CodeAnalysis.SyntaxNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(class Microsoft.CodeAnalysis.SyntaxNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetDiagnostics(Microsoft.CodeAnalysis.SyntaxNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.SyntaxNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+ Gets a list of all the diagnostics in the sub tree that has the specified node as its root.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>
+ This method does not filter diagnostics based on compiler options like /nowarn, /warnaserror etc.
+ </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (Microsoft.CodeAnalysis.SyntaxNodeOrToken nodeOrToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(valuetype Microsoft.CodeAnalysis.SyntaxNodeOrToken nodeOrToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetDiagnostics(Microsoft.CodeAnalysis.SyntaxNodeOrToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeOrToken" Type="Microsoft.CodeAnalysis.SyntaxNodeOrToken" />
+      </Parameters>
+      <Docs>
+        <param name="nodeOrToken">To be added.</param>
+        <summary>
+ Gets a list of all the diagnostics in either the sub tree that has the specified node as its root or
+ associated with the token and its related trivia.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>
+ This method does not filter diagnostics based on compiler options like /nowarn, /warnaserror etc.
+ </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (Microsoft.CodeAnalysis.SyntaxToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(valuetype Microsoft.CodeAnalysis.SyntaxToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetDiagnostics(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <summary>
+ Gets a list of all the diagnostics associated with the token and any related trivia.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>
+ This method does not filter diagnostics based on compiler options like /nowarn, /warnaserror etc.
+ </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (Microsoft.CodeAnalysis.SyntaxTrivia trivia);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(valuetype Microsoft.CodeAnalysis.SyntaxTrivia trivia) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetDiagnostics(Microsoft.CodeAnalysis.SyntaxTrivia)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trivia" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+      </Parameters>
+      <Docs>
+        <param name="trivia">To be added.</param>
+        <summary>
+ Gets a list of all the diagnostics associated with the trivia.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>
+ This method does not filter diagnostics based on compiler options like /nowarn, /warnaserror etc.
+ </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetDiagnostics(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+ Gets a list of all the diagnostics in the syntax tree.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>
+ This method does not filter diagnostics based on compiler options like /nowarn, /warnaserror etc.
+ </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineSpan">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.FileLinePositionSpan GetLineSpan (Microsoft.CodeAnalysis.Text.TextSpan span, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype Microsoft.CodeAnalysis.FileLinePositionSpan GetLineSpan(valuetype Microsoft.CodeAnalysis.Text.TextSpan span, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetLineSpan(Microsoft.CodeAnalysis.Text.TextSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FileLinePositionSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="span">Span within the tree.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+ Gets the location in terms of path, line and column for a given <paramref name="span" />.
+ </summary>
+        <returns>
+          <see cref="T:Microsoft.CodeAnalysis.FileLinePositionSpan" /> that contains path, line and column information.
+ </returns>
+        <remarks>
+ The values are not affected by line mapping directives (<c>#ExternalSource</c>).
+ </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineVisibility">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.LineVisibility GetLineVisibility (int position, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype Microsoft.CodeAnalysis.LineVisibility GetLineVisibility(int32 position, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetLineVisibility(System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.LineVisibility</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="position">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocation">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.Location GetLocation (Microsoft.CodeAnalysis.Text.TextSpan span);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.CodeAnalysis.Location GetLocation(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetLocation(Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="span">To be added.</param>
+        <summary>
+ Gets a location for the specified text <paramref name="span" />.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMappedLineSpan">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.FileLinePositionSpan GetMappedLineSpan (Microsoft.CodeAnalysis.Text.TextSpan span, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype Microsoft.CodeAnalysis.FileLinePositionSpan GetMappedLineSpan(valuetype Microsoft.CodeAnalysis.Text.TextSpan span, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetMappedLineSpan(Microsoft.CodeAnalysis.Text.TextSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FileLinePositionSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="span">Span within the tree.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+ Gets the location in terms of path, line and column after applying source line mapping directives (<c>#ExternalSource</c>).
+ </summary>
+        <returns>
+ A valid <see cref="T:Microsoft.CodeAnalysis.FileLinePositionSpan" /> that contains path, line and column information.
+
+ If the location path is not mapped the resulting path is <see cref="T:System.String" />.
+ </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRoot">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode GetRoot (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance class Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode GetRoot(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetRoot(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+ Gets the root node of the syntax tree.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode&gt; GetRootAsync (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode&gt; GetRootAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetRootAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+ Gets the root node of the syntax tree asynchronously.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>
+ By default, the work associated with this method will be executed immediately on the current thread.
+ Implementations that wish to schedule this work differently should override <see cref="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetRootAsync(System.Threading.CancellationToken)" />.
+ </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootAsyncCore">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; GetRootAsyncCore (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; GetRootAsyncCore(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetRootAsyncCore(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree/VB$StateMachine_51_GetRootAsyncCore))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootCore">
+      <MemberSignature Language="C#" Value="protected override Microsoft.CodeAnalysis.SyntaxNode GetRootCore (System.Threading.CancellationToken CancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode GetRootCore(valuetype System.Threading.CancellationToken CancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.GetRootCore(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="CancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasHiddenRegions">
+      <MemberSignature Language="C#" Value="public override bool HasHiddenRegions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HasHiddenRegions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.HasHiddenRegions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentTo">
+      <MemberSignature Language="C#" Value="public override bool IsEquivalentTo (Microsoft.CodeAnalysis.SyntaxTree tree, bool topLevel = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEquivalentTo(class Microsoft.CodeAnalysis.SyntaxTree tree, bool topLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.IsEquivalentTo(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tree" Type="Microsoft.CodeAnalysis.SyntaxTree" />
+        <Parameter Name="topLevel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tree">The tree to compare against.</param>
+        <param name="topLevel">
+ If true then the trees are equivalent if the contained nodes and tokens declaring metadata visible symbolic information are equivalent,
+ ignoring any differences of nodes inside method bodies or initializer expressions, otherwise all nodes and tokens must be equivalent.
+ </param>
+        <summary>
+ Determines if two trees are the same, disregarding trivia differences.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions Options" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+ The options used by the parser to produce the syntax tree.
+ </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionsCore">
+      <MemberSignature Language="C#" Value="protected override Microsoft.CodeAnalysis.ParseOptions OptionsCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ParseOptions OptionsCore" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.OptionsCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ParseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseText">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (Microsoft.CodeAnalysis.Text.SourceText text, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options = null, string path = &quot;&quot;, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.CodeAnalysis.SyntaxTree ParseText(class Microsoft.CodeAnalysis.Text.SourceText text, class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions,System.String,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="path">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+ Creates a syntax tree by parsing the source text.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseText">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (string text, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options = null, string path = &quot;&quot;, System.Text.Encoding encoding = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.CodeAnalysis.SyntaxTree ParseText(string text, class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, class System.Text.Encoding encoding, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText(System.String,Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions,System.String,System.Text.Encoding,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="path">To be added.</param>
+        <param name="encoding">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetRoot">
+      <MemberSignature Language="C#" Value="public abstract bool TryGetRoot (ref Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode root);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance bool TryGetRoot(class Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode&amp; root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.TryGetRoot(Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <summary>
+ Gets the root node of the syntax tree if it is already available.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetRootCore">
+      <MemberSignature Language="C#" Value="protected override bool TryGetRootCore (ref Microsoft.CodeAnalysis.SyntaxNode root);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryGetRootCore(class Microsoft.CodeAnalysis.SyntaxNode&amp; root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.TryGetRootCore(Microsoft.CodeAnalysis.SyntaxNode@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithChangedText">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SyntaxTree WithChangedText (Microsoft.CodeAnalysis.Text.SourceText newText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxTree WithChangedText(class Microsoft.CodeAnalysis.Text.SourceText newText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.WithChangedText(Microsoft.CodeAnalysis.Text.SourceText)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newText" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+      </Parameters>
+      <Docs>
+        <param name="newText">To be added.</param>
+        <summary>
+ Creates a new syntax based off this tree using a new source text.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>
+ If the new source text is a minor change from the current source text an incremental parse will occur
+ reusing most of the current syntax tree internal data.  Otherwise, a full parse will occur using the new
+ source text.
+ </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,144 @@
+﻿<Type Name="VisualBasicCommandLineParser" FullName="Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser">
+  <TypeSignature Language="C#" Value="public class VisualBasicCommandLineParser : Microsoft.CodeAnalysis.CommandLineParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VisualBasicCommandLineParser extends Microsoft.CodeAnalysis.CommandLineParser" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.CommandLineParser</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+ The VisualBasicCommandLineParser class contains members used to perform various Visual Basic command line parsing operations.
+ </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser Default" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+ Gets the current command line parser.
+ </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineArguments Parse (System.Collections.Generic.IEnumerable&lt;string&gt; args, string baseDirectory, string sdkDirectory, string additionalReferenceDirectories = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineArguments Parse(class System.Collections.Generic.IEnumerable`1&lt;string&gt; args, string baseDirectory, string sdkDirectory, string additionalReferenceDirectories) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser.Parse(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineArguments</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="baseDirectory" Type="System.String" />
+        <Parameter Name="sdkDirectory" Type="System.String" />
+        <Parameter Name="additionalReferenceDirectories" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="args">A collection of strings representing the command line arguments.</param>
+        <param name="baseDirectory">The base directory used for qualifying file locations.</param>
+        <param name="sdkDirectory">The directory to search for mscorlib, or Nothing if not available.</param>
+        <param name="additionalReferenceDirectories">A string representing additional reference paths.</param>
+        <summary>
+ Parses a command line.
+ </summary>
+        <returns>A CommandLineArguments object representing the parsed command line.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseConditionalCompilationSymbols">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IReadOnlyDictionary&lt;string,object&gt; ParseConditionalCompilationSymbols (string symbolList, out System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt; symbols = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, object&gt; ParseConditionalCompilationSymbols(string symbolList, [out] class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&amp; diagnostics, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt; symbols) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser.ParseConditionalCompilationSymbols(System.String,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Diagnostic}@,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbolList" Type="System.String" />
+        <Parameter Name="diagnostics" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&amp;" RefType="out" />
+        <Parameter Name="symbols" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="symbolList">
+ The conditional compilation string. This takes the form of a comma delimited list
+ of NAME=Value pairs, where Value may be a quoted string or integer.
+ </param>
+        <param name="diagnostics">A collection of reported diagnostics during parsing of symbolList, can be empty IEnumerable.</param>
+        <param name="symbols">A collection representing existing symbols. Symbols parsed from <paramref name="symbolList" /> will be merged with this dictionary. </param>
+        <summary>
+ Parses Conditional Compilations Symbols.   Given the string of conditional compilation symbols from the project system, parse them and merge them with an IReadOnlyDictionary
+ ready to be given to the compilation.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Invalid value provided.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegularFileExtension">
+      <MemberSignature Language="C#" Value="protected override string RegularFileExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegularFileExtension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser.RegularFileExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+ Gets the standard Visual Basic source file extension
+ </summary>
+        <value>A string representing the standard Visual Basic source file extension.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptFileExtension">
+      <MemberSignature Language="C#" Value="protected override string ScriptFileExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScriptFileExtension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCommandLineParser.ScriptFileExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+ Gets the standard Visual Basic script file extension.
+ </summary>
+        <value>A string representing the standard Visual Basic script file extension.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

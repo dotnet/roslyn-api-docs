@@ -1,0 +1,323 @@
+﻿<Type Name="PortableExecutableReference" FullName="Microsoft.CodeAnalysis.PortableExecutableReference">
+  <TypeSignature Language="C#" Value="public abstract class PortableExecutableReference : Microsoft.CodeAnalysis.MetadataReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PortableExecutableReference extends Microsoft.CodeAnalysis.MetadataReference" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.PortableExecutableReference" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.MetadataReference</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Reference to metadata stored in the standard ECMA-335 metadata format.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PortableExecutableReference (Microsoft.CodeAnalysis.MetadataReferenceProperties properties, string fullPath = null, Microsoft.CodeAnalysis.DocumentationProvider initialDocumentation = null);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties properties, string fullPath, class Microsoft.CodeAnalysis.DocumentationProvider initialDocumentation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.#ctor(Microsoft.CodeAnalysis.MetadataReferenceProperties,System.String,Microsoft.CodeAnalysis.DocumentationProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="properties" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
+        <Parameter Name="fullPath" Type="System.String" />
+        <Parameter Name="initialDocumentation" Type="Microsoft.CodeAnalysis.DocumentationProvider" />
+      </Parameters>
+      <Docs>
+        <param name="properties">To be added.</param>
+        <param name="fullPath">To be added.</param>
+        <param name="initialDocumentation">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDocumentationProvider">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.DocumentationProvider CreateDocumentationProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.DocumentationProvider CreateDocumentationProvider() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.CreateDocumentationProvider" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.DocumentationProvider</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create documentation provider for the reference.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Called when the compiler needs to read the documentation for the reference. 
+            This method can be called multiple times from different threads.  The result of one of the calls
+            is cached on the reference object.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public override string Display { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Display" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.PortableExecutableReference.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Display string used in error messages to identity the reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public string FilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.PortableExecutableReference.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Path describing the location of the metadata, or null if the metadata have no location.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Metadata GetMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Metadata GetMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Metadata</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a copy of the <see cref="T:Microsoft.CodeAnalysis.Metadata" /> object this <see cref="T:Microsoft.CodeAnalysis.PortableExecutableReference" />
+            contains.  This copy does not need to be <see cref="M:System.IDisposable.Dispose" />d.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.BadImageFormatException">If the PE image format is invalid.</exception>
+        <exception cref="T:System.IO.IOException">The metadata image content can't be read.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The metadata image is stored in a file that can't be found.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataId">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.MetadataId GetMetadataId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.MetadataId GetMetadataId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.MetadataId</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the <see cref="T:Microsoft.CodeAnalysis.MetadataId" /> for this reference's <see cref="T:Microsoft.CodeAnalysis.Metadata" />.
+            This will be equivalent to calling <see cref="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadata" />.<see cref="P:Microsoft.CodeAnalysis.Metadata.Id" />,
+            but can be done more efficiently.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.BadImageFormatException">If the PE image format is invalid.</exception>
+        <exception cref="T:System.IO.IOException">The metadata image content can't be read.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The metadata image is stored in a file that can't be found.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataImpl">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.Metadata GetMetadataImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.Metadata GetMetadataImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Metadata</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Get metadata representation for the PE file.
+             </summary>
+        <returns>To be added.</returns>
+        <remarks>
+             Called when the <see cref="T:Microsoft.CodeAnalysis.Compilation" /> needs to read the reference metadata.
+             
+             The listed exceptions are caught and converted to compilation diagnostics.
+             Any other exception is considered an unexpected error in the implementation and is not caught.
+            
+             <see cref="T:Microsoft.CodeAnalysis.Metadata" /> objects may cache information decoded from the PE image.
+             Reusing <see cref="T:Microsoft.CodeAnalysis.Metadata" /> instances across metadata references will result in better performance.
+             
+             The calling <see cref="T:Microsoft.CodeAnalysis.Compilation" /> doesn't take ownership of the <see cref="T:Microsoft.CodeAnalysis.Metadata" /> objects returned by this method.
+             The implementation needs to retrieve the object from a provider that manages their lifetime (such as metadata cache).
+             The <see cref="T:Microsoft.CodeAnalysis.Metadata" /> object is kept alive by the <see cref="T:Microsoft.CodeAnalysis.Compilation" /> that called <see cref="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataNoCopy" />
+             and by all compilations created from it via calls to With- factory methods on <see cref="T:Microsoft.CodeAnalysis.Compilation" />, 
+             other than <see cref="M:Microsoft.CodeAnalysis.Compilation.WithReferences(Microsoft.CodeAnalysis.MetadataReference[])" /> overloads. A compilation created using 
+             <see cref="M:Microsoft.CodeAnalysis.Compilation.WithReferences(Microsoft.CodeAnalysis.MetadataReference[])" /> will call to <see cref="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataNoCopy" /> again.
+             </remarks>
+        <exception cref="T:System.BadImageFormatException">If the PE image format is invalid.</exception>
+        <exception cref="T:System.IO.IOException">The metadata image content can't be read.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The metadata image is stored in a file that can't be found.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAliases">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.PortableExecutableReference WithAliases (System.Collections.Generic.IEnumerable&lt;string&gt; aliases);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.PortableExecutableReference WithAliases(class System.Collections.Generic.IEnumerable`1&lt;string&gt; aliases) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.WithAliases(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="aliases" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="aliases">The new aliases for the reference.</param>
+        <summary>
+            Returns an instance of the reference with specified aliases.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Alias is invalid for the metadata kind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAliases">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.PortableExecutableReference WithAliases (System.Collections.Immutable.ImmutableArray&lt;string&gt; aliases);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.PortableExecutableReference WithAliases(valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; aliases) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.WithAliases(System.Collections.Immutable.ImmutableArray{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="aliases" Type="System.Collections.Immutable.ImmutableArray&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="aliases">The new aliases for the reference.</param>
+        <summary>
+            Returns an instance of the reference with specified aliases.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Alias is invalid for the metadata kind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WithEmbedInteropTypes">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.PortableExecutableReference WithEmbedInteropTypes (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.PortableExecutableReference WithEmbedInteropTypes(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.WithEmbedInteropTypes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">The new value for <see cref="P:Microsoft.CodeAnalysis.MetadataReferenceProperties.EmbedInteropTypes" />.</param>
+        <summary>
+            Returns an instance of the reference with specified interop types embedding.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Interop types can't be embedded from modules.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WithProperties">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.PortableExecutableReference WithProperties (Microsoft.CodeAnalysis.MetadataReferenceProperties properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.PortableExecutableReference WithProperties(valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.WithProperties(Microsoft.CodeAnalysis.MetadataReferenceProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
+      </Parameters>
+      <Docs>
+        <param name="properties">The new properties for the reference.</param>
+        <summary>
+            Returns an instance of the reference with specified properties, or this instance if properties haven't changed.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Specified values not valid for this reference.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WithPropertiesImpl">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.PortableExecutableReference WithPropertiesImpl (Microsoft.CodeAnalysis.MetadataReferenceProperties properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.PortableExecutableReference WithPropertiesImpl(valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.PortableExecutableReference.WithPropertiesImpl(Microsoft.CodeAnalysis.MetadataReferenceProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
+      </Parameters>
+      <Docs>
+        <param name="properties">The new properties for the reference.</param>
+        <summary>
+            Returns an instance of the reference with specified properties.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>Only invoked if the properties changed.</remarks>
+        <exception cref="T:System.NotSupportedException">Specified values not supported.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

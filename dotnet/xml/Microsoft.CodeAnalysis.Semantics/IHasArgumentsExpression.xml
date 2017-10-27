@@ -1,0 +1,46 @@
+﻿<Type Name="IHasArgumentsExpression" FullName="Microsoft.CodeAnalysis.Semantics.IHasArgumentsExpression">
+  <TypeSignature Language="C#" Value="public interface IHasArgumentsExpression : Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHasArgumentsExpression implements class Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Semantics.IHasArgumentsExpression" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArgumentsInEvaluationOrder">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Semantics.IArgument&gt; ArgumentsInEvaluationOrder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Semantics.IArgument&gt; ArgumentsInEvaluationOrder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Semantics.IHasArgumentsExpression.ArgumentsInEvaluationOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Semantics.IArgument&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Arguments of the invocation, excluding the instance argument. Arguments are in evaluation order.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If the invocation is in its expanded form, then params/ParamArray arguments would be collected into arrays. 
+            Default values are supplied for optional arguments missing in source.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

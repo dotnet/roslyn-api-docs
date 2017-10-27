@@ -1,0 +1,168 @@
+﻿<Type Name="AnalysisResult" FullName="Microsoft.CodeAnalysis.Diagnostics.AnalysisResult">
+  <TypeSignature Language="C#" Value="public class AnalysisResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AnalysisResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Stores the results of analyzer execution:
+            1. Local and non-local diagnostics, per-analyzer.
+            2. Analyzer execution times, if requested.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Analyzers">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; Analyzers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; Analyzers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.Analyzers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Analyzers corresponding to this analysis result.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalyzerTelemetryInfo">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer,Microsoft.CodeAnalysis.Diagnostics.Telemetry.AnalyzerTelemetryInfo&gt; AnalyzerTelemetryInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Immutable.ImmutableDictionary`2&lt;class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer, class Microsoft.CodeAnalysis.Diagnostics.Telemetry.AnalyzerTelemetryInfo&gt; AnalyzerTelemetryInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.AnalyzerTelemetryInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer,Microsoft.CodeAnalysis.Diagnostics.Telemetry.AnalyzerTelemetryInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Analyzer telemetry info (register action counts and execution times).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompilationDiagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt; CompilationDiagnostics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Immutable.ImmutableDictionary`2&lt;class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&gt; CompilationDiagnostics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.CompilationDiagnostics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Compilation diagnostics reported by the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.Analyzers" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllDiagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetAllDiagnostics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetAllDiagnostics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.GetAllDiagnostics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets all the diagnostics reported by all the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.Analyzers" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllDiagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetAllDiagnostics (Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer analyzer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetAllDiagnostics(class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer analyzer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.GetAllDiagnostics(Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="analyzer" Type="Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer" />
+      </Parameters>
+      <Docs>
+        <param name="analyzer">To be added.</param>
+        <summary>
+            Gets all the diagnostics reported by the given <paramref name="analyzer" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SemanticDiagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.SyntaxTree,System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;&gt; SemanticDiagnostics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Immutable.ImmutableDictionary`2&lt;class Microsoft.CodeAnalysis.SyntaxTree, class System.Collections.Immutable.ImmutableDictionary`2&lt;class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&gt;&gt; SemanticDiagnostics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.SemanticDiagnostics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.SyntaxTree,System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Semantic diagnostics reported by the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.Analyzers" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyntaxDiagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.SyntaxTree,System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;&gt; SyntaxDiagnostics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Immutable.ImmutableDictionary`2&lt;class Microsoft.CodeAnalysis.SyntaxTree, class System.Collections.Immutable.ImmutableDictionary`2&lt;class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&gt;&gt; SyntaxDiagnostics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.SyntaxDiagnostics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.SyntaxTree,System.Collections.Immutable.ImmutableDictionary&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Syntax diagnostics reported by the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.AnalysisResult.Analyzers" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
