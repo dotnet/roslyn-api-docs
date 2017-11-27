@@ -1,0 +1,251 @@
+﻿<Type Name="CodeFixContext" FullName="Microsoft.CodeAnalysis.CodeFixes.CodeFixContext">
+  <TypeSignature Language="C#" Value="public struct CodeFixContext" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CodeFixContext extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext" />
+  <TypeSignature Language="VB.NET" Value="Public Structure CodeFixContext" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Context for code fixes provided by an <see cref="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeFixContext (Microsoft.CodeAnalysis.Document document, Microsoft.CodeAnalysis.Diagnostic diagnostic, Action&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt; registerCodeFix, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.Document document, class Microsoft.CodeAnalysis.Diagnostic diagnostic, class System.Action`2&lt;class Microsoft.CodeAnalysis.CodeActions.CodeAction, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&gt; registerCodeFix, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.#ctor(Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Diagnostic,System.Action{Microsoft.CodeAnalysis.CodeActions.CodeAction,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic}},System.Threading.CancellationToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" />
+        <Parameter Name="diagnostic" Type="Microsoft.CodeAnalysis.Diagnostic" />
+        <Parameter Name="registerCodeFix" Type="System.Action&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="document">Document to fix.</param>
+        <param name="diagnostic">
+            Diagnostic to fix.
+            The <see cref="P:Microsoft.CodeAnalysis.Diagnostic.Id" /> of this diagnostic must be in the set of the <see cref="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.FixableDiagnosticIds" /> of the associated <see cref="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider" />.
+            </param>
+        <param name="registerCodeFix">Delegate to register a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> fixing a subset of diagnostics.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Creates a code fix context to be passed into <see cref="M:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)" /> method.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Throws this exception if any of the arguments is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeFixContext (Microsoft.CodeAnalysis.Document document, Microsoft.CodeAnalysis.Text.TextSpan span, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics, Action&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt; registerCodeFix, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.Document document, valuetype Microsoft.CodeAnalysis.Text.TextSpan span, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics, class System.Action`2&lt;class Microsoft.CodeAnalysis.CodeActions.CodeAction, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&gt; registerCodeFix, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.#ctor(Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Text.TextSpan,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic},System.Action{Microsoft.CodeAnalysis.CodeActions.CodeAction,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic}},System.Threading.CancellationToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" />
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="diagnostics" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" />
+        <Parameter Name="registerCodeFix" Type="System.Action&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="document">Document to fix.</param>
+        <param name="span">Text span within the <paramref name="document" /> to fix.</param>
+        <param name="diagnostics">
+            Diagnostics to fix.
+            All the diagnostics must have the same <paramref name="span" />.
+            Additionally, the <see cref="P:Microsoft.CodeAnalysis.Diagnostic.Id" /> of each diagnostic must be in the set of the <see cref="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.FixableDiagnosticIds" /> of the associated <see cref="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider" />.
+            </param>
+        <param name="registerCodeFix">Delegate to register a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> fixing a subset of diagnostics.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Creates a code fix context to be passed into <see cref="M:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)" /> method.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Throws this exception if any of the arguments is null.</exception>
+        <exception cref="T:System.ArgumentException">
+            Throws this exception if the given <paramref name="diagnostics" /> is empty,
+            has a null element or has an element whose span is not equal to <paramref name="span" />.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.CancellationToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CancellationToken As CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CancellationToken.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Diagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; Diagnostics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; Diagnostics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.Diagnostics" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Diagnostics As ImmutableArray(Of Diagnostic)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Diagnostics to fix.
+            NOTE: All the diagnostics in this collection have the same <see cref="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.Span" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document Document { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Document Document" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.Document" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Document As Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Document corresponding to the <see cref="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.Span" /> to fix.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterCodeFix">
+      <MemberSignature Language="C#" Value="public void RegisterCodeFix (Microsoft.CodeAnalysis.CodeActions.CodeAction action, Microsoft.CodeAnalysis.Diagnostic diagnostic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterCodeFix(class Microsoft.CodeAnalysis.CodeActions.CodeAction action, class Microsoft.CodeAnalysis.Diagnostic diagnostic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.RegisterCodeFix(Microsoft.CodeAnalysis.CodeActions.CodeAction,Microsoft.CodeAnalysis.Diagnostic)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="Microsoft.CodeAnalysis.CodeActions.CodeAction" />
+        <Parameter Name="diagnostic" Type="Microsoft.CodeAnalysis.Diagnostic" />
+      </Parameters>
+      <Docs>
+        <param name="action">The <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> that will be invoked to apply the fix.</param>
+        <param name="diagnostic">The subset of <see cref="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.Diagnostics" /> being addressed / fixed by the <paramref name="action" />.</param>
+        <summary>
+            Add supplied <paramref name="action" /> to the list of fixes that will be offered to the user.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterCodeFix">
+      <MemberSignature Language="C#" Value="public void RegisterCodeFix (Microsoft.CodeAnalysis.CodeActions.CodeAction action, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterCodeFix(class Microsoft.CodeAnalysis.CodeActions.CodeAction action, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.RegisterCodeFix(Microsoft.CodeAnalysis.CodeActions.CodeAction,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Diagnostic})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterCodeFix (action As CodeAction, diagnostics As IEnumerable(Of Diagnostic))" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="Microsoft.CodeAnalysis.CodeActions.CodeAction" />
+        <Parameter Name="diagnostics" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">The <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> that will be invoked to apply the fix.</param>
+        <param name="diagnostics">The subset of <see cref="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.Diagnostics" /> being addressed / fixed by the <paramref name="action" />.</param>
+        <summary>
+            Add supplied <paramref name="action" /> to the list of fixes that will be offered to the user.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterCodeFix">
+      <MemberSignature Language="C#" Value="public void RegisterCodeFix (Microsoft.CodeAnalysis.CodeActions.CodeAction action, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterCodeFix(class Microsoft.CodeAnalysis.CodeActions.CodeAction action, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.RegisterCodeFix(Microsoft.CodeAnalysis.CodeActions.CodeAction,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterCodeFix (action As CodeAction, diagnostics As ImmutableArray(Of Diagnostic))" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="Microsoft.CodeAnalysis.CodeActions.CodeAction" />
+        <Parameter Name="diagnostics" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">The <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> that will be invoked to apply the fix.</param>
+        <param name="diagnostics">The subset of <see cref="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.Diagnostics" /> being addressed / fixed by the <paramref name="action" />.</param>
+        <summary>
+            Add supplied <paramref name="action" /> to the list of fixes that will be offered to the user.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Span">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Text.TextSpan Span { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextSpan Span" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.Span" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Span As TextSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Text span within the <see cref="P:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext.Document" /> to fix.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

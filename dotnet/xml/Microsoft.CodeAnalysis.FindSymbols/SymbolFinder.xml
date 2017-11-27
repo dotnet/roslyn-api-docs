@@ -1,0 +1,834 @@
+﻿<Type Name="SymbolFinder" FullName="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder">
+  <TypeSignature Language="C#" Value="public static class SymbolFinder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SymbolFinder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder" />
+  <TypeSignature Language="VB.NET" Value="Public Class SymbolFinder" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FindCallersAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindCallersAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="solution">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Finds all the callers of a specified symbol.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindCallersAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; documents, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Document&gt; documents, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindCallersAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Document},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindCallersAsync&gt;d__45))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="documents" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="solution">To be added.</param>
+        <param name="documents">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Finds all the callers of a specified symbol.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindDeclarationsAsync (Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.String,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindDeclarationsAsync&gt;d__1))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="project">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the declared symbols from either source, referenced projects or metadata assemblies with the specified name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindDeclarationsAsync (Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.String,System.Boolean,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindDeclarationsAsync&gt;d__2))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="filter" Type="Microsoft.CodeAnalysis.SymbolFilter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="project">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <param name="filter">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the declared symbols from either source, referenced projects or metadata assemblies with the specified name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDerivedClassesAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync(class Microsoft.CodeAnalysis.INamedTypeSymbol type, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedClassesAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindDerivedClassesAsync&gt;d__39))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="type">The symbol to find derived types of.</param>
+        <param name="solution">The solution to search in.</param>
+        <param name="projects">The projects to search. Can be null to search the entire solution.</param>
+        <param name="cancellationToken"></param>
+        <summary>
+            Finds the derived classes of the given type. Implementations of an interface are not considered "derived", but can be found
+            with <see cref="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />.
+            </summary>
+        <returns>The derived types of the symbol. The symbol passed in is not included in this list.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindImplementationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementationsAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementationsAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindImplementationsAsync&gt;d__41))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="solution">To be added.</param>
+        <param name="projects">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Finds the symbols that implement an interface or interface member.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindImplementedInterfaceMembersAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementedInterfaceMembersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementedInterfaceMembersAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementedInterfaceMembersAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindImplementedInterfaceMembersAsync&gt;d__35))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="solution">To be added.</param>
+        <param name="projects">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find symbols for declarations that implement members of the specified interface symbol
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindOverridesAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindOverridesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindOverridesAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindOverridesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindOverridesAsync&gt;d__32))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="solution">To be added.</param>
+        <param name="projects">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find symbols for members that override the specified member symbol.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindReferencesAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindReferencesAsync&gt;d__54))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">The symbol to find references to.</param>
+        <param name="solution">The solution to find references within.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Finds all references to a symbol throughout a solution
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindReferencesAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; documents, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Document&gt; documents, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Document},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="documents" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">The symbol to find references to.</param>
+        <param name="solution">The solution to find references within.</param>
+        <param name="documents">A set of documents to be searched. If documents is null, then that means "all documents".</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Finds all references to a symbol throughout a solution
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindReferencesAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress progress, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; documents, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress progress, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Document&gt; documents, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Document},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindReferencesAsync&gt;d__56))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="progress" Type="Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress" />
+        <Parameter Name="documents" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">The symbol to find references to.</param>
+        <param name="solution">The solution to find references within.</param>
+        <param name="progress">An optional progress object that will receive progress
+            information as the search is undertaken.</param>
+        <param name="documents">An optional set of documents to be searched. If documents is null, then that means "all documents".</param>
+        <param name="cancellationToken">An optional cancellation token.</param>
+        <summary>
+            Finds all references to a symbol throughout a solution
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSimilarSymbols&lt;TSymbol&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;TSymbol&gt; FindSimilarSymbols&lt;TSymbol&gt; (TSymbol symbol, Microsoft.CodeAnalysis.Compilation compilation, System.Threading.CancellationToken cancellationToken = null) where TSymbol : Microsoft.CodeAnalysis.ISymbol;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;!!TSymbol&gt; FindSimilarSymbols&lt;(class Microsoft.CodeAnalysis.ISymbol) TSymbol&gt;(!!TSymbol symbol, class Microsoft.CodeAnalysis.Compilation compilation, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSimilarSymbols``1(``0,Microsoft.CodeAnalysis.Compilation,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSymbol">
+          <Constraints>
+            <InterfaceName>Microsoft.CodeAnalysis.ISymbol</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="symbol" Type="TSymbol" />
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSymbol">To be added.</typeparam>
+        <param name="symbol">The symbol to find corresponding matches for.</param>
+        <param name="compilation">A compilation to find the corresponding symbol within. The compilation may or may not be the origin of the symbol.</param>
+        <param name="cancellationToken">A CancellationToken.</param>
+        <summary>
+            Finds symbols in the given compilation that are similar to the specified symbol.
+            
+            A found symbol may be the exact same symbol instance if the compilation is the origin of the specified symbol, 
+            or it may be a different symbol instance if the compilation is not the originating compilation.
+            
+            Multiple symbols may be returned if there are ambiguous matches.
+            No symbols may be returned if the compilation does not define or have access to a similar symbol.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSourceDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Project project, Func&lt;string,bool&gt; predicate, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, class System.Func`2&lt;string, bool&gt; predicate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.Func{System.String,System.Boolean},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+        <Parameter Name="predicate" Type="System.Func&lt;System.String,System.Boolean&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="project">To be added.</param>
+        <param name="predicate">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the symbols for declarations made in source with a matching name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSourceDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Solution solution, Func&lt;string,bool&gt; predicate, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Solution solution, class System.Func`2&lt;string, bool&gt; predicate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Solution,System.Func{System.String,System.Boolean},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="predicate" Type="System.Func&lt;System.String,System.Boolean&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="solution">To be added.</param>
+        <param name="predicate">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the symbols for declarations made in source with a matching name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSourceDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Project project, Func&lt;string,bool&gt; predicate, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, class System.Func`2&lt;string, bool&gt; predicate, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.Func{System.String,System.Boolean},Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindSourceDeclarationsAsync&gt;d__11))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+        <Parameter Name="predicate" Type="System.Func&lt;System.String,System.Boolean&gt;" />
+        <Parameter Name="filter" Type="Microsoft.CodeAnalysis.SymbolFilter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="project">To be added.</param>
+        <param name="predicate">To be added.</param>
+        <param name="filter">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the symbols for declarations made in source with a matching name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSourceDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.String,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="project">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the symbols for declarations made in source with the specified name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSourceDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Solution solution, Func&lt;string,bool&gt; predicate, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Solution solution, class System.Func`2&lt;string, bool&gt; predicate, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Solution,System.Func{System.String,System.Boolean},Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindSourceDeclarationsAsync&gt;d__8))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="predicate" Type="System.Func&lt;System.String,System.Boolean&gt;" />
+        <Parameter Name="filter" Type="Microsoft.CodeAnalysis.SymbolFilter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="solution">To be added.</param>
+        <param name="predicate">To be added.</param>
+        <param name="filter">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the symbols for declarations made in source with a matching name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSourceDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Solution solution, string name, bool ignoreCase, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Solution solution, string name, bool ignoreCase, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Solution,System.String,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="solution">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the symbols for declarations made in source with the specified name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSourceDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.String,System.Boolean,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindSourceDeclarationsAsync&gt;d__6))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="filter" Type="Microsoft.CodeAnalysis.SymbolFilter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="project">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <param name="filter">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the symbols for declarations made in source with the specified name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSourceDeclarationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Solution solution, string name, bool ignoreCase, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Solution solution, string name, bool ignoreCase, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Solution,System.String,System.Boolean,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindSourceDeclarationsAsync&gt;d__4))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="filter" Type="Microsoft.CodeAnalysis.SymbolFilter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="solution">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="ignoreCase">To be added.</param>
+        <param name="filter">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Find the symbols for declarations made in source with the specified name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSourceDefinitionAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt; FindSourceDefinitionAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; FindSourceDefinitionAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDefinitionAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindSourceDefinitionAsync&gt;d__27))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="solution">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Finds the definition symbol declared in source code for a corresponding reference symbol. 
+            Returns null if no such symbol can be found in the specified solution.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSymbolAtPosition">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISymbol FindSymbolAtPosition (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.Workspace workspace, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.ISymbol FindSymbolAtPosition(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.Workspace workspace, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPosition(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.Workspace,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use FindSymbolAtPositionAsync instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel" />
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="workspace" Type="Microsoft.CodeAnalysis.Workspace" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="semanticModel">To be added.</param>
+        <param name="position">To be added.</param>
+        <param name="workspace">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Obsolete.  Use <see cref="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPositionAsync(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.Workspace,System.Threading.CancellationToken)" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSymbolAtPositionAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt; FindSymbolAtPositionAsync (Microsoft.CodeAnalysis.Document document, int position, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; FindSymbolAtPositionAsync(class Microsoft.CodeAnalysis.Document document, int32 position, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPositionAsync(Microsoft.CodeAnalysis.Document,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindSymbolAtPositionAsync&gt;d__26))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" />
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="document">To be added.</param>
+        <param name="position">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSymbolAtPositionAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt; FindSymbolAtPositionAsync (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.Workspace workspace, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; FindSymbolAtPositionAsync(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.Workspace workspace, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPositionAsync(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.Workspace,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.FindSymbols.SymbolFinder/&lt;FindSymbolAtPositionAsync&gt;d__24))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel" />
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="workspace" Type="Microsoft.CodeAnalysis.Workspace" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="semanticModel">The semantic model associated with the document.</param>
+        <param name="position">The character position within the document.</param>
+        <param name="workspace">A workspace to provide context.</param>
+        <param name="cancellationToken">A CancellationToken.</param>
+        <summary>
+            Finds the symbol that is associated with a position in the text of a document.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

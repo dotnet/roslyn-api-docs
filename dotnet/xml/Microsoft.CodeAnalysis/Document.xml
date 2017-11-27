@@ -1,0 +1,550 @@
+﻿<Type Name="Document" FullName="Microsoft.CodeAnalysis.Document">
+  <TypeSignature Language="C#" Value="public class Document : Microsoft.CodeAnalysis.TextDocument" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Document extends Microsoft.CodeAnalysis.TextDocument" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Document" />
+  <TypeSignature Language="VB.NET" Value="Public Class Document&#xA;Inherits TextDocument" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.TextDocument</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(),nq}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a source code document that is part of a project.
+            It provides access to the source text, parsed syntax tree and the corresponding semantic model.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetLinkedDocumentIds">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt; GetLinkedDocumentIds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.DocumentId&gt; GetLinkedDocumentIds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.GetLinkedDocumentIds" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetLinkedDocumentIds () As ImmutableArray(Of DocumentId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the list of <see cref="T:Microsoft.CodeAnalysis.DocumentId" />s that are linked to this
+            <see cref="T:Microsoft.CodeAnalysis.Document" />. <see cref="T:Microsoft.CodeAnalysis.Document" />s are considered to be linked if they
+            share the same <see cref="P:Microsoft.CodeAnalysis.TextDocument.FilePath" />. This <see cref="T:Microsoft.CodeAnalysis.DocumentId" /> is excluded from the 
+            result.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOptionsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Options.DocumentOptionSet&gt; GetOptionsAsync (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Options.DocumentOptionSet&gt; GetOptionsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.GetOptionsAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Options.DocumentOptionSet&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Returns the options that should be applied to this document. This consists of global options from <see cref="P:Microsoft.CodeAnalysis.Solution.Options" />,
+            merged with any settings the user has specified at the document levels.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            This method is async because this may require reading other files. In files that are already open, this is expected to be cheap and complete synchronously.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSemanticModelAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SemanticModel&gt; GetSemanticModelAsync (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.SemanticModel&gt; GetSemanticModelAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.GetSemanticModelAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Document/&lt;GetSemanticModelAsync&gt;d__24))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SemanticModel&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets the semantic model for this document asynchronously.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSyntaxRootAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; GetSyntaxRootAsync (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; GetSyntaxRootAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.GetSyntaxRootAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Document/&lt;GetSyntaxRootAsync&gt;d__21))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets the root node of the syntax tree asynchronously.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSyntaxTreeAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxTree&gt; GetSyntaxTreeAsync (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.SyntaxTree&gt; GetSyntaxTreeAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxTree&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.SyntaxTree" /> for this document asynchronously.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSyntaxVersionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt; GetSyntaxVersionAsync (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.CodeAnalysis.VersionStamp&gt; GetSyntaxVersionAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.GetSyntaxVersionAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Document/&lt;GetSyntaxVersionAsync&gt;d__13))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets the version of the syntax tree. This is generally the newer of the text version and the project's version.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextChangesAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Text.TextChange&gt;&gt; GetTextChangesAsync (Microsoft.CodeAnalysis.Document oldDocument, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextChange&gt;&gt; GetTextChangesAsync(class Microsoft.CodeAnalysis.Document oldDocument, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.GetTextChangesAsync(Microsoft.CodeAnalysis.Document,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Document/&lt;GetTextChangesAsync&gt;d__31))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Text.TextChange&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldDocument" Type="Microsoft.CodeAnalysis.Document" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="oldDocument">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Get the text changes between this document and a prior version of the same document.
+            The changes, when applied to the text of the old document, will produce the text of the current document.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceCodeKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SourceCodeKind SourceCodeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SourceCodeKind SourceCodeKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Document.SourceCodeKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourceCodeKind As SourceCodeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SourceCodeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The kind of source code this document contains.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsSemanticModel">
+      <MemberSignature Language="C#" Value="public bool SupportsSemanticModel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsSemanticModel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Document.SupportsSemanticModel" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsSemanticModel As Boolean" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <code>true</code> if this Document supports providing data through the
+            <see cref="M:Microsoft.CodeAnalysis.Document.GetSemanticModelAsync(System.Threading.CancellationToken)" /> method.
+            
+            If <code>false</code> then this method will return <code>null</code> instead.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsSyntaxTree">
+      <MemberSignature Language="C#" Value="public bool SupportsSyntaxTree { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsSyntaxTree" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Document.SupportsSyntaxTree" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsSyntaxTree As Boolean" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <code>true</code> if this Document supports providing data through the
+            <see cref="M:Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync(System.Threading.CancellationToken)" /> and <see cref="M:Microsoft.CodeAnalysis.Document.GetSyntaxRootAsync(System.Threading.CancellationToken)" /> methods.
+            
+            If <code>false</code> then these methods will return <code>null</code> instead.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetSemanticModel">
+      <MemberSignature Language="C#" Value="public bool TryGetSemanticModel (out Microsoft.CodeAnalysis.SemanticModel semanticModel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetSemanticModel([out] class Microsoft.CodeAnalysis.SemanticModel&amp; semanticModel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.TryGetSemanticModel(Microsoft.CodeAnalysis.SemanticModel@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetSemanticModel (ByRef semanticModel As SemanticModel) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="semanticModel">To be added.</param>
+        <summary>
+            Gets the current semantic model for this document if the model is already computed and still cached.
+            In almost all cases, you should call <see cref="M:Microsoft.CodeAnalysis.Document.GetSemanticModelAsync(System.Threading.CancellationToken)" />, which will compute the semantic model
+            if necessary.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetSyntaxRoot">
+      <MemberSignature Language="C#" Value="public bool TryGetSyntaxRoot (out Microsoft.CodeAnalysis.SyntaxNode root);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetSyntaxRoot([out] class Microsoft.CodeAnalysis.SyntaxNode&amp; root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.TryGetSyntaxRoot(Microsoft.CodeAnalysis.SyntaxNode@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetSyntaxRoot (ByRef root As SyntaxNode) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <summary>
+            Gets the root node of the current syntax tree if the syntax tree has already been parsed and the tree is still cached.
+            In almost all cases, you should call <see cref="M:Microsoft.CodeAnalysis.Document.GetSyntaxRootAsync(System.Threading.CancellationToken)" /> to fetch the root node, which will parse
+            the document if necessary.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetSyntaxTree">
+      <MemberSignature Language="C#" Value="public bool TryGetSyntaxTree (out Microsoft.CodeAnalysis.SyntaxTree syntaxTree);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetSyntaxTree([out] class Microsoft.CodeAnalysis.SyntaxTree&amp; syntaxTree) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.TryGetSyntaxTree(Microsoft.CodeAnalysis.SyntaxTree@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetSyntaxTree (ByRef syntaxTree As SyntaxTree) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="syntaxTree" Type="Microsoft.CodeAnalysis.SyntaxTree&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="syntaxTree">To be added.</param>
+        <summary>
+            Get the current syntax tree for the document if the text is already loaded and the tree is already parsed.
+            In almost all cases, you should call <see cref="M:Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync(System.Threading.CancellationToken)" /> to fetch the tree, which will parse the tree
+            if it's not already parsed.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetSyntaxVersion">
+      <MemberSignature Language="C#" Value="public bool TryGetSyntaxVersion (out Microsoft.CodeAnalysis.VersionStamp version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetSyntaxVersion([out] valuetype Microsoft.CodeAnalysis.VersionStamp&amp; version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.TryGetSyntaxVersion(Microsoft.CodeAnalysis.VersionStamp@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetSyntaxVersion (ByRef version As VersionStamp) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="Microsoft.CodeAnalysis.VersionStamp&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="version">To be added.</param>
+        <summary>
+            Get the current syntax tree version for the document if the text is already loaded and the tree is already parsed.
+            In almost all cases, you should call <see cref="M:Microsoft.CodeAnalysis.Document.GetSyntaxVersionAsync(System.Threading.CancellationToken)" /> to fetch the version, which will load the tree
+            if it's not already available.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithFilePath">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithFilePath (string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithFilePath(string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithFilePath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithFilePath (filePath As String) As Document" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filePath"></param>
+        <summary>
+            Creates a new instance of this document updated to have the specified file path.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithFolders">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithFolders (System.Collections.Generic.IEnumerable&lt;string&gt; folders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithFolders(class System.Collections.Generic.IEnumerable`1&lt;string&gt; folders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithFolders(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithFolders (folders As IEnumerable(Of String)) As Document" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="folders" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="folders">To be added.</param>
+        <summary>
+            Creates a new instance of this document updated to have the specified folders.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithName">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithName (name As String) As Document" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>
+            Creates a new instance of this document updated to have the specified name.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithSourceCodeKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithSourceCodeKind (Microsoft.CodeAnalysis.SourceCodeKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithSourceCodeKind(valuetype Microsoft.CodeAnalysis.SourceCodeKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithSourceCodeKind(Microsoft.CodeAnalysis.SourceCodeKind)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithSourceCodeKind (kind As SourceCodeKind) As Document" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.SourceCodeKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>
+            Creates a new instance of this document updated to have the source code kind specified.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithSyntaxRoot">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithSyntaxRoot (Microsoft.CodeAnalysis.SyntaxNode root);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithSyntaxRoot(class Microsoft.CodeAnalysis.SyntaxNode root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithSyntaxRoot(Microsoft.CodeAnalysis.SyntaxNode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithSyntaxRoot (root As SyntaxNode) As Document" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode" />
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <summary>
+            Creates a new instance of this document updated to have a syntax tree rooted by the specified syntax node.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithText">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithText (Microsoft.CodeAnalysis.Text.SourceText text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithText(class Microsoft.CodeAnalysis.Text.SourceText text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithText(Microsoft.CodeAnalysis.Text.SourceText)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithText (text As SourceText) As Document" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <summary>
+            Creates a new instance of this document updated to have the text specified.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
