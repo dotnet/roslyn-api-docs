@@ -1,0 +1,428 @@
+﻿<Type Name="CodeAction" FullName="Microsoft.CodeAnalysis.CodeActions.CodeAction">
+  <TypeSignature Language="C#" Value="public abstract class CodeAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeAction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CodeAction" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An action produced by a <see cref="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider" /> or a <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeOperationsAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputeOperationsAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;ComputeOperationsAsync&gt;d__18))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that includes custom <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />'s.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputePreviewOperationsAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputePreviewOperationsAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputePreviewOperationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputePreviewOperationsAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;ComputePreviewOperationsAsync&gt;d__20))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> that has a set of preview operations that are different
+            than the operations produced by <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputeOperationsAsync(System.Threading.CancellationToken)" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string equivalenceKey = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string equivalenceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedDocument As Func(Of CancellationToken, Task(Of Document)), Optional equivalenceKey As String = null) As CodeAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="createChangedDocument" Type="System.Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt;" />
+        <Parameter Name="equivalenceKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="title">Title of the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />.</param>
+        <param name="createChangedDocument">Function to create the <see cref="T:Microsoft.CodeAnalysis.Document" />.</param>
+        <param name="equivalenceKey">Optional value used to determine the equivalence of the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> with other <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />s. See <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" />.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> for a change to a single <see cref="T:Microsoft.CodeAnalysis.Document" />. 
+            Use this factory when the change is expensive to compute and should be deferred until requested.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string equivalenceKey = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string equivalenceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Solution}},System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedSolution As Func(Of CancellationToken, Task(Of Solution)), Optional equivalenceKey As String = null) As CodeAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="createChangedSolution" Type="System.Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt;" />
+        <Parameter Name="equivalenceKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="title">Title of the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />.</param>
+        <param name="createChangedSolution">Function to create the <see cref="T:Microsoft.CodeAnalysis.Solution" />.</param>
+        <param name="equivalenceKey">Optional value used to determine the equivalence of the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> with other <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />s. See <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" />.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> for a change to more than one <see cref="T:Microsoft.CodeAnalysis.Document" /> within a <see cref="T:Microsoft.CodeAnalysis.Solution" />.
+            Use this factory when the change is expensive to compute and should be deferred until requested.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EquivalenceKey">
+      <MemberSignature Language="C#" Value="public virtual string EquivalenceKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EquivalenceKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property EquivalenceKey As String" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Two code actions are treated as equivalent if they have equal non-null <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" /> values and were generated
+            by the same <see cref="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider" /> or <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Equivalence of code actions affects some Visual Studio behavior. For example, if multiple equivalent
+            code actions result from code fixes or refactorings for a single Visual Studio light bulb instance,
+            the light bulb UI will present only one code action from each set of equivalent code actions.
+            Additionally, a Fix All operation will apply only code actions that are equivalent to the original code action.
+            
+            If two code actions that could be treated as equivalent do not have equal <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" /> values, Visual Studio behavior
+            may be less helpful than would be optimal. If two code actions that should be treated as distinct have
+            equal <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" /> values, Visual Studio behavior may appear incorrect.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChangedDocumentAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt; GetChangedDocumentAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; GetChangedDocumentAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedDocumentAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Computes changes for a single document.
+            Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that changes a single document.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChangedSolutionAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; GetChangedSolutionAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt; GetChangedSolutionAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedSolutionAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;GetChangedSolutionAsync&gt;d__21))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Computes all changes for an entire solution.
+            Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that changes more than one document.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetOperationsAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetOperationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetOperationsAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            The sequence of operations that define the code action.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreviewOperationsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetPreviewOperationsAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetPreviewOperationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetPreviewOperationsAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;GetPreviewOperationsAsync&gt;d__17))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            The sequence of operations used to construct a preview. 
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostProcessAsync">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; PostProcessAsync (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt; operations, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; PostProcessAsync(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt; operations, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessAsync(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.CodeActions.CodeActionOperation},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;PostProcessAsync&gt;d__26))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="operations">A list of operations.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Apply post processing steps to any <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />'s.
+            </summary>
+        <returns>A new list of operations with post processing steps applied to any <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />'s.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostProcessChangesAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt; PostProcessChangesAsync (Microsoft.CodeAnalysis.Document document, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; PostProcessChangesAsync(class Microsoft.CodeAnalysis.Document document, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Microsoft.CodeAnalysis.Document,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="document">The document changed by the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Apply post processing steps to a single document:
+              Reducing nodes annotated with <see cref="P:Microsoft.CodeAnalysis.Simplification.Simplifier.Annotation" />
+              Formatting nodes annotated with <see cref="P:Microsoft.CodeAnalysis.Formatting.Formatter.Annotation" /></summary>
+        <returns>A document with the post processing changes applied.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostProcessChangesAsync">
+      <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; PostProcessChangesAsync (Microsoft.CodeAnalysis.Solution changedSolution, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt; PostProcessChangesAsync(class Microsoft.CodeAnalysis.Solution changedSolution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;PostProcessChangesAsync&gt;d__27))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="changedSolution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="changedSolution">The solution changed by the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />.</param>
+        <param name="cancellationToken">A cancellation token</param>
+        <summary>
+             Apply post processing steps to solution changes, like formatting and simplification.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tags">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Immutable.ImmutableArray&lt;string&gt; Tags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; Tags" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.Tags" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Tags As ImmutableArray(Of String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Descriptive tags from <see cref="T:Microsoft.CodeAnalysis.Tags.WellKnownTags" />.
+            These tags may influence how the item is displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public abstract string Title { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.Title" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Title As String" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A short title describing the action that may appear in a menu.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

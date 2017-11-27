@@ -1,0 +1,120 @@
+﻿<Type Name="SymbolEditorExtensions" FullName="Microsoft.CodeAnalysis.Editing.SymbolEditorExtensions">
+  <TypeSignature Language="C#" Value="public static class SymbolEditorExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SymbolEditorExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Editing.SymbolEditorExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module SymbolEditorExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetBaseOrInterfaceDeclarationReferenceAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; GetBaseOrInterfaceDeclarationReferenceAsync (this Microsoft.CodeAnalysis.Editing.SymbolEditor editor, Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.ITypeSymbol baseOrInterfaceType, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; GetBaseOrInterfaceDeclarationReferenceAsync(class Microsoft.CodeAnalysis.Editing.SymbolEditor editor, class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.ITypeSymbol baseOrInterfaceType, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Editing.SymbolEditorExtensions.GetBaseOrInterfaceDeclarationReferenceAsync(Microsoft.CodeAnalysis.Editing.SymbolEditor,Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Editing.SymbolEditorExtensions/&lt;GetBaseOrInterfaceDeclarationReferenceAsync&gt;d__0))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editor" Type="Microsoft.CodeAnalysis.Editing.SymbolEditor" RefType="this" />
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="baseOrInterfaceType" Type="Microsoft.CodeAnalysis.ITypeSymbol" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="editor">To be added.</param>
+        <param name="symbol">To be added.</param>
+        <param name="baseOrInterfaceType">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets the reference to the declaration of the base or interface type as part of the symbol's declaration. 
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBaseTypeAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt; SetBaseTypeAsync (this Microsoft.CodeAnalysis.Editing.SymbolEditor editor, Microsoft.CodeAnalysis.INamedTypeSymbol symbol, Microsoft.CodeAnalysis.ITypeSymbol newBaseType, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; SetBaseTypeAsync(class Microsoft.CodeAnalysis.Editing.SymbolEditor editor, class Microsoft.CodeAnalysis.INamedTypeSymbol symbol, class Microsoft.CodeAnalysis.ITypeSymbol newBaseType, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Editing.SymbolEditorExtensions.SetBaseTypeAsync(Microsoft.CodeAnalysis.Editing.SymbolEditor,Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editor" Type="Microsoft.CodeAnalysis.Editing.SymbolEditor" RefType="this" />
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" />
+        <Parameter Name="newBaseType" Type="Microsoft.CodeAnalysis.ITypeSymbol" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="editor">To be added.</param>
+        <param name="symbol">To be added.</param>
+        <param name="newBaseType">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Changes the base type of the symbol.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBaseTypeAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt; SetBaseTypeAsync (this Microsoft.CodeAnalysis.Editing.SymbolEditor editor, Microsoft.CodeAnalysis.INamedTypeSymbol symbol, Func&lt;Microsoft.CodeAnalysis.Editing.SyntaxGenerator,Microsoft.CodeAnalysis.SyntaxNode&gt; getNewBaseType, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; SetBaseTypeAsync(class Microsoft.CodeAnalysis.Editing.SymbolEditor editor, class Microsoft.CodeAnalysis.INamedTypeSymbol symbol, class System.Func`2&lt;class Microsoft.CodeAnalysis.Editing.SyntaxGenerator, class Microsoft.CodeAnalysis.SyntaxNode&gt; getNewBaseType, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Editing.SymbolEditorExtensions.SetBaseTypeAsync(Microsoft.CodeAnalysis.Editing.SymbolEditor,Microsoft.CodeAnalysis.INamedTypeSymbol,System.Func{Microsoft.CodeAnalysis.Editing.SyntaxGenerator,Microsoft.CodeAnalysis.SyntaxNode},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Editing.SymbolEditorExtensions/&lt;SetBaseTypeAsync&gt;d__1))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editor" Type="Microsoft.CodeAnalysis.Editing.SymbolEditor" RefType="this" />
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" />
+        <Parameter Name="getNewBaseType" Type="System.Func&lt;Microsoft.CodeAnalysis.Editing.SyntaxGenerator,Microsoft.CodeAnalysis.SyntaxNode&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="editor">To be added.</param>
+        <param name="symbol">To be added.</param>
+        <param name="getNewBaseType">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Changes the base type of the symbol.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

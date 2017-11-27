@@ -1,0 +1,366 @@
+﻿<Type Name="TreeComparer&lt;TNode&gt;" FullName="Microsoft.CodeAnalysis.Differencing.TreeComparer&lt;TNode&gt;">
+  <TypeSignature Language="C#" Value="public abstract class TreeComparer&lt;TNode&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TreeComparer`1&lt;TNode&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Differencing.TreeComparer`1" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class TreeComparer(Of TNode)" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TNode" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TNode">Tree node.</typeparam>
+    <summary>
+            Implements a tree differencing algorithm.
+            </summary>
+    <remarks>
+            Subclasses define relationships among tree nodes, and parameters to the differencing algorithm.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TreeComparer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeEditScript">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Differencing.EditScript&lt;TNode&gt; ComputeEditScript (TNode oldRoot, TNode newRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Differencing.EditScript`1&lt;!TNode&gt; ComputeEditScript(!TNode oldRoot, !TNode newRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.ComputeEditScript(`0,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ComputeEditScript (oldRoot As TNode, newRoot As TNode) As EditScript(Of TNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Differencing.EditScript&lt;TNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldRoot" Type="TNode" />
+        <Parameter Name="newRoot" Type="TNode" />
+      </Parameters>
+      <Docs>
+        <param name="oldRoot">To be added.</param>
+        <param name="newRoot">To be added.</param>
+        <summary>
+            Returns an edit script that transforms <paramref name="oldRoot" /> to <paramref name="newRoot" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeMatch">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Differencing.Match&lt;TNode&gt; ComputeMatch (TNode oldRoot, TNode newRoot, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TNode,TNode&gt;&gt; knownMatches = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Differencing.Match`1&lt;!TNode&gt; ComputeMatch(!TNode oldRoot, !TNode newRoot, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TNode, !TNode&gt;&gt; knownMatches) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.ComputeMatch(`0,`0,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`0}})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ComputeMatch (oldRoot As TNode, newRoot As TNode, Optional knownMatches As IEnumerable(Of KeyValuePair(Of TNode, TNode)) = null) As Match(Of TNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Differencing.Match&lt;TNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldRoot" Type="TNode" />
+        <Parameter Name="newRoot" Type="TNode" />
+        <Parameter Name="knownMatches" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TNode,TNode&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="oldRoot">To be added.</param>
+        <param name="newRoot">To be added.</param>
+        <param name="knownMatches">To be added.</param>
+        <summary>
+            Returns a match map of <paramref name="oldRoot" /> descendants to <paramref name="newRoot" /> descendants.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="protected internal abstract System.Collections.Generic.IEnumerable&lt;TNode&gt; GetChildren (TNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;!TNode&gt; GetChildren(!TNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.GetChildren(`0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function GetChildren (node As TNode) As IEnumerable(Of TNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="TNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+            May return null if the <paramref name="node" /> is a leaf.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDescendants">
+      <MemberSignature Language="C#" Value="protected internal abstract System.Collections.Generic.IEnumerable&lt;TNode&gt; GetDescendants (TNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;!TNode&gt; GetDescendants(!TNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.GetDescendants(`0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function GetDescendants (node As TNode) As IEnumerable(Of TNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="TNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+            Enumerates all descendant nodes of the given node in depth-first prefix order.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDistance">
+      <MemberSignature Language="C#" Value="public abstract double GetDistance (TNode oldNode, TNode newNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 GetDistance(!TNode oldNode, !TNode newNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.GetDistance(`0,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetDistance (oldNode As TNode, newNode As TNode) As Double" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldNode" Type="TNode" />
+        <Parameter Name="newNode" Type="TNode" />
+      </Parameters>
+      <Docs>
+        <param name="oldNode">To be added.</param>
+        <param name="newNode">To be added.</param>
+        <summary>
+            Calculates the distance [0..1] of two nodes.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            The more similar the nodes the smaller the distance.
+            
+            Used to determine whether two nodes of the same label match.
+            Even if 0 is returned the nodes might be slightly different.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLabel">
+      <MemberSignature Language="C#" Value="protected internal abstract int GetLabel (TNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance int32 GetLabel(!TNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.GetLabel(`0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function GetLabel (node As TNode) As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="TNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+            Returns an integer label corresponding to the given node.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>Returned value must be within [0, LabelCount).</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSpan">
+      <MemberSignature Language="C#" Value="protected internal abstract Microsoft.CodeAnalysis.Text.TextSpan GetSpan (TNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.Text.TextSpan GetSpan(!TNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.GetSpan(`0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function GetSpan (node As TNode) As TextSpan" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="TNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+            Returns the position of the node.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelCount">
+      <MemberSignature Language="C#" Value="protected internal abstract int LabelCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LabelCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.LabelCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride ReadOnly Property LabelCount As Integer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The number of distinct labels used in the tree.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TiedToAncestor">
+      <MemberSignature Language="C#" Value="protected internal abstract int TiedToAncestor (int label);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance int32 TiedToAncestor(int32 label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.TiedToAncestor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function TiedToAncestor (label As Integer) As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="label" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="label">To be added.</param>
+        <summary>
+            Returns N &gt; 0 if the node with specified label can't change its N-th ancestor node, zero otherwise.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            1st ancestor is the node's parent node.
+            2nd ancestor is the node's grandparent node.
+            etc.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreesEqual">
+      <MemberSignature Language="C#" Value="protected internal abstract bool TreesEqual (TNode oldNode, TNode newNode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TreesEqual(!TNode oldNode, !TNode newNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.TreesEqual(`0,`0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function TreesEqual (oldNode As TNode, newNode As TNode) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldNode" Type="TNode" />
+        <Parameter Name="newNode" Type="TNode" />
+      </Parameters>
+      <Docs>
+        <param name="oldNode">To be added.</param>
+        <param name="newNode">To be added.</param>
+        <summary>
+            Return true if specified nodes belong to the same tree.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetParent">
+      <MemberSignature Language="C#" Value="protected internal abstract bool TryGetParent (TNode node, out TNode parent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryGetParent(!TNode node, [out] !TNode&amp; parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.TryGetParent(`0,`0@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function TryGetParent (node As TNode, ByRef parent As TNode) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="TNode" />
+        <Parameter Name="parent" Type="TNode&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="parent">To be added.</param>
+        <summary>
+            Returns a parent for the specified node.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValuesEqual">
+      <MemberSignature Language="C#" Value="public abstract bool ValuesEqual (TNode oldNode, TNode newNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ValuesEqual(!TNode oldNode, !TNode newNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.TreeComparer`1.ValuesEqual(`0,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ValuesEqual (oldNode As TNode, newNode As TNode) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldNode" Type="TNode" />
+        <Parameter Name="newNode" Type="TNode" />
+      </Parameters>
+      <Docs>
+        <param name="oldNode">To be added.</param>
+        <param name="newNode">To be added.</param>
+        <summary>
+            Returns true if the specified nodes have equal values.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Called with matching nodes (<paramref name="oldNode" />, <paramref name="newNode" />).
+            Return true if the values of the nodes are the same, or their difference is not important.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
