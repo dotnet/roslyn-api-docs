@@ -1,0 +1,135 @@
+﻿<Type Name="CodeRefactoringContext" FullName="Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext">
+  <TypeSignature Language="C#" Value="public struct CodeRefactoringContext" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CodeRefactoringContext extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext" />
+  <TypeSignature Language="VB.NET" Value="Public Structure CodeRefactoringContext" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Context for code refactorings provided by an <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeRefactoringContext (Microsoft.CodeAnalysis.Document document, Microsoft.CodeAnalysis.Text.TextSpan span, Action&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; registerRefactoring, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.Document document, valuetype Microsoft.CodeAnalysis.Text.TextSpan span, class System.Action`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; registerRefactoring, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext.#ctor(Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Text.TextSpan,System.Action{Microsoft.CodeAnalysis.CodeActions.CodeAction},System.Threading.CancellationToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" />
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="registerRefactoring" Type="System.Action&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="document">To be added.</param>
+        <param name="span">To be added.</param>
+        <param name="registerRefactoring">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Creates a code refactoring context to be passed into <see cref="M:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)" /> method.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext.CancellationToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CancellationToken As CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CancellationToken.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document Document { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Document Document" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext.Document" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Document As Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Document corresponding to the <see cref="P:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext.Span" /> to refactor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterRefactoring">
+      <MemberSignature Language="C#" Value="public void RegisterRefactoring (Microsoft.CodeAnalysis.CodeActions.CodeAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterRefactoring(class Microsoft.CodeAnalysis.CodeActions.CodeAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext.RegisterRefactoring(Microsoft.CodeAnalysis.CodeActions.CodeAction)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterRefactoring (action As CodeAction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="Microsoft.CodeAnalysis.CodeActions.CodeAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">The <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> that will be invoked to apply the refactoring.</param>
+        <summary>
+            Add supplied <paramref name="action" /> to the list of refactorings that will be offered to the user.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Span">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Text.TextSpan Span { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextSpan Span" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext.Span" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Span As TextSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Text span within the <see cref="P:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext.Document" /> to refactor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
