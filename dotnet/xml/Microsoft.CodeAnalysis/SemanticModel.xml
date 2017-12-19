@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SemanticModel extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SemanticModel" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class SemanticModel" />
+  <TypeSignature Language="F#" Value="type SemanticModel = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -56,6 +57,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.ControlFlowAnalysis AnalyzeControlFlowCore(class Microsoft.CodeAnalysis.SyntaxNode statement) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.AnalyzeControlFlowCore(Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function AnalyzeControlFlowCore (statement As SyntaxNode) As ControlFlowAnalysis" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeControlFlowCore : Microsoft.CodeAnalysis.SyntaxNode -&gt; Microsoft.CodeAnalysis.ControlFlowAnalysis" Usage="semanticModel.AnalyzeControlFlowCore statement" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -85,6 +87,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.ControlFlowAnalysis AnalyzeControlFlowCore(class Microsoft.CodeAnalysis.SyntaxNode firstStatement, class Microsoft.CodeAnalysis.SyntaxNode lastStatement) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.AnalyzeControlFlowCore(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function AnalyzeControlFlowCore (firstStatement As SyntaxNode, lastStatement As SyntaxNode) As ControlFlowAnalysis" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeControlFlowCore : Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SyntaxNode -&gt; Microsoft.CodeAnalysis.ControlFlowAnalysis" Usage="semanticModel.AnalyzeControlFlowCore (firstStatement, lastStatement)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -116,6 +119,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.DataFlowAnalysis AnalyzeDataFlowCore(class Microsoft.CodeAnalysis.SyntaxNode statementOrExpression) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.AnalyzeDataFlowCore(Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function AnalyzeDataFlowCore (statementOrExpression As SyntaxNode) As DataFlowAnalysis" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeDataFlowCore : Microsoft.CodeAnalysis.SyntaxNode -&gt; Microsoft.CodeAnalysis.DataFlowAnalysis" Usage="semanticModel.AnalyzeDataFlowCore statementOrExpression" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -145,6 +149,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.DataFlowAnalysis AnalyzeDataFlowCore(class Microsoft.CodeAnalysis.SyntaxNode firstStatement, class Microsoft.CodeAnalysis.SyntaxNode lastStatement) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.AnalyzeDataFlowCore(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function AnalyzeDataFlowCore (firstStatement As SyntaxNode, lastStatement As SyntaxNode) As DataFlowAnalysis" />
+      <MemberSignature Language="F#" Value="abstract member AnalyzeDataFlowCore : Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SyntaxNode -&gt; Microsoft.CodeAnalysis.DataFlowAnalysis" Usage="semanticModel.AnalyzeDataFlowCore (firstStatement, lastStatement)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -176,6 +181,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Compilation Compilation" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.Compilation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Compilation As Compilation" />
+      <MemberSignature Language="F#" Value="member this.Compilation : Microsoft.CodeAnalysis.Compilation" Usage="Microsoft.CodeAnalysis.SemanticModel.Compilation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -197,6 +203,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Compilation CompilationCore" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.CompilationCore" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property CompilationCore As Compilation" />
+      <MemberSignature Language="F#" Value="member this.CompilationCore : Microsoft.CodeAnalysis.Compilation" Usage="Microsoft.CodeAnalysis.SemanticModel.CompilationCore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -217,6 +224,7 @@
       <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.IAliasSymbol GetAliasInfoCore (Microsoft.CodeAnalysis.SyntaxNode nameSyntax, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.IAliasSymbol GetAliasInfoCore(class Microsoft.CodeAnalysis.SyntaxNode nameSyntax, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetAliasInfoCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetAliasInfoCore : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.IAliasSymbol" Usage="semanticModel.GetAliasInfoCore (nameSyntax, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -245,6 +253,7 @@
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Optional&lt;object&gt; GetConstantValue (Microsoft.CodeAnalysis.SyntaxNode node, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.Optional`1&lt;object&gt; GetConstantValue(class Microsoft.CodeAnalysis.SyntaxNode node, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetConstantValue(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetConstantValue : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.Optional&lt;obj&gt;" Usage="semanticModel.GetConstantValue (node, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -273,6 +282,7 @@
       <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.Optional&lt;object&gt; GetConstantValueCore (Microsoft.CodeAnalysis.SyntaxNode node, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.Optional`1&lt;object&gt; GetConstantValueCore(class Microsoft.CodeAnalysis.SyntaxNode node, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetConstantValueCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetConstantValueCore : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.Optional&lt;obj&gt;" Usage="semanticModel.GetConstantValueCore (node, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -301,6 +311,7 @@
       <MemberSignature Language="C#" Value="public abstract System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDeclarationDiagnostics (Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; span = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDeclarationDiagnostics(valuetype System.Nullable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; span, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetDeclarationDiagnostics(System.Nullable{Microsoft.CodeAnalysis.Text.TextSpan},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeclarationDiagnostics : Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; * System.Threading.CancellationToken -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="semanticModel.GetDeclarationDiagnostics (span, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -333,6 +344,7 @@
       <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.ISymbol GetDeclaredSymbolCore (Microsoft.CodeAnalysis.SyntaxNode declaration, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.ISymbol GetDeclaredSymbolCore(class Microsoft.CodeAnalysis.SyntaxNode declaration, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeclaredSymbolCore : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.ISymbol" Usage="semanticModel.GetDeclaredSymbolCore (declaration, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -362,6 +374,7 @@
       <MemberSignature Language="C#" Value="protected abstract System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt; GetDeclaredSymbolsCore (Microsoft.CodeAnalysis.SyntaxNode declaration, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; GetDeclaredSymbolsCore(class Microsoft.CodeAnalysis.SyntaxNode declaration, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolsCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetDeclaredSymbolsCore : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.GetDeclaredSymbolsCore (declaration, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -393,6 +406,7 @@
       <MemberSignature Language="C#" Value="public abstract System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; span = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(valuetype System.Nullable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; span, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetDiagnostics(System.Nullable{Microsoft.CodeAnalysis.Text.TextSpan},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetDiagnostics : Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; * System.Threading.CancellationToken -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="semanticModel.GetDiagnostics (span, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -428,6 +442,7 @@
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol GetEnclosingSymbol (int position, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.ISymbol GetEnclosingSymbol(int32 position, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetEnclosingSymbol(System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetEnclosingSymbol : int * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.ISymbol" Usage="semanticModel.GetEnclosingSymbol (position, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -455,6 +470,7 @@
       <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.ISymbol GetEnclosingSymbolCore (int position, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.ISymbol GetEnclosingSymbolCore(int32 position, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetEnclosingSymbolCore(System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetEnclosingSymbolCore : int * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.ISymbol" Usage="semanticModel.GetEnclosingSymbolCore (position, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -482,6 +498,7 @@
       <MemberSignature Language="C#" Value="protected abstract System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt; GetMemberGroupCore (Microsoft.CodeAnalysis.SyntaxNode node, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; GetMemberGroupCore(class Microsoft.CodeAnalysis.SyntaxNode node, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetMemberGroupCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetMemberGroupCore : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.GetMemberGroupCore (node, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -510,6 +527,7 @@
       <MemberSignature Language="C#" Value="public abstract System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetMethodBodyDiagnostics (Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; span = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetMethodBodyDiagnostics(valuetype System.Nullable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; span, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetMethodBodyDiagnostics(System.Nullable{Microsoft.CodeAnalysis.Text.TextSpan},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetMethodBodyDiagnostics : Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; * System.Threading.CancellationToken -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="semanticModel.GetMethodBodyDiagnostics (span, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -542,6 +560,7 @@
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation GetOperation (Microsoft.CodeAnalysis.SyntaxNode node, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.IOperation GetOperation(class Microsoft.CodeAnalysis.SyntaxNode node, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetOperation(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetOperation : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.IOperation" Usage="semanticModel.GetOperation (node, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -568,6 +587,7 @@
       <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.IOperation GetOperationCore (Microsoft.CodeAnalysis.SyntaxNode node, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.IOperation GetOperationCore(class Microsoft.CodeAnalysis.SyntaxNode node, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetOperationCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetOperationCore : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.IOperation" Usage="semanticModel.GetOperationCore (node, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -593,6 +613,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.PreprocessingSymbolInfo GetPreprocessingSymbolInfo(class Microsoft.CodeAnalysis.SyntaxNode nameSyntax) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetPreprocessingSymbolInfo(Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetPreprocessingSymbolInfo (nameSyntax As SyntaxNode) As PreprocessingSymbolInfo" />
+      <MemberSignature Language="F#" Value="member this.GetPreprocessingSymbolInfo : Microsoft.CodeAnalysis.SyntaxNode -&gt; Microsoft.CodeAnalysis.PreprocessingSymbolInfo" Usage="semanticModel.GetPreprocessingSymbolInfo nameSyntax" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -619,6 +640,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.PreprocessingSymbolInfo GetPreprocessingSymbolInfoCore(class Microsoft.CodeAnalysis.SyntaxNode nameSyntax) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetPreprocessingSymbolInfoCore(Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetPreprocessingSymbolInfoCore (nameSyntax As SyntaxNode) As PreprocessingSymbolInfo" />
+      <MemberSignature Language="F#" Value="abstract member GetPreprocessingSymbolInfoCore : Microsoft.CodeAnalysis.SyntaxNode -&gt; Microsoft.CodeAnalysis.PreprocessingSymbolInfo" Usage="semanticModel.GetPreprocessingSymbolInfoCore nameSyntax" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -645,6 +667,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.IAliasSymbol GetSpeculativeAliasInfoCore(int32 position, class Microsoft.CodeAnalysis.SyntaxNode nameSyntax, valuetype Microsoft.CodeAnalysis.SpeculativeBindingOption bindingOption) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetSpeculativeAliasInfoCore(System.Int32,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SpeculativeBindingOption)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetSpeculativeAliasInfoCore (position As Integer, nameSyntax As SyntaxNode, bindingOption As SpeculativeBindingOption) As IAliasSymbol" />
+      <MemberSignature Language="F#" Value="abstract member GetSpeculativeAliasInfoCore : int * Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SpeculativeBindingOption -&gt; Microsoft.CodeAnalysis.IAliasSymbol" Usage="semanticModel.GetSpeculativeAliasInfoCore (position, nameSyntax, bindingOption)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -683,6 +706,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.SymbolInfo GetSpeculativeSymbolInfoCore(int32 position, class Microsoft.CodeAnalysis.SyntaxNode expression, valuetype Microsoft.CodeAnalysis.SpeculativeBindingOption bindingOption) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetSpeculativeSymbolInfoCore(System.Int32,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SpeculativeBindingOption)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetSpeculativeSymbolInfoCore (position As Integer, expression As SyntaxNode, bindingOption As SpeculativeBindingOption) As SymbolInfo" />
+      <MemberSignature Language="F#" Value="abstract member GetSpeculativeSymbolInfoCore : int * Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SpeculativeBindingOption -&gt; Microsoft.CodeAnalysis.SymbolInfo" Usage="semanticModel.GetSpeculativeSymbolInfoCore (position, expression, bindingOption)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -722,6 +746,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.TypeInfo GetSpeculativeTypeInfoCore(int32 position, class Microsoft.CodeAnalysis.SyntaxNode expression, valuetype Microsoft.CodeAnalysis.SpeculativeBindingOption bindingOption) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetSpeculativeTypeInfoCore(System.Int32,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SpeculativeBindingOption)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetSpeculativeTypeInfoCore (position As Integer, expression As SyntaxNode, bindingOption As SpeculativeBindingOption) As TypeInfo" />
+      <MemberSignature Language="F#" Value="abstract member GetSpeculativeTypeInfoCore : int * Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SpeculativeBindingOption -&gt; Microsoft.CodeAnalysis.TypeInfo" Usage="semanticModel.GetSpeculativeTypeInfoCore (position, expression, bindingOption)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -760,6 +785,7 @@
       <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.SymbolInfo GetSymbolInfoCore (Microsoft.CodeAnalysis.SyntaxNode node, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.SymbolInfo GetSymbolInfoCore(class Microsoft.CodeAnalysis.SyntaxNode node, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetSymbolInfoCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetSymbolInfoCore : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SymbolInfo" Usage="semanticModel.GetSymbolInfoCore (node, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -787,6 +813,7 @@
       <MemberSignature Language="C#" Value="public abstract System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetSyntaxDiagnostics (Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; span = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetSyntaxDiagnostics(valuetype System.Nullable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; span, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetSyntaxDiagnostics(System.Nullable{Microsoft.CodeAnalysis.Text.TextSpan},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetSyntaxDiagnostics : Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; * System.Threading.CancellationToken -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="semanticModel.GetSyntaxDiagnostics (span, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -817,6 +844,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.SyntaxNode GetTopmostNodeForDiagnosticAnalysis(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.SyntaxNode declaringSyntax) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetTopmostNodeForDiagnosticAnalysis(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function GetTopmostNodeForDiagnosticAnalysis (symbol As ISymbol, declaringSyntax As SyntaxNode) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="abstract member GetTopmostNodeForDiagnosticAnalysis : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.SyntaxNode -&gt; Microsoft.CodeAnalysis.SyntaxNode&#xA;override this.GetTopmostNodeForDiagnosticAnalysis : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.SyntaxNode -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="semanticModel.GetTopmostNodeForDiagnosticAnalysis (symbol, declaringSyntax)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -843,6 +871,7 @@
       <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.TypeInfo GetTypeInfoCore (Microsoft.CodeAnalysis.SyntaxNode node, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.TypeInfo GetTypeInfoCore(class Microsoft.CodeAnalysis.SyntaxNode node, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.GetTypeInfoCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetTypeInfoCore : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.TypeInfo" Usage="semanticModel.GetTypeInfoCore (node, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -871,6 +900,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IgnoresAccessibility" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.IgnoresAccessibility" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IgnoresAccessibility As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IgnoresAccessibility : bool" Usage="Microsoft.CodeAnalysis.SemanticModel.IgnoresAccessibility" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -892,6 +922,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsAccessible(int32 position, class Microsoft.CodeAnalysis.ISymbol symbol) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.IsAccessible(System.Int32,Microsoft.CodeAnalysis.ISymbol)" />
       <MemberSignature Language="VB.NET" Value="Public Function IsAccessible (position As Integer, symbol As ISymbol) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsAccessible : int * Microsoft.CodeAnalysis.ISymbol -&gt; bool" Usage="semanticModel.IsAccessible (position, symbol)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -927,6 +958,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsAccessibleCore(int32 position, class Microsoft.CodeAnalysis.ISymbol symbol) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.IsAccessibleCore(System.Int32,Microsoft.CodeAnalysis.ISymbol)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function IsAccessibleCore (position As Integer, symbol As ISymbol) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsAccessibleCore : int * Microsoft.CodeAnalysis.ISymbol -&gt; bool" Usage="semanticModel.IsAccessibleCore (position, symbol)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -962,6 +994,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEventUsableAsField(int32 position, class Microsoft.CodeAnalysis.IEventSymbol eventSymbol) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.IsEventUsableAsField(System.Int32,Microsoft.CodeAnalysis.IEventSymbol)" />
       <MemberSignature Language="VB.NET" Value="Public Function IsEventUsableAsField (position As Integer, eventSymbol As IEventSymbol) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsEventUsableAsField : int * Microsoft.CodeAnalysis.IEventSymbol -&gt; bool" Usage="semanticModel.IsEventUsableAsField (position, eventSymbol)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -992,6 +1025,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsEventUsableAsFieldCore(int32 position, class Microsoft.CodeAnalysis.IEventSymbol eventSymbol) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.IsEventUsableAsFieldCore(System.Int32,Microsoft.CodeAnalysis.IEventSymbol)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function IsEventUsableAsFieldCore (position As Integer, eventSymbol As IEventSymbol) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsEventUsableAsFieldCore : int * Microsoft.CodeAnalysis.IEventSymbol -&gt; bool" Usage="semanticModel.IsEventUsableAsFieldCore (position, eventSymbol)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1022,6 +1056,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsSpeculativeSemanticModel" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.IsSpeculativeSemanticModel" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsSpeculativeSemanticModel As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSpeculativeSemanticModel : bool" Usage="Microsoft.CodeAnalysis.SemanticModel.IsSpeculativeSemanticModel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1043,6 +1078,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Language" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.Language" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Language As String" />
+      <MemberSignature Language="F#" Value="member this.Language : string" Usage="Microsoft.CodeAnalysis.SemanticModel.Language" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1064,6 +1100,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupBaseMembers(int32 position, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupBaseMembers(System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function LookupBaseMembers (position As Integer, Optional name As String = null) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="member this.LookupBaseMembers : int * string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupBaseMembers (position, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1119,6 +1156,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupBaseMembersCore(int32 position, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupBaseMembersCore(System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function LookupBaseMembersCore (position As Integer, name As String) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="abstract member LookupBaseMembersCore : int * string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupBaseMembersCore (position, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1146,6 +1184,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupLabels(int32 position, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupLabels(System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function LookupLabels (position As Integer, Optional name As String = null) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="member this.LookupLabels : int * string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupLabels (position, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1180,6 +1219,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupLabelsCore(int32 position, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupLabelsCore(System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function LookupLabelsCore (position As Integer, name As String) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="abstract member LookupLabelsCore : int * string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupLabelsCore (position, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1207,6 +1247,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupNamespacesAndTypes(int32 position, class Microsoft.CodeAnalysis.INamespaceOrTypeSymbol container, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupNamespacesAndTypes(System.Int32,Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function LookupNamespacesAndTypes (position As Integer, Optional container As INamespaceOrTypeSymbol = null, Optional name As String = null) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="member this.LookupNamespacesAndTypes : int * Microsoft.CodeAnalysis.INamespaceOrTypeSymbol * string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupNamespacesAndTypes (position, container, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1246,6 +1287,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupNamespacesAndTypesCore(int32 position, class Microsoft.CodeAnalysis.INamespaceOrTypeSymbol container, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupNamespacesAndTypesCore(System.Int32,Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function LookupNamespacesAndTypesCore (position As Integer, container As INamespaceOrTypeSymbol, name As String) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="abstract member LookupNamespacesAndTypesCore : int * Microsoft.CodeAnalysis.INamespaceOrTypeSymbol * string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupNamespacesAndTypesCore (position, container, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1275,6 +1317,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupStaticMembers(int32 position, class Microsoft.CodeAnalysis.INamespaceOrTypeSymbol container, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupStaticMembers(System.Int32,Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function LookupStaticMembers (position As Integer, Optional container As INamespaceOrTypeSymbol = null, Optional name As String = null) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="member this.LookupStaticMembers : int * Microsoft.CodeAnalysis.INamespaceOrTypeSymbol * string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupStaticMembers (position, container, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1316,6 +1359,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupStaticMembersCore(int32 position, class Microsoft.CodeAnalysis.INamespaceOrTypeSymbol container, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupStaticMembersCore(System.Int32,Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function LookupStaticMembersCore (position As Integer, container As INamespaceOrTypeSymbol, name As String) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="abstract member LookupStaticMembersCore : int * Microsoft.CodeAnalysis.INamespaceOrTypeSymbol * string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupStaticMembersCore (position, container, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1345,6 +1389,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupSymbols(int32 position, class Microsoft.CodeAnalysis.INamespaceOrTypeSymbol container, string name, bool includeReducedExtensionMethods) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupSymbols(System.Int32,Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function LookupSymbols (position As Integer, Optional container As INamespaceOrTypeSymbol = null, Optional name As String = null, Optional includeReducedExtensionMethods As Boolean = false) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="member this.LookupSymbols : int * Microsoft.CodeAnalysis.INamespaceOrTypeSymbol * string * bool -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupSymbols (position, container, name, includeReducedExtensionMethods)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1388,6 +1433,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; LookupSymbolsCore(int32 position, class Microsoft.CodeAnalysis.INamespaceOrTypeSymbol container, string name, bool includeReducedExtensionMethods) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SemanticModel.LookupSymbolsCore(System.Int32,Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function LookupSymbolsCore (position As Integer, container As INamespaceOrTypeSymbol, name As String, includeReducedExtensionMethods As Boolean) As ImmutableArray(Of ISymbol)" />
+      <MemberSignature Language="F#" Value="abstract member LookupSymbolsCore : int * Microsoft.CodeAnalysis.INamespaceOrTypeSymbol * string * bool -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="semanticModel.LookupSymbolsCore (position, container, name, includeReducedExtensionMethods)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1419,6 +1465,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 OriginalPositionForSpeculation" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.OriginalPositionForSpeculation" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property OriginalPositionForSpeculation As Integer" />
+      <MemberSignature Language="F#" Value="member this.OriginalPositionForSpeculation : int" Usage="Microsoft.CodeAnalysis.SemanticModel.OriginalPositionForSpeculation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1441,6 +1488,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SemanticModel ParentModel" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.ParentModel" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParentModel As SemanticModel" />
+      <MemberSignature Language="F#" Value="member this.ParentModel : Microsoft.CodeAnalysis.SemanticModel" Usage="Microsoft.CodeAnalysis.SemanticModel.ParentModel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1463,6 +1511,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SemanticModel ParentModelCore" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.ParentModelCore" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property ParentModelCore As SemanticModel" />
+      <MemberSignature Language="F#" Value="member this.ParentModelCore : Microsoft.CodeAnalysis.SemanticModel" Usage="Microsoft.CodeAnalysis.SemanticModel.ParentModelCore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1485,6 +1534,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SyntaxTree SyntaxTree" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.SyntaxTree" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SyntaxTree As SyntaxTree" />
+      <MemberSignature Language="F#" Value="member this.SyntaxTree : Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.SemanticModel.SyntaxTree" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -1506,6 +1556,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SyntaxTree SyntaxTreeCore" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SemanticModel.SyntaxTreeCore" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property SyntaxTreeCore As SyntaxTree" />
+      <MemberSignature Language="F#" Value="member this.SyntaxTreeCore : Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.SemanticModel.SyntaxTreeCore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>

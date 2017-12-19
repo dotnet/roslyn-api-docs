@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HostWorkspaceServices extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Host.HostWorkspaceServices" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class HostWorkspaceServices" />
+  <TypeSignature Language="F#" Value="type HostWorkspaceServices = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -39,6 +40,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;!!TLanguageService&gt; FindLanguageServices&lt;TLanguageService&gt;(class Microsoft.CodeAnalysis.Host.HostWorkspaceServices/MetadataFilter filter) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.FindLanguageServices``1(Microsoft.CodeAnalysis.Host.HostWorkspaceServices.MetadataFilter)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function FindLanguageServices(Of TLanguageService) (filter As HostWorkspaceServices.MetadataFilter) As IEnumerable(Of TLanguageService)" />
+      <MemberSignature Language="F#" Value="abstract member FindLanguageServices : Microsoft.CodeAnalysis.Host.HostWorkspaceServices.MetadataFilter -&gt; seq&lt;'LanguageService&gt;" Usage="hostWorkspaceServices.FindLanguageServices filter" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -68,6 +70,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.Host.HostLanguageServices GetLanguageServices(string languageName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.GetLanguageServices(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetLanguageServices (languageName As String) As HostLanguageServices" />
+      <MemberSignature Language="F#" Value="abstract member GetLanguageServices : string -&gt; Microsoft.CodeAnalysis.Host.HostLanguageServices&#xA;override this.GetLanguageServices : string -&gt; Microsoft.CodeAnalysis.Host.HostLanguageServices" Usage="hostWorkspaceServices.GetLanguageServices languageName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -93,6 +96,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TWorkspaceService GetRequiredService&lt;(class Microsoft.CodeAnalysis.Host.IWorkspaceService) TWorkspaceService&gt;() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.GetRequiredService``1" />
       <MemberSignature Language="VB.NET" Value="Public Function GetRequiredService(Of TWorkspaceService As IWorkspaceService) () As TWorkspaceService" />
+      <MemberSignature Language="F#" Value="member this.GetRequiredService : unit -&gt; 'WorkspaceService (requires 'WorkspaceService :&gt; Microsoft.CodeAnalysis.Host.IWorkspaceService)" Usage="hostWorkspaceServices.GetRequiredService " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -124,6 +128,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TWorkspaceService GetService&lt;(class Microsoft.CodeAnalysis.Host.IWorkspaceService) TWorkspaceService&gt;() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.GetService``1" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetService(Of TWorkspaceService As IWorkspaceService) () As TWorkspaceService" />
+      <MemberSignature Language="F#" Value="abstract member GetService : unit -&gt; 'WorkspaceService (requires 'WorkspaceService :&gt; Microsoft.CodeAnalysis.Host.IWorkspaceService)" Usage="hostWorkspaceServices.GetService " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -155,6 +160,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Host.HostServices HostServices" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.HostServices" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property HostServices As HostServices" />
+      <MemberSignature Language="F#" Value="member this.HostServices : Microsoft.CodeAnalysis.Host.HostServices" Usage="Microsoft.CodeAnalysis.Host.HostWorkspaceServices.HostServices" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -176,6 +182,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupported(string languageName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.IsSupported(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function IsSupported (languageName As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsSupported : string -&gt; bool&#xA;override this.IsSupported : string -&gt; bool" Usage="hostWorkspaceServices.IsSupported languageName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -201,6 +208,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Host.IPersistentStorageService PersistentStorage" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.PersistentStorage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property PersistentStorage As IPersistentStorageService" />
+      <MemberSignature Language="F#" Value="member this.PersistentStorage : Microsoft.CodeAnalysis.Host.IPersistentStorageService" Usage="Microsoft.CodeAnalysis.Host.HostWorkspaceServices.PersistentStorage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -222,6 +230,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; SupportedLanguages" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.SupportedLanguages" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SupportedLanguages As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.SupportedLanguages : seq&lt;string&gt;" Usage="Microsoft.CodeAnalysis.Host.HostWorkspaceServices.SupportedLanguages" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -243,6 +252,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Host.ITemporaryStorageService TemporaryStorage" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.TemporaryStorage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property TemporaryStorage As ITemporaryStorageService" />
+      <MemberSignature Language="F#" Value="member this.TemporaryStorage : Microsoft.CodeAnalysis.Host.ITemporaryStorageService" Usage="Microsoft.CodeAnalysis.Host.HostWorkspaceServices.TemporaryStorage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -264,6 +274,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Workspace Workspace" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.Workspace" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Workspace As Workspace" />
+      <MemberSignature Language="F#" Value="member this.Workspace : Microsoft.CodeAnalysis.Workspace" Usage="Microsoft.CodeAnalysis.Host.HostWorkspaceServices.Workspace" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>

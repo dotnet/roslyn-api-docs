@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit OptionKey extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.Options.OptionKey&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Options.OptionKey" />
   <TypeSignature Language="VB.NET" Value="Public Structure OptionKey&#xA;Implements IEquatable(Of OptionKey)" />
+  <TypeSignature Language="F#" Value="type OptionKey = struct" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.Options.IOption option, string language) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.OptionKey.#ctor(Microsoft.CodeAnalysis.Options.IOption,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (option As IOption, Optional language As String = null)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Options.OptionKey : Microsoft.CodeAnalysis.Options.IOption * string -&gt; Microsoft.CodeAnalysis.Options.OptionKey" Usage="new Microsoft.CodeAnalysis.Options.OptionKey (option, language)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -46,7 +48,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.Options.OptionKey other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.OptionKey.Equals(Microsoft.CodeAnalysis.Options.OptionKey)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As OptionKey) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.Options.OptionKey -&gt; bool" Usage="optionKey.Equals other" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -69,6 +75,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.OptionKey.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="optionKey.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -92,6 +99,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.OptionKey.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="optionKey.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -112,6 +120,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Language" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.OptionKey.Language" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Language As String" />
+      <MemberSignature Language="F#" Value="member this.Language : string" Usage="Microsoft.CodeAnalysis.Options.OptionKey.Language" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -131,6 +140,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.CodeAnalysis.Options.OptionKey left, valuetype Microsoft.CodeAnalysis.Options.OptionKey right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.OptionKey.op_Equality(Microsoft.CodeAnalysis.Options.OptionKey,Microsoft.CodeAnalysis.Options.OptionKey)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As OptionKey, right As OptionKey) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.Options.OptionKey * Microsoft.CodeAnalysis.Options.OptionKey -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -156,6 +166,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.CodeAnalysis.Options.OptionKey left, valuetype Microsoft.CodeAnalysis.Options.OptionKey right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.OptionKey.op_Inequality(Microsoft.CodeAnalysis.Options.OptionKey,Microsoft.CodeAnalysis.Options.OptionKey)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As OptionKey, right As OptionKey) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.Options.OptionKey * Microsoft.CodeAnalysis.Options.OptionKey -&gt; bool" Usage="Microsoft.CodeAnalysis.Options.OptionKey.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -181,6 +192,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Options.IOption Option" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.OptionKey.Option" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Option As IOption" />
+      <MemberSignature Language="F#" Value="member this.Option : Microsoft.CodeAnalysis.Options.IOption" Usage="Microsoft.CodeAnalysis.Options.OptionKey.Option" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>

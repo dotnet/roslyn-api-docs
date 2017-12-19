@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SemanticEdit extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.Emit.SemanticEdit&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Emit.SemanticEdit" />
   <TypeSignature Language="VB.NET" Value="Public Structure SemanticEdit&#xA;Implements IEquatable(Of SemanticEdit)" />
+  <TypeSignature Language="F#" Value="type SemanticEdit = struct" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.Emit.SemanticEditKind kind, class Microsoft.CodeAnalysis.ISymbol oldSymbol, class Microsoft.CodeAnalysis.ISymbol newSymbol, class System.Func`2&lt;class Microsoft.CodeAnalysis.SyntaxNode, class Microsoft.CodeAnalysis.SyntaxNode&gt; syntaxMap, bool preserveLocalVariables) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.SemanticEdit.#ctor(Microsoft.CodeAnalysis.Emit.SemanticEditKind,Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol,System.Func{Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (kind As SemanticEditKind, oldSymbol As ISymbol, newSymbol As ISymbol, Optional syntaxMap As Func(Of SyntaxNode, SyntaxNode) = null, Optional preserveLocalVariables As Boolean = false)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Emit.SemanticEdit : Microsoft.CodeAnalysis.Emit.SemanticEditKind * Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.ISymbol * Func&lt;Microsoft.CodeAnalysis.SyntaxNode, Microsoft.CodeAnalysis.SyntaxNode&gt; * bool -&gt; Microsoft.CodeAnalysis.Emit.SemanticEdit" Usage="new Microsoft.CodeAnalysis.Emit.SemanticEdit (kind, oldSymbol, newSymbol, syntaxMap, preserveLocalVariables)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -73,7 +75,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.Emit.SemanticEdit other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.SemanticEdit.Equals(Microsoft.CodeAnalysis.Emit.SemanticEdit)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As SemanticEdit) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.Emit.SemanticEdit -&gt; bool" Usage="semanticEdit.Equals other" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -96,6 +102,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.SemanticEdit.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="semanticEdit.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -119,6 +126,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.SemanticEdit.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="semanticEdit.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -139,6 +147,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Emit.SemanticEditKind Kind" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.SemanticEdit.Kind" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kind As SemanticEditKind" />
+      <MemberSignature Language="F#" Value="member this.Kind : Microsoft.CodeAnalysis.Emit.SemanticEditKind" Usage="Microsoft.CodeAnalysis.Emit.SemanticEdit.Kind" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -160,6 +169,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISymbol NewSymbol" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.SemanticEdit.NewSymbol" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NewSymbol As ISymbol" />
+      <MemberSignature Language="F#" Value="member this.NewSymbol : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.Emit.SemanticEdit.NewSymbol" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -182,6 +192,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISymbol OldSymbol" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.SemanticEdit.OldSymbol" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OldSymbol As ISymbol" />
+      <MemberSignature Language="F#" Value="member this.OldSymbol : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.Emit.SemanticEdit.OldSymbol" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -204,6 +215,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool PreserveLocalVariables" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.SemanticEdit.PreserveLocalVariables" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PreserveLocalVariables As Boolean" />
+      <MemberSignature Language="F#" Value="member this.PreserveLocalVariables : bool" Usage="Microsoft.CodeAnalysis.Emit.SemanticEdit.PreserveLocalVariables" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -226,6 +238,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class Microsoft.CodeAnalysis.SyntaxNode, class Microsoft.CodeAnalysis.SyntaxNode&gt; SyntaxMap" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.SemanticEdit.SyntaxMap" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SyntaxMap As Func(Of SyntaxNode, SyntaxNode)" />
+      <MemberSignature Language="F#" Value="member this.SyntaxMap : Func&lt;Microsoft.CodeAnalysis.SyntaxNode, Microsoft.CodeAnalysis.SyntaxNode&gt;" Usage="Microsoft.CodeAnalysis.Emit.SemanticEdit.SyntaxMap" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>

@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CSharpSyntaxNode extends Microsoft.CodeAnalysis.SyntaxNode" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class CSharpSyntaxNode&#xA;Inherits SyntaxNode" />
+  <TypeSignature Language="F#" Value="type CSharpSyntaxNode = class&#xA;    inherit SyntaxNode&#xA;    interface IMessageSerializable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Accept(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Accept (visitor As CSharpSyntaxVisitor)" />
+      <MemberSignature Language="F#" Value="abstract member Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor -&gt; unit" Usage="cSharpSyntaxNode.Accept visitor" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -45,6 +47,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function Accept(Of TResult) (visitor As CSharpSyntaxVisitor(Of TResult)) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;'Result&gt; -&gt; 'Result" Usage="cSharpSyntaxNode.Accept visitor" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -71,6 +74,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxNode DeserializeFrom (System.IO.Stream stream, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.SyntaxNode DeserializeFrom(class System.IO.Stream stream, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.DeserializeFrom(System.IO.Stream,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member DeserializeFrom : System.IO.Stream * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.DeserializeFrom (stream, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -98,6 +102,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EquivalentToCore(class Microsoft.CodeAnalysis.SyntaxNode other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.EquivalentToCore(Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function EquivalentToCore (other As SyntaxNode) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.EquivalentToCore : Microsoft.CodeAnalysis.SyntaxNode -&gt; bool" Usage="cSharpSyntaxNode.EquivalentToCore other" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -123,6 +128,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxToken FindToken(int32 position, bool findInsideTrivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindToken(System.Int32,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function FindToken (position As Integer, Optional findInsideTrivia As Boolean = false) As SyntaxToken" />
+      <MemberSignature Language="F#" Value="override this.FindToken : int * bool -&gt; Microsoft.CodeAnalysis.SyntaxToken" Usage="cSharpSyntaxNode.FindToken (position, findInsideTrivia)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -157,6 +163,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTrivia FindTrivia(int32 position, bool findInsideTrivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindTrivia(System.Int32,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function FindTrivia (position As Integer, Optional findInsideTrivia As Boolean = false) As SyntaxTrivia" />
+      <MemberSignature Language="F#" Value="override this.FindTrivia : int * bool -&gt; Microsoft.CodeAnalysis.SyntaxTrivia" Usage="cSharpSyntaxNode.FindTrivia (position, findInsideTrivia)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -185,6 +192,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTrivia FindTrivia(int32 position, class System.Func`2&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia, bool&gt; stepInto) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindTrivia(System.Int32,System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Function FindTrivia (position As Integer, stepInto As Func(Of SyntaxTrivia, Boolean)) As SyntaxTrivia" />
+      <MemberSignature Language="F#" Value="override this.FindTrivia : int * Func&lt;Microsoft.CodeAnalysis.SyntaxTrivia, bool&gt; -&gt; Microsoft.CodeAnalysis.SyntaxTrivia" Usage="cSharpSyntaxNode.FindTrivia (position, stepInto)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -215,6 +223,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetDiagnostics" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDiagnostics () As IEnumerable(Of Diagnostic)" />
+      <MemberSignature Language="F#" Value="override this.GetDiagnostics : unit -&gt; seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="cSharpSyntaxNode.GetDiagnostics " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -239,6 +248,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetFirstDirective(class System.Func`2&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax, bool&gt; predicate) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetFirstDirective(System.Func{Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Function GetFirstDirective (Optional predicate As Func(Of DirectiveTriviaSyntax, Boolean) = null) As DirectiveTriviaSyntax" />
+      <MemberSignature Language="F#" Value="member this.GetFirstDirective : Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax, bool&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax" Usage="cSharpSyntaxNode.GetFirstDirective predicate" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -264,6 +274,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxToken GetFirstToken(bool includeZeroWidth, bool includeSkipped, bool includeDirectives, bool includeDocumentationComments) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetFirstToken(System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetFirstToken (Optional includeZeroWidth As Boolean = false, Optional includeSkipped As Boolean = false, Optional includeDirectives As Boolean = false, Optional includeDocumentationComments As Boolean = false) As SyntaxToken" />
+      <MemberSignature Language="F#" Value="override this.GetFirstToken : bool * bool * bool * bool -&gt; Microsoft.CodeAnalysis.SyntaxToken" Usage="cSharpSyntaxNode.GetFirstToken (includeZeroWidth, includeSkipped, includeDirectives, includeDocumentationComments)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -297,6 +308,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetLastDirective(class System.Func`2&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax, bool&gt; predicate) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetLastDirective(System.Func{Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLastDirective (Optional predicate As Func(Of DirectiveTriviaSyntax, Boolean) = null) As DirectiveTriviaSyntax" />
+      <MemberSignature Language="F#" Value="member this.GetLastDirective : Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax, bool&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax" Usage="cSharpSyntaxNode.GetLastDirective predicate" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -322,6 +334,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxToken GetLastToken(bool includeZeroWidth, bool includeSkipped, bool includeDirectives, bool includeDocumentationComments) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetLastToken(System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLastToken (Optional includeZeroWidth As Boolean = false, Optional includeSkipped As Boolean = false, Optional includeDirectives As Boolean = false, Optional includeDocumentationComments As Boolean = false) As SyntaxToken" />
+      <MemberSignature Language="F#" Value="override this.GetLastToken : bool * bool * bool * bool -&gt; Microsoft.CodeAnalysis.SyntaxToken" Usage="cSharpSyntaxNode.GetLastToken (includeZeroWidth, includeSkipped, includeDirectives, includeDocumentationComments)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -355,6 +368,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTriviaList GetLeadingTrivia() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetLeadingTrivia" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLeadingTrivia () As SyntaxTriviaList" />
+      <MemberSignature Language="F#" Value="override this.GetLeadingTrivia : unit -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="cSharpSyntaxNode.GetLeadingTrivia " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -377,6 +391,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Location GetLocation() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetLocation" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLocation () As Location" />
+      <MemberSignature Language="F#" Value="override this.GetLocation : unit -&gt; Microsoft.CodeAnalysis.Location" Usage="cSharpSyntaxNode.GetLocation " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -399,6 +414,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTriviaList GetTrailingTrivia() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetTrailingTrivia" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTrailingTrivia () As SyntaxTriviaList" />
+      <MemberSignature Language="F#" Value="override this.GetTrailingTrivia : unit -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="cSharpSyntaxNode.GetTrailingTrivia " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -421,6 +437,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode InsertNodesInListCore(class Microsoft.CodeAnalysis.SyntaxNode nodeInList, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; nodesToInsert, bool insertBefore) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.InsertNodesInListCore(Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function InsertNodesInListCore (nodeInList As SyntaxNode, nodesToInsert As IEnumerable(Of SyntaxNode), insertBefore As Boolean) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="override this.InsertNodesInListCore : Microsoft.CodeAnalysis.SyntaxNode * seq&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; * bool -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.InsertNodesInListCore (nodeInList, nodesToInsert, insertBefore)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -448,6 +465,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode InsertTokensInListCore(valuetype Microsoft.CodeAnalysis.SyntaxToken originalToken, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; newTokens, bool insertBefore) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.InsertTokensInListCore(Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function InsertTokensInListCore (originalToken As SyntaxToken, newTokens As IEnumerable(Of SyntaxToken), insertBefore As Boolean) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="override this.InsertTokensInListCore : Microsoft.CodeAnalysis.SyntaxToken * seq&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; * bool -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.InsertTokensInListCore (originalToken, newTokens, insertBefore)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -475,6 +493,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode InsertTriviaInListCore(valuetype Microsoft.CodeAnalysis.SyntaxTrivia originalTrivia, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; newTrivia, bool insertBefore) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.InsertTriviaInListCore(Microsoft.CodeAnalysis.SyntaxTrivia,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function InsertTriviaInListCore (originalTrivia As SyntaxTrivia, newTrivia As IEnumerable(Of SyntaxTrivia), insertBefore As Boolean) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="override this.InsertTriviaInListCore : Microsoft.CodeAnalysis.SyntaxTrivia * seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; * bool -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.InsertTriviaInListCore (originalTrivia, newTrivia, insertBefore)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -502,6 +521,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsEquivalentToCore(class Microsoft.CodeAnalysis.SyntaxNode node, bool topLevel) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.IsEquivalentToCore(Microsoft.CodeAnalysis.SyntaxNode,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsEquivalentToCore (node As SyntaxNode, Optional topLevel As Boolean = false) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsEquivalentToCore : Microsoft.CodeAnalysis.SyntaxNode * bool -&gt; bool" Usage="cSharpSyntaxNode.IsEquivalentToCore (node, topLevel)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -527,6 +547,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.CSharp.SyntaxKind Kind() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Kind" />
       <MemberSignature Language="VB.NET" Value="Public Function Kind () As SyntaxKind" />
+      <MemberSignature Language="F#" Value="member this.Kind : unit -&gt; Microsoft.CodeAnalysis.CSharp.SyntaxKind" Usage="cSharpSyntaxNode.Kind " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -549,6 +570,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Language" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Language" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Language As String" />
+      <MemberSignature Language="F#" Value="member this.Language : string" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Language" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -570,6 +592,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode NormalizeWhitespaceCore(string indentation, string eol, bool elasticTrivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.NormalizeWhitespaceCore(System.String,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function NormalizeWhitespaceCore (indentation As String, eol As String, elasticTrivia As Boolean) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="override this.NormalizeWhitespaceCore : string * string * bool -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.NormalizeWhitespaceCore (indentation, eol, elasticTrivia)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -597,6 +620,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode RemoveNodesCore(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; nodes, valuetype Microsoft.CodeAnalysis.SyntaxRemoveOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.RemoveNodesCore(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},Microsoft.CodeAnalysis.SyntaxRemoveOptions)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function RemoveNodesCore (nodes As IEnumerable(Of SyntaxNode), options As SyntaxRemoveOptions) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="override this.RemoveNodesCore : seq&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; * Microsoft.CodeAnalysis.SyntaxRemoveOptions -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.RemoveNodesCore (nodes, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -622,6 +646,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode ReplaceCore&lt;(class Microsoft.CodeAnalysis.SyntaxNode) TNode&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TNode&gt; nodes, class System.Func`3&lt;!!TNode, !!TNode, class Microsoft.CodeAnalysis.SyntaxNode&gt; computeReplacementNode, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; tokens, class System.Func`3&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken, valuetype Microsoft.CodeAnalysis.SyntaxToken, valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; computeReplacementToken, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; trivia, class System.Func`3&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia, valuetype Microsoft.CodeAnalysis.SyntaxTrivia, valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; computeReplacementTrivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.ReplaceCore``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``0,Microsoft.CodeAnalysis.SyntaxNode},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken},System.Func{Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia})" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ReplaceCore(Of TNode As SyntaxNode) (Optional nodes As IEnumerable(Of TNode) = null, Optional computeReplacementNode As Func(Of TNode, TNode, SyntaxNode) = null, Optional tokens As IEnumerable(Of SyntaxToken) = null, Optional computeReplacementToken As Func(Of SyntaxToken, SyntaxToken, SyntaxToken) = null, Optional trivia As IEnumerable(Of SyntaxTrivia) = null, Optional computeReplacementTrivia As Func(Of SyntaxTrivia, SyntaxTrivia, SyntaxTrivia) = null) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="override this.ReplaceCore : seq&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; * Func&lt;'Node, 'Node, Microsoft.CodeAnalysis.SyntaxNode (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode and 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; * seq&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; * Func&lt;Microsoft.CodeAnalysis.SyntaxToken, Microsoft.CodeAnalysis.SyntaxToken, Microsoft.CodeAnalysis.SyntaxToken&gt; * seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; * Func&lt;Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia&gt; -&gt; Microsoft.CodeAnalysis.SyntaxNode (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)" Usage="cSharpSyntaxNode.ReplaceCore (nodes, computeReplacementNode, tokens, computeReplacementToken, trivia, computeReplacementTrivia)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -663,6 +688,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode ReplaceNodeInListCore(class Microsoft.CodeAnalysis.SyntaxNode originalNode, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; replacementNodes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.ReplaceNodeInListCore(Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ReplaceNodeInListCore (originalNode As SyntaxNode, replacementNodes As IEnumerable(Of SyntaxNode)) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="override this.ReplaceNodeInListCore : Microsoft.CodeAnalysis.SyntaxNode * seq&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.ReplaceNodeInListCore (originalNode, replacementNodes)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -688,6 +714,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode ReplaceTokenInListCore(valuetype Microsoft.CodeAnalysis.SyntaxToken originalToken, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; newTokens) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.ReplaceTokenInListCore(Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken})" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ReplaceTokenInListCore (originalToken As SyntaxToken, newTokens As IEnumerable(Of SyntaxToken)) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="override this.ReplaceTokenInListCore : Microsoft.CodeAnalysis.SyntaxToken * seq&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.ReplaceTokenInListCore (originalToken, newTokens)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -713,6 +740,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode ReplaceTriviaInListCore(valuetype Microsoft.CodeAnalysis.SyntaxTrivia originalTrivia, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; newTrivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.ReplaceTriviaInListCore(Microsoft.CodeAnalysis.SyntaxTrivia,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia})" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ReplaceTriviaInListCore (originalTrivia As SyntaxTrivia, newTrivia As IEnumerable(Of SyntaxTrivia)) As SyntaxNode" />
+      <MemberSignature Language="F#" Value="override this.ReplaceTriviaInListCore : Microsoft.CodeAnalysis.SyntaxTrivia * seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.ReplaceTriviaInListCore (originalTrivia, newTrivia)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -738,6 +766,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SyntaxTree SyntaxTreeCore" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.SyntaxTreeCore" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property SyntaxTreeCore As SyntaxTree" />
+      <MemberSignature Language="F#" Value="member this.SyntaxTreeCore : Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.SyntaxTreeCore" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>

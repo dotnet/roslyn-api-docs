@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SeparatedSyntaxList`1&lt;(class Microsoft.CodeAnalysis.SyntaxNode) TNode&gt; extends System.ValueType implements class System.Collections.Generic.IEnumerable`1&lt;!TNode&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;!TNode&gt;, class System.Collections.Generic.IReadOnlyList`1&lt;!TNode&gt;, class System.Collections.IEnumerable, class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt;&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SeparatedSyntaxList`1" />
   <TypeSignature Language="VB.NET" Value="Public Structure SeparatedSyntaxList(Of TNode)&#xA;Implements IEnumerable(Of TNode), IEquatable(Of SeparatedSyntaxList(Of TNode)), IReadOnlyCollection(Of TNode), IReadOnlyList(Of TNode)" />
+  <TypeSignature Language="F#" Value="type SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; SyntaxNode)&gt; = struct&#xA;    interface IReadOnlyList&lt;'Node (requires 'Node :&gt; SyntaxNode)&gt;&#xA;    interface seq&lt;'Node (requires 'Node :&gt; SyntaxNode)&gt;&#xA;    interface IEnumerable&#xA;    interface IReadOnlyCollection&lt;'Node (requires 'Node :&gt; SyntaxNode)&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -42,6 +43,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; Add(!TNode node) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Add(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (node As TNode) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="member this.Add : 'Node -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="separatedSyntaxList.Add node" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; AddRange(class System.Collections.Generic.IEnumerable`1&lt;!TNode&gt; nodes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.AddRange(System.Collections.Generic.IEnumerable{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function AddRange (nodes As IEnumerable(Of TNode)) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="member this.AddRange : seq&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="separatedSyntaxList.AddRange nodes" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -92,6 +95,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Any() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Any" />
       <MemberSignature Language="VB.NET" Value="Public Function Any () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Any : unit -&gt; bool" Usage="separatedSyntaxList.Any " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -112,6 +116,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(!TNode node) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Contains(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (node As TNode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Contains : 'Node -&gt; bool" Usage="separatedSyntaxList.Contains node" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -135,7 +140,11 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.Count" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.IReadOnlyCollection`1.Count</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -154,7 +163,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Equals(Microsoft.CodeAnalysis.SeparatedSyntaxList{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As SeparatedSyntaxList(Of TNode)) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; bool" Usage="separatedSyntaxList.Equals other" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -177,6 +190,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="separatedSyntaxList.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -200,6 +214,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TNode First() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.First" />
       <MemberSignature Language="VB.NET" Value="Public Function First () As TNode" />
+      <MemberSignature Language="F#" Value="member this.First : unit -&gt; 'Node" Usage="separatedSyntaxList.First " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -220,6 +235,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TNode FirstOrDefault() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.FirstOrDefault" />
       <MemberSignature Language="VB.NET" Value="Public Function FirstOrDefault () As TNode" />
+      <MemberSignature Language="F#" Value="member this.FirstOrDefault : unit -&gt; 'Node" Usage="separatedSyntaxList.FirstOrDefault " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -240,6 +256,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextSpan FullSpan" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.FullSpan" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullSpan As TextSpan" />
+      <MemberSignature Language="F#" Value="member this.FullSpan : Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.FullSpan" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -261,6 +278,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1/Enumerator&lt;!TNode&gt; GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As SeparatedSyntaxList(Of TNode).Enumerator" />
+      <MemberSignature Language="F#" Value="member this.GetEnumerator : unit -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.Enumerator" Usage="separatedSyntaxList.GetEnumerator " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -281,6 +299,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="separatedSyntaxList.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -301,6 +320,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxToken GetSeparator(int32 index) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.GetSeparator(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetSeparator (index As Integer) As SyntaxToken" />
+      <MemberSignature Language="F#" Value="member this.GetSeparator : int -&gt; Microsoft.CodeAnalysis.SyntaxToken" Usage="separatedSyntaxList.GetSeparator index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -326,6 +346,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; GetSeparators() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.GetSeparators" />
       <MemberSignature Language="VB.NET" Value="Public Function GetSeparators () As IEnumerable(Of SyntaxToken)" />
+      <MemberSignature Language="F#" Value="member this.GetSeparators : unit -&gt; seq&lt;Microsoft.CodeAnalysis.SyntaxToken&gt;" Usage="separatedSyntaxList.GetSeparators " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -348,6 +369,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxNodeOrTokenList GetWithSeparators() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.GetWithSeparators" />
       <MemberSignature Language="VB.NET" Value="Public Function GetWithSeparators () As SyntaxNodeOrTokenList" />
+      <MemberSignature Language="F#" Value="member this.GetWithSeparators : unit -&gt; Microsoft.CodeAnalysis.SyntaxNodeOrTokenList" Usage="separatedSyntaxList.GetWithSeparators " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -368,6 +390,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Func`2&lt;!TNode, bool&gt; predicate) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.IndexOf(System.Func{`0,System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (predicate As Func(Of TNode, Boolean)) As Integer" />
+      <MemberSignature Language="F#" Value="member this.IndexOf : Func&lt;'Node, bool (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; int" Usage="separatedSyntaxList.IndexOf predicate" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -391,6 +414,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(!TNode node) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.IndexOf(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (node As TNode) As Integer" />
+      <MemberSignature Language="F#" Value="member this.IndexOf : 'Node -&gt; int" Usage="separatedSyntaxList.IndexOf node" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -414,6 +438,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; Insert(int32 index, !TNode node) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Insert(System.Int32,`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Insert (index As Integer, node As TNode) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="member this.Insert : int * 'Node -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="separatedSyntaxList.Insert (index, node)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -441,6 +466,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; InsertRange(int32 index, class System.Collections.Generic.IEnumerable`1&lt;!TNode&gt; nodes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function InsertRange (index As Integer, nodes As IEnumerable(Of TNode)) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="member this.InsertRange : int * seq&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="separatedSyntaxList.InsertRange (index, nodes)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -468,7 +494,11 @@
       <MemberSignature Language="ILAsm" Value=".property instance !TNode Item(int32)" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As TNode" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : 'Node" Usage="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.Item" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.IReadOnlyList`1.Item(System.Int32)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -491,6 +521,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TNode Last() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Last" />
       <MemberSignature Language="VB.NET" Value="Public Function Last () As TNode" />
+      <MemberSignature Language="F#" Value="member this.Last : unit -&gt; 'Node" Usage="separatedSyntaxList.Last " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -511,6 +542,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 LastIndexOf(class System.Func`2&lt;!TNode, bool&gt; predicate) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.LastIndexOf(System.Func{`0,System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Function LastIndexOf (predicate As Func(Of TNode, Boolean)) As Integer" />
+      <MemberSignature Language="F#" Value="member this.LastIndexOf : Func&lt;'Node, bool (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; int" Usage="separatedSyntaxList.LastIndexOf predicate" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -534,6 +566,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 LastIndexOf(!TNode node) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.LastIndexOf(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function LastIndexOf (node As TNode) As Integer" />
+      <MemberSignature Language="F#" Value="member this.LastIndexOf : 'Node -&gt; int" Usage="separatedSyntaxList.LastIndexOf node" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -557,6 +590,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TNode LastOrDefault() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.LastOrDefault" />
       <MemberSignature Language="VB.NET" Value="Public Function LastOrDefault () As TNode" />
+      <MemberSignature Language="F#" Value="member this.LastOrDefault : unit -&gt; 'Node" Usage="separatedSyntaxList.LastOrDefault " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -577,6 +611,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; left, valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.op_Equality(Microsoft.CodeAnalysis.SeparatedSyntaxList{`0},Microsoft.CodeAnalysis.SeparatedSyntaxList{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As SeparatedSyntaxList(Of TNode), right As SeparatedSyntaxList(Of TNode)) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; * Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -602,6 +637,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; op_Implicit(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; nodes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.op_Implicit(Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.SyntaxNode})~Microsoft.CodeAnalysis.SeparatedSyntaxList{`0}" />
       <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (nodes As SeparatedSyntaxList(Of SyntaxNode)) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.op_Implicit nodes" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -625,6 +661,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; op_Implicit(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; nodes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.op_Implicit(Microsoft.CodeAnalysis.SeparatedSyntaxList{`0})~Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.SyntaxNode}" />
       <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (nodes As SeparatedSyntaxList(Of TNode)) As SeparatedSyntaxList(Of SyntaxNode)" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;" Usage="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.op_Implicit nodes" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -648,6 +685,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; left, valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.op_Inequality(Microsoft.CodeAnalysis.SeparatedSyntaxList{`0},Microsoft.CodeAnalysis.SeparatedSyntaxList{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As SeparatedSyntaxList(Of TNode), right As SeparatedSyntaxList(Of TNode)) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; * Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; bool" Usage="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -673,6 +711,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; Remove(!TNode node) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Remove(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (node As TNode) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="member this.Remove : 'Node -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="separatedSyntaxList.Remove node" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -698,6 +737,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; RemoveAt(int32 index) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.RemoveAt(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function RemoveAt (index As Integer) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="member this.RemoveAt : int -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="separatedSyntaxList.RemoveAt index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -723,6 +763,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; Replace(!TNode nodeInList, !TNode newNode) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Replace(`0,`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Replace (nodeInList As TNode, newNode As TNode) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="member this.Replace : 'Node * 'Node -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="separatedSyntaxList.Replace (nodeInList, newNode)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -750,6 +791,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; ReplaceRange(!TNode nodeInList, class System.Collections.Generic.IEnumerable`1&lt;!TNode&gt; newNodes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.ReplaceRange(`0,System.Collections.Generic.IEnumerable{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function ReplaceRange (nodeInList As TNode, newNodes As IEnumerable(Of TNode)) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="member this.ReplaceRange : 'Node * seq&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="separatedSyntaxList.ReplaceRange (nodeInList, newNodes)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -777,6 +819,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;!TNode&gt; ReplaceSeparator(valuetype Microsoft.CodeAnalysis.SyntaxToken separatorToken, valuetype Microsoft.CodeAnalysis.SyntaxToken newSeparator) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.ReplaceSeparator(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function ReplaceSeparator (separatorToken As SyntaxToken, newSeparator As SyntaxToken) As SeparatedSyntaxList(Of TNode)" />
+      <MemberSignature Language="F#" Value="member this.ReplaceSeparator : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SyntaxToken -&gt; Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="separatedSyntaxList.ReplaceSeparator (separatorToken, newSeparator)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -804,6 +847,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 SeparatorCount" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.SeparatorCount" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SeparatorCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.SeparatorCount : int" Usage="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.SeparatorCount" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -823,6 +867,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextSpan Span" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.Span" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Span As TextSpan" />
+      <MemberSignature Language="F#" Value="member this.Span : Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.Span" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -845,6 +890,9 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.System#Collections#Generic#IEnumerable&lt;TNode&gt;#GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator(Of TNode) Implements IEnumerable(Of TNode).GetEnumerator" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -865,6 +913,9 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.System#Collections#IEnumerable#GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator Implements IEnumerable.GetEnumerator" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -884,6 +935,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToFullString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.ToFullString" />
       <MemberSignature Language="VB.NET" Value="Public Function ToFullString () As String" />
+      <MemberSignature Language="F#" Value="member this.ToFullString : unit -&gt; string" Usage="separatedSyntaxList.ToFullString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -910,6 +962,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SeparatedSyntaxList`1.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="separatedSyntaxList.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>

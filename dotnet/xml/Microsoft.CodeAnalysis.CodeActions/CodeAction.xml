@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeAction extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class CodeAction" />
+  <TypeSignature Language="F#" Value="type CodeAction = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -38,6 +39,7 @@
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputeOperationsAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member ComputeOperationsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;&#xA;override this.ComputeOperationsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeAction.ComputeOperationsAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputePreviewOperationsAsync (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputePreviewOperationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputePreviewOperationsAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member ComputePreviewOperationsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;&#xA;override this.ComputePreviewOperationsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeAction.ComputePreviewOperationsAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -98,6 +101,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string equivalenceKey) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedDocument As Func(Of CancellationToken, Task(Of Document)), Optional equivalenceKey As String = null) As CodeAction" />
+      <MemberSignature Language="F#" Value="static member Create : string * Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; * string -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, createChangedDocument, equivalenceKey)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -128,6 +132,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string equivalenceKey) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Solution}},System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedSolution As Func(Of CancellationToken, Task(Of Solution)), Optional equivalenceKey As String = null) As CodeAction" />
+      <MemberSignature Language="F#" Value="static member Create : string * Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; * string -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, createChangedSolution, equivalenceKey)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -158,6 +163,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string EquivalenceKey" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property EquivalenceKey As String" />
+      <MemberSignature Language="F#" Value="member this.EquivalenceKey : string" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -188,6 +194,7 @@
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt; GetChangedDocumentAsync (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; GetChangedDocumentAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedDocumentAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetChangedDocumentAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&#xA;override this.GetChangedDocumentAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;" Usage="codeAction.GetChangedDocumentAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -213,6 +220,7 @@
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; GetChangedSolutionAsync (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt; GetChangedSolutionAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedSolutionAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetChangedSolutionAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&#xA;override this.GetChangedSolutionAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;" Usage="codeAction.GetChangedSolutionAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -243,6 +251,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetOperationsAsync (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetOperationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetOperationsAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetOperationsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeAction.GetOperationsAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -267,6 +276,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetPreviewOperationsAsync (System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetPreviewOperationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetPreviewOperationsAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetPreviewOperationsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeAction.GetPreviewOperationsAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -296,6 +306,7 @@
       <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; PostProcessAsync (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt; operations, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; PostProcessAsync(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt; operations, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessAsync(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.CodeActions.CodeActionOperation},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.PostProcessAsync : seq&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeAction.PostProcessAsync (operations, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -327,6 +338,7 @@
       <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt; PostProcessChangesAsync (Microsoft.CodeAnalysis.Document document, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; PostProcessChangesAsync(class Microsoft.CodeAnalysis.Document document, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Microsoft.CodeAnalysis.Document,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member PostProcessChangesAsync : Microsoft.CodeAnalysis.Document * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&#xA;override this.PostProcessChangesAsync : Microsoft.CodeAnalysis.Document * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;" Usage="codeAction.PostProcessChangesAsync (document, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -354,6 +366,7 @@
       <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; PostProcessChangesAsync (Microsoft.CodeAnalysis.Solution changedSolution, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt; PostProcessChangesAsync(class Microsoft.CodeAnalysis.Solution changedSolution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.PostProcessChangesAsync : Microsoft.CodeAnalysis.Solution * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;" Usage="codeAction.PostProcessChangesAsync (changedSolution, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -386,6 +399,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; Tags" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.Tags" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Tags As ImmutableArray(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Tags : System.Collections.Immutable.ImmutableArray&lt;string&gt;" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Tags" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -408,6 +422,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Title" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.Title" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Title As String" />
+      <MemberSignature Language="F#" Value="member this.Title : string" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Title" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>

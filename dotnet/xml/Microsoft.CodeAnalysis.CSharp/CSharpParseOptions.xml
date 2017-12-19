@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CSharpParseOptions extends Microsoft.CodeAnalysis.ParseOptions implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CSharpParseOptions&#xA;Inherits ParseOptions&#xA;Implements IEquatable(Of CSharpParseOptions)" />
+  <TypeSignature Language="F#" Value="type CSharpParseOptions = class&#xA;    inherit ParseOptions&#xA;    interface IEquatable&lt;CSharpParseOptions&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -26,6 +27,7 @@
       <MemberSignature Language="C#" Value="public CSharpParseOptions (Microsoft.CodeAnalysis.CSharp.LanguageVersion languageVersion = Microsoft.CodeAnalysis.CSharp.LanguageVersion.Default, Microsoft.CodeAnalysis.DocumentationMode documentationMode = Microsoft.CodeAnalysis.DocumentationMode.Parse, Microsoft.CodeAnalysis.SourceCodeKind kind = Microsoft.CodeAnalysis.SourceCodeKind.Regular, System.Collections.Generic.IEnumerable&lt;string&gt; preprocessorSymbols = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.CSharp.LanguageVersion languageVersion, valuetype Microsoft.CodeAnalysis.DocumentationMode documentationMode, valuetype Microsoft.CodeAnalysis.SourceCodeKind kind, class System.Collections.Generic.IEnumerable`1&lt;string&gt; preprocessorSymbols) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.#ctor(Microsoft.CodeAnalysis.CSharp.LanguageVersion,Microsoft.CodeAnalysis.DocumentationMode,Microsoft.CodeAnalysis.SourceCodeKind,System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.CSharp.CSharpParseOptions : Microsoft.CodeAnalysis.CSharp.LanguageVersion * Microsoft.CodeAnalysis.DocumentationMode * Microsoft.CodeAnalysis.SourceCodeKind * seq&lt;string&gt; -&gt; Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="new Microsoft.CodeAnalysis.CSharp.CSharpParseOptions (languageVersion, documentationMode, kind, preprocessorSymbols)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -50,6 +52,7 @@
       <MemberSignature Language="C#" Value="protected override Microsoft.CodeAnalysis.ParseOptions CommonWithDocumentationMode (Microsoft.CodeAnalysis.DocumentationMode documentationMode);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Microsoft.CodeAnalysis.ParseOptions CommonWithDocumentationMode(valuetype Microsoft.CodeAnalysis.DocumentationMode documentationMode) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.CommonWithDocumentationMode(Microsoft.CodeAnalysis.DocumentationMode)" />
+      <MemberSignature Language="F#" Value="override this.CommonWithDocumentationMode : Microsoft.CodeAnalysis.DocumentationMode -&gt; Microsoft.CodeAnalysis.ParseOptions" Usage="cSharpParseOptions.CommonWithDocumentationMode documentationMode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -73,6 +76,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Microsoft.CodeAnalysis.ParseOptions CommonWithFeatures(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; features) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.CommonWithFeatures(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CommonWithFeatures (features As IEnumerable(Of KeyValuePair(Of String, String))) As ParseOptions" />
+      <MemberSignature Language="F#" Value="override this.CommonWithFeatures : seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt; -&gt; Microsoft.CodeAnalysis.ParseOptions" Usage="cSharpParseOptions.CommonWithFeatures features" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -96,6 +100,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.CodeAnalysis.ParseOptions CommonWithKind(valuetype Microsoft.CodeAnalysis.SourceCodeKind kind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.CommonWithKind(Microsoft.CodeAnalysis.SourceCodeKind)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function CommonWithKind (kind As SourceCodeKind) As ParseOptions" />
+      <MemberSignature Language="F#" Value="override this.CommonWithKind : Microsoft.CodeAnalysis.SourceCodeKind -&gt; Microsoft.CodeAnalysis.ParseOptions" Usage="cSharpParseOptions.CommonWithKind kind" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -119,6 +124,7 @@
       <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions Default" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.Default" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Default As CSharpParseOptions" />
+      <MemberSignature Language="F#" Value="member this.Default : Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.Default" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -140,7 +146,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.Equals(Microsoft.CodeAnalysis.CSharp.CSharpParseOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As CSharpParseOptions) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.CSharp.CSharpParseOptions -&gt; bool" Usage="cSharpParseOptions.Equals other" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -163,6 +173,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="cSharpParseOptions.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -186,6 +197,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, string&gt; Features" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.Features" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Features As IReadOnlyDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.Features : System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;" Usage="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.Features" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -205,6 +217,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="cSharpParseOptions.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -225,6 +238,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Language" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.Language" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Language As String" />
+      <MemberSignature Language="F#" Value="member this.Language : string" Usage="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.Language" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -244,6 +258,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.CSharp.LanguageVersion LanguageVersion" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.LanguageVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LanguageVersion As LanguageVersion" />
+      <MemberSignature Language="F#" Value="member this.LanguageVersion : Microsoft.CodeAnalysis.CSharp.LanguageVersion" Usage="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.LanguageVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -266,6 +281,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; PreprocessorSymbolNames" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.PreprocessorSymbolNames" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property PreprocessorSymbolNames As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.PreprocessorSymbolNames : seq&lt;string&gt;" Usage="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.PreprocessorSymbolNames" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -287,6 +303,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.CSharp.LanguageVersion SpecifiedLanguageVersion" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.SpecifiedLanguageVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SpecifiedLanguageVersion As LanguageVersion" />
+      <MemberSignature Language="F#" Value="member this.SpecifiedLanguageVersion : Microsoft.CodeAnalysis.CSharp.LanguageVersion" Usage="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.SpecifiedLanguageVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -309,6 +326,7 @@
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.CSharpParseOptions WithDocumentationMode (Microsoft.CodeAnalysis.DocumentationMode documentationMode);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions WithDocumentationMode(valuetype Microsoft.CodeAnalysis.DocumentationMode documentationMode) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.WithDocumentationMode(Microsoft.CodeAnalysis.DocumentationMode)" />
+      <MemberSignature Language="F#" Value="override this.WithDocumentationMode : Microsoft.CodeAnalysis.DocumentationMode -&gt; Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="cSharpParseOptions.WithDocumentationMode documentationMode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -332,6 +350,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions WithFeatures(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; features) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.WithFeatures(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithFeatures (features As IEnumerable(Of KeyValuePair(Of String, String))) As CSharpParseOptions" />
+      <MemberSignature Language="F#" Value="override this.WithFeatures : seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt; -&gt; Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="cSharpParseOptions.WithFeatures features" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -357,6 +376,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions WithKind(valuetype Microsoft.CodeAnalysis.SourceCodeKind kind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.WithKind(Microsoft.CodeAnalysis.SourceCodeKind)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithKind (kind As SourceCodeKind) As CSharpParseOptions" />
+      <MemberSignature Language="F#" Value="override this.WithKind : Microsoft.CodeAnalysis.SourceCodeKind -&gt; Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="cSharpParseOptions.WithKind kind" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -380,6 +400,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions WithLanguageVersion(valuetype Microsoft.CodeAnalysis.CSharp.LanguageVersion version) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.WithLanguageVersion(Microsoft.CodeAnalysis.CSharp.LanguageVersion)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithLanguageVersion (version As LanguageVersion) As CSharpParseOptions" />
+      <MemberSignature Language="F#" Value="member this.WithLanguageVersion : Microsoft.CodeAnalysis.CSharp.LanguageVersion -&gt; Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="cSharpParseOptions.WithLanguageVersion version" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -403,6 +424,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions WithPreprocessorSymbols(class System.Collections.Generic.IEnumerable`1&lt;string&gt; preprocessorSymbols) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.WithPreprocessorSymbols(System.Collections.Generic.IEnumerable{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithPreprocessorSymbols (preprocessorSymbols As IEnumerable(Of String)) As CSharpParseOptions" />
+      <MemberSignature Language="F#" Value="member this.WithPreprocessorSymbols : seq&lt;string&gt; -&gt; Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="cSharpParseOptions.WithPreprocessorSymbols preprocessorSymbols" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -426,6 +448,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions WithPreprocessorSymbols(valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; symbols) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.WithPreprocessorSymbols(System.Collections.Immutable.ImmutableArray{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithPreprocessorSymbols (symbols As ImmutableArray(Of String)) As CSharpParseOptions" />
+      <MemberSignature Language="F#" Value="member this.WithPreprocessorSymbols : System.Collections.Immutable.ImmutableArray&lt;string&gt; -&gt; Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="cSharpParseOptions.WithPreprocessorSymbols symbols" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -449,6 +472,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions WithPreprocessorSymbols(string[] preprocessorSymbols) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.WithPreprocessorSymbols(System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Function WithPreprocessorSymbols (ParamArray preprocessorSymbols As String()) As CSharpParseOptions" />
+      <MemberSignature Language="F#" Value="member this.WithPreprocessorSymbols : string[] -&gt; Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="cSharpParseOptions.WithPreprocessorSymbols preprocessorSymbols" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>

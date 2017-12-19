@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProjectId extends System.Object implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ProjectId" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ProjectId&#xA;Implements IEquatable(Of ProjectId)" />
+  <TypeSignature Language="F#" Value="type ProjectId = class&#xA;    interface IEquatable&lt;ProjectId&gt;&#xA;    interface IObjectWritable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.ProjectId CreateFromSerialized(valuetype System.Guid id, string debugName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectId.CreateFromSerialized(System.Guid,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromSerialized (id As Guid, Optional debugName As String = null) As ProjectId" />
+      <MemberSignature Language="F#" Value="static member CreateFromSerialized : Guid * string -&gt; Microsoft.CodeAnalysis.ProjectId" Usage="Microsoft.CodeAnalysis.ProjectId.CreateFromSerialized (id, debugName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -57,6 +59,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.ProjectId CreateNewId(string debugName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectId.CreateNewId(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateNewId (Optional debugName As String = null) As ProjectId" />
+      <MemberSignature Language="F#" Value="static member CreateNewId : string -&gt; Microsoft.CodeAnalysis.ProjectId" Usage="Microsoft.CodeAnalysis.ProjectId.CreateNewId debugName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -82,7 +85,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.ProjectId other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectId.Equals(Microsoft.CodeAnalysis.ProjectId)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ProjectId) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.ProjectId -&gt; bool" Usage="projectId.Equals other" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -105,6 +112,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectId.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="projectId.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -128,6 +136,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectId.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="projectId.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -148,6 +157,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Id" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ProjectId.Id" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Guid" />
+      <MemberSignature Language="F#" Value="member this.Id : Guid" Usage="Microsoft.CodeAnalysis.ProjectId.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -169,6 +179,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.CodeAnalysis.ProjectId left, class Microsoft.CodeAnalysis.ProjectId right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectId.op_Equality(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectId)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As ProjectId, right As ProjectId) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectId -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -194,6 +205,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.CodeAnalysis.ProjectId left, class Microsoft.CodeAnalysis.ProjectId right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectId.op_Inequality(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectId)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As ProjectId, right As ProjectId) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectId -&gt; bool" Usage="Microsoft.CodeAnalysis.ProjectId.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -219,6 +231,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectId.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="projectId.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>

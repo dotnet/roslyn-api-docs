@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CompilationReference extends Microsoft.CodeAnalysis.MetadataReference implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.CompilationReference&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CompilationReference" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class CompilationReference&#xA;Inherits MetadataReference&#xA;Implements IEquatable(Of CompilationReference)" />
+  <TypeSignature Language="F#" Value="type CompilationReference = class&#xA;    inherit MetadataReference&#xA;    interface IEquatable&lt;CompilationReference&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -27,6 +28,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Compilation Compilation" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationReference.Compilation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Compilation As Compilation" />
+      <MemberSignature Language="F#" Value="member this.Compilation : Microsoft.CodeAnalysis.Compilation" Usage="Microsoft.CodeAnalysis.CompilationReference.Compilation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -46,6 +48,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Display" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CompilationReference.Display" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Display As String" />
+      <MemberSignature Language="F#" Value="member this.Display : string" Usage="Microsoft.CodeAnalysis.CompilationReference.Display" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -65,7 +68,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.CompilationReference other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationReference.Equals(Microsoft.CodeAnalysis.CompilationReference)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As CompilationReference) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.CompilationReference -&gt; bool" Usage="compilationReference.Equals other" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -88,6 +95,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationReference.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="compilationReference.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -111,6 +119,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationReference.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="compilationReference.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -131,6 +140,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationReference WithAliases(class System.Collections.Generic.IEnumerable`1&lt;string&gt; aliases) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationReference.WithAliases(System.Collections.Generic.IEnumerable{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithAliases (aliases As IEnumerable(Of String)) As CompilationReference" />
+      <MemberSignature Language="F#" Value="override this.WithAliases : seq&lt;string&gt; -&gt; Microsoft.CodeAnalysis.CompilationReference" Usage="compilationReference.WithAliases aliases" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -157,6 +167,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationReference WithAliases(valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; aliases) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationReference.WithAliases(System.Collections.Immutable.ImmutableArray{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithAliases (aliases As ImmutableArray(Of String)) As CompilationReference" />
+      <MemberSignature Language="F#" Value="override this.WithAliases : System.Collections.Immutable.ImmutableArray&lt;string&gt; -&gt; Microsoft.CodeAnalysis.CompilationReference" Usage="compilationReference.WithAliases aliases" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -183,6 +194,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationReference WithEmbedInteropTypes(bool value) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationReference.WithEmbedInteropTypes(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithEmbedInteropTypes (value As Boolean) As CompilationReference" />
+      <MemberSignature Language="F#" Value="override this.WithEmbedInteropTypes : bool -&gt; Microsoft.CodeAnalysis.CompilationReference" Usage="compilationReference.WithEmbedInteropTypes value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -209,6 +221,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CompilationReference WithProperties(valuetype Microsoft.CodeAnalysis.MetadataReferenceProperties properties) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CompilationReference.WithProperties(Microsoft.CodeAnalysis.MetadataReferenceProperties)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithProperties (properties As MetadataReferenceProperties) As CompilationReference" />
+      <MemberSignature Language="F#" Value="override this.WithProperties : Microsoft.CodeAnalysis.MetadataReferenceProperties -&gt; Microsoft.CodeAnalysis.CompilationReference" Usage="compilationReference.WithProperties properties" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>

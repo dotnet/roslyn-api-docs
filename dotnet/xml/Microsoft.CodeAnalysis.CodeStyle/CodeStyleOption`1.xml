@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeStyleOption`1&lt;T&gt; extends System.Object implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1&lt;!T&gt;&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1" />
   <TypeSignature Language="VB.NET" Value="Public Class CodeStyleOption(Of T)&#xA;Implements IEquatable(Of CodeStyleOption(Of T))" />
+  <TypeSignature Language="F#" Value="type CodeStyleOption&lt;'T&gt; = class&#xA;    interface ICodeStyleOption&#xA;    interface IEquatable&lt;CodeStyleOption&lt;'T&gt;&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -42,6 +43,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T value, class Microsoft.CodeAnalysis.CodeStyle.NotificationOption notification) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.#ctor(`0,Microsoft.CodeAnalysis.CodeStyle.NotificationOption)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (value As T, notification As NotificationOption)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt; : 'T * Microsoft.CodeAnalysis.CodeStyle.NotificationOption -&gt; Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;" Usage="new Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt; (value, notification)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -63,6 +65,7 @@
       <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1&lt;!T&gt; Default" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Default" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Default As CodeStyleOption(Of T)" />
+      <MemberSignature Language="F#" Value="member this.Default : Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;" Usage="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;.Default" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -82,7 +85,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1&lt;!T&gt; other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Equals(Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As CodeStyleOption(Of T)) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt; -&gt; bool" Usage="codeStyleOption.Equals other" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -105,6 +112,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="codeStyleOption.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -128,6 +136,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1&lt;!T&gt; FromXElement(class System.Xml.Linq.XElement element) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.FromXElement(System.Xml.Linq.XElement)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FromXElement (element As XElement) As CodeStyleOption(Of T)" />
+      <MemberSignature Language="F#" Value="static member FromXElement : System.Xml.Linq.XElement -&gt; Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;" Usage="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;.FromXElement element" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -151,6 +160,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="codeStyleOption.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -171,6 +181,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CodeStyle.NotificationOption Notification" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Notification" />
       <MemberSignature Language="VB.NET" Value="Public Property Notification As NotificationOption" />
+      <MemberSignature Language="F#" Value="member this.Notification : Microsoft.CodeAnalysis.CodeStyle.NotificationOption with get, set" Usage="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;.Notification" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -190,7 +201,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.Linq.XElement ToXElement() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.ToXElement" />
       <MemberSignature Language="VB.NET" Value="Public Function ToXElement () As XElement" />
+      <MemberSignature Language="F#" Value="abstract member ToXElement : unit -&gt; System.Xml.Linq.XElement&#xA;override this.ToXElement : unit -&gt; System.Xml.Linq.XElement" Usage="codeStyleOption.ToXElement " />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.CodeAnalysis.CodeStyle.ICodeStyleOption.ToXElement</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -210,6 +225,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Value" />
       <MemberSignature Language="VB.NET" Value="Public Property Value As T" />
+      <MemberSignature Language="F#" Value="member this.Value : 'T with get, set" Usage="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;.Value" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>

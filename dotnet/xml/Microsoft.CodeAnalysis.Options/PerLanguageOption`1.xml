@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PerLanguageOption`1&lt;T&gt; extends System.Object implements class Microsoft.CodeAnalysis.Options.IOption" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Options.PerLanguageOption`1" />
   <TypeSignature Language="VB.NET" Value="Public Class PerLanguageOption(Of T)&#xA;Implements IOption" />
+  <TypeSignature Language="F#" Value="type PerLanguageOption&lt;'T&gt; = class&#xA;    interface IOption" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -31,6 +32,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string feature, string name, !T defaultValue) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.#ctor(System.String,System.String,`0)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (feature As String, name As String, defaultValue As T)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt; : string * string * 'T -&gt; Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt;" Usage="new Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt; (feature, name, defaultValue)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -54,6 +56,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string feature, string name, !T defaultValue, class Microsoft.CodeAnalysis.Options.OptionStorageLocation[] storageLocations) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.#ctor(System.String,System.String,`0,Microsoft.CodeAnalysis.Options.OptionStorageLocation[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (feature As String, name As String, defaultValue As T, ParamArray storageLocations As OptionStorageLocation())" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt; : string * string * 'T * Microsoft.CodeAnalysis.Options.OptionStorageLocation[] -&gt; Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt;" Usage="new Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt; (feature, name, defaultValue, storageLocations)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -85,6 +88,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance !T DefaultValue" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.DefaultValue" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultValue As T" />
+      <MemberSignature Language="F#" Value="member this.DefaultValue : 'T" Usage="Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt;.DefaultValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -106,7 +110,11 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Feature" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.Feature" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Feature As String" />
+      <MemberSignature Language="F#" Value="member this.Feature : string" Usage="Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt;.Feature" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.CodeAnalysis.Options.IOption.Feature</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -128,6 +136,9 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.Microsoft#CodeAnalysis#Options#IOption#DefaultValue" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property DefaultValue As Object Implements IOption.DefaultValue" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.CodeAnalysis.Options.IOption.DefaultValue</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -147,6 +158,9 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.Microsoft#CodeAnalysis#Options#IOption#IsPerLanguage" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsPerLanguage As Boolean Implements IOption.IsPerLanguage" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.CodeAnalysis.Options.IOption.IsPerLanguage</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -165,7 +179,11 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Name" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt;.Name" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.CodeAnalysis.Options.IOption.Name</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -186,7 +204,11 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Options.OptionStorageLocation&gt; StorageLocations" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.StorageLocations" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StorageLocations As ImmutableArray(Of OptionStorageLocation)" />
+      <MemberSignature Language="F#" Value="member this.StorageLocations : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Options.OptionStorageLocation&gt;" Usage="Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt;.StorageLocations" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.CodeAnalysis.Options.IOption.StorageLocations</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -205,6 +227,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="perLanguageOption.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -225,7 +248,11 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As Type" />
+      <MemberSignature Language="F#" Value="member this.Type : Type" Usage="Microsoft.CodeAnalysis.Options.PerLanguageOption&lt;'T&gt;.Type" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.CodeAnalysis.Options.IOption.Type</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
