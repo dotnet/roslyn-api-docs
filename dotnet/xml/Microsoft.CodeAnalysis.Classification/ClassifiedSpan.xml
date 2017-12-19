@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ClassifiedSpan extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.Classification.ClassifiedSpan&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Classification.ClassifiedSpan" />
   <TypeSignature Language="VB.NET" Value="Public Structure ClassifiedSpan&#xA;Implements IEquatable(Of ClassifiedSpan)" />
+  <TypeSignature Language="F#" Value="type ClassifiedSpan = struct" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -24,6 +25,7 @@
       <MemberSignature Language="C#" Value="public ClassifiedSpan (Microsoft.CodeAnalysis.Text.TextSpan textSpan, string classificationType);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.Text.TextSpan textSpan, string classificationType) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.#ctor(Microsoft.CodeAnalysis.Text.TextSpan,System.String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Classification.ClassifiedSpan : Microsoft.CodeAnalysis.Text.TextSpan * string -&gt; Microsoft.CodeAnalysis.Classification.ClassifiedSpan" Usage="new Microsoft.CodeAnalysis.Classification.ClassifiedSpan (textSpan, classificationType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -44,6 +46,7 @@
       <MemberSignature Language="C#" Value="public ClassifiedSpan (string classificationType, Microsoft.CodeAnalysis.Text.TextSpan textSpan);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string classificationType, valuetype Microsoft.CodeAnalysis.Text.TextSpan textSpan) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.#ctor(System.String,Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Classification.ClassifiedSpan : string * Microsoft.CodeAnalysis.Text.TextSpan -&gt; Microsoft.CodeAnalysis.Classification.ClassifiedSpan" Usage="new Microsoft.CodeAnalysis.Classification.ClassifiedSpan (classificationType, textSpan)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -65,6 +68,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string ClassificationType" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.ClassificationType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClassificationType As String" />
+      <MemberSignature Language="F#" Value="member this.ClassificationType : string" Usage="Microsoft.CodeAnalysis.Classification.ClassifiedSpan.ClassificationType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -84,7 +88,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.Classification.ClassifiedSpan other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.Equals(Microsoft.CodeAnalysis.Classification.ClassifiedSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ClassifiedSpan) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.Classification.ClassifiedSpan -&gt; bool" Usage="classifiedSpan.Equals other" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -107,6 +115,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="classifiedSpan.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -130,6 +139,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="classifiedSpan.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -150,6 +160,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextSpan TextSpan" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.TextSpan" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TextSpan As TextSpan" />
+      <MemberSignature Language="F#" Value="member this.TextSpan : Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.Classification.ClassifiedSpan.TextSpan" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>

@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Simplifier extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Simplification.Simplifier" />
   <TypeSignature Language="VB.NET" Value="Public Class Simplifier" />
+  <TypeSignature Language="F#" Value="type Simplifier = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -39,6 +40,7 @@
       <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.SyntaxAnnotation Annotation" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Simplification.Simplifier.Annotation" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Annotation As SyntaxAnnotation" />
+      <MemberSignature Language="F#" Value="member this.Annotation : Microsoft.CodeAnalysis.SyntaxAnnotation" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.Annotation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -60,6 +62,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxToken Expand (Microsoft.CodeAnalysis.SyntaxToken token, Microsoft.CodeAnalysis.SemanticModel semanticModel, Microsoft.CodeAnalysis.Workspace workspace, Func&lt;Microsoft.CodeAnalysis.SyntaxNode,bool&gt; expandInsideNode = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.SyntaxToken Expand(valuetype Microsoft.CodeAnalysis.SyntaxToken token, class Microsoft.CodeAnalysis.SemanticModel semanticModel, class Microsoft.CodeAnalysis.Workspace workspace, class System.Func`2&lt;class Microsoft.CodeAnalysis.SyntaxNode, bool&gt; expandInsideNode, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Simplification.Simplifier.Expand(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.Workspace,System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Boolean},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Expand : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SemanticModel * Microsoft.CodeAnalysis.Workspace * Func&lt;Microsoft.CodeAnalysis.SyntaxNode, bool&gt; * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxToken" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.Expand (token, semanticModel, workspace, expandInsideNode, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -92,6 +95,7 @@
       <MemberSignature Language="C#" Value="public static TNode Expand&lt;TNode&gt; (TNode node, Microsoft.CodeAnalysis.SemanticModel semanticModel, Microsoft.CodeAnalysis.Workspace workspace, Func&lt;Microsoft.CodeAnalysis.SyntaxNode,bool&gt; expandInsideNode = null, bool expandParameter = false, System.Threading.CancellationToken cancellationToken = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TNode Expand&lt;(class Microsoft.CodeAnalysis.SyntaxNode) TNode&gt;(!!TNode node, class Microsoft.CodeAnalysis.SemanticModel semanticModel, class Microsoft.CodeAnalysis.Workspace workspace, class System.Func`2&lt;class Microsoft.CodeAnalysis.SyntaxNode, bool&gt; expandInsideNode, bool expandParameter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Simplification.Simplifier.Expand``1(``0,Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.Workspace,System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Boolean},System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Expand : 'Node * Microsoft.CodeAnalysis.SemanticModel * Microsoft.CodeAnalysis.Workspace * Func&lt;Microsoft.CodeAnalysis.SyntaxNode, bool&gt; * bool * System.Threading.CancellationToken -&gt; 'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.Expand (node, semanticModel, workspace, expandInsideNode, expandParameter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -134,6 +138,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; ExpandAsync (Microsoft.CodeAnalysis.SyntaxToken token, Microsoft.CodeAnalysis.Document document, Func&lt;Microsoft.CodeAnalysis.SyntaxNode,bool&gt; expandInsideNode = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; ExpandAsync(valuetype Microsoft.CodeAnalysis.SyntaxToken token, class Microsoft.CodeAnalysis.Document document, class System.Func`2&lt;class Microsoft.CodeAnalysis.SyntaxNode, bool&gt; expandInsideNode, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Simplification.Simplifier.ExpandAsync(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.Document,System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Boolean},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ExpandAsync : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.Document * Func&lt;Microsoft.CodeAnalysis.SyntaxNode, bool&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxToken&gt;" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.ExpandAsync (token, document, expandInsideNode, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -169,6 +174,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;TNode&gt; ExpandAsync&lt;TNode&gt; (TNode node, Microsoft.CodeAnalysis.Document document, Func&lt;Microsoft.CodeAnalysis.SyntaxNode,bool&gt; expandInsideNode = null, bool expandParameter = false, System.Threading.CancellationToken cancellationToken = null) where TNode : Microsoft.CodeAnalysis.SyntaxNode;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;!!TNode&gt; ExpandAsync&lt;(class Microsoft.CodeAnalysis.SyntaxNode) TNode&gt;(!!TNode node, class Microsoft.CodeAnalysis.Document document, class System.Func`2&lt;class Microsoft.CodeAnalysis.SyntaxNode, bool&gt; expandInsideNode, bool expandParameter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Simplification.Simplifier.ExpandAsync``1(``0,Microsoft.CodeAnalysis.Document,System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Boolean},System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ExpandAsync : 'Node * Microsoft.CodeAnalysis.Document * Func&lt;Microsoft.CodeAnalysis.SyntaxNode, bool&gt; * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.ExpandAsync (node, document, expandInsideNode, expandParameter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -214,6 +220,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt; ReduceAsync (Microsoft.CodeAnalysis.Document document, Microsoft.CodeAnalysis.Options.OptionSet optionSet = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; ReduceAsync(class Microsoft.CodeAnalysis.Document document, class Microsoft.CodeAnalysis.Options.OptionSet optionSet, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Simplification.Simplifier.ReduceAsync(Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ReduceAsync : Microsoft.CodeAnalysis.Document * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.ReduceAsync (document, optionSet, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -247,6 +254,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt; ReduceAsync (Microsoft.CodeAnalysis.Document document, Microsoft.CodeAnalysis.SyntaxAnnotation annotation, Microsoft.CodeAnalysis.Options.OptionSet optionSet = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; ReduceAsync(class Microsoft.CodeAnalysis.Document document, class Microsoft.CodeAnalysis.SyntaxAnnotation annotation, class Microsoft.CodeAnalysis.Options.OptionSet optionSet, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Simplification.Simplifier.ReduceAsync(Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.SyntaxAnnotation,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ReduceAsync : Microsoft.CodeAnalysis.Document * Microsoft.CodeAnalysis.SyntaxAnnotation * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.ReduceAsync (document, annotation, optionSet, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -283,6 +291,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt; ReduceAsync (Microsoft.CodeAnalysis.Document document, Microsoft.CodeAnalysis.Text.TextSpan span, Microsoft.CodeAnalysis.Options.OptionSet optionSet = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; ReduceAsync(class Microsoft.CodeAnalysis.Document document, valuetype Microsoft.CodeAnalysis.Text.TextSpan span, class Microsoft.CodeAnalysis.Options.OptionSet optionSet, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Simplification.Simplifier.ReduceAsync(Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ReduceAsync : Microsoft.CodeAnalysis.Document * Microsoft.CodeAnalysis.Text.TextSpan * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.ReduceAsync (document, span, optionSet, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -314,6 +323,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt; ReduceAsync (Microsoft.CodeAnalysis.Document document, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; spans, Microsoft.CodeAnalysis.Options.OptionSet optionSet = null, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; ReduceAsync(class Microsoft.CodeAnalysis.Document document, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; spans, class Microsoft.CodeAnalysis.Options.OptionSet optionSet, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Simplification.Simplifier.ReduceAsync(Microsoft.CodeAnalysis.Document,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Text.TextSpan},Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ReduceAsync : Microsoft.CodeAnalysis.Document * seq&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.ReduceAsync (document, spans, optionSet, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -346,6 +356,7 @@
       <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.SyntaxAnnotation SpecialTypeAnnotation" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Simplification.Simplifier.SpecialTypeAnnotation" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property SpecialTypeAnnotation As SyntaxAnnotation" />
+      <MemberSignature Language="F#" Value="member this.SpecialTypeAnnotation : Microsoft.CodeAnalysis.SyntaxAnnotation" Usage="Microsoft.CodeAnalysis.Simplification.Simplifier.SpecialTypeAnnotation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>

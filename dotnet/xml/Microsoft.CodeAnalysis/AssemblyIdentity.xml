@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyIdentity extends System.Object implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.AssemblyIdentity&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.AssemblyIdentity" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AssemblyIdentity&#xA;Implements IEquatable(Of AssemblyIdentity)" />
+  <TypeSignature Language="F#" Value="type AssemblyIdentity = class&#xA;    interface IEquatable&lt;AssemblyIdentity&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -33,6 +34,7 @@
       <MemberSignature Language="C#" Value="public AssemblyIdentity (string name, Version version = null, string cultureName = null, System.Collections.Immutable.ImmutableArray&lt;byte&gt; publicKeyOrToken = null, bool hasPublicKey = false, bool isRetargetable = false, System.Reflection.AssemblyContentType contentType = System.Reflection.AssemblyContentType.Default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Version version, string cultureName, valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; publicKeyOrToken, bool hasPublicKey, bool isRetargetable, valuetype System.Reflection.AssemblyContentType contentType) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.#ctor(System.String,System.Version,System.String,System.Collections.Immutable.ImmutableArray{System.Byte},System.Boolean,System.Boolean,System.Reflection.AssemblyContentType)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.AssemblyIdentity : string * Version * string * System.Collections.Immutable.ImmutableArray&lt;byte&gt; * bool * bool * System.Reflection.AssemblyContentType -&gt; Microsoft.CodeAnalysis.AssemblyIdentity" Usage="new Microsoft.CodeAnalysis.AssemblyIdentity (name, version, cultureName, publicKeyOrToken, hasPublicKey, isRetargetable, contentType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -75,6 +77,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.AssemblyContentType ContentType" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.ContentType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentType As AssemblyContentType" />
+      <MemberSignature Language="F#" Value="member this.ContentType : System.Reflection.AssemblyContentType" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.ContentType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -97,6 +100,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string CultureName" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.CultureName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CultureName As String" />
+      <MemberSignature Language="F#" Value="member this.CultureName : string" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.CultureName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -118,7 +122,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.AssemblyIdentity obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.Equals(Microsoft.CodeAnalysis.AssemblyIdentity)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (obj As AssemblyIdentity) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.AssemblyIdentity -&gt; bool" Usage="assemblyIdentity.Equals obj" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -143,6 +151,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="assemblyIdentity.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -168,6 +177,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.AssemblyNameFlags Flags" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.Flags" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Flags As AssemblyNameFlags" />
+      <MemberSignature Language="F#" Value="member this.Flags : System.Reflection.AssemblyNameFlags" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.Flags" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -188,6 +198,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.AssemblyIdentity FromAssemblyDefinition (System.Reflection.Assembly assembly);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.AssemblyIdentity FromAssemblyDefinition(class System.Reflection.Assembly assembly) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.FromAssemblyDefinition(System.Reflection.Assembly)" />
+      <MemberSignature Language="F#" Value="static member FromAssemblyDefinition : System.Reflection.Assembly -&gt; Microsoft.CodeAnalysis.AssemblyIdentity" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.FromAssemblyDefinition assembly" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -215,6 +226,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetDisplayName(bool fullKey) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.GetDisplayName(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDisplayName (Optional fullKey As Boolean = false) As String" />
+      <MemberSignature Language="F#" Value="member this.GetDisplayName : bool -&gt; string" Usage="assemblyIdentity.GetDisplayName fullKey" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -247,6 +259,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="assemblyIdentity.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -269,6 +282,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool HasPublicKey" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.HasPublicKey" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasPublicKey As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasPublicKey : bool" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.HasPublicKey" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -290,6 +304,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsRetargetable" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.IsRetargetable" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRetargetable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRetargetable : bool" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.IsRetargetable" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -311,6 +326,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsStrongName" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.IsStrongName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsStrongName As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsStrongName : bool" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.IsStrongName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -332,6 +348,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Name" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -353,6 +370,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.CodeAnalysis.AssemblyIdentity left, class Microsoft.CodeAnalysis.AssemblyIdentity right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.op_Equality(Microsoft.CodeAnalysis.AssemblyIdentity,Microsoft.CodeAnalysis.AssemblyIdentity)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As AssemblyIdentity, right As AssemblyIdentity) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.AssemblyIdentity * Microsoft.CodeAnalysis.AssemblyIdentity -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -380,6 +398,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.CodeAnalysis.AssemblyIdentity left, class Microsoft.CodeAnalysis.AssemblyIdentity right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.op_Inequality(Microsoft.CodeAnalysis.AssemblyIdentity,Microsoft.CodeAnalysis.AssemblyIdentity)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As AssemblyIdentity, right As AssemblyIdentity) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.AssemblyIdentity * Microsoft.CodeAnalysis.AssemblyIdentity -&gt; bool" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -407,6 +426,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; PublicKey" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.PublicKey" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PublicKey As ImmutableArray(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.PublicKey : System.Collections.Immutable.ImmutableArray&lt;byte&gt;" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.PublicKey" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -428,6 +448,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; PublicKeyToken" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.PublicKeyToken" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PublicKeyToken As ImmutableArray(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.PublicKeyToken : System.Collections.Immutable.ImmutableArray&lt;byte&gt;" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.PublicKeyToken" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -449,6 +470,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="assemblyIdentity.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -471,6 +493,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParseDisplayName(string displayName, [out] class Microsoft.CodeAnalysis.AssemblyIdentity&amp; identity) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.TryParseDisplayName(System.String,Microsoft.CodeAnalysis.AssemblyIdentity@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParseDisplayName (displayName As String, ByRef identity As AssemblyIdentity) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryParseDisplayName : string *  -&gt; bool" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.TryParseDisplayName (displayName, identity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -496,6 +519,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParseDisplayName(string displayName, [out] class Microsoft.CodeAnalysis.AssemblyIdentity&amp; identity, [out] valuetype Microsoft.CodeAnalysis.AssemblyIdentityParts&amp; parts) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AssemblyIdentity.TryParseDisplayName(System.String,Microsoft.CodeAnalysis.AssemblyIdentity@,Microsoft.CodeAnalysis.AssemblyIdentityParts@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParseDisplayName (displayName As String, ByRef identity As AssemblyIdentity, ByRef parts As AssemblyIdentityParts) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryParseDisplayName : string *  *  -&gt; bool" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.TryParseDisplayName (displayName, identity, parts)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -535,6 +559,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AssemblyIdentity.Version" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As Version" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="Microsoft.CodeAnalysis.AssemblyIdentity.Version" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>

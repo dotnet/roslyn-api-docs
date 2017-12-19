@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Workspace extends System.Object implements class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Workspace" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class Workspace&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Workspace = class&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -31,6 +32,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.Host.HostServices host, string workspaceKind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.#ctor(Microsoft.CodeAnalysis.Host.HostServices,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (host As HostServices, workspaceKind As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Workspace : Microsoft.CodeAnalysis.Host.HostServices * string -&gt; Microsoft.CodeAnalysis.Workspace" Usage="new Microsoft.CodeAnalysis.Workspace (host, workspaceKind)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -54,6 +56,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.Project AdjustReloadedProject(class Microsoft.CodeAnalysis.Project oldProject, class Microsoft.CodeAnalysis.Project reloadedProject) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.AdjustReloadedProject(Microsoft.CodeAnalysis.Project,Microsoft.CodeAnalysis.Project)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function AdjustReloadedProject (oldProject As Project, reloadedProject As Project) As Project" />
+      <MemberSignature Language="F#" Value="abstract member AdjustReloadedProject : Microsoft.CodeAnalysis.Project * Microsoft.CodeAnalysis.Project -&gt; Microsoft.CodeAnalysis.Project&#xA;override this.AdjustReloadedProject : Microsoft.CodeAnalysis.Project * Microsoft.CodeAnalysis.Project -&gt; Microsoft.CodeAnalysis.Project" Usage="workspace.AdjustReloadedProject (oldProject, reloadedProject)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -79,6 +82,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.Solution AdjustReloadedSolution(class Microsoft.CodeAnalysis.Solution oldSolution, class Microsoft.CodeAnalysis.Solution reloadedSolution) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.AdjustReloadedSolution(Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.Solution)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function AdjustReloadedSolution (oldSolution As Solution, reloadedSolution As Solution) As Solution" />
+      <MemberSignature Language="F#" Value="abstract member AdjustReloadedSolution : Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.Solution -&gt; Microsoft.CodeAnalysis.Solution&#xA;override this.AdjustReloadedSolution : Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.Solution -&gt; Microsoft.CodeAnalysis.Solution" Usage="workspace.AdjustReloadedSolution (oldSolution, reloadedSolution)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -107,6 +111,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyAdditionalDocumentAdded(class Microsoft.CodeAnalysis.DocumentInfo info, class Microsoft.CodeAnalysis.Text.SourceText text) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyAdditionalDocumentAdded(Microsoft.CodeAnalysis.DocumentInfo,Microsoft.CodeAnalysis.Text.SourceText)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ApplyAdditionalDocumentAdded (info As DocumentInfo, text As SourceText)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyAdditionalDocumentAdded : Microsoft.CodeAnalysis.DocumentInfo * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit&#xA;override this.ApplyAdditionalDocumentAdded : Microsoft.CodeAnalysis.DocumentInfo * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit" Usage="workspace.ApplyAdditionalDocumentAdded (info, text)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -134,6 +139,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyAdditionalDocumentRemoved (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyAdditionalDocumentRemoved(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyAdditionalDocumentRemoved(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyAdditionalDocumentRemoved : Microsoft.CodeAnalysis.DocumentId -&gt; unit&#xA;override this.ApplyAdditionalDocumentRemoved : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.ApplyAdditionalDocumentRemoved documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -160,6 +166,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyAdditionalDocumentTextChanged(class Microsoft.CodeAnalysis.DocumentId id, class Microsoft.CodeAnalysis.Text.SourceText text) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyAdditionalDocumentTextChanged(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.Text.SourceText)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ApplyAdditionalDocumentTextChanged (id As DocumentId, text As SourceText)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyAdditionalDocumentTextChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit&#xA;override this.ApplyAdditionalDocumentTextChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit" Usage="workspace.ApplyAdditionalDocumentTextChanged (id, text)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -187,6 +194,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyAnalyzerReferenceAdded (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyAnalyzerReferenceAdded(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyAnalyzerReferenceAdded(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyAnalyzerReferenceAdded : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference -&gt; unit&#xA;override this.ApplyAnalyzerReferenceAdded : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference -&gt; unit" Usage="workspace.ApplyAnalyzerReferenceAdded (projectId, analyzerReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -214,6 +222,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyAnalyzerReferenceRemoved (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyAnalyzerReferenceRemoved(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyAnalyzerReferenceRemoved(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyAnalyzerReferenceRemoved : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference -&gt; unit&#xA;override this.ApplyAnalyzerReferenceRemoved : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference -&gt; unit" Usage="workspace.ApplyAnalyzerReferenceRemoved (projectId, analyzerReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -241,6 +250,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyCompilationOptionsChanged (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.CompilationOptions options);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyCompilationOptionsChanged(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.CompilationOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyCompilationOptionsChanged(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.CompilationOptions)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyCompilationOptionsChanged : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.CompilationOptions -&gt; unit&#xA;override this.ApplyCompilationOptionsChanged : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.CompilationOptions -&gt; unit" Usage="workspace.ApplyCompilationOptionsChanged (projectId, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -269,6 +279,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyDocumentAdded(class Microsoft.CodeAnalysis.DocumentInfo info, class Microsoft.CodeAnalysis.Text.SourceText text) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyDocumentAdded(Microsoft.CodeAnalysis.DocumentInfo,Microsoft.CodeAnalysis.Text.SourceText)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ApplyDocumentAdded (info As DocumentInfo, text As SourceText)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyDocumentAdded : Microsoft.CodeAnalysis.DocumentInfo * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit&#xA;override this.ApplyDocumentAdded : Microsoft.CodeAnalysis.DocumentInfo * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit" Usage="workspace.ApplyDocumentAdded (info, text)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -297,6 +308,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyDocumentInfoChanged(class Microsoft.CodeAnalysis.DocumentId id, class Microsoft.CodeAnalysis.DocumentInfo info) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyDocumentInfoChanged(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.DocumentInfo)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ApplyDocumentInfoChanged (id As DocumentId, info As DocumentInfo)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyDocumentInfoChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.DocumentInfo -&gt; unit&#xA;override this.ApplyDocumentInfoChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.DocumentInfo -&gt; unit" Usage="workspace.ApplyDocumentInfoChanged (id, info)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -324,6 +336,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyDocumentRemoved (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyDocumentRemoved(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyDocumentRemoved(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyDocumentRemoved : Microsoft.CodeAnalysis.DocumentId -&gt; unit&#xA;override this.ApplyDocumentRemoved : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.ApplyDocumentRemoved documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -350,6 +363,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyDocumentTextChanged(class Microsoft.CodeAnalysis.DocumentId id, class Microsoft.CodeAnalysis.Text.SourceText text) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyDocumentTextChanged(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.Text.SourceText)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ApplyDocumentTextChanged (id As DocumentId, text As SourceText)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyDocumentTextChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit&#xA;override this.ApplyDocumentTextChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit" Usage="workspace.ApplyDocumentTextChanged (id, text)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -377,6 +391,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyMetadataReferenceAdded (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.MetadataReference metadataReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyMetadataReferenceAdded(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.MetadataReference metadataReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyMetadataReferenceAdded(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.MetadataReference)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyMetadataReferenceAdded : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.MetadataReference -&gt; unit&#xA;override this.ApplyMetadataReferenceAdded : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.MetadataReference -&gt; unit" Usage="workspace.ApplyMetadataReferenceAdded (projectId, metadataReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -404,6 +419,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyMetadataReferenceRemoved (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.MetadataReference metadataReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyMetadataReferenceRemoved(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.MetadataReference metadataReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyMetadataReferenceRemoved(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.MetadataReference)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyMetadataReferenceRemoved : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.MetadataReference -&gt; unit&#xA;override this.ApplyMetadataReferenceRemoved : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.MetadataReference -&gt; unit" Usage="workspace.ApplyMetadataReferenceRemoved (projectId, metadataReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -431,6 +447,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyParseOptionsChanged (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.ParseOptions options);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyParseOptionsChanged(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.ParseOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyParseOptionsChanged(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ParseOptions)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyParseOptionsChanged : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ParseOptions -&gt; unit&#xA;override this.ApplyParseOptionsChanged : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ParseOptions -&gt; unit" Usage="workspace.ApplyParseOptionsChanged (projectId, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -459,6 +476,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyProjectAdded(class Microsoft.CodeAnalysis.ProjectInfo project) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyProjectAdded(Microsoft.CodeAnalysis.ProjectInfo)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ApplyProjectAdded (project As ProjectInfo)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyProjectAdded : Microsoft.CodeAnalysis.ProjectInfo -&gt; unit&#xA;override this.ApplyProjectAdded : Microsoft.CodeAnalysis.ProjectInfo -&gt; unit" Usage="workspace.ApplyProjectAdded project" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -484,6 +502,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyProjectChanges (Microsoft.CodeAnalysis.ProjectChanges projectChanges);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyProjectChanges(valuetype Microsoft.CodeAnalysis.ProjectChanges projectChanges) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyProjectChanges(Microsoft.CodeAnalysis.ProjectChanges)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyProjectChanges : Microsoft.CodeAnalysis.ProjectChanges -&gt; unit&#xA;override this.ApplyProjectChanges : Microsoft.CodeAnalysis.ProjectChanges -&gt; unit" Usage="workspace.ApplyProjectChanges projectChanges" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -510,6 +529,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyProjectReferenceAdded (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.ProjectReference projectReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyProjectReferenceAdded(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.ProjectReference projectReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyProjectReferenceAdded(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectReference)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyProjectReferenceAdded : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectReference -&gt; unit&#xA;override this.ApplyProjectReferenceAdded : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectReference -&gt; unit" Usage="workspace.ApplyProjectReferenceAdded (projectId, projectReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -537,6 +557,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyProjectReferenceRemoved (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.ProjectReference projectReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyProjectReferenceRemoved(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.ProjectReference projectReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyProjectReferenceRemoved(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectReference)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyProjectReferenceRemoved : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectReference -&gt; unit&#xA;override this.ApplyProjectReferenceRemoved : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectReference -&gt; unit" Usage="workspace.ApplyProjectReferenceRemoved (projectId, projectReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -564,6 +585,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ApplyProjectRemoved (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyProjectRemoved(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ApplyProjectRemoved(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="abstract member ApplyProjectRemoved : Microsoft.CodeAnalysis.ProjectId -&gt; unit&#xA;override this.ApplyProjectRemoved : Microsoft.CodeAnalysis.ProjectId -&gt; unit" Usage="workspace.ApplyProjectRemoved projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -590,6 +612,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanApplyChange(valuetype Microsoft.CodeAnalysis.ApplyChangesKind feature) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CanApplyChange(Microsoft.CodeAnalysis.ApplyChangesKind)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function CanApplyChange (feature As ApplyChangesKind) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member CanApplyChange : Microsoft.CodeAnalysis.ApplyChangesKind -&gt; bool&#xA;override this.CanApplyChange : Microsoft.CodeAnalysis.ApplyChangesKind -&gt; bool" Usage="workspace.CanApplyChange feature" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -614,6 +637,7 @@
       <MemberSignature Language="C#" Value="protected virtual bool CanApplyParseOptionChange (Microsoft.CodeAnalysis.ParseOptions oldOptions, Microsoft.CodeAnalysis.ParseOptions newOptions, Microsoft.CodeAnalysis.Project project);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanApplyParseOptionChange(class Microsoft.CodeAnalysis.ParseOptions oldOptions, class Microsoft.CodeAnalysis.ParseOptions newOptions, class Microsoft.CodeAnalysis.Project project) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CanApplyParseOptionChange(Microsoft.CodeAnalysis.ParseOptions,Microsoft.CodeAnalysis.ParseOptions,Microsoft.CodeAnalysis.Project)" />
+      <MemberSignature Language="F#" Value="abstract member CanApplyParseOptionChange : Microsoft.CodeAnalysis.ParseOptions * Microsoft.CodeAnalysis.ParseOptions * Microsoft.CodeAnalysis.Project -&gt; bool&#xA;override this.CanApplyParseOptionChange : Microsoft.CodeAnalysis.ParseOptions * Microsoft.CodeAnalysis.ParseOptions * Microsoft.CodeAnalysis.Project -&gt; bool" Usage="workspace.CanApplyParseOptionChange (oldOptions, newOptions, project)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -641,6 +665,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool CanOpenDocuments" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Workspace.CanOpenDocuments" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property CanOpenDocuments As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CanOpenDocuments : bool" Usage="Microsoft.CodeAnalysis.Workspace.CanOpenDocuments" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -661,6 +686,7 @@
       <MemberSignature Language="C#" Value="protected void CheckAdditionalDocumentIsInCurrentSolution (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckAdditionalDocumentIsInCurrentSolution(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckAdditionalDocumentIsInCurrentSolution(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.CheckAdditionalDocumentIsInCurrentSolution : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.CheckAdditionalDocumentIsInCurrentSolution documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -684,6 +710,7 @@
       <MemberSignature Language="C#" Value="protected void CheckAdditionalDocumentIsNotInCurrentSolution (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckAdditionalDocumentIsNotInCurrentSolution(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckAdditionalDocumentIsNotInCurrentSolution(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.CheckAdditionalDocumentIsNotInCurrentSolution : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.CheckAdditionalDocumentIsNotInCurrentSolution documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -708,6 +735,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckCanOpenDocuments() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckCanOpenDocuments" />
       <MemberSignature Language="VB.NET" Value="Protected Sub CheckCanOpenDocuments ()" />
+      <MemberSignature Language="F#" Value="member this.CheckCanOpenDocuments : unit -&gt; unit" Usage="workspace.CheckCanOpenDocuments " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -726,6 +754,7 @@
       <MemberSignature Language="C#" Value="protected virtual void CheckDocumentCanBeRemoved (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CheckDocumentCanBeRemoved(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckDocumentCanBeRemoved(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member CheckDocumentCanBeRemoved : Microsoft.CodeAnalysis.DocumentId -&gt; unit&#xA;override this.CheckDocumentCanBeRemoved : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.CheckDocumentCanBeRemoved documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -747,6 +776,7 @@
       <MemberSignature Language="C#" Value="protected void CheckDocumentIsClosed (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckDocumentIsClosed(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckDocumentIsClosed(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.CheckDocumentIsClosed : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.CheckDocumentIsClosed documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -768,6 +798,7 @@
       <MemberSignature Language="C#" Value="protected void CheckDocumentIsInCurrentSolution (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckDocumentIsInCurrentSolution(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckDocumentIsInCurrentSolution(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.CheckDocumentIsInCurrentSolution : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.CheckDocumentIsInCurrentSolution documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -791,6 +822,7 @@
       <MemberSignature Language="C#" Value="protected void CheckDocumentIsNotInCurrentSolution (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckDocumentIsNotInCurrentSolution(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckDocumentIsNotInCurrentSolution(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.CheckDocumentIsNotInCurrentSolution : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.CheckDocumentIsNotInCurrentSolution documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -814,6 +846,7 @@
       <MemberSignature Language="C#" Value="protected void CheckDocumentIsOpen (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckDocumentIsOpen(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckDocumentIsOpen(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.CheckDocumentIsOpen : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.CheckDocumentIsOpen documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -835,6 +868,7 @@
       <MemberSignature Language="C#" Value="protected virtual void CheckProjectCanBeRemoved (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CheckProjectCanBeRemoved(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectCanBeRemoved(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="abstract member CheckProjectCanBeRemoved : Microsoft.CodeAnalysis.ProjectId -&gt; unit&#xA;override this.CheckProjectCanBeRemoved : Microsoft.CodeAnalysis.ProjectId -&gt; unit" Usage="workspace.CheckProjectCanBeRemoved projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -859,6 +893,7 @@
       <MemberSignature Language="C#" Value="protected void CheckProjectDoesNotContainOpenDocuments (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectDoesNotContainOpenDocuments(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectDoesNotContainOpenDocuments(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectDoesNotContainOpenDocuments : Microsoft.CodeAnalysis.ProjectId -&gt; unit" Usage="workspace.CheckProjectDoesNotContainOpenDocuments projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -880,6 +915,7 @@
       <MemberSignature Language="C#" Value="protected void CheckProjectDoesNotHaveAnalyzerReference (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectDoesNotHaveAnalyzerReference(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectDoesNotHaveAnalyzerReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectDoesNotHaveAnalyzerReference : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference -&gt; unit" Usage="workspace.CheckProjectDoesNotHaveAnalyzerReference (projectId, analyzerReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -905,6 +941,7 @@
       <MemberSignature Language="C#" Value="protected void CheckProjectDoesNotHaveMetadataReference (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.MetadataReference metadataReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectDoesNotHaveMetadataReference(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.MetadataReference metadataReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectDoesNotHaveMetadataReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.MetadataReference)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectDoesNotHaveMetadataReference : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.MetadataReference -&gt; unit" Usage="workspace.CheckProjectDoesNotHaveMetadataReference (projectId, metadataReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -930,6 +967,7 @@
       <MemberSignature Language="C#" Value="protected void CheckProjectDoesNotHaveProjectReference (Microsoft.CodeAnalysis.ProjectId fromProjectId, Microsoft.CodeAnalysis.ProjectReference projectReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectDoesNotHaveProjectReference(class Microsoft.CodeAnalysis.ProjectId fromProjectId, class Microsoft.CodeAnalysis.ProjectReference projectReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectDoesNotHaveProjectReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectReference)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectDoesNotHaveProjectReference : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectReference -&gt; unit" Usage="workspace.CheckProjectDoesNotHaveProjectReference (fromProjectId, projectReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -956,6 +994,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectDoesNotHaveTransitiveProjectReference(class Microsoft.CodeAnalysis.ProjectId fromProjectId, class Microsoft.CodeAnalysis.ProjectId toProjectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectDoesNotHaveTransitiveProjectReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectId)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub CheckProjectDoesNotHaveTransitiveProjectReference (fromProjectId As ProjectId, toProjectId As ProjectId)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectDoesNotHaveTransitiveProjectReference : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectId -&gt; unit" Usage="workspace.CheckProjectDoesNotHaveTransitiveProjectReference (fromProjectId, toProjectId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -981,6 +1020,7 @@
       <MemberSignature Language="C#" Value="protected void CheckProjectHasAnalyzerReference (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectHasAnalyzerReference(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectHasAnalyzerReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectHasAnalyzerReference : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference -&gt; unit" Usage="workspace.CheckProjectHasAnalyzerReference (projectId, analyzerReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1006,6 +1046,7 @@
       <MemberSignature Language="C#" Value="protected void CheckProjectHasMetadataReference (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.MetadataReference metadataReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectHasMetadataReference(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.MetadataReference metadataReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectHasMetadataReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.MetadataReference)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectHasMetadataReference : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.MetadataReference -&gt; unit" Usage="workspace.CheckProjectHasMetadataReference (projectId, metadataReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1031,6 +1072,7 @@
       <MemberSignature Language="C#" Value="protected void CheckProjectHasProjectReference (Microsoft.CodeAnalysis.ProjectId fromProjectId, Microsoft.CodeAnalysis.ProjectReference projectReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectHasProjectReference(class Microsoft.CodeAnalysis.ProjectId fromProjectId, class Microsoft.CodeAnalysis.ProjectReference projectReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectHasProjectReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectReference)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectHasProjectReference : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectReference -&gt; unit" Usage="workspace.CheckProjectHasProjectReference (fromProjectId, projectReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1056,6 +1098,7 @@
       <MemberSignature Language="C#" Value="protected void CheckProjectIsInCurrentSolution (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectIsInCurrentSolution(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectIsInCurrentSolution(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectIsInCurrentSolution : Microsoft.CodeAnalysis.ProjectId -&gt; unit" Usage="workspace.CheckProjectIsInCurrentSolution projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1079,6 +1122,7 @@
       <MemberSignature Language="C#" Value="protected void CheckProjectIsNotInCurrentSolution (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckProjectIsNotInCurrentSolution(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckProjectIsNotInCurrentSolution(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="member this.CheckProjectIsNotInCurrentSolution : Microsoft.CodeAnalysis.ProjectId -&gt; unit" Usage="workspace.CheckProjectIsNotInCurrentSolution projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1103,6 +1147,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckSolutionIsEmpty() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CheckSolutionIsEmpty" />
       <MemberSignature Language="VB.NET" Value="Protected Sub CheckSolutionIsEmpty ()" />
+      <MemberSignature Language="F#" Value="member this.CheckSolutionIsEmpty : unit -&gt; unit" Usage="workspace.CheckSolutionIsEmpty " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1123,6 +1168,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ClearDocumentData (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ClearDocumentData(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ClearDocumentData(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member ClearDocumentData : Microsoft.CodeAnalysis.DocumentId -&gt; unit&#xA;override this.ClearDocumentData : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.ClearDocumentData documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1149,6 +1195,7 @@
       <MemberSignature Language="C#" Value="protected void ClearOpenDocument (Microsoft.CodeAnalysis.DocumentId documentId, bool isSolutionClosing = false);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ClearOpenDocument(class Microsoft.CodeAnalysis.DocumentId documentId, bool isSolutionClosing) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ClearOpenDocument(Microsoft.CodeAnalysis.DocumentId,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.ClearOpenDocument : Microsoft.CodeAnalysis.DocumentId * bool -&gt; unit" Usage="workspace.ClearOpenDocument (documentId, isSolutionClosing)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1172,6 +1219,7 @@
       <MemberSignature Language="C#" Value="protected virtual void ClearProjectData (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ClearProjectData(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ClearProjectData(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="abstract member ClearProjectData : Microsoft.CodeAnalysis.ProjectId -&gt; unit&#xA;override this.ClearProjectData : Microsoft.CodeAnalysis.ProjectId -&gt; unit" Usage="workspace.ClearProjectData projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1199,6 +1247,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ClearSolution() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ClearSolution" />
       <MemberSignature Language="VB.NET" Value="Protected Sub ClearSolution ()" />
+      <MemberSignature Language="F#" Value="member this.ClearSolution : unit -&gt; unit" Usage="workspace.ClearSolution " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1220,6 +1269,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ClearSolutionData() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ClearSolutionData" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ClearSolutionData ()" />
+      <MemberSignature Language="F#" Value="abstract member ClearSolutionData : unit -&gt; unit&#xA;override this.ClearSolutionData : unit -&gt; unit" Usage="workspace.ClearSolutionData " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1243,6 +1293,7 @@
       <MemberSignature Language="C#" Value="public virtual void CloseAdditionalDocument (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseAdditionalDocument(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CloseAdditionalDocument(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member CloseAdditionalDocument : Microsoft.CodeAnalysis.DocumentId -&gt; unit&#xA;override this.CloseAdditionalDocument : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.CloseAdditionalDocument documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1266,6 +1317,7 @@
       <MemberSignature Language="C#" Value="public virtual void CloseDocument (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseDocument(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CloseDocument(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member CloseDocument : Microsoft.CodeAnalysis.DocumentId -&gt; unit&#xA;override this.CloseDocument : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.CloseDocument documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1290,6 +1342,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class Microsoft.CodeAnalysis.Solution CreateSolution(class Microsoft.CodeAnalysis.SolutionId id) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CreateSolution(Microsoft.CodeAnalysis.SolutionId)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Function CreateSolution (id As SolutionId) As Solution" />
+      <MemberSignature Language="F#" Value="member this.CreateSolution : Microsoft.CodeAnalysis.SolutionId -&gt; Microsoft.CodeAnalysis.Solution" Usage="workspace.CreateSolution id" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1314,6 +1367,7 @@
       <MemberSignature Language="C#" Value="protected internal Microsoft.CodeAnalysis.Solution CreateSolution (Microsoft.CodeAnalysis.SolutionInfo solutionInfo);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class Microsoft.CodeAnalysis.Solution CreateSolution(class Microsoft.CodeAnalysis.SolutionInfo solutionInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.CreateSolution(Microsoft.CodeAnalysis.SolutionInfo)" />
+      <MemberSignature Language="F#" Value="member this.CreateSolution : Microsoft.CodeAnalysis.SolutionInfo -&gt; Microsoft.CodeAnalysis.Solution" Usage="workspace.CreateSolution solutionInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1339,6 +1393,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Solution CurrentSolution" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Workspace.CurrentSolution" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentSolution As Solution" />
+      <MemberSignature Language="F#" Value="member this.CurrentSolution : Microsoft.CodeAnalysis.Solution" Usage="Microsoft.CodeAnalysis.Workspace.CurrentSolution" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1366,7 +1421,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="workspace.Dispose " />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -1387,6 +1446,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool finalize) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (finalize As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="workspace.Dispose finalize" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1414,6 +1474,7 @@
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.CodeAnalysis.DocumentActiveContextChangedEventArgs&gt; DocumentActiveContextChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.CodeAnalysis.Workspace.DocumentActiveContextChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DocumentActiveContextChanged As EventHandler(Of DocumentActiveContextChangedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.DocumentActiveContextChanged : EventHandler&lt;Microsoft.CodeAnalysis.DocumentActiveContextChangedEventArgs&gt; " Usage="member this.DocumentActiveContextChanged : System.EventHandler&lt;Microsoft.CodeAnalysis.DocumentActiveContextChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1435,6 +1496,7 @@
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.CodeAnalysis.DocumentEventArgs&gt; DocumentClosed" />
       <MemberSignature Language="DocId" Value="E:Microsoft.CodeAnalysis.Workspace.DocumentClosed" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DocumentClosed As EventHandler(Of DocumentEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.DocumentClosed : EventHandler&lt;Microsoft.CodeAnalysis.DocumentEventArgs&gt; " Usage="member this.DocumentClosed : System.EventHandler&lt;Microsoft.CodeAnalysis.DocumentEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1455,6 +1517,7 @@
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.CodeAnalysis.DocumentEventArgs&gt; DocumentOpened" />
       <MemberSignature Language="DocId" Value="E:Microsoft.CodeAnalysis.Workspace.DocumentOpened" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DocumentOpened As EventHandler(Of DocumentEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.DocumentOpened : EventHandler&lt;Microsoft.CodeAnalysis.DocumentEventArgs&gt; " Usage="member this.DocumentOpened : System.EventHandler&lt;Microsoft.CodeAnalysis.DocumentEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1474,6 +1537,7 @@
       <MemberSignature Language="C#" Value="protected virtual string GetAdditionalDocumentName (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetAdditionalDocumentName(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.GetAdditionalDocumentName(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member GetAdditionalDocumentName : Microsoft.CodeAnalysis.DocumentId -&gt; string&#xA;override this.GetAdditionalDocumentName : Microsoft.CodeAnalysis.DocumentId -&gt; string" Usage="workspace.GetAdditionalDocumentName documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1499,6 +1563,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.DocumentId GetDocumentIdInCurrentContext(class Microsoft.CodeAnalysis.Text.SourceTextContainer container) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.GetDocumentIdInCurrentContext(Microsoft.CodeAnalysis.Text.SourceTextContainer)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetDocumentIdInCurrentContext (container As SourceTextContainer) As DocumentId" />
+      <MemberSignature Language="F#" Value="abstract member GetDocumentIdInCurrentContext : Microsoft.CodeAnalysis.Text.SourceTextContainer -&gt; Microsoft.CodeAnalysis.DocumentId&#xA;override this.GetDocumentIdInCurrentContext : Microsoft.CodeAnalysis.Text.SourceTextContainer -&gt; Microsoft.CodeAnalysis.DocumentId" Usage="workspace.GetDocumentIdInCurrentContext container" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1524,6 +1589,7 @@
       <MemberSignature Language="C#" Value="protected virtual string GetDocumentName (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetDocumentName(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.GetDocumentName(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member GetDocumentName : Microsoft.CodeAnalysis.DocumentId -&gt; string&#xA;override this.GetDocumentName : Microsoft.CodeAnalysis.DocumentId -&gt; string" Usage="workspace.GetDocumentName documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1548,6 +1614,7 @@
       <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.DocumentId&gt; GetOpenDocumentIds (Microsoft.CodeAnalysis.ProjectId projectId = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.DocumentId&gt; GetOpenDocumentIds(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.GetOpenDocumentIds(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="abstract member GetOpenDocumentIds : Microsoft.CodeAnalysis.ProjectId -&gt; seq&lt;Microsoft.CodeAnalysis.DocumentId&gt;&#xA;override this.GetOpenDocumentIds : Microsoft.CodeAnalysis.ProjectId -&gt; seq&lt;Microsoft.CodeAnalysis.DocumentId&gt;" Usage="workspace.GetOpenDocumentIds projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1572,6 +1639,7 @@
       <MemberSignature Language="C#" Value="protected virtual string GetProjectName (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetProjectName(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.GetProjectName(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="abstract member GetProjectName : Microsoft.CodeAnalysis.ProjectId -&gt; string&#xA;override this.GetProjectName : Microsoft.CodeAnalysis.ProjectId -&gt; string" Usage="workspace.GetProjectName projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1597,6 +1665,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.DocumentId&gt; GetRelatedDocumentIds(class Microsoft.CodeAnalysis.Text.SourceTextContainer container) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.GetRelatedDocumentIds(Microsoft.CodeAnalysis.Text.SourceTextContainer)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetRelatedDocumentIds (container As SourceTextContainer) As IEnumerable(Of DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member GetRelatedDocumentIds : Microsoft.CodeAnalysis.Text.SourceTextContainer -&gt; seq&lt;Microsoft.CodeAnalysis.DocumentId&gt;&#xA;override this.GetRelatedDocumentIds : Microsoft.CodeAnalysis.Text.SourceTextContainer -&gt; seq&lt;Microsoft.CodeAnalysis.DocumentId&gt;" Usage="workspace.GetRelatedDocumentIds container" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1623,6 +1692,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.WorkspaceRegistration GetWorkspaceRegistration(class Microsoft.CodeAnalysis.Text.SourceTextContainer textContainer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.GetWorkspaceRegistration(Microsoft.CodeAnalysis.Text.SourceTextContainer)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetWorkspaceRegistration (textContainer As SourceTextContainer) As WorkspaceRegistration" />
+      <MemberSignature Language="F#" Value="static member GetWorkspaceRegistration : Microsoft.CodeAnalysis.Text.SourceTextContainer -&gt; Microsoft.CodeAnalysis.WorkspaceRegistration" Usage="Microsoft.CodeAnalysis.Workspace.GetWorkspaceRegistration textContainer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1647,6 +1717,7 @@
       <MemberSignature Language="C#" Value="public virtual bool IsDocumentOpen (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDocumentOpen(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.IsDocumentOpen(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member IsDocumentOpen : Microsoft.CodeAnalysis.DocumentId -&gt; bool&#xA;override this.IsDocumentOpen : Microsoft.CodeAnalysis.DocumentId -&gt; bool" Usage="workspace.IsDocumentOpen documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1672,6 +1743,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Kind" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Workspace.Kind" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kind As String" />
+      <MemberSignature Language="F#" Value="member this.Kind : string" Usage="Microsoft.CodeAnalysis.Workspace.Kind" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1694,6 +1766,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnAdditionalDocumentAdded (Microsoft.CodeAnalysis.DocumentInfo documentInfo);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnAdditionalDocumentAdded(class Microsoft.CodeAnalysis.DocumentInfo documentInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnAdditionalDocumentAdded(Microsoft.CodeAnalysis.DocumentInfo)" />
+      <MemberSignature Language="F#" Value="member this.OnAdditionalDocumentAdded : Microsoft.CodeAnalysis.DocumentInfo -&gt; unit" Usage="workspace.OnAdditionalDocumentAdded documentInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1717,6 +1790,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnAdditionalDocumentClosed (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.TextLoader reloader);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnAdditionalDocumentClosed(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.TextLoader reloader) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnAdditionalDocumentClosed(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.TextLoader)" />
+      <MemberSignature Language="F#" Value="member this.OnAdditionalDocumentClosed : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.TextLoader -&gt; unit" Usage="workspace.OnAdditionalDocumentClosed (documentId, reloader)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1740,6 +1814,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnAdditionalDocumentOpened (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.Text.SourceTextContainer textContainer, bool isCurrentContext = true);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnAdditionalDocumentOpened(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.Text.SourceTextContainer textContainer, bool isCurrentContext) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnAdditionalDocumentOpened(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.Text.SourceTextContainer,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.OnAdditionalDocumentOpened : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.Text.SourceTextContainer * bool -&gt; unit" Usage="workspace.OnAdditionalDocumentOpened (documentId, textContainer, isCurrentContext)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1765,6 +1840,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnAdditionalDocumentRemoved (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnAdditionalDocumentRemoved(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnAdditionalDocumentRemoved(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.OnAdditionalDocumentRemoved : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.OnAdditionalDocumentRemoved documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1788,6 +1864,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnAdditionalDocumentTextChanged (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.Text.SourceText newText, Microsoft.CodeAnalysis.PreservationMode mode);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnAdditionalDocumentTextChanged(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.Text.SourceText newText, valuetype Microsoft.CodeAnalysis.PreservationMode mode) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnAdditionalDocumentTextChanged(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.PreservationMode)" />
+      <MemberSignature Language="F#" Value="member this.OnAdditionalDocumentTextChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.Text.SourceText * Microsoft.CodeAnalysis.PreservationMode -&gt; unit" Usage="workspace.OnAdditionalDocumentTextChanged (documentId, newText, mode)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1815,6 +1892,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnAdditionalDocumentTextLoaderChanged (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.TextLoader loader);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnAdditionalDocumentTextLoaderChanged(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.TextLoader loader) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnAdditionalDocumentTextLoaderChanged(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.TextLoader)" />
+      <MemberSignature Language="F#" Value="member this.OnAdditionalDocumentTextLoaderChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.TextLoader -&gt; unit" Usage="workspace.OnAdditionalDocumentTextLoaderChanged (documentId, loader)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1840,6 +1918,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnAnalyzerReferenceAdded (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnAnalyzerReferenceAdded(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnAnalyzerReferenceAdded(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
+      <MemberSignature Language="F#" Value="member this.OnAnalyzerReferenceAdded : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference -&gt; unit" Usage="workspace.OnAnalyzerReferenceAdded (projectId, analyzerReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1865,6 +1944,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnAnalyzerReferenceRemoved (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnAnalyzerReferenceRemoved(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference analyzerReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnAnalyzerReferenceRemoved(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
+      <MemberSignature Language="F#" Value="member this.OnAnalyzerReferenceRemoved : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference -&gt; unit" Usage="workspace.OnAnalyzerReferenceRemoved (projectId, analyzerReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1890,6 +1970,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnAssemblyNameChanged (Microsoft.CodeAnalysis.ProjectId projectId, string assemblyName);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnAssemblyNameChanged(class Microsoft.CodeAnalysis.ProjectId projectId, string assemblyName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnAssemblyNameChanged(Microsoft.CodeAnalysis.ProjectId,System.String)" />
+      <MemberSignature Language="F#" Value="member this.OnAssemblyNameChanged : Microsoft.CodeAnalysis.ProjectId * string -&gt; unit" Usage="workspace.OnAssemblyNameChanged (projectId, assemblyName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1915,6 +1996,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnCompilationOptionsChanged (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.CompilationOptions options);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnCompilationOptionsChanged(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.CompilationOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnCompilationOptionsChanged(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.CompilationOptions)" />
+      <MemberSignature Language="F#" Value="member this.OnCompilationOptionsChanged : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.CompilationOptions -&gt; unit" Usage="workspace.OnCompilationOptionsChanged (projectId, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1940,6 +2022,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnDocumentAdded (Microsoft.CodeAnalysis.DocumentInfo documentInfo);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDocumentAdded(class Microsoft.CodeAnalysis.DocumentInfo documentInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentAdded(Microsoft.CodeAnalysis.DocumentInfo)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentAdded : Microsoft.CodeAnalysis.DocumentInfo -&gt; unit" Usage="workspace.OnDocumentAdded documentInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1963,6 +2046,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnDocumentClosed (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.TextLoader reloader, bool updateActiveContext = false);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDocumentClosed(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.TextLoader reloader, bool updateActiveContext) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentClosed(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.TextLoader,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentClosed : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.TextLoader * bool -&gt; unit" Usage="workspace.OnDocumentClosed (documentId, reloader, updateActiveContext)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1988,6 +2072,7 @@
       <MemberSignature Language="C#" Value="protected virtual void OnDocumentClosing (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDocumentClosing(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentClosing(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="abstract member OnDocumentClosing : Microsoft.CodeAnalysis.DocumentId -&gt; unit&#xA;override this.OnDocumentClosing : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.OnDocumentClosing documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2012,6 +2097,7 @@
       <MemberSignature Language="C#" Value="protected void OnDocumentContextUpdated (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnDocumentContextUpdated(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentContextUpdated(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentContextUpdated : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.OnDocumentContextUpdated documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2033,6 +2119,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnDocumentInfoChanged (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.DocumentInfo newInfo);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDocumentInfoChanged(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.DocumentInfo newInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentInfoChanged(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.DocumentInfo)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentInfoChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.DocumentInfo -&gt; unit" Usage="workspace.OnDocumentInfoChanged (documentId, newInfo)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2058,6 +2145,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnDocumentOpened (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.Text.SourceTextContainer textContainer, bool isCurrentContext = true);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDocumentOpened(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.Text.SourceTextContainer textContainer, bool isCurrentContext) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentOpened(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.Text.SourceTextContainer,System.Boolean)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentOpened : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.Text.SourceTextContainer * bool -&gt; unit" Usage="workspace.OnDocumentOpened (documentId, textContainer, isCurrentContext)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2084,6 +2172,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDocumentReloaded(class Microsoft.CodeAnalysis.DocumentInfo newDocumentInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentReloaded(Microsoft.CodeAnalysis.DocumentInfo)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Sub OnDocumentReloaded (newDocumentInfo As DocumentInfo)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentReloaded : Microsoft.CodeAnalysis.DocumentInfo -&gt; unit" Usage="workspace.OnDocumentReloaded newDocumentInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2107,6 +2196,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnDocumentRemoved (Microsoft.CodeAnalysis.DocumentId documentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDocumentRemoved(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentRemoved(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentRemoved : Microsoft.CodeAnalysis.DocumentId -&gt; unit" Usage="workspace.OnDocumentRemoved documentId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2130,6 +2220,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnDocumentSourceCodeKindChanged (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.SourceCodeKind sourceCodeKind);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDocumentSourceCodeKindChanged(class Microsoft.CodeAnalysis.DocumentId documentId, valuetype Microsoft.CodeAnalysis.SourceCodeKind sourceCodeKind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentSourceCodeKindChanged(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.SourceCodeKind)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentSourceCodeKindChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.SourceCodeKind -&gt; unit" Usage="workspace.OnDocumentSourceCodeKindChanged (documentId, sourceCodeKind)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2155,6 +2246,7 @@
       <MemberSignature Language="C#" Value="protected virtual void OnDocumentTextChanged (Microsoft.CodeAnalysis.Document document);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDocumentTextChanged(class Microsoft.CodeAnalysis.Document document) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentTextChanged(Microsoft.CodeAnalysis.Document)" />
+      <MemberSignature Language="F#" Value="abstract member OnDocumentTextChanged : Microsoft.CodeAnalysis.Document -&gt; unit&#xA;override this.OnDocumentTextChanged : Microsoft.CodeAnalysis.Document -&gt; unit" Usage="workspace.OnDocumentTextChanged document" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2179,6 +2271,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnDocumentTextChanged (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.Text.SourceText newText, Microsoft.CodeAnalysis.PreservationMode mode);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDocumentTextChanged(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.Text.SourceText newText, valuetype Microsoft.CodeAnalysis.PreservationMode mode) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentTextChanged(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.PreservationMode)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentTextChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.Text.SourceText * Microsoft.CodeAnalysis.PreservationMode -&gt; unit" Usage="workspace.OnDocumentTextChanged (documentId, newText, mode)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2206,6 +2299,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnDocumentTextLoaderChanged (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.TextLoader loader);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnDocumentTextLoaderChanged(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.TextLoader loader) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnDocumentTextLoaderChanged(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.TextLoader)" />
+      <MemberSignature Language="F#" Value="member this.OnDocumentTextLoaderChanged : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.TextLoader -&gt; unit" Usage="workspace.OnDocumentTextLoaderChanged (documentId, loader)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2231,6 +2325,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnMetadataReferenceAdded (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.MetadataReference metadataReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnMetadataReferenceAdded(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.MetadataReference metadataReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnMetadataReferenceAdded(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.MetadataReference)" />
+      <MemberSignature Language="F#" Value="member this.OnMetadataReferenceAdded : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.MetadataReference -&gt; unit" Usage="workspace.OnMetadataReferenceAdded (projectId, metadataReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2256,6 +2351,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnMetadataReferenceRemoved (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.MetadataReference metadataReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnMetadataReferenceRemoved(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.MetadataReference metadataReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnMetadataReferenceRemoved(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.MetadataReference)" />
+      <MemberSignature Language="F#" Value="member this.OnMetadataReferenceRemoved : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.MetadataReference -&gt; unit" Usage="workspace.OnMetadataReferenceRemoved (projectId, metadataReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2281,6 +2377,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnOutputFilePathChanged (Microsoft.CodeAnalysis.ProjectId projectId, string outputFilePath);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnOutputFilePathChanged(class Microsoft.CodeAnalysis.ProjectId projectId, string outputFilePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnOutputFilePathChanged(Microsoft.CodeAnalysis.ProjectId,System.String)" />
+      <MemberSignature Language="F#" Value="member this.OnOutputFilePathChanged : Microsoft.CodeAnalysis.ProjectId * string -&gt; unit" Usage="workspace.OnOutputFilePathChanged (projectId, outputFilePath)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2306,6 +2403,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnParseOptionsChanged (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.ParseOptions options);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnParseOptionsChanged(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.ParseOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnParseOptionsChanged(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ParseOptions)" />
+      <MemberSignature Language="F#" Value="member this.OnParseOptionsChanged : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ParseOptions -&gt; unit" Usage="workspace.OnParseOptionsChanged (projectId, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2331,6 +2429,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnProjectAdded (Microsoft.CodeAnalysis.ProjectInfo projectInfo);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnProjectAdded(class Microsoft.CodeAnalysis.ProjectInfo projectInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnProjectAdded(Microsoft.CodeAnalysis.ProjectInfo)" />
+      <MemberSignature Language="F#" Value="member this.OnProjectAdded : Microsoft.CodeAnalysis.ProjectInfo -&gt; unit" Usage="workspace.OnProjectAdded projectInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2354,6 +2453,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnProjectNameChanged (Microsoft.CodeAnalysis.ProjectId projectId, string name, string filePath);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnProjectNameChanged(class Microsoft.CodeAnalysis.ProjectId projectId, string name, string filePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnProjectNameChanged(Microsoft.CodeAnalysis.ProjectId,System.String,System.String)" />
+      <MemberSignature Language="F#" Value="member this.OnProjectNameChanged : Microsoft.CodeAnalysis.ProjectId * string * string -&gt; unit" Usage="workspace.OnProjectNameChanged (projectId, name, filePath)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2381,6 +2481,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnProjectReferenceAdded (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.ProjectReference projectReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnProjectReferenceAdded(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.ProjectReference projectReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnProjectReferenceAdded(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectReference)" />
+      <MemberSignature Language="F#" Value="member this.OnProjectReferenceAdded : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectReference -&gt; unit" Usage="workspace.OnProjectReferenceAdded (projectId, projectReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2406,6 +2507,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnProjectReferenceRemoved (Microsoft.CodeAnalysis.ProjectId projectId, Microsoft.CodeAnalysis.ProjectReference projectReference);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnProjectReferenceRemoved(class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.ProjectReference projectReference) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnProjectReferenceRemoved(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectReference)" />
+      <MemberSignature Language="F#" Value="member this.OnProjectReferenceRemoved : Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.ProjectReference -&gt; unit" Usage="workspace.OnProjectReferenceRemoved (projectId, projectReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2432,6 +2534,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnProjectReloaded(class Microsoft.CodeAnalysis.ProjectInfo reloadedProjectInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnProjectReloaded(Microsoft.CodeAnalysis.ProjectInfo)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub OnProjectReloaded (reloadedProjectInfo As ProjectInfo)" />
+      <MemberSignature Language="F#" Value="abstract member OnProjectReloaded : Microsoft.CodeAnalysis.ProjectInfo -&gt; unit&#xA;override this.OnProjectReloaded : Microsoft.CodeAnalysis.ProjectInfo -&gt; unit" Usage="workspace.OnProjectReloaded reloadedProjectInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2455,6 +2558,7 @@
       <MemberSignature Language="C#" Value="protected internal virtual void OnProjectRemoved (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnProjectRemoved(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnProjectRemoved(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="abstract member OnProjectRemoved : Microsoft.CodeAnalysis.ProjectId -&gt; unit&#xA;override this.OnProjectRemoved : Microsoft.CodeAnalysis.ProjectId -&gt; unit" Usage="workspace.OnProjectRemoved projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2478,6 +2582,7 @@
       <MemberSignature Language="C#" Value="protected internal void OnSolutionAdded (Microsoft.CodeAnalysis.SolutionInfo solutionInfo);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnSolutionAdded(class Microsoft.CodeAnalysis.SolutionInfo solutionInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnSolutionAdded(Microsoft.CodeAnalysis.SolutionInfo)" />
+      <MemberSignature Language="F#" Value="member this.OnSolutionAdded : Microsoft.CodeAnalysis.SolutionInfo -&gt; unit" Usage="workspace.OnSolutionAdded solutionInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2502,6 +2607,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnSolutionReloaded(class Microsoft.CodeAnalysis.SolutionInfo reloadedSolutionInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnSolutionReloaded(Microsoft.CodeAnalysis.SolutionInfo)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Sub OnSolutionReloaded (reloadedSolutionInfo As SolutionInfo)" />
+      <MemberSignature Language="F#" Value="member this.OnSolutionReloaded : Microsoft.CodeAnalysis.SolutionInfo -&gt; unit" Usage="workspace.OnSolutionReloaded reloadedSolutionInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2526,6 +2632,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnSolutionRemoved() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnSolutionRemoved" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Sub OnSolutionRemoved ()" />
+      <MemberSignature Language="F#" Value="member this.OnSolutionRemoved : unit -&gt; unit" Usage="workspace.OnSolutionRemoved " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2551,6 +2658,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnWorkspaceFailed(class Microsoft.CodeAnalysis.WorkspaceDiagnostic diagnostic) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OnWorkspaceFailed(Microsoft.CodeAnalysis.WorkspaceDiagnostic)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub OnWorkspaceFailed (diagnostic As WorkspaceDiagnostic)" />
+      <MemberSignature Language="F#" Value="abstract member OnWorkspaceFailed : Microsoft.CodeAnalysis.WorkspaceDiagnostic -&gt; unit&#xA;override this.OnWorkspaceFailed : Microsoft.CodeAnalysis.WorkspaceDiagnostic -&gt; unit" Usage="workspace.OnWorkspaceFailed diagnostic" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2572,6 +2680,7 @@
       <MemberSignature Language="C#" Value="public virtual void OpenAdditionalDocument (Microsoft.CodeAnalysis.DocumentId documentId, bool activate = true);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenAdditionalDocument(class Microsoft.CodeAnalysis.DocumentId documentId, bool activate) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OpenAdditionalDocument(Microsoft.CodeAnalysis.DocumentId,System.Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member OpenAdditionalDocument : Microsoft.CodeAnalysis.DocumentId * bool -&gt; unit&#xA;override this.OpenAdditionalDocument : Microsoft.CodeAnalysis.DocumentId * bool -&gt; unit" Usage="workspace.OpenAdditionalDocument (documentId, activate)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2597,6 +2706,7 @@
       <MemberSignature Language="C#" Value="public virtual void OpenDocument (Microsoft.CodeAnalysis.DocumentId documentId, bool activate = true);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenDocument(class Microsoft.CodeAnalysis.DocumentId documentId, bool activate) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.OpenDocument(Microsoft.CodeAnalysis.DocumentId,System.Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member OpenDocument : Microsoft.CodeAnalysis.DocumentId * bool -&gt; unit&#xA;override this.OpenDocument : Microsoft.CodeAnalysis.DocumentId * bool -&gt; unit" Usage="workspace.OpenDocument (documentId, activate)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2623,6 +2733,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Options.OptionSet Options" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Workspace.Options" />
       <MemberSignature Language="VB.NET" Value="Public Property Options As OptionSet" />
+      <MemberSignature Language="F#" Value="member this.Options : Microsoft.CodeAnalysis.Options.OptionSet with get, set" Usage="Microsoft.CodeAnalysis.Workspace.Options" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2644,6 +2755,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool PartialSemanticsEnabled" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Workspace.PartialSemanticsEnabled" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overridable ReadOnly Property PartialSemanticsEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.PartialSemanticsEnabled : bool" Usage="Microsoft.CodeAnalysis.Workspace.PartialSemanticsEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2664,6 +2776,7 @@
       <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task RaiseDocumentActiveContextChangedEventAsync (Microsoft.CodeAnalysis.Document document);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task RaiseDocumentActiveContextChangedEventAsync(class Microsoft.CodeAnalysis.Document document) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.RaiseDocumentActiveContextChangedEventAsync(Microsoft.CodeAnalysis.Document)" />
+      <MemberSignature Language="F#" Value="member this.RaiseDocumentActiveContextChangedEventAsync : Microsoft.CodeAnalysis.Document -&gt; System.Threading.Tasks.Task" Usage="workspace.RaiseDocumentActiveContextChangedEventAsync document" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2691,6 +2804,7 @@
       <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task RaiseDocumentActiveContextChangedEventAsync (Microsoft.CodeAnalysis.Text.SourceTextContainer sourceTextContainer, Microsoft.CodeAnalysis.DocumentId oldActiveContextDocumentId, Microsoft.CodeAnalysis.DocumentId newActiveContextDocumentId);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task RaiseDocumentActiveContextChangedEventAsync(class Microsoft.CodeAnalysis.Text.SourceTextContainer sourceTextContainer, class Microsoft.CodeAnalysis.DocumentId oldActiveContextDocumentId, class Microsoft.CodeAnalysis.DocumentId newActiveContextDocumentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.RaiseDocumentActiveContextChangedEventAsync(Microsoft.CodeAnalysis.Text.SourceTextContainer,Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.RaiseDocumentActiveContextChangedEventAsync : Microsoft.CodeAnalysis.Text.SourceTextContainer * Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.DocumentId -&gt; System.Threading.Tasks.Task" Usage="workspace.RaiseDocumentActiveContextChangedEventAsync (sourceTextContainer, oldActiveContextDocumentId, newActiveContextDocumentId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2717,6 +2831,7 @@
       <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task RaiseDocumentClosedEventAsync (Microsoft.CodeAnalysis.Document document);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task RaiseDocumentClosedEventAsync(class Microsoft.CodeAnalysis.Document document) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.RaiseDocumentClosedEventAsync(Microsoft.CodeAnalysis.Document)" />
+      <MemberSignature Language="F#" Value="member this.RaiseDocumentClosedEventAsync : Microsoft.CodeAnalysis.Document -&gt; System.Threading.Tasks.Task" Usage="workspace.RaiseDocumentClosedEventAsync document" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2739,6 +2854,7 @@
       <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task RaiseDocumentOpenedEventAsync (Microsoft.CodeAnalysis.Document document);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task RaiseDocumentOpenedEventAsync(class Microsoft.CodeAnalysis.Document document) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.RaiseDocumentOpenedEventAsync(Microsoft.CodeAnalysis.Document)" />
+      <MemberSignature Language="F#" Value="member this.RaiseDocumentOpenedEventAsync : Microsoft.CodeAnalysis.Document -&gt; System.Threading.Tasks.Task" Usage="workspace.RaiseDocumentOpenedEventAsync document" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2761,6 +2877,7 @@
       <MemberSignature Language="C#" Value="protected System.Threading.Tasks.Task RaiseWorkspaceChangedEventAsync (Microsoft.CodeAnalysis.WorkspaceChangeKind kind, Microsoft.CodeAnalysis.Solution oldSolution, Microsoft.CodeAnalysis.Solution newSolution, Microsoft.CodeAnalysis.ProjectId projectId = null, Microsoft.CodeAnalysis.DocumentId documentId = null);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Threading.Tasks.Task RaiseWorkspaceChangedEventAsync(valuetype Microsoft.CodeAnalysis.WorkspaceChangeKind kind, class Microsoft.CodeAnalysis.Solution oldSolution, class Microsoft.CodeAnalysis.Solution newSolution, class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.RaiseWorkspaceChangedEventAsync(Microsoft.CodeAnalysis.WorkspaceChangeKind,Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.RaiseWorkspaceChangedEventAsync : Microsoft.CodeAnalysis.WorkspaceChangeKind * Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.DocumentId -&gt; System.Threading.Tasks.Task" Usage="workspace.RaiseWorkspaceChangedEventAsync (kind, oldSolution, newSolution, projectId, documentId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2792,6 +2909,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RegisterText(class Microsoft.CodeAnalysis.Text.SourceTextContainer textContainer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.RegisterText(Microsoft.CodeAnalysis.Text.SourceTextContainer)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub RegisterText (textContainer As SourceTextContainer)" />
+      <MemberSignature Language="F#" Value="member this.RegisterText : Microsoft.CodeAnalysis.Text.SourceTextContainer -&gt; unit" Usage="workspace.RegisterText textContainer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2815,6 +2933,7 @@
       <MemberSignature Language="C#" Value="protected internal System.Threading.Tasks.Task ScheduleTask (Action action, string taskName = &quot;Workspace.Task&quot;);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Threading.Tasks.Task ScheduleTask(class System.Action action, string taskName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ScheduleTask(System.Action,System.String)" />
+      <MemberSignature Language="F#" Value="member this.ScheduleTask : Action * string -&gt; System.Threading.Tasks.Task" Usage="workspace.ScheduleTask (action, taskName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2842,6 +2961,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Threading.Tasks.Task`1&lt;!!T&gt; ScheduleTask&lt;T&gt;(class System.Func`1&lt;!!T&gt; func, string taskName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.ScheduleTask``1(System.Func{``0},System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Function ScheduleTask(Of T) (func As Func(Of T), Optional taskName As String = &quot;Workspace.Task&quot;) As Task(Of T)" />
+      <MemberSignature Language="F#" Value="member this.ScheduleTask : Func&lt;'T&gt; * string -&gt; System.Threading.Tasks.Task&lt;'T&gt;" Usage="workspace.ScheduleTask (func, taskName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2873,6 +2993,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Host.HostWorkspaceServices Services" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Workspace.Services" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Services As HostWorkspaceServices" />
+      <MemberSignature Language="F#" Value="member this.Services : Microsoft.CodeAnalysis.Host.HostWorkspaceServices" Usage="Microsoft.CodeAnalysis.Workspace.Services" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2893,6 +3014,7 @@
       <MemberSignature Language="C#" Value="protected Microsoft.CodeAnalysis.Solution SetCurrentSolution (Microsoft.CodeAnalysis.Solution solution);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Microsoft.CodeAnalysis.Solution SetCurrentSolution(class Microsoft.CodeAnalysis.Solution solution) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.SetCurrentSolution(Microsoft.CodeAnalysis.Solution)" />
+      <MemberSignature Language="F#" Value="member this.SetCurrentSolution : Microsoft.CodeAnalysis.Solution -&gt; Microsoft.CodeAnalysis.Solution" Usage="workspace.SetCurrentSolution solution" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2921,6 +3043,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryApplyChanges(class Microsoft.CodeAnalysis.Solution newSolution) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.TryApplyChanges(Microsoft.CodeAnalysis.Solution)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function TryApplyChanges (newSolution As Solution) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryApplyChanges : Microsoft.CodeAnalysis.Solution -&gt; bool&#xA;override this.TryApplyChanges : Microsoft.CodeAnalysis.Solution -&gt; bool" Usage="workspace.TryApplyChanges newSolution" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2953,6 +3076,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGetWorkspace(class Microsoft.CodeAnalysis.Text.SourceTextContainer textContainer, [out] class Microsoft.CodeAnalysis.Workspace&amp; workspace) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.TryGetWorkspace(Microsoft.CodeAnalysis.Text.SourceTextContainer,Microsoft.CodeAnalysis.Workspace@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryGetWorkspace (textContainer As SourceTextContainer, ByRef workspace As Workspace) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryGetWorkspace : Microsoft.CodeAnalysis.Text.SourceTextContainer *  -&gt; bool" Usage="Microsoft.CodeAnalysis.Workspace.TryGetWorkspace (textContainer, workspace)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2980,6 +3104,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnregisterText(class Microsoft.CodeAnalysis.Text.SourceTextContainer textContainer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.UnregisterText(Microsoft.CodeAnalysis.Text.SourceTextContainer)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub UnregisterText (textContainer As SourceTextContainer)" />
+      <MemberSignature Language="F#" Value="member this.UnregisterText : Microsoft.CodeAnalysis.Text.SourceTextContainer -&gt; unit" Usage="workspace.UnregisterText textContainer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -3004,6 +3129,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UpdateReferencesAfterAdd() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Workspace.UpdateReferencesAfterAdd" />
       <MemberSignature Language="VB.NET" Value="Protected Sub UpdateReferencesAfterAdd ()" />
+      <MemberSignature Language="F#" Value="member this.UpdateReferencesAfterAdd : unit -&gt; unit" Usage="workspace.UpdateReferencesAfterAdd " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -3025,6 +3151,7 @@
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.CodeAnalysis.WorkspaceChangeEventArgs&gt; WorkspaceChanged" />
       <MemberSignature Language="DocId" Value="E:Microsoft.CodeAnalysis.Workspace.WorkspaceChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event WorkspaceChanged As EventHandler(Of WorkspaceChangeEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.WorkspaceChanged : EventHandler&lt;Microsoft.CodeAnalysis.WorkspaceChangeEventArgs&gt; " Usage="member this.WorkspaceChanged : System.EventHandler&lt;Microsoft.CodeAnalysis.WorkspaceChangeEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -3045,6 +3172,7 @@
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.CodeAnalysis.WorkspaceDiagnosticEventArgs&gt; WorkspaceFailed" />
       <MemberSignature Language="DocId" Value="E:Microsoft.CodeAnalysis.Workspace.WorkspaceFailed" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event WorkspaceFailed As EventHandler(Of WorkspaceDiagnosticEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.WorkspaceFailed : EventHandler&lt;Microsoft.CodeAnalysis.WorkspaceDiagnosticEventArgs&gt; " Usage="member this.WorkspaceFailed : System.EventHandler&lt;Microsoft.CodeAnalysis.WorkspaceDiagnosticEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>

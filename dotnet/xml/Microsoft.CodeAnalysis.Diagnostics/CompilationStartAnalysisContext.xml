@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CompilationStartAnalysisContext extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class CompilationStartAnalysisContext" />
+  <TypeSignature Language="F#" Value="type CompilationStartAnalysisContext = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="C#" Value="protected CompilationStartAnalysisContext (Microsoft.CodeAnalysis.Compilation compilation, Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions options, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.Compilation compilation, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.#ctor(Microsoft.CodeAnalysis.Compilation,Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext : Microsoft.CodeAnalysis.Compilation * Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext" Usage="new Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext (compilation, options, cancellationToken)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -46,6 +48,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.CancellationToken" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CancellationToken As CancellationToken" />
+      <MemberSignature Language="F#" Value="member this.CancellationToken : System.Threading.CancellationToken" Usage="Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.CancellationToken" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -67,6 +70,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Compilation Compilation" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.Compilation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Compilation As Compilation" />
+      <MemberSignature Language="F#" Value="member this.Compilation : Microsoft.CodeAnalysis.Compilation" Usage="Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.Compilation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -88,6 +92,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions Options" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.Options" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Options As AnalyzerOptions" />
+      <MemberSignature Language="F#" Value="member this.Options : Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions" Usage="Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.Options" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -109,6 +114,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCodeBlockAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.CodeBlockAnalysisContext&gt; action) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterCodeBlockAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.CodeBlockAnalysisContext})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterCodeBlockAction (action As Action(Of CodeBlockAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterCodeBlockAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.CodeBlockAnalysisContext&gt; -&gt; unit" Usage="compilationStartAnalysisContext.RegisterCodeBlockAction action" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -134,6 +140,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCodeBlockStartAction&lt;struct .ctor (class System.ValueType) TLanguageKindEnum&gt;(class System.Action`1&lt;class Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext`1&lt;!!TLanguageKindEnum&gt;&gt; action) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterCodeBlockStartAction``1(System.Action{Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext{``0}})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterCodeBlockStartAction(Of TLanguageKindEnum As Structure) (action As Action(Of CodeBlockStartAnalysisContext(Of TLanguageKindEnum)))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterCodeBlockStartAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext&lt;'LanguageKindEnum&gt;&gt; -&gt; unit (requires 'LanguageKindEnum : struct)" Usage="compilationStartAnalysisContext.RegisterCodeBlockStartAction action" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -170,6 +177,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCompilationEndAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext&gt; action) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterCompilationEndAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterCompilationEndAction (action As Action(Of CompilationAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterCompilationEndAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext&gt; -&gt; unit" Usage="compilationStartAnalysisContext.RegisterCompilationEndAction action" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -195,6 +203,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterOperationAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; action, valuetype Microsoft.CodeAnalysis.OperationKind[] operationKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterOperationAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext},Microsoft.CodeAnalysis.OperationKind[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub RegisterOperationAction (action As Action(Of OperationAnalysisContext), ParamArray operationKinds As OperationKind())" />
+      <MemberSignature Language="F#" Value="member this.RegisterOperationAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; * Microsoft.CodeAnalysis.OperationKind[] -&gt; unit" Usage="compilationStartAnalysisContext.RegisterOperationAction (action, operationKinds)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -229,6 +238,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterOperationAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; action, valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.OperationKind&gt; operationKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterOperationAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.OperationKind})" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub RegisterOperationAction (action As Action(Of OperationAnalysisContext), operationKinds As ImmutableArray(Of OperationKind))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterOperationAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.OperationKind&gt; -&gt; unit&#xA;override this.RegisterOperationAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.OperationKind&gt; -&gt; unit" Usage="compilationStartAnalysisContext.RegisterOperationAction (action, operationKinds)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -257,6 +267,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterOperationBlockAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext&gt; action) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterOperationBlockAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext})" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub RegisterOperationBlockAction (action As Action(Of OperationBlockAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterOperationBlockAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext&gt; -&gt; unit&#xA;override this.RegisterOperationBlockAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext&gt; -&gt; unit" Usage="compilationStartAnalysisContext.RegisterOperationBlockAction action" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -282,6 +293,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterOperationBlockStartAction(class System.Action`1&lt;class Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext&gt; action) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterOperationBlockStartAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext})" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub RegisterOperationBlockStartAction (action As Action(Of OperationBlockStartAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterOperationBlockStartAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext&gt; -&gt; unit&#xA;override this.RegisterOperationBlockStartAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext&gt; -&gt; unit" Usage="compilationStartAnalysisContext.RegisterOperationBlockStartAction action" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -308,6 +320,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSemanticModelAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SemanticModelAnalysisContext&gt; action) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSemanticModelAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SemanticModelAnalysisContext})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterSemanticModelAction (action As Action(Of SemanticModelAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSemanticModelAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SemanticModelAnalysisContext&gt; -&gt; unit" Usage="compilationStartAnalysisContext.RegisterSemanticModelAction action" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -334,6 +347,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterSymbolAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; action, valuetype Microsoft.CodeAnalysis.SymbolKind[] symbolKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext},Microsoft.CodeAnalysis.SymbolKind[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub RegisterSymbolAction (action As Action(Of SymbolAnalysisContext), ParamArray symbolKinds As SymbolKind())" />
+      <MemberSignature Language="F#" Value="member this.RegisterSymbolAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; * Microsoft.CodeAnalysis.SymbolKind[] -&gt; unit" Usage="compilationStartAnalysisContext.RegisterSymbolAction (action, symbolKinds)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -367,6 +381,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSymbolAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; action, valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.SymbolKind&gt; symbolKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.SymbolKind})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterSymbolAction (action As Action(Of SymbolAnalysisContext), symbolKinds As ImmutableArray(Of SymbolKind))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSymbolAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolKind&gt; -&gt; unit" Usage="compilationStartAnalysisContext.RegisterSymbolAction (action, symbolKinds)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -394,6 +409,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSyntaxNodeAction&lt;struct .ctor (class System.ValueType) TLanguageKindEnum&gt;(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TLanguageKindEnum&gt; syntaxKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSyntaxNodeAction``1(System.Action{Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext},System.Collections.Immutable.ImmutableArray{``0})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterSyntaxNodeAction(Of TLanguageKindEnum As Structure) (action As Action(Of SyntaxNodeAnalysisContext), syntaxKinds As ImmutableArray(Of TLanguageKindEnum))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSyntaxNodeAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; * System.Collections.Immutable.ImmutableArray&lt;'LanguageKindEnum (requires 'LanguageKindEnum : struct)&gt; -&gt; unit (requires 'LanguageKindEnum : struct)" Usage="compilationStartAnalysisContext.RegisterSyntaxNodeAction (action, syntaxKinds)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -432,6 +448,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterSyntaxNodeAction&lt;struct .ctor (class System.ValueType) TLanguageKindEnum&gt;(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, !!TLanguageKindEnum[] syntaxKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSyntaxNodeAction``1(System.Action{Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext},``0[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub RegisterSyntaxNodeAction(Of TLanguageKindEnum As Structure) (action As Action(Of SyntaxNodeAnalysisContext), ParamArray syntaxKinds As TLanguageKindEnum())" />
+      <MemberSignature Language="F#" Value="member this.RegisterSyntaxNodeAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; * 'LanguageKindEnum[] -&gt; unit (requires 'LanguageKindEnum : struct)" Usage="compilationStartAnalysisContext.RegisterSyntaxNodeAction (action, syntaxKinds)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -476,6 +493,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSyntaxTreeAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeAnalysisContext&gt; action) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSyntaxTreeAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeAnalysisContext})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterSyntaxTreeAction (action As Action(Of SyntaxTreeAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSyntaxTreeAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeAnalysisContext&gt; -&gt; unit" Usage="compilationStartAnalysisContext.RegisterSyntaxTreeAction action" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -501,6 +519,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetValue&lt;TValue&gt;(class Microsoft.CodeAnalysis.SyntaxTree tree, class Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeValueProvider`1&lt;!!TValue&gt; valueProvider, [out] !!TValue&amp; value) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.TryGetValue``1(Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeValueProvider{``0},``0@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetValue(Of TValue) (tree As SyntaxTree, valueProvider As SyntaxTreeValueProvider(Of TValue), ByRef value As TValue) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetValue : Microsoft.CodeAnalysis.SyntaxTree * Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeValueProvider&lt;'Value&gt; *  -&gt; bool" Usage="compilationStartAnalysisContext.TryGetValue (tree, valueProvider, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -537,6 +556,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetValue&lt;TValue&gt;(class Microsoft.CodeAnalysis.Text.SourceText text, class Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider`1&lt;!!TValue&gt; valueProvider, [out] !!TValue&amp; value) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.TryGetValue``1(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider{``0},``0@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetValue(Of TValue) (text As SourceText, valueProvider As SourceTextValueProvider(Of TValue), ByRef value As TValue) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetValue : Microsoft.CodeAnalysis.Text.SourceText * Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider&lt;'Value&gt; *  -&gt; bool" Usage="compilationStartAnalysisContext.TryGetValue (text, valueProvider, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>

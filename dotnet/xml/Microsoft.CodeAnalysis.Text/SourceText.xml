@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SourceText extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Text.SourceText" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class SourceText" />
+  <TypeSignature Language="F#" Value="type SourceText = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; checksum, valuetype Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm, class Microsoft.CodeAnalysis.Text.SourceTextContainer container) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.#ctor(System.Collections.Immutable.ImmutableArray{System.Byte},Microsoft.CodeAnalysis.Text.SourceHashAlgorithm,Microsoft.CodeAnalysis.Text.SourceTextContainer)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (Optional checksum As ImmutableArray(Of Byte) = null, Optional checksumAlgorithm As SourceHashAlgorithm = Microsoft.CodeAnalysis.Text.SourceHashAlgorithm.Sha1, Optional container As SourceTextContainer = null)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Text.SourceText : System.Collections.Immutable.ImmutableArray&lt;byte&gt; * Microsoft.CodeAnalysis.Text.SourceHashAlgorithm * Microsoft.CodeAnalysis.Text.SourceTextContainer -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="new Microsoft.CodeAnalysis.Text.SourceText (checksum, checksumAlgorithm, container)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -46,6 +48,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool CanBeEmbedded" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.SourceText.CanBeEmbedded" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanBeEmbedded As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CanBeEmbedded : bool" Usage="Microsoft.CodeAnalysis.Text.SourceText.CanBeEmbedded" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -73,6 +76,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.SourceHashAlgorithm ChecksumAlgorithm" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.SourceText.ChecksumAlgorithm" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChecksumAlgorithm As SourceHashAlgorithm" />
+      <MemberSignature Language="F#" Value="member this.ChecksumAlgorithm : Microsoft.CodeAnalysis.Text.SourceHashAlgorithm" Usage="Microsoft.CodeAnalysis.Text.SourceText.ChecksumAlgorithm" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -94,6 +98,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Text.SourceTextContainer Container" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.SourceText.Container" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Container As SourceTextContainer" />
+      <MemberSignature Language="F#" Value="member this.Container : Microsoft.CodeAnalysis.Text.SourceTextContainer" Usage="Microsoft.CodeAnalysis.Text.SourceText.Container" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -115,6 +120,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContentEquals(class Microsoft.CodeAnalysis.Text.SourceText other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.ContentEquals(Microsoft.CodeAnalysis.Text.SourceText)" />
       <MemberSignature Language="VB.NET" Value="Public Function ContentEquals (other As SourceText) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ContentEquals : Microsoft.CodeAnalysis.Text.SourceText -&gt; bool" Usage="sourceText.ContentEquals other" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -140,6 +146,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ContentEqualsImpl(class Microsoft.CodeAnalysis.Text.SourceText other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.ContentEqualsImpl(Microsoft.CodeAnalysis.Text.SourceText)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function ContentEqualsImpl (other As SourceText) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member ContentEqualsImpl : Microsoft.CodeAnalysis.Text.SourceText -&gt; bool&#xA;override this.ContentEqualsImpl : Microsoft.CodeAnalysis.Text.SourceText -&gt; bool" Usage="sourceText.ContentEqualsImpl other" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -165,6 +172,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(int32 sourceIndex, char[] destination, int32 destinationIndex, int32 count) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.CopyTo(System.Int32,System.Char[],System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub CopyTo (sourceIndex As Integer, destination As Char(), destinationIndex As Integer, count As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member CopyTo : int * char[] * int * int -&gt; unit" Usage="sourceText.CopyTo (sourceIndex, destination, destinationIndex, count)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -195,6 +203,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.SourceText.Encoding" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Encoding As Encoding" />
+      <MemberSignature Language="F#" Value="member this.Encoding : System.Text.Encoding" Usage="Microsoft.CodeAnalysis.Text.SourceText.Encoding" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -219,6 +228,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Text.SourceText From (string text, System.Text.Encoding encoding = null, Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm = Microsoft.CodeAnalysis.Text.SourceHashAlgorithm.Sha1);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Text.SourceText From(string text, class System.Text.Encoding encoding, valuetype Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.From(System.String,System.Text.Encoding,Microsoft.CodeAnalysis.Text.SourceHashAlgorithm)" />
+      <MemberSignature Language="F#" Value="static member From : string * System.Text.Encoding * Microsoft.CodeAnalysis.Text.SourceHashAlgorithm -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="Microsoft.CodeAnalysis.Text.SourceText.From (text, encoding, checksumAlgorithm)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -258,6 +268,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Text.SourceText From (System.IO.Stream stream, System.Text.Encoding encoding, Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm, bool throwIfBinaryDetected);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Text.SourceText From(class System.IO.Stream stream, class System.Text.Encoding encoding, valuetype Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm, bool throwIfBinaryDetected) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.From(System.IO.Stream,System.Text.Encoding,Microsoft.CodeAnalysis.Text.SourceHashAlgorithm,System.Boolean)" />
+      <MemberSignature Language="F#" Value="static member From : System.IO.Stream * System.Text.Encoding * Microsoft.CodeAnalysis.Text.SourceHashAlgorithm * bool -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="Microsoft.CodeAnalysis.Text.SourceText.From (stream, encoding, checksumAlgorithm, throwIfBinaryDetected)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -291,6 +302,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Text.SourceText From (System.IO.TextReader reader, int length, System.Text.Encoding encoding = null, Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm = Microsoft.CodeAnalysis.Text.SourceHashAlgorithm.Sha1);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Text.SourceText From(class System.IO.TextReader reader, int32 length, class System.Text.Encoding encoding, valuetype Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.From(System.IO.TextReader,System.Int32,System.Text.Encoding,Microsoft.CodeAnalysis.Text.SourceHashAlgorithm)" />
+      <MemberSignature Language="F#" Value="static member From : System.IO.TextReader * int * System.Text.Encoding * Microsoft.CodeAnalysis.Text.SourceHashAlgorithm -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="Microsoft.CodeAnalysis.Text.SourceText.From (reader, length, encoding, checksumAlgorithm)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -332,6 +344,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Text.SourceText From (byte[] buffer, int length, System.Text.Encoding encoding, Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm, bool throwIfBinaryDetected);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Text.SourceText From(unsigned int8[] buffer, int32 length, class System.Text.Encoding encoding, valuetype Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm, bool throwIfBinaryDetected) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.From(System.Byte[],System.Int32,System.Text.Encoding,Microsoft.CodeAnalysis.Text.SourceHashAlgorithm,System.Boolean)" />
+      <MemberSignature Language="F#" Value="static member From : byte[] * int * System.Text.Encoding * Microsoft.CodeAnalysis.Text.SourceHashAlgorithm * bool -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="Microsoft.CodeAnalysis.Text.SourceText.From (buffer, length, encoding, checksumAlgorithm, throwIfBinaryDetected)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -367,6 +380,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Text.SourceText From (System.IO.Stream stream, System.Text.Encoding encoding = null, Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm = Microsoft.CodeAnalysis.Text.SourceHashAlgorithm.Sha1, bool throwIfBinaryDetected = false, bool canBeEmbedded = false);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Text.SourceText From(class System.IO.Stream stream, class System.Text.Encoding encoding, valuetype Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm, bool throwIfBinaryDetected, bool canBeEmbedded) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.From(System.IO.Stream,System.Text.Encoding,Microsoft.CodeAnalysis.Text.SourceHashAlgorithm,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="F#" Value="static member From : System.IO.Stream * System.Text.Encoding * Microsoft.CodeAnalysis.Text.SourceHashAlgorithm * bool * bool -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="Microsoft.CodeAnalysis.Text.SourceText.From (stream, encoding, checksumAlgorithm, throwIfBinaryDetected, canBeEmbedded)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -414,6 +428,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Text.SourceText From (byte[] buffer, int length, System.Text.Encoding encoding = null, Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm = Microsoft.CodeAnalysis.Text.SourceHashAlgorithm.Sha1, bool throwIfBinaryDetected = false, bool canBeEmbedded = false);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Text.SourceText From(unsigned int8[] buffer, int32 length, class System.Text.Encoding encoding, valuetype Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm, bool throwIfBinaryDetected, bool canBeEmbedded) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.From(System.Byte[],System.Int32,System.Text.Encoding,Microsoft.CodeAnalysis.Text.SourceHashAlgorithm,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="F#" Value="static member From : byte[] * int * System.Text.Encoding * Microsoft.CodeAnalysis.Text.SourceHashAlgorithm * bool * bool -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="Microsoft.CodeAnalysis.Text.SourceText.From (buffer, length, encoding, checksumAlgorithm, throwIfBinaryDetected, canBeEmbedded)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -461,6 +476,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IReadOnlyList`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextChangeRange&gt; GetChangeRanges(class Microsoft.CodeAnalysis.Text.SourceText oldText) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.GetChangeRanges(Microsoft.CodeAnalysis.Text.SourceText)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetChangeRanges (oldText As SourceText) As IReadOnlyList(Of TextChangeRange)" />
+      <MemberSignature Language="F#" Value="abstract member GetChangeRanges : Microsoft.CodeAnalysis.Text.SourceText -&gt; System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt;&#xA;override this.GetChangeRanges : Microsoft.CodeAnalysis.Text.SourceText -&gt; System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt;" Usage="sourceText.GetChangeRanges oldText" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -488,6 +504,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; GetChecksum() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.GetChecksum" />
       <MemberSignature Language="VB.NET" Value="Public Function GetChecksum () As ImmutableArray(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.GetChecksum : unit -&gt; System.Collections.Immutable.ImmutableArray&lt;byte&gt;" Usage="sourceText.GetChecksum " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -508,6 +525,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.Text.TextLineCollection GetLinesCore() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.GetLinesCore" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetLinesCore () As TextLineCollection" />
+      <MemberSignature Language="F#" Value="abstract member GetLinesCore : unit -&gt; Microsoft.CodeAnalysis.Text.TextLineCollection&#xA;override this.GetLinesCore : unit -&gt; Microsoft.CodeAnalysis.Text.TextLineCollection" Usage="sourceText.GetLinesCore " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -531,6 +549,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.Text.SourceText GetSubText(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.GetSubText(Microsoft.CodeAnalysis.Text.TextSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetSubText (span As TextSpan) As SourceText" />
+      <MemberSignature Language="F#" Value="abstract member GetSubText : Microsoft.CodeAnalysis.Text.TextSpan -&gt; Microsoft.CodeAnalysis.Text.SourceText&#xA;override this.GetSubText : Microsoft.CodeAnalysis.Text.TextSpan -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="sourceText.GetSubText span" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -556,6 +575,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Text.SourceText GetSubText(int32 start) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.GetSubText(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetSubText (start As Integer) As SourceText" />
+      <MemberSignature Language="F#" Value="member this.GetSubText : int -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="sourceText.GetSubText start" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -581,6 +601,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IReadOnlyList`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextChange&gt; GetTextChanges(class Microsoft.CodeAnalysis.Text.SourceText oldText) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.GetTextChanges(Microsoft.CodeAnalysis.Text.SourceText)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetTextChanges (oldText As SourceText) As IReadOnlyList(Of TextChange)" />
+      <MemberSignature Language="F#" Value="abstract member GetTextChanges : Microsoft.CodeAnalysis.Text.SourceText -&gt; System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Text.TextChange&gt;&#xA;override this.GetTextChanges : Microsoft.CodeAnalysis.Text.SourceText -&gt; System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Text.TextChange&gt;" Usage="sourceText.GetTextChanges oldText" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -608,6 +629,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance char Item(int32)" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.SourceText.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(position As Integer) As Char" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : char" Usage="Microsoft.CodeAnalysis.Text.SourceText.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -635,6 +657,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.SourceText.Length" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Length As Integer" />
+      <MemberSignature Language="F#" Value="member this.Length : int" Usage="Microsoft.CodeAnalysis.Text.SourceText.Length" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -656,6 +679,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Text.TextLineCollection Lines" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.SourceText.Lines" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Lines As TextLineCollection" />
+      <MemberSignature Language="F#" Value="member this.Lines : Microsoft.CodeAnalysis.Text.TextLineCollection" Usage="Microsoft.CodeAnalysis.Text.SourceText.Lines" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -677,6 +701,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Text.SourceText Replace(valuetype Microsoft.CodeAnalysis.Text.TextSpan span, string newText) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.Replace(Microsoft.CodeAnalysis.Text.TextSpan,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Replace (span As TextSpan, newText As String) As SourceText" />
+      <MemberSignature Language="F#" Value="member this.Replace : Microsoft.CodeAnalysis.Text.TextSpan * string -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="sourceText.Replace (span, newText)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -704,6 +729,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Text.SourceText Replace(int32 start, int32 length, string newText) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.Replace(System.Int32,System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Replace (start As Integer, length As Integer, newText As String) As SourceText" />
+      <MemberSignature Language="F#" Value="member this.Replace : int * int * string -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="sourceText.Replace (start, length, newText)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -733,6 +759,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="sourceText.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -755,6 +782,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.ToString(Microsoft.CodeAnalysis.Text.TextSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function ToString (span As TextSpan) As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : Microsoft.CodeAnalysis.Text.TextSpan -&gt; string" Usage="sourceText.ToString span" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -781,6 +809,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Text.SourceText WithChanges(valuetype Microsoft.CodeAnalysis.Text.TextChange[] changes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.WithChanges(Microsoft.CodeAnalysis.Text.TextChange[])" />
       <MemberSignature Language="VB.NET" Value="Public Function WithChanges (ParamArray changes As TextChange()) As SourceText" />
+      <MemberSignature Language="F#" Value="member this.WithChanges : Microsoft.CodeAnalysis.Text.TextChange[] -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="sourceText.WithChanges changes" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -812,6 +841,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.Text.SourceText WithChanges(class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextChange&gt; changes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.WithChanges(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Text.TextChange})" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function WithChanges (changes As IEnumerable(Of TextChange)) As SourceText" />
+      <MemberSignature Language="F#" Value="abstract member WithChanges : seq&lt;Microsoft.CodeAnalysis.Text.TextChange&gt; -&gt; Microsoft.CodeAnalysis.Text.SourceText&#xA;override this.WithChanges : seq&lt;Microsoft.CodeAnalysis.Text.TextChange&gt; -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="sourceText.WithChanges changes" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -836,6 +866,7 @@
       <MemberSignature Language="C#" Value="public void Write (System.IO.TextWriter textWriter, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.IO.TextWriter textWriter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.Write(System.IO.TextWriter,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.Write : System.IO.TextWriter * System.Threading.CancellationToken -&gt; unit" Usage="sourceText.Write (textWriter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -861,6 +892,7 @@
       <MemberSignature Language="C#" Value="public virtual void Write (System.IO.TextWriter writer, Microsoft.CodeAnalysis.Text.TextSpan span, System.Threading.CancellationToken cancellationToken = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.IO.TextWriter writer, valuetype Microsoft.CodeAnalysis.Text.TextSpan span, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.SourceText.Write(System.IO.TextWriter,Microsoft.CodeAnalysis.Text.TextSpan,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member Write : System.IO.TextWriter * Microsoft.CodeAnalysis.Text.TextSpan * System.Threading.CancellationToken -&gt; unit&#xA;override this.Write : System.IO.TextWriter * Microsoft.CodeAnalysis.Text.TextSpan * System.Threading.CancellationToken -&gt; unit" Usage="sourceText.Write (writer, span, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
