@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit VersionStamp extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.VersionStamp&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.VersionStamp" />
   <TypeSignature Language="VB.NET" Value="Public Structure VersionStamp&#xA;Implements IEquatable(Of VersionStamp)" />
+  <TypeSignature Language="F#" Value="type VersionStamp = struct&#xA;    interface IObjectWritable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -27,6 +28,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.VersionStamp Create() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.Create" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create () As VersionStamp" />
+      <MemberSignature Language="F#" Value="static member Create : unit -&gt; Microsoft.CodeAnalysis.VersionStamp" Usage="Microsoft.CodeAnalysis.VersionStamp.Create " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -49,6 +51,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.VersionStamp Create(valuetype System.DateTime utcTimeLastModified) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.Create(System.DateTime)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (utcTimeLastModified As DateTime) As VersionStamp" />
+      <MemberSignature Language="F#" Value="static member Create : DateTime -&gt; Microsoft.CodeAnalysis.VersionStamp" Usage="Microsoft.CodeAnalysis.VersionStamp.Create utcTimeLastModified" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -74,6 +77,7 @@
       <MemberSignature Language="ILAsm" Value=".property valuetype Microsoft.CodeAnalysis.VersionStamp Default" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.VersionStamp.Default" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Default As VersionStamp" />
+      <MemberSignature Language="F#" Value="member this.Default : Microsoft.CodeAnalysis.VersionStamp" Usage="Microsoft.CodeAnalysis.VersionStamp.Default" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -93,7 +97,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.VersionStamp version) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.Equals(Microsoft.CodeAnalysis.VersionStamp)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (version As VersionStamp) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.VersionStamp -&gt; bool" Usage="versionStamp.Equals version" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -116,6 +124,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="versionStamp.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -139,6 +148,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="versionStamp.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -159,6 +169,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.VersionStamp GetNewerVersion() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.GetNewerVersion" />
       <MemberSignature Language="VB.NET" Value="Public Function GetNewerVersion () As VersionStamp" />
+      <MemberSignature Language="F#" Value="member this.GetNewerVersion : unit -&gt; Microsoft.CodeAnalysis.VersionStamp" Usage="versionStamp.GetNewerVersion " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -182,6 +193,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.VersionStamp GetNewerVersion(valuetype Microsoft.CodeAnalysis.VersionStamp version) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.GetNewerVersion(Microsoft.CodeAnalysis.VersionStamp)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetNewerVersion (version As VersionStamp) As VersionStamp" />
+      <MemberSignature Language="F#" Value="member this.GetNewerVersion : Microsoft.CodeAnalysis.VersionStamp -&gt; Microsoft.CodeAnalysis.VersionStamp" Usage="versionStamp.GetNewerVersion version" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -208,6 +220,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.CodeAnalysis.VersionStamp left, valuetype Microsoft.CodeAnalysis.VersionStamp right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.op_Equality(Microsoft.CodeAnalysis.VersionStamp,Microsoft.CodeAnalysis.VersionStamp)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As VersionStamp, right As VersionStamp) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.VersionStamp * Microsoft.CodeAnalysis.VersionStamp -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -233,6 +246,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.CodeAnalysis.VersionStamp left, valuetype Microsoft.CodeAnalysis.VersionStamp right) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.op_Inequality(Microsoft.CodeAnalysis.VersionStamp,Microsoft.CodeAnalysis.VersionStamp)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As VersionStamp, right As VersionStamp) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.VersionStamp * Microsoft.CodeAnalysis.VersionStamp -&gt; bool" Usage="Microsoft.CodeAnalysis.VersionStamp.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -258,6 +272,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VersionStamp.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="versionStamp.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>

@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit FileLinePositionSpan extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.FileLinePositionSpan&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.FileLinePositionSpan" />
   <TypeSignature Language="VB.NET" Value="Public Structure FileLinePositionSpan&#xA;Implements IEquatable(Of FileLinePositionSpan)" />
+  <TypeSignature Language="F#" Value="type FileLinePositionSpan = struct" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype Microsoft.CodeAnalysis.Text.LinePositionSpan span) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileLinePositionSpan.#ctor(System.String,Microsoft.CodeAnalysis.Text.LinePositionSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (path As String, span As LinePositionSpan)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.FileLinePositionSpan : string * Microsoft.CodeAnalysis.Text.LinePositionSpan -&gt; Microsoft.CodeAnalysis.FileLinePositionSpan" Usage="new Microsoft.CodeAnalysis.FileLinePositionSpan (path, span)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype Microsoft.CodeAnalysis.Text.LinePosition start, valuetype Microsoft.CodeAnalysis.Text.LinePosition end) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileLinePositionSpan.#ctor(System.String,Microsoft.CodeAnalysis.Text.LinePosition,Microsoft.CodeAnalysis.Text.LinePosition)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (path As String, start As LinePosition, end As LinePosition)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.FileLinePositionSpan : string * Microsoft.CodeAnalysis.Text.LinePosition * Microsoft.CodeAnalysis.Text.LinePosition -&gt; Microsoft.CodeAnalysis.FileLinePositionSpan" Usage="new Microsoft.CodeAnalysis.FileLinePositionSpan (path, start, end)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -80,6 +83,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.LinePosition EndLinePosition" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FileLinePositionSpan.EndLinePosition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndLinePosition As LinePosition" />
+      <MemberSignature Language="F#" Value="member this.EndLinePosition : Microsoft.CodeAnalysis.Text.LinePosition" Usage="Microsoft.CodeAnalysis.FileLinePositionSpan.EndLinePosition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -101,7 +105,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.FileLinePositionSpan other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileLinePositionSpan.Equals(Microsoft.CodeAnalysis.FileLinePositionSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As FileLinePositionSpan) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.FileLinePositionSpan -&gt; bool" Usage="fileLinePositionSpan.Equals other" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -128,6 +136,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileLinePositionSpan.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (other As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="fileLinePositionSpan.Equals other" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -153,6 +162,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileLinePositionSpan.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="fileLinePositionSpan.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -177,6 +187,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool HasMappedPath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FileLinePositionSpan.HasMappedPath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasMappedPath As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasMappedPath : bool" Usage="Microsoft.CodeAnalysis.FileLinePositionSpan.HasMappedPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -200,6 +211,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FileLinePositionSpan.IsValid" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsValid As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsValid : bool" Usage="Microsoft.CodeAnalysis.FileLinePositionSpan.IsValid" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -221,6 +233,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Path" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FileLinePositionSpan.Path" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string" Usage="Microsoft.CodeAnalysis.FileLinePositionSpan.Path" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -244,6 +257,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.LinePositionSpan Span" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FileLinePositionSpan.Span" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Span As LinePositionSpan" />
+      <MemberSignature Language="F#" Value="member this.Span : Microsoft.CodeAnalysis.Text.LinePositionSpan" Usage="Microsoft.CodeAnalysis.FileLinePositionSpan.Span" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -265,6 +279,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.LinePosition StartLinePosition" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FileLinePositionSpan.StartLinePosition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StartLinePosition As LinePosition" />
+      <MemberSignature Language="F#" Value="member this.StartLinePosition : Microsoft.CodeAnalysis.Text.LinePosition" Usage="Microsoft.CodeAnalysis.FileLinePositionSpan.StartLinePosition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -286,6 +301,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileLinePositionSpan.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="fileLinePositionSpan.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>

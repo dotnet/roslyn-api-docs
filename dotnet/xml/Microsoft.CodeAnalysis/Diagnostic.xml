@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Diagnostic extends System.Object implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;, class System.IFormattable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostic" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class Diagnostic&#xA;Implements IEquatable(Of Diagnostic), IFormattable" />
+  <TypeSignature Language="F#" Value="type Diagnostic = class&#xA;    interface IEquatable&lt;Diagnostic&gt;&#xA;    interface IFormattable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -54,6 +55,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Microsoft.CodeAnalysis.Location&gt; AdditionalLocations" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.AdditionalLocations" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property AdditionalLocations As IReadOnlyList(Of Location)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalLocations : System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Location&gt;" Usage="Microsoft.CodeAnalysis.Diagnostic.AdditionalLocations" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -75,6 +77,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostic Create (Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, Microsoft.CodeAnalysis.Location location, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Diagnostic Create(class Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, class Microsoft.CodeAnalysis.Location location, object[] messageArgs) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.DiagnosticDescriptor * Microsoft.CodeAnalysis.Location * obj[] -&gt; Microsoft.CodeAnalysis.Diagnostic" Usage="Microsoft.CodeAnalysis.Diagnostic.Create (descriptor, location, messageArgs)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -109,6 +112,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostic Create (Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, Microsoft.CodeAnalysis.Location location, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Location&gt; additionalLocations, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Diagnostic Create(class Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, class Microsoft.CodeAnalysis.Location location, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Location&gt; additionalLocations, object[] messageArgs) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Location},System.Object[])" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.DiagnosticDescriptor * Microsoft.CodeAnalysis.Location * seq&lt;Microsoft.CodeAnalysis.Location&gt; * obj[] -&gt; Microsoft.CodeAnalysis.Diagnostic" Usage="Microsoft.CodeAnalysis.Diagnostic.Create (descriptor, location, additionalLocations, messageArgs)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -149,6 +153,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostic Create (Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, Microsoft.CodeAnalysis.Location location, System.Collections.Immutable.ImmutableDictionary&lt;string,string&gt; properties, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Diagnostic Create(class Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, class Microsoft.CodeAnalysis.Location location, class System.Collections.Immutable.ImmutableDictionary`2&lt;string, string&gt; properties, object[] messageArgs) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Collections.Immutable.ImmutableDictionary{System.String,System.String},System.Object[])" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.DiagnosticDescriptor * Microsoft.CodeAnalysis.Location * System.Collections.Immutable.ImmutableDictionary&lt;string, string&gt; * obj[] -&gt; Microsoft.CodeAnalysis.Diagnostic" Usage="Microsoft.CodeAnalysis.Diagnostic.Create (descriptor, location, properties, messageArgs)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -189,6 +194,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostic Create (Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, Microsoft.CodeAnalysis.Location location, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Location&gt; additionalLocations, System.Collections.Immutable.ImmutableDictionary&lt;string,string&gt; properties, params object[] messageArgs);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Diagnostic Create(class Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, class Microsoft.CodeAnalysis.Location location, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Location&gt; additionalLocations, class System.Collections.Immutable.ImmutableDictionary`2&lt;string, string&gt; properties, object[] messageArgs) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Location},System.Collections.Immutable.ImmutableDictionary{System.String,System.String},System.Object[])" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.DiagnosticDescriptor * Microsoft.CodeAnalysis.Location * seq&lt;Microsoft.CodeAnalysis.Location&gt; * System.Collections.Immutable.ImmutableDictionary&lt;string, string&gt; * obj[] -&gt; Microsoft.CodeAnalysis.Diagnostic" Usage="Microsoft.CodeAnalysis.Diagnostic.Create (descriptor, location, additionalLocations, properties, messageArgs)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -235,6 +241,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostic Create (string id, string category, Microsoft.CodeAnalysis.LocalizableString message, Microsoft.CodeAnalysis.DiagnosticSeverity severity, Microsoft.CodeAnalysis.DiagnosticSeverity defaultSeverity, bool isEnabledByDefault, int warningLevel, Microsoft.CodeAnalysis.LocalizableString title = null, Microsoft.CodeAnalysis.LocalizableString description = null, string helpLink = null, Microsoft.CodeAnalysis.Location location = null, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Location&gt; additionalLocations = null, System.Collections.Generic.IEnumerable&lt;string&gt; customTags = null, System.Collections.Immutable.ImmutableDictionary&lt;string,string&gt; properties = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Diagnostic Create(string id, string category, class Microsoft.CodeAnalysis.LocalizableString message, valuetype Microsoft.CodeAnalysis.DiagnosticSeverity severity, valuetype Microsoft.CodeAnalysis.DiagnosticSeverity defaultSeverity, bool isEnabledByDefault, int32 warningLevel, class Microsoft.CodeAnalysis.LocalizableString title, class Microsoft.CodeAnalysis.LocalizableString description, string helpLink, class Microsoft.CodeAnalysis.Location location, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Location&gt; additionalLocations, class System.Collections.Generic.IEnumerable`1&lt;string&gt; customTags, class System.Collections.Immutable.ImmutableDictionary`2&lt;string, string&gt; properties) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Create(System.String,System.String,Microsoft.CodeAnalysis.LocalizableString,Microsoft.CodeAnalysis.DiagnosticSeverity,Microsoft.CodeAnalysis.DiagnosticSeverity,System.Boolean,System.Int32,Microsoft.CodeAnalysis.LocalizableString,Microsoft.CodeAnalysis.LocalizableString,System.String,Microsoft.CodeAnalysis.Location,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Location},System.Collections.Generic.IEnumerable{System.String},System.Collections.Immutable.ImmutableDictionary{System.String,System.String})" />
+      <MemberSignature Language="F#" Value="static member Create : string * string * Microsoft.CodeAnalysis.LocalizableString * Microsoft.CodeAnalysis.DiagnosticSeverity * Microsoft.CodeAnalysis.DiagnosticSeverity * bool * int * Microsoft.CodeAnalysis.LocalizableString * Microsoft.CodeAnalysis.LocalizableString * string * Microsoft.CodeAnalysis.Location * seq&lt;Microsoft.CodeAnalysis.Location&gt; * seq&lt;string&gt; * System.Collections.Immutable.ImmutableDictionary&lt;string, string&gt; -&gt; Microsoft.CodeAnalysis.Diagnostic" Usage="Microsoft.CodeAnalysis.Diagnostic.Create (id, category, message, severity, defaultSeverity, isEnabledByDefault, warningLevel, title, description, helpLink, location, additionalLocations, customTags, properties)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -296,6 +303,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostic Create (string id, string category, Microsoft.CodeAnalysis.LocalizableString message, Microsoft.CodeAnalysis.DiagnosticSeverity severity, Microsoft.CodeAnalysis.DiagnosticSeverity defaultSeverity, bool isEnabledByDefault, int warningLevel, bool isSuppressed, Microsoft.CodeAnalysis.LocalizableString title = null, Microsoft.CodeAnalysis.LocalizableString description = null, string helpLink = null, Microsoft.CodeAnalysis.Location location = null, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Location&gt; additionalLocations = null, System.Collections.Generic.IEnumerable&lt;string&gt; customTags = null, System.Collections.Immutable.ImmutableDictionary&lt;string,string&gt; properties = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Diagnostic Create(string id, string category, class Microsoft.CodeAnalysis.LocalizableString message, valuetype Microsoft.CodeAnalysis.DiagnosticSeverity severity, valuetype Microsoft.CodeAnalysis.DiagnosticSeverity defaultSeverity, bool isEnabledByDefault, int32 warningLevel, bool isSuppressed, class Microsoft.CodeAnalysis.LocalizableString title, class Microsoft.CodeAnalysis.LocalizableString description, string helpLink, class Microsoft.CodeAnalysis.Location location, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Location&gt; additionalLocations, class System.Collections.Generic.IEnumerable`1&lt;string&gt; customTags, class System.Collections.Immutable.ImmutableDictionary`2&lt;string, string&gt; properties) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Create(System.String,System.String,Microsoft.CodeAnalysis.LocalizableString,Microsoft.CodeAnalysis.DiagnosticSeverity,Microsoft.CodeAnalysis.DiagnosticSeverity,System.Boolean,System.Int32,System.Boolean,Microsoft.CodeAnalysis.LocalizableString,Microsoft.CodeAnalysis.LocalizableString,System.String,Microsoft.CodeAnalysis.Location,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Location},System.Collections.Generic.IEnumerable{System.String},System.Collections.Immutable.ImmutableDictionary{System.String,System.String})" />
+      <MemberSignature Language="F#" Value="static member Create : string * string * Microsoft.CodeAnalysis.LocalizableString * Microsoft.CodeAnalysis.DiagnosticSeverity * Microsoft.CodeAnalysis.DiagnosticSeverity * bool * int * bool * Microsoft.CodeAnalysis.LocalizableString * Microsoft.CodeAnalysis.LocalizableString * string * Microsoft.CodeAnalysis.Location * seq&lt;Microsoft.CodeAnalysis.Location&gt; * seq&lt;string&gt; * System.Collections.Immutable.ImmutableDictionary&lt;string, string&gt; -&gt; Microsoft.CodeAnalysis.Diagnostic" Usage="Microsoft.CodeAnalysis.Diagnostic.Create (id, category, message, severity, defaultSeverity, isEnabledByDefault, warningLevel, isSuppressed, title, description, helpLink, location, additionalLocations, customTags, properties)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -360,6 +368,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.DiagnosticSeverity DefaultSeverity" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.DefaultSeverity" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property DefaultSeverity As DiagnosticSeverity" />
+      <MemberSignature Language="F#" Value="member this.DefaultSeverity : Microsoft.CodeAnalysis.DiagnosticSeverity" Usage="Microsoft.CodeAnalysis.Diagnostic.DefaultSeverity" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -383,6 +392,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.DiagnosticDescriptor Descriptor" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.Descriptor" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Descriptor As DiagnosticDescriptor" />
+      <MemberSignature Language="F#" Value="member this.Descriptor : Microsoft.CodeAnalysis.DiagnosticDescriptor" Usage="Microsoft.CodeAnalysis.Diagnostic.Descriptor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -404,7 +414,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.Diagnostic obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Equals(Microsoft.CodeAnalysis.Diagnostic)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function Equals (obj As Diagnostic) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.Diagnostic -&gt; bool" Usage="diagnostic.Equals obj" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -427,6 +441,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="diagnostic.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -450,6 +465,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="diagnostic.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -470,6 +486,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetMessage(class System.IFormatProvider formatProvider) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.GetMessage(System.IFormatProvider)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetMessage (Optional formatProvider As IFormatProvider = null) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetMessage : IFormatProvider -&gt; string" Usage="diagnostic.GetMessage formatProvider" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -494,6 +511,7 @@
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Diagnostics.SuppressionInfo GetSuppressionInfo (Microsoft.CodeAnalysis.Compilation compilation);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Diagnostics.SuppressionInfo GetSuppressionInfo(class Microsoft.CodeAnalysis.Compilation compilation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.GetSuppressionInfo(Microsoft.CodeAnalysis.Compilation)" />
+      <MemberSignature Language="F#" Value="member this.GetSuppressionInfo : Microsoft.CodeAnalysis.Compilation -&gt; Microsoft.CodeAnalysis.Diagnostics.SuppressionInfo" Usage="diagnostic.GetSuppressionInfo compilation" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -520,6 +538,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Id" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.Id" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Id As String" />
+      <MemberSignature Language="F#" Value="member this.Id : string" Usage="Microsoft.CodeAnalysis.Diagnostic.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -541,6 +560,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsSuppressed" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.IsSuppressed" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsSuppressed As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSuppressed : bool" Usage="Microsoft.CodeAnalysis.Diagnostic.IsSuppressed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -562,6 +582,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool IsWarningAsError" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.IsWarningAsError" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsWarningAsError As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsWarningAsError : bool" Usage="Microsoft.CodeAnalysis.Diagnostic.IsWarningAsError" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -586,6 +607,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Location Location" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.Location" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Location As Location" />
+      <MemberSignature Language="F#" Value="member this.Location : Microsoft.CodeAnalysis.Location" Usage="Microsoft.CodeAnalysis.Diagnostic.Location" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -607,6 +629,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Immutable.ImmutableDictionary`2&lt;string, string&gt; Properties" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.Properties" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Properties As ImmutableDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Collections.Immutable.ImmutableDictionary&lt;string, string&gt;" Usage="Microsoft.CodeAnalysis.Diagnostic.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -630,6 +653,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.DiagnosticSeverity Severity" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.Severity" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Severity As DiagnosticSeverity" />
+      <MemberSignature Language="F#" Value="member this.Severity : Microsoft.CodeAnalysis.DiagnosticSeverity" Usage="Microsoft.CodeAnalysis.Diagnostic.Severity" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -655,6 +679,9 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
       <MemberSignature Language="VB.NET" Value="Function ToString (ignored As String, formatProvider As IFormatProvider) As String Implements IFormattable.ToString" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IFormattable.ToString(System.String,System.IFormatProvider)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -679,6 +706,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="diagnostic.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -699,6 +727,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 WarningLevel" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostic.WarningLevel" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property WarningLevel As Integer" />
+      <MemberSignature Language="F#" Value="member this.WarningLevel : int" Usage="Microsoft.CodeAnalysis.Diagnostic.WarningLevel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>

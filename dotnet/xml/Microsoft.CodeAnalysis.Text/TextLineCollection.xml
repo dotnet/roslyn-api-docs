@@ -3,6 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextLineCollection extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextLine&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextLine&gt;, class System.Collections.Generic.IReadOnlyList`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextLine&gt;, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Text.TextLineCollection" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class TextLineCollection&#xA;Implements IEnumerable(Of TextLine), IReadOnlyCollection(Of TextLine), IReadOnlyList(Of TextLine)" />
+  <TypeSignature Language="F#" Value="type TextLineCollection = class&#xA;    interface IReadOnlyList&lt;TextLine&gt;&#xA;    interface seq&lt;TextLine&gt;&#xA;    interface IEnumerable&#xA;    interface IReadOnlyCollection&lt;TextLine&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -49,7 +50,11 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.TextLineCollection.Count" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Count As Integer" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.CodeAnalysis.Text.TextLineCollection.Count" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.IReadOnlyCollection`1.Count</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -70,6 +75,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.Text.TextLineCollection/Enumerator GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextLineCollection.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As TextLineCollection.Enumerator" />
+      <MemberSignature Language="F#" Value="member this.GetEnumerator : unit -&gt; Microsoft.CodeAnalysis.Text.TextLineCollection.Enumerator" Usage="textLineCollection.GetEnumerator " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -90,6 +96,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.Text.TextLine GetLineFromPosition(int32 position) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextLineCollection.GetLineFromPosition(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetLineFromPosition (position As Integer) As TextLine" />
+      <MemberSignature Language="F#" Value="abstract member GetLineFromPosition : int -&gt; Microsoft.CodeAnalysis.Text.TextLine&#xA;override this.GetLineFromPosition : int -&gt; Microsoft.CodeAnalysis.Text.TextLine" Usage="textLineCollection.GetLineFromPosition position" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -115,6 +122,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.Text.LinePosition GetLinePosition(int32 position) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextLineCollection.GetLinePosition(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetLinePosition (position As Integer) As LinePosition" />
+      <MemberSignature Language="F#" Value="abstract member GetLinePosition : int -&gt; Microsoft.CodeAnalysis.Text.LinePosition&#xA;override this.GetLinePosition : int -&gt; Microsoft.CodeAnalysis.Text.LinePosition" Usage="textLineCollection.GetLinePosition position" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -140,6 +148,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.Text.LinePositionSpan GetLinePositionSpan(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextLineCollection.GetLinePositionSpan(Microsoft.CodeAnalysis.Text.TextSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLinePositionSpan (span As TextSpan) As LinePositionSpan" />
+      <MemberSignature Language="F#" Value="member this.GetLinePositionSpan : Microsoft.CodeAnalysis.Text.TextSpan -&gt; Microsoft.CodeAnalysis.Text.LinePositionSpan" Usage="textLineCollection.GetLinePositionSpan span" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -165,6 +174,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetPosition(valuetype Microsoft.CodeAnalysis.Text.LinePosition position) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextLineCollection.GetPosition(Microsoft.CodeAnalysis.Text.LinePosition)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetPosition (position As LinePosition) As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetPosition : Microsoft.CodeAnalysis.Text.LinePosition -&gt; int" Usage="textLineCollection.GetPosition position" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -190,6 +200,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.Text.TextSpan GetTextSpan(valuetype Microsoft.CodeAnalysis.Text.LinePositionSpan span) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextLineCollection.GetTextSpan(Microsoft.CodeAnalysis.Text.LinePositionSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTextSpan (span As LinePositionSpan) As TextSpan" />
+      <MemberSignature Language="F#" Value="member this.GetTextSpan : Microsoft.CodeAnalysis.Text.LinePositionSpan -&gt; Microsoft.CodeAnalysis.Text.TextSpan" Usage="textLineCollection.GetTextSpan span" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -215,6 +226,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(int32 position) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextLineCollection.IndexOf(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function IndexOf (position As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member IndexOf : int -&gt; int" Usage="textLineCollection.IndexOf position" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -240,7 +252,11 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextLine Item(int32)" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.TextLineCollection.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(index As Integer) As TextLine" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.CodeAnalysis.Text.TextLine" Usage="Microsoft.CodeAnalysis.Text.TextLineCollection.Item" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.IReadOnlyList`1.Item(System.Int32)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -266,6 +282,9 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextLineCollection.System#Collections#Generic#IEnumerable&lt;Microsoft#CodeAnalysis#Text#TextLine&gt;#GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator(Of TextLine) Implements IEnumerable(Of TextLine).GetEnumerator" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
@@ -286,6 +305,9 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextLineCollection.System#Collections#IEnumerable#GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator Implements IEnumerable.GetEnumerator" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.4.0.0</AssemblyVersion>
