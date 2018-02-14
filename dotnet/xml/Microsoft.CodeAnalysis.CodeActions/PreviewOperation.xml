@@ -1,0 +1,72 @@
+﻿<Type Name="PreviewOperation" FullName="Microsoft.CodeAnalysis.CodeActions.PreviewOperation">
+  <TypeSignature Language="C#" Value="public abstract class PreviewOperation : Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PreviewOperation extends Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeActions.PreviewOperation" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PreviewOperation&#xA;Inherits CodeActionOperation" />
+  <TypeSignature Language="F#" Value="type PreviewOperation = class&#xA;    inherit CodeActionOperation" />
+  <TypeSignature Language="C++ CLI" Value="public ref class PreviewOperation abstract : Microsoft::CodeAnalysis::CodeActions::CodeActionOperation" />
+  <TypeSignature Language="C++ CX" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;public ref class PreviewOperation abstract : Microsoft::CodeAnalysis::CodeActions::CodeActionOperation" />
+  <TypeSignature Language="C++ WINRT" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;class PreviewOperation abstract : Microsoft::CodeAnalysis::CodeActions::CodeActionOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.CodeActions.CodeActionOperation</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a preview operation for generating a custom user preview for the operation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PreviewOperation ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.PreviewOperation.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; PreviewOperation();" />
+      <MemberSignature Language="C++ CX" Value="protected:&#xA; PreviewOperation();" />
+      <MemberSignature Language="C++ WINRT" Value=" PreviewOperation();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreviewAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;object&gt; GetPreviewAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;object&gt; GetPreviewAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.PreviewOperation.GetPreviewAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetPreviewAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;obj&gt;" Usage="previewOperation.GetPreviewAsync cancellationToken" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Threading::Tasks::Task&lt;System::Object ^&gt; ^ GetPreviewAsync(System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets a custom preview control for the operation.
+            If preview is null and <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation.Title" /> is non-null, then <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation.Title" /> is used to generate the preview.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

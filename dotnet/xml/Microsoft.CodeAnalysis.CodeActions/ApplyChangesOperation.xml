@@ -1,0 +1,102 @@
+﻿<Type Name="ApplyChangesOperation" FullName="Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation">
+  <TypeSignature Language="C#" Value="public sealed class ApplyChangesOperation : Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplyChangesOperation extends Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ApplyChangesOperation&#xA;Inherits CodeActionOperation" />
+  <TypeSignature Language="F#" Value="type ApplyChangesOperation = class&#xA;    inherit CodeActionOperation" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ApplyChangesOperation sealed : Microsoft::CodeAnalysis::CodeActions::CodeActionOperation" />
+  <TypeSignature Language="C++ CX" Value="public ref class ApplyChangesOperation sealed : Microsoft::CodeAnalysis::CodeActions::CodeActionOperation" />
+  <TypeSignature Language="C++ WINRT" Value="class ApplyChangesOperation sealed : Microsoft::CodeAnalysis::CodeActions::CodeActionOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.CodeActions.CodeActionOperation</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" /> for applying solution changes to a workspace.
+            <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetOperationsAsync(System.Threading.CancellationToken)" /> may return at most one
+            <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />. Hosts may provide custom handling for 
+            <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />s, but if a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> requires custom
+            host behavior not supported by a single <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />, then instead:
+            <list type="bullet"><description><text>Implement a custom <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> and <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />s</text></description><description><text>Do not return any <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" /> from <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetOperationsAsync(System.Threading.CancellationToken)" /></text></description><description><text>Directly apply any workspace edits</text></description><description><text>Handle any custom host behavior</text></description><description><text>Produce a preview for <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetPreviewOperationsAsync(System.Threading.CancellationToken)" /> 
+              by creating a custom <see cref="T:Microsoft.CodeAnalysis.CodeActions.PreviewOperation" /> or returning a single <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />
+              to use the built-in preview mechanism</text></description></list></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplyChangesOperation (Microsoft.CodeAnalysis.Solution changedSolution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.Solution changedSolution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation.#ctor(Microsoft.CodeAnalysis.Solution)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (changedSolution As Solution)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation : Microsoft.CodeAnalysis.Solution -&gt; Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" Usage="new Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation changedSolution" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplyChangesOperation(Microsoft::CodeAnalysis::Solution ^ changedSolution);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; ApplyChangesOperation(Microsoft::CodeAnalysis::Solution ^ changedSolution);" />
+      <MemberSignature Language="C++ WINRT" Value=" ApplyChangesOperation(Microsoft::CodeAnalysis::Solution const &amp; changedSolution);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="changedSolution" Type="Microsoft.CodeAnalysis.Solution" />
+      </Parameters>
+      <Docs>
+        <param name="changedSolution">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Apply">
+      <MemberSignature Language="C#" Value="public override void Apply (Microsoft.CodeAnalysis.Workspace workspace, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Apply(class Microsoft.CodeAnalysis.Workspace workspace, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation.Apply(Microsoft.CodeAnalysis.Workspace,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.Apply : Microsoft.CodeAnalysis.Workspace * System.Threading.CancellationToken -&gt; unit" Usage="applyChangesOperation.Apply (workspace, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Apply(Microsoft::CodeAnalysis::Workspace ^ workspace, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workspace" Type="Microsoft.CodeAnalysis.Workspace" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="workspace">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangedSolution">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Solution ChangedSolution { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Solution ChangedSolution" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation.ChangedSolution" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChangedSolution As Solution" />
+      <MemberSignature Language="F#" Value="member this.ChangedSolution : Microsoft.CodeAnalysis.Solution" Usage="Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation.ChangedSolution" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Solution ^ ChangedSolution { Microsoft::CodeAnalysis::Solution ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::Solution ^ ChangedSolution { Microsoft::CodeAnalysis::Solution ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

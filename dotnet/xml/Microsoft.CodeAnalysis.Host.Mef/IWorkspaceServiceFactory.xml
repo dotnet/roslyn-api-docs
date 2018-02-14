@@ -1,0 +1,55 @@
+﻿<Type Name="IWorkspaceServiceFactory" FullName="Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory">
+  <TypeSignature Language="C#" Value="public interface IWorkspaceServiceFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWorkspaceServiceFactory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IWorkspaceServiceFactory" />
+  <TypeSignature Language="F#" Value="type IWorkspaceServiceFactory = interface" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IWorkspaceServiceFactory" />
+  <TypeSignature Language="C++ CX" Value="public interface class IWorkspaceServiceFactory" />
+  <TypeSignature Language="C++ WINRT" Value="__interface IWorkspaceServiceFactory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A factory that creates instances of a specific <see cref="T:Microsoft.CodeAnalysis.Host.IWorkspaceService" />.
+            
+            Implement a <see cref="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" /> when you want to provide <see cref="T:Microsoft.CodeAnalysis.Host.IWorkspaceService" /> instances that use other services.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateService">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Host.IWorkspaceService CreateService (Microsoft.CodeAnalysis.Host.HostWorkspaceServices workspaceServices);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.Host.IWorkspaceService CreateService(class Microsoft.CodeAnalysis.Host.HostWorkspaceServices workspaceServices) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory.CreateService(Microsoft.CodeAnalysis.Host.HostWorkspaceServices)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateService (workspaceServices As HostWorkspaceServices) As IWorkspaceService" />
+      <MemberSignature Language="F#" Value="abstract member CreateService : Microsoft.CodeAnalysis.Host.HostWorkspaceServices -&gt; Microsoft.CodeAnalysis.Host.IWorkspaceService" Usage="iWorkspaceServiceFactory.CreateService workspaceServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Host::IWorkspaceService ^ CreateService(Microsoft::CodeAnalysis::Host::HostWorkspaceServices ^ workspaceServices);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; Microsoft::CodeAnalysis::Host::IWorkspaceService ^ CreateService(Microsoft::CodeAnalysis::Host::HostWorkspaceServices ^ workspaceServices);" />
+      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::Host::IWorkspaceService CreateService(Microsoft::CodeAnalysis::Host::HostWorkspaceServices const &amp; workspaceServices);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Host.IWorkspaceService</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workspaceServices" Type="Microsoft.CodeAnalysis.Host.HostWorkspaceServices" />
+      </Parameters>
+      <Docs>
+        <param name="workspaceServices">The <see cref="T:Microsoft.CodeAnalysis.Host.HostWorkspaceServices" /> that can be used to access other services.</param>
+        <summary>
+            Creates a new <see cref="T:Microsoft.CodeAnalysis.Host.IWorkspaceService" /> instance.
+            Returns <c>null</c> if the service is not applicable to the given workspace.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

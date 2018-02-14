@@ -1,0 +1,872 @@
+﻿<Type Name="ISymbol" FullName="Microsoft.CodeAnalysis.ISymbol">
+  <TypeSignature Language="C#" Value="public interface ISymbol : IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISymbol implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ISymbol" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISymbol&#xA;Implements IEquatable(Of ISymbol)" />
+  <TypeSignature Language="F#" Value="type ISymbol = interface&#xA;    interface IEquatable&lt;ISymbol&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public interface class ISymbol : IEquatable&lt;Microsoft::CodeAnalysis::ISymbol ^&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a symbol (namespace, class, method, parameter, etc.)
+            exposed by the compiler.
+            </summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public void Accept (Microsoft.CodeAnalysis.SymbolVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Accept(class Microsoft.CodeAnalysis.SymbolVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.Accept(Microsoft.CodeAnalysis.SymbolVisitor)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Accept (visitor As SymbolVisitor)" />
+      <MemberSignature Language="F#" Value="abstract member Accept : Microsoft.CodeAnalysis.SymbolVisitor -&gt; unit" Usage="iSymbol.Accept visitor" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Accept(Microsoft::CodeAnalysis::SymbolVisitor ^ visitor);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; void Accept(Microsoft::CodeAnalysis::SymbolVisitor ^ visitor);" />
+      <MemberSignature Language="C++ WINRT" Value="void Accept(Microsoft::CodeAnalysis::SymbolVisitor const &amp; visitor);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="Microsoft.CodeAnalysis.SymbolVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.SymbolVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.SymbolVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.Accept``1(Microsoft.CodeAnalysis.SymbolVisitor{``0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Accept(Of TResult) (visitor As SymbolVisitor(Of TResult)) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member Accept : Microsoft.CodeAnalysis.SymbolVisitor&lt;'Result&gt; -&gt; 'Result" Usage="iSymbol.Accept visitor" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA; TResult Accept(Microsoft::CodeAnalysis::SymbolVisitor&lt;TResult&gt; ^ visitor);" />
+      <MemberSignature Language="C++ WINRT" Value="template &lt;typename TResult&gt;&#xA; TResult Accept(Microsoft::CodeAnalysis::SymbolVisitor&lt;TResult&gt; const &amp; visitor);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="visitor" Type="Microsoft.CodeAnalysis.SymbolVisitor&lt;TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="visitor">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBeReferencedByName">
+      <MemberSignature Language="C#" Value="public bool CanBeReferencedByName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanBeReferencedByName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.CanBeReferencedByName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanBeReferencedByName As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CanBeReferencedByName : bool" Usage="Microsoft.CodeAnalysis.ISymbol.CanBeReferencedByName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CanBeReferencedByName { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool CanBeReferencedByName { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this symbol can be referenced by its name in code.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingAssembly">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IAssemblySymbol ContainingAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IAssemblySymbol ContainingAssembly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingAssembly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingAssembly As IAssemblySymbol" />
+      <MemberSignature Language="F#" Value="member this.ContainingAssembly : Microsoft.CodeAnalysis.IAssemblySymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingAssembly" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IAssemblySymbol ^ ContainingAssembly { Microsoft::CodeAnalysis::IAssemblySymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IAssemblySymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.IAssemblySymbol" /> for the containing assembly. Returns null if the
+            symbol is shared across multiple assemblies.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingModule">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IModuleSymbol ContainingModule { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IModuleSymbol ContainingModule" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingModule" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingModule As IModuleSymbol" />
+      <MemberSignature Language="F#" Value="member this.ContainingModule : Microsoft.CodeAnalysis.IModuleSymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingModule" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IModuleSymbol ^ ContainingModule { Microsoft::CodeAnalysis::IModuleSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IModuleSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.IModuleSymbol" /> for the containing module. Returns null if the
+            symbol is shared across multiple modules.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingNamespace">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamespaceSymbol ContainingNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamespaceSymbol ContainingNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingNamespace" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingNamespace As INamespaceSymbol" />
+      <MemberSignature Language="F#" Value="member this.ContainingNamespace : Microsoft.CodeAnalysis.INamespaceSymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingNamespace" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamespaceSymbol ^ ContainingNamespace { Microsoft::CodeAnalysis::INamespaceSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamespaceSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.INamespaceSymbol" /> for the nearest enclosing namespace. Returns null if the
+            symbol isn't contained in a namespace.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingSymbol">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol ContainingSymbol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISymbol ContainingSymbol" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingSymbol" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingSymbol As ISymbol" />
+      <MemberSignature Language="F#" Value="member this.ContainingSymbol : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingSymbol" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ISymbol ^ ContainingSymbol { Microsoft::CodeAnalysis::ISymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.ISymbol" /> for the immediately containing symbol.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol ContainingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamedTypeSymbol ContainingType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingType As INamedTypeSymbol" />
+      <MemberSignature Language="F#" Value="member this.ContainingType : Microsoft.CodeAnalysis.INamedTypeSymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamedTypeSymbol ^ ContainingType { Microsoft::CodeAnalysis::INamedTypeSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.INamedTypeSymbol" /> for the containing type. Returns null if the
+            symbol is not contained within a type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaredAccessibility">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Accessibility DeclaredAccessibility { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Accessibility DeclaredAccessibility" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.DeclaredAccessibility" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeclaredAccessibility As Accessibility" />
+      <MemberSignature Language="F#" Value="member this.DeclaredAccessibility : Microsoft.CodeAnalysis.Accessibility" Usage="Microsoft.CodeAnalysis.ISymbol.DeclaredAccessibility" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Accessibility DeclaredAccessibility { Microsoft::CodeAnalysis::Accessibility get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::Accessibility DeclaredAccessibility { Microsoft::CodeAnalysis::Accessibility get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Accessibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a <see cref="T:Microsoft.CodeAnalysis.Accessibility" /> indicating the declared accessibility for the symbol.
+            Returns NotApplicable if no accessibility is declared.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringSyntaxReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt; DeclaringSyntaxReferences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.SyntaxReference&gt; DeclaringSyntaxReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeclaringSyntaxReferences As ImmutableArray(Of SyntaxReference)" />
+      <MemberSignature Language="F#" Value="member this.DeclaringSyntaxReferences : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt;" Usage="Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::SyntaxReference ^&gt; DeclaringSyntaxReferences { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::SyntaxReference ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the syntax node(s) where this symbol was declared in source. Some symbols (for example,
+            partial classes) may be defined in more than one location. This property should return
+            one or more syntax nodes only if the symbol was declared in source code and also was
+            not implicitly declared (see the IsImplicitlyDeclared property). 
+            
+            <para>
+            Note that for namespace symbol, the declaring syntax might be declaring a nested namespace.
+            For example, the declaring syntax node for N1 in "namespace N1.N2 {...}" is the entire
+            NamespaceDeclarationSyntax for N1.N2. For the global namespace, the declaring syntax will
+            be the CompilationUnitSyntax.
+            </para></summary>
+        <value>
+            The syntax node(s) that declared the symbol. If the symbol was declared in metadata
+            or was implicitly declared, returns an empty read-only array.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt; GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.AttributeData&gt; GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.GetAttributes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAttributes () As ImmutableArray(Of AttributeData)" />
+      <MemberSignature Language="F#" Value="abstract member GetAttributes : unit -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt;" Usage="iSymbol.GetAttributes " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::AttributeData ^&gt; GetAttributes();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the attributes for the symbol. Returns an empty <see cref="T:System.Collections.Generic.IEnumerable`1" />
+            if there are no attributes.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocumentationCommentId">
+      <MemberSignature Language="C#" Value="public string GetDocumentationCommentId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDocumentationCommentId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.GetDocumentationCommentId" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDocumentationCommentId () As String" />
+      <MemberSignature Language="F#" Value="abstract member GetDocumentationCommentId : unit -&gt; string" Usage="iSymbol.GetDocumentationCommentId " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetDocumentationCommentId();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; Platform::String ^ GetDocumentationCommentId();" />
+      <MemberSignature Language="C++ WINRT" Value="std::wstring GetDocumentationCommentId();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the Documentation Comment ID for the symbol, or null if the symbol doesn't
+            support documentation comments.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocumentationCommentXml">
+      <MemberSignature Language="C#" Value="public string GetDocumentationCommentXml (System.Globalization.CultureInfo preferredCulture = null, bool expandIncludes = false, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDocumentationCommentXml(class System.Globalization.CultureInfo preferredCulture, bool expandIncludes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.GetDocumentationCommentXml(System.Globalization.CultureInfo,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetDocumentationCommentXml : System.Globalization.CultureInfo * bool * System.Threading.CancellationToken -&gt; string" Usage="iSymbol.GetDocumentationCommentXml (preferredCulture, expandIncludes, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preferredCulture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="expandIncludes" Type="System.Boolean" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="preferredCulture">Preferred culture or null for the default.</param>
+        <param name="expandIncludes">Optionally, expand &lt;include&gt; elements.  No impact on non-source documentation comments.</param>
+        <param name="cancellationToken">Token allowing cancellation of request.</param>
+        <summary>
+            Gets the XML (as text) for the comment associated with the symbol.
+            </summary>
+        <returns>The XML that would be written to the documentation file for the symbol.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasUnsupportedMetadata">
+      <MemberSignature Language="C#" Value="public bool HasUnsupportedMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasUnsupportedMetadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.HasUnsupportedMetadata" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasUnsupportedMetadata As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasUnsupportedMetadata : bool" Usage="Microsoft.CodeAnalysis.ISymbol.HasUnsupportedMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasUnsupportedMetadata { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool HasUnsupportedMetadata { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that this symbol uses metadata that cannot be supported by the language.
+            
+            <para>
+            Examples include:
+            <list type="bullet"><item> Pointer types in VB </item><item> ByRef return type </item><item> Required custom modifiers </item></list></para><para>
+            This is distinguished from, for example, references to metadata symbols defined in assemblies that weren't referenced.
+            Symbols where this returns true can never be used successfully, and thus should never appear in any IDE feature.
+            </para><para>
+            This is set for metadata symbols, as follows:
+            <list type="bullet"><item> Type - if a type is unsupported (e.g., a pointer type, etc.) </item><item> Method - parameter or return type is unsupported </item><item> Field - type is unsupported </item><item> Event - type is unsupported </item><item> Property - type is unsupported </item><item> Parameter - type is unsupported </item></list></para></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAbstract">
+      <MemberSignature Language="C#" Value="public bool IsAbstract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAbstract" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsAbstract" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsAbstract As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsAbstract : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsAbstract" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAbstract { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsAbstract { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the symbol is abstract.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefinition">
+      <MemberSignature Language="C#" Value="public bool IsDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefinition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsDefinition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDefinition As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsDefinition : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsDefinition" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDefinition { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsDefinition { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the symbol is the original definition. Returns false
+            if the symbol is derived from another symbol, by type substitution for instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExtern">
+      <MemberSignature Language="C#" Value="public bool IsExtern { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsExtern" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsExtern" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsExtern As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsExtern : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsExtern" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsExtern { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsExtern { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the symbol is defined externally.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImplicitlyDeclared">
+      <MemberSignature Language="C#" Value="public bool IsImplicitlyDeclared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImplicitlyDeclared" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsImplicitlyDeclared" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsImplicitlyDeclared As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsImplicitlyDeclared : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsImplicitlyDeclared" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsImplicitlyDeclared { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsImplicitlyDeclared { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this symbol was automatically created by the compiler, and does not have
+            an explicit corresponding source code declaration. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is intended for symbols that are ordinary symbols in the language sense, and may be
+            used by code, but that are simply declared implicitly rather than with explicit language
+            syntax.
+            
+            <para>
+            Examples include (this list is not exhaustive):
+            <list type="bullet"><item> the default constructor for a class or struct that is created if one is not provided, </item><item> the BeginInvoke/Invoke/EndInvoke methods for a delegate, </item><item> the generated backing field for an auto property or a field-like event, </item><item> the "this" parameter for non-static methods, </item><item> the "value" parameter for a property setter, </item><item> the parameters on indexer accessor methods (not on the indexer itself), </item><item> methods in anonymous types </item></list></para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOverride">
+      <MemberSignature Language="C#" Value="public bool IsOverride { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOverride" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsOverride" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsOverride As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsOverride : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsOverride" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsOverride { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsOverride { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the symbol is an override of a base class symbol.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSealed">
+      <MemberSignature Language="C#" Value="public bool IsSealed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSealed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsSealed" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSealed As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSealed : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsSealed" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSealed { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsSealed { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the symbol is sealed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStatic">
+      <MemberSignature Language="C#" Value="public bool IsStatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStatic" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsStatic" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsStatic As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsStatic : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsStatic" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsStatic { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsStatic { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the symbol is static.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVirtual">
+      <MemberSignature Language="C#" Value="public bool IsVirtual { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVirtual" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsVirtual" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsVirtual As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsVirtual : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsVirtual" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsVirtual { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsVirtual { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether the symbol is virtual.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SymbolKind Kind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SymbolKind Kind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.Kind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kind As SymbolKind" />
+      <MemberSignature Language="F#" Value="member this.Kind : Microsoft.CodeAnalysis.SymbolKind" Usage="Microsoft.CodeAnalysis.ISymbol.Kind" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SymbolKind Kind { Microsoft::CodeAnalysis::SymbolKind get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::SymbolKind Kind { Microsoft::CodeAnalysis::SymbolKind get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SymbolKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.SymbolKind" /> indicating what kind of symbol it is.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.Language" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Language As String" />
+      <MemberSignature Language="F#" Value="member this.Language : string" Usage="Microsoft.CodeAnalysis.ISymbol.Language" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Language { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ Language { Platform::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the source language ("C#" or "Visual Basic").
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Locations">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt; Locations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Location&gt; Locations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.Locations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Locations As ImmutableArray(Of Location)" />
+      <MemberSignature Language="F#" Value="member this.Locations : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt;" Usage="Microsoft.CodeAnalysis.ISymbol.Locations" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Location ^&gt; Locations { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Location ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the locations where the symbol was originally defined, either in source or
+            metadata. Some symbols (for example, partial classes) may be defined in more than one
+            location.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataName">
+      <MemberSignature Language="C#" Value="public string MetadataName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MetadataName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.MetadataName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MetadataName As String" />
+      <MemberSignature Language="F#" Value="member this.MetadataName : string" Usage="Microsoft.CodeAnalysis.ISymbol.MetadataName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MetadataName { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ MetadataName { Platform::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of a symbol as it appears in metadata. Most of the time, this
+            is the same as the Name property, with the following exceptions:
+            <list type="number"><item> The metadata name of generic types includes the "`1", "`2" etc. suffix that
+            indicates the number of type parameters (it does not include, however, names of
+            containing types or namespaces). </item><item> The metadata name of explicit interface names have spaces removed, compared to
+            the name property. </item><item> The length of names is limited to not exceed metadata restrictions. </item></list></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.CodeAnalysis.ISymbol.Name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ Name { Platform::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the symbol name. Returns the empty string if unnamed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalDefinition">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol OriginalDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISymbol OriginalDefinition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.OriginalDefinition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginalDefinition As ISymbol" />
+      <MemberSignature Language="F#" Value="member this.OriginalDefinition : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.ISymbol.OriginalDefinition" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ISymbol ^ OriginalDefinition { Microsoft::CodeAnalysis::ISymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.ISymbol" /> for the original definition of the symbol.
+            If this symbol is derived from another symbol, by type substitution for instance,
+            this gets the original symbol, as it was defined in source or metadata.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDisplayParts">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToDisplayParts (Microsoft.CodeAnalysis.SymbolDisplayFormat format = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToDisplayParts(class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToDisplayParts(Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToDisplayParts (Optional format As SymbolDisplayFormat = null) As ImmutableArray(Of SymbolDisplayPart)" />
+      <MemberSignature Language="F#" Value="abstract member ToDisplayParts : Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;" Usage="iSymbol.ToDisplayParts format" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="Microsoft.CodeAnalysis.SymbolDisplayFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Formatting rules - null implies
+            SymbolDisplayFormat.ErrorMessageFormat.</param>
+        <summary>
+            Convert a symbol to an array of string parts, each of which has a kind. Useful for
+            colorizing the display string.
+            </summary>
+        <returns>A read-only array of string parts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDisplayString">
+      <MemberSignature Language="C#" Value="public string ToDisplayString (Microsoft.CodeAnalysis.SymbolDisplayFormat format = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToDisplayString(class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToDisplayString(Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToDisplayString (Optional format As SymbolDisplayFormat = null) As String" />
+      <MemberSignature Language="F#" Value="abstract member ToDisplayString : Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; string" Usage="iSymbol.ToDisplayString format" />
+      <MemberSignature Language="C++ WINRT" Value="std::wstring ToDisplayString(Microsoft::CodeAnalysis::SymbolDisplayFormat const &amp; format = null);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="Microsoft.CodeAnalysis.SymbolDisplayFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Format or null for the default.</param>
+        <summary>
+            Converts the symbol to a string representation.
+            </summary>
+        <returns>A formatted string representation of the symbol.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToMinimalDisplayParts">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToMinimalDisplayParts (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.SymbolDisplayFormat format = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToMinimalDisplayParts(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToMinimalDisplayParts(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
+      <MemberSignature Language="F#" Value="abstract member ToMinimalDisplayParts : Microsoft.CodeAnalysis.SemanticModel * int * Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;" Usage="iSymbol.ToMinimalDisplayParts (semanticModel, position, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel" />
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="format" Type="Microsoft.CodeAnalysis.SymbolDisplayFormat" />
+      </Parameters>
+      <Docs>
+        <param name="semanticModel">Binding information (for determining names appropriate to
+            the context).</param>
+        <param name="position">A position in the source code (context).</param>
+        <param name="format">Formatting rules - null implies
+            SymbolDisplayFormat.MinimallyQualifiedFormat.</param>
+        <summary>
+            Convert a symbol to an array of string parts, each of which has a kind. May be tailored
+            to a specific location in the source code. Useful for colorizing the display string.
+            </summary>
+        <returns>A read-only array of string parts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToMinimalDisplayString">
+      <MemberSignature Language="C#" Value="public string ToMinimalDisplayString (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.SymbolDisplayFormat format = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToMinimalDisplayString(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToMinimalDisplayString(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
+      <MemberSignature Language="F#" Value="abstract member ToMinimalDisplayString : Microsoft.CodeAnalysis.SemanticModel * int * Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; string" Usage="iSymbol.ToMinimalDisplayString (semanticModel, position, format)" />
+      <MemberSignature Language="C++ WINRT" Value="std::wstring ToMinimalDisplayString(Microsoft::CodeAnalysis::SemanticModel const &amp; semanticModel, int position, Microsoft::CodeAnalysis::SymbolDisplayFormat const &amp; format = null);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel" />
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="format" Type="Microsoft.CodeAnalysis.SymbolDisplayFormat" />
+      </Parameters>
+      <Docs>
+        <param name="semanticModel">Binding information (for determining names appropriate to
+            the context).</param>
+        <param name="position">A position in the source code (context).</param>
+        <param name="format">Formatting rules - null implies
+            SymbolDisplayFormat.MinimallyQualifiedFormat.</param>
+        <summary>
+            Convert a symbol to a string that can be displayed to the user. May be tailored to a
+            specific location in the source code.
+            </summary>
+        <returns>A formatted string that can be displayed to the user.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

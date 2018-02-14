@@ -1,0 +1,181 @@
+﻿<Type Name="AnalyzerReference" FullName="Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference">
+  <TypeSignature Language="C#" Value="public abstract class AnalyzerReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AnalyzerReference extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AnalyzerReference" />
+  <TypeSignature Language="F#" Value="type AnalyzerReference = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AnalyzerReference abstract" />
+  <TypeSignature Language="C++ CX" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;public ref class AnalyzerReference abstract" />
+  <TypeSignature Language="C++ WINRT" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;class AnalyzerReference abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an analyzer assembly reference that contains diagnostic analyzers.
+            </summary>
+    <remarks>
+            Represents a logical location of the analyzer reference, not the content of the reference. 
+            The content might change in time. A snapshot is taken when the compiler queries the reference for its analyzers.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AnalyzerReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; AnalyzerReference();" />
+      <MemberSignature Language="C++ CX" Value="protected:&#xA; AnalyzerReference();" />
+      <MemberSignature Language="C++ WINRT" Value=" AnalyzerReference();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public virtual string Display { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Display" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.Display" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Display As String" />
+      <MemberSignature Language="F#" Value="member this.Display : string" Usage="Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.Display" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Display { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; virtual property Platform::String ^ Display { Platform::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Path or name used in error messages to identity the reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Should not be null.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public abstract string FullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.FullPath" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property FullPath As String" />
+      <MemberSignature Language="F#" Value="member this.FullPath : string" Usage="Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.FullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ FullPath { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; abstract property Platform::String ^ FullPath { Platform::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Full path describing the location of the analyzer reference, or null if the reference has no location.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnalyzers">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; GetAnalyzers (string language);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; GetAnalyzers(string language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.GetAnalyzers(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetAnalyzers (language As String) As ImmutableArray(Of DiagnosticAnalyzer)" />
+      <MemberSignature Language="F#" Value="abstract member GetAnalyzers : string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;" Usage="analyzerReference.GetAnalyzers language" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Diagnostics::DiagnosticAnalyzer ^&gt; GetAnalyzers(System::String ^ language);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="language">Language name.</param>
+        <summary>
+            Gets all the diagnostic analyzers defined in this assembly reference for the given <paramref name="language" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnalyzersForAllLanguages">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; GetAnalyzersForAllLanguages ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; GetAnalyzersForAllLanguages() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.GetAnalyzersForAllLanguages" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetAnalyzersForAllLanguages () As ImmutableArray(Of DiagnosticAnalyzer)" />
+      <MemberSignature Language="F#" Value="abstract member GetAnalyzersForAllLanguages : unit -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;" Usage="analyzerReference.GetAnalyzersForAllLanguages " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Diagnostics::DiagnosticAnalyzer ^&gt; GetAnalyzersForAllLanguages();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets all the diagnostic analyzers defined in this assembly reference, irrespective of the language supported by the analyzer.
+            Use this method only if you need all the analyzers defined in the assembly, without a language context.
+            In most instances, either the analyzer reference is associated with a project or is being queried for analyzers in a particular language context.
+            If so, use <see cref="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.GetAnalyzers(System.String)" /> method.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public abstract object Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.Id" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Id As Object" />
+      <MemberSignature Language="F#" Value="member this.Id : obj" Usage="Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.Id" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Object ^ Id { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; abstract property Platform::Object ^ Id { Platform::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A unique identifier for this analyzer reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Should not be null.
+            Note that this and <see cref="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.FullPath" /> serve different purposes. An analyzer reference may not
+            have a path, but it always has an ID. Further, two analyzer references with different paths may
+            represent two copies of the same analyzer, in which case the IDs should also be the same.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

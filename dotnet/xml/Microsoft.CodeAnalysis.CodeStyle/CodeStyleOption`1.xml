@@ -1,0 +1,262 @@
+﻿<Type Name="CodeStyleOption&lt;T&gt;" FullName="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class CodeStyleOption&lt;T&gt; : IEquatable&lt;Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;T&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeStyleOption`1&lt;T&gt; extends System.Object implements class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1&lt;!T&gt;&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class CodeStyleOption(Of T)&#xA;Implements IEquatable(Of CodeStyleOption(Of T))" />
+  <TypeSignature Language="F#" Value="type CodeStyleOption&lt;'T&gt; = class&#xA;    interface ICodeStyleOption&#xA;    interface IEquatable&lt;CodeStyleOption&lt;'T&gt;&gt;" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA;public ref class CodeStyleOption : IEquatable&lt;Microsoft::CodeAnalysis::CodeStyle::CodeStyleOption&lt;T&gt; ^&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;T&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">To be added.</typeparam>
+    <summary>
+            Represents a code style option and an associated notification option.  Supports
+            being instantiated with T as a <see cref="T:System.Boolean" /> or an <code>enum type</code>.
+            
+            CodeStyleOption also has some basic support for migration a <see cref="T:System.Boolean" /> option
+            forward to an <code>enum type</code> option.  Specifically, if a previously serialized
+            bool-CodeStyleOption is then deserialized into an enum-CodeStyleOption then 'false' 
+            values will be migrated to have the 0-value of the enum, and 'true' values will be
+            migrated to have the 1-value of the enum.
+            
+            Similarly, enum-type code options will serialize out in a way that is compatible with 
+            hosts that expect the value to be a boolean.  Specifically, if the enum value is 0 or 1
+            then those values will write back as false/true.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeStyleOption (T value, Microsoft.CodeAnalysis.CodeStyle.NotificationOption notification);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T value, class Microsoft.CodeAnalysis.CodeStyle.NotificationOption notification) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.#ctor(`0,Microsoft.CodeAnalysis.CodeStyle.NotificationOption)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (value As T, notification As NotificationOption)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt; : 'T * Microsoft.CodeAnalysis.CodeStyle.NotificationOption -&gt; Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;" Usage="new Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt; (value, notification)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CodeStyleOption(T value, Microsoft::CodeAnalysis::CodeStyle::NotificationOption ^ notification);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; CodeStyleOption(T value, Microsoft::CodeAnalysis::CodeStyle::NotificationOption ^ notification);" />
+      <MemberSignature Language="C++ WINRT" Value=" CodeStyleOption(T value, Microsoft::CodeAnalysis::CodeStyle::NotificationOption const &amp; notification);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+        <Parameter Name="notification" Type="Microsoft.CodeAnalysis.CodeStyle.NotificationOption" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <param name="notification">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;T&gt; Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1&lt;!T&gt; Default" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Default" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Default As CodeStyleOption(Of T)" />
+      <MemberSignature Language="F#" Value="member this.Default : Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;" Usage="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;.Default" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::CodeAnalysis::CodeStyle::CodeStyleOption&lt;T&gt; ^ Default { Microsoft::CodeAnalysis::CodeStyle::CodeStyleOption&lt;T&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;T&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1&lt;!T&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Equals(Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As CodeStyleOption(Of T)) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt; -&gt; bool" Usage="codeStyleOption.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::CodeAnalysis::CodeStyle::CodeStyleOption&lt;T&gt; ^ other);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="codeStyleOption.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override bool Equals(Platform::Object ^ obj);" />
+      <MemberSignature Language="C++ WINRT" Value=" override bool Equals(winrt::Windows::Foundation::IInspectable const &amp; obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXElement">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;T&gt; FromXElement (System.Xml.Linq.XElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1&lt;!T&gt; FromXElement(class System.Xml.Linq.XElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.FromXElement(System.Xml.Linq.XElement)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromXElement (element As XElement) As CodeStyleOption(Of T)" />
+      <MemberSignature Language="F#" Value="static member FromXElement : System.Xml.Linq.XElement -&gt; Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;" Usage="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;.FromXElement element" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::CodeStyle::CodeStyleOption&lt;T&gt; ^ FromXElement(System::Xml::Linq::XElement ^ element);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Xml.Linq.XElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="codeStyleOption.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ WINRT" Value=" override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Notification">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CodeStyle.NotificationOption Notification { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CodeStyle.NotificationOption Notification" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Notification" />
+      <MemberSignature Language="VB.NET" Value="Public Property Notification As NotificationOption" />
+      <MemberSignature Language="F#" Value="member this.Notification : Microsoft.CodeAnalysis.CodeStyle.NotificationOption with get, set" Usage="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;.Notification" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::CodeStyle::NotificationOption ^ Notification { Microsoft::CodeAnalysis::CodeStyle::NotificationOption ^ get(); void set(Microsoft::CodeAnalysis::CodeStyle::NotificationOption ^ value); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::CodeStyle::NotificationOption ^ Notification { Microsoft::CodeAnalysis::CodeStyle::NotificationOption ^ get(); void set(Microsoft::CodeAnalysis::CodeStyle::NotificationOption ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeStyle.NotificationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXElement">
+      <MemberSignature Language="C#" Value="public System.Xml.Linq.XElement ToXElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.Linq.XElement ToXElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.ToXElement" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToXElement () As XElement" />
+      <MemberSignature Language="F#" Value="abstract member ToXElement : unit -&gt; System.Xml.Linq.XElement&#xA;override this.ToXElement : unit -&gt; System.Xml.Linq.XElement" Usage="codeStyleOption.ToXElement " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::Linq::XElement ^ ToXElement();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.CodeAnalysis.CodeStyle.ICodeStyleOption.ToXElement</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption`1.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As T" />
+      <MemberSignature Language="F#" Value="member this.Value : 'T with get, set" Usage="Microsoft.CodeAnalysis.CodeStyle.CodeStyleOption&lt;'T&gt;.Value" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property T Value { T get(); void set(T value); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property T Value { T get(); void set(T value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,294 @@
+﻿<Type Name="TextChangeRange" FullName="Microsoft.CodeAnalysis.Text.TextChangeRange">
+  <TypeSignature Language="C#" Value="public struct TextChangeRange : IEquatable&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit TextChangeRange extends System.ValueType implements class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextChangeRange&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Text.TextChangeRange" />
+  <TypeSignature Language="VB.NET" Value="Public Structure TextChangeRange&#xA;Implements IEquatable(Of TextChangeRange)" />
+  <TypeSignature Language="F#" Value="type TextChangeRange = struct" />
+  <TypeSignature Language="C++ CLI" Value="public value class TextChangeRange : IEquatable&lt;Microsoft::CodeAnalysis::Text::TextChangeRange&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents the change to a span of text.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextChangeRange (Microsoft.CodeAnalysis.Text.TextSpan span, int newLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.Text.TextSpan span, int32 newLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextChangeRange.#ctor(Microsoft.CodeAnalysis.Text.TextSpan,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (span As TextSpan, newLength As Integer)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Text.TextChangeRange : Microsoft.CodeAnalysis.Text.TextSpan * int -&gt; Microsoft.CodeAnalysis.Text.TextChangeRange" Usage="new Microsoft.CodeAnalysis.Text.TextChangeRange (span, newLength)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TextChangeRange(Microsoft::CodeAnalysis::Text::TextSpan span, int newLength);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="newLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="span"></param>
+        <param name="newLength"></param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.CodeAnalysis.Text.TextChangeRange" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapse">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Text.TextChangeRange Collapse (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt; changes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.Text.TextChangeRange Collapse(class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextChangeRange&gt; changes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextChangeRange.Collapse(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Text.TextChangeRange})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Collapse (changes As IEnumerable(Of TextChangeRange)) As TextChangeRange" />
+      <MemberSignature Language="F#" Value="static member Collapse : seq&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt; -&gt; Microsoft.CodeAnalysis.Text.TextChangeRange" Usage="Microsoft.CodeAnalysis.Text.TextChangeRange.Collapse changes" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::Text::TextChangeRange Collapse(System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Text::TextChangeRange&gt; ^ changes);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.TextChangeRange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="changes" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="changes">To be added.</param>
+        <summary>
+            Collapse a set of <see cref="T:Microsoft.CodeAnalysis.Text.TextChangeRange" />s into a single encompassing range.  If
+            the set of ranges provided is empty, an empty range is returned.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.CodeAnalysis.Text.TextChangeRange other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.Text.TextChangeRange other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextChangeRange.Equals(Microsoft.CodeAnalysis.Text.TextChangeRange)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As TextChangeRange) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.Text.TextChangeRange -&gt; bool" Usage="textChangeRange.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::CodeAnalysis::Text::TextChangeRange other);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.Text.TextChangeRange" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>
+            Compares current instance of <see cref="T:Microsoft.CodeAnalysis.Text.TextChangeRange" /> to another.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextChangeRange.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="textChangeRange.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override bool Equals(Platform::Object ^ obj);" />
+      <MemberSignature Language="C++ WINRT" Value=" override bool Equals(winrt::Windows::Foundation::IInspectable const &amp; obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>
+            Compares current instance of <see cref="T:Microsoft.CodeAnalysis.Text.TextChangeRange" /> to another.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextChangeRange.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="textChangeRange.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ WINRT" Value=" override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Provides hash code for current instance of <see cref="T:Microsoft.CodeAnalysis.Text.TextChangeRange" />.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewLength">
+      <MemberSignature Language="C#" Value="public int NewLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.TextChangeRange.NewLength" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NewLength As Integer" />
+      <MemberSignature Language="F#" Value="member this.NewLength : int" Usage="Microsoft.CodeAnalysis.Text.TextChangeRange.NewLength" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int NewLength { int get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property int NewLength { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Width of the span after the edit.  A 0 here would represent a delete
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoChanges">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt; NoChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IReadOnlyList`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextChangeRange&gt; NoChanges" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.TextChangeRange.NoChanges" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property NoChanges As IReadOnlyList(Of TextChangeRange)" />
+      <MemberSignature Language="F#" Value="member this.NoChanges : System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt;" Usage="Microsoft.CodeAnalysis.Text.TextChangeRange.NoChanges" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Collections::Generic::IReadOnlyList&lt;Microsoft::CodeAnalysis::Text::TextChangeRange&gt; ^ NoChanges { System::Collections::Generic::IReadOnlyList&lt;Microsoft::CodeAnalysis::Text::TextChangeRange&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Text.TextChangeRange&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An empty set of changes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.CodeAnalysis.Text.TextChangeRange left, Microsoft.CodeAnalysis.Text.TextChangeRange right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.CodeAnalysis.Text.TextChangeRange left, valuetype Microsoft.CodeAnalysis.Text.TextChangeRange right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextChangeRange.op_Equality(Microsoft.CodeAnalysis.Text.TextChangeRange,Microsoft.CodeAnalysis.Text.TextChangeRange)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As TextChangeRange, right As TextChangeRange) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.Text.TextChangeRange * Microsoft.CodeAnalysis.Text.TextChangeRange -&gt; bool" Usage="left = right" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::CodeAnalysis::Text::TextChangeRange left, Microsoft::CodeAnalysis::Text::TextChangeRange right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.Text.TextChangeRange" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.Text.TextChangeRange" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>
+            Determines if two instances of <see cref="T:Microsoft.CodeAnalysis.Text.TextChangeRange" /> are same.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.CodeAnalysis.Text.TextChangeRange left, Microsoft.CodeAnalysis.Text.TextChangeRange right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.CodeAnalysis.Text.TextChangeRange left, valuetype Microsoft.CodeAnalysis.Text.TextChangeRange right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextChangeRange.op_Inequality(Microsoft.CodeAnalysis.Text.TextChangeRange,Microsoft.CodeAnalysis.Text.TextChangeRange)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As TextChangeRange, right As TextChangeRange) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.Text.TextChangeRange * Microsoft.CodeAnalysis.Text.TextChangeRange -&gt; bool" Usage="Microsoft.CodeAnalysis.Text.TextChangeRange.op_Inequality (left, right)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::CodeAnalysis::Text::TextChangeRange left, Microsoft::CodeAnalysis::Text::TextChangeRange right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.Text.TextChangeRange" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.Text.TextChangeRange" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>
+            Determines if two instances of <see cref="T:Microsoft.CodeAnalysis.Text.TextChangeRange" /> are different.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Span">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Text.TextSpan Span { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextSpan Span" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.TextChangeRange.Span" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Span As TextSpan" />
+      <MemberSignature Language="F#" Value="member this.Span : Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.Text.TextChangeRange.Span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Text::TextSpan Span { Microsoft::CodeAnalysis::Text::TextSpan get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The span of text before the edit which is being changed
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

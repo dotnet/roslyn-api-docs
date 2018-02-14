@@ -1,0 +1,164 @@
+﻿<Type Name="LocalizableResourceString" FullName="Microsoft.CodeAnalysis.LocalizableResourceString">
+  <TypeSignature Language="C#" Value="public sealed class LocalizableResourceString : Microsoft.CodeAnalysis.LocalizableString" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LocalizableResourceString extends Microsoft.CodeAnalysis.LocalizableString" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.LocalizableResourceString" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class LocalizableResourceString&#xA;Inherits LocalizableString" />
+  <TypeSignature Language="F#" Value="type LocalizableResourceString = class&#xA;    inherit LocalizableString&#xA;    interface IObjectWritable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LocalizableResourceString sealed : Microsoft::CodeAnalysis::LocalizableString" />
+  <TypeSignature Language="C++ CX" Value="public ref class LocalizableResourceString sealed : Microsoft::CodeAnalysis::LocalizableString" />
+  <TypeSignature Language="C++ WINRT" Value="class LocalizableResourceString sealed : Microsoft::CodeAnalysis::LocalizableString" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.LocalizableString</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A localizable resource string that may possibly be formatted differently depending on culture.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalizableResourceString (string nameOfLocalizableResource, System.Resources.ResourceManager resourceManager, Type resourceSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string nameOfLocalizableResource, class System.Resources.ResourceManager resourceManager, class System.Type resourceSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.LocalizableResourceString.#ctor(System.String,System.Resources.ResourceManager,System.Type)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.LocalizableResourceString : string * System.Resources.ResourceManager * Type -&gt; Microsoft.CodeAnalysis.LocalizableResourceString" Usage="new Microsoft.CodeAnalysis.LocalizableResourceString (nameOfLocalizableResource, resourceManager, resourceSource)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; LocalizableResourceString(System::String ^ nameOfLocalizableResource, System::Resources::ResourceManager ^ resourceManager, Type ^ resourceSource);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nameOfLocalizableResource" Type="System.String" />
+        <Parameter Name="resourceManager" Type="System.Resources.ResourceManager" />
+        <Parameter Name="resourceSource" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="nameOfLocalizableResource">nameof the resource that needs to be localized.</param>
+        <param name="resourceManager">
+          <see cref="T:System.Resources.ResourceManager" /> for the calling assembly.</param>
+        <param name="resourceSource">Type handling assembly's resource management. Typically, this is the static class generated for the resources file from which resources are accessed.</param>
+        <summary>
+            Creates a localizable resource string with no formatting arguments.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalizableResourceString (string nameOfLocalizableResource, System.Resources.ResourceManager resourceManager, Type resourceSource, params string[] formatArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string nameOfLocalizableResource, class System.Resources.ResourceManager resourceManager, class System.Type resourceSource, string[] formatArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.LocalizableResourceString.#ctor(System.String,System.Resources.ResourceManager,System.Type,System.String[])" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.LocalizableResourceString : string * System.Resources.ResourceManager * Type * string[] -&gt; Microsoft.CodeAnalysis.LocalizableResourceString" Usage="new Microsoft.CodeAnalysis.LocalizableResourceString (nameOfLocalizableResource, resourceManager, resourceSource, formatArguments)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; LocalizableResourceString(System::String ^ nameOfLocalizableResource, System::Resources::ResourceManager ^ resourceManager, Type ^ resourceSource, ... cli::array &lt;System::String ^&gt; ^ formatArguments);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nameOfLocalizableResource" Type="System.String" />
+        <Parameter Name="resourceManager" Type="System.Resources.ResourceManager" />
+        <Parameter Name="resourceSource" Type="System.Type" />
+        <Parameter Name="formatArguments" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="nameOfLocalizableResource">nameof the resource that needs to be localized.</param>
+        <param name="resourceManager">
+          <see cref="T:System.Resources.ResourceManager" /> for the calling assembly.</param>
+        <param name="resourceSource">Type handling assembly's resource management. Typically, this is the static class generated for the resources file from which resources are accessed.</param>
+        <param name="formatArguments">Optional arguments for formatting the localizable resource string.</param>
+        <summary>
+            Creates a localizable resource string that may possibly be formatted differently depending on culture.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AreEqual">
+      <MemberSignature Language="C#" Value="protected override bool AreEqual (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool AreEqual(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.LocalizableResourceString.AreEqual(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function AreEqual (other As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.AreEqual : obj -&gt; bool" Usage="localizableResourceString.AreEqual other" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool AreEqual(System::Object ^ other);" />
+      <MemberSignature Language="C++ CX" Value="protected:&#xA; override bool AreEqual(Platform::Object ^ other);" />
+      <MemberSignature Language="C++ WINRT" Value=" override bool AreEqual(winrt::Windows::Foundation::IInspectable const &amp; other);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHash">
+      <MemberSignature Language="C#" Value="protected override int GetHash ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 GetHash() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.LocalizableResourceString.GetHash" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetHash () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHash : unit -&gt; int" Usage="localizableResourceString.GetHash " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override int GetHash();" />
+      <MemberSignature Language="C++ CX" Value="protected:&#xA; override int GetHash();" />
+      <MemberSignature Language="C++ WINRT" Value=" override int GetHash();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="protected override string GetText (IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetText(class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.LocalizableResourceString.GetText(System.IFormatProvider)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetText (formatProvider As IFormatProvider) As String" />
+      <MemberSignature Language="F#" Value="override this.GetText : IFormatProvider -&gt; string" Usage="localizableResourceString.GetText formatProvider" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::String ^ GetText(IFormatProvider ^ formatProvider);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="formatProvider">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

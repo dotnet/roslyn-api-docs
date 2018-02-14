@@ -1,0 +1,83 @@
+﻿<Type Name="OptimizationLevel" FullName="Microsoft.CodeAnalysis.OptimizationLevel">
+  <TypeSignature Language="C#" Value="public enum OptimizationLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OptimizationLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.OptimizationLevel" />
+  <TypeSignature Language="VB.NET" Value="Public Enum OptimizationLevel" />
+  <TypeSignature Language="F#" Value="type OptimizationLevel = " />
+  <TypeSignature Language="C++ CLI" Value="public enum class OptimizationLevel" />
+  <TypeSignature Language="C++ CX" Value="public enum class OptimizationLevel" />
+  <TypeSignature Language="C++ WINRT" Value="enum OptimizationLevel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Determines the level of optimization of the generated code.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="Debug" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.OptimizationLevel Debug = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.OptimizationLevel.Debug" />
+      <MemberSignature Language="VB.NET" Value="Debug" />
+      <MemberSignature Language="F#" Value="Debug = 0" Usage="Microsoft.CodeAnalysis.OptimizationLevel.Debug" />
+      <MemberSignature Language="C++ CLI" Value="Debug" />
+      <MemberSignature Language="C++ CX" Value="Debug" />
+      <MemberSignature Language="C++ WINRT" Value="Debug" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.OptimizationLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Disables all optimizations and instruments the generated code to improve debugging experience.
+            </summary>
+        <remarks>
+            The compiler prefers debuggability over performance. Do not use for code running in a production environment.
+            <list type="bullet"><item><description>JIT optimizations are disabled via assembly level attribute (<see cref="T:System.Diagnostics.DebuggableAttribute" />).</description></item><item><description>Edit and Continue is enabled.</description></item><item><description>Slots for local variables are not reused, lifetime of local variables is extended to make the values available during debugging.</description></item></list><para>
+            Corresponds to command line argument /optimize-.
+            </para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Release">
+      <MemberSignature Language="C#" Value="Release" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.OptimizationLevel Release = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.OptimizationLevel.Release" />
+      <MemberSignature Language="VB.NET" Value="Release" />
+      <MemberSignature Language="F#" Value="Release = 1" Usage="Microsoft.CodeAnalysis.OptimizationLevel.Release" />
+      <MemberSignature Language="C++ CLI" Value="Release" />
+      <MemberSignature Language="C++ CX" Value="Release" />
+      <MemberSignature Language="C++ WINRT" Value="Release" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.OptimizationLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Enables all optimizations, debugging experience might be degraded.
+            </summary>
+        <remarks>
+            The compiler prefers performance over debuggability. Use for code running in a production environment.
+            <list type="bullet"><item><description>JIT optimizations are enabled via assembly level attribute (<see cref="T:System.Diagnostics.DebuggableAttribute" />).</description></item><item><description>Edit and Continue is disabled.</description></item><item><description>Sequence points may be optimized away. As a result it might not be possible to place or hit a breakpoint.</description></item><item><description>User-defined locals might be optimized away. They might not be available while debugging.</description></item></list><para>
+            Corresponds to command line argument /optimize+.
+            </para></remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

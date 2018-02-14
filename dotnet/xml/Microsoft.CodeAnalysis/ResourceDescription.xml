@@ -1,0 +1,90 @@
+﻿<Type Name="ResourceDescription" FullName="Microsoft.CodeAnalysis.ResourceDescription">
+  <TypeSignature Language="C#" Value="public sealed class ResourceDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ResourceDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ResourceDescription" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ResourceDescription" />
+  <TypeSignature Language="F#" Value="type ResourceDescription = class&#xA;    interface IFileReference" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ResourceDescription sealed" />
+  <TypeSignature Language="C++ CX" Value="public ref class ResourceDescription sealed" />
+  <TypeSignature Language="C++ WINRT" Value="class ResourceDescription sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Representation of a resource whose contents are to be embedded in the output assembly.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceDescription (string resourceName, Func&lt;System.IO.Stream&gt; dataProvider, bool isPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resourceName, class System.Func`1&lt;class System.IO.Stream&gt; dataProvider, bool isPublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ResourceDescription.#ctor(System.String,System.Func{System.IO.Stream},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (resourceName As String, dataProvider As Func(Of Stream), isPublic As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.ResourceDescription : string * Func&lt;System.IO.Stream&gt; * bool -&gt; Microsoft.CodeAnalysis.ResourceDescription" Usage="new Microsoft.CodeAnalysis.ResourceDescription (resourceName, dataProvider, isPublic)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ResourceDescription(System::String ^ resourceName, Func&lt;System::IO::Stream ^&gt; ^ dataProvider, bool isPublic);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resourceName" Type="System.String" />
+        <Parameter Name="dataProvider" Type="System.Func&lt;System.IO.Stream&gt;" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="resourceName">Resource name.</param>
+        <param name="dataProvider">The callers will dispose the result after use.
+            This allows the resources to be opened and read one at a time.
+            </param>
+        <param name="isPublic">True if the resource is public.</param>
+        <summary>
+            Creates a representation of a resource whose contents are to be embedded in the output assembly.
+            </summary>
+        <remarks>
+            Returns a stream of the data to embed.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceDescription (string resourceName, string fileName, Func&lt;System.IO.Stream&gt; dataProvider, bool isPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resourceName, string fileName, class System.Func`1&lt;class System.IO.Stream&gt; dataProvider, bool isPublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ResourceDescription.#ctor(System.String,System.String,System.Func{System.IO.Stream},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (resourceName As String, fileName As String, dataProvider As Func(Of Stream), isPublic As Boolean)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.ResourceDescription : string * string * Func&lt;System.IO.Stream&gt; * bool -&gt; Microsoft.CodeAnalysis.ResourceDescription" Usage="new Microsoft.CodeAnalysis.ResourceDescription (resourceName, fileName, dataProvider, isPublic)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ResourceDescription(System::String ^ resourceName, System::String ^ fileName, Func&lt;System::IO::Stream ^&gt; ^ dataProvider, bool isPublic);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resourceName" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="dataProvider" Type="System.Func&lt;System.IO.Stream&gt;" />
+        <Parameter Name="isPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="resourceName">Resource name.</param>
+        <param name="fileName">File name with an extension to be stored in metadata.</param>
+        <param name="dataProvider">The callers will dispose the result after use.
+            This allows the resources to be opened and read one at a time.
+            </param>
+        <param name="isPublic">True if the resource is public.</param>
+        <summary>
+            Creates a representation of a resource whose file name will be recorded in the assembly.
+            </summary>
+        <remarks>
+            Function returning a stream of the resource content (used to calculate hash).
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
