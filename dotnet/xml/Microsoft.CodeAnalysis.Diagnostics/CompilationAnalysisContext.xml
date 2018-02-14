@@ -4,9 +4,11 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext" />
   <TypeSignature Language="VB.NET" Value="Public Structure CompilationAnalysisContext" />
   <TypeSignature Language="F#" Value="type CompilationAnalysisContext = struct" />
+  <TypeSignature Language="C++ CLI" Value="public value class CompilationAnalysisContext" />
+  <TypeSignature Language="C++ WINRT" Value="struct CompilationAnalysisContext" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -25,10 +27,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.Compilation compilation, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions options, class System.Action`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; reportDiagnostic, class System.Func`2&lt;class Microsoft.CodeAnalysis.Diagnostic, bool&gt; isSupportedDiagnostic, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.#ctor(Microsoft.CodeAnalysis.Compilation,Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,System.Action{Microsoft.CodeAnalysis.Diagnostic},System.Func{Microsoft.CodeAnalysis.Diagnostic,System.Boolean},System.Threading.CancellationToken)" />
       <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext : Microsoft.CodeAnalysis.Compilation * Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions * Action&lt;Microsoft.CodeAnalysis.Diagnostic&gt; * Func&lt;Microsoft.CodeAnalysis.Diagnostic, bool&gt; * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext" Usage="new Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext (compilation, options, reportDiagnostic, isSupportedDiagnostic, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CompilationAnalysisContext(Microsoft::CodeAnalysis::Compilation ^ compilation, Microsoft::CodeAnalysis::Diagnostics::AnalyzerOptions ^ options, Action&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^ reportDiagnostic, Func&lt;Microsoft::CodeAnalysis::Diagnostic ^, bool&gt; ^ isSupportedDiagnostic, System::Threading::CancellationToken cancellationToken);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" />
@@ -53,10 +56,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.CancellationToken" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CancellationToken As CancellationToken" />
       <MemberSignature Language="F#" Value="member this.CancellationToken : System.Threading.CancellationToken" Usage="Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.CancellationToken" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Threading::CancellationToken CancellationToken { System::Threading::CancellationToken get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -75,10 +79,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.Compilation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Compilation As Compilation" />
       <MemberSignature Language="F#" Value="member this.Compilation : Microsoft.CodeAnalysis.Compilation" Usage="Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.Compilation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Compilation ^ Compilation { Microsoft::CodeAnalysis::Compilation ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::Compilation ^ Compilation { Microsoft::CodeAnalysis::Compilation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Compilation</ReturnType>
@@ -97,10 +103,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.Options" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Options As AnalyzerOptions" />
       <MemberSignature Language="F#" Value="member this.Options : Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions" Usage="Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.Options" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Diagnostics::AnalyzerOptions ^ Options { Microsoft::CodeAnalysis::Diagnostics::AnalyzerOptions ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions</ReturnType>
@@ -118,10 +125,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReportDiagnostic(class Microsoft.CodeAnalysis.Diagnostic diagnostic) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)" />
       <MemberSignature Language="F#" Value="member this.ReportDiagnostic : Microsoft.CodeAnalysis.Diagnostic -&gt; unit" Usage="compilationAnalysisContext.ReportDiagnostic diagnostic" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ReportDiagnostic(Microsoft::CodeAnalysis::Diagnostic ^ diagnostic);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -144,10 +152,12 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.TryGetValue``1(Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeValueProvider{``0},``0@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetValue(Of TValue) (tree As SyntaxTree, valueProvider As SyntaxTreeValueProvider(Of TValue), ByRef value As TValue) As Boolean" />
       <MemberSignature Language="F#" Value="member this.TryGetValue : Microsoft.CodeAnalysis.SyntaxTree * Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeValueProvider&lt;'Value&gt; *  -&gt; bool" Usage="compilationAnalysisContext.TryGetValue (tree, valueProvider, value)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TValue&gt;&#xA; bool TryGetValue(Microsoft::CodeAnalysis::SyntaxTree ^ tree, Microsoft::CodeAnalysis::Diagnostics::SyntaxTreeValueProvider&lt;TValue&gt; ^ valueProvider, [Runtime::InteropServices::Out] TValue % value);" />
+      <MemberSignature Language="C++ WINRT" Value="template &lt;typename TValue&gt;&#xA; bool TryGetValue(Microsoft::CodeAnalysis::SyntaxTree const &amp; tree, Microsoft::CodeAnalysis::Diagnostics::SyntaxTreeValueProvider&lt;TValue&gt; const &amp; valueProvider, [Runtime::InteropServices::Out] TValue &amp; value);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -181,10 +191,12 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext.TryGetValue``1(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider{``0},``0@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetValue(Of TValue) (text As SourceText, valueProvider As SourceTextValueProvider(Of TValue), ByRef value As TValue) As Boolean" />
       <MemberSignature Language="F#" Value="member this.TryGetValue : Microsoft.CodeAnalysis.Text.SourceText * Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider&lt;'Value&gt; *  -&gt; bool" Usage="compilationAnalysisContext.TryGetValue (text, valueProvider, value)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TValue&gt;&#xA; bool TryGetValue(Microsoft::CodeAnalysis::Text::SourceText ^ text, Microsoft::CodeAnalysis::Diagnostics::SourceTextValueProvider&lt;TValue&gt; ^ valueProvider, [Runtime::InteropServices::Out] TValue % value);" />
+      <MemberSignature Language="C++ WINRT" Value="template &lt;typename TValue&gt;&#xA; bool TryGetValue(Microsoft::CodeAnalysis::Text::SourceText const &amp; text, Microsoft::CodeAnalysis::Diagnostics::SourceTextValueProvider&lt;TValue&gt; const &amp; valueProvider, [Runtime::InteropServices::Out] TValue &amp; value);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

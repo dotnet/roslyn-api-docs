@@ -1,0 +1,128 @@
+﻿<Type Name="IDynamicMemberReferenceOperation" FullName="Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation">
+  <TypeSignature Language="C#" Value="public interface IDynamicMemberReferenceOperation : Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDynamicMemberReferenceOperation implements class Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IDynamicMemberReferenceOperation&#xA;Implements IOperation" />
+  <TypeSignature Language="F#" Value="type IDynamicMemberReferenceOperation = interface&#xA;    interface IOperation" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IDynamicMemberReferenceOperation : Microsoft::CodeAnalysis::IOperation" />
+  <TypeSignature Language="C++ CX" Value="public interface class IDynamicMemberReferenceOperation : Microsoft::CodeAnalysis::IOperation" />
+  <TypeSignature Language="C++ WINRT" Value="__interface IDynamicMemberReferenceOperation : Microsoft::CodeAnalysis::IOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a reference to a member of a class, struct, or module that is dynamically bound.
+            <para>
+            Current usage:
+             (1) C# dynamic member reference expression.
+             (2) VB late bound member reference expression.
+            </para></summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContainingType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ITypeSymbol ContainingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ITypeSymbol ContainingType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation.ContainingType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingType As ITypeSymbol" />
+      <MemberSignature Language="F#" Value="member this.ContainingType : Microsoft.CodeAnalysis.ITypeSymbol" Usage="Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation.ContainingType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ITypeSymbol ^ ContainingType { Microsoft::CodeAnalysis::ITypeSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The containing type of the referenced member. In C#, this will always be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation Instance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IOperation Instance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation.Instance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Instance As IOperation" />
+      <MemberSignature Language="F#" Value="member this.Instance : Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation.Instance" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ Instance { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ Instance { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Instance receiver. In VB, this can be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation.MemberName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MemberName As String" />
+      <MemberSignature Language="F#" Value="member this.MemberName : string" Usage="Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation.MemberName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MemberName { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ MemberName { Platform::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Referenced member.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeArguments">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt; TypeArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ITypeSymbol&gt; TypeArguments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation.TypeArguments" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TypeArguments As ImmutableArray(Of ITypeSymbol)" />
+      <MemberSignature Language="F#" Value="member this.TypeArguments : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt;" Usage="Microsoft.CodeAnalysis.Operations.IDynamicMemberReferenceOperation.TypeArguments" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeSymbol ^&gt; TypeArguments { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeSymbol ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Type arguments.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

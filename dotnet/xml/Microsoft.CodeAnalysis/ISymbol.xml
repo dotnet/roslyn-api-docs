@@ -4,9 +4,10 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ISymbol" />
   <TypeSignature Language="VB.NET" Value="Public Interface ISymbol&#xA;Implements IEquatable(Of ISymbol)" />
   <TypeSignature Language="F#" Value="type ISymbol = interface&#xA;    interface IEquatable&lt;ISymbol&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public interface class ISymbol : IEquatable&lt;Microsoft::CodeAnalysis::ISymbol ^&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -30,10 +31,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.Accept(Microsoft.CodeAnalysis.SymbolVisitor)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Accept (visitor As SymbolVisitor)" />
       <MemberSignature Language="F#" Value="abstract member Accept : Microsoft.CodeAnalysis.SymbolVisitor -&gt; unit" Usage="iSymbol.Accept visitor" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Accept(Microsoft::CodeAnalysis::SymbolVisitor ^ visitor);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; void Accept(Microsoft::CodeAnalysis::SymbolVisitor ^ visitor);" />
+      <MemberSignature Language="C++ WINRT" Value="void Accept(Microsoft::CodeAnalysis::SymbolVisitor const &amp; visitor);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -53,10 +57,12 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.Accept``1(Microsoft.CodeAnalysis.SymbolVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Function Accept(Of TResult) (visitor As SymbolVisitor(Of TResult)) As TResult" />
       <MemberSignature Language="F#" Value="abstract member Accept : Microsoft.CodeAnalysis.SymbolVisitor&lt;'Result&gt; -&gt; 'Result" Usage="iSymbol.Accept visitor" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA; TResult Accept(Microsoft::CodeAnalysis::SymbolVisitor&lt;TResult&gt; ^ visitor);" />
+      <MemberSignature Language="C++ WINRT" Value="template &lt;typename TResult&gt;&#xA; TResult Accept(Microsoft::CodeAnalysis::SymbolVisitor&lt;TResult&gt; const &amp; visitor);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
@@ -81,10 +87,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.CanBeReferencedByName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanBeReferencedByName As Boolean" />
       <MemberSignature Language="F#" Value="member this.CanBeReferencedByName : bool" Usage="Microsoft.CodeAnalysis.ISymbol.CanBeReferencedByName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CanBeReferencedByName { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool CanBeReferencedByName { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -103,10 +111,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingAssembly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingAssembly As IAssemblySymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingAssembly : Microsoft.CodeAnalysis.IAssemblySymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingAssembly" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IAssemblySymbol ^ ContainingAssembly { Microsoft::CodeAnalysis::IAssemblySymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IAssemblySymbol</ReturnType>
@@ -126,10 +135,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingModule" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingModule As IModuleSymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingModule : Microsoft.CodeAnalysis.IModuleSymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingModule" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IModuleSymbol ^ ContainingModule { Microsoft::CodeAnalysis::IModuleSymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IModuleSymbol</ReturnType>
@@ -149,10 +159,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingNamespace" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingNamespace As INamespaceSymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingNamespace : Microsoft.CodeAnalysis.INamespaceSymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingNamespace" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamespaceSymbol ^ ContainingNamespace { Microsoft::CodeAnalysis::INamespaceSymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.INamespaceSymbol</ReturnType>
@@ -172,10 +183,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingSymbol" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingSymbol As ISymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingSymbol : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingSymbol" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ISymbol ^ ContainingSymbol { Microsoft::CodeAnalysis::ISymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -194,10 +206,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingType As INamedTypeSymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingType : Microsoft.CodeAnalysis.INamedTypeSymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamedTypeSymbol ^ ContainingType { Microsoft::CodeAnalysis::INamedTypeSymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
@@ -217,10 +230,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.DeclaredAccessibility" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeclaredAccessibility As Accessibility" />
       <MemberSignature Language="F#" Value="member this.DeclaredAccessibility : Microsoft.CodeAnalysis.Accessibility" Usage="Microsoft.CodeAnalysis.ISymbol.DeclaredAccessibility" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Accessibility DeclaredAccessibility { Microsoft::CodeAnalysis::Accessibility get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::Accessibility DeclaredAccessibility { Microsoft::CodeAnalysis::Accessibility get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Accessibility</ReturnType>
@@ -240,10 +255,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeclaringSyntaxReferences As ImmutableArray(Of SyntaxReference)" />
       <MemberSignature Language="F#" Value="member this.DeclaringSyntaxReferences : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt;" Usage="Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::SyntaxReference ^&gt; DeclaringSyntaxReferences { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::SyntaxReference ^&gt; get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt;</ReturnType>
@@ -274,10 +290,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.GetAttributes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAttributes () As ImmutableArray(Of AttributeData)" />
       <MemberSignature Language="F#" Value="abstract member GetAttributes : unit -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt;" Usage="iSymbol.GetAttributes " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::AttributeData ^&gt; GetAttributes();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt;</ReturnType>
@@ -298,10 +315,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.GetDocumentationCommentId" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDocumentationCommentId () As String" />
       <MemberSignature Language="F#" Value="abstract member GetDocumentationCommentId : unit -&gt; string" Usage="iSymbol.GetDocumentationCommentId " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetDocumentationCommentId();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; Platform::String ^ GetDocumentationCommentId();" />
+      <MemberSignature Language="C++ WINRT" Value="std::wstring GetDocumentationCommentId();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -324,7 +344,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -351,10 +371,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.HasUnsupportedMetadata" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasUnsupportedMetadata As Boolean" />
       <MemberSignature Language="F#" Value="member this.HasUnsupportedMetadata : bool" Usage="Microsoft.CodeAnalysis.ISymbol.HasUnsupportedMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasUnsupportedMetadata { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool HasUnsupportedMetadata { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -381,10 +403,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsAbstract" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsAbstract As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsAbstract : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsAbstract" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAbstract { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsAbstract { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -403,10 +427,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsDefinition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDefinition As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsDefinition : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsDefinition" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDefinition { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsDefinition { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -426,10 +452,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsExtern" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsExtern As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsExtern : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsExtern" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsExtern { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsExtern { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -448,10 +476,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsImplicitlyDeclared" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsImplicitlyDeclared As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsImplicitlyDeclared : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsImplicitlyDeclared" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsImplicitlyDeclared { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsImplicitlyDeclared { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -478,10 +508,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsOverride" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsOverride As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsOverride : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsOverride" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsOverride { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsOverride { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -500,10 +532,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsSealed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSealed As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsSealed : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsSealed" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSealed { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsSealed { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -522,10 +556,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsStatic" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsStatic As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsStatic : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsStatic" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsStatic { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsStatic { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -544,10 +580,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.IsVirtual" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsVirtual As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsVirtual : bool" Usage="Microsoft.CodeAnalysis.ISymbol.IsVirtual" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsVirtual { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsVirtual { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -566,10 +604,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.Kind" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kind As SymbolKind" />
       <MemberSignature Language="F#" Value="member this.Kind : Microsoft.CodeAnalysis.SymbolKind" Usage="Microsoft.CodeAnalysis.ISymbol.Kind" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SymbolKind Kind { Microsoft::CodeAnalysis::SymbolKind get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::SymbolKind Kind { Microsoft::CodeAnalysis::SymbolKind get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolKind</ReturnType>
@@ -588,10 +628,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.Language" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Language As String" />
       <MemberSignature Language="F#" Value="member this.Language : string" Usage="Microsoft.CodeAnalysis.ISymbol.Language" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Language { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ Language { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -610,10 +652,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.Locations" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Locations As ImmutableArray(Of Location)" />
       <MemberSignature Language="F#" Value="member this.Locations : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt;" Usage="Microsoft.CodeAnalysis.ISymbol.Locations" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Location ^&gt; Locations { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Location ^&gt; get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt;</ReturnType>
@@ -634,10 +677,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.MetadataName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MetadataName As String" />
       <MemberSignature Language="F#" Value="member this.MetadataName : string" Usage="Microsoft.CodeAnalysis.ISymbol.MetadataName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MetadataName { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ MetadataName { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -660,10 +705,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.CodeAnalysis.ISymbol.Name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::String ^ Name { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -682,10 +729,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.OriginalDefinition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginalDefinition As ISymbol" />
       <MemberSignature Language="F#" Value="member this.OriginalDefinition : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.ISymbol.OriginalDefinition" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ISymbol ^ OriginalDefinition { Microsoft::CodeAnalysis::ISymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -709,7 +757,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;</ReturnType>
@@ -734,10 +782,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToDisplayString(Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Function ToDisplayString (Optional format As SymbolDisplayFormat = null) As String" />
       <MemberSignature Language="F#" Value="abstract member ToDisplayString : Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; string" Usage="iSymbol.ToDisplayString format" />
+      <MemberSignature Language="C++ WINRT" Value="std::wstring ToDisplayString(Microsoft::CodeAnalysis::SymbolDisplayFormat const &amp; format = null);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -762,7 +811,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;</ReturnType>
@@ -791,10 +840,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToMinimalDisplayString(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToMinimalDisplayString(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
       <MemberSignature Language="F#" Value="abstract member ToMinimalDisplayString : Microsoft.CodeAnalysis.SemanticModel * int * Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; string" Usage="iSymbol.ToMinimalDisplayString (semanticModel, position, format)" />
+      <MemberSignature Language="C++ WINRT" Value="std::wstring ToMinimalDisplayString(Microsoft::CodeAnalysis::SemanticModel const &amp; semanticModel, int position, Microsoft::CodeAnalysis::SymbolDisplayFormat const &amp; format = null);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

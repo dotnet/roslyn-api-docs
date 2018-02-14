@@ -1,0 +1,157 @@
+﻿<Type Name="IConversionOperation" FullName="Microsoft.CodeAnalysis.Operations.IConversionOperation">
+  <TypeSignature Language="C#" Value="public interface IConversionOperation : Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConversionOperation implements class Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IConversionOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IConversionOperation&#xA;Implements IOperation" />
+  <TypeSignature Language="F#" Value="type IConversionOperation = interface&#xA;    interface IOperation" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IConversionOperation : Microsoft::CodeAnalysis::IOperation" />
+  <TypeSignature Language="C++ CX" Value="public interface class IConversionOperation : Microsoft::CodeAnalysis::IOperation" />
+  <TypeSignature Language="C++ WINRT" Value="__interface IConversionOperation : Microsoft::CodeAnalysis::IOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a type conversion.
+            <para>
+            Current usage:
+             (1) C# conversion expression.
+             (2) VB conversion expression.
+            </para></summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Conversion">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Operations.CommonConversion Conversion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Operations.CommonConversion Conversion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IConversionOperation.Conversion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Conversion As CommonConversion" />
+      <MemberSignature Language="F#" Value="member this.Conversion : Microsoft.CodeAnalysis.Operations.CommonConversion" Usage="Microsoft.CodeAnalysis.Operations.IConversionOperation.Conversion" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Operations::CommonConversion Conversion { Microsoft::CodeAnalysis::Operations::CommonConversion get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Operations.CommonConversion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the underlying common conversion information.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If you need conversion information that is language specific, use either
+            <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.GetConversion(IConversionOperation)" /> or
+            <see cref="T:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.GetConversion(IConversionOperation)" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsChecked">
+      <MemberSignature Language="C#" Value="public bool IsChecked { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsChecked" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IConversionOperation.IsChecked" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsChecked As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsChecked : bool" Usage="Microsoft.CodeAnalysis.Operations.IConversionOperation.IsChecked" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsChecked { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsChecked { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the conversion can fail at runtime with an overflow exception. This corresponds to C# checked and unchecked blocks.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTryCast">
+      <MemberSignature Language="C#" Value="public bool IsTryCast { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTryCast" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IConversionOperation.IsTryCast" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsTryCast As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsTryCast : bool" Usage="Microsoft.CodeAnalysis.Operations.IConversionOperation.IsTryCast" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsTryCast { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsTryCast { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            False if the conversion will fail with a <see cref="T:System.InvalidCastException" /> at runtime if the cast fails. This is true for C#'s
+            <code>as</code> operator and for VB's <code>TryCast</code> operator.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operand">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation Operand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IOperation Operand" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IConversionOperation.Operand" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Operand As IOperation" />
+      <MemberSignature Language="F#" Value="member this.Operand : Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.Operations.IConversionOperation.Operand" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ Operand { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ Operand { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Value to be converted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperatorMethod">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol OperatorMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol OperatorMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IConversionOperation.OperatorMethod" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OperatorMethod As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="member this.OperatorMethod : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.Operations.IConversionOperation.OperatorMethod" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ OperatorMethod { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Operator method used by the operation, null if the operation does not use an operator method.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

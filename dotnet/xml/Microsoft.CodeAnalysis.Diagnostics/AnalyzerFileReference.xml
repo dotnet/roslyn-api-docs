@@ -4,9 +4,10 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AnalyzerFileReference&#xA;Inherits AnalyzerReference&#xA;Implements IEquatable(Of AnalyzerReference)" />
   <TypeSignature Language="F#" Value="type AnalyzerFileReference = class&#xA;    inherit AnalyzerReference&#xA;    interface IEquatable&lt;AnalyzerReference&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AnalyzerFileReference sealed : Microsoft::CodeAnalysis::Diagnostics::AnalyzerReference, IEquatable&lt;Microsoft::CodeAnalysis::Diagnostics::AnalyzerReference ^&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference</BaseTypeName>
@@ -34,10 +35,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.#ctor(System.String,Microsoft.CodeAnalysis.IAnalyzerAssemblyLoader)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fullPath As String, assemblyLoader As IAnalyzerAssemblyLoader)" />
       <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference : string * Microsoft.CodeAnalysis.IAnalyzerAssemblyLoader -&gt; Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference" Usage="new Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference (fullPath, assemblyLoader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; AnalyzerFileReference(System::String ^ fullPath, Microsoft::CodeAnalysis::IAnalyzerAssemblyLoader ^ assemblyLoader);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; AnalyzerFileReference(Platform::String ^ fullPath, Microsoft::CodeAnalysis::IAnalyzerAssemblyLoader ^ assemblyLoader);" />
+      <MemberSignature Language="C++ WINRT" Value=" AnalyzerFileReference(std::wstring const &amp; fullPath, Microsoft::CodeAnalysis::IAnalyzerAssemblyLoader const &amp; assemblyLoader);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fullPath" Type="System.String" />
@@ -58,10 +62,11 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.AnalyzerLoadFailed" />
       <MemberSignature Language="VB.NET" Value="Public Event AnalyzerLoadFailed As EventHandler(Of AnalyzerLoadFailureEventArgs) " />
       <MemberSignature Language="F#" Value="member this.AnalyzerLoadFailed : EventHandler&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerLoadFailureEventArgs&gt; " Usage="member this.AnalyzerLoadFailed : System.EventHandler&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerLoadFailureEventArgs&gt; " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::CodeAnalysis::Diagnostics::AnalyzerLoadFailureEventArgs ^&gt; ^ AnalyzerLoadFailed;" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerLoadFailureEventArgs&gt;</ReturnType>
@@ -77,10 +82,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Display" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Display As String" />
       <MemberSignature Language="F#" Value="member this.Display : string" Usage="Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Display" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Display { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; virtual property Platform::String ^ Display { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -97,13 +104,16 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Equals(Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As AnalyzerReference) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference -&gt; bool" Usage="analyzerFileReference.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::CodeAnalysis::Diagnostics::AnalyzerReference ^ other);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; bool Equals(Microsoft::CodeAnalysis::Diagnostics::AnalyzerReference ^ other);" />
+      <MemberSignature Language="C++ WINRT" Value="bool Equals(Microsoft::CodeAnalysis::Diagnostics::AnalyzerReference const &amp; other);" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -124,10 +134,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="analyzerFileReference.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override bool Equals(Platform::Object ^ obj);" />
+      <MemberSignature Language="C++ WINRT" Value=" override bool Equals(winrt::Windows::Foundation::IInspectable const &amp; obj);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -148,10 +161,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.FullPath" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property FullPath As String" />
       <MemberSignature Language="F#" Value="member this.FullPath : string" Usage="Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.FullPath" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ FullPath { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; virtual property Platform::String ^ FullPath { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -168,10 +183,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetAnalyzers(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetAnalyzers (language As String) As ImmutableArray(Of DiagnosticAnalyzer)" />
       <MemberSignature Language="F#" Value="override this.GetAnalyzers : string -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;" Usage="analyzerFileReference.GetAnalyzers language" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Diagnostics::DiagnosticAnalyzer ^&gt; GetAnalyzers(System::String ^ language);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;</ReturnType>
@@ -192,10 +208,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetAnalyzersForAllLanguages" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetAnalyzersForAllLanguages () As ImmutableArray(Of DiagnosticAnalyzer)" />
       <MemberSignature Language="F#" Value="override this.GetAnalyzersForAllLanguages : unit -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;" Usage="analyzerFileReference.GetAnalyzersForAllLanguages " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Diagnostics::DiagnosticAnalyzer ^&gt; GetAnalyzersForAllLanguages();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;</ReturnType>
@@ -213,10 +230,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetAssembly" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAssembly () As Assembly" />
       <MemberSignature Language="F#" Value="member this.GetAssembly : unit -&gt; System.Reflection.Assembly" Usage="analyzerFileReference.GetAssembly " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Reflection::Assembly ^ GetAssembly();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Reflection.Assembly</ReturnType>
@@ -234,10 +252,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="analyzerFileReference.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ WINRT" Value=" override int GetHashCode();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -255,10 +276,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Id" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Id As Object" />
       <MemberSignature Language="F#" Value="member this.Id : obj" Usage="Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Id" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Object ^ Id { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; virtual property Platform::Object ^ Id { Platform::Object ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>

@@ -4,9 +4,11 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Differencing.Match`1" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Match(Of TNode)" />
   <TypeSignature Language="F#" Value="type Match&lt;'Node&gt; = class" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename TNode&gt;&#xA;public ref class Match sealed" />
+  <TypeSignature Language="C++ WINRT" Value="template &lt;typename TNode&gt;&#xA;class Match sealed" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="TNode" />
@@ -27,10 +29,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Differencing.Match`1.Comparer" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Comparer As TreeComparer(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.Comparer : Microsoft.CodeAnalysis.Differencing.TreeComparer&lt;'Node&gt;" Usage="Microsoft.CodeAnalysis.Differencing.Match&lt;'Node&gt;.Comparer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Differencing::TreeComparer&lt;TNode&gt; ^ Comparer { Microsoft::CodeAnalysis::Differencing::TreeComparer&lt;TNode&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Differencing.TreeComparer&lt;TNode&gt;</ReturnType>
@@ -47,10 +50,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.Match`1.GetSequenceEdits(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function GetSequenceEdits (oldNodes As IEnumerable(Of TNode), newNodes As IEnumerable(Of TNode)) As IEnumerable(Of Edit(Of TNode))" />
       <MemberSignature Language="F#" Value="member this.GetSequenceEdits : seq&lt;'Node&gt; * seq&lt;'Node&gt; -&gt; seq&lt;Microsoft.CodeAnalysis.Differencing.Edit&lt;'Node&gt;&gt;" Usage="match.GetSequenceEdits (oldNodes, newNodes)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Differencing::Edit&lt;TNode&gt;&gt; ^ GetSequenceEdits(System::Collections::Generic::IEnumerable&lt;TNode&gt; ^ oldNodes, System::Collections::Generic::IEnumerable&lt;TNode&gt; ^ newNodes);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Differencing.Edit&lt;TNode&gt;&gt;</ReturnType>
@@ -78,10 +82,12 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.Match`1.GetTreeEdits" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTreeEdits () As EditScript(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.GetTreeEdits : unit -&gt; Microsoft.CodeAnalysis.Differencing.EditScript&lt;'Node&gt;" Usage="match.GetTreeEdits " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Differencing::EditScript&lt;TNode&gt; ^ GetTreeEdits();" />
+      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::Differencing::EditScript&lt;TNode&gt; GetTreeEdits();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Differencing.EditScript&lt;TNode&gt;</ReturnType>
@@ -102,10 +108,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Differencing.Match`1.Matches" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Matches As IReadOnlyDictionary(Of TNode, TNode)" />
       <MemberSignature Language="F#" Value="member this.Matches : System.Collections.Generic.IReadOnlyDictionary&lt;'Node, 'Node&gt;" Usage="Microsoft.CodeAnalysis.Differencing.Match&lt;'Node&gt;.Matches" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyDictionary&lt;TNode, TNode&gt; ^ Matches { System::Collections::Generic::IReadOnlyDictionary&lt;TNode, TNode&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;TNode,TNode&gt;</ReturnType>
@@ -122,10 +129,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Differencing.Match`1.NewRoot" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NewRoot As TNode" />
       <MemberSignature Language="F#" Value="member this.NewRoot : 'Node" Usage="Microsoft.CodeAnalysis.Differencing.Match&lt;'Node&gt;.NewRoot" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TNode NewRoot { TNode get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property TNode NewRoot { TNode get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TNode</ReturnType>
@@ -142,10 +151,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Differencing.Match`1.OldRoot" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OldRoot As TNode" />
       <MemberSignature Language="F#" Value="member this.OldRoot : 'Node" Usage="Microsoft.CodeAnalysis.Differencing.Match&lt;'Node&gt;.OldRoot" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TNode OldRoot { TNode get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property TNode OldRoot { TNode get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TNode</ReturnType>
@@ -162,10 +173,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Differencing.Match`1.ReverseMatches" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReverseMatches As IReadOnlyDictionary(Of TNode, TNode)" />
       <MemberSignature Language="F#" Value="member this.ReverseMatches : System.Collections.Generic.IReadOnlyDictionary&lt;'Node, 'Node&gt;" Usage="Microsoft.CodeAnalysis.Differencing.Match&lt;'Node&gt;.ReverseMatches" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IReadOnlyDictionary&lt;TNode, TNode&gt; ^ ReverseMatches { System::Collections::Generic::IReadOnlyDictionary&lt;TNode, TNode&gt; ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;TNode,TNode&gt;</ReturnType>
@@ -182,10 +194,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.Match`1.TryGetNewNode(`0,`0@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetNewNode (oldNode As TNode, ByRef newNode As TNode) As Boolean" />
       <MemberSignature Language="F#" Value="member this.TryGetNewNode : 'Node *  -&gt; bool" Usage="match.TryGetNewNode (oldNode, newNode)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetNewNode(TNode oldNode, [Runtime::InteropServices::Out] TNode % newNode);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; bool TryGetNewNode(TNode oldNode, [Runtime::InteropServices::Out] TNode &amp;  newNode);" />
+      <MemberSignature Language="C++ WINRT" Value="bool TryGetNewNode(TNode oldNode, [Runtime::InteropServices::Out] TNode &amp; newNode);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -208,10 +223,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Differencing.Match`1.TryGetOldNode(`0,`0@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetOldNode (newNode As TNode, ByRef oldNode As TNode) As Boolean" />
       <MemberSignature Language="F#" Value="member this.TryGetOldNode : 'Node *  -&gt; bool" Usage="match.TryGetOldNode (newNode, oldNode)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetOldNode(TNode newNode, [Runtime::InteropServices::Out] TNode % oldNode);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; bool TryGetOldNode(TNode newNode, [Runtime::InteropServices::Out] TNode &amp;  oldNode);" />
+      <MemberSignature Language="C++ WINRT" Value="bool TryGetOldNode(TNode newNode, [Runtime::InteropServices::Out] TNode &amp; oldNode);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

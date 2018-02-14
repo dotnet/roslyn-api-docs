@@ -4,9 +4,10 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ILocalSymbol" />
   <TypeSignature Language="VB.NET" Value="Public Interface ILocalSymbol&#xA;Implements IEquatable(Of ISymbol), ISymbol" />
   <TypeSignature Language="F#" Value="type ILocalSymbol = interface&#xA;    interface ISymbol&#xA;    interface IEquatable&lt;ISymbol&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public interface class ILocalSymbol : IEquatable&lt;Microsoft::CodeAnalysis::ISymbol ^&gt;, Microsoft::CodeAnalysis::ISymbol" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -32,10 +33,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ILocalSymbol.ConstantValue" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConstantValue As Object" />
       <MemberSignature Language="F#" Value="member this.ConstantValue : obj" Usage="Microsoft.CodeAnalysis.ILocalSymbol.ConstantValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ConstantValue { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Platform::Object ^ ConstantValue { Platform::Object ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -54,10 +57,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ILocalSymbol.HasConstantValue" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasConstantValue As Boolean" />
       <MemberSignature Language="F#" Value="member this.HasConstantValue : bool" Usage="Microsoft.CodeAnalysis.ILocalSymbol.HasConstantValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasConstantValue { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool HasConstantValue { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -77,10 +82,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ILocalSymbol.IsConst" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsConst As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsConst : bool" Usage="Microsoft.CodeAnalysis.ILocalSymbol.IsConst" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsConst { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsConst { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -100,10 +107,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ILocalSymbol.IsFunctionValue" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsFunctionValue As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsFunctionValue : bool" Usage="Microsoft.CodeAnalysis.ILocalSymbol.IsFunctionValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsFunctionValue { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsFunctionValue { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -120,17 +129,44 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ILocalSymbol.IsRef" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRef As Boolean" />
       <MemberSignature Language="F#" Value="member this.IsRef : bool" Usage="Microsoft.CodeAnalysis.ILocalSymbol.IsRef" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsRef { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsRef { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Returns true if this local is a ref-local.
+            Returns true if this local is a ref local or a ref readonly local.
+            Use <see cref="P:Microsoft.CodeAnalysis.ILocalSymbol.RefKind" /> to get more detailed information.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.RefKind RefKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.RefKind RefKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ILocalSymbol.RefKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RefKind As RefKind" />
+      <MemberSignature Language="F#" Value="member this.RefKind : Microsoft.CodeAnalysis.RefKind" Usage="Microsoft.CodeAnalysis.ILocalSymbol.RefKind" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::RefKind RefKind { Microsoft::CodeAnalysis::RefKind get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::RefKind RefKind { Microsoft::CodeAnalysis::RefKind get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.RefKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Whether the variable is a ref or ref readonly local.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -142,10 +178,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ILocalSymbol.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As ITypeSymbol" />
       <MemberSignature Language="F#" Value="member this.Type : Microsoft.CodeAnalysis.ITypeSymbol" Usage="Microsoft.CodeAnalysis.ILocalSymbol.Type" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ITypeSymbol ^ Type { Microsoft::CodeAnalysis::ITypeSymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>
