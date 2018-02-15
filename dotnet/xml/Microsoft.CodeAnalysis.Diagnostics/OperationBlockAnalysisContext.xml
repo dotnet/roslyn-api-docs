@@ -4,9 +4,11 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext" />
   <TypeSignature Language="VB.NET" Value="Public Structure OperationBlockAnalysisContext" />
   <TypeSignature Language="F#" Value="type OperationBlockAnalysisContext = struct" />
+  <TypeSignature Language="C++ CLI" Value="public value class OperationBlockAnalysisContext" />
+  <TypeSignature Language="C++ WINRT" Value="struct OperationBlockAnalysisContext" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -25,10 +27,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IOperation&gt; operationBlocks, class Microsoft.CodeAnalysis.ISymbol owningSymbol, class Microsoft.CodeAnalysis.Compilation compilation, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions options, class System.Action`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; reportDiagnostic, class System.Func`2&lt;class Microsoft.CodeAnalysis.Diagnostic, bool&gt; isSupportedDiagnostic, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.#ctor(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.IOperation},Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Compilation,Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,System.Action{Microsoft.CodeAnalysis.Diagnostic},System.Func{Microsoft.CodeAnalysis.Diagnostic,System.Boolean},System.Threading.CancellationToken)" />
       <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt; * Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Compilation * Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions * Action&lt;Microsoft.CodeAnalysis.Diagnostic&gt; * Func&lt;Microsoft.CodeAnalysis.Diagnostic, bool&gt; * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext" Usage="new Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext (operationBlocks, owningSymbol, compilation, options, reportDiagnostic, isSupportedDiagnostic, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; OperationBlockAnalysisContext(System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IOperation ^&gt; operationBlocks, Microsoft::CodeAnalysis::ISymbol ^ owningSymbol, Microsoft::CodeAnalysis::Compilation ^ compilation, Microsoft::CodeAnalysis::Diagnostics::AnalyzerOptions ^ options, Action&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^ reportDiagnostic, Func&lt;Microsoft::CodeAnalysis::Diagnostic ^, bool&gt; ^ isSupportedDiagnostic, System::Threading::CancellationToken cancellationToken);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="operationBlocks" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;" />
@@ -57,10 +60,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.CancellationToken" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CancellationToken As CancellationToken" />
       <MemberSignature Language="F#" Value="member this.CancellationToken : System.Threading.CancellationToken" Usage="Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.CancellationToken" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Threading::CancellationToken CancellationToken { System::Threading::CancellationToken get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -79,17 +83,19 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.Compilation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Compilation As Compilation" />
       <MemberSignature Language="F#" Value="member this.Compilation : Microsoft.CodeAnalysis.Compilation" Usage="Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.Compilation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Compilation ^ Compilation { Microsoft::CodeAnalysis::Compilation ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::Compilation ^ Compilation { Microsoft::CodeAnalysis::Compilation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Compilation</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <see cref="T:Microsoft.CodeAnalysis.Compilation" /> containing the operation block.
+          <see cref="T:Microsoft.CodeAnalysis.Compilation" /> containing the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.OperationBlocks" />.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -101,20 +107,23 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.OperationBlocks" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OperationBlocks As ImmutableArray(Of IOperation)" />
       <MemberSignature Language="F#" Value="member this.OperationBlocks : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;" Usage="Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.OperationBlocks" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IOperation ^&gt; OperationBlocks { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IOperation ^&gt; get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Code block that is the subject of the analysis.
+            One or more operation blocks that are the subject of the analysis.
+            This includes all blocks associated with the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.OwningSymbol" />,
+            such as method body, field/property/constructor/parameter initializer(s), attributes, etc.
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>Note that the operation blocks are not in any specific order.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Options">
@@ -123,10 +132,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.Options" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Options As AnalyzerOptions" />
       <MemberSignature Language="F#" Value="member this.Options : Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions" Usage="Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.Options" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Diagnostics::AnalyzerOptions ^ Options { Microsoft::CodeAnalysis::Diagnostics::AnalyzerOptions ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions</ReturnType>
@@ -145,17 +155,18 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.OwningSymbol" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OwningSymbol As ISymbol" />
       <MemberSignature Language="F#" Value="member this.OwningSymbol : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.OwningSymbol" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ISymbol ^ OwningSymbol { Microsoft::CodeAnalysis::ISymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <see cref="T:Microsoft.CodeAnalysis.ISymbol" /> for which the code block provides a definition or value.
+          <see cref="T:Microsoft.CodeAnalysis.ISymbol" /> for which the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.OperationBlocks" /> provides a definition or value.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -166,10 +177,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReportDiagnostic(class Microsoft.CodeAnalysis.Diagnostic diagnostic) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)" />
       <MemberSignature Language="F#" Value="member this.ReportDiagnostic : Microsoft.CodeAnalysis.Diagnostic -&gt; unit" Usage="operationBlockAnalysisContext.ReportDiagnostic diagnostic" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ReportDiagnostic(Microsoft::CodeAnalysis::Diagnostic ^ diagnostic);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

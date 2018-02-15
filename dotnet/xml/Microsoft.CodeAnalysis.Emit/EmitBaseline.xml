@@ -4,9 +4,12 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Emit.EmitBaseline" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class EmitBaseline" />
   <TypeSignature Language="F#" Value="type EmitBaseline = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class EmitBaseline sealed" />
+  <TypeSignature Language="C++ CX" Value="public ref class EmitBaseline sealed" />
+  <TypeSignature Language="C++ WINRT" Value="class EmitBaseline sealed" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -26,10 +29,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline(Microsoft.CodeAnalysis.ModuleMetadata,System.Func{System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateInitialBaseline (module As ModuleMetadata, debugInformationProvider As Func(Of MethodDefinitionHandle, EditAndContinueMethodDebugInformation)) As EmitBaseline" />
       <MemberSignature Language="F#" Value="static member CreateInitialBaseline : Microsoft.CodeAnalysis.ModuleMetadata * Func&lt;System.Reflection.Metadata.MethodDefinitionHandle, Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&gt; -&gt; Microsoft.CodeAnalysis.Emit.EmitBaseline" Usage="Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline (module, debugInformationProvider)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::Emit::EmitBaseline ^ CreateInitialBaseline(Microsoft::CodeAnalysis::ModuleMetadata ^ module, Func&lt;System::Reflection::Metadata::MethodDefinitionHandle, Microsoft::CodeAnalysis::Emit::EditAndContinueMethodDebugInformation&gt; ^ debugInformationProvider);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitBaseline</ReturnType>
@@ -43,7 +47,58 @@
         <param name="debugInformationProvider">
             A function that for a method handle returns Edit and Continue debug information emitted by the compiler into the PDB.
             The function shall throw <see cref="T:System.IO.InvalidDataException" /> if the debug information can't be read for the specified method.
-            This exception is caught and converted to an emit diagnostic. Other exceptions are passed through.
+            This exception and <see cref="T:System.IO.IOException" /> are caught and converted to an emit diagnostic. Other exceptions are passed through.
+            </param>
+        <summary>
+            Creates an <see cref="T:Microsoft.CodeAnalysis.Emit.EmitBaseline" /> from the metadata of the module before editing
+            and from a function that maps from a method to an array of local names. 
+            </summary>
+        <returns>An <see cref="T:Microsoft.CodeAnalysis.Emit.EmitBaseline" /> for the module.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="module" /> is not a PE image.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="debugInformationProvider" /> is null.</exception>
+        <exception cref="T:System.IO.IOException">Error reading module metadata.</exception>
+        <exception cref="T:System.BadImageFormatException">Module metadata is invalid.</exception>
+        <exception cref="T:System.ObjectDisposedException">Module has been disposed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInitialBaseline">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Emit.EmitBaseline CreateInitialBaseline (Microsoft.CodeAnalysis.ModuleMetadata module, Func&lt;System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&gt; debugInformationProvider, Func&lt;System.Reflection.Metadata.MethodDefinitionHandle,System.Reflection.Metadata.StandaloneSignatureHandle&gt; localSignatureProvider, bool hasPortableDebugInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Emit.EmitBaseline CreateInitialBaseline(class Microsoft.CodeAnalysis.ModuleMetadata module, class System.Func`2&lt;valuetype System.Reflection.Metadata.MethodDefinitionHandle, valuetype Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&gt; debugInformationProvider, class System.Func`2&lt;valuetype System.Reflection.Metadata.MethodDefinitionHandle, valuetype System.Reflection.Metadata.StandaloneSignatureHandle&gt; localSignatureProvider, bool hasPortableDebugInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline(Microsoft.CodeAnalysis.ModuleMetadata,System.Func{System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation},System.Func{System.Reflection.Metadata.MethodDefinitionHandle,System.Reflection.Metadata.StandaloneSignatureHandle},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateInitialBaseline (module As ModuleMetadata, debugInformationProvider As Func(Of MethodDefinitionHandle, EditAndContinueMethodDebugInformation), localSignatureProvider As Func(Of MethodDefinitionHandle, StandaloneSignatureHandle), hasPortableDebugInformation As Boolean) As EmitBaseline" />
+      <MemberSignature Language="F#" Value="static member CreateInitialBaseline : Microsoft.CodeAnalysis.ModuleMetadata * Func&lt;System.Reflection.Metadata.MethodDefinitionHandle, Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&gt; * Func&lt;System.Reflection.Metadata.MethodDefinitionHandle, System.Reflection.Metadata.StandaloneSignatureHandle&gt; * bool -&gt; Microsoft.CodeAnalysis.Emit.EmitBaseline" Usage="Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline (module, debugInformationProvider, localSignatureProvider, hasPortableDebugInformation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::Emit::EmitBaseline ^ CreateInitialBaseline(Microsoft::CodeAnalysis::ModuleMetadata ^ module, Func&lt;System::Reflection::Metadata::MethodDefinitionHandle, Microsoft::CodeAnalysis::Emit::EditAndContinueMethodDebugInformation&gt; ^ debugInformationProvider, Func&lt;System::Reflection::Metadata::MethodDefinitionHandle, System::Reflection::Metadata::StandaloneSignatureHandle&gt; ^ localSignatureProvider, bool hasPortableDebugInformation);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Emit.EmitBaseline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="module" Type="Microsoft.CodeAnalysis.ModuleMetadata" />
+        <Parameter Name="debugInformationProvider" Type="System.Func&lt;System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&gt;" />
+        <Parameter Name="localSignatureProvider" Type="System.Func&lt;System.Reflection.Metadata.MethodDefinitionHandle,System.Reflection.Metadata.StandaloneSignatureHandle&gt;" />
+        <Parameter Name="hasPortableDebugInformation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="module">The metadata of the module before editing.</param>
+        <param name="debugInformationProvider">
+            A function that for a method handle returns Edit and Continue debug information emitted by the compiler into the PDB.
+            The function shall throw <see cref="T:System.IO.InvalidDataException" /> if the debug information can't be read for the specified method.
+            This exception and <see cref="T:System.IO.IOException" /> are caught and converted to an emit diagnostic. Other exceptions are passed through.
+            </param>
+        <param name="localSignatureProvider">
+            A function that for a method handle returns the signature of its local variables.
+            The function shall throw <see cref="T:System.IO.InvalidDataException" /> if the information can't be read for the specified method.
+            This exception and <see cref="T:System.IO.IOException" /> are caught and converted to an emit diagnostic. Other exceptions are passed through.
+            </param>
+        <param name="hasPortableDebugInformation">
+            True if the baseline PDB is portable.
             </param>
         <summary>
             Creates an <see cref="T:Microsoft.CodeAnalysis.Emit.EmitBaseline" /> from the metadata of the module before editing
@@ -66,10 +121,8 @@
             The slot ordering thus no longer matches the syntax ordering. It is therefore necessary to pass <see cref="P:Microsoft.CodeAnalysis.Emit.EmitDifferenceResult.Baseline" />
             to the next generation (rather than e.g. create new <see cref="T:Microsoft.CodeAnalysis.Emit.EmitBaseline" />s from scratch based on metadata produced by subsequent compilations).
             </remarks>
-        <exception cref="T:System.ArgumentException">
-          <paramref name="module" /> is not a PE image.</exception>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="debugInformationProvider" /> is null.</exception>
+          <paramref name="localSignatureProvider" /> is null.</exception>
         <exception cref="T:System.IO.IOException">Error reading module metadata.</exception>
         <exception cref="T:System.BadImageFormatException">Module metadata is invalid.</exception>
         <exception cref="T:System.ObjectDisposedException">Module has been disposed.</exception>
@@ -81,10 +134,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.EmitBaseline.OriginalMetadata" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginalMetadata As ModuleMetadata" />
       <MemberSignature Language="F#" Value="member this.OriginalMetadata : Microsoft.CodeAnalysis.ModuleMetadata" Usage="Microsoft.CodeAnalysis.Emit.EmitBaseline.OriginalMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ModuleMetadata ^ OriginalMetadata { Microsoft::CodeAnalysis::ModuleMetadata ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::ModuleMetadata ^ OriginalMetadata { Microsoft::CodeAnalysis::ModuleMetadata ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
