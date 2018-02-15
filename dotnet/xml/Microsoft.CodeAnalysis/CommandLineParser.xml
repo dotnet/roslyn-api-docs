@@ -4,9 +4,12 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CommandLineParser" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class CommandLineParser" />
   <TypeSignature Language="F#" Value="type CommandLineParser = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CommandLineParser abstract" />
+  <TypeSignature Language="C++ CX" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;public ref class CommandLineParser abstract" />
+  <TypeSignature Language="C++ WINRT" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;class CommandLineParser abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -23,10 +26,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CommandLineParser.Parse(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Parse (args As IEnumerable(Of String), baseDirectory As String, sdkDirectory As String, additionalReferenceDirectories As String) As CommandLineArguments" />
       <MemberSignature Language="F#" Value="member this.Parse : seq&lt;string&gt; * string * string * string -&gt; Microsoft.CodeAnalysis.CommandLineArguments" Usage="commandLineParser.Parse (args, baseDirectory, sdkDirectory, additionalReferenceDirectories)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CommandLineArguments ^ Parse(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ args, System::String ^ baseDirectory, System::String ^ sdkDirectory, System::String ^ additionalReferenceDirectories);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CommandLineArguments</ReturnType>
@@ -55,10 +59,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CommandLineParser.ParsePathMap(System.String,System.Collections.Generic.IList{Microsoft.CodeAnalysis.Diagnostic})" />
       <MemberSignature Language="VB.NET" Value="Protected Function ParsePathMap (pathMap As String, errors As IList(Of Diagnostic)) As ImmutableArray(Of KeyValuePair(Of String, String))" />
       <MemberSignature Language="F#" Value="member this.ParsePathMap : string * System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Diagnostic&gt; -&gt; System.Collections.Immutable.ImmutableArray&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt;" Usage="commandLineParser.ParsePathMap (pathMap, errors)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; System::Collections::Immutable::ImmutableArray&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::String ^&gt;&gt; ParsePathMap(System::String ^ pathMap, System::Collections::Generic::IList&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^ errors);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;</ReturnType>
@@ -81,10 +86,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CommandLineParser.RegularFileExtension" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property RegularFileExtension As String" />
       <MemberSignature Language="F#" Value="member this.RegularFileExtension : string" Usage="Microsoft.CodeAnalysis.CommandLineParser.RegularFileExtension" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract property System::String ^ RegularFileExtension { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="protected:&#xA; abstract property Platform::String ^ RegularFileExtension { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -101,10 +108,12 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CommandLineParser.ScriptFileExtension" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property ScriptFileExtension As String" />
       <MemberSignature Language="F#" Value="member this.ScriptFileExtension : string" Usage="Microsoft.CodeAnalysis.CommandLineParser.ScriptFileExtension" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract property System::String ^ ScriptFileExtension { System::String ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="protected:&#xA; abstract property Platform::String ^ ScriptFileExtension { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -121,10 +130,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CommandLineParser.SplitCommandLineIntoArguments(System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function SplitCommandLineIntoArguments (commandLine As String, removeHashComments As Boolean) As IEnumerable(Of String)" />
       <MemberSignature Language="F#" Value="static member SplitCommandLineIntoArguments : string * bool -&gt; seq&lt;string&gt;" Usage="Microsoft.CodeAnalysis.CommandLineParser.SplitCommandLineIntoArguments (commandLine, removeHashComments)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ SplitCommandLineIntoArguments(System::String ^ commandLine, bool removeHashComments);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>

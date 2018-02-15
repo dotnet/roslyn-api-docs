@@ -4,9 +4,10 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SyntaxTriviaList" />
   <TypeSignature Language="VB.NET" Value="Public Structure SyntaxTriviaList&#xA;Implements IEnumerable(Of SyntaxTrivia), IEquatable(Of SyntaxTriviaList), IReadOnlyCollection(Of SyntaxTrivia), IReadOnlyList(Of SyntaxTrivia)" />
   <TypeSignature Language="F#" Value="type SyntaxTriviaList = struct&#xA;    interface IReadOnlyList&lt;SyntaxTrivia&gt;&#xA;    interface seq&lt;SyntaxTrivia&gt;&#xA;    interface IEnumerable&#xA;    interface IReadOnlyCollection&lt;SyntaxTrivia&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public value class SyntaxTriviaList : IEquatable&lt;Microsoft::CodeAnalysis::SyntaxTriviaList&gt;, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt;, System::Collections::Generic::IReadOnlyCollection&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt;, System::Collections::Generic::IReadOnlyList&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -32,16 +33,90 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyntaxTriviaList (Microsoft.CodeAnalysis.SyntaxTrivia trivia);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.SyntaxTrivia trivia) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.#ctor(Microsoft.CodeAnalysis.SyntaxTrivia)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (trivia As SyntaxTrivia)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.SyntaxTriviaList : Microsoft.CodeAnalysis.SyntaxTrivia -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="new Microsoft.CodeAnalysis.SyntaxTriviaList trivia" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SyntaxTriviaList(Microsoft::CodeAnalysis::SyntaxTrivia trivia);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trivia" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+      </Parameters>
+      <Docs>
+        <param name="trivia">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyntaxTriviaList (params Microsoft.CodeAnalysis.SyntaxTrivia[] trivias);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.SyntaxTrivia[] trivias) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.#ctor(Microsoft.CodeAnalysis.SyntaxTrivia[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ParamArray trivias As SyntaxTrivia())" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.SyntaxTriviaList : Microsoft.CodeAnalysis.SyntaxTrivia[] -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="new Microsoft.CodeAnalysis.SyntaxTriviaList trivias" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SyntaxTriviaList(... cli::array &lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ trivias);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trivias" Type="Microsoft.CodeAnalysis.SyntaxTrivia[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="trivias">An array of trivia.</param>
+        <summary>
+            Creates a list of trivia.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyntaxTriviaList (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; trivias);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; trivias) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.#ctor(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (trivias As IEnumerable(Of SyntaxTrivia))" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.SyntaxTriviaList : seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="new Microsoft.CodeAnalysis.SyntaxTriviaList trivias" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SyntaxTriviaList(System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ trivias);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trivias" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="trivias">A sequence of trivia.</param>
+        <summary>
+            Creates a list of trivia.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Add">
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTriviaList Add (Microsoft.CodeAnalysis.SyntaxTrivia trivia);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTriviaList Add(valuetype Microsoft.CodeAnalysis.SyntaxTrivia trivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Add(Microsoft.CodeAnalysis.SyntaxTrivia)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (trivia As SyntaxTrivia) As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="member this.Add : Microsoft.CodeAnalysis.SyntaxTrivia -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="syntaxTriviaList.Add trivia" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList Add(Microsoft::CodeAnalysis::SyntaxTrivia trivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -64,10 +139,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.AddRange(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia})" />
       <MemberSignature Language="VB.NET" Value="Public Function AddRange (trivia As IEnumerable(Of SyntaxTrivia)) As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="member this.AddRange : seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="syntaxTriviaList.AddRange trivia" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList AddRange(System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ trivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -90,10 +166,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Any" />
       <MemberSignature Language="VB.NET" Value="Public Function Any () As Boolean" />
       <MemberSignature Language="F#" Value="member this.Any : unit -&gt; bool" Usage="syntaxTriviaList.Any " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Any();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; bool Any();" />
+      <MemberSignature Language="C++ WINRT" Value="bool Any();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -113,13 +192,15 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTriviaList.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.CodeAnalysis.SyntaxTriviaList.Count" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property int Count { int get(); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.IReadOnlyCollection`1.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -136,10 +217,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Create(Microsoft.CodeAnalysis.SyntaxTrivia)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (trivia As SyntaxTrivia) As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.SyntaxTrivia -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="Microsoft.CodeAnalysis.SyntaxTriviaList.Create trivia" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::SyntaxTriviaList Create(Microsoft::CodeAnalysis::SyntaxTrivia trivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -160,10 +242,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.ElementAt(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function ElementAt (index As Integer) As SyntaxTrivia" />
       <MemberSignature Language="F#" Value="member this.ElementAt : int -&gt; Microsoft.CodeAnalysis.SyntaxTrivia" Usage="syntaxTriviaList.ElementAt index" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTrivia ElementAt(int index);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
@@ -184,10 +267,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTriviaList.Empty" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Empty As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="member this.Empty : Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="Microsoft.CodeAnalysis.SyntaxTriviaList.Empty" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::CodeAnalysis::SyntaxTriviaList Empty { Microsoft::CodeAnalysis::SyntaxTriviaList get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -204,13 +288,14 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Equals(Microsoft.CodeAnalysis.SyntaxTriviaList)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As SyntaxTriviaList) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.SyntaxTriviaList -&gt; bool" Usage="syntaxTriviaList.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::CodeAnalysis::SyntaxTriviaList other);" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -231,10 +316,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="syntaxTriviaList.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override bool Equals(Platform::Object ^ obj);" />
+      <MemberSignature Language="C++ WINRT" Value=" override bool Equals(winrt::Windows::Foundation::IInspectable const &amp; obj);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -255,10 +343,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.First" />
       <MemberSignature Language="VB.NET" Value="Public Function First () As SyntaxTrivia" />
       <MemberSignature Language="F#" Value="member this.First : unit -&gt; Microsoft.CodeAnalysis.SyntaxTrivia" Usage="syntaxTriviaList.First " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTrivia First();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
@@ -279,10 +368,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTriviaList.FullSpan" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullSpan As TextSpan" />
       <MemberSignature Language="F#" Value="member this.FullSpan : Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.SyntaxTriviaList.FullSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Text::TextSpan FullSpan { Microsoft::CodeAnalysis::Text::TextSpan get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
@@ -301,10 +391,12 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As SyntaxTriviaList.Enumerator" />
       <MemberSignature Language="F#" Value="member this.GetEnumerator : unit -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList.Enumerator" Usage="syntaxTriviaList.GetEnumerator " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList::Enumerator GetEnumerator();" />
+      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::SyntaxTriviaList::Enumerator GetEnumerator();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList+Enumerator</ReturnType>
@@ -322,10 +414,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="syntaxTriviaList.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ WINRT" Value=" override int GetHashCode();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -343,10 +438,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.IndexOf(Microsoft.CodeAnalysis.SyntaxTrivia)" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (triviaInList As SyntaxTrivia) As Integer" />
       <MemberSignature Language="F#" Value="member this.IndexOf : Microsoft.CodeAnalysis.SyntaxTrivia -&gt; int" Usage="syntaxTriviaList.IndexOf triviaInList" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int IndexOf(Microsoft::CodeAnalysis::SyntaxTrivia triviaInList);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -367,10 +463,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Insert(System.Int32,Microsoft.CodeAnalysis.SyntaxTrivia)" />
       <MemberSignature Language="VB.NET" Value="Public Function Insert (index As Integer, trivia As SyntaxTrivia) As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="member this.Insert : int * Microsoft.CodeAnalysis.SyntaxTrivia -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="syntaxTriviaList.Insert (index, trivia)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList Insert(int index, Microsoft::CodeAnalysis::SyntaxTrivia trivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -395,10 +492,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia})" />
       <MemberSignature Language="VB.NET" Value="Public Function InsertRange (index As Integer, trivia As IEnumerable(Of SyntaxTrivia)) As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="member this.InsertRange : int * seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="syntaxTriviaList.InsertRange (index, trivia)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList InsertRange(int index, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ trivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -423,13 +521,14 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTriviaList.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As SyntaxTrivia" />
       <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.CodeAnalysis.SyntaxTrivia" Usage="Microsoft.CodeAnalysis.SyntaxTriviaList.Item" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SyntaxTrivia default[int] { Microsoft::CodeAnalysis::SyntaxTrivia get(int index); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.IReadOnlyList`1.Item(System.Int32)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
@@ -454,10 +553,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Last" />
       <MemberSignature Language="VB.NET" Value="Public Function Last () As SyntaxTrivia" />
       <MemberSignature Language="F#" Value="member this.Last : unit -&gt; Microsoft.CodeAnalysis.SyntaxTrivia" Usage="syntaxTriviaList.Last " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTrivia Last();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
@@ -478,10 +578,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.op_Equality(Microsoft.CodeAnalysis.SyntaxTriviaList,Microsoft.CodeAnalysis.SyntaxTriviaList)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As SyntaxTriviaList, right As SyntaxTriviaList) As Boolean" />
       <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.SyntaxTriviaList * Microsoft.CodeAnalysis.SyntaxTriviaList -&gt; bool" Usage="left = right" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::CodeAnalysis::SyntaxTriviaList left, Microsoft::CodeAnalysis::SyntaxTriviaList right);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -504,10 +605,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.op_Inequality(Microsoft.CodeAnalysis.SyntaxTriviaList,Microsoft.CodeAnalysis.SyntaxTriviaList)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As SyntaxTriviaList, right As SyntaxTriviaList) As Boolean" />
       <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.SyntaxTriviaList * Microsoft.CodeAnalysis.SyntaxTriviaList -&gt; bool" Usage="Microsoft.CodeAnalysis.SyntaxTriviaList.op_Inequality (left, right)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::CodeAnalysis::SyntaxTriviaList left, Microsoft::CodeAnalysis::SyntaxTriviaList right);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -530,10 +632,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Remove(Microsoft.CodeAnalysis.SyntaxTrivia)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (triviaInList As SyntaxTrivia) As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="member this.Remove : Microsoft.CodeAnalysis.SyntaxTrivia -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="syntaxTriviaList.Remove triviaInList" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList Remove(Microsoft::CodeAnalysis::SyntaxTrivia triviaInList);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -556,10 +659,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.RemoveAt(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function RemoveAt (index As Integer) As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="member this.RemoveAt : int -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="syntaxTriviaList.RemoveAt index" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList RemoveAt(int index);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -582,10 +686,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Replace(Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia)" />
       <MemberSignature Language="VB.NET" Value="Public Function Replace (triviaInList As SyntaxTrivia, newTrivia As SyntaxTrivia) As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="member this.Replace : Microsoft.CodeAnalysis.SyntaxTrivia * Microsoft.CodeAnalysis.SyntaxTrivia -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="syntaxTriviaList.Replace (triviaInList, newTrivia)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList Replace(Microsoft::CodeAnalysis::SyntaxTrivia triviaInList, Microsoft::CodeAnalysis::SyntaxTrivia newTrivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -610,10 +715,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.ReplaceRange(Microsoft.CodeAnalysis.SyntaxTrivia,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia})" />
       <MemberSignature Language="VB.NET" Value="Public Function ReplaceRange (triviaInList As SyntaxTrivia, newTrivia As IEnumerable(Of SyntaxTrivia)) As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="member this.ReplaceRange : Microsoft.CodeAnalysis.SyntaxTrivia * seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="syntaxTriviaList.ReplaceRange (triviaInList, newTrivia)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList ReplaceRange(Microsoft::CodeAnalysis::SyntaxTrivia triviaInList, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ newTrivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -638,10 +744,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.Reverse" />
       <MemberSignature Language="VB.NET" Value="Public Function Reverse () As SyntaxTriviaList.Reversed" />
       <MemberSignature Language="F#" Value="member this.Reverse : unit -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList.Reversed" Usage="syntaxTriviaList.Reverse " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList::Reversed Reverse();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList+Reversed</ReturnType>
@@ -662,10 +769,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxTriviaList.Span" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Span As TextSpan" />
       <MemberSignature Language="F#" Value="member this.Span : Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.SyntaxTriviaList.Span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Text::TextSpan Span { Microsoft::CodeAnalysis::Text::TextSpan get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
@@ -683,13 +791,14 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt;.GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.System#Collections#Generic#IEnumerable&lt;Microsoft#CodeAnalysis#SyntaxTrivia&gt;#GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator(Of SyntaxTrivia) Implements IEnumerable(Of SyntaxTrivia).GetEnumerator" />
+      <MemberSignature Language="C++ CLI" Value=" virtual System::Collections::Generic::IEnumerator&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt;.GetEnumerator() = System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt;::GetEnumerator;" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerator&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt;</ReturnType>
@@ -706,13 +815,14 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.System#Collections#IEnumerable#GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator Implements IEnumerable.GetEnumerator" />
+      <MemberSignature Language="C++ CLI" Value=" virtual System::Collections::IEnumerator ^ System.Collections.IEnumerable.GetEnumerator() = System::Collections::IEnumerable::GetEnumerator;" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -730,10 +840,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.ToFullString" />
       <MemberSignature Language="VB.NET" Value="Public Function ToFullString () As String" />
       <MemberSignature Language="F#" Value="member this.ToFullString : unit -&gt; string" Usage="syntaxTriviaList.ToFullString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ ToFullString();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; Platform::String ^ ToFullString();" />
+      <MemberSignature Language="C++ WINRT" Value="std::wstring ToFullString();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -751,10 +864,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTriviaList.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="syntaxTriviaList.ToString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override Platform::String ^ ToString();" />
+      <MemberSignature Language="C++ WINRT" Value=" override std::wstring ToString();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

@@ -1,0 +1,106 @@
+﻿<Type Name="ICollectionElementInitializerOperation" FullName="Microsoft.CodeAnalysis.Operations.ICollectionElementInitializerOperation">
+  <TypeSignature Language="C#" Value="public interface ICollectionElementInitializerOperation : Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICollectionElementInitializerOperation implements class Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.ICollectionElementInitializerOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ICollectionElementInitializerOperation&#xA;Implements IOperation" />
+  <TypeSignature Language="F#" Value="type ICollectionElementInitializerOperation = interface&#xA;    interface IOperation" />
+  <TypeSignature Language="C++ CLI" Value="public interface class ICollectionElementInitializerOperation : Microsoft::CodeAnalysis::IOperation" />
+  <TypeSignature Language="C++ CX" Value="public interface class ICollectionElementInitializerOperation : Microsoft::CodeAnalysis::IOperation" />
+  <TypeSignature Language="C++ WINRT" Value="__interface ICollectionElementInitializerOperation : Microsoft::CodeAnalysis::IOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a collection element initializer.
+            <para>
+            Current usage:
+             (1) C# nested collection element initializer expression within a collection initializer.
+                 For example, given a collection initializer "new Class() { Y = { { x, y, 3 } } }",
+                 nested collection element initializer for Y, i.e. "{ { x, y, 3 } }" is represented by this operation.
+             (2) VB nested collection element initializer expression within a collection initializer.
+            </para></summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddMethod">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol AddMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol AddMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ICollectionElementInitializerOperation.AddMethod" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AddMethod As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="member this.AddMethod : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.Operations.ICollectionElementInitializerOperation.AddMethod" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ AddMethod { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Add method invoked on collection. Null for dynamic invocation and error cases.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt; Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IOperation&gt; Arguments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ICollectionElementInitializerOperation.Arguments" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Arguments As ImmutableArray(Of IOperation)" />
+      <MemberSignature Language="F#" Value="member this.Arguments : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;" Usage="Microsoft.CodeAnalysis.Operations.ICollectionElementInitializerOperation.Arguments" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IOperation ^&gt; Arguments { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IOperation ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Arguments passed to add method invocation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDynamic">
+      <MemberSignature Language="C#" Value="public bool IsDynamic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDynamic" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ICollectionElementInitializerOperation.IsDynamic" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDynamic As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsDynamic : bool" Usage="Microsoft.CodeAnalysis.Operations.ICollectionElementInitializerOperation.IsDynamic" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDynamic { bool get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool IsDynamic { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Flag indicating if this is a dynamic invocation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

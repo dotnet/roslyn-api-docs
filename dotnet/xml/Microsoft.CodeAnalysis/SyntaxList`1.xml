@@ -4,9 +4,10 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SyntaxList`1" />
   <TypeSignature Language="VB.NET" Value="Public Structure SyntaxList(Of TNode)&#xA;Implements IEnumerable(Of TNode), IEquatable(Of SyntaxList(Of TNode)), IReadOnlyCollection(Of TNode), IReadOnlyList(Of TNode)" />
   <TypeSignature Language="F#" Value="type SyntaxList&lt;'Node (requires 'Node :&gt; SyntaxNode)&gt; = struct&#xA;    interface IReadOnlyList&lt;'Node (requires 'Node :&gt; SyntaxNode)&gt;&#xA;    interface seq&lt;'Node (requires 'Node :&gt; SyntaxNode)&gt;&#xA;    interface IEnumerable&#xA;    interface IReadOnlyCollection&lt;'Node (requires 'Node :&gt; SyntaxNode)&gt;" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename TNode&gt;&#xA; where TNode : SyntaxNodepublic value class SyntaxList : IEquatable&lt;Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt;&gt;, System::Collections::Generic::IEnumerable&lt;TNode&gt;, System::Collections::Generic::IReadOnlyCollection&lt;TNode&gt;, System::Collections::Generic::IReadOnlyList&lt;TNode&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
+    <AssemblyVersion>2.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="TNode">
@@ -40,16 +41,65 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyntaxList (System.Collections.Generic.IEnumerable&lt;TNode&gt; nodes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;!TNode&gt; nodes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (nodes As IEnumerable(Of TNode))" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; : seq&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="new Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; nodes" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SyntaxList(System::Collections::Generic::IEnumerable&lt;TNode&gt; ^ nodes);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nodes" Type="System.Collections.Generic.IEnumerable&lt;TNode&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="nodes">A sequence of element nodes.</param>
+        <summary>
+            Creates a list of syntax nodes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyntaxList (TNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.#ctor(`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (node As TNode)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; : 'Node -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="new Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; node" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SyntaxList(TNode node);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; SyntaxList(TNode node);" />
+      <MemberSignature Language="C++ WINRT" Value=" SyntaxList(TNode node);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="TNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">The single element node.</param>
+        <summary>
+            Creates a singleton list of syntax nodes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Add">
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt; Add (TNode node);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;!TNode&gt; Add(!TNode node) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.Add(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (node As TNode) As SyntaxList(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.Add : 'Node -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="syntaxList.Add node" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; Add(TNode node);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;</ReturnType>
@@ -72,10 +122,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.AddRange(System.Collections.Generic.IEnumerable{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function AddRange (nodes As IEnumerable(Of TNode)) As SyntaxList(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.AddRange : seq&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="syntaxList.AddRange nodes" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; AddRange(System::Collections::Generic::IEnumerable&lt;TNode&gt; ^ nodes);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;</ReturnType>
@@ -98,10 +149,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.Any" />
       <MemberSignature Language="VB.NET" Value="Public Function Any () As Boolean" />
       <MemberSignature Language="F#" Value="member this.Any : unit -&gt; bool" Usage="syntaxList.Any " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Any();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; bool Any();" />
+      <MemberSignature Language="C++ WINRT" Value="bool Any();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -121,13 +175,15 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxList`1.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.Count" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property int Count { int get(); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.IReadOnlyCollection`1.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -146,13 +202,14 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.Equals(Microsoft.CodeAnalysis.SyntaxList{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As SyntaxList(Of TNode)) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; bool" Usage="syntaxList.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; other);" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -173,10 +230,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="syntaxList.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override bool Equals(Platform::Object ^ obj);" />
+      <MemberSignature Language="C++ WINRT" Value=" override bool Equals(winrt::Windows::Foundation::IInspectable const &amp; obj);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -197,10 +257,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.First" />
       <MemberSignature Language="VB.NET" Value="Public Function First () As TNode" />
       <MemberSignature Language="F#" Value="member this.First : unit -&gt; 'Node" Usage="syntaxList.First " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TNode First();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; TNode First();" />
+      <MemberSignature Language="C++ WINRT" Value="TNode First();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TNode</ReturnType>
@@ -220,10 +283,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.FirstOrDefault" />
       <MemberSignature Language="VB.NET" Value="Public Function FirstOrDefault () As TNode" />
       <MemberSignature Language="F#" Value="member this.FirstOrDefault : unit -&gt; 'Node" Usage="syntaxList.FirstOrDefault " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TNode FirstOrDefault();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; TNode FirstOrDefault();" />
+      <MemberSignature Language="C++ WINRT" Value="TNode FirstOrDefault();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TNode</ReturnType>
@@ -243,10 +309,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxList`1.FullSpan" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullSpan As TextSpan" />
       <MemberSignature Language="F#" Value="member this.FullSpan : Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.FullSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Text::TextSpan FullSpan { Microsoft::CodeAnalysis::Text::TextSpan get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
@@ -265,10 +332,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As SyntaxList(Of TNode).Enumerator" />
       <MemberSignature Language="F#" Value="member this.GetEnumerator : unit -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.Enumerator" Usage="syntaxList.GetEnumerator " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt;::Enumerator GetEnumerator();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;+Enumerator</ReturnType>
@@ -288,10 +356,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="syntaxList.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="C++ WINRT" Value=" override int GetHashCode();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -309,10 +380,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.IndexOf(System.Func{`0,System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (predicate As Func(Of TNode, Boolean)) As Integer" />
       <MemberSignature Language="F#" Value="member this.IndexOf : Func&lt;'Node, bool (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; int" Usage="syntaxList.IndexOf predicate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int IndexOf(Func&lt;TNode, bool&gt; ^ predicate);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -333,10 +405,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.IndexOf(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (node As TNode) As Integer" />
       <MemberSignature Language="F#" Value="member this.IndexOf : 'Node -&gt; int" Usage="syntaxList.IndexOf node" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int IndexOf(TNode node);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; int IndexOf(TNode node);" />
+      <MemberSignature Language="C++ WINRT" Value="int IndexOf(TNode node);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -359,10 +434,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.Insert(System.Int32,`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Insert (index As Integer, node As TNode) As SyntaxList(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.Insert : int * 'Node -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="syntaxList.Insert (index, node)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; Insert(int index, TNode node);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;</ReturnType>
@@ -387,10 +463,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function InsertRange (index As Integer, nodes As IEnumerable(Of TNode)) As SyntaxList(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.InsertRange : int * seq&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="syntaxList.InsertRange (index, nodes)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; InsertRange(int index, System::Collections::Generic::IEnumerable&lt;TNode&gt; ^ nodes);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;</ReturnType>
@@ -415,13 +492,14 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxList`1.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As TNode" />
       <MemberSignature Language="F#" Value="member this.Item(int) : 'Node" Usage="Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.Item" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TNode default[int] { TNode get(int index); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.IReadOnlyList`1.Item(System.Int32)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TNode</ReturnType>
@@ -444,10 +522,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.Last" />
       <MemberSignature Language="VB.NET" Value="Public Function Last () As TNode" />
       <MemberSignature Language="F#" Value="member this.Last : unit -&gt; 'Node" Usage="syntaxList.Last " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TNode Last();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; TNode Last();" />
+      <MemberSignature Language="C++ WINRT" Value="TNode Last();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TNode</ReturnType>
@@ -467,10 +548,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.LastIndexOf(System.Func{`0,System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Function LastIndexOf (predicate As Func(Of TNode, Boolean)) As Integer" />
       <MemberSignature Language="F#" Value="member this.LastIndexOf : Func&lt;'Node, bool (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; int" Usage="syntaxList.LastIndexOf predicate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int LastIndexOf(Func&lt;TNode, bool&gt; ^ predicate);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -491,10 +573,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.LastIndexOf(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function LastIndexOf (node As TNode) As Integer" />
       <MemberSignature Language="F#" Value="member this.LastIndexOf : 'Node -&gt; int" Usage="syntaxList.LastIndexOf node" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int LastIndexOf(TNode node);" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; int LastIndexOf(TNode node);" />
+      <MemberSignature Language="C++ WINRT" Value="int LastIndexOf(TNode node);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -515,10 +600,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.LastOrDefault" />
       <MemberSignature Language="VB.NET" Value="Public Function LastOrDefault () As TNode" />
       <MemberSignature Language="F#" Value="member this.LastOrDefault : unit -&gt; 'Node" Usage="syntaxList.LastOrDefault " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TNode LastOrDefault();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; TNode LastOrDefault();" />
+      <MemberSignature Language="C++ WINRT" Value="TNode LastOrDefault();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TNode</ReturnType>
@@ -538,10 +626,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.op_Equality(Microsoft.CodeAnalysis.SyntaxList{`0},Microsoft.CodeAnalysis.SyntaxList{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As SyntaxList(Of TNode), right As SyntaxList(Of TNode)) As Boolean" />
       <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; * Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; bool" Usage="left = right" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; left, Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; right);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -564,10 +653,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.op_Implicit(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.SyntaxNode})~Microsoft.CodeAnalysis.SyntaxList{`0}" />
       <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (nodes As SyntaxList(Of SyntaxNode)) As SyntaxList(Of TNode)" />
       <MemberSignature Language="F#" Value="static member op_Implicit : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.op_Implicit nodes" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static operator Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt;(Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt; nodes);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;</ReturnType>
@@ -588,10 +678,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.op_Implicit(Microsoft.CodeAnalysis.SyntaxList{`0})~Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.SyntaxNode}" />
       <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (nodes As SyntaxList(Of TNode)) As SyntaxList(Of SyntaxNode)" />
       <MemberSignature Language="F#" Value="static member op_Implicit : Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;" Usage="Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.op_Implicit nodes" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static operator Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt;(Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; nodes);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;</ReturnType>
@@ -612,10 +703,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.op_Inequality(Microsoft.CodeAnalysis.SyntaxList{`0},Microsoft.CodeAnalysis.SyntaxList{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As SyntaxList(Of TNode), right As SyntaxList(Of TNode)) As Boolean" />
       <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; * Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; bool" Usage="Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.op_Inequality (left, right)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; left, Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; right);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -638,10 +730,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.Remove(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (node As TNode) As SyntaxList(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.Remove : 'Node -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="syntaxList.Remove node" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; Remove(TNode node);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;</ReturnType>
@@ -664,10 +757,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.RemoveAt(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function RemoveAt (index As Integer) As SyntaxList(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.RemoveAt : int -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="syntaxList.RemoveAt index" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; RemoveAt(int index);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;</ReturnType>
@@ -690,10 +784,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.Replace(`0,`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Replace (nodeInList As TNode, newNode As TNode) As SyntaxList(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.Replace : 'Node * 'Node -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="syntaxList.Replace (nodeInList, newNode)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; Replace(TNode nodeInList, TNode newNode);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;</ReturnType>
@@ -718,10 +813,11 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.ReplaceRange(`0,System.Collections.Generic.IEnumerable{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Function ReplaceRange (nodeInList As TNode, newNodes As IEnumerable(Of TNode)) As SyntaxList(Of TNode)" />
       <MemberSignature Language="F#" Value="member this.ReplaceRange : 'Node * seq&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; -&gt; Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;" Usage="syntaxList.ReplaceRange (nodeInList, newNodes)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxList&lt;TNode&gt; ReplaceRange(TNode nodeInList, System::Collections::Generic::IEnumerable&lt;TNode&gt; ^ newNodes);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;TNode&gt;</ReturnType>
@@ -746,10 +842,11 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxList`1.Span" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Span As TextSpan" />
       <MemberSignature Language="F#" Value="member this.Span : Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.SyntaxList&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt;.Span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Text::TextSpan Span { Microsoft::CodeAnalysis::Text::TextSpan get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
@@ -767,13 +864,14 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!TNode&gt; System.Collections.Generic.IEnumerable&lt;TNode&gt;.GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.System#Collections#Generic#IEnumerable&lt;TNode&gt;#GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator(Of TNode) Implements IEnumerable(Of TNode).GetEnumerator" />
+      <MemberSignature Language="C++ CLI" Value=" virtual System::Collections::Generic::IEnumerator&lt;TNode&gt; ^ System.Collections.Generic.IEnumerable&lt;TNode&gt;.GetEnumerator() = System::Collections::Generic::IEnumerable&lt;TNode&gt;::GetEnumerator;" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerator&lt;TNode&gt;</ReturnType>
@@ -790,13 +888,14 @@
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.System#Collections#IEnumerable#GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator Implements IEnumerable.GetEnumerator" />
+      <MemberSignature Language="C++ CLI" Value=" virtual System::Collections::IEnumerator ^ System.Collections.IEnumerable.GetEnumerator() = System::Collections::IEnumerable::GetEnumerator;" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -814,10 +913,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.ToFullString" />
       <MemberSignature Language="VB.NET" Value="Public Function ToFullString () As String" />
       <MemberSignature Language="F#" Value="member this.ToFullString : unit -&gt; string" Usage="syntaxList.ToFullString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ ToFullString();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; Platform::String ^ ToFullString();" />
+      <MemberSignature Language="C++ WINRT" Value="std::wstring ToFullString();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -841,10 +943,13 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxList`1.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="syntaxList.ToString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; override Platform::String ^ ToString();" />
+      <MemberSignature Language="C++ WINRT" Value=" override std::wstring ToString();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.4.0.0</AssemblyVersion>
+        <AssemblyVersion>2.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
