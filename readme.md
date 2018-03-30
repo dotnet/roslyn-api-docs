@@ -1,7 +1,17 @@
 # Readme.md
 
-This file has notes on building the API reference
-for the Roslyn APIs.
+This repository contains the API documentation for the
+[.NET Compiler Platform SDK](https://github.com/dotnet/roslyn-sdk). The .NET
+Compiler Platform SDK is part of the overall .NET developer documentation.
+The .NET content team tracks all work for .NET developer documentation
+on the [.NET Docs](https://github.com/dotnet/docs) repository. If you find
+any issues, or have suggestions on how to improve the .NET Compiler platform
+SDK documentation, create them on the [docs repository](https://github.com/dotnet/docs/issues).
+That repository contains the source for conceptual documentation, tutorials and more,
+including all the dcoumentation on the .NET Compiler Platform SDK.
+
+This remainder of this file has notes which NuGet packages make up the
+.NET Compiler SDK Meta-package.
 
 ## NuGet Packages that comprise the Roslyn APIs
 
