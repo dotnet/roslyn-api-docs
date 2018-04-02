@@ -8,7 +8,7 @@ on the [.NET Docs](https://github.com/dotnet/docs) repository. If you find
 any issues, or have suggestions on how to improve the .NET Compiler platform
 SDK documentation, create them on the [docs repository](https://github.com/dotnet/docs/issues).
 That repository contains the source for conceptual documentation, tutorials and more,
-including all the dcoumentation on the .NET Compiler Platform SDK.
+including all the documentation on the .NET Compiler Platform SDK.
 
 This remainder of this file has notes which NuGet packages make up the
 .NET Compiler SDK Meta-package.
