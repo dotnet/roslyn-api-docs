@@ -1,7 +1,9 @@
 # Readme.md
 
 This repository contains the API documentation for the
-[.NET Compiler Platform SDK](https://github.com/dotnet/roslyn-sdk). The .NET
+.NET Compiler Platform SDK. The .NET Compiler Platform SDK
+includes APIs that are part of hte [Roslyn SDK](https://github.com/dotnet/roslyn-sdk) and
+[Roslyn](https://github.com/dotnet/roslyn) repositories. The .NET
 Compiler Platform SDK is part of the overall .NET developer documentation.
 The .NET content team tracks all work for .NET developer documentation
 on the [.NET Docs](https://github.com/dotnet/docs) repository. If you find
