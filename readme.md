@@ -4,8 +4,8 @@ This repository contains documentation for the
 [Roslyn platform](https://github.com/dotnet/roslyn) and the
 [.NET Compiler Platform SDK](https://github.com/dotnet/roslyn-sdk). The
 Roslyn platform contains the compiler and is part of every .NET installation.
-The Compiler Platform SDK is available via NuGet and provides tools,
-templates and samples to access to the Roslyn platform. The .NET Compiler
+The Compiler Platform SDK provides tools and templates for programmers working
+with the Roslyn platform. The .NET Compiler
 Platform SDK is part of the overall .NET developer documentation.
 The .NET content team tracks all work for .NET developer documentation
 on the [.NET Docs](https://github.com/dotnet/docs) repository. If you find
