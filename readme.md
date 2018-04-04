@@ -14,8 +14,8 @@ SDK documentation, create them on the [docs repository](https://github.com/dotne
 That repository contains the source for conceptual documentation, tutorials and more,
 including all the documentation on the .NET Compiler Platform SDK.
 
-This remainder of this file has notes which NuGet packages make up the
-.NET Compiler SDK Meta-package.
+The remainder of this file has notes which NuGet packages make up the
+.NET Compiler SDK metapackage.
 
 ## NuGet Packages that comprise the Roslyn APIs
 
