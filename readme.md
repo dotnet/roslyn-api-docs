@@ -1,4 +1,4 @@
-# Roslyn API Reference Docs
+# Roslyn API reference documentation
 
 This repository contains documentation for the
 [Roslyn platform](https://github.com/dotnet/roslyn) and the
