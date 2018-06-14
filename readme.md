@@ -14,6 +14,8 @@ SDK documentation, create them on the [docs repository](https://github.com/dotne
 That repository contains the source for conceptual documentation, tutorials and more,
 including all the documentation on the .NET Compiler Platform SDK.
 
+This project has adopted the code of conduct defined by the Contributor Covenant to clarify expected behavior in our community. For more information, see the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct).
+
 The remainder of this file has notes which NuGet packages make up the
 .NET Compiler SDK metapackage.
 
