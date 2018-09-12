@@ -9,7 +9,7 @@
   <TypeSignature Language="C++ WINRT" Value="__interface IDynamicInvocationOperation : Microsoft::CodeAnalysis::IOperation" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -22,7 +22,14 @@
             <para>
             Current usage:
              (1) C# dynamic invocation expression.
-             (2) VB late bound invocation expression.
+             (2) C# dynamic collection element initializer.
+                 For example, in the following collection initializer: <code>new C() { do1, do2, do3 }</code> where
+                 the doX objects are of type dynamic, we'll have 3 <see cref="T:Microsoft.CodeAnalysis.Operations.IDynamicInvocationOperation" /> with do1, do2, and
+                 do3 as their arguments.
+             (3) VB late bound invocation expression.
+             (4) VB dynamic collection element initializer.
+                 Similar to the C# example, <code>New C() From {do1, do2, do3}</code> will generate 3 <see cref="T:Microsoft.CodeAnalysis.Operations.IDynamicInvocationOperation" />
+                 nodes with do1, do2, and do3 as their arguments, respectively.
             </para></summary>
     <remarks>
             This interface is reserved for implementation by its associated APIs. We reserve the right to
@@ -40,7 +47,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
@@ -64,7 +71,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>

@@ -9,7 +9,7 @@
   <TypeSignature Language="C++ WINRT" Value="__interface IInstanceReferenceOperation : Microsoft::CodeAnalysis::IOperation" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -23,11 +23,38 @@
             Current usage:
              (1) C# this or base expression.
              (2) VB Me, MyClass, or MyBase expression.
+             (3) C# object or collection initializers.
+             (4) VB With statements, object or collection initializers.
             </para></summary>
     <remarks>
             This interface is reserved for implementation by its associated APIs. We reserve the right to
             change it in the future.
             </remarks>
   </Docs>
-  <Members />
+  <Members>
+    <Member MemberName="ReferenceKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Operations.InstanceReferenceKind ReferenceKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Operations.InstanceReferenceKind ReferenceKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IInstanceReferenceOperation.ReferenceKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferenceKind As InstanceReferenceKind" />
+      <MemberSignature Language="F#" Value="member this.ReferenceKind : Microsoft.CodeAnalysis.Operations.InstanceReferenceKind" Usage="Microsoft.CodeAnalysis.Operations.IInstanceReferenceOperation.ReferenceKind" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Operations::InstanceReferenceKind ReferenceKind { Microsoft::CodeAnalysis::Operations::InstanceReferenceKind get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::Operations::InstanceReferenceKind ReferenceKind { Microsoft::CodeAnalysis::Operations::InstanceReferenceKind get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Operations.InstanceReferenceKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The kind of reference that is being made.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
 </Type>

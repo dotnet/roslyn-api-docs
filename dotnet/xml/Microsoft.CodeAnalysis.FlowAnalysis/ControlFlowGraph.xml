@@ -1,0 +1,374 @@
+﻿<Type Name="ControlFlowGraph" FullName="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph">
+  <TypeSignature Language="C#" Value="public sealed class ControlFlowGraph" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlFlowGraph extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ControlFlowGraph" />
+  <TypeSignature Language="F#" Value="type ControlFlowGraph = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ControlFlowGraph sealed" />
+  <TypeSignature Language="C++ CX" Value="public ref class ControlFlowGraph sealed" />
+  <TypeSignature Language="C++ WINRT" Value="class ControlFlowGraph sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Control flow graph representation for a given executable code block <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.OriginalOperation" />.
+            This graph contains a set of <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock" />s, with an entry block, zero
+            or more intermediate basic blocks and an exit block.
+            Each basic block contains zero or more <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Operations" /> and
+            explicit <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch" />(s) to other basic block(s).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Blocks">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock&gt; Blocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock&gt; Blocks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Blocks" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Blocks As ImmutableArray(Of BasicBlock)" />
+      <MemberSignature Language="F#" Value="member this.Blocks : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock&gt;" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Blocks" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::FlowAnalysis::BasicBlock ^&gt; Blocks { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::FlowAnalysis::BasicBlock ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Basic blocks for the control flow graph.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create (Microsoft.CodeAnalysis.Operations.IBlockOperation body, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create(class Microsoft.CodeAnalysis.Operations.IBlockOperation body, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create(Microsoft.CodeAnalysis.Operations.IBlockOperation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.Operations.IBlockOperation * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create (body, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="body" Type="Microsoft.CodeAnalysis.Operations.IBlockOperation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="body">Root operation block, which must have a null parent.</param>
+        <param name="cancellationToken">Optional cancellation token.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> for the given executable code block <paramref name="body" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create (Microsoft.CodeAnalysis.Operations.IConstructorBodyOperation constructorBody, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create(class Microsoft.CodeAnalysis.Operations.IConstructorBodyOperation constructorBody, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create(Microsoft.CodeAnalysis.Operations.IConstructorBodyOperation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.Operations.IConstructorBodyOperation * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create (constructorBody, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constructorBody" Type="Microsoft.CodeAnalysis.Operations.IConstructorBodyOperation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="constructorBody">Root constructor body operation, which must have a null parent.</param>
+        <param name="cancellationToken">Optional cancellation token.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> for the given executable code block <paramref name="constructorBody" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create (Microsoft.CodeAnalysis.Operations.IFieldInitializerOperation initializer, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create(class Microsoft.CodeAnalysis.Operations.IFieldInitializerOperation initializer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create(Microsoft.CodeAnalysis.Operations.IFieldInitializerOperation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.Operations.IFieldInitializerOperation * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create (initializer, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="initializer" Type="Microsoft.CodeAnalysis.Operations.IFieldInitializerOperation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="initializer">Root field initializer operation, which must have a null parent.</param>
+        <param name="cancellationToken">Optional cancellation token.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> for the given executable code block <paramref name="initializer" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create (Microsoft.CodeAnalysis.Operations.IMethodBodyOperation methodBody, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create(class Microsoft.CodeAnalysis.Operations.IMethodBodyOperation methodBody, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create(Microsoft.CodeAnalysis.Operations.IMethodBodyOperation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.Operations.IMethodBodyOperation * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create (methodBody, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodBody" Type="Microsoft.CodeAnalysis.Operations.IMethodBodyOperation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="methodBody">Root method body operation, which must have a null parent.</param>
+        <param name="cancellationToken">Optional cancellation token.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> for the given executable code block <paramref name="methodBody" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create (Microsoft.CodeAnalysis.Operations.IParameterInitializerOperation initializer, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create(class Microsoft.CodeAnalysis.Operations.IParameterInitializerOperation initializer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create(Microsoft.CodeAnalysis.Operations.IParameterInitializerOperation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.Operations.IParameterInitializerOperation * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create (initializer, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="initializer" Type="Microsoft.CodeAnalysis.Operations.IParameterInitializerOperation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="initializer">Root parameter initializer operation, which must have a null parent.</param>
+        <param name="cancellationToken">Optional cancellation token.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> for the given executable code block <paramref name="initializer" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create (Microsoft.CodeAnalysis.Operations.IPropertyInitializerOperation initializer, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create(class Microsoft.CodeAnalysis.Operations.IPropertyInitializerOperation initializer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create(Microsoft.CodeAnalysis.Operations.IPropertyInitializerOperation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.Operations.IPropertyInitializerOperation * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create (initializer, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="initializer" Type="Microsoft.CodeAnalysis.Operations.IPropertyInitializerOperation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="initializer">Root property initializer operation, which must have a null parent.</param>
+        <param name="cancellationToken">Optional cancellation token.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> for the given executable code block <paramref name="initializer" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create (Microsoft.CodeAnalysis.SyntaxNode node, Microsoft.CodeAnalysis.SemanticModel semanticModel, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph Create(class Microsoft.CodeAnalysis.SyntaxNode node, class Microsoft.CodeAnalysis.SemanticModel semanticModel, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SemanticModel,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SemanticModel * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Create (node, semanticModel, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.SyntaxNode" />
+        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="node">Root syntax node for an executable code block.</param>
+        <param name="semanticModel">Semantic model for the syntax tree containing the <paramref name="node" />.</param>
+        <param name="cancellationToken">Optional cancellation token.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> for the given executable code block root <paramref name="node" />.
+            </summary>
+        <returns>
+            Returns null if <see cref="M:Microsoft.CodeAnalysis.SemanticModel.GetOperation(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" /> returns null for the given <paramref name="node" /> and <paramref name="semanticModel" />.
+            Otherwise, returns a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> for the executable code block.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnonymousFunctionControlFlowGraph">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph GetAnonymousFunctionControlFlowGraph (Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation anonymousFunction, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph GetAnonymousFunctionControlFlowGraph(class Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation anonymousFunction, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.GetAnonymousFunctionControlFlowGraph(Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetAnonymousFunctionControlFlowGraph : Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="controlFlowGraph.GetAnonymousFunctionControlFlowGraph (anonymousFunction, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="anonymousFunction" Type="Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="anonymousFunction">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Creates a control flow graph for the given <paramref name="anonymousFunction" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalFunctionControlFlowGraph">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph GetLocalFunctionControlFlowGraph (Microsoft.CodeAnalysis.IMethodSymbol localFunction, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph GetLocalFunctionControlFlowGraph(class Microsoft.CodeAnalysis.IMethodSymbol localFunction, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.GetLocalFunctionControlFlowGraph(Microsoft.CodeAnalysis.IMethodSymbol,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetLocalFunctionControlFlowGraph : Microsoft.CodeAnalysis.IMethodSymbol * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="controlFlowGraph.GetLocalFunctionControlFlowGraph (localFunction, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localFunction" Type="Microsoft.CodeAnalysis.IMethodSymbol" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="localFunction">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Creates a control flow graph for the given <paramref name="localFunction" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalFunctions">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt; LocalFunctions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IMethodSymbol&gt; LocalFunctions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.LocalFunctions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalFunctions As ImmutableArray(Of IMethodSymbol)" />
+      <MemberSignature Language="F#" Value="member this.LocalFunctions : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt;" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.LocalFunctions" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IMethodSymbol ^&gt; LocalFunctions { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IMethodSymbol ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Local functions declared within <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.OriginalOperation" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalOperation">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation OriginalOperation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IOperation OriginalOperation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.OriginalOperation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginalOperation As IOperation" />
+      <MemberSignature Language="F#" Value="member this.OriginalOperation : Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.OriginalOperation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ OriginalOperation { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ OriginalOperation { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Original operation, representing an executable code block, from which this control flow graph was generated.
+            Note that <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Operations" /> in the control flow graph are not in the same operation tree as
+            the original operation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Root">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowRegion Root { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowRegion Root" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Root" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Root As ControlFlowRegion" />
+      <MemberSignature Language="F#" Value="member this.Root : Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowRegion" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Root" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowRegion ^ Root { Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowRegion ^ get(); };" />
+      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowRegion ^ Root { Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowRegion ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowRegion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Root (<see cref="F:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowRegionKind.Root" />) region for the graph.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
