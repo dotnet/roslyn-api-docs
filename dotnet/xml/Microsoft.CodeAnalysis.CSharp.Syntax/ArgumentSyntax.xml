@@ -10,6 +10,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
     <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode</BaseTypeName>
@@ -33,6 +34,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -58,6 +60,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
@@ -88,6 +91,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax</ReturnType>
@@ -110,12 +114,33 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>NameColonSyntax node representing the optional name arguments.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefKindKeyword">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxToken RefKindKeyword { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxToken RefKindKeyword" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax.RefKindKeyword" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RefKindKeyword As SyntaxToken" />
+      <MemberSignature Language="F#" Value="member this.RefKindKeyword : Microsoft.CodeAnalysis.SyntaxToken" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax.RefKindKeyword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>SyntaxToken representing the optional ref or out keyword.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -131,39 +156,48 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>SyntaxToken representing the optional ref or out keyword.</summary>
+        <summary>
+            Pre C# 7.2 back-compat overload, which simply calls the replacement property <see cref="P:Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax.RefKindKeyword" />.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Update">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax Update (Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax nameColon, Microsoft.CodeAnalysis.SyntaxToken refOrOutKeyword, Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax expression);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax Update(class Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax nameColon, valuetype Microsoft.CodeAnalysis.SyntaxToken refOrOutKeyword, class Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax expression) cil managed" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax Update (Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax nameColon, Microsoft.CodeAnalysis.SyntaxToken refKindKeyword, Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax Update(class Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax nameColon, valuetype Microsoft.CodeAnalysis.SyntaxToken refKindKeyword, class Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax expression) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax.Update(Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
-      <MemberSignature Language="VB.NET" Value="Public Function Update (nameColon As NameColonSyntax, refOrOutKeyword As SyntaxToken, expression As ExpressionSyntax) As ArgumentSyntax" />
-      <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax * Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax" Usage="argumentSyntax.Update (nameColon, refOrOutKeyword, expression)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Update (nameColon As NameColonSyntax, refKindKeyword As SyntaxToken, expression As ExpressionSyntax) As ArgumentSyntax" />
+      <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax * Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax" Usage="argumentSyntax.Update (nameColon, refKindKeyword, expression)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentSyntax ^ Update(Microsoft::CodeAnalysis::CSharp::Syntax::NameColonSyntax ^ nameColon, Microsoft::CodeAnalysis::SyntaxToken refOrOutKeyword, Microsoft::CodeAnalysis::CSharp::Syntax::ExpressionSyntax ^ expression);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="nameColon" Type="Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax" />
-        <Parameter Name="refOrOutKeyword" Type="Microsoft.CodeAnalysis.SyntaxToken" />
-        <Parameter Name="expression" Type="Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax" />
+        <Parameter Name="nameColon" Type="Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax" Index="0" />
+        <Parameter Name="refKindKeyword" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="1" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="expression" Type="Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax" Index="2" />
       </Parameters>
       <Docs>
         <param name="nameColon">To be added.</param>
-        <param name="refOrOutKeyword">To be added.</param>
+        <param name="refKindKeyword">To be added.</param>
         <param name="expression">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
@@ -183,6 +217,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax</ReturnType>
@@ -210,6 +245,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax</ReturnType>
@@ -219,6 +255,30 @@
       </Parameters>
       <Docs>
         <param name="nameColon">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithRefKindKeyword">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax WithRefKindKeyword (Microsoft.CodeAnalysis.SyntaxToken refKindKeyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax WithRefKindKeyword(valuetype Microsoft.CodeAnalysis.SyntaxToken refKindKeyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax.WithRefKindKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithRefKindKeyword (refKindKeyword As SyntaxToken) As ArgumentSyntax" />
+      <MemberSignature Language="F#" Value="member this.WithRefKindKeyword : Microsoft.CodeAnalysis.SyntaxToken -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax" Usage="argumentSyntax.WithRefKindKeyword refKindKeyword" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refKindKeyword" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+      </Parameters>
+      <Docs>
+        <param name="refKindKeyword">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -235,7 +295,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax</ReturnType>
       </ReturnValue>
@@ -244,7 +310,9 @@
       </Parameters>
       <Docs>
         <param name="refOrOutKeyword">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+            Pre C# 7.2 back-compat overload, which simply calls the replacement method <see cref="M:Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax.Update(Microsoft.CodeAnalysis.CSharp.Syntax.NameColonSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />.
+            </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
