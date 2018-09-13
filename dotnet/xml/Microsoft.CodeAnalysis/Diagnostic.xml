@@ -8,6 +8,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,6 +45,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -62,6 +64,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Location&gt;</ReturnType>
@@ -85,6 +88,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostic</ReturnType>
@@ -121,6 +125,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostic</ReturnType>
@@ -163,6 +168,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostic</ReturnType>
@@ -205,6 +211,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostic</ReturnType>
@@ -244,6 +251,55 @@
       </Docs>
     </Member>
     <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostic Create (Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, Microsoft.CodeAnalysis.Location location, Microsoft.CodeAnalysis.DiagnosticSeverity effectiveSeverity, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Location&gt; additionalLocations, System.Collections.Immutable.ImmutableDictionary&lt;string,string&gt; properties, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Diagnostic Create(class Microsoft.CodeAnalysis.DiagnosticDescriptor descriptor, class Microsoft.CodeAnalysis.Location location, valuetype Microsoft.CodeAnalysis.DiagnosticSeverity effectiveSeverity, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Location&gt; additionalLocations, class System.Collections.Immutable.ImmutableDictionary`2&lt;string, string&gt; properties, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,Microsoft.CodeAnalysis.DiagnosticSeverity,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Location},System.Collections.Immutable.ImmutableDictionary{System.String,System.String},System.Object[])" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.DiagnosticDescriptor * Microsoft.CodeAnalysis.Location * Microsoft.CodeAnalysis.DiagnosticSeverity * seq&lt;Microsoft.CodeAnalysis.Location&gt; * System.Collections.Immutable.ImmutableDictionary&lt;string, string&gt; * obj[] -&gt; Microsoft.CodeAnalysis.Diagnostic" Usage="Microsoft.CodeAnalysis.Diagnostic.Create (descriptor, location, effectiveSeverity, additionalLocations, properties, messageArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Diagnostic</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="descriptor" Type="Microsoft.CodeAnalysis.DiagnosticDescriptor" />
+        <Parameter Name="location" Type="Microsoft.CodeAnalysis.Location" />
+        <Parameter Name="effectiveSeverity" Type="Microsoft.CodeAnalysis.DiagnosticSeverity" />
+        <Parameter Name="additionalLocations" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Location&gt;" />
+        <Parameter Name="properties" Type="System.Collections.Immutable.ImmutableDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="descriptor">A <see cref="T:Microsoft.CodeAnalysis.DiagnosticDescriptor" /> describing the diagnostic.</param>
+        <param name="location">An optional primary location of the diagnostic. If null, <see cref="P:Microsoft.CodeAnalysis.Diagnostic.Location" /> will return <see cref="P:Microsoft.CodeAnalysis.Location.None" />.</param>
+        <param name="effectiveSeverity">Effective severity of the diagnostic.</param>
+        <param name="additionalLocations">
+            An optional set of additional locations related to the diagnostic.
+            Typically, these are locations of other items referenced in the message.
+            If null, <see cref="P:Microsoft.CodeAnalysis.Diagnostic.AdditionalLocations" /> will return an empty list.
+            </param>
+        <param name="properties">
+            An optional set of name-value pairs by means of which the analyzer that creates the diagnostic
+            can convey more detailed information to the fixer. If null, <see cref="P:Microsoft.CodeAnalysis.Diagnostic.Properties" /> will return
+            <see cref="F:System.Collections.Immutable.ImmutableDictionary`2.Empty" />.
+            </param>
+        <param name="messageArgs">Arguments to the message of the diagnostic.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.Diagnostic" /> instance.
+            </summary>
+        <returns>The <see cref="T:Microsoft.CodeAnalysis.Diagnostic" /> instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostic Create (string id, string category, Microsoft.CodeAnalysis.LocalizableString message, Microsoft.CodeAnalysis.DiagnosticSeverity severity, Microsoft.CodeAnalysis.DiagnosticSeverity defaultSeverity, bool isEnabledByDefault, int warningLevel, Microsoft.CodeAnalysis.LocalizableString title = null, Microsoft.CodeAnalysis.LocalizableString description = null, string helpLink = null, Microsoft.CodeAnalysis.Location location = null, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Location&gt; additionalLocations = null, System.Collections.Generic.IEnumerable&lt;string&gt; customTags = null, System.Collections.Immutable.ImmutableDictionary&lt;string,string&gt; properties = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Diagnostic Create(string id, string category, class Microsoft.CodeAnalysis.LocalizableString message, valuetype Microsoft.CodeAnalysis.DiagnosticSeverity severity, valuetype Microsoft.CodeAnalysis.DiagnosticSeverity defaultSeverity, bool isEnabledByDefault, int32 warningLevel, class Microsoft.CodeAnalysis.LocalizableString title, class Microsoft.CodeAnalysis.LocalizableString description, string helpLink, class Microsoft.CodeAnalysis.Location location, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Location&gt; additionalLocations, class System.Collections.Generic.IEnumerable`1&lt;string&gt; customTags, class System.Collections.Immutable.ImmutableDictionary`2&lt;string, string&gt; properties) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostic.Create(System.String,System.String,Microsoft.CodeAnalysis.LocalizableString,Microsoft.CodeAnalysis.DiagnosticSeverity,Microsoft.CodeAnalysis.DiagnosticSeverity,System.Boolean,System.Int32,Microsoft.CodeAnalysis.LocalizableString,Microsoft.CodeAnalysis.LocalizableString,System.String,Microsoft.CodeAnalysis.Location,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Location},System.Collections.Generic.IEnumerable{System.String},System.Collections.Immutable.ImmutableDictionary{System.String,System.String})" />
@@ -252,6 +308,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostic</ReturnType>
@@ -314,6 +371,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostic</ReturnType>
@@ -381,6 +439,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DiagnosticSeverity</ReturnType>
@@ -406,6 +465,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DiagnosticDescriptor</ReturnType>
@@ -432,6 +492,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -459,6 +520,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -486,6 +548,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -507,6 +570,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -535,6 +599,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostics.SuppressionInfo</ReturnType>
@@ -564,6 +629,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -588,6 +654,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -612,6 +679,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -639,6 +707,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
@@ -662,6 +731,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -688,6 +758,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DiagnosticSeverity</ReturnType>
@@ -716,6 +787,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -745,6 +817,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -768,6 +841,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>

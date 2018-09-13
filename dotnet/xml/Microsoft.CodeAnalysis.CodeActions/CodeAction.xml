@@ -10,6 +10,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -34,6 +35,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -51,12 +53,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;ComputeOperationsAsync&gt;d__18))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -82,12 +80,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;ComputePreviewOperationsAsync&gt;d__20))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -114,6 +108,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
@@ -128,7 +123,7 @@
         <param name="createChangedDocument">Function to create the <see cref="T:Microsoft.CodeAnalysis.Document" />.</param>
         <param name="equivalenceKey">Optional value used to determine the equivalence of the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> with other <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />s. See <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" />.</param>
         <summary>
-            Creates a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> for a change to a single <see cref="T:Microsoft.CodeAnalysis.Document" />. 
+            Creates a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> for a change to a single <see cref="T:Microsoft.CodeAnalysis.Document" />.
             Use this factory when the change is expensive to compute and should be deferred until requested.
             </summary>
         <returns>To be added.</returns>
@@ -145,6 +140,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
@@ -178,26 +174,27 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Two code actions are treated as equivalent if they have equal non-null <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" /> values and were generated
-            by the same <see cref="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider" /> or <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider" />.
-            </summary>
+             Two code actions are treated as equivalent if they have equal non-null <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" /> values and were generated
+             by the same <see cref="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider" /> or <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider" />.
+             </summary>
         <value>To be added.</value>
         <remarks>
-            Equivalence of code actions affects some Visual Studio behavior. For example, if multiple equivalent
-            code actions result from code fixes or refactorings for a single Visual Studio light bulb instance,
-            the light bulb UI will present only one code action from each set of equivalent code actions.
-            Additionally, a Fix All operation will apply only code actions that are equivalent to the original code action.
+             Equivalence of code actions affects some Visual Studio behavior. For example, if multiple equivalent
+             code actions result from code fixes or refactorings for a single Visual Studio light bulb instance,
+             the light bulb UI will present only one code action from each set of equivalent code actions.
+             Additionally, a Fix All operation will apply only code actions that are equivalent to the original code action.
             
-            If two code actions that could be treated as equivalent do not have equal <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" /> values, Visual Studio behavior
-            may be less helpful than would be optimal. If two code actions that should be treated as distinct have
-            equal <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" /> values, Visual Studio behavior may appear incorrect.
-            </remarks>
+             If two code actions that could be treated as equivalent do not have equal <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" /> values, Visual Studio behavior
+             may be less helpful than would be optimal. If two code actions that should be treated as distinct have
+             equal <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" /> values, Visual Studio behavior may appear incorrect.
+             </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetChangedDocumentAsync">
@@ -210,6 +207,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
@@ -237,12 +235,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;GetChangedSolutionAsync&gt;d__21))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
       </ReturnValue>
@@ -269,6 +263,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -295,12 +290,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;GetPreviewOperationsAsync&gt;d__17))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -310,7 +301,7 @@
       <Docs>
         <param name="cancellationToken">To be added.</param>
         <summary>
-            The sequence of operations used to construct a preview. 
+            The sequence of operations used to construct a preview.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -326,12 +317,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;PostProcessAsync&gt;d__26))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -359,6 +346,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
@@ -388,12 +376,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.CodeActions.CodeAction/&lt;PostProcessChangesAsync&gt;d__27))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
       </ReturnValue>
@@ -422,6 +406,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.String&gt;</ReturnType>
@@ -447,6 +432,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

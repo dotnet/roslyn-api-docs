@@ -1,0 +1,92 @@
+﻿<Type Name="ControlFlowConditionKind" FullName="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind">
+  <TypeSignature Language="C#" Value="public enum ControlFlowConditionKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ControlFlowConditionKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ControlFlowConditionKind" />
+  <TypeSignature Language="F#" Value="type ControlFlowConditionKind = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents kind of conditional branch from a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Indicates no conditional branch from a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock" />.
+            Associated <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" /> is null.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WhenFalse">
+      <MemberSignature Language="C#" Value="WhenFalse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind WhenFalse = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind.WhenFalse" />
+      <MemberSignature Language="VB.NET" Value="WhenFalse" />
+      <MemberSignature Language="F#" Value="WhenFalse = 1" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind.WhenFalse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Indicates a conditional branch from a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock" />,
+            with a non-null <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.BranchValue" /> and <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" />.
+            If <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.BranchValue" /> evaluates to <code>false</code>,
+            then the branch <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" /> is taken.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WhenTrue">
+      <MemberSignature Language="C#" Value="WhenTrue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind WhenTrue = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind.WhenTrue" />
+      <MemberSignature Language="VB.NET" Value="WhenTrue" />
+      <MemberSignature Language="F#" Value="WhenTrue = 2" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind.WhenTrue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Indicates a conditional branch from a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock" />,
+            with a non-null <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.BranchValue" /> and <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" />.
+            If <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.BranchValue" /> evaluates to <code>true</code>,
+            then the branch <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" /> is taken.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
