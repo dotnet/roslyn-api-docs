@@ -10,21 +10,25 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
       <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("ICollectionElementInitializerOperation has been replaced with IInvocationOperation and IDynamicInvocationOperation", true)</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Represents a collection element initializer.
+            Obsolete interface that used to represent a collection element initializer. It has been replaced by
+            <see cref="T:Microsoft.CodeAnalysis.Operations.IInvocationOperation" /> and <see cref="T:Microsoft.CodeAnalysis.Operations.IDynamicInvocationOperation" />, as appropriate.
             <para>
             Current usage:
-             (1) C# nested collection element initializer expression within a collection initializer.
-                 For example, given a collection initializer "new Class() { Y = { { x, y, 3 } } }",
-                 nested collection element initializer for Y, i.e. "{ { x, y, 3 } }" is represented by this operation.
-             (2) VB nested collection element initializer expression within a collection initializer.
+              None. This API has been obsoleted in favor of <see cref="T:Microsoft.CodeAnalysis.Operations.IInvocationOperation" /> and <see cref="T:Microsoft.CodeAnalysis.Operations.IDynamicInvocationOperation" />.
             </para></summary>
     <remarks>
             This interface is reserved for implementation by its associated APIs. We reserve the right to
@@ -43,6 +47,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
@@ -66,6 +71,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
@@ -90,6 +96,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

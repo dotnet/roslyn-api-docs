@@ -1,0 +1,161 @@
+﻿<Type Name="FileTextLoader" FullName="Microsoft.CodeAnalysis.FileTextLoader">
+  <TypeSignature Language="C#" Value="public class FileTextLoader : Microsoft.CodeAnalysis.TextLoader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileTextLoader extends Microsoft.CodeAnalysis.TextLoader" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.FileTextLoader" />
+  <TypeSignature Language="VB.NET" Value="Public Class FileTextLoader&#xA;Inherits TextLoader" />
+  <TypeSignature Language="F#" Value="type FileTextLoader = class&#xA;    inherit TextLoader" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.TextLoader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(), nq}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileTextLoader (string path, System.Text.Encoding defaultEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class System.Text.Encoding defaultEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileTextLoader.#ctor(System.String,System.Text.Encoding)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (path As String, defaultEncoding As Encoding)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.FileTextLoader : string * System.Text.Encoding -&gt; Microsoft.CodeAnalysis.FileTextLoader" Usage="new Microsoft.CodeAnalysis.FileTextLoader (path, defaultEncoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="defaultEncoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="path">An absolute file path.</param>
+        <param name="defaultEncoding">
+            Specifies an encoding to be used if the actual encoding can't be determined from the stream content (the stream doesn't start with Byte Order Mark).
+            If not specified auto-detect heuristics are used to determine the encoding.
+            Note that if the stream starts with Byte Order Mark the value of <paramref name="defaultEncoding" /> is ignored.
+            </param>
+        <summary>
+            Creates a content loader for specified file.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> is not an absolute path.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateText">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.CodeAnalysis.Text.SourceText CreateText (System.IO.Stream stream, Microsoft.CodeAnalysis.Workspace workspace);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.Text.SourceText CreateText(class System.IO.Stream stream, class Microsoft.CodeAnalysis.Workspace workspace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileTextLoader.CreateText(System.IO.Stream,Microsoft.CodeAnalysis.Workspace)" />
+      <MemberSignature Language="F#" Value="abstract member CreateText : System.IO.Stream * Microsoft.CodeAnalysis.Workspace -&gt; Microsoft.CodeAnalysis.Text.SourceText&#xA;override this.CreateText : System.IO.Stream * Microsoft.CodeAnalysis.Workspace -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="fileTextLoader.CreateText (stream, workspace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.SourceText</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="workspace" Type="Microsoft.CodeAnalysis.Workspace" />
+      </Parameters>
+      <Docs>
+        <param name="stream">To be added.</param>
+        <param name="workspace">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding DefaultEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding DefaultEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FileTextLoader.DefaultEncoding" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultEncoding As Encoding" />
+      <MemberSignature Language="F#" Value="member this.DefaultEncoding : System.Text.Encoding" Usage="Microsoft.CodeAnalysis.FileTextLoader.DefaultEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specifies an encoding to be used if the actual encoding of the file 
+            can't be determined from the stream content (the stream doesn't start with Byte Order Mark).
+            If <c>null</c> auto-detect heuristics are used to determine the encoding. 
+            Note that if the stream starts with Byte Order Mark the value of <see cref="P:Microsoft.CodeAnalysis.FileTextLoader.DefaultEncoding" /> is ignored.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadTextAndVersionAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync (Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.DocumentId documentId, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync(class Microsoft.CodeAnalysis.Workspace workspace, class Microsoft.CodeAnalysis.DocumentId documentId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileTextLoader.LoadTextAndVersionAsync(Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.DocumentId,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.LoadTextAndVersionAsync : Microsoft.CodeAnalysis.Workspace * Microsoft.CodeAnalysis.DocumentId * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt;" Usage="fileTextLoader.LoadTextAndVersionAsync (workspace, documentId, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workspace" Type="Microsoft.CodeAnalysis.Workspace" />
+        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="workspace">To be added.</param>
+        <param name="documentId">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Load a text and a version of the document in the workspace.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException" />
+        <exception cref="T:System.IO.InvalidDataException" />
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FileTextLoader.Path" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As String" />
+      <MemberSignature Language="F#" Value="member this.Path : string" Usage="Microsoft.CodeAnalysis.FileTextLoader.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Absolute path of the file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
