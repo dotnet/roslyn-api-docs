@@ -1,0 +1,456 @@
+﻿<Type Name="Location" FullName="Microsoft.CodeAnalysis.Location">
+  <TypeSignature Language="C#" Value="public abstract class Location" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Location extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Location" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Location" />
+  <TypeSignature Language="F#" Value="type Location = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Location abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(), nq}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            A program location in source code.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Location Create (Microsoft.CodeAnalysis.SyntaxTree syntaxTree, Microsoft.CodeAnalysis.Text.TextSpan textSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Location Create(class Microsoft.CodeAnalysis.SyntaxTree syntaxTree, valuetype Microsoft.CodeAnalysis.Text.TextSpan textSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.Create(Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.SyntaxTree * Microsoft.CodeAnalysis.Text.TextSpan -&gt; Microsoft.CodeAnalysis.Location" Usage="Microsoft.CodeAnalysis.Location.Create (syntaxTree, textSpan)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::Location ^ Create(Microsoft::CodeAnalysis::SyntaxTree ^ syntaxTree, Microsoft::CodeAnalysis::Text::TextSpan textSpan);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="syntaxTree" Type="Microsoft.CodeAnalysis.SyntaxTree" />
+        <Parameter Name="textSpan" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="syntaxTree">To be added.</param>
+        <param name="textSpan">To be added.</param>
+        <summary>
+            Creates an instance of a <see cref="T:Microsoft.CodeAnalysis.Location" /> for a span in a <see cref="T:Microsoft.CodeAnalysis.SyntaxTree" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Location Create (string filePath, Microsoft.CodeAnalysis.Text.TextSpan textSpan, Microsoft.CodeAnalysis.Text.LinePositionSpan lineSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Location Create(string filePath, valuetype Microsoft.CodeAnalysis.Text.TextSpan textSpan, valuetype Microsoft.CodeAnalysis.Text.LinePositionSpan lineSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.Create(System.String,Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Text.LinePositionSpan)" />
+      <MemberSignature Language="F#" Value="static member Create : string * Microsoft.CodeAnalysis.Text.TextSpan * Microsoft.CodeAnalysis.Text.LinePositionSpan -&gt; Microsoft.CodeAnalysis.Location" Usage="Microsoft.CodeAnalysis.Location.Create (filePath, textSpan, lineSpan)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::Location ^ Create(System::String ^ filePath, Microsoft::CodeAnalysis::Text::TextSpan textSpan, Microsoft::CodeAnalysis::Text::LinePositionSpan lineSpan);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="textSpan" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="lineSpan" Type="Microsoft.CodeAnalysis.Text.LinePositionSpan" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">To be added.</param>
+        <param name="textSpan">To be added.</param>
+        <param name="lineSpan">To be added.</param>
+        <summary>
+            Creates an instance of a <see cref="T:Microsoft.CodeAnalysis.Location" /> for a span in a file.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public abstract bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="location.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDebuggerDisplay">
+      <MemberSignature Language="C#" Value="protected virtual string GetDebuggerDisplay ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetDebuggerDisplay() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.GetDebuggerDisplay" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetDebuggerDisplay () As String" />
+      <MemberSignature Language="F#" Value="abstract member GetDebuggerDisplay : unit -&gt; string&#xA;override this.GetDebuggerDisplay : unit -&gt; string" Usage="location.GetDebuggerDisplay " />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ GetDebuggerDisplay();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public abstract int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="location.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineSpan">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.CodeAnalysis.FileLinePositionSpan GetLineSpan ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.FileLinePositionSpan GetLineSpan() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.GetLineSpan" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetLineSpan () As FileLinePositionSpan" />
+      <MemberSignature Language="F#" Value="abstract member GetLineSpan : unit -&gt; Microsoft.CodeAnalysis.FileLinePositionSpan&#xA;override this.GetLineSpan : unit -&gt; Microsoft.CodeAnalysis.FileLinePositionSpan" Usage="location.GetLineSpan " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::CodeAnalysis::FileLinePositionSpan GetLineSpan();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FileLinePositionSpan</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the location in terms of path, line and column.
+            </summary>
+        <returns>
+          <see cref="T:Microsoft.CodeAnalysis.FileLinePositionSpan" /> that contains path, line and column information.
+            
+            Returns an invalid span (see <see cref="P:Microsoft.CodeAnalysis.FileLinePositionSpan.IsValid" />) if the information is not available.
+            
+            The values are not affected by line mapping directives (#line in C# or #ExternalSource in VB).
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMappedLineSpan">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.CodeAnalysis.FileLinePositionSpan GetMappedLineSpan ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.FileLinePositionSpan GetMappedLineSpan() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.GetMappedLineSpan" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetMappedLineSpan () As FileLinePositionSpan" />
+      <MemberSignature Language="F#" Value="abstract member GetMappedLineSpan : unit -&gt; Microsoft.CodeAnalysis.FileLinePositionSpan&#xA;override this.GetMappedLineSpan : unit -&gt; Microsoft.CodeAnalysis.FileLinePositionSpan" Usage="location.GetMappedLineSpan " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::CodeAnalysis::FileLinePositionSpan GetMappedLineSpan();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FileLinePositionSpan</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the location in terms of path, line and column after applying source line mapping directives
+            (<c>#line</c> in C# or <c>#ExternalSource</c> in VB).
+            </summary>
+        <returns>
+          <see cref="T:Microsoft.CodeAnalysis.FileLinePositionSpan" /> that contains file, line and column information,
+            or an invalid span (see <see cref="P:Microsoft.CodeAnalysis.FileLinePositionSpan.IsValid" />) if not available.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInMetadata">
+      <MemberSignature Language="C#" Value="public bool IsInMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInMetadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Location.IsInMetadata" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsInMetadata As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsInMetadata : bool" Usage="Microsoft.CodeAnalysis.Location.IsInMetadata" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsInMetadata { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if the location is in metadata.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInSource">
+      <MemberSignature Language="C#" Value="public bool IsInSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Location.IsInSource" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsInSource As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsInSource : bool" Usage="Microsoft.CodeAnalysis.Location.IsInSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsInSource { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if the location represents a specific location in a source code file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kind">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.LocationKind Kind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.LocationKind Kind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Location.Kind" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Kind As LocationKind" />
+      <MemberSignature Language="F#" Value="member this.Kind : Microsoft.CodeAnalysis.LocationKind" Usage="Microsoft.CodeAnalysis.Location.Kind" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::CodeAnalysis::LocationKind Kind { Microsoft::CodeAnalysis::LocationKind get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.LocationKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Location kind (None/SourceFile/MetadataFile).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataModule">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.CodeAnalysis.IModuleSymbol MetadataModule { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IModuleSymbol MetadataModule" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Location.MetadataModule" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property MetadataModule As IModuleSymbol" />
+      <MemberSignature Language="F#" Value="member this.MetadataModule : Microsoft.CodeAnalysis.IModuleSymbol" Usage="Microsoft.CodeAnalysis.Location.MetadataModule" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::CodeAnalysis::IModuleSymbol ^ MetadataModule { Microsoft::CodeAnalysis::IModuleSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IModuleSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the metadata module the location is associated with or <c>null</c> if the module is not available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Might return null even if <see cref="P:Microsoft.CodeAnalysis.Location.IsInMetadata" /> returns true. The module symbol might not be available anymore, 
+            for example, if the location is serialized and deserialized.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Location None { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.CodeAnalysis.Location None" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Location.None" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property None As Location" />
+      <MemberSignature Language="F#" Value="member this.None : Microsoft.CodeAnalysis.Location" Usage="Microsoft.CodeAnalysis.Location.None" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::CodeAnalysis::Location ^ None { Microsoft::CodeAnalysis::Location ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A location of kind LocationKind.None. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.CodeAnalysis.Location left, Microsoft.CodeAnalysis.Location right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.CodeAnalysis.Location left, class Microsoft.CodeAnalysis.Location right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.op_Equality(Microsoft.CodeAnalysis.Location,Microsoft.CodeAnalysis.Location)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As Location, right As Location) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.Location * Microsoft.CodeAnalysis.Location -&gt; bool" Usage="left = right" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::CodeAnalysis::Location ^ left, Microsoft::CodeAnalysis::Location ^ right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.Location" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.Location" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.CodeAnalysis.Location left, Microsoft.CodeAnalysis.Location right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.CodeAnalysis.Location left, class Microsoft.CodeAnalysis.Location right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.op_Inequality(Microsoft.CodeAnalysis.Location,Microsoft.CodeAnalysis.Location)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As Location, right As Location) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.Location * Microsoft.CodeAnalysis.Location -&gt; bool" Usage="Microsoft.CodeAnalysis.Location.op_Inequality (left, right)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::CodeAnalysis::Location ^ left, Microsoft::CodeAnalysis::Location ^ right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.Location" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.Location" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceSpan">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.CodeAnalysis.Text.TextSpan SourceSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Text.TextSpan SourceSpan" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Location.SourceSpan" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SourceSpan As TextSpan" />
+      <MemberSignature Language="F#" Value="member this.SourceSpan : Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.Location.SourceSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::CodeAnalysis::Text::TextSpan SourceSpan { Microsoft::CodeAnalysis::Text::TextSpan get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The location within the syntax tree that this location is associated with.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If <see cref="P:Microsoft.CodeAnalysis.Location.IsInSource" /> returns False this method returns an empty <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan" /> which starts at position 0.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceTree">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.CodeAnalysis.SyntaxTree SourceTree { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SyntaxTree SourceTree" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Location.SourceTree" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SourceTree As SyntaxTree" />
+      <MemberSignature Language="F#" Value="member this.SourceTree : Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.Location.SourceTree" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::CodeAnalysis::SyntaxTree ^ SourceTree { Microsoft::CodeAnalysis::SyntaxTree ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The syntax tree this location is located in or <c>null</c> if not in a syntax tree.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Location.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="location.ToString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

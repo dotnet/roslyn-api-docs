@@ -1,0 +1,181 @@
+﻿<Type Name="ProjectDependencyGraph" FullName="Microsoft.CodeAnalysis.ProjectDependencyGraph">
+  <TypeSignature Language="C#" Value="public class ProjectDependencyGraph" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectDependencyGraph extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ProjectDependencyGraph" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProjectDependencyGraph" />
+  <TypeSignature Language="F#" Value="type ProjectDependencyGraph = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectDependencyGraph" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A <see cref="T:Microsoft.CodeAnalysis.ProjectDependencyGraph" /> models the dependencies between projects in a solution.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDependencySets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt;&gt; GetDependencySets (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt;&gt; GetDependencySets(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetDependencySets(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetDependencySets : System.Threading.CancellationToken -&gt; seq&lt;seq&lt;Microsoft.CodeAnalysis.ProjectId&gt;&gt;" Usage="projectDependencyGraph.GetDependencySets cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Returns a sequence of sets, where each set contains items with shared interdependency,
+            and there is no dependency between sets.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProjectsThatDirectlyDependOnThisProject">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatDirectlyDependOnThisProject (Microsoft.CodeAnalysis.ProjectId projectId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatDirectlyDependOnThisProject(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetProjectsThatDirectlyDependOnThisProject(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="member this.GetProjectsThatDirectlyDependOnThisProject : Microsoft.CodeAnalysis.ProjectId -&gt; System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetProjectsThatDirectlyDependOnThisProject projectId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Immutable::IImmutableSet&lt;Microsoft::CodeAnalysis::ProjectId ^&gt; ^ GetProjectsThatDirectlyDependOnThisProject(Microsoft::CodeAnalysis::ProjectId ^ projectId);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectId" Type="Microsoft.CodeAnalysis.ProjectId" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">To be added.</param>
+        <summary>
+            Gets the list of projects (topologically sorted) that directly depend on this project.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProjectsThatThisProjectDirectlyDependsOn">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatThisProjectDirectlyDependsOn (Microsoft.CodeAnalysis.ProjectId projectId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatThisProjectDirectlyDependsOn(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetProjectsThatThisProjectDirectlyDependsOn(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="member this.GetProjectsThatThisProjectDirectlyDependsOn : Microsoft.CodeAnalysis.ProjectId -&gt; System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetProjectsThatThisProjectDirectlyDependsOn projectId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Immutable::IImmutableSet&lt;Microsoft::CodeAnalysis::ProjectId ^&gt; ^ GetProjectsThatThisProjectDirectlyDependsOn(Microsoft::CodeAnalysis::ProjectId ^ projectId);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectId" Type="Microsoft.CodeAnalysis.ProjectId" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">To be added.</param>
+        <summary>
+            Gets the list of projects (topologically sorted) that this project directly depends on.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProjectsThatThisProjectTransitivelyDependsOn">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatThisProjectTransitivelyDependsOn (Microsoft.CodeAnalysis.ProjectId projectId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatThisProjectTransitivelyDependsOn(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetProjectsThatThisProjectTransitivelyDependsOn(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="member this.GetProjectsThatThisProjectTransitivelyDependsOn : Microsoft.CodeAnalysis.ProjectId -&gt; System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetProjectsThatThisProjectTransitivelyDependsOn projectId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Immutable::IImmutableSet&lt;Microsoft::CodeAnalysis::ProjectId ^&gt; ^ GetProjectsThatThisProjectTransitivelyDependsOn(Microsoft::CodeAnalysis::ProjectId ^ projectId);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectId" Type="Microsoft.CodeAnalysis.ProjectId" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">To be added.</param>
+        <summary>
+            Gets the list of projects that directly or transitively this project depends on
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProjectsThatTransitivelyDependOnThisProject">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatTransitivelyDependOnThisProject (Microsoft.CodeAnalysis.ProjectId projectId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatTransitivelyDependOnThisProject(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetProjectsThatTransitivelyDependOnThisProject(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="F#" Value="member this.GetProjectsThatTransitivelyDependOnThisProject : Microsoft.CodeAnalysis.ProjectId -&gt; seq&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetProjectsThatTransitivelyDependOnThisProject projectId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::ProjectId ^&gt; ^ GetProjectsThatTransitivelyDependOnThisProject(Microsoft::CodeAnalysis::ProjectId ^ projectId);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectId" Type="Microsoft.CodeAnalysis.ProjectId" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">To be added.</param>
+        <summary>
+            Gets the list of projects that directly or transitively depend on this project.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTopologicallySortedProjects">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetTopologicallySortedProjects (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetTopologicallySortedProjects(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetTopologicallySortedProjects(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetTopologicallySortedProjects : System.Threading.CancellationToken -&gt; seq&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetTopologicallySortedProjects cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Returns all the projects for the solution in a topologically sorted order with respect
+            to their dependencies. Projects that depend on other projects will always show up later in this sequence
+            than the projects they depend on.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

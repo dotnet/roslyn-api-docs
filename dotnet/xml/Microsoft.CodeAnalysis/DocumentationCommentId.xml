@@ -1,0 +1,192 @@
+﻿<Type Name="DocumentationCommentId" FullName="Microsoft.CodeAnalysis.DocumentationCommentId">
+  <TypeSignature Language="C#" Value="public static class DocumentationCommentId" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DocumentationCommentId extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.DocumentationCommentId" />
+  <TypeSignature Language="VB.NET" Value="Public Class DocumentationCommentId" />
+  <TypeSignature Language="F#" Value="type DocumentationCommentId = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class DocumentationCommentId abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            APIs for constructing documentation comment id's, and finding symbols that match ids.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateDeclarationId">
+      <MemberSignature Language="C#" Value="public static string CreateDeclarationId (Microsoft.CodeAnalysis.ISymbol symbol);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateDeclarationId(class Microsoft.CodeAnalysis.ISymbol symbol) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationCommentId.CreateDeclarationId(Microsoft.CodeAnalysis.ISymbol)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateDeclarationId (symbol As ISymbol) As String" />
+      <MemberSignature Language="F#" Value="static member CreateDeclarationId : Microsoft.CodeAnalysis.ISymbol -&gt; string" Usage="Microsoft.CodeAnalysis.DocumentationCommentId.CreateDeclarationId symbol" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ CreateDeclarationId(Microsoft::CodeAnalysis::ISymbol ^ symbol);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <summary>
+            Creates an id string used by external documentation comment files to identify declarations
+            of types, namespaces, methods, properties, etc.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReferenceId">
+      <MemberSignature Language="C#" Value="public static string CreateReferenceId (Microsoft.CodeAnalysis.ISymbol symbol);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateReferenceId(class Microsoft.CodeAnalysis.ISymbol symbol) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationCommentId.CreateReferenceId(Microsoft.CodeAnalysis.ISymbol)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateReferenceId (symbol As ISymbol) As String" />
+      <MemberSignature Language="F#" Value="static member CreateReferenceId : Microsoft.CodeAnalysis.ISymbol -&gt; string" Usage="Microsoft.CodeAnalysis.DocumentationCommentId.CreateReferenceId symbol" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ CreateReferenceId(Microsoft::CodeAnalysis::ISymbol ^ symbol);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <summary>
+            Creates an id string used to reference type symbols (not strictly declarations, includes
+            arrays, pointers, type parameters, etc.)
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirstSymbolForDeclarationId">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISymbol GetFirstSymbolForDeclarationId (string id, Microsoft.CodeAnalysis.Compilation compilation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.ISymbol GetFirstSymbolForDeclarationId(string id, class Microsoft.CodeAnalysis.Compilation compilation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationCommentId.GetFirstSymbolForDeclarationId(System.String,Microsoft.CodeAnalysis.Compilation)" />
+      <MemberSignature Language="F#" Value="static member GetFirstSymbolForDeclarationId : string * Microsoft.CodeAnalysis.Compilation -&gt; Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.DocumentationCommentId.GetFirstSymbolForDeclarationId (id, compilation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::ISymbol ^ GetFirstSymbolForDeclarationId(System::String ^ id, Microsoft::CodeAnalysis::Compilation ^ compilation);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" />
+      </Parameters>
+      <Docs>
+        <param name="id">To be added.</param>
+        <param name="compilation">To be added.</param>
+        <summary>
+            Gets the first declaration symbol that matches the declaration id string, order undefined.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirstSymbolForReferenceId">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISymbol GetFirstSymbolForReferenceId (string id, Microsoft.CodeAnalysis.Compilation compilation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.ISymbol GetFirstSymbolForReferenceId(string id, class Microsoft.CodeAnalysis.Compilation compilation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationCommentId.GetFirstSymbolForReferenceId(System.String,Microsoft.CodeAnalysis.Compilation)" />
+      <MemberSignature Language="F#" Value="static member GetFirstSymbolForReferenceId : string * Microsoft.CodeAnalysis.Compilation -&gt; Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.DocumentationCommentId.GetFirstSymbolForReferenceId (id, compilation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::ISymbol ^ GetFirstSymbolForReferenceId(System::String ^ id, Microsoft::CodeAnalysis::Compilation ^ compilation);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" />
+      </Parameters>
+      <Docs>
+        <param name="id">To be added.</param>
+        <param name="compilation">To be added.</param>
+        <summary>
+            Gets the first symbol that matches the reference id string, order undefined.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSymbolsForDeclarationId">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt; GetSymbolsForDeclarationId (string id, Microsoft.CodeAnalysis.Compilation compilation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; GetSymbolsForDeclarationId(string id, class Microsoft.CodeAnalysis.Compilation compilation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationCommentId.GetSymbolsForDeclarationId(System.String,Microsoft.CodeAnalysis.Compilation)" />
+      <MemberSignature Language="F#" Value="static member GetSymbolsForDeclarationId : string * Microsoft.CodeAnalysis.Compilation -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="Microsoft.CodeAnalysis.DocumentationCommentId.GetSymbolsForDeclarationId (id, compilation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ISymbol ^&gt; GetSymbolsForDeclarationId(System::String ^ id, Microsoft::CodeAnalysis::Compilation ^ compilation);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" />
+      </Parameters>
+      <Docs>
+        <param name="id">To be added.</param>
+        <param name="compilation">To be added.</param>
+        <summary>
+            Gets all declaration symbols that match the declaration id string
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSymbolsForReferenceId">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt; GetSymbolsForReferenceId (string id, Microsoft.CodeAnalysis.Compilation compilation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; GetSymbolsForReferenceId(string id, class Microsoft.CodeAnalysis.Compilation compilation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationCommentId.GetSymbolsForReferenceId(System.String,Microsoft.CodeAnalysis.Compilation)" />
+      <MemberSignature Language="F#" Value="static member GetSymbolsForReferenceId : string * Microsoft.CodeAnalysis.Compilation -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="Microsoft.CodeAnalysis.DocumentationCommentId.GetSymbolsForReferenceId (id, compilation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ISymbol ^&gt; GetSymbolsForReferenceId(System::String ^ id, Microsoft::CodeAnalysis::Compilation ^ compilation);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" />
+      </Parameters>
+      <Docs>
+        <param name="id">To be added.</param>
+        <param name="compilation">To be added.</param>
+        <summary>
+            Gets the symbols that match the reference id string.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
