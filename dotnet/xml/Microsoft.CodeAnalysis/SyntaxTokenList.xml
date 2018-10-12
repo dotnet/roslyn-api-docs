@@ -7,7 +7,6 @@
   <TypeSignature Language="C++ CLI" Value="public value class SyntaxTokenList : IEquatable&lt;Microsoft::CodeAnalysis::SyntaxTokenList&gt;, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxToken&gt;, System::Collections::Generic::IReadOnlyCollection&lt;Microsoft::CodeAnalysis::SyntaxToken&gt;, System::Collections::Generic::IReadOnlyList&lt;Microsoft::CodeAnalysis::SyntaxToken&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -18,10 +17,19 @@
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxToken&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.CodeAnalysis.SyntaxToken&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.SyntaxToken&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.SyntaxTokenList&gt;</InterfaceName>
@@ -44,7 +52,6 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -66,7 +73,6 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -96,7 +102,6 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -120,7 +125,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -148,7 +152,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -173,12 +176,9 @@
       <MemberSignature Language="VB.NET" Value="Public Function Any () As Boolean" />
       <MemberSignature Language="F#" Value="member this.Any : unit -&gt; bool" Usage="syntaxTokenList.Any " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Any();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; bool Any();" />
-      <MemberSignature Language="C++ WINRT" Value="bool Any();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -200,14 +200,12 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.CodeAnalysis.SyntaxTokenList.Count" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property int Count { int get(); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.IReadOnlyCollection`1.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -231,7 +229,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -262,7 +259,6 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -285,12 +281,9 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="syntaxTokenList.Equals obj" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; override bool Equals(Platform::Object ^ obj);" />
-      <MemberSignature Language="C++ WINRT" Value=" override bool Equals(winrt::Windows::Foundation::IInspectable const &amp; obj);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -318,7 +311,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -344,7 +336,6 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -365,11 +356,9 @@
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As SyntaxTokenList.Enumerator" />
       <MemberSignature Language="F#" Value="member this.GetEnumerator : unit -&gt; Microsoft.CodeAnalysis.SyntaxTokenList.Enumerator" Usage="syntaxTokenList.GetEnumerator " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTokenList::Enumerator GetEnumerator();" />
-      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::SyntaxTokenList::Enumerator GetEnumerator();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -390,12 +379,9 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="syntaxTokenList.GetHashCode " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; override int GetHashCode();" />
-      <MemberSignature Language="C++ WINRT" Value=" override int GetHashCode();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -419,7 +405,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -445,7 +430,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -475,7 +459,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -508,7 +491,6 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -538,7 +520,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -564,7 +545,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -594,7 +574,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -624,7 +603,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -652,7 +630,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -680,7 +657,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -710,7 +686,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -740,7 +715,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -766,7 +740,6 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -792,7 +765,6 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -817,7 +789,6 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -837,12 +808,9 @@
       <MemberSignature Language="VB.NET" Value="Public Function ToFullString () As String" />
       <MemberSignature Language="F#" Value="member this.ToFullString : unit -&gt; string" Usage="syntaxTokenList.ToFullString " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ ToFullString();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Platform::String ^ ToFullString();" />
-      <MemberSignature Language="C++ WINRT" Value="std::wstring ToFullString();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -868,12 +836,9 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="syntaxTokenList.ToString " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; override Platform::String ^ ToString();" />
-      <MemberSignature Language="C++ WINRT" Value=" override std::wstring ToString();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

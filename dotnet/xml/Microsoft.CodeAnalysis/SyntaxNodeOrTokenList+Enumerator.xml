@@ -7,7 +7,6 @@
   <TypeSignature Language="C++ CLI" Value="public: value class SyntaxNodeOrTokenList::Enumerator : System::Collections::Generic::IEnumerator&lt;Microsoft::CodeAnalysis::SyntaxNodeOrToken&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -16,6 +15,12 @@
   <Interfaces>
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerator&lt;Microsoft.CodeAnalysis.SyntaxNodeOrToken&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -38,7 +43,6 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -59,12 +63,9 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="enumerator.Equals obj" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; override bool Equals(Platform::Object ^ obj);" />
-      <MemberSignature Language="C++ WINRT" Value=" override bool Equals(winrt::Windows::Foundation::IInspectable const &amp; obj);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -87,12 +88,9 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="enumerator.GetHashCode " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; override int GetHashCode();" />
-      <MemberSignature Language="C++ WINRT" Value=" override int GetHashCode();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -112,15 +110,12 @@
       <MemberSignature Language="VB.NET" Value="Public Function MoveNext () As Boolean" />
       <MemberSignature Language="F#" Value="abstract member MoveNext : unit -&gt; bool&#xA;override this.MoveNext : unit -&gt; bool" Usage="enumerator.MoveNext " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveNext();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; bool MoveNext();" />
-      <MemberSignature Language="C++ WINRT" Value="bool MoveNext();" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerator.MoveNext</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -144,15 +139,13 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxNodeOrTokenList.Enumerator.System#Collections#IEnumerator#Current" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property Current As Object Implements IEnumerator.Current" />
       <MemberSignature Language="F#" Usage="System.Collections.IEnumerator.Current" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System.Collections.IEnumerator.Current { System::Object ^ get(); };" />
-      <MemberSignature Language="C++ CX" Value="property Platform::Object ^ System.Collections.IEnumerator.Current { Platform::Object ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::IEnumerator::Current { System::Object ^ get(); };" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IEnumerator.Current</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -172,15 +165,12 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxNodeOrTokenList.Enumerator.System#Collections#IEnumerator#Reset" />
       <MemberSignature Language="VB.NET" Value="Sub Reset () Implements IEnumerator.Reset" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IEnumerator.Reset() = System::Collections::IEnumerator::Reset;" />
-      <MemberSignature Language="C++ CX" Value=" virtual void System.Collections.IEnumerator.Reset() = System::Collections::IEnumerator::Reset;" />
-      <MemberSignature Language="C++ WINRT" Value="void System.Collections.IEnumerator.Reset();" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerator.Reset</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -201,15 +191,12 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxNodeOrTokenList.Enumerator.System#IDisposable#Dispose" />
       <MemberSignature Language="VB.NET" Value="Sub Dispose () Implements IDisposable.Dispose" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.IDisposable.Dispose() = IDisposable::Dispose;" />
-      <MemberSignature Language="C++ CX" Value=" virtual void System.IDisposable.Dispose() = IDisposable::Dispose;" />
-      <MemberSignature Language="C++ WINRT" Value="void System.IDisposable.Dispose();" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
