@@ -1,0 +1,126 @@
+﻿<Type Name="FixAllContext+DiagnosticProvider" FullName="Microsoft.CodeAnalysis.CodeFixes.FixAllContext+DiagnosticProvider">
+  <TypeSignature Language="C#" Value="public abstract class FixAllContext.DiagnosticProvider" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract beforefieldinit FixAllContext/DiagnosticProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeFixes.FixAllContext.DiagnosticProvider" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class FixAllContext.DiagnosticProvider" />
+  <TypeSignature Language="F#" Value="type FixAllContext.DiagnosticProvider = class" />
+  <TypeSignature Language="C++ CLI" Value="public: ref class FixAllContext::DiagnosticProvider abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Diagnostic provider to fetch document/project diagnostics to fix in a <see cref="T:Microsoft.CodeAnalysis.CodeFixes.FixAllContext" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DiagnosticProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.FixAllContext.DiagnosticProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; DiagnosticProvider();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllDiagnosticsAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt; GetAllDiagnosticsAsync (Microsoft.CodeAnalysis.Project project, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&gt; GetAllDiagnosticsAsync(class Microsoft.CodeAnalysis.Project project, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.FixAllContext.DiagnosticProvider.GetAllDiagnosticsAsync(Microsoft.CodeAnalysis.Project,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetAllDiagnosticsAsync : Microsoft.CodeAnalysis.Project * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;" Usage="diagnosticProvider.GetAllDiagnosticsAsync (project, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Threading::Tasks::Task&lt;System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^&gt; ^ GetAllDiagnosticsAsync(Microsoft::CodeAnalysis::Project ^ project, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="project">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets all the diagnostics to fix in the given project in a <see cref="T:Microsoft.CodeAnalysis.CodeFixes.FixAllContext" />.
+            This includes both document-level diagnostics for all documents in the given project and project-level diagnostics, i.e. diagnostics with no source location, in the given project. 
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocumentDiagnosticsAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt; GetDocumentDiagnosticsAsync (Microsoft.CodeAnalysis.Document document, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&gt; GetDocumentDiagnosticsAsync(class Microsoft.CodeAnalysis.Document document, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.FixAllContext.DiagnosticProvider.GetDocumentDiagnosticsAsync(Microsoft.CodeAnalysis.Document,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetDocumentDiagnosticsAsync : Microsoft.CodeAnalysis.Document * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;" Usage="diagnosticProvider.GetDocumentDiagnosticsAsync (document, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Threading::Tasks::Task&lt;System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^&gt; ^ GetDocumentDiagnosticsAsync(Microsoft::CodeAnalysis::Document ^ document, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="document">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets all the diagnostics to fix in the given document in a <see cref="T:Microsoft.CodeAnalysis.CodeFixes.FixAllContext" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProjectDiagnosticsAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt; GetProjectDiagnosticsAsync (Microsoft.CodeAnalysis.Project project, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&gt; GetProjectDiagnosticsAsync(class Microsoft.CodeAnalysis.Project project, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.FixAllContext.DiagnosticProvider.GetProjectDiagnosticsAsync(Microsoft.CodeAnalysis.Project,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetProjectDiagnosticsAsync : Microsoft.CodeAnalysis.Project * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;" Usage="diagnosticProvider.GetProjectDiagnosticsAsync (project, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Threading::Tasks::Task&lt;System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^&gt; ^ GetProjectDiagnosticsAsync(Microsoft::CodeAnalysis::Project ^ project, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="project">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets all the project-level diagnostics to fix, i.e. diagnostics with no source location, in the given project in a <see cref="T:Microsoft.CodeAnalysis.CodeFixes.FixAllContext" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

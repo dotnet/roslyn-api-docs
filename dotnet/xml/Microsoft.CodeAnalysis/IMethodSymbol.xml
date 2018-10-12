@@ -1,0 +1,854 @@
+﻿<Type Name="IMethodSymbol" FullName="Microsoft.CodeAnalysis.IMethodSymbol">
+  <TypeSignature Language="C#" Value="public interface IMethodSymbol : IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;, Microsoft.CodeAnalysis.ISymbol" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMethodSymbol implements class Microsoft.CodeAnalysis.ISymbol, class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.IMethodSymbol" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IMethodSymbol&#xA;Implements IEquatable(Of ISymbol), ISymbol" />
+  <TypeSignature Language="F#" Value="type IMethodSymbol = interface&#xA;    interface ISymbol&#xA;    interface IEquatable&lt;ISymbol&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IMethodSymbol : IEquatable&lt;Microsoft::CodeAnalysis::ISymbol ^&gt;, Microsoft::CodeAnalysis::ISymbol" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.ISymbol</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a method or method-like symbol (including constructor,
+            destructor, operator, or property/event accessor).
+            </summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Arity">
+      <MemberSignature Language="C#" Value="public int Arity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Arity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.Arity" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Arity As Integer" />
+      <MemberSignature Language="F#" Value="member this.Arity : int" Usage="Microsoft.CodeAnalysis.IMethodSymbol.Arity" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Arity { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the arity of this method, or the number of type parameters it takes.
+            A non-generic method has zero arity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedAnonymousDelegate">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol AssociatedAnonymousDelegate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamedTypeSymbol AssociatedAnonymousDelegate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.AssociatedAnonymousDelegate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AssociatedAnonymousDelegate As INamedTypeSymbol" />
+      <MemberSignature Language="F#" Value="member this.AssociatedAnonymousDelegate : Microsoft.CodeAnalysis.INamedTypeSymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.AssociatedAnonymousDelegate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamedTypeSymbol ^ AssociatedAnonymousDelegate { Microsoft::CodeAnalysis::INamedTypeSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this method is a Lambda method (MethodKind = MethodKind.LambdaMethod) and 
+            there is an anonymous delegate associated with it, returns this delegate.
+            
+            Returns null if the symbol is not a lambda or if it does not have an
+            anonymous delegate associated with it.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedSymbol">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol AssociatedSymbol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISymbol AssociatedSymbol" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.AssociatedSymbol" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AssociatedSymbol As ISymbol" />
+      <MemberSignature Language="F#" Value="member this.AssociatedSymbol : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.AssociatedSymbol" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ISymbol ^ AssociatedSymbol { Microsoft::CodeAnalysis::ISymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns a symbol (e.g. property, event, etc.) associated with the method.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If this method has <see cref="P:Microsoft.CodeAnalysis.IMethodSymbol.MethodKind" /> of <see cref="F:Microsoft.CodeAnalysis.MethodKind.PropertyGet" /> or <see cref="F:Microsoft.CodeAnalysis.MethodKind.PropertySet" />,
+            returns the property that this method is the getter or setter for.
+            If this method has <see cref="P:Microsoft.CodeAnalysis.IMethodSymbol.MethodKind" /> of <see cref="F:Microsoft.CodeAnalysis.MethodKind.EventAdd" /> or <see cref="F:Microsoft.CodeAnalysis.MethodKind.EventRemove" />,
+            returns the event that this method is the adder or remover for.
+            Note, the set of possible associated symbols might be expanded in the future to 
+            reflect changes in the languages.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Construct">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol Construct (params Microsoft.CodeAnalysis.ITypeSymbol[] typeArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.IMethodSymbol Construct(class Microsoft.CodeAnalysis.ITypeSymbol[] typeArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IMethodSymbol.Construct(Microsoft.CodeAnalysis.ITypeSymbol[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function Construct (ParamArray typeArguments As ITypeSymbol()) As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="abstract member Construct : Microsoft.CodeAnalysis.ITypeSymbol[] -&gt; Microsoft.CodeAnalysis.IMethodSymbol" Usage="iMethodSymbol.Construct typeArguments" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::IMethodSymbol ^ Construct(... cli::array &lt;Microsoft::CodeAnalysis::ITypeSymbol ^&gt; ^ typeArguments);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeArguments" Type="Microsoft.CodeAnalysis.ITypeSymbol[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="typeArguments">The immediate type arguments to be replaced for type
+            parameters in the method.</param>
+        <summary>
+            Returns a constructed method given its type arguments.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstructedFrom">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol ConstructedFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol ConstructedFrom" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.ConstructedFrom" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConstructedFrom As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="member this.ConstructedFrom : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.ConstructedFrom" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ ConstructedFrom { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the method symbol that this method was constructed from. The resulting
+            method symbol
+            has the same containing type (if any), but has type arguments that are the same
+            as the type parameters (although its containing type might not).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExplicitInterfaceImplementations">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt; ExplicitInterfaceImplementations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IMethodSymbol&gt; ExplicitInterfaceImplementations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.ExplicitInterfaceImplementations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExplicitInterfaceImplementations As ImmutableArray(Of IMethodSymbol)" />
+      <MemberSignature Language="F#" Value="member this.ExplicitInterfaceImplementations : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt;" Usage="Microsoft.CodeAnalysis.IMethodSymbol.ExplicitInterfaceImplementations" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IMethodSymbol ^&gt; ExplicitInterfaceImplementations { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IMethodSymbol ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IMethodSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns interface methods explicitly implemented by this method.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Methods imported from metadata can explicitly implement more than one method, 
+            that is why return type is ImmutableArray.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDllImportData">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.DllImportData GetDllImportData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.DllImportData GetDllImportData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IMethodSymbol.GetDllImportData" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDllImportData () As DllImportData" />
+      <MemberSignature Language="F#" Value="abstract member GetDllImportData : unit -&gt; Microsoft.CodeAnalysis.DllImportData" Usage="iMethodSymbol.GetDllImportData " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::DllImportData ^ GetDllImportData();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.DllImportData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Platform invoke information, or null if the method isn't a P/Invoke.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReturnTypeAttributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt; GetReturnTypeAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.AttributeData&gt; GetReturnTypeAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IMethodSymbol.GetReturnTypeAttributes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetReturnTypeAttributes () As ImmutableArray(Of AttributeData)" />
+      <MemberSignature Language="F#" Value="abstract member GetReturnTypeAttributes : unit -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt;" Usage="iMethodSymbol.GetReturnTypeAttributes " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::AttributeData ^&gt; GetReturnTypeAttributes();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the list of custom attributes, if any, associated with the returned value. 
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInferredDuringReduction">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ITypeSymbol GetTypeInferredDuringReduction (Microsoft.CodeAnalysis.ITypeParameterSymbol reducedFromTypeParameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.ITypeSymbol GetTypeInferredDuringReduction(class Microsoft.CodeAnalysis.ITypeParameterSymbol reducedFromTypeParameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IMethodSymbol.GetTypeInferredDuringReduction(Microsoft.CodeAnalysis.ITypeParameterSymbol)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTypeInferredDuringReduction (reducedFromTypeParameter As ITypeParameterSymbol) As ITypeSymbol" />
+      <MemberSignature Language="F#" Value="abstract member GetTypeInferredDuringReduction : Microsoft.CodeAnalysis.ITypeParameterSymbol -&gt; Microsoft.CodeAnalysis.ITypeSymbol" Usage="iMethodSymbol.GetTypeInferredDuringReduction reducedFromTypeParameter" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::ITypeSymbol ^ GetTypeInferredDuringReduction(Microsoft::CodeAnalysis::ITypeParameterSymbol ^ reducedFromTypeParameter);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reducedFromTypeParameter" Type="Microsoft.CodeAnalysis.ITypeParameterSymbol" />
+      </Parameters>
+      <Docs>
+        <param name="reducedFromTypeParameter">Type parameter of the corresponding <see cref="P:Microsoft.CodeAnalysis.IMethodSymbol.ReducedFrom" /> method.</param>
+        <summary>
+            If this method is a reduced extension method, returns a type inferred during reduction process for the type parameter. 
+            </summary>
+        <returns>Inferred type or Nothing if nothing was inferred.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">If this is not a reduced extension method.</exception>
+        <exception cref="T:System.ArgumentNullException">If <paramref name="reducedFromTypeParameter" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">If <paramref name="reducedFromTypeParameter" /> doesn't belong to the corresponding <see cref="P:Microsoft.CodeAnalysis.IMethodSymbol.ReducedFrom" /> method.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HidesBaseMethodsByName">
+      <MemberSignature Language="C#" Value="public bool HidesBaseMethodsByName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HidesBaseMethodsByName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.HidesBaseMethodsByName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HidesBaseMethodsByName As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HidesBaseMethodsByName : bool" Usage="Microsoft.CodeAnalysis.IMethodSymbol.HidesBaseMethodsByName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HidesBaseMethodsByName { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this method hides base methods by name. This cannot be specified directly
+            in the C# language, but can be true for methods defined in other languages imported from
+            metadata. The equivalent of the "hidebyname" flag in metadata. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsync">
+      <MemberSignature Language="C#" Value="public bool IsAsync { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAsync" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.IsAsync" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsAsync As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsAsync : bool" Usage="Microsoft.CodeAnalysis.IMethodSymbol.IsAsync" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAsync { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this method is an async method
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCheckedBuiltin">
+      <MemberSignature Language="C#" Value="public bool IsCheckedBuiltin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCheckedBuiltin" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.IsCheckedBuiltin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsCheckedBuiltin As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsCheckedBuiltin : bool" Usage="Microsoft.CodeAnalysis.IMethodSymbol.IsCheckedBuiltin" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsCheckedBuiltin { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns whether this built-in operator checks for integer overflow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExtensionMethod">
+      <MemberSignature Language="C#" Value="public bool IsExtensionMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsExtensionMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.IsExtensionMethod" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsExtensionMethod As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsExtensionMethod : bool" Usage="Microsoft.CodeAnalysis.IMethodSymbol.IsExtensionMethod" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsExtensionMethod { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this method is an extension method. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenericMethod">
+      <MemberSignature Language="C#" Value="public bool IsGenericMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGenericMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.IsGenericMethod" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsGenericMethod As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsGenericMethod : bool" Usage="Microsoft.CodeAnalysis.IMethodSymbol.IsGenericMethod" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsGenericMethod { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns whether this method is generic; i.e., does it have any type parameters?
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVararg">
+      <MemberSignature Language="C#" Value="public bool IsVararg { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVararg" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.IsVararg" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsVararg As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsVararg : bool" Usage="Microsoft.CodeAnalysis.IMethodSymbol.IsVararg" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsVararg { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Returns whether this method is using CLI VARARG calling convention. This is used for
+             C-style variable argument lists. This is used extremely rarely in C# code and is
+             represented using the undocumented "__arglist" keyword.
+            
+             Note that methods with "params" on the last parameter are indicated with the "IsParams"
+             property on ParameterSymbol, and are not represented with this property.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.MethodKind MethodKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.MethodKind MethodKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.MethodKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MethodKind As MethodKind" />
+      <MemberSignature Language="F#" Value="member this.MethodKind : Microsoft.CodeAnalysis.MethodKind" Usage="Microsoft.CodeAnalysis.IMethodSymbol.MethodKind" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::MethodKind MethodKind { Microsoft::CodeAnalysis::MethodKind get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.MethodKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets what kind of method this is. There are several different kinds of things in the
+            C# language that are represented as methods. This property allow distinguishing those things
+            without having to decode the name of the method.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalDefinition">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol OriginalDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol OriginalDefinition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.OriginalDefinition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginalDefinition As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="member this.OriginalDefinition : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.OriginalDefinition" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ OriginalDefinition { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the original definition of this symbol. If this symbol is derived from another
+            symbol by (say) type substitution, this gets the original symbol, as it was defined in
+            source or metadata.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverriddenMethod">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol OverriddenMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol OverriddenMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.OverriddenMethod" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OverriddenMethod As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="member this.OverriddenMethod : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.OverriddenMethod" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ OverriddenMethod { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this method overrides another method (because it both had the override modifier
+            and there correctly was a method to override), returns the overridden method.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IParameterSymbol&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IParameterSymbol&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parameters As ImmutableArray(Of IParameterSymbol)" />
+      <MemberSignature Language="F#" Value="member this.Parameters : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IParameterSymbol&gt;" Usage="Microsoft.CodeAnalysis.IMethodSymbol.Parameters" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IParameterSymbol ^&gt; Parameters { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IParameterSymbol ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IParameterSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the parameters of this method. If this method has no parameters, returns
+            an empty list.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartialDefinitionPart">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol PartialDefinitionPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol PartialDefinitionPart" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.PartialDefinitionPart" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PartialDefinitionPart As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="member this.PartialDefinitionPart : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.PartialDefinitionPart" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ PartialDefinitionPart { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this is a partial method implementation part, returns the corresponding
+            definition part.  Otherwise null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartialImplementationPart">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol PartialImplementationPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol PartialImplementationPart" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.PartialImplementationPart" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PartialImplementationPart As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="member this.PartialImplementationPart : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.PartialImplementationPart" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ PartialImplementationPart { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this is a partial method declaration without a body, and the method is
+            implemented with a body, returns that implementing definition.  Otherwise
+            null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiverType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ITypeSymbol ReceiverType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ITypeSymbol ReceiverType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.ReceiverType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiverType As ITypeSymbol" />
+      <MemberSignature Language="F#" Value="member this.ReceiverType : Microsoft.CodeAnalysis.ITypeSymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.ReceiverType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ITypeSymbol ^ ReceiverType { Microsoft::CodeAnalysis::ITypeSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this method can be applied to an object, returns the type of object it is applied to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReducedFrom">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol ReducedFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol ReducedFrom" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.ReducedFrom" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReducedFrom As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="member this.ReducedFrom : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.ReducedFrom" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ ReducedFrom { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this method is a reduced extension method, returns the definition of extension
+            method from which this was reduced. Otherwise, returns null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReduceExtensionMethod">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol ReduceExtensionMethod (Microsoft.CodeAnalysis.ITypeSymbol receiverType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.IMethodSymbol ReduceExtensionMethod(class Microsoft.CodeAnalysis.ITypeSymbol receiverType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IMethodSymbol.ReduceExtensionMethod(Microsoft.CodeAnalysis.ITypeSymbol)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReduceExtensionMethod (receiverType As ITypeSymbol) As IMethodSymbol" />
+      <MemberSignature Language="F#" Value="abstract member ReduceExtensionMethod : Microsoft.CodeAnalysis.ITypeSymbol -&gt; Microsoft.CodeAnalysis.IMethodSymbol" Usage="iMethodSymbol.ReduceExtensionMethod receiverType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::IMethodSymbol ^ ReduceExtensionMethod(Microsoft::CodeAnalysis::ITypeSymbol ^ receiverType);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receiverType" Type="Microsoft.CodeAnalysis.ITypeSymbol" />
+      </Parameters>
+      <Docs>
+        <param name="receiverType">To be added.</param>
+        <summary>
+            If this is an extension method that can be applied to a receiver of the given type,
+            returns a reduced extension method symbol thus formed. Otherwise, returns null.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefCustomModifiers">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt; RefCustomModifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CustomModifier&gt; RefCustomModifiers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.RefCustomModifiers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RefCustomModifiers As ImmutableArray(Of CustomModifier)" />
+      <MemberSignature Language="F#" Value="member this.RefCustomModifiers : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt;" Usage="Microsoft.CodeAnalysis.IMethodSymbol.RefCustomModifiers" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::CustomModifier ^&gt; RefCustomModifiers { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::CustomModifier ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Custom modifiers associated with the ref modifier, or an empty array if there are none.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.RefKind RefKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.RefKind RefKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.RefKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RefKind As RefKind" />
+      <MemberSignature Language="F#" Value="member this.RefKind : Microsoft.CodeAnalysis.RefKind" Usage="Microsoft.CodeAnalysis.IMethodSymbol.RefKind" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::RefKind RefKind { Microsoft::CodeAnalysis::RefKind get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.RefKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the RefKind of the method.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnsByRef">
+      <MemberSignature Language="C#" Value="public bool ReturnsByRef { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReturnsByRef" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.ReturnsByRef" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReturnsByRef As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReturnsByRef : bool" Usage="Microsoft.CodeAnalysis.IMethodSymbol.ReturnsByRef" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ReturnsByRef { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this method returns by reference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnsByRefReadonly">
+      <MemberSignature Language="C#" Value="public bool ReturnsByRefReadonly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReturnsByRefReadonly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.ReturnsByRefReadonly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReturnsByRefReadonly As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReturnsByRefReadonly : bool" Usage="Microsoft.CodeAnalysis.IMethodSymbol.ReturnsByRefReadonly" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ReturnsByRefReadonly { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this method returns by ref readonly.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnsVoid">
+      <MemberSignature Language="C#" Value="public bool ReturnsVoid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReturnsVoid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.ReturnsVoid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReturnsVoid As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReturnsVoid : bool" Usage="Microsoft.CodeAnalysis.IMethodSymbol.ReturnsVoid" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ReturnsVoid { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this method has no return type; i.e., returns "void".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ITypeSymbol ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ITypeSymbol ReturnType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReturnType As ITypeSymbol" />
+      <MemberSignature Language="F#" Value="member this.ReturnType : Microsoft.CodeAnalysis.ITypeSymbol" Usage="Microsoft.CodeAnalysis.IMethodSymbol.ReturnType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ITypeSymbol ^ ReturnType { Microsoft::CodeAnalysis::ITypeSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the return type of the method.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnTypeCustomModifiers">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt; ReturnTypeCustomModifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CustomModifier&gt; ReturnTypeCustomModifiers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.ReturnTypeCustomModifiers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReturnTypeCustomModifiers As ImmutableArray(Of CustomModifier)" />
+      <MemberSignature Language="F#" Value="member this.ReturnTypeCustomModifiers : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt;" Usage="Microsoft.CodeAnalysis.IMethodSymbol.ReturnTypeCustomModifiers" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::CustomModifier ^&gt; ReturnTypeCustomModifiers { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::CustomModifier ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CustomModifier&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the list of custom modifiers, if any, associated with the return type. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeArguments">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt; TypeArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ITypeSymbol&gt; TypeArguments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.TypeArguments" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TypeArguments As ImmutableArray(Of ITypeSymbol)" />
+      <MemberSignature Language="F#" Value="member this.TypeArguments : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt;" Usage="Microsoft.CodeAnalysis.IMethodSymbol.TypeArguments" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeSymbol ^&gt; TypeArguments { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeSymbol ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the type arguments that have been substituted for the type parameters. 
+            If nothing has been substituted for a given type parameter,
+            then the type parameter itself is consider the type argument.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeParameterSymbol&gt; TypeParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ITypeParameterSymbol&gt; TypeParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IMethodSymbol.TypeParameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TypeParameters As ImmutableArray(Of ITypeParameterSymbol)" />
+      <MemberSignature Language="F#" Value="member this.TypeParameters : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeParameterSymbol&gt;" Usage="Microsoft.CodeAnalysis.IMethodSymbol.TypeParameters" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeParameterSymbol ^&gt; TypeParameters { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeParameterSymbol ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeParameterSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the type parameters on this method. If the method has not generic,
+            returns an empty list.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

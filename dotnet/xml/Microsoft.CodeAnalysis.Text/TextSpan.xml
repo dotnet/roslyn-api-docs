@@ -1,0 +1,599 @@
+﻿<Type Name="TextSpan" FullName="Microsoft.CodeAnalysis.Text.TextSpan">
+  <TypeSignature Language="C#" Value="public struct TextSpan : IComparable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;, IEquatable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit TextSpan extends System.ValueType implements class System.IComparable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt;, class System.IEquatable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Text.TextSpan" />
+  <TypeSignature Language="VB.NET" Value="Public Structure TextSpan&#xA;Implements IComparable(Of TextSpan), IEquatable(Of TextSpan)" />
+  <TypeSignature Language="F#" Value="type TextSpan = struct" />
+  <TypeSignature Language="C++ CLI" Value="public value class TextSpan : IComparable&lt;Microsoft::CodeAnalysis::Text::TextSpan&gt;, IEquatable&lt;Microsoft::CodeAnalysis::Text::TextSpan&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IComparable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Immutable abstract representation of a span of text.  For example, in an error diagnostic that reports a
+            location, it could come from a parsed string, text from a tool editor buffer, etc.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextSpan (int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.#ctor(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (start As Integer, length As Integer)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Text.TextSpan : int * int -&gt; Microsoft.CodeAnalysis.Text.TextSpan" Usage="new Microsoft.CodeAnalysis.Text.TextSpan (start, length)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TextSpan(int start, int length);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">To be added.</param>
+        <param name="length">To be added.</param>
+        <summary>
+            Creates a TextSpan instance beginning with the position Start and having the Length
+            specified with <paramref name="length" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (Microsoft.CodeAnalysis.Text.TextSpan other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(valuetype Microsoft.CodeAnalysis.Text.TextSpan other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.CompareTo(Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompareTo (other As TextSpan) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member CompareTo : Microsoft.CodeAnalysis.Text.TextSpan -&gt; int&#xA;override this.CompareTo : Microsoft.CodeAnalysis.Text.TextSpan -&gt; int" Usage="textSpan.CompareTo other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int CompareTo(Microsoft::CodeAnalysis::Text::TextSpan other);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IComparable`1.CompareTo(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>
+            Compares current instance of <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan" /> with another.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (Microsoft.CodeAnalysis.Text.TextSpan span);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.Contains(Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Contains (span As TextSpan) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Contains : Microsoft.CodeAnalysis.Text.TextSpan -&gt; bool" Usage="textSpan.Contains span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(Microsoft::CodeAnalysis::Text::TextSpan span);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="span">
+            The span to check.
+            </param>
+        <summary>
+            Determines whether <paramref name="span" /> falls completely within this span.
+            </summary>
+        <returns>
+          <c>true</c> if the specified span falls completely within this span, otherwise <c>false</c>.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (int position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(int32 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.Contains(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Contains (position As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Contains : int -&gt; bool" Usage="textSpan.Contains position" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(int position);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="position">
+            The position to check.
+            </param>
+        <summary>
+            Determines whether the position lies within the span.
+            </summary>
+        <returns>
+          <c>true</c> if the position is greater than or equal to Start and strictly less 
+            than End, otherwise <c>false</c>.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public int End { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 End" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.TextSpan.End" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property End As Integer" />
+      <MemberSignature Language="F#" Value="member this.End : int" Usage="Microsoft.CodeAnalysis.Text.TextSpan.End" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int End { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            End of the span.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.CodeAnalysis.Text.TextSpan other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Microsoft.CodeAnalysis.Text.TextSpan other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.Equals(Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As TextSpan) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.CodeAnalysis.Text.TextSpan -&gt; bool" Usage="textSpan.Equals other" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::CodeAnalysis::Text::TextSpan other);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>
+            Determines if current instance of <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan" /> is equal to another.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="textSpan.Equals obj" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>
+            Determines if current instance of <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan" /> is equal to another.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromBounds">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Text.TextSpan FromBounds (int start, int end);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.Text.TextSpan FromBounds(int32 start, int32 end) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.FromBounds(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromBounds (start As Integer, end As Integer) As TextSpan" />
+      <MemberSignature Language="F#" Value="static member FromBounds : int * int -&gt; Microsoft.CodeAnalysis.Text.TextSpan" Usage="Microsoft.CodeAnalysis.Text.TextSpan.FromBounds (start, end)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::CodeAnalysis::Text::TextSpan FromBounds(int start, int end);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Text.TextSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="end" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">To be added.</param>
+        <param name="end">To be added.</param>
+        <summary>
+            Creates a new <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan" /> from <paramref name="start" /> and <paramref name="end" /> positions as opposed to a position and length.
+            
+            The returned TextSpan contains the range with <paramref name="start" /> inclusive, 
+            and <paramref name="end" /> exclusive.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="textSpan.GetHashCode " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Produces a hash code for <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersection">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; Intersection (Microsoft.CodeAnalysis.Text.TextSpan span);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Nullable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; Intersection(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.Intersection(Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Intersection (span As TextSpan) As Nullable(Of TextSpan)" />
+      <MemberSignature Language="F#" Value="member this.Intersection : Microsoft.CodeAnalysis.Text.TextSpan -&gt; Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;" Usage="textSpan.Intersection span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Nullable&lt;Microsoft::CodeAnalysis::Text::TextSpan&gt; Intersection(Microsoft::CodeAnalysis::Text::TextSpan span);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="span">
+            The span to check.
+            </param>
+        <summary>
+            Returns the intersection with the given span, or null if there is no intersection.
+            </summary>
+        <returns>
+            The intersection of the spans, or null if the intersection is empty.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntersectsWith">
+      <MemberSignature Language="C#" Value="public bool IntersectsWith (Microsoft.CodeAnalysis.Text.TextSpan span);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IntersectsWith(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.IntersectsWith(Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IntersectsWith (span As TextSpan) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IntersectsWith : Microsoft.CodeAnalysis.Text.TextSpan -&gt; bool" Usage="textSpan.IntersectsWith span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IntersectsWith(Microsoft::CodeAnalysis::Text::TextSpan span);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="span">
+            The span to check.
+            </param>
+        <summary>
+            Determines whether <paramref name="span" /> intersects this span. Two spans are considered to 
+            intersect if they have positions in common or the end of one span 
+            coincides with the start of the other span.
+            </summary>
+        <returns>
+          <c>true</c> if the spans intersect, otherwise <c>false</c>.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntersectsWith">
+      <MemberSignature Language="C#" Value="public bool IntersectsWith (int position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IntersectsWith(int32 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.IntersectsWith(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IntersectsWith (position As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IntersectsWith : int -&gt; bool" Usage="textSpan.IntersectsWith position" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IntersectsWith(int position);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="position">
+            The position to check.
+            </param>
+        <summary>
+            Determines whether <paramref name="position" /> intersects this span. 
+            A position is considered to intersect if it is between the start and
+            end positions (inclusive) of this span.
+            </summary>
+        <returns>
+          <c>true</c> if the position intersects, otherwise <c>false</c>.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.TextSpan.IsEmpty" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEmpty As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsEmpty : bool" Usage="Microsoft.CodeAnalysis.Text.TextSpan.IsEmpty" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsEmpty { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines whether or not the span is empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.TextSpan.Length" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Length As Integer" />
+      <MemberSignature Language="F#" Value="member this.Length : int" Usage="Microsoft.CodeAnalysis.Text.TextSpan.Length" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Length { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Length of the span.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.CodeAnalysis.Text.TextSpan left, Microsoft.CodeAnalysis.Text.TextSpan right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Microsoft.CodeAnalysis.Text.TextSpan left, valuetype Microsoft.CodeAnalysis.Text.TextSpan right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.op_Equality(Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As TextSpan, right As TextSpan) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.CodeAnalysis.Text.TextSpan * Microsoft.CodeAnalysis.Text.TextSpan -&gt; bool" Usage="left = right" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::CodeAnalysis::Text::TextSpan left, Microsoft::CodeAnalysis::Text::TextSpan right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>
+            Determines if two instances of <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan" /> are the same.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.CodeAnalysis.Text.TextSpan left, Microsoft.CodeAnalysis.Text.TextSpan right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Microsoft.CodeAnalysis.Text.TextSpan left, valuetype Microsoft.CodeAnalysis.Text.TextSpan right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.op_Inequality(Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As TextSpan, right As TextSpan) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.CodeAnalysis.Text.TextSpan * Microsoft.CodeAnalysis.Text.TextSpan -&gt; bool" Usage="Microsoft.CodeAnalysis.Text.TextSpan.op_Inequality (left, right)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::CodeAnalysis::Text::TextSpan left, Microsoft::CodeAnalysis::Text::TextSpan right);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="right" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>
+            Determines if two instances of <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan" /> are different.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Overlap">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; Overlap (Microsoft.CodeAnalysis.Text.TextSpan span);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Nullable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; Overlap(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.Overlap(Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Overlap (span As TextSpan) As Nullable(Of TextSpan)" />
+      <MemberSignature Language="F#" Value="member this.Overlap : Microsoft.CodeAnalysis.Text.TextSpan -&gt; Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;" Usage="textSpan.Overlap span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Nullable&lt;Microsoft::CodeAnalysis::Text::TextSpan&gt; Overlap(Microsoft::CodeAnalysis::Text::TextSpan span);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="span">
+            The span to check.
+            </param>
+        <summary>
+            Returns the overlap with the given span, or null if there is no overlap.
+            </summary>
+        <returns>
+            The overlap of the spans, or null if the overlap is empty.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverlapsWith">
+      <MemberSignature Language="C#" Value="public bool OverlapsWith (Microsoft.CodeAnalysis.Text.TextSpan span);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool OverlapsWith(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.OverlapsWith(Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function OverlapsWith (span As TextSpan) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.OverlapsWith : Microsoft.CodeAnalysis.Text.TextSpan -&gt; bool" Usage="textSpan.OverlapsWith span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool OverlapsWith(Microsoft::CodeAnalysis::Text::TextSpan span);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="span">
+            The span to check.
+            </param>
+        <summary>
+            Determines whether <paramref name="span" /> overlaps this span. Two spans are considered to overlap 
+            if they have positions in common and neither is empty. Empty spans do not overlap with any 
+            other span.
+            </summary>
+        <returns>
+          <c>true</c> if the spans overlap, otherwise <c>false</c>.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public int Start { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Start" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Text.TextSpan.Start" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Start As Integer" />
+      <MemberSignature Language="F#" Value="member this.Start : int" Usage="Microsoft.CodeAnalysis.Text.TextSpan.Start" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Start { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Start point of the span.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Text.TextSpan.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="textSpan.ToString " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Provides a string representation for <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
