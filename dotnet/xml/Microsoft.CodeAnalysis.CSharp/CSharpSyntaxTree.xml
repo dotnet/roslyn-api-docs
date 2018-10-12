@@ -1,0 +1,807 @@
+﻿<Type Name="CSharpSyntaxTree" FullName="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree">
+  <TypeSignature Language="C#" Value="public abstract class CSharpSyntaxTree : Microsoft.CodeAnalysis.SyntaxTree" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CSharpSyntaxTree extends Microsoft.CodeAnalysis.SyntaxTree" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CSharpSyntaxTree&#xA;Inherits SyntaxTree" />
+  <TypeSignature Language="F#" Value="type CSharpSyntaxTree = class&#xA;    inherit SyntaxTree" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CSharpSyntaxTree abstract : Microsoft::CodeAnalysis::SyntaxTree" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.SyntaxTree</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The parsed representation of a C# source document.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CSharpSyntaxTree ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; CSharpSyntaxTree();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneNodeAsRoot&lt;T&gt;">
+      <MemberSignature Language="C#" Value="protected T CloneNodeAsRoot&lt;T&gt; (T node) where T : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode;" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance !!T CloneNodeAsRoot&lt;(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode) T&gt;(!!T node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.CloneNodeAsRoot``1(``0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function CloneNodeAsRoot(Of T As CSharpSyntaxNode) (node As T) As T" />
+      <MemberSignature Language="F#" Value="member this.CloneNodeAsRoot : 'T -&gt; 'T (requires 'T :&gt; Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode)" Usage="cSharpSyntaxTree.CloneNodeAsRoot node" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA;generic &lt;typename T&gt;&#xA; where T : Microsoft::CodeAnalysis::CSharp::CSharpSyntaxNode T CloneNodeAsRoot(T node);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="node" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Type of the syntax node.</typeparam>
+        <param name="node">The original syntax node.</param>
+        <summary>
+            Produces a clone of a <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" /> which will have current syntax tree as its parent.
+            
+            Caller must guarantee that if the same instance of <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" /> makes multiple calls
+            to this function, only one result is observable.
+            </summary>
+        <returns>A clone of the original syntax node that has current <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree" /> as its parent.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree Create (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode root, Microsoft.CodeAnalysis.CSharp.CSharpParseOptions options = null, string path = &quot;&quot;, System.Text.Encoding encoding = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.SyntaxTree Create(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode root, class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions options, string path, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.Create(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Text.Encoding)" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode * Microsoft.CodeAnalysis.CSharp.CSharpParseOptions * string * System.Text.Encoding -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.Create (root, options, path, encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="path">To be added.</param>
+        <param name="encoding">To be added.</param>
+        <summary>
+            Creates a new syntax tree from a syntax node.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChangedSpans">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; GetChangedSpans (Microsoft.CodeAnalysis.SyntaxTree oldTree);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; GetChangedSpans(class Microsoft.CodeAnalysis.SyntaxTree oldTree) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetChangedSpans(Microsoft.CodeAnalysis.SyntaxTree)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetChangedSpans (oldTree As SyntaxTree) As IList(Of TextSpan)" />
+      <MemberSignature Language="F#" Value="override this.GetChangedSpans : Microsoft.CodeAnalysis.SyntaxTree -&gt; System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;" Usage="cSharpSyntaxTree.GetChangedSpans oldTree" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Collections::Generic::IList&lt;Microsoft::CodeAnalysis::Text::TextSpan&gt; ^ GetChangedSpans(Microsoft::CodeAnalysis::SyntaxTree ^ oldTree);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldTree" Type="Microsoft.CodeAnalysis.SyntaxTree" />
+      </Parameters>
+      <Docs>
+        <param name="oldTree">The old tree. Cannot be <c>null</c>.</param>
+        <summary>
+            Produces a pessimistic list of spans that denote the regions of text in this tree that
+            are changed from the text of the old tree.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>The list is pessimistic because it may claim more or larger regions than actually changed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChanges">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextChange&gt; GetChanges (Microsoft.CodeAnalysis.SyntaxTree oldTree);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextChange&gt; GetChanges(class Microsoft.CodeAnalysis.SyntaxTree oldTree) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetChanges(Microsoft.CodeAnalysis.SyntaxTree)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetChanges (oldTree As SyntaxTree) As IList(Of TextChange)" />
+      <MemberSignature Language="F#" Value="override this.GetChanges : Microsoft.CodeAnalysis.SyntaxTree -&gt; System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextChange&gt;" Usage="cSharpSyntaxTree.GetChanges oldTree" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Collections::Generic::IList&lt;Microsoft::CodeAnalysis::Text::TextChange&gt; ^ GetChanges(Microsoft::CodeAnalysis::SyntaxTree ^ oldTree);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextChange&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldTree" Type="Microsoft.CodeAnalysis.SyntaxTree" />
+      </Parameters>
+      <Docs>
+        <param name="oldTree">The old tree. Cannot be <c>null</c>.</param>
+        <summary>
+            Gets a list of text changes that when applied to the old tree produce this tree.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>The list of changes may be different than the original changes that produced this tree.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCompilationUnitRoot">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.CompilationUnitSyntax GetCompilationUnitRoot (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.CompilationUnitSyntax GetCompilationUnitRoot(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetCompilationUnitRoot(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="member this.GetCompilationUnitRoot : System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.CompilationUnitSyntax" Usage="cSharpSyntaxTree.GetCompilationUnitRoot cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.CompilationUnitSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets the root of the syntax tree statically typed as <see cref="T:Microsoft.CodeAnalysis.CSharp.Syntax.CompilationUnitSyntax" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Ensure that <see cref="P:Microsoft.CodeAnalysis.SyntaxTree.HasCompilationUnitRoot" /> is true for this tree prior to invoking this method.
+            </remarks>
+        <exception cref="T:System.InvalidCastException">Throws this exception if <see cref="P:Microsoft.CodeAnalysis.SyntaxTree.HasCompilationUnitRoot" /> is false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (Microsoft.CodeAnalysis.SyntaxNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(class Microsoft.CodeAnalysis.SyntaxNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetDiagnostics(Microsoft.CodeAnalysis.SyntaxNode)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDiagnostics (node As SyntaxNode) As IEnumerable(Of Diagnostic)" />
+      <MemberSignature Language="F#" Value="override this.GetDiagnostics : Microsoft.CodeAnalysis.SyntaxNode -&gt; seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="cSharpSyntaxTree.GetDiagnostics node" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^ GetDiagnostics(Microsoft::CodeAnalysis::SyntaxNode ^ node);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="Microsoft.CodeAnalysis.SyntaxNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <summary>
+            Gets a list of all the diagnostics in the sub tree that has the specified node as its root.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            This method does not filter diagnostics based on <c>#pragma</c>s and compiler options
+            like /nowarn, /warnaserror etc.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (Microsoft.CodeAnalysis.SyntaxNodeOrToken nodeOrToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(valuetype Microsoft.CodeAnalysis.SyntaxNodeOrToken nodeOrToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetDiagnostics(Microsoft.CodeAnalysis.SyntaxNodeOrToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDiagnostics (nodeOrToken As SyntaxNodeOrToken) As IEnumerable(Of Diagnostic)" />
+      <MemberSignature Language="F#" Value="override this.GetDiagnostics : Microsoft.CodeAnalysis.SyntaxNodeOrToken -&gt; seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="cSharpSyntaxTree.GetDiagnostics nodeOrToken" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^ GetDiagnostics(Microsoft::CodeAnalysis::SyntaxNodeOrToken nodeOrToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeOrToken" Type="Microsoft.CodeAnalysis.SyntaxNodeOrToken" />
+      </Parameters>
+      <Docs>
+        <param name="nodeOrToken">To be added.</param>
+        <summary>
+            Gets a list of all the diagnostics in either the sub tree that has the specified node as its root or
+            associated with the token and its related trivia. 
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            This method does not filter diagnostics based on <c>#pragma</c>s and compiler options
+            like /nowarn, /warnaserror etc.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (Microsoft.CodeAnalysis.SyntaxToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(valuetype Microsoft.CodeAnalysis.SyntaxToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetDiagnostics(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDiagnostics (token As SyntaxToken) As IEnumerable(Of Diagnostic)" />
+      <MemberSignature Language="F#" Value="override this.GetDiagnostics : Microsoft.CodeAnalysis.SyntaxToken -&gt; seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="cSharpSyntaxTree.GetDiagnostics token" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^ GetDiagnostics(Microsoft::CodeAnalysis::SyntaxToken token);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <summary>
+            Gets a list of all the diagnostics associated with the token and any related trivia.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            This method does not filter diagnostics based on <c>#pragma</c>s and compiler options
+            like /nowarn, /warnaserror etc.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (Microsoft.CodeAnalysis.SyntaxTrivia trivia);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(valuetype Microsoft.CodeAnalysis.SyntaxTrivia trivia) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetDiagnostics(Microsoft.CodeAnalysis.SyntaxTrivia)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDiagnostics (trivia As SyntaxTrivia) As IEnumerable(Of Diagnostic)" />
+      <MemberSignature Language="F#" Value="override this.GetDiagnostics : Microsoft.CodeAnalysis.SyntaxTrivia -&gt; seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="cSharpSyntaxTree.GetDiagnostics trivia" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^ GetDiagnostics(Microsoft::CodeAnalysis::SyntaxTrivia trivia);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trivia" Type="Microsoft.CodeAnalysis.SyntaxTrivia" />
+      </Parameters>
+      <Docs>
+        <param name="trivia">To be added.</param>
+        <summary>
+            Gets a list of all the diagnostics associated with the trivia.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            This method does not filter diagnostics based on <c>#pragma</c>s and compiler options
+            like /nowarn, /warnaserror etc.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetDiagnostics(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.GetDiagnostics : System.Threading.CancellationToken -&gt; seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="cSharpSyntaxTree.GetDiagnostics cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets a list of all the diagnostics in the syntax tree.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            This method does not filter diagnostics based on <c>#pragma</c>s and compiler options
+            like /nowarn, /warnaserror etc.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineSpan">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.FileLinePositionSpan GetLineSpan (Microsoft.CodeAnalysis.Text.TextSpan span, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype Microsoft.CodeAnalysis.FileLinePositionSpan GetLineSpan(valuetype Microsoft.CodeAnalysis.Text.TextSpan span, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetLineSpan(Microsoft.CodeAnalysis.Text.TextSpan,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.GetLineSpan : Microsoft.CodeAnalysis.Text.TextSpan * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FileLinePositionSpan" Usage="cSharpSyntaxTree.GetLineSpan (span, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FileLinePositionSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="span">Span within the tree.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Gets the location in terms of path, line and column for a given span.
+            </summary>
+        <returns>
+          <see cref="T:Microsoft.CodeAnalysis.FileLinePositionSpan" /> that contains path, line and column information.
+            </returns>
+        <remarks>The values are not affected by line mapping directives (<c>#line</c>).</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineVisibility">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.LineVisibility GetLineVisibility (int position, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype Microsoft.CodeAnalysis.LineVisibility GetLineVisibility(int32 position, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetLineVisibility(System.Int32,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.GetLineVisibility : int * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.LineVisibility" Usage="cSharpSyntaxTree.GetLineVisibility (position, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.LineVisibility</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="position">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocation">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.Location GetLocation (Microsoft.CodeAnalysis.Text.TextSpan span);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.CodeAnalysis.Location GetLocation(valuetype Microsoft.CodeAnalysis.Text.TextSpan span) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetLocation(Microsoft.CodeAnalysis.Text.TextSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetLocation (span As TextSpan) As Location" />
+      <MemberSignature Language="F#" Value="override this.GetLocation : Microsoft.CodeAnalysis.Text.TextSpan -&gt; Microsoft.CodeAnalysis.Location" Usage="cSharpSyntaxTree.GetLocation span" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override Microsoft::CodeAnalysis::Location ^ GetLocation(Microsoft::CodeAnalysis::Text::TextSpan span);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+      </Parameters>
+      <Docs>
+        <param name="span">To be added.</param>
+        <summary>
+            Gets a <see cref="T:Microsoft.CodeAnalysis.Location" /> for the specified text <paramref name="span" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMappedLineSpan">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.FileLinePositionSpan GetMappedLineSpan (Microsoft.CodeAnalysis.Text.TextSpan span, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype Microsoft.CodeAnalysis.FileLinePositionSpan GetMappedLineSpan(valuetype Microsoft.CodeAnalysis.Text.TextSpan span, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetMappedLineSpan(Microsoft.CodeAnalysis.Text.TextSpan,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.GetMappedLineSpan : Microsoft.CodeAnalysis.Text.TextSpan * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FileLinePositionSpan" Usage="cSharpSyntaxTree.GetMappedLineSpan (span, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FileLinePositionSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="Microsoft.CodeAnalysis.Text.TextSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="span">Span within the tree.</param>
+        <param name="cancellationToken">Cancellation token.</param>
+        <summary>
+            Gets the location in terms of path, line and column after applying source line mapping directives (<c>#line</c>). 
+            </summary>
+        <returns>
+          <para>A valid <see cref="T:Microsoft.CodeAnalysis.FileLinePositionSpan" /> that contains path, line and column information.</para>
+          <para>
+            If the location path is mapped the resulting path is the path specified in the corresponding <c>#line</c>,
+            otherwise it's <see cref="P:Microsoft.CodeAnalysis.SyntaxTree.FilePath" />.
+            </para>
+          <para>
+            A location path is considered mapped if the first <c>#line</c> directive that precedes it and that
+            either specifies an explicit file path or is <c>#line default</c> exists and specifies an explicit path.
+            </para>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRoot">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode GetRoot (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode GetRoot(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetRoot(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.GetRoot : System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" Usage="cSharpSyntaxTree.GetRoot cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets the root node of the syntax tree.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode&gt; GetRootAsync (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode&gt; GetRootAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetRootAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.GetRootAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode&gt;" Usage="cSharpSyntaxTree.GetRootAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets the root node of the syntax tree asynchronously.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            By default, the work associated with this method will be executed immediately on the current thread.
+            Implementations that wish to schedule this work differently should override <see cref="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetRootAsync(System.Threading.CancellationToken)" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootAsyncCore">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; GetRootAsyncCore (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; GetRootAsyncCore(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetRootAsyncCore(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.GetRootAsyncCore : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;" Usage="cSharpSyntaxTree.GetRootAsyncCore cancellationToken" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Threading::Tasks::Task&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt; ^ GetRootAsyncCore(System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootCore">
+      <MemberSignature Language="C#" Value="protected override Microsoft.CodeAnalysis.SyntaxNode GetRootCore (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode GetRootCore(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetRootCore(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.GetRootCore : System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxTree.GetRootCore cancellationToken" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ GetRootCore(System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasHiddenRegions">
+      <MemberSignature Language="C#" Value="public override bool HasHiddenRegions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HasHiddenRegions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.HasHiddenRegions" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function HasHiddenRegions () As Boolean" />
+      <MemberSignature Language="F#" Value="override this.HasHiddenRegions : unit -&gt; bool" Usage="cSharpSyntaxTree.HasHiddenRegions " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool HasHiddenRegions();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a boolean value indicating whether there are any hidden regions in the tree.
+            </summary>
+        <returns>True if there is at least one hidden region.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentTo">
+      <MemberSignature Language="C#" Value="public override bool IsEquivalentTo (Microsoft.CodeAnalysis.SyntaxTree tree, bool topLevel = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEquivalentTo(class Microsoft.CodeAnalysis.SyntaxTree tree, bool topLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.IsEquivalentTo(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function IsEquivalentTo (tree As SyntaxTree, Optional topLevel As Boolean = false) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsEquivalentTo : Microsoft.CodeAnalysis.SyntaxTree * bool -&gt; bool" Usage="cSharpSyntaxTree.IsEquivalentTo (tree, topLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tree" Type="Microsoft.CodeAnalysis.SyntaxTree" />
+        <Parameter Name="topLevel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tree">The tree to compare against.</param>
+        <param name="topLevel">
+            If true then the trees are equivalent if the contained nodes and tokens declaring metadata visible symbolic information are equivalent,
+            ignoring any differences of nodes inside method bodies or initializer expressions, otherwise all nodes and tokens must be equivalent.
+            </param>
+        <summary>
+            Determines if two trees are the same, disregarding trivia differences.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.CSharp.CSharpParseOptions Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions Options" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.Options" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Options As CSharpParseOptions" />
+      <MemberSignature Language="F#" Value="member this.Options : Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.Options" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::CodeAnalysis::CSharp::CSharpParseOptions ^ Options { Microsoft::CodeAnalysis::CSharp::CSharpParseOptions ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.CSharpParseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The options used by the parser to produce the syntax tree.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionsCore">
+      <MemberSignature Language="C#" Value="protected override Microsoft.CodeAnalysis.ParseOptions OptionsCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ParseOptions OptionsCore" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.OptionsCore" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property OptionsCore As ParseOptions" />
+      <MemberSignature Language="F#" Value="member this.OptionsCore : Microsoft.CodeAnalysis.ParseOptions" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.OptionsCore" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property Microsoft::CodeAnalysis::ParseOptions ^ OptionsCore { Microsoft::CodeAnalysis::ParseOptions ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ParseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseText">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (Microsoft.CodeAnalysis.Text.SourceText text, Microsoft.CodeAnalysis.CSharp.CSharpParseOptions options = null, string path = &quot;&quot;, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.SyntaxTree ParseText(class Microsoft.CodeAnalysis.Text.SourceText text, class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions options, string path, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ParseText : Microsoft.CodeAnalysis.Text.SourceText * Microsoft.CodeAnalysis.CSharp.CSharpParseOptions * string * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText (text, options, path, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="path">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Produces a syntax tree by parsing the source text.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseText">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (string text, Microsoft.CodeAnalysis.CSharp.CSharpParseOptions options = null, string path = &quot;&quot;, System.Text.Encoding encoding = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.SyntaxTree ParseText(string text, class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions options, string path, class System.Text.Encoding encoding, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText(System.String,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Text.Encoding,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ParseText : string * Microsoft.CodeAnalysis.CSharp.CSharpParseOptions * string * System.Text.Encoding * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText (text, options, path, encoding, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="path">To be added.</param>
+        <param name="encoding">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Produces a syntax tree by parsing the source text.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetRoot">
+      <MemberSignature Language="C#" Value="public abstract bool TryGetRoot (out Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode root);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetRoot([out] class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode&amp; root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.TryGetRoot(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode@)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function TryGetRoot (ByRef root As CSharpSyntaxNode) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.TryGetRoot :  -&gt; bool" Usage="cSharpSyntaxTree.TryGetRoot root" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool TryGetRoot([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::CSharp::CSharpSyntaxNode ^ % root);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <summary>
+            Gets the root node of the syntax tree if it is already available.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetRootCore">
+      <MemberSignature Language="C#" Value="protected override bool TryGetRootCore (out Microsoft.CodeAnalysis.SyntaxNode root);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryGetRootCore([out] class Microsoft.CodeAnalysis.SyntaxNode&amp; root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.TryGetRootCore(Microsoft.CodeAnalysis.SyntaxNode@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function TryGetRootCore (ByRef root As SyntaxNode) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.TryGetRootCore :  -&gt; bool" Usage="cSharpSyntaxTree.TryGetRootCore root" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool TryGetRootCore([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SyntaxNode ^ % root);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithChangedText">
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SyntaxTree WithChangedText (Microsoft.CodeAnalysis.Text.SourceText newText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxTree WithChangedText(class Microsoft.CodeAnalysis.Text.SourceText newText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.WithChangedText(Microsoft.CodeAnalysis.Text.SourceText)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function WithChangedText (newText As SourceText) As SyntaxTree" />
+      <MemberSignature Language="F#" Value="override this.WithChangedText : Microsoft.CodeAnalysis.Text.SourceText -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="cSharpSyntaxTree.WithChangedText newText" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override Microsoft::CodeAnalysis::SyntaxTree ^ WithChangedText(Microsoft::CodeAnalysis::Text::SourceText ^ newText);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newText" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+      </Parameters>
+      <Docs>
+        <param name="newText">To be added.</param>
+        <summary>
+            Creates a new syntax based off this tree using a new source text.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            If the new source text is a minor change from the current source text an incremental parse will occur
+            reusing most of the current syntax tree internal data.  Otherwise, a full parse will occur using the new
+            source text.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

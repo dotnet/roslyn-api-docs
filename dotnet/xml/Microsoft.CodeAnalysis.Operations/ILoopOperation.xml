@@ -1,0 +1,147 @@
+﻿<Type Name="ILoopOperation" FullName="Microsoft.CodeAnalysis.Operations.ILoopOperation">
+  <TypeSignature Language="C#" Value="public interface ILoopOperation : Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ILoopOperation implements class Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.ILoopOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ILoopOperation&#xA;Implements IOperation" />
+  <TypeSignature Language="F#" Value="type ILoopOperation = interface&#xA;    interface IOperation" />
+  <TypeSignature Language="C++ CLI" Value="public interface class ILoopOperation : Microsoft::CodeAnalysis::IOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a loop operation.
+            <para>
+            Current usage:
+             (1) C# 'while', 'for', 'foreach' and 'do' loop statements
+             (2) VB 'While', 'ForTo', 'ForEach', 'Do While' and 'Do Until' loop statements
+            </para></summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation Body { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IOperation Body" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ILoopOperation.Body" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Body As IOperation" />
+      <MemberSignature Language="F#" Value="member this.Body : Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.Operations.ILoopOperation.Body" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ Body { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Body of the loop.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueLabel">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ILabelSymbol ContinueLabel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ILabelSymbol ContinueLabel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ILoopOperation.ContinueLabel" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContinueLabel As ILabelSymbol" />
+      <MemberSignature Language="F#" Value="member this.ContinueLabel : Microsoft.CodeAnalysis.ILabelSymbol" Usage="Microsoft.CodeAnalysis.Operations.ILoopOperation.ContinueLabel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ILabelSymbol ^ ContinueLabel { Microsoft::CodeAnalysis::ILabelSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ILabelSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Loop continue label.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitLabel">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ILabelSymbol ExitLabel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ILabelSymbol ExitLabel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ILoopOperation.ExitLabel" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExitLabel As ILabelSymbol" />
+      <MemberSignature Language="F#" Value="member this.ExitLabel : Microsoft.CodeAnalysis.ILabelSymbol" Usage="Microsoft.CodeAnalysis.Operations.ILoopOperation.ExitLabel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ILabelSymbol ^ ExitLabel { Microsoft::CodeAnalysis::ILabelSymbol ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ILabelSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Loop exit/break label.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Locals">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ILocalSymbol&gt; Locals { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ILocalSymbol&gt; Locals" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ILoopOperation.Locals" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Locals As ImmutableArray(Of ILocalSymbol)" />
+      <MemberSignature Language="F#" Value="member this.Locals : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ILocalSymbol&gt;" Usage="Microsoft.CodeAnalysis.Operations.ILoopOperation.Locals" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ILocalSymbol ^&gt; Locals { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ILocalSymbol ^&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ILocalSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Declared locals.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoopKind">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Operations.LoopKind LoopKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.Operations.LoopKind LoopKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ILoopOperation.LoopKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LoopKind As LoopKind" />
+      <MemberSignature Language="F#" Value="member this.LoopKind : Microsoft.CodeAnalysis.Operations.LoopKind" Usage="Microsoft.CodeAnalysis.Operations.ILoopOperation.LoopKind" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Operations::LoopKind LoopKind { Microsoft::CodeAnalysis::Operations::LoopKind get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Operations.LoopKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Kind of the loop.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

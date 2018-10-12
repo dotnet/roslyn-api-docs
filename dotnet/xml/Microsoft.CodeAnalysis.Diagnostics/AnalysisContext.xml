@@ -1,0 +1,583 @@
+﻿<Type Name="AnalysisContext" FullName="Microsoft.CodeAnalysis.Diagnostics.AnalysisContext">
+  <TypeSignature Language="C#" Value="public abstract class AnalysisContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AnalysisContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AnalysisContext" />
+  <TypeSignature Language="F#" Value="type AnalysisContext = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AnalysisContext abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Context for initializing an analyzer.
+            Analyzer initialization can use an <see cref="T:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext" /> to register actions to be executed at any of:
+            <list type="bullet"><item><description>compilation start,</description></item><item><description>compilation end,</description></item><item><description>completion of parsing a code document,</description></item><item><description>completion of semantic analysis of a code document,</description></item><item><description>completion of semantic analysis of a symbol,</description></item><item><description>start of semantic analysis of a method body or an expression appearing outside a method body,</description></item><item><description>completion of semantic analysis of a method body or an expression appearing outside a method body, or</description></item><item><description>completion of semantic analysis of a syntax node.</description></item></list></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AnalysisContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; AnalysisContext();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureGeneratedCodeAnalysis">
+      <MemberSignature Language="C#" Value="public virtual void ConfigureGeneratedCodeAnalysis (Microsoft.CodeAnalysis.Diagnostics.GeneratedCodeAnalysisFlags analysisMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConfigureGeneratedCodeAnalysis(valuetype Microsoft.CodeAnalysis.Diagnostics.GeneratedCodeAnalysisFlags analysisMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.ConfigureGeneratedCodeAnalysis(Microsoft.CodeAnalysis.Diagnostics.GeneratedCodeAnalysisFlags)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub ConfigureGeneratedCodeAnalysis (analysisMode As GeneratedCodeAnalysisFlags)" />
+      <MemberSignature Language="F#" Value="abstract member ConfigureGeneratedCodeAnalysis : Microsoft.CodeAnalysis.Diagnostics.GeneratedCodeAnalysisFlags -&gt; unit&#xA;override this.ConfigureGeneratedCodeAnalysis : Microsoft.CodeAnalysis.Diagnostics.GeneratedCodeAnalysisFlags -&gt; unit" Usage="analysisContext.ConfigureGeneratedCodeAnalysis analysisMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void ConfigureGeneratedCodeAnalysis(Microsoft::CodeAnalysis::Diagnostics::GeneratedCodeAnalysisFlags analysisMode);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="analysisMode" Type="Microsoft.CodeAnalysis.Diagnostics.GeneratedCodeAnalysisFlags" />
+      </Parameters>
+      <Docs>
+        <param name="analysisMode">To be added.</param>
+        <summary>
+            Configure analysis mode of generated code for this analyzer.
+            Non-configured analyzers will default to an appropriate default mode for generated code.
+            It is recommended for the analyzer to invoke this API with the required <see cref="T:Microsoft.CodeAnalysis.Diagnostics.GeneratedCodeAnalysisFlags" /> setting.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableConcurrentExecution">
+      <MemberSignature Language="C#" Value="public virtual void EnableConcurrentExecution ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnableConcurrentExecution() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.EnableConcurrentExecution" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub EnableConcurrentExecution ()" />
+      <MemberSignature Language="F#" Value="abstract member EnableConcurrentExecution : unit -&gt; unit&#xA;override this.EnableConcurrentExecution : unit -&gt; unit" Usage="analysisContext.EnableConcurrentExecution " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void EnableConcurrentExecution();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Enable concurrent execution of analyzer actions registered by this analyzer.
+            An analyzer that registers for concurrent execution can have better performance than a non-concurrent analyzer.
+            However, such an analyzer must ensure that its actions can execute correctly in parallel.
+            </summary>
+        <remarks>
+            Even when an analyzer registers for concurrent execution, certain related actions are *never* executed concurrently.
+            For example, end actions registered on any analysis unit (compilation, code block, operation block, etc.) are by definition semantically dependent on analysis from non-end actions registered on the same analysis unit.
+            Hence, end actions are never executed concurrently with non-end actions operating on the same analysis unit.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterCodeBlockAction">
+      <MemberSignature Language="C#" Value="public abstract void RegisterCodeBlockAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.CodeBlockAnalysisContext&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCodeBlockAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.CodeBlockAnalysisContext&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterCodeBlockAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.CodeBlockAnalysisContext})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterCodeBlockAction (action As Action(Of CodeBlockAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterCodeBlockAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.CodeBlockAnalysisContext&gt; -&gt; unit" Usage="analysisContext.RegisterCodeBlockAction action" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RegisterCodeBlockAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::CodeBlockAnalysisContext&gt; ^ action);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.CodeBlockAnalysisContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed for a code block.</param>
+        <summary> 
+            Register an action to be executed after semantic analysis of a method body or an expression appearing outside a method body. 
+            A code block action reports <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about code blocks. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterCodeBlockStartAction&lt;TLanguageKindEnum&gt;">
+      <MemberSignature Language="C#" Value="public abstract void RegisterCodeBlockStartAction&lt;TLanguageKindEnum&gt; (Action&lt;Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext&lt;TLanguageKindEnum&gt;&gt; action) where TLanguageKindEnum : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCodeBlockStartAction&lt;struct .ctor (class System.ValueType) TLanguageKindEnum&gt;(class System.Action`1&lt;class Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext`1&lt;!!TLanguageKindEnum&gt;&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterCodeBlockStartAction``1(System.Action{Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext{``0}})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterCodeBlockStartAction(Of TLanguageKindEnum As Structure) (action As Action(Of CodeBlockStartAnalysisContext(Of TLanguageKindEnum)))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterCodeBlockStartAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext&lt;'LanguageKindEnum&gt;&gt; -&gt; unit (requires 'LanguageKindEnum : struct)" Usage="analysisContext.RegisterCodeBlockStartAction action" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TLanguageKindEnum&gt;&#xA; where TLanguageKindEnum : value class abstract void RegisterCodeBlockStartAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::CodeBlockStartAnalysisContext&lt;TLanguageKindEnum&gt; ^&gt; ^ action);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TLanguageKindEnum">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext&lt;TLanguageKindEnum&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TLanguageKindEnum">Enum type giving the syntax node kinds of the source language for which the action applies.</typeparam>
+        <param name="action">Action to be executed at the start of semantic analysis of a code block.</param>
+        <summary>
+            Register an action to be executed at the start of semantic analysis of a method body or an expression appearing outside a method body.
+            A code block start action can register other actions and/or collect state information to be used in diagnostic analysis,
+            but cannot itself report any <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterCompilationAction">
+      <MemberSignature Language="C#" Value="public abstract void RegisterCompilationAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCompilationAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterCompilationAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterCompilationAction (action As Action(Of CompilationAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterCompilationAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext&gt; -&gt; unit" Usage="analysisContext.RegisterCompilationAction action" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RegisterCompilationAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::CompilationAnalysisContext&gt; ^ action);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.CompilationAnalysisContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed at compilation end.</param>
+        <summary>
+            Register an action to be executed for a complete compilation.
+            A compilation action reports <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about the <see cref="T:Microsoft.CodeAnalysis.Compilation" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterCompilationStartAction">
+      <MemberSignature Language="C#" Value="public abstract void RegisterCompilationStartAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCompilationStartAction(class System.Action`1&lt;class Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterCompilationStartAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterCompilationStartAction (action As Action(Of CompilationStartAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterCompilationStartAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext&gt; -&gt; unit" Usage="analysisContext.RegisterCompilationStartAction action" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RegisterCompilationStartAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::CompilationStartAnalysisContext ^&gt; ^ action);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed at compilation start.</param>
+        <summary>
+            Register an action to be executed at compilation start.
+            A compilation start action can register other actions and/or collect state information to be used in diagnostic analysis,
+            but cannot itself report any <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterOperationAction">
+      <MemberSignature Language="C#" Value="public void RegisterOperationAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; action, params Microsoft.CodeAnalysis.OperationKind[] operationKinds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterOperationAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; action, valuetype Microsoft.CodeAnalysis.OperationKind[] operationKinds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterOperationAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext},Microsoft.CodeAnalysis.OperationKind[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterOperationAction (action As Action(Of OperationAnalysisContext), ParamArray operationKinds As OperationKind())" />
+      <MemberSignature Language="F#" Value="member this.RegisterOperationAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; * Microsoft.CodeAnalysis.OperationKind[] -&gt; unit" Usage="analysisContext.RegisterOperationAction (action, operationKinds)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterOperationAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::OperationAnalysisContext&gt; ^ action, ... cli::array &lt;Microsoft::CodeAnalysis::OperationKind&gt; ^ operationKinds);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt;" />
+        <Parameter Name="operationKinds" Type="Microsoft.CodeAnalysis.OperationKind[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed at completion of semantic analysis of an <see cref="T:Microsoft.CodeAnalysis.IOperation" />.</param>
+        <param name="operationKinds">Action will be executed only if an <see cref="T:Microsoft.CodeAnalysis.IOperation" />'s Kind matches one of the operation kind values.</param>
+        <summary>
+            Register an action to be executed at completion of semantic analysis of an <see cref="T:Microsoft.CodeAnalysis.IOperation" /> with an appropriate Kind.
+            An operation action can report <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about <see cref="T:Microsoft.CodeAnalysis.IOperation" />s, and can also collect
+            state information to be used by other operation actions or code block end actions.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterOperationAction">
+      <MemberSignature Language="C#" Value="public virtual void RegisterOperationAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; action, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.OperationKind&gt; operationKinds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterOperationAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; action, valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.OperationKind&gt; operationKinds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterOperationAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.OperationKind})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub RegisterOperationAction (action As Action(Of OperationAnalysisContext), operationKinds As ImmutableArray(Of OperationKind))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterOperationAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.OperationKind&gt; -&gt; unit&#xA;override this.RegisterOperationAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt; * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.OperationKind&gt; -&gt; unit" Usage="analysisContext.RegisterOperationAction (action, operationKinds)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void RegisterOperationAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::OperationAnalysisContext&gt; ^ action, System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::OperationKind&gt; operationKinds);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext&gt;" />
+        <Parameter Name="operationKinds" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.OperationKind&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed at completion of semantic analysis of an <see cref="T:Microsoft.CodeAnalysis.IOperation" />.</param>
+        <param name="operationKinds">Action will be executed only if an <see cref="T:Microsoft.CodeAnalysis.IOperation" />'s Kind matches one of the operation kind values.</param>
+        <summary>
+            Register an action to be executed at completion of semantic analysis of an <see cref="T:Microsoft.CodeAnalysis.IOperation" /> with an appropriate Kind.
+            An operation action can report <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about <see cref="T:Microsoft.CodeAnalysis.IOperation" />s, and can also collect
+            state information to be used by other operation actions or code block end actions.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterOperationBlockAction">
+      <MemberSignature Language="C#" Value="public virtual void RegisterOperationBlockAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterOperationBlockAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterOperationBlockAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub RegisterOperationBlockAction (action As Action(Of OperationBlockAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterOperationBlockAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext&gt; -&gt; unit&#xA;override this.RegisterOperationBlockAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext&gt; -&gt; unit" Usage="analysisContext.RegisterOperationBlockAction action" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void RegisterOperationBlockAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::OperationBlockAnalysisContext&gt; ^ action);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockAnalysisContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed for an operation block.</param>
+        <summary> 
+            Register an action to be executed after semantic analysis of a method body or an expression appearing outside a method body. 
+            An operation block action reports <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about operation blocks. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterOperationBlockStartAction">
+      <MemberSignature Language="C#" Value="public virtual void RegisterOperationBlockStartAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterOperationBlockStartAction(class System.Action`1&lt;class Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterOperationBlockStartAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub RegisterOperationBlockStartAction (action As Action(Of OperationBlockStartAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterOperationBlockStartAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext&gt; -&gt; unit&#xA;override this.RegisterOperationBlockStartAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext&gt; -&gt; unit" Usage="analysisContext.RegisterOperationBlockStartAction action" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void RegisterOperationBlockStartAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::OperationBlockStartAnalysisContext ^&gt; ^ action);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed at the start of semantic analysis of an operation block.</param>
+        <summary>
+            Register an action to be executed at the start of semantic analysis of a method body or an expression appearing outside a method body.
+            An operation block start action can register other actions and/or collect state information to be used in diagnostic analysis,
+            but cannot itself report any <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSemanticModelAction">
+      <MemberSignature Language="C#" Value="public abstract void RegisterSemanticModelAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SemanticModelAnalysisContext&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSemanticModelAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SemanticModelAnalysisContext&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterSemanticModelAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SemanticModelAnalysisContext})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterSemanticModelAction (action As Action(Of SemanticModelAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSemanticModelAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SemanticModelAnalysisContext&gt; -&gt; unit" Usage="analysisContext.RegisterSemanticModelAction action" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RegisterSemanticModelAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::SemanticModelAnalysisContext&gt; ^ action);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.SemanticModelAnalysisContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed for a document's <see cref="T:Microsoft.CodeAnalysis.SemanticModel" />.</param>
+        <summary>
+            Register an action to be executed at completion of semantic analysis of a document,
+            which will operate on the <see cref="T:Microsoft.CodeAnalysis.SemanticModel" /> of the document. A semantic model action
+            reports <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about the model.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSymbolAction">
+      <MemberSignature Language="C#" Value="public void RegisterSymbolAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; action, params Microsoft.CodeAnalysis.SymbolKind[] symbolKinds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterSymbolAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; action, valuetype Microsoft.CodeAnalysis.SymbolKind[] symbolKinds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterSymbolAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext},Microsoft.CodeAnalysis.SymbolKind[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterSymbolAction (action As Action(Of SymbolAnalysisContext), ParamArray symbolKinds As SymbolKind())" />
+      <MemberSignature Language="F#" Value="member this.RegisterSymbolAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; * Microsoft.CodeAnalysis.SymbolKind[] -&gt; unit" Usage="analysisContext.RegisterSymbolAction (action, symbolKinds)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterSymbolAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::SymbolAnalysisContext&gt; ^ action, ... cli::array &lt;Microsoft::CodeAnalysis::SymbolKind&gt; ^ symbolKinds);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt;" />
+        <Parameter Name="symbolKinds" Type="Microsoft.CodeAnalysis.SymbolKind[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed for an <see cref="T:Microsoft.CodeAnalysis.ISymbol" />.</param>
+        <param name="symbolKinds">Action will be executed only if an <see cref="T:Microsoft.CodeAnalysis.ISymbol" />'s Kind matches one of the <see cref="T:Microsoft.CodeAnalysis.SymbolKind" /> values.</param>
+        <summary>
+            Register an action to be executed at completion of semantic analysis of an <see cref="T:Microsoft.CodeAnalysis.ISymbol" /> with an appropriate Kind.
+            A symbol action reports <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about <see cref="T:Microsoft.CodeAnalysis.ISymbol" />s.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSymbolAction">
+      <MemberSignature Language="C#" Value="public abstract void RegisterSymbolAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; action, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolKind&gt; symbolKinds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSymbolAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; action, valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.SymbolKind&gt; symbolKinds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterSymbolAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.SymbolKind})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterSymbolAction (action As Action(Of SymbolAnalysisContext), symbolKinds As ImmutableArray(Of SymbolKind))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSymbolAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt; * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolKind&gt; -&gt; unit" Usage="analysisContext.RegisterSymbolAction (action, symbolKinds)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RegisterSymbolAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::SymbolAnalysisContext&gt; ^ action, System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::SymbolKind&gt; symbolKinds);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&gt;" />
+        <Parameter Name="symbolKinds" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolKind&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed for an <see cref="T:Microsoft.CodeAnalysis.ISymbol" />.</param>
+        <param name="symbolKinds">Action will be executed only if an <see cref="T:Microsoft.CodeAnalysis.ISymbol" />'s Kind matches one of the <see cref="T:Microsoft.CodeAnalysis.SymbolKind" /> values.</param>
+        <summary>
+            Register an action to be executed at completion of semantic analysis of an <see cref="T:Microsoft.CodeAnalysis.ISymbol" /> with an appropriate Kind.
+            A symbol action reports <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about <see cref="T:Microsoft.CodeAnalysis.ISymbol" />s.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSyntaxNodeAction&lt;TLanguageKindEnum&gt;">
+      <MemberSignature Language="C#" Value="public abstract void RegisterSyntaxNodeAction&lt;TLanguageKindEnum&gt; (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, System.Collections.Immutable.ImmutableArray&lt;TLanguageKindEnum&gt; syntaxKinds) where TLanguageKindEnum : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSyntaxNodeAction&lt;struct .ctor (class System.ValueType) TLanguageKindEnum&gt;(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TLanguageKindEnum&gt; syntaxKinds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterSyntaxNodeAction``1(System.Action{Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext},System.Collections.Immutable.ImmutableArray{``0})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterSyntaxNodeAction(Of TLanguageKindEnum As Structure) (action As Action(Of SyntaxNodeAnalysisContext), syntaxKinds As ImmutableArray(Of TLanguageKindEnum))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSyntaxNodeAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; * System.Collections.Immutable.ImmutableArray&lt;'LanguageKindEnum (requires 'LanguageKindEnum : struct)&gt; -&gt; unit (requires 'LanguageKindEnum : struct)" Usage="analysisContext.RegisterSyntaxNodeAction (action, syntaxKinds)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TLanguageKindEnum&gt;&#xA; where TLanguageKindEnum : value class abstract void RegisterSyntaxNodeAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::SyntaxNodeAnalysisContext&gt; ^ action, System::Collections::Immutable::ImmutableArray&lt;TLanguageKindEnum&gt; syntaxKinds);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TLanguageKindEnum">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt;" />
+        <Parameter Name="syntaxKinds" Type="System.Collections.Immutable.ImmutableArray&lt;TLanguageKindEnum&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TLanguageKindEnum">Enum type giving the syntax node kinds of the source language for which the action applies.</typeparam>
+        <param name="action">Action to be executed at completion of semantic analysis of a <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" />.</param>
+        <param name="syntaxKinds">Action will be executed only if a <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" />'s Kind matches one of the syntax kind values.</param>
+        <summary>
+            Register an action to be executed at completion of semantic analysis of a <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> with an appropriate Kind.
+            A syntax node action can report <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" />s, and can also collect
+            state information to be used by other syntax node actions or code block end actions.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSyntaxNodeAction&lt;TLanguageKindEnum&gt;">
+      <MemberSignature Language="C#" Value="public void RegisterSyntaxNodeAction&lt;TLanguageKindEnum&gt; (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, params TLanguageKindEnum[] syntaxKinds) where TLanguageKindEnum : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterSyntaxNodeAction&lt;struct .ctor (class System.ValueType) TLanguageKindEnum&gt;(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, !!TLanguageKindEnum[] syntaxKinds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterSyntaxNodeAction``1(System.Action{Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext},``0[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterSyntaxNodeAction(Of TLanguageKindEnum As Structure) (action As Action(Of SyntaxNodeAnalysisContext), ParamArray syntaxKinds As TLanguageKindEnum())" />
+      <MemberSignature Language="F#" Value="member this.RegisterSyntaxNodeAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; * 'LanguageKindEnum[] -&gt; unit (requires 'LanguageKindEnum : struct)" Usage="analysisContext.RegisterSyntaxNodeAction (action, syntaxKinds)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TLanguageKindEnum&gt;&#xA; where TLanguageKindEnum : value class void RegisterSyntaxNodeAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::SyntaxNodeAnalysisContext&gt; ^ action, ... cli::array &lt;TLanguageKindEnum&gt; ^ syntaxKinds);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TLanguageKindEnum">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt;" />
+        <Parameter Name="syntaxKinds" Type="TLanguageKindEnum[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TLanguageKindEnum">Enum type giving the syntax node kinds of the source language for which the action applies.</typeparam>
+        <param name="action">Action to be executed at completion of semantic analysis of a <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" />.</param>
+        <param name="syntaxKinds">Action will be executed only if a <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" />'s Kind matches one of the syntax kind values.</param>
+        <summary>
+            Register an action to be executed at completion of semantic analysis of a <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> with an appropriate Kind.
+            A syntax node action can report <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" />s, and can also collect
+            state information to be used by other syntax node actions or code block end actions.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSyntaxTreeAction">
+      <MemberSignature Language="C#" Value="public abstract void RegisterSyntaxTreeAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeAnalysisContext&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSyntaxTreeAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeAnalysisContext&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.RegisterSyntaxTreeAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeAnalysisContext})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterSyntaxTreeAction (action As Action(Of SyntaxTreeAnalysisContext))" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSyntaxTreeAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeAnalysisContext&gt; -&gt; unit" Usage="analysisContext.RegisterSyntaxTreeAction action" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RegisterSyntaxTreeAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::SyntaxTreeAnalysisContext&gt; ^ action);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxTreeAnalysisContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Action to be executed at completion of parsing of a document.</param>
+        <summary>
+            Register an action to be executed at completion of parsing of a code document.
+            A syntax tree action reports <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s about the <see cref="T:Microsoft.CodeAnalysis.SyntaxTree" /> of a document.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue&lt;TValue&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetValue&lt;TValue&gt; (Microsoft.CodeAnalysis.Text.SourceText text, Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider&lt;TValue&gt; valueProvider, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetValue&lt;TValue&gt;(class Microsoft.CodeAnalysis.Text.SourceText text, class Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider`1&lt;!!TValue&gt; valueProvider, [out] !!TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext.TryGetValue``1(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider{``0},``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetValue(Of TValue) (text As SourceText, valueProvider As SourceTextValueProvider(Of TValue), ByRef value As TValue) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetValue : Microsoft.CodeAnalysis.Text.SourceText * Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider&lt;'Value&gt; *  -&gt; bool" Usage="analysisContext.TryGetValue (text, valueProvider, value)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TValue&gt;&#xA; bool TryGetValue(Microsoft::CodeAnalysis::Text::SourceText ^ text, Microsoft::CodeAnalysis::Diagnostics::SourceTextValueProvider&lt;TValue&gt; ^ valueProvider, [Runtime::InteropServices::Out] TValue % value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="text" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+        <Parameter Name="valueProvider" Type="Microsoft.CodeAnalysis.Diagnostics.SourceTextValueProvider&lt;TValue&gt;" />
+        <Parameter Name="value" Type="TValue" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TValue">The type of the value associated with the key.</typeparam>
+        <param name="text">
+          <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" /> for which the value is queried.</param>
+        <param name="valueProvider">Provider that computes the underlying value.</param>
+        <param name="value">Value associated with the key.</param>
+        <summary>
+            Attempts to compute or get the cached value provided by the given <paramref name="valueProvider" /> for the given <paramref name="text" />.
+            Note that the pair {<paramref name="valueProvider" />, <paramref name="text" />} acts as the key.
+            Reusing the same <paramref name="valueProvider" /> instance across analyzer actions and/or analyzer instances can improve the overall analyzer performance by avoiding recomputation of the values.
+            </summary>
+        <returns>Returns true on success, false otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

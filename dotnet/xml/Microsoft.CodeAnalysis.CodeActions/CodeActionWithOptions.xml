@@ -1,0 +1,148 @@
+﻿<Type Name="CodeActionWithOptions" FullName="Microsoft.CodeAnalysis.CodeActions.CodeActionWithOptions">
+  <TypeSignature Language="C#" Value="public abstract class CodeActionWithOptions : Microsoft.CodeAnalysis.CodeActions.CodeAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeActionWithOptions extends Microsoft.CodeAnalysis.CodeActions.CodeAction" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeActions.CodeActionWithOptions" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CodeActionWithOptions&#xA;Inherits CodeAction" />
+  <TypeSignature Language="F#" Value="type CodeActionWithOptions = class&#xA;    inherit CodeAction" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CodeActionWithOptions abstract : Microsoft::CodeAnalysis::CodeActions::CodeAction" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.CodeActions.CodeAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> that can vary with user specified options.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeActionWithOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeActionWithOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; CodeActionWithOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeOperationsAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeActionWithOptions.ComputeOperationsAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.ComputeOperationsAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeActionWithOptions.ComputeOperationsAsync cancellationToken" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Threading::Tasks::Task&lt;System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::CodeActions::CodeActionOperation ^&gt; ^&gt; ^ ComputeOperationsAsync(System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeOperationsAsync">
+      <MemberSignature Language="C#" Value="protected abstract System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync (object options, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync(object options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeActionWithOptions.ComputeOperationsAsync(System.Object,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.ComputeOperationsAsync : obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeActionWithOptions.ComputeOperationsAsync (options, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract System::Threading::Tasks::Task&lt;System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::CodeActions::CodeActionOperation ^&gt; ^&gt; ^ ComputeOperationsAsync(System::Object ^ options, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Object" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="options">An object instance returned from a call to <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeActionWithOptions.GetOptions(System.Threading.CancellationToken)" />.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Override this method to compute the operations that implement this <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetOperationsAsync (object options, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetOperationsAsync(object options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeActionWithOptions.GetOperationsAsync(System.Object,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="override this.GetOperationsAsync : obj * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeActionWithOptions.GetOperationsAsync (options, cancellationToken)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Threading::Tasks::Task&lt;System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::CodeActions::CodeActionOperation ^&gt; ^&gt; ^ GetOperationsAsync(System::Object ^ options, System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Object" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="options">An object instance returned from a prior call to <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeActionWithOptions.GetOptions(System.Threading.CancellationToken)" />.</param>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />'s for this <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> given the specified options.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOptions">
+      <MemberSignature Language="C#" Value="public abstract object GetOptions (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOptions(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeActionWithOptions.GetOptions(System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member GetOptions : System.Threading.CancellationToken -&gt; obj" Usage="codeActionWithOptions.GetOptions cancellationToken" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Object ^ GetOptions(System::Threading::CancellationToken cancellationToken);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">A cancellation token.</param>
+        <summary>
+            Gets the options to use with this code action.
+            This method is guaranteed to be called on the UI thread.
+            </summary>
+        <returns>An implementation specific object instance that holds options for applying the code action.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

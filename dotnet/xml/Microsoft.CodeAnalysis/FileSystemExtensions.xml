@@ -1,0 +1,65 @@
+﻿<Type Name="FileSystemExtensions" FullName="Microsoft.CodeAnalysis.FileSystemExtensions">
+  <TypeSignature Language="C#" Value="public static class FileSystemExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit FileSystemExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.FileSystemExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module FileSystemExtensions" />
+  <TypeSignature Language="F#" Value="type FileSystemExtensions = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FileSystemExtensions abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Emit">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Emit.EmitResult Emit (this Microsoft.CodeAnalysis.Compilation compilation, string outputPath, string pdbPath = null, string xmlDocPath = null, string win32ResourcesPath = null, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ResourceDescription&gt; manifestResources = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Emit.EmitResult Emit(class Microsoft.CodeAnalysis.Compilation compilation, string outputPath, string pdbPath, string xmlDocPath, string win32ResourcesPath, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ResourceDescription&gt; manifestResources, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileSystemExtensions.Emit(Microsoft.CodeAnalysis.Compilation,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.ResourceDescription},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member Emit : Microsoft.CodeAnalysis.Compilation * string * string * string * string * seq&lt;Microsoft.CodeAnalysis.ResourceDescription&gt; * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.Emit.EmitResult" Usage="Microsoft.CodeAnalysis.FileSystemExtensions.Emit (compilation, outputPath, pdbPath, xmlDocPath, win32ResourcesPath, manifestResources, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Emit.EmitResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" RefType="this" />
+        <Parameter Name="outputPath" Type="System.String" />
+        <Parameter Name="pdbPath" Type="System.String" />
+        <Parameter Name="xmlDocPath" Type="System.String" />
+        <Parameter Name="win32ResourcesPath" Type="System.String" />
+        <Parameter Name="manifestResources" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ResourceDescription&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="compilation">Compilation.</param>
+        <param name="outputPath">Path of the file to which the compilation will be written.</param>
+        <param name="pdbPath">Path of the file to which the compilation's debug info will be written.
+            Also embedded in the output file.  Null to forego PDB generation.
+            </param>
+        <param name="xmlDocPath">Path of the file to which the compilation's XML documentation will be written.  Null to forego XML generation.</param>
+        <param name="win32ResourcesPath">Path of the file from which the compilation's Win32 resources will be read (in RES format).  
+            Null to indicate that there are none.</param>
+        <param name="manifestResources">List of the compilation's managed resources.  Null to indicate that there are none.</param>
+        <param name="cancellationToken">To cancel the emit process.</param>
+        <summary>
+            Emit the IL for the compilation into the specified stream.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Compilation or path is null.</exception>
+        <exception cref="T:System.ArgumentException">Path is empty or invalid.</exception>
+        <exception cref="T:System.IO.IOException">An error occurred while reading or writing a file.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
