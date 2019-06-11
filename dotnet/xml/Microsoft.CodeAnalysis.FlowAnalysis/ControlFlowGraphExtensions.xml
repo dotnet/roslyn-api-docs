@@ -1,0 +1,81 @@
+﻿<Type Name="ControlFlowGraphExtensions" FullName="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraphExtensions">
+  <TypeSignature Language="C#" Value="public static class ControlFlowGraphExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ControlFlowGraphExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraphExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module ControlFlowGraphExtensions" />
+  <TypeSignature Language="F#" Value="type ControlFlowGraphExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAnonymousFunctionControlFlowGraphInScope">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph GetAnonymousFunctionControlFlowGraphInScope (this Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph controlFlowGraph, Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation anonymousFunction, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph GetAnonymousFunctionControlFlowGraphInScope(class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph controlFlowGraph, class Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation anonymousFunction, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraphExtensions.GetAnonymousFunctionControlFlowGraphInScope(Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph,Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member GetAnonymousFunctionControlFlowGraphInScope : Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph * Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraphExtensions.GetAnonymousFunctionControlFlowGraphInScope (controlFlowGraph, anonymousFunction, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlFlowGraph" Type="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" RefType="this" />
+        <Parameter Name="anonymousFunction" Type="Microsoft.CodeAnalysis.FlowAnalysis.IFlowAnonymousFunctionOperation" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="controlFlowGraph">To be added.</param>
+        <param name="anonymousFunction">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets or creates a control flow graph for the given <paramref name="anonymousFunction" /> defined in
+            the given <paramref name="controlFlowGraph" /> or any of it's parent control flow graphs.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalFunctionControlFlowGraphInScope">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph GetLocalFunctionControlFlowGraphInScope (this Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph controlFlowGraph, Microsoft.CodeAnalysis.IMethodSymbol localFunction, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph GetLocalFunctionControlFlowGraphInScope(class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph controlFlowGraph, class Microsoft.CodeAnalysis.IMethodSymbol localFunction, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraphExtensions.GetLocalFunctionControlFlowGraphInScope(Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph,Microsoft.CodeAnalysis.IMethodSymbol,System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member GetLocalFunctionControlFlowGraphInScope : Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph * Microsoft.CodeAnalysis.IMethodSymbol * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" Usage="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraphExtensions.GetLocalFunctionControlFlowGraphInScope (controlFlowGraph, localFunction, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlFlowGraph" Type="Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" RefType="this" />
+        <Parameter Name="localFunction" Type="Microsoft.CodeAnalysis.IMethodSymbol" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="controlFlowGraph">To be added.</param>
+        <param name="localFunction">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Gets or creates a control flow graph for the given <paramref name="localFunction" /> defined in
+            the given <paramref name="controlFlowGraph" /> or any of it's parent control flow graphs.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

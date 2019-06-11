@@ -1,0 +1,88 @@
+﻿<Type Name="AnalyzerConfigOptions" FullName="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions">
+  <TypeSignature Language="C#" Value="public abstract class AnalyzerConfigOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AnalyzerConfigOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AnalyzerConfigOptions" />
+  <TypeSignature Language="F#" Value="type AnalyzerConfigOptions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AnalyzerConfigOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyComparer">
+      <MemberSignature Language="C#" Value="public static StringComparer KeyComparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.StringComparer KeyComparer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions.KeyComparer" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property KeyComparer As StringComparer" />
+      <MemberSignature Language="F#" Value="member this.KeyComparer : StringComparer" Usage="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions.KeyComparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringComparer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Comparer that should be used for all analyzer config keys. This is a case-insensitive comparison based
+            on Unicode case sensitivity rules for identifiers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public abstract bool TryGetValue (string key, out string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(string key, [out] string&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions.TryGetValue(System.String,System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function TryGetValue (key As String, ByRef value As String) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryGetValue : string *  -&gt; bool" Usage="analyzerConfigOptions.TryGetValue (key, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Get an analyzer config value for the given key, using the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions.KeyComparer" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

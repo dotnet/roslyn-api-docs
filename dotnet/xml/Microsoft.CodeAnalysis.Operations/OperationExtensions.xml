@@ -8,6 +8,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,6 +30,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
@@ -56,6 +58,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
@@ -83,6 +86,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -112,6 +116,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -141,6 +146,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -170,6 +176,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;Microsoft.CodeAnalysis.RefKind&gt;</ReturnType>
@@ -201,6 +208,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;Microsoft.CodeAnalysis.RefKind&gt;</ReturnType>
@@ -232,6 +240,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;Microsoft.CodeAnalysis.RefKind&gt;</ReturnType>
@@ -252,6 +261,35 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetCorrespondingOperation">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IOperation GetCorrespondingOperation (this Microsoft.CodeAnalysis.Operations.IBranchOperation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.IOperation GetCorrespondingOperation(class Microsoft.CodeAnalysis.Operations.IBranchOperation operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Operations.OperationExtensions.GetCorrespondingOperation(Microsoft.CodeAnalysis.Operations.IBranchOperation)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetCorrespondingOperation (operation As IBranchOperation) As IOperation" />
+      <MemberSignature Language="F#" Value="static member GetCorrespondingOperation : Microsoft.CodeAnalysis.Operations.IBranchOperation -&gt; Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.Operations.OperationExtensions.GetCorrespondingOperation operation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="Microsoft.CodeAnalysis.Operations.IBranchOperation" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="operation">The branch operation for which a corresponding operation is looked up</param>
+        <summary>
+            Gets either a loop or a switch operation that corresponds to the given branch operation.
+            </summary>
+        <returns>The corresponding operation or <c>null</c> in case not found (e.g. no loop or switch syntax, or the branch is not a break or continue)</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="operation" /> is null</exception>
+        <exception cref="T:System.InvalidOperationException">The operation is a part of Control Flow Graph</exception>
+      </Docs>
+    </Member>
     <Member MemberName="GetDeclaredVariables">
       <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ILocalSymbol&gt; GetDeclaredVariables (this Microsoft.CodeAnalysis.Operations.IVariableDeclarationGroupOperation declarationGroup);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ILocalSymbol&gt; GetDeclaredVariables(class Microsoft.CodeAnalysis.Operations.IVariableDeclarationGroupOperation declarationGroup) cil managed" />
@@ -263,6 +301,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ILocalSymbol&gt;</ReturnType>
@@ -290,6 +329,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ILocalSymbol&gt;</ReturnType>
@@ -317,6 +357,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Operations.IVariableInitializerOperation</ReturnType>
@@ -327,7 +368,7 @@
       <Docs>
         <param name="declarationOperation">Single variable declaration to retrieve initializer for.</param>
         <summary>
-            Gets the variable initialzer for the given <paramref name="declarationOperation" />, checking to see if there is a parent initializer
+            Gets the variable initializer for the given <paramref name="declarationOperation" />, checking to see if there is a parent initializer
             if the single variable initializer is null.
             </summary>
         <returns>To be added.</returns>

@@ -1,0 +1,115 @@
+﻿<Type Name="ISwitchExpressionArmOperation" FullName="Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation">
+  <TypeSignature Language="C#" Value="public interface ISwitchExpressionArmOperation : Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISwitchExpressionArmOperation implements class Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISwitchExpressionArmOperation&#xA;Implements IOperation" />
+  <TypeSignature Language="F#" Value="type ISwitchExpressionArmOperation = interface&#xA;    interface IOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents one arm of a switch expression.
+            </summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Guard">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation Guard { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IOperation Guard" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation.Guard" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Guard As IOperation" />
+      <MemberSignature Language="F#" Value="member this.Guard : Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation.Guard" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Guard (when clause expression) associated with the switch arm, if any.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Locals">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ILocalSymbol&gt; Locals { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ILocalSymbol&gt; Locals" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation.Locals" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Locals As ImmutableArray(Of ILocalSymbol)" />
+      <MemberSignature Language="F#" Value="member this.Locals : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ILocalSymbol&gt;" Usage="Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation.Locals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ILocalSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Locals declared within the switch arm (e.g. pattern locals and locals declared in the guard) scoped to the arm.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Operations.IPatternOperation Pattern { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Operations.IPatternOperation Pattern" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation.Pattern" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pattern As IPatternOperation" />
+      <MemberSignature Language="F#" Value="member this.Pattern : Microsoft.CodeAnalysis.Operations.IPatternOperation" Usage="Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Operations.IPatternOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The pattern to match.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IOperation Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation.Value" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As IOperation" />
+      <MemberSignature Language="F#" Value="member this.Value : Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.Operations.ISwitchExpressionArmOperation.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Result value of the enclosing switch expression when this arm matches.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
