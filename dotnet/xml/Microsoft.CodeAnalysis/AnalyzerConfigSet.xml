@@ -1,0 +1,83 @@
+﻿<Type Name="AnalyzerConfigSet" FullName="Microsoft.CodeAnalysis.AnalyzerConfigSet">
+  <TypeSignature Language="C#" Value="public sealed class AnalyzerConfigSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AnalyzerConfigSet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.AnalyzerConfigSet" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AnalyzerConfigSet" />
+  <TypeSignature Language="F#" Value="type AnalyzerConfigSet = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a set of <see cref="T:Microsoft.CodeAnalysis.AnalyzerConfig" />, and can compute the effective analyzer options for a given source file. This is used to
+            collect all the <see cref="T:Microsoft.CodeAnalysis.AnalyzerConfig" /> files for that would apply to a compilation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create&lt;TList&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.AnalyzerConfigSet Create&lt;TList&gt; (TList analyzerConfigs) where TList : System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.CodeAnalysis.AnalyzerConfig&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.AnalyzerConfigSet Create&lt;(class System.Collections.Generic.IReadOnlyCollection`1&lt;class Microsoft.CodeAnalysis.AnalyzerConfig&gt;) TList&gt;(!!TList analyzerConfigs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AnalyzerConfigSet.Create``1(``0)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create(Of TList As IReadOnlyCollection(Of AnalyzerConfig)) (analyzerConfigs As TList) As AnalyzerConfigSet" />
+      <MemberSignature Language="F#" Value="static member Create : 'List -&gt; Microsoft.CodeAnalysis.AnalyzerConfigSet (requires 'List :&gt; System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.CodeAnalysis.AnalyzerConfig&gt;)" Usage="Microsoft.CodeAnalysis.AnalyzerConfigSet.Create analyzerConfigs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigSet</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TList">
+          <Constraints>
+            <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.CodeAnalysis.AnalyzerConfig&gt;</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="analyzerConfigs" Type="TList" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TList">To be added.</typeparam>
+        <param name="analyzerConfigs">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOptionsForSourcePath">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult GetOptionsForSourcePath (string sourcePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult GetOptionsForSourcePath(string sourcePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AnalyzerConfigSet.GetOptionsForSourcePath(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOptionsForSourcePath (sourcePath As String) As AnalyzerConfigOptionsResult" />
+      <MemberSignature Language="F#" Value="member this.GetOptionsForSourcePath : string -&gt; Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult" Usage="analyzerConfigSet.GetOptionsForSourcePath sourcePath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourcePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePath">The path to a file such as a source file or additional file. Must be non-null.</param>
+        <summary>
+            Returns a <see cref="T:Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult" /> for a source file. This computes which <see cref="T:Microsoft.CodeAnalysis.AnalyzerConfig" /> rules applies to this file, and correctly applies
+            precedence rules if there are multiple rules for the same file.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

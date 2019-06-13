@@ -8,6 +8,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -41,6 +42,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;</ReturnType>
@@ -55,7 +57,7 @@
             relationship: if interface type A extends interface type B, then A precedes B in the
             list. This is not quite the same as "all interfaces of which this type is a proper
             subtype" because it does not take into account variance: AllInterfaces for
-            <c><![CDATA[IEnumerable<string>]]></c> will not include <c><![CDATA[IEnumerable<object>]]></c>;
+            IEnumerable&lt;string&gt; will not include IEnumerable&lt;object&gt;.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -72,6 +74,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
@@ -97,6 +100,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -130,6 +134,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;</ReturnType>
@@ -155,6 +160,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -162,6 +168,28 @@
       <Docs>
         <summary>
             Is this a symbol for an anonymous type (including anonymous VB delegate).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.IsReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="Microsoft.CodeAnalysis.ITypeSymbol.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the type is readonly.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -178,6 +206,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -192,6 +221,31 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="IsRefLikeType">
+      <MemberSignature Language="C#" Value="public bool IsRefLikeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRefLikeType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.IsRefLikeType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRefLikeType As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRefLikeType : bool" Usage="Microsoft.CodeAnalysis.ITypeSymbol.IsRefLikeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the type is ref-like, meaning it follows rules similar to CLR by-ref variables. False if the type
+            is not ref-like or if the language has no concept of ref-like types.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <see cref="T:System.Span`1" /> is a commonly used ref-like type.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="IsTupleType">
       <MemberSignature Language="C#" Value="public bool IsTupleType { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool IsTupleType" />
@@ -203,6 +257,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -210,6 +265,29 @@
       <Docs>
         <summary>
             Is this a symbol for a tuple .
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnmanagedType">
+      <MemberSignature Language="C#" Value="public bool IsUnmanagedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnmanagedType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeSymbol.IsUnmanagedType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsUnmanagedType As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsUnmanagedType : bool" Usage="Microsoft.CodeAnalysis.ITypeSymbol.IsUnmanagedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the type is unmanaged according to language rules. False if managed or if the language
+            has no concept of unmanaged types.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -226,6 +304,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -251,6 +330,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>
@@ -276,6 +356,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SpecialType</ReturnType>
@@ -286,6 +367,129 @@
             Returns <see cref="F:Microsoft.CodeAnalysis.SpecialType.None" /> if the type is not special.
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDisplayParts">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToDisplayParts (Microsoft.CodeAnalysis.NullableFlowState topLevelNullability, Microsoft.CodeAnalysis.SymbolDisplayFormat format = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToDisplayParts(valuetype Microsoft.CodeAnalysis.NullableFlowState topLevelNullability, class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ITypeSymbol.ToDisplayParts(Microsoft.CodeAnalysis.NullableFlowState,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToDisplayParts (topLevelNullability As NullableFlowState, Optional format As SymbolDisplayFormat = null) As ImmutableArray(Of SymbolDisplayPart)" />
+      <MemberSignature Language="F#" Value="abstract member ToDisplayParts : Microsoft.CodeAnalysis.NullableFlowState * Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;" Usage="iTypeSymbol.ToDisplayParts (topLevelNullability, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="topLevelNullability" Type="Microsoft.CodeAnalysis.NullableFlowState" />
+        <Parameter Name="format" Type="Microsoft.CodeAnalysis.SymbolDisplayFormat" />
+      </Parameters>
+      <Docs>
+        <param name="topLevelNullability">The top-level nullability to use for formatting.</param>
+        <param name="format">Format or null for the default.</param>
+        <summary>
+            Converts a symbol to an array of string parts, each of which has a kind. Useful
+            for colorizing the display string.
+            </summary>
+        <returns>A read-only array of string parts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDisplayString">
+      <MemberSignature Language="C#" Value="public string ToDisplayString (Microsoft.CodeAnalysis.NullableFlowState topLevelNullability, Microsoft.CodeAnalysis.SymbolDisplayFormat format = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToDisplayString(valuetype Microsoft.CodeAnalysis.NullableFlowState topLevelNullability, class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ITypeSymbol.ToDisplayString(Microsoft.CodeAnalysis.NullableFlowState,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToDisplayString (topLevelNullability As NullableFlowState, Optional format As SymbolDisplayFormat = null) As String" />
+      <MemberSignature Language="F#" Value="abstract member ToDisplayString : Microsoft.CodeAnalysis.NullableFlowState * Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; string" Usage="iTypeSymbol.ToDisplayString (topLevelNullability, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="topLevelNullability" Type="Microsoft.CodeAnalysis.NullableFlowState" />
+        <Parameter Name="format" Type="Microsoft.CodeAnalysis.SymbolDisplayFormat" />
+      </Parameters>
+      <Docs>
+        <param name="topLevelNullability">The top-level nullability to use for formatting.</param>
+        <param name="format">Format or null for the default.</param>
+        <summary>
+            Converts an <c>ITypeSymbol</c> and a nullable flow state to a string representation.
+            </summary>
+        <returns>A formatted string representation of the symbol with the given nullability.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToMinimalDisplayParts">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToMinimalDisplayParts (Microsoft.CodeAnalysis.SemanticModel semanticModel, Microsoft.CodeAnalysis.NullableFlowState topLevelNullability, int position, Microsoft.CodeAnalysis.SymbolDisplayFormat format = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToMinimalDisplayParts(class Microsoft.CodeAnalysis.SemanticModel semanticModel, valuetype Microsoft.CodeAnalysis.NullableFlowState topLevelNullability, int32 position, class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ITypeSymbol.ToMinimalDisplayParts(Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.NullableFlowState,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
+      <MemberSignature Language="F#" Value="abstract member ToMinimalDisplayParts : Microsoft.CodeAnalysis.SemanticModel * Microsoft.CodeAnalysis.NullableFlowState * int * Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;" Usage="iTypeSymbol.ToMinimalDisplayParts (semanticModel, topLevelNullability, position, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel" />
+        <Parameter Name="topLevelNullability" Type="Microsoft.CodeAnalysis.NullableFlowState" />
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="format" Type="Microsoft.CodeAnalysis.SymbolDisplayFormat" />
+      </Parameters>
+      <Docs>
+        <param name="semanticModel">Binding information (for determining names appropriate to
+            the context).</param>
+        <param name="topLevelNullability">The top-level nullability to use for formatting.</param>
+        <param name="position">A position in the source code (context).</param>
+        <param name="format">Formatting rules - null implies <see cref="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.MinimallyQualifiedFormat" /></param>
+        <summary>
+            Convert a symbol to an array of string parts, each of which has a kind. May be tailored
+            to a specific location in the source code. Useful for colorizing the display string.
+            </summary>
+        <returns>A read-only array of string parts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToMinimalDisplayString">
+      <MemberSignature Language="C#" Value="public string ToMinimalDisplayString (Microsoft.CodeAnalysis.SemanticModel semanticModel, Microsoft.CodeAnalysis.NullableFlowState topLevelNullability, int position, Microsoft.CodeAnalysis.SymbolDisplayFormat format = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToMinimalDisplayString(class Microsoft.CodeAnalysis.SemanticModel semanticModel, valuetype Microsoft.CodeAnalysis.NullableFlowState topLevelNullability, int32 position, class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ITypeSymbol.ToMinimalDisplayString(Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.NullableFlowState,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
+      <MemberSignature Language="F#" Value="abstract member ToMinimalDisplayString : Microsoft.CodeAnalysis.SemanticModel * Microsoft.CodeAnalysis.NullableFlowState * int * Microsoft.CodeAnalysis.SymbolDisplayFormat -&gt; string" Usage="iTypeSymbol.ToMinimalDisplayString (semanticModel, topLevelNullability, position, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel" />
+        <Parameter Name="topLevelNullability" Type="Microsoft.CodeAnalysis.NullableFlowState" />
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="format" Type="Microsoft.CodeAnalysis.SymbolDisplayFormat" />
+      </Parameters>
+      <Docs>
+        <param name="semanticModel">Binding information (for determining names appropriate to
+            the context).</param>
+        <param name="topLevelNullability">The top-level nullability to use for formatting.</param>
+        <param name="position">A position in the source code (context).</param>
+        <param name="format">Formatting rules - null implies <see cref="P:Microsoft.CodeAnalysis.SymbolDisplayFormat.MinimallyQualifiedFormat" /></param>
+        <summary>
+            Converts a symbol to a string that can be displayed to the user. May be tailored to a
+            specific location in the source code.
+            </summary>
+        <returns>A formatted string that can be displayed to the user.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -300,6 +504,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.TypeKind</ReturnType>
