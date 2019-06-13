@@ -1,0 +1,74 @@
+﻿<Type Name="IReDimOperation" FullName="Microsoft.CodeAnalysis.Operations.IReDimOperation">
+  <TypeSignature Language="C#" Value="public interface IReDimOperation : Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReDimOperation implements class Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IReDimOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IReDimOperation&#xA;Implements IOperation" />
+  <TypeSignature Language="F#" Value="type IReDimOperation = interface&#xA;    interface IOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents the ReDim operation to re-allocate storage space for array variables.
+            <para>
+            Current usage:
+             (1) VB ReDim statement.
+            </para></summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clauses">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Operations.IReDimClauseOperation&gt; Clauses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Operations.IReDimClauseOperation&gt; Clauses" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IReDimOperation.Clauses" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Clauses As ImmutableArray(Of IReDimClauseOperation)" />
+      <MemberSignature Language="F#" Value="member this.Clauses : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Operations.IReDimClauseOperation&gt;" Usage="Microsoft.CodeAnalysis.Operations.IReDimOperation.Clauses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Operations.IReDimClauseOperation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Individual clauses of the ReDim operation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Preserve">
+      <MemberSignature Language="C#" Value="public bool Preserve { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Preserve" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IReDimOperation.Preserve" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Preserve As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Preserve : bool" Usage="Microsoft.CodeAnalysis.Operations.IReDimOperation.Preserve" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Modifier used to preserve the data in the existing array when you change the size of only the last dimension.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
