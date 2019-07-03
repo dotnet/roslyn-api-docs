@@ -8,6 +8,7 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.SyntaxTree</BaseTypeName>
@@ -30,6 +31,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,6 +50,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -76,7 +79,7 @@
       </Docs>
     </Member>
     <Member MemberName="Create">
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree Create (Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode root, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options = null, string path = &quot;&quot;, System.Text.Encoding encoding = null);" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree Create (Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode root, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, System.Text.Encoding encoding);" />
       <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.CodeAnalysis.SyntaxTree Create(class Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode root, class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, class System.Text.Encoding encoding) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.Create(Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode,Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions,System.String,System.Text.Encoding)" />
       <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode * Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions * string * System.Text.Encoding -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.Create (root, options, path, encoding)" />
@@ -84,7 +87,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
       </ReturnValue>
@@ -106,6 +115,39 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree Create (Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode root, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options = null, string path = &quot;&quot;, System.Text.Encoding encoding = null, System.Collections.Immutable.ImmutableDictionary&lt;string,Microsoft.CodeAnalysis.ReportDiagnostic&gt; diagnosticOptions = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.CodeAnalysis.SyntaxTree Create(class Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode root, class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, class System.Text.Encoding encoding, class System.Collections.Immutable.ImmutableDictionary`2&lt;string, valuetype Microsoft.CodeAnalysis.ReportDiagnostic&gt; diagnosticOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.Create(Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode,Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions,System.String,System.Text.Encoding,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic})" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode * Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions * string * System.Text.Encoding * System.Collections.Immutable.ImmutableDictionary&lt;string, Microsoft.CodeAnalysis.ReportDiagnostic&gt; -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.Create (root, options, path, encoding, diagnosticOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="diagnosticOptions" Type="System.Collections.Immutable.ImmutableDictionary&lt;System.String,Microsoft.CodeAnalysis.ReportDiagnostic&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="path">To be added.</param>
+        <param name="encoding">To be added.</param>
+        <param name="diagnosticOptions">To be added.</param>
+        <summary>
+ Creates a new syntax tree from a syntax node.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetChangedSpans">
       <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt; GetChangedSpans (Microsoft.CodeAnalysis.SyntaxTree oldTree);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; GetChangedSpans(class Microsoft.CodeAnalysis.SyntaxTree oldTree) cil managed" />
@@ -117,6 +159,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;</ReturnType>
@@ -145,6 +188,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.CodeAnalysis.Text.TextChange&gt;</ReturnType>
@@ -170,6 +214,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.VisualBasic.Syntax.CompilationUnitSyntax</ReturnType>
@@ -200,6 +245,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
@@ -229,6 +275,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
@@ -259,6 +306,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
@@ -288,6 +336,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
@@ -315,6 +364,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
@@ -342,6 +392,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.FileLinePositionSpan</ReturnType>
@@ -373,6 +424,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.LineVisibility</ReturnType>
@@ -400,6 +452,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
@@ -425,6 +478,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.FileLinePositionSpan</ReturnType>
@@ -456,6 +510,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode</ReturnType>
@@ -481,6 +536,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode&gt;</ReturnType>
@@ -510,6 +566,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;</ReturnType>
@@ -534,6 +591,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -559,6 +617,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -580,6 +639,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -612,6 +672,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions</ReturnType>
@@ -635,6 +696,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ParseOptions</ReturnType>
@@ -646,7 +708,7 @@
       </Docs>
     </Member>
     <Member MemberName="ParseText">
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (Microsoft.CodeAnalysis.Text.SourceText text, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options = null, string path = &quot;&quot;, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (Microsoft.CodeAnalysis.Text.SourceText text, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.CodeAnalysis.SyntaxTree ParseText(class Microsoft.CodeAnalysis.Text.SourceText text, class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions,System.String,System.Threading.CancellationToken)" />
       <MemberSignature Language="F#" Value="static member ParseText : Microsoft.CodeAnalysis.Text.SourceText * Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions * string * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText (text, options, path, cancellationToken)" />
@@ -654,7 +716,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
       </ReturnValue>
@@ -677,7 +745,40 @@
       </Docs>
     </Member>
     <Member MemberName="ParseText">
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (string text, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options = null, string path = &quot;&quot;, System.Text.Encoding encoding = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (Microsoft.CodeAnalysis.Text.SourceText text, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options = null, string path = &quot;&quot;, System.Collections.Immutable.ImmutableDictionary&lt;string,Microsoft.CodeAnalysis.ReportDiagnostic&gt; diagnosticOptions = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.CodeAnalysis.SyntaxTree ParseText(class Microsoft.CodeAnalysis.Text.SourceText text, class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, class System.Collections.Immutable.ImmutableDictionary`2&lt;string, valuetype Microsoft.CodeAnalysis.ReportDiagnostic&gt; diagnosticOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ParseText : Microsoft.CodeAnalysis.Text.SourceText * Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions * string * System.Collections.Immutable.ImmutableDictionary&lt;string, Microsoft.CodeAnalysis.ReportDiagnostic&gt; * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText (text, options, path, diagnosticOptions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="diagnosticOptions" Type="System.Collections.Immutable.ImmutableDictionary&lt;System.String,Microsoft.CodeAnalysis.ReportDiagnostic&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="path">To be added.</param>
+        <param name="diagnosticOptions">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+ Creates a syntax tree by parsing the source text.
+ </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseText">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (string text, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, System.Text.Encoding encoding, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.CodeAnalysis.SyntaxTree ParseText(string text, class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, class System.Text.Encoding encoding, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText(System.String,Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions,System.String,System.Text.Encoding,System.Threading.CancellationToken)" />
       <MemberSignature Language="F#" Value="static member ParseText : string * Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions * string * System.Text.Encoding * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText (text, options, path, encoding, cancellationToken)" />
@@ -685,7 +786,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
       </ReturnValue>
@@ -707,6 +814,39 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ParseText">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxTree ParseText (string text, Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options = null, string path = &quot;&quot;, System.Text.Encoding encoding = null, System.Collections.Immutable.ImmutableDictionary&lt;string,Microsoft.CodeAnalysis.ReportDiagnostic&gt; diagnosticOptions = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class Microsoft.CodeAnalysis.SyntaxTree ParseText(string text, class Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions options, string path, class System.Text.Encoding encoding, class System.Collections.Immutable.ImmutableDictionary`2&lt;string, valuetype Microsoft.CodeAnalysis.ReportDiagnostic&gt; diagnosticOptions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText(System.String,Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions,System.String,System.Text.Encoding,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Threading.CancellationToken)" />
+      <MemberSignature Language="F#" Value="static member ParseText : string * Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions * string * System.Text.Encoding * System.Collections.Immutable.ImmutableDictionary&lt;string, Microsoft.CodeAnalysis.ReportDiagnostic&gt; * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree.ParseText (text, options, path, encoding, diagnosticOptions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.VisualBasic.VisualBasicParseOptions" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="diagnosticOptions" Type="System.Collections.Immutable.ImmutableDictionary&lt;System.String,Microsoft.CodeAnalysis.ReportDiagnostic&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="text">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="path">To be added.</param>
+        <param name="encoding">To be added.</param>
+        <param name="diagnosticOptions">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TryGetRoot">
       <MemberSignature Language="C#" Value="public abstract bool TryGetRoot (ref Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode root);" />
       <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance bool TryGetRoot(class Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode&amp; root) cil managed" />
@@ -718,6 +858,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -745,6 +886,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -770,6 +912,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.VisualBasic</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
