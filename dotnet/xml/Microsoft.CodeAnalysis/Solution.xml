@@ -1,4 +1,4 @@
-﻿<Type Name="Solution" FullName="Microsoft.CodeAnalysis.Solution">
+<Type Name="Solution" FullName="Microsoft.CodeAnalysis.Solution">
   <TypeSignature Language="C#" Value="public class Solution" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Solution extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Solution" />
@@ -9,6 +9,7 @@
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -32,6 +33,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -56,6 +58,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -91,6 +94,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -116,6 +120,64 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AddAdditionalDocuments">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Solution AddAdditionalDocuments (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentInfo&gt; documentInfos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Solution AddAdditionalDocuments(valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.DocumentInfo&gt; documentInfos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Solution.AddAdditionalDocuments(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DocumentInfo})" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddAdditionalDocuments (documentInfos As ImmutableArray(Of DocumentInfo)) As Solution" />
+      <MemberSignature Language="F#" Value="member this.AddAdditionalDocuments : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentInfo&gt; -&gt; Microsoft.CodeAnalysis.Solution" Usage="solution.AddAdditionalDocuments documentInfos" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentInfos" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="documentInfos">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAnalyzerConfigDocument">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Solution AddAnalyzerConfigDocument (Microsoft.CodeAnalysis.DocumentId documentId, string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = null, string filePath = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Solution AddAnalyzerConfigDocument(class Microsoft.CodeAnalysis.DocumentId documentId, string name, class Microsoft.CodeAnalysis.Text.SourceText text, class System.Collections.Generic.IEnumerable`1&lt;string&gt; folders, string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Solution.AddAnalyzerConfigDocument(Microsoft.CodeAnalysis.DocumentId,System.String,Microsoft.CodeAnalysis.Text.SourceText,System.Collections.Generic.IEnumerable{System.String},System.String)" />
+      <MemberSignature Language="F#" Value="member this.AddAnalyzerConfigDocument : Microsoft.CodeAnalysis.DocumentId * string * Microsoft.CodeAnalysis.Text.SourceText * seq&lt;string&gt; * string -&gt; Microsoft.CodeAnalysis.Solution" Usage="solution.AddAnalyzerConfigDocument (documentId, name, text, folders, filePath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="text" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+        <Parameter Name="folders" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="documentId">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="text">To be added.</param>
+        <param name="folders">To be added.</param>
+        <param name="filePath">To be added.</param>
+        <summary>
+            Creates a new solution instance with the corresponding project updated to include a new
+            analyzer config document instance defined by its name and text.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AddAnalyzerConfigDocuments">
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Solution AddAnalyzerConfigDocuments (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentInfo&gt; documentInfos);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Solution AddAnalyzerConfigDocuments(valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.DocumentInfo&gt; documentInfos) cil managed" />
@@ -126,6 +188,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -153,6 +216,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -183,6 +247,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -213,6 +278,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -240,6 +306,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -273,6 +340,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -308,6 +376,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -345,6 +414,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -384,6 +454,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -412,6 +483,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -442,6 +514,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -472,6 +545,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -500,6 +574,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -532,6 +607,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -565,6 +641,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -595,6 +672,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -625,6 +703,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -650,6 +729,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -677,6 +757,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -704,6 +785,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -732,6 +814,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -755,9 +838,35 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.TextDocument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" />
+      </Parameters>
+      <Docs>
+        <param name="documentId">To be added.</param>
+        <summary>
+            Gets the additional document in this solution with the specified document ID.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnalyzerConfigDocument">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.AnalyzerConfigDocument GetAnalyzerConfigDocument (Microsoft.CodeAnalysis.DocumentId documentId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.AnalyzerConfigDocument GetAnalyzerConfigDocument(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Solution.GetAnalyzerConfigDocument(Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="F#" Value="member this.GetAnalyzerConfigDocument : Microsoft.CodeAnalysis.DocumentId -&gt; Microsoft.CodeAnalysis.AnalyzerConfigDocument" Usage="solution.GetAnalyzerConfigDocument documentId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigDocument</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" />
@@ -783,6 +892,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SolutionChanges</ReturnType>
@@ -811,6 +921,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -838,6 +949,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -865,6 +977,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DocumentId</ReturnType>
@@ -892,6 +1005,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DocumentId</ReturnType>
@@ -922,6 +1036,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;</ReturnType>
@@ -951,6 +1066,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -980,6 +1096,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.VersionStamp</ReturnType>
@@ -1004,6 +1121,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -1032,6 +1150,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -1062,6 +1181,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ProjectDependencyGraph</ReturnType>
@@ -1087,6 +1207,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SolutionId</ReturnType>
@@ -1111,6 +1232,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Options.OptionSet</ReturnType>
@@ -1136,6 +1258,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
@@ -1160,6 +1283,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Project&gt;</ReturnType>
@@ -1183,6 +1307,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1208,6 +1333,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1233,6 +1359,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1263,6 +1390,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1290,6 +1418,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1320,6 +1449,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1347,6 +1477,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1378,6 +1509,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.VersionStamp</ReturnType>
@@ -1400,6 +1532,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1431,6 +1564,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1463,6 +1597,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1484,6 +1619,66 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithAnalyzerConfigDocumentText">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Solution WithAnalyzerConfigDocumentText (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.Text.SourceText text, Microsoft.CodeAnalysis.PreservationMode mode = Microsoft.CodeAnalysis.PreservationMode.PreserveValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Solution WithAnalyzerConfigDocumentText(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.Text.SourceText text, valuetype Microsoft.CodeAnalysis.PreservationMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Solution.WithAnalyzerConfigDocumentText(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.PreservationMode)" />
+      <MemberSignature Language="F#" Value="member this.WithAnalyzerConfigDocumentText : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.Text.SourceText * Microsoft.CodeAnalysis.PreservationMode -&gt; Microsoft.CodeAnalysis.Solution" Usage="solution.WithAnalyzerConfigDocumentText (documentId, text, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" />
+        <Parameter Name="text" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+        <Parameter Name="mode" Type="Microsoft.CodeAnalysis.PreservationMode" />
+      </Parameters>
+      <Docs>
+        <param name="documentId">To be added.</param>
+        <param name="text">To be added.</param>
+        <param name="mode">To be added.</param>
+        <summary>
+            Creates a new solution instance with the analyzer config document specified updated to have the text
+            supplied by the text loader.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAnalyzerConfigDocumentText">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Solution WithAnalyzerConfigDocumentText (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.TextAndVersion textAndVersion, Microsoft.CodeAnalysis.PreservationMode mode = Microsoft.CodeAnalysis.PreservationMode.PreserveValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Solution WithAnalyzerConfigDocumentText(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.TextAndVersion textAndVersion, valuetype Microsoft.CodeAnalysis.PreservationMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Solution.WithAnalyzerConfigDocumentText(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.TextAndVersion,Microsoft.CodeAnalysis.PreservationMode)" />
+      <MemberSignature Language="F#" Value="member this.WithAnalyzerConfigDocumentText : Microsoft.CodeAnalysis.DocumentId * Microsoft.CodeAnalysis.TextAndVersion * Microsoft.CodeAnalysis.PreservationMode -&gt; Microsoft.CodeAnalysis.Solution" Usage="solution.WithAnalyzerConfigDocumentText (documentId, textAndVersion, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" />
+        <Parameter Name="textAndVersion" Type="Microsoft.CodeAnalysis.TextAndVersion" />
+        <Parameter Name="mode" Type="Microsoft.CodeAnalysis.PreservationMode" />
+      </Parameters>
+      <Docs>
+        <param name="documentId">To be added.</param>
+        <param name="textAndVersion">To be added.</param>
+        <param name="mode">To be added.</param>
+        <summary>
+            Creates a new solution instance with the analyzer config document specified updated to have the text
+            and version specified.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithAnalyzerConfigDocumentTextLoader">
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Solution WithAnalyzerConfigDocumentTextLoader (Microsoft.CodeAnalysis.DocumentId documentId, Microsoft.CodeAnalysis.TextLoader loader, Microsoft.CodeAnalysis.PreservationMode mode);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Solution WithAnalyzerConfigDocumentTextLoader(class Microsoft.CodeAnalysis.DocumentId documentId, class Microsoft.CodeAnalysis.TextLoader loader, valuetype Microsoft.CodeAnalysis.PreservationMode mode) cil managed" />
@@ -1493,6 +1688,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1525,6 +1721,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1554,6 +1751,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1584,6 +1782,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1613,6 +1812,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1642,6 +1842,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1673,6 +1874,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1704,6 +1906,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1736,6 +1939,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1767,6 +1971,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1799,6 +2004,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1829,6 +2035,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1859,6 +2066,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1887,6 +2095,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1917,6 +2126,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1946,6 +2156,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1976,6 +2187,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -2005,6 +2217,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -2034,6 +2247,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -2063,6 +2277,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -2093,6 +2308,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -2124,6 +2340,7 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Workspace</ReturnType>
