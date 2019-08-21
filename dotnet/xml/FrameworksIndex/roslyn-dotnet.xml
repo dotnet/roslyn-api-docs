@@ -3810,6 +3810,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitAwaitExpression(Microsoft.CodeAnalysis.CSharp.Syntax.AwaitExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitBadDirectiveTrivia(Microsoft.CodeAnalysis.CSharp.Syntax.BadDirectiveTriviaSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitBaseExpression(Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitBaseExpressionTypeClause(Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitBaseList(Microsoft.CodeAnalysis.CSharp.Syntax.BaseListSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitBinaryExpression(Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitBlock(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
@@ -4073,6 +4074,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitAwaitExpression(Microsoft.CodeAnalysis.CSharp.Syntax.AwaitExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitBadDirectiveTrivia(Microsoft.CodeAnalysis.CSharp.Syntax.BadDirectiveTriviaSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitBaseExpression(Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitBaseExpressionTypeClause(Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitBaseList(Microsoft.CodeAnalysis.CSharp.Syntax.BaseListSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitBinaryExpression(Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitBlock(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
@@ -4293,6 +4295,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.VisitAwaitExpression(Microsoft.CodeAnalysis.CSharp.Syntax.AwaitExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.VisitBadDirectiveTrivia(Microsoft.CodeAnalysis.CSharp.Syntax.BadDirectiveTriviaSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.VisitBaseExpression(Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.VisitBaseExpressionTypeClause(Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.VisitBaseList(Microsoft.CodeAnalysis.CSharp.Syntax.BaseListSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.VisitBinaryExpression(Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.VisitBlock(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
@@ -4641,7 +4644,11 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BadDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BadToken(Microsoft.CodeAnalysis.SyntaxTriviaList,System.String,Microsoft.CodeAnalysis.SyntaxTriviaList)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BaseExpression" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BaseExpression(Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BaseExpression(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BaseExpression(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BaseExpressionTypeClause(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BaseExpressionTypeClause(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BaseList(Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.BaseTypeSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BaseList(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.BaseTypeSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BinaryExpression(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
@@ -5031,6 +5038,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.PragmaChecksumDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.PragmaWarningDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.PragmaWarningDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.PragmaWarningDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.PragmaWarningDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.PragmaWarningDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.PredefinedType(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.PrefixUnaryExpression(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
@@ -5421,6 +5430,7 @@
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.BarToken" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.BaseConstructorInitializer" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.BaseExpression" />
+      <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.BaseExpressionTypeClause" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.BaseKeyword" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.BaseList" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.BitwiseAndExpression" />
@@ -5755,6 +5765,7 @@
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.ReturnStatement" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.RightShiftAssignmentExpression" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.RightShiftExpression" />
+      <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SafeOnlyKeyword" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SByteKeyword" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SealedKeyword" />
       <Member Id="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SelectClause" />
@@ -6208,8 +6219,22 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax.WithToken(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax.WithTypeClause(Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax)" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax.Token" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionSyntax.TypeClause" />
+    </Type>
+    <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax">
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax.WithBaseType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax.BaseType" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax.CloseParenToken" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BaseExpressionTypeClauseSyntax.OpenParenToken" />
     </Type>
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.BaseFieldDeclarationSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.BaseFieldDeclarationSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseFieldDeclarationSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
@@ -8080,11 +8105,14 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.AddErrorCodes(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.WithDisableOrRestoreKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.WithEndOfDirectiveToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.WithErrorCodes(Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.WithHashToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.WithIsActive(System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.WithNullableKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.WithPragmaKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.WithWarningKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.DisableOrRestoreKeyword" />
@@ -8092,6 +8120,7 @@
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.ErrorCodes" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.HashToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.IsActive" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.NullableKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.PragmaKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.PragmaWarningDirectiveTriviaSyntax.WarningKeyword" />
     </Type>
