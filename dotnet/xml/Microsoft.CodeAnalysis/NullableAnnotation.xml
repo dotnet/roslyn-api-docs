@@ -8,6 +8,7 @@
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -22,61 +23,16 @@
   <Members>
     <Member MemberName="Annotated">
       <MemberSignature Language="C#" Value="Annotated" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.NullableAnnotation Annotated = unsigned int8(3)" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.NullableAnnotation Annotated = unsigned int8(2)" />
       <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.NullableAnnotation.Annotated" />
       <MemberSignature Language="VB.NET" Value="Annotated" />
-      <MemberSignature Language="F#" Value="Annotated = 3" Usage="Microsoft.CodeAnalysis.NullableAnnotation.Annotated" />
+      <MemberSignature Language="F#" Value="Annotated = 2" Usage="Microsoft.CodeAnalysis.NullableAnnotation.Annotated" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.CodeAnalysis.NullableAnnotation</ReturnType>
-      </ReturnValue>
-      <MemberValue>3</MemberValue>
-      <Docs>
-        <summary>
-            The expression is annotated (does have a ?).
-            </summary>
-      </Docs>
-    </Member>
-    <Member MemberName="Disabled">
-      <MemberSignature Language="C#" Value="Disabled" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.NullableAnnotation Disabled = unsigned int8(1)" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.NullableAnnotation.Disabled" />
-      <MemberSignature Language="VB.NET" Value="Disabled" />
-      <MemberSignature Language="F#" Value="Disabled = 1" Usage="Microsoft.CodeAnalysis.NullableAnnotation.Disabled" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>3.1.0.0</AssemblyVersion>
-        <AssemblyVersion>3.2.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>Microsoft.CodeAnalysis.NullableAnnotation</ReturnType>
-      </ReturnValue>
-      <MemberValue>1</MemberValue>
-      <Docs>
-        <summary>
-            The expression comes from a library not updated to C# 8
-            or nullable was disabled for the definition, and has no
-            nullability information. Analysis is disabled.
-            </summary>
-      </Docs>
-    </Member>
-    <Member MemberName="NotAnnotated">
-      <MemberSignature Language="C#" Value="NotAnnotated" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.NullableAnnotation NotAnnotated = unsigned int8(2)" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.NullableAnnotation.NotAnnotated" />
-      <MemberSignature Language="VB.NET" Value="NotAnnotated" />
-      <MemberSignature Language="F#" Value="NotAnnotated = 2" Usage="Microsoft.CodeAnalysis.NullableAnnotation.NotAnnotated" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>3.1.0.0</AssemblyVersion>
-        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.NullableAnnotation</ReturnType>
@@ -84,21 +40,20 @@
       <MemberValue>2</MemberValue>
       <Docs>
         <summary>
-            The expression is not annotated (does not have a ?).
+            The expression is annotated (does have a ?).
             </summary>
       </Docs>
     </Member>
-    <Member MemberName="NotApplicable">
-      <MemberSignature Language="C#" Value="NotApplicable" />
-      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.NullableAnnotation NotApplicable = unsigned int8(0)" />
-      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.NullableAnnotation.NotApplicable" />
-      <MemberSignature Language="VB.NET" Value="NotApplicable" />
-      <MemberSignature Language="F#" Value="NotApplicable = 0" Usage="Microsoft.CodeAnalysis.NullableAnnotation.NotApplicable" />
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.NullableAnnotation None = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.NullableAnnotation.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.CodeAnalysis.NullableAnnotation.None" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>3.1.0.0</AssemblyVersion>
-        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.NullableAnnotation</ReturnType>
@@ -108,6 +63,40 @@
         <summary>
             The expression has not been analyzed, or the syntax is
             not an expression (such as a statement).
+            </summary>
+        <remarks>
+            There are a few different reasons the expression could
+            have not been analyzed:
+                1) The symbol producing the expression comes from
+                   a method that has not been annotated, such as
+                   invoking a C# 7.3 or earlier method, or a
+                   method in this compilation that is in a disabled
+                   context.
+                2) Nullable is completely disabled in this
+                   compilation.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAnnotated">
+      <MemberSignature Language="C#" Value="NotAnnotated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.NullableAnnotation NotAnnotated = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.NullableAnnotation.NotAnnotated" />
+      <MemberSignature Language="VB.NET" Value="NotAnnotated" />
+      <MemberSignature Language="F#" Value="NotAnnotated = 1" Usage="Microsoft.CodeAnalysis.NullableAnnotation.NotAnnotated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.NullableAnnotation</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The expression is not annotated (does not have a ?).
             </summary>
       </Docs>
     </Member>
