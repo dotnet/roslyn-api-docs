@@ -1,4 +1,4 @@
-﻿<Type Name="CodeAction" FullName="Microsoft.CodeAnalysis.CodeActions.CodeAction">
+<Type Name="CodeAction" FullName="Microsoft.CodeAnalysis.CodeActions.CodeAction">
   <TypeSignature Language="C#" Value="public abstract class CodeAction" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeAction extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />
@@ -9,6 +9,8 @@
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -32,6 +34,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -50,6 +54,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -77,6 +83,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -95,6 +103,38 @@
       </Docs>
     </Member>
     <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; nestedActions, bool isInlinable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; nestedActions, bool isInlinable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CodeActions.CodeAction},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, nestedActions As ImmutableArray(Of CodeAction), isInlinable As Boolean) As CodeAction" />
+      <MemberSignature Language="F#" Value="static member Create : string * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; * bool -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, nestedActions, isInlinable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="nestedActions" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;" />
+        <Parameter Name="isInlinable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="title">Title of the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> group.</param>
+        <param name="nestedActions">The code actions within the group.</param>
+        <param name="isInlinable">
+          <see langword="true" /> to allow inlining the members of the group into the parent;
+            otherwise, <see langword="false" /> to require that this group appear as a group with nested actions.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> representing a group of code actions.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string equivalenceKey = null);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string equivalenceKey) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String)" />
@@ -105,6 +145,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
@@ -137,6 +179,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
@@ -170,6 +214,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -203,6 +249,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
@@ -231,6 +279,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
@@ -259,6 +309,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -286,6 +338,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -313,6 +367,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -342,6 +398,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
@@ -372,6 +430,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
@@ -402,6 +462,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.String&gt;</ReturnType>
@@ -427,6 +489,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
