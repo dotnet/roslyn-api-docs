@@ -9,6 +9,7 @@
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -21,11 +22,11 @@
   <Docs>
     <summary>
             Represents a coalesce assignment operation with a target and a conditionally-evaluated value:
-             (1) <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" /> is evaluated for null. If it is null, <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Value" /> is evaluated and assigned to target.
-             (2) <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Value" /> is conditionally evaluated if <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" /> is null, and the result is assigned into <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" />.
-            The result of the entire expression is <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" />, which is only evaluated once.
+            (1) <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" /> is evaluated for null. If it is null, <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Value" /> is evaluated and assigned to target.
+            (2) <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Value" /> is conditionally evaluated if <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" /> is null, and the result is assigned into <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" />.
+            The result of the entire expression is<see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" />, which is only evaluated once.
             <para>
-            Current Usage:
+            Current usage:
              (1) C# null-coalescing assignment operation <code>Target ??= Value</code>.
             </para></summary>
     <remarks>
