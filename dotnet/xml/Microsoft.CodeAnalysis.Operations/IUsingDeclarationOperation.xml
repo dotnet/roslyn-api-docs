@@ -1,0 +1,75 @@
+<Type Name="IUsingDeclarationOperation" FullName="Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation">
+  <TypeSignature Language="C#" Value="public interface IUsingDeclarationOperation : Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUsingDeclarationOperation implements class Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IUsingDeclarationOperation&#xA;Implements IOperation" />
+  <TypeSignature Language="F#" Value="type IUsingDeclarationOperation = interface&#xA;    interface IOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents using variable declaration, with scope spanning across the parent <see cref="T:Microsoft.CodeAnalysis.Operations.IBlockOperation" />.
+            <para>
+            Current Usage:
+             (1) C# using declaration
+             (1) C# asynchronous using declaration
+            </para></summary>
+    <remarks>
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeclarationGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Operations.IVariableDeclarationGroupOperation DeclarationGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Operations.IVariableDeclarationGroupOperation DeclarationGroup" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation.DeclarationGroup" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeclarationGroup As IVariableDeclarationGroupOperation" />
+      <MemberSignature Language="F#" Value="member this.DeclarationGroup : Microsoft.CodeAnalysis.Operations.IVariableDeclarationGroupOperation" Usage="Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation.DeclarationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Operations.IVariableDeclarationGroupOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The variables declared by this using declaration.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsynchronous">
+      <MemberSignature Language="C#" Value="public bool IsAsynchronous { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAsynchronous" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation.IsAsynchronous" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsAsynchronous As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsAsynchronous : bool" Usage="Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation.IsAsynchronous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if this is an asynchronous using declaration.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

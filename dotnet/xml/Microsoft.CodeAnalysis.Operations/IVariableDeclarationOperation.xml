@@ -8,9 +8,11 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>3.1.0.0</AssemblyVersion>
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -31,6 +33,13 @@
              change it in the future.
              </remarks>
     <para>
+            Current Usage:
+              (1) C# VariableDeclaration
+              (2) C# fixed declarations
+              (3) VB Dim statement declaration groups
+              (4) VB Using statement variable declarations
+            </para>
+    <para>
              Current Usage:
                (1) C# VariableDeclaration
                (2) C# fixed declarations
@@ -41,19 +50,21 @@
   </Docs>
   <Members>
     <Member MemberName="Declarators">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Operations::IVariableDeclaratorOperation ^&gt; Declarators { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Operations::IVariableDeclaratorOperation ^&gt; get(); };" />
       <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Operations.IVariableDeclaratorOperation&gt; Declarators { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Operations.IVariableDeclaratorOperation&gt; Declarators" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IVariableDeclarationOperation.Declarators" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Declarators As ImmutableArray(Of IVariableDeclaratorOperation)" />
       <MemberSignature Language="F#" Value="member this.Declarators : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Operations.IVariableDeclaratorOperation&gt;" Usage="Microsoft.CodeAnalysis.Operations.IVariableDeclarationOperation.Declarators" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Operations::IVariableDeclaratorOperation ^&gt; Declarators { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Operations::IVariableDeclaratorOperation ^&gt; get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Operations.IVariableDeclaratorOperation&gt;</ReturnType>
@@ -81,6 +92,7 @@
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
@@ -95,19 +107,21 @@
       </Docs>
     </Member>
     <Member MemberName="Initializer">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Operations::IVariableInitializerOperation ^ Initializer { Microsoft::CodeAnalysis::Operations::IVariableInitializerOperation ^ get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Operations.IVariableInitializerOperation Initializer { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Operations.IVariableInitializerOperation Initializer" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IVariableDeclarationOperation.Initializer" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Initializer As IVariableInitializerOperation" />
       <MemberSignature Language="F#" Value="member this.Initializer : Microsoft.CodeAnalysis.Operations.IVariableInitializerOperation" Usage="Microsoft.CodeAnalysis.Operations.IVariableDeclarationOperation.Initializer" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::Operations::IVariableInitializerOperation ^ Initializer { Microsoft::CodeAnalysis::Operations::IVariableInitializerOperation ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Operations.IVariableInitializerOperation</ReturnType>
