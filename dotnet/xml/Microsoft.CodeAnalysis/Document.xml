@@ -1,15 +1,18 @@
-﻿<Type Name="Document" FullName="Microsoft.CodeAnalysis.Document">
+<Type Name="Document" FullName="Microsoft.CodeAnalysis.Document">
   <TypeSignature Language="C#" Value="public class Document : Microsoft.CodeAnalysis.TextDocument" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Document extends Microsoft.CodeAnalysis.TextDocument" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Document" />
   <TypeSignature Language="VB.NET" Value="Public Class Document&#xA;Inherits TextDocument" />
   <TypeSignature Language="F#" Value="type Document = class&#xA;    inherit TextDocument" />
   <TypeSignature Language="C++ CLI" Value="public ref class Document : Microsoft::CodeAnalysis::TextDocument" />
-  <TypeSignature Language="C++ CX" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;public ref class Document : Microsoft::CodeAnalysis::TextDocument" />
-  <TypeSignature Language="C++ WINRT" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;class Document : Microsoft::CodeAnalysis::TextDocument" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.TextDocument</BaseTypeName>
@@ -29,16 +32,21 @@
   </Docs>
   <Members>
     <Member MemberName="GetLinkedDocumentIds">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::DocumentId ^&gt; GetLinkedDocumentIds();" />
       <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt; GetLinkedDocumentIds ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.DocumentId&gt; GetLinkedDocumentIds() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.GetLinkedDocumentIds" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLinkedDocumentIds () As ImmutableArray(Of DocumentId)" />
       <MemberSignature Language="F#" Value="member this.GetLinkedDocumentIds : unit -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;" Usage="document.GetLinkedDocumentIds " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::DocumentId ^&gt; GetLinkedDocumentIds();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;</ReturnType>
@@ -48,7 +56,7 @@
         <summary>
             Gets the list of <see cref="T:Microsoft.CodeAnalysis.DocumentId" />s that are linked to this
             <see cref="T:Microsoft.CodeAnalysis.Document" />. <see cref="T:Microsoft.CodeAnalysis.Document" />s are considered to be linked if they
-            share the same <see cref="P:Microsoft.CodeAnalysis.TextDocument.FilePath" />. This <see cref="T:Microsoft.CodeAnalysis.DocumentId" /> is excluded from the 
+            share the same <see cref="P:Microsoft.CodeAnalysis.TextDocument.FilePath" />. This <see cref="T:Microsoft.CodeAnalysis.DocumentId" /> is excluded from the
             result.
             </summary>
         <returns>To be added.</returns>
@@ -63,7 +71,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Options.DocumentOptionSet&gt;</ReturnType>
@@ -91,13 +104,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Document/&lt;GetSemanticModelAsync&gt;d__24))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SemanticModel&gt;</ReturnType>
       </ReturnValue>
@@ -109,7 +122,9 @@
         <summary>
             Gets the semantic model for this document asynchronously.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+            The returned <see cref="T:Microsoft.CodeAnalysis.SemanticModel" /> may be null if <see cref="P:Microsoft.CodeAnalysis.Document.SupportsSemanticModel" /> returns false.
+            </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -121,13 +136,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Document/&lt;GetSyntaxRootAsync&gt;d__21))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxNode&gt;</ReturnType>
       </ReturnValue>
@@ -139,7 +154,9 @@
         <summary>
             Gets the root node of the syntax tree asynchronously.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+            The returned <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> will be null if <see cref="P:Microsoft.CodeAnalysis.Document.SupportsSyntaxTree" /> returns false.
+            </returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -151,7 +168,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.SyntaxTree&gt;</ReturnType>
@@ -164,7 +186,8 @@
         <summary>
             Gets the <see cref="T:Microsoft.CodeAnalysis.SyntaxTree" /> for this document asynchronously.
             </summary>
-        <returns>To be added.</returns>
+        <returns>
+            The returned syntax tree can be null if the <see cref="P:Microsoft.CodeAnalysis.Document.SupportsSyntaxTree" /> returns false.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -176,13 +199,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Document/&lt;GetSyntaxVersionAsync&gt;d__13))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;</ReturnType>
       </ReturnValue>
@@ -206,13 +229,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(Microsoft.CodeAnalysis.Document/&lt;GetTextChangesAsync&gt;d__31))</AttributeName>
-        </Attribute>
-      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Text.TextChange&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -232,17 +255,21 @@
       </Docs>
     </Member>
     <Member MemberName="SourceCodeKind">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SourceCodeKind SourceCodeKind { Microsoft::CodeAnalysis::SourceCodeKind get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SourceCodeKind SourceCodeKind { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SourceCodeKind SourceCodeKind" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Document.SourceCodeKind" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourceCodeKind As SourceCodeKind" />
       <MemberSignature Language="F#" Value="member this.SourceCodeKind : Microsoft.CodeAnalysis.SourceCodeKind" Usage="Microsoft.CodeAnalysis.Document.SourceCodeKind" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SourceCodeKind SourceCodeKind { Microsoft::CodeAnalysis::SourceCodeKind get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::SourceCodeKind SourceCodeKind { Microsoft::CodeAnalysis::SourceCodeKind get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SourceCodeKind</ReturnType>
@@ -256,78 +283,89 @@
       </Docs>
     </Member>
     <Member MemberName="SupportsSemanticModel">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsSemanticModel { bool get(); };" />
       <MemberSignature Language="C#" Value="public bool SupportsSemanticModel { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool SupportsSemanticModel" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Document.SupportsSemanticModel" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsSemanticModel As Boolean" />
       <MemberSignature Language="F#" Value="member this.SupportsSemanticModel : bool" Usage="Microsoft.CodeAnalysis.Document.SupportsSemanticModel" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsSemanticModel { bool get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool SupportsSemanticModel { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <code>true</code> if this Document supports providing data through the
+          <see langword="true" /> if this Document supports providing data through the
             <see cref="M:Microsoft.CodeAnalysis.Document.GetSemanticModelAsync(System.Threading.CancellationToken)" /> method.
             
-            If <code>false</code> then this method will return <code>null</code> instead.
+            If <see langword="false" /> then this method will return <see langword="null" /> instead.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SupportsSyntaxTree">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsSyntaxTree { bool get(); };" />
       <MemberSignature Language="C#" Value="public bool SupportsSyntaxTree { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool SupportsSyntaxTree" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Document.SupportsSyntaxTree" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsSyntaxTree As Boolean" />
       <MemberSignature Language="F#" Value="member this.SupportsSyntaxTree : bool" Usage="Microsoft.CodeAnalysis.Document.SupportsSyntaxTree" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsSyntaxTree { bool get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool SupportsSyntaxTree { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          <code>true</code> if this Document supports providing data through the
+          <see langword="true" /> if this Document supports providing data through the
             <see cref="M:Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync(System.Threading.CancellationToken)" /> and <see cref="M:Microsoft.CodeAnalysis.Document.GetSyntaxRootAsync(System.Threading.CancellationToken)" /> methods.
             
-            If <code>false</code> then these methods will return <code>null</code> instead.
+            If <see langword="false" /> then these methods will return <see langword="null" /> instead.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="TryGetSemanticModel">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetSemanticModel([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SemanticModel ^ % semanticModel);" />
       <MemberSignature Language="C#" Value="public bool TryGetSemanticModel (out Microsoft.CodeAnalysis.SemanticModel semanticModel);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetSemanticModel([out] class Microsoft.CodeAnalysis.SemanticModel&amp; semanticModel) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.TryGetSemanticModel(Microsoft.CodeAnalysis.SemanticModel@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetSemanticModel (ByRef semanticModel As SemanticModel) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TryGetSemanticModel :  -&gt; bool" Usage="document.TryGetSemanticModel semanticModel" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetSemanticModel([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SemanticModel ^ % semanticModel);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; bool TryGetSemanticModel([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SemanticModel ^ &amp;  semanticModel);" />
-      <MemberSignature Language="C++ WINRT" Value="bool TryGetSemanticModel([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SemanticModel const &amp; &amp; semanticModel);" />
+      <MemberSignature Language="F#" Value="member this.TryGetSemanticModel : SemanticModel -&gt; bool" Usage="document.TryGetSemanticModel semanticModel" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel&amp;" RefType="out" />
+        <Parameter Name="semanticModel" Type="Microsoft.CodeAnalysis.SemanticModel" RefType="out" />
       </Parameters>
       <Docs>
         <param name="semanticModel">To be added.</param>
@@ -341,24 +379,27 @@
       </Docs>
     </Member>
     <Member MemberName="TryGetSyntaxRoot">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetSyntaxRoot([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SyntaxNode ^ % root);" />
       <MemberSignature Language="C#" Value="public bool TryGetSyntaxRoot (out Microsoft.CodeAnalysis.SyntaxNode root);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetSyntaxRoot([out] class Microsoft.CodeAnalysis.SyntaxNode&amp; root) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.TryGetSyntaxRoot(Microsoft.CodeAnalysis.SyntaxNode@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetSyntaxRoot (ByRef root As SyntaxNode) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TryGetSyntaxRoot :  -&gt; bool" Usage="document.TryGetSyntaxRoot root" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetSyntaxRoot([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SyntaxNode ^ % root);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; bool TryGetSyntaxRoot([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SyntaxNode ^ &amp;  root);" />
-      <MemberSignature Language="C++ WINRT" Value="bool TryGetSyntaxRoot([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SyntaxNode const &amp; &amp; root);" />
+      <MemberSignature Language="F#" Value="member this.TryGetSyntaxRoot : SyntaxNode -&gt; bool" Usage="document.TryGetSyntaxRoot root" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode&amp;" RefType="out" />
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode" RefType="out" />
       </Parameters>
       <Docs>
         <param name="root">To be added.</param>
@@ -372,24 +413,27 @@
       </Docs>
     </Member>
     <Member MemberName="TryGetSyntaxTree">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetSyntaxTree([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SyntaxTree ^ % syntaxTree);" />
       <MemberSignature Language="C#" Value="public bool TryGetSyntaxTree (out Microsoft.CodeAnalysis.SyntaxTree syntaxTree);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetSyntaxTree([out] class Microsoft.CodeAnalysis.SyntaxTree&amp; syntaxTree) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.TryGetSyntaxTree(Microsoft.CodeAnalysis.SyntaxTree@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetSyntaxTree (ByRef syntaxTree As SyntaxTree) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TryGetSyntaxTree :  -&gt; bool" Usage="document.TryGetSyntaxTree syntaxTree" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetSyntaxTree([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SyntaxTree ^ % syntaxTree);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; bool TryGetSyntaxTree([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SyntaxTree ^ &amp;  syntaxTree);" />
-      <MemberSignature Language="C++ WINRT" Value="bool TryGetSyntaxTree([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::SyntaxTree const &amp; &amp; syntaxTree);" />
+      <MemberSignature Language="F#" Value="member this.TryGetSyntaxTree : SyntaxTree -&gt; bool" Usage="document.TryGetSyntaxTree syntaxTree" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="syntaxTree" Type="Microsoft.CodeAnalysis.SyntaxTree&amp;" RefType="out" />
+        <Parameter Name="syntaxTree" Type="Microsoft.CodeAnalysis.SyntaxTree" RefType="out" />
       </Parameters>
       <Docs>
         <param name="syntaxTree">To be added.</param>
@@ -403,22 +447,27 @@
       </Docs>
     </Member>
     <Member MemberName="TryGetSyntaxVersion">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetSyntaxVersion([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::VersionStamp % version);" />
       <MemberSignature Language="C#" Value="public bool TryGetSyntaxVersion (out Microsoft.CodeAnalysis.VersionStamp version);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetSyntaxVersion([out] valuetype Microsoft.CodeAnalysis.VersionStamp&amp; version) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.TryGetSyntaxVersion(Microsoft.CodeAnalysis.VersionStamp@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetSyntaxVersion (ByRef version As VersionStamp) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TryGetSyntaxVersion :  -&gt; bool" Usage="document.TryGetSyntaxVersion version" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetSyntaxVersion([Runtime::InteropServices::Out] Microsoft::CodeAnalysis::VersionStamp % version);" />
+      <MemberSignature Language="F#" Value="member this.TryGetSyntaxVersion : VersionStamp -&gt; bool" Usage="document.TryGetSyntaxVersion version" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="version" Type="Microsoft.CodeAnalysis.VersionStamp&amp;" RefType="out" />
+        <Parameter Name="version" Type="Microsoft.CodeAnalysis.VersionStamp" RefType="out" />
       </Parameters>
       <Docs>
         <param name="version">To be added.</param>
@@ -432,18 +481,21 @@
       </Docs>
     </Member>
     <Member MemberName="WithFilePath">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithFilePath(System::String ^ filePath);" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithFilePath (string filePath);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithFilePath(string filePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithFilePath(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithFilePath (filePath As String) As Document" />
       <MemberSignature Language="F#" Value="member this.WithFilePath : string -&gt; Microsoft.CodeAnalysis.Document" Usage="document.WithFilePath filePath" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithFilePath(System::String ^ filePath);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithFilePath(Platform::String ^ filePath);" />
-      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::Document WithFilePath(std::wstring const &amp; filePath);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -452,7 +504,8 @@
         <Parameter Name="filePath" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="filePath"></param>
+        <param name="filePath">
+        </param>
         <summary>
             Creates a new instance of this document updated to have the specified file path.
             </summary>
@@ -461,16 +514,21 @@
       </Docs>
     </Member>
     <Member MemberName="WithFolders">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithFolders(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ folders);" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithFolders (System.Collections.Generic.IEnumerable&lt;string&gt; folders);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithFolders(class System.Collections.Generic.IEnumerable`1&lt;string&gt; folders) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithFolders(System.Collections.Generic.IEnumerable{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithFolders (folders As IEnumerable(Of String)) As Document" />
       <MemberSignature Language="F#" Value="member this.WithFolders : seq&lt;string&gt; -&gt; Microsoft.CodeAnalysis.Document" Usage="document.WithFolders folders" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithFolders(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ folders);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -488,18 +546,21 @@
       </Docs>
     </Member>
     <Member MemberName="WithName">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithName(System::String ^ name);" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithName (string name);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithName(string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithName(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithName (name As String) As Document" />
       <MemberSignature Language="F#" Value="member this.WithName : string -&gt; Microsoft.CodeAnalysis.Document" Usage="document.WithName name" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithName(System::String ^ name);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithName(Platform::String ^ name);" />
-      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::Document WithName(std::wstring const &amp; name);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -517,18 +578,21 @@
       </Docs>
     </Member>
     <Member MemberName="WithSourceCodeKind">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithSourceCodeKind(Microsoft::CodeAnalysis::SourceCodeKind kind);" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithSourceCodeKind (Microsoft.CodeAnalysis.SourceCodeKind kind);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithSourceCodeKind(valuetype Microsoft.CodeAnalysis.SourceCodeKind kind) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithSourceCodeKind(Microsoft.CodeAnalysis.SourceCodeKind)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithSourceCodeKind (kind As SourceCodeKind) As Document" />
       <MemberSignature Language="F#" Value="member this.WithSourceCodeKind : Microsoft.CodeAnalysis.SourceCodeKind -&gt; Microsoft.CodeAnalysis.Document" Usage="document.WithSourceCodeKind kind" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithSourceCodeKind(Microsoft::CodeAnalysis::SourceCodeKind kind);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithSourceCodeKind(Microsoft::CodeAnalysis::SourceCodeKind kind);" />
-      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::Document WithSourceCodeKind(Microsoft::CodeAnalysis::SourceCodeKind kind);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -546,18 +610,21 @@
       </Docs>
     </Member>
     <Member MemberName="WithSyntaxRoot">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithSyntaxRoot(Microsoft::CodeAnalysis::SyntaxNode ^ root);" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithSyntaxRoot (Microsoft.CodeAnalysis.SyntaxNode root);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithSyntaxRoot(class Microsoft.CodeAnalysis.SyntaxNode root) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithSyntaxRoot(Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithSyntaxRoot (root As SyntaxNode) As Document" />
       <MemberSignature Language="F#" Value="member this.WithSyntaxRoot : Microsoft.CodeAnalysis.SyntaxNode -&gt; Microsoft.CodeAnalysis.Document" Usage="document.WithSyntaxRoot root" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithSyntaxRoot(Microsoft::CodeAnalysis::SyntaxNode ^ root);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithSyntaxRoot(Microsoft::CodeAnalysis::SyntaxNode ^ root);" />
-      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::Document WithSyntaxRoot(Microsoft::CodeAnalysis::SyntaxNode const &amp; root);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -575,18 +642,21 @@
       </Docs>
     </Member>
     <Member MemberName="WithText">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithText(Microsoft::CodeAnalysis::Text::SourceText ^ text);" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document WithText (Microsoft.CodeAnalysis.Text.SourceText text);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document WithText(class Microsoft.CodeAnalysis.Text.SourceText text) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Document.WithText(Microsoft.CodeAnalysis.Text.SourceText)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithText (text As SourceText) As Document" />
       <MemberSignature Language="F#" Value="member this.WithText : Microsoft.CodeAnalysis.Text.SourceText -&gt; Microsoft.CodeAnalysis.Document" Usage="document.WithText text" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithText(Microsoft::CodeAnalysis::Text::SourceText ^ text);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ WithText(Microsoft::CodeAnalysis::Text::SourceText ^ text);" />
-      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::Document WithText(Microsoft::CodeAnalysis::Text::SourceText const &amp; text);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>

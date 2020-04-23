@@ -1,0 +1,104 @@
+<Type Name="Suppression" FullName="Microsoft.CodeAnalysis.Diagnostics.Suppression">
+  <TypeSignature Language="C#" Value="public struct Suppression" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Suppression extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.Suppression" />
+  <TypeSignature Language="VB.NET" Value="Public Structure Suppression" />
+  <TypeSignature Language="F#" Value="type Suppression = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Programmatic suppression of a <see cref="T:Microsoft.CodeAnalysis.Diagnostic" /> by a <see cref="T:Microsoft.CodeAnalysis.Diagnostics.DiagnosticSuppressor" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostics.Suppression Create (Microsoft.CodeAnalysis.SuppressionDescriptor descriptor, Microsoft.CodeAnalysis.Diagnostic suppressedDiagnostic);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.Diagnostics.Suppression Create(class Microsoft.CodeAnalysis.SuppressionDescriptor descriptor, class Microsoft.CodeAnalysis.Diagnostic suppressedDiagnostic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.Suppression.Create(Microsoft.CodeAnalysis.SuppressionDescriptor,Microsoft.CodeAnalysis.Diagnostic)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (descriptor As SuppressionDescriptor, suppressedDiagnostic As Diagnostic) As Suppression" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.SuppressionDescriptor * Microsoft.CodeAnalysis.Diagnostic -&gt; Microsoft.CodeAnalysis.Diagnostics.Suppression" Usage="Microsoft.CodeAnalysis.Diagnostics.Suppression.Create (descriptor, suppressedDiagnostic)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Diagnostics.Suppression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="descriptor" Type="Microsoft.CodeAnalysis.SuppressionDescriptor" />
+        <Parameter Name="suppressedDiagnostic" Type="Microsoft.CodeAnalysis.Diagnostic" />
+      </Parameters>
+      <Docs>
+        <param name="descriptor">
+            Descriptor for the suppression, which must be from <see cref="P:Microsoft.CodeAnalysis.Diagnostics.DiagnosticSuppressor.SupportedSuppressions" />
+            for the <see cref="T:Microsoft.CodeAnalysis.Diagnostics.DiagnosticSuppressor" /> creating this suppression.
+            </param>
+        <param name="suppressedDiagnostic">
+          <see cref="T:Microsoft.CodeAnalysis.Diagnostic" /> to be suppressed, which must be from <see cref="P:Microsoft.CodeAnalysis.Diagnostics.SuppressionAnalysisContext.ReportedDiagnostics" />
+            for the suppression context in which this suppression is being created.</param>
+        <summary>
+            Creates a suppression of a <see cref="T:Microsoft.CodeAnalysis.Diagnostic" /> with the given <see cref="T:Microsoft.CodeAnalysis.SuppressionDescriptor" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Descriptor">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SuppressionDescriptor Descriptor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SuppressionDescriptor Descriptor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.Suppression.Descriptor" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Descriptor As SuppressionDescriptor" />
+      <MemberSignature Language="F#" Value="member this.Descriptor : Microsoft.CodeAnalysis.SuppressionDescriptor" Usage="Microsoft.CodeAnalysis.Diagnostics.Suppression.Descriptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SuppressionDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Descriptor for this suppression.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressedDiagnostic">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Diagnostic SuppressedDiagnostic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Diagnostic SuppressedDiagnostic" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.Suppression.SuppressedDiagnostic" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SuppressedDiagnostic As Diagnostic" />
+      <MemberSignature Language="F#" Value="member this.SuppressedDiagnostic : Microsoft.CodeAnalysis.Diagnostic" Usage="Microsoft.CodeAnalysis.Diagnostics.Suppression.SuppressedDiagnostic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Diagnostic</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Diagnostic suppressed by this suppression.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

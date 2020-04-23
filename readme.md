@@ -1,4 +1,4 @@
-# Readme.md
+# Roslyn API reference documentation
 
 This repository contains documentation for the
 [Roslyn platform](https://github.com/dotnet/roslyn) and the
@@ -13,6 +13,8 @@ any issues, or have suggestions on how to improve the .NET Compiler platform
 SDK documentation, create them on the [docs repository](https://github.com/dotnet/docs/issues).
 That repository contains the source for conceptual documentation, tutorials and more,
 including all the documentation on the .NET Compiler Platform SDK.
+
+This project has adopted the code of conduct defined by the Contributor Covenant to clarify expected behavior in our community. For more information, see the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct).
 
 The remainder of this file has notes which NuGet packages make up the
 .NET Compiler SDK metapackage.

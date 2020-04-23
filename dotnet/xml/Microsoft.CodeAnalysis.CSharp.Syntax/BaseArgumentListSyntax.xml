@@ -1,15 +1,18 @@
-﻿<Type Name="BaseArgumentListSyntax" FullName="Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax">
+<Type Name="BaseArgumentListSyntax" FullName="Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax">
   <TypeSignature Language="C#" Value="public abstract class BaseArgumentListSyntax : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseArgumentListSyntax extends Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class BaseArgumentListSyntax&#xA;Inherits CSharpSyntaxNode" />
   <TypeSignature Language="F#" Value="type BaseArgumentListSyntax = class&#xA;    inherit CSharpSyntaxNode" />
   <TypeSignature Language="C++ CLI" Value="public ref class BaseArgumentListSyntax abstract : Microsoft::CodeAnalysis::CSharp::CSharpSyntaxNode" />
-  <TypeSignature Language="C++ CX" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;public ref class BaseArgumentListSyntax abstract : Microsoft::CodeAnalysis::CSharp::CSharpSyntaxNode" />
-  <TypeSignature Language="C++ WINRT" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;class BaseArgumentListSyntax abstract : Microsoft::CodeAnalysis::CSharp::CSharpSyntaxNode" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode</BaseTypeName>
@@ -20,17 +23,58 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="AddArguments">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::BaseArgumentListSyntax ^ AddArguments(... cli::array &lt;Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentSyntax ^&gt; ^ items);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax AddArguments (params Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax AddArguments(class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax.AddArguments(Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddArguments (ParamArray items As ArgumentSyntax()) As BaseArgumentListSyntax" />
+      <MemberSignature Language="F#" Value="member this.AddArguments : Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[] -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax" Usage="baseArgumentListSyntax.AddArguments items" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[]">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet">
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="items">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Arguments">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentSyntax ^&gt; Arguments { Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentSyntax ^&gt; get(); };" />
       <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax&gt; Arguments { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax&gt; Arguments" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax.Arguments" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Arguments As SeparatedSyntaxList(Of ArgumentSyntax)" />
       <MemberSignature Language="F#" Value="member this.Arguments : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax&gt;" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax.Arguments" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentSyntax ^&gt; Arguments { Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentSyntax ^&gt; get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax&gt;</ReturnType>
@@ -38,6 +82,36 @@
       <Docs>
         <summary>SeparatedSyntaxList of ArgumentSyntax nodes representing the list of arguments.</summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithArguments">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::BaseArgumentListSyntax ^ WithArguments(Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentSyntax ^&gt; arguments);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax WithArguments (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax&gt; arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax WithArguments(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax&gt; arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax.WithArguments(Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithArguments (arguments As SeparatedSyntaxList(Of ArgumentSyntax)) As BaseArgumentListSyntax" />
+      <MemberSignature Language="F#" Value="member this.WithArguments : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax" Usage="baseArgumentListSyntax.WithArguments arguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BaseArgumentListSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

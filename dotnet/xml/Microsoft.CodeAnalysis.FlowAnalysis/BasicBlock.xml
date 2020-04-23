@@ -1,0 +1,322 @@
+<Type Name="BasicBlock" FullName="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock">
+  <TypeSignature Language="C#" Value="public sealed class BasicBlock" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BasicBlock extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BasicBlock" />
+  <TypeSignature Language="F#" Value="type BasicBlock = class" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BasicBlock sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a basic block in a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> with a sequence of <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Operations" />.
+            Once a basic block is entered, all operations in it are always executed.
+            Optional <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.BranchValue" />, if non-null, is evaluated after the <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Operations" />.
+            Control flow leaves the basic block by taking either the <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" /> branch or
+            the <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.FallThroughSuccessor" /> branch.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BranchValue">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ BranchValue { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation BranchValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IOperation BranchValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.BranchValue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BranchValue As IOperation" />
+      <MemberSignature Language="F#" Value="member this.BranchValue : Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.BranchValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional branch value, which if non-null, is evaluated after <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Operations" />.
+            For conditional branches, this value is used to represent the condition which determines if
+            <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" /> is taken or not.
+            For non-conditional branches, this value is used to represent the return or throw value associated
+            with the <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.FallThroughSuccessor" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalSuccessor">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowBranch ^ ConditionalSuccessor { Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowBranch ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch ConditionalSuccessor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch ConditionalSuccessor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConditionalSuccessor As ControlFlowBranch" />
+      <MemberSignature Language="F#" Value="member this.ConditionalSuccessor : Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional conditional branch out of the basic block.
+            If non-null, this branch may be taken at the end of the basic block based
+            on the <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionKind" /> and <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.BranchValue" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionKind">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowConditionKind ConditionKind { Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowConditionKind get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind ConditionKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind ConditionKind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionKind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConditionKind As ControlFlowConditionKind" />
+      <MemberSignature Language="F#" Value="member this.ConditionKind : Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowConditionKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates the condition kind for the branch out of the basic block.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnclosingRegion">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowRegion ^ EnclosingRegion { Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowRegion ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowRegion EnclosingRegion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowRegion EnclosingRegion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.EnclosingRegion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EnclosingRegion As ControlFlowRegion" />
+      <MemberSignature Language="F#" Value="member this.EnclosingRegion : Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowRegion" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.EnclosingRegion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowRegion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enclosing region.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallThroughSuccessor">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowBranch ^ FallThroughSuccessor { Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowBranch ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch FallThroughSuccessor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch FallThroughSuccessor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.FallThroughSuccessor" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FallThroughSuccessor As ControlFlowBranch" />
+      <MemberSignature Language="F#" Value="member this.FallThroughSuccessor : Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.FallThroughSuccessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional fall through branch executed at the end of the basic block.
+            This branch is null for exit block, and non-null for all other basic blocks.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReachable">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsReachable { bool get(); };" />
+      <MemberSignature Language="C#" Value="public bool IsReachable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReachable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.IsReachable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReachable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsReachable : bool" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.IsReachable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates if control flow can reach this basic block from the entry block of the graph.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kind">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::FlowAnalysis::BasicBlockKind Kind { Microsoft::CodeAnalysis::FlowAnalysis::BasicBlockKind get(); };" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.FlowAnalysis.BasicBlockKind Kind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.FlowAnalysis.BasicBlockKind Kind" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Kind" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Kind As BasicBlockKind" />
+      <MemberSignature Language="F#" Value="member this.Kind : Microsoft.CodeAnalysis.FlowAnalysis.BasicBlockKind" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Kind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.BasicBlockKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Basic block kind (entry, block, or exit).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operations">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IOperation ^&gt; Operations { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IOperation ^&gt; get(); };" />
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt; Operations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IOperation&gt; Operations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Operations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Operations As ImmutableArray(Of IOperation)" />
+      <MemberSignature Language="F#" Value="member this.Operations : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Operations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sequence of operations in the basic block.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordinal">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Ordinal { int get(); };" />
+      <MemberSignature Language="C#" Value="public int Ordinal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Ordinal" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Ordinal" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Ordinal As Integer" />
+      <MemberSignature Language="F#" Value="member this.Ordinal : int" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Ordinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unique ordinal for each basic block in a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" />,
+            which can be used to index into <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph.Blocks" /> array.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Predecessors">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowBranch ^&gt; Predecessors { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::FlowAnalysis::ControlFlowBranch ^&gt; get(); };" />
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch&gt; Predecessors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch&gt; Predecessors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Predecessors" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Predecessors As ImmutableArray(Of ControlFlowBranch)" />
+      <MemberSignature Language="F#" Value="member this.Predecessors : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch&gt;" Usage="Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.Predecessors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowBranch&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of basic blocks which have a control flow branch (<see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.FallThroughSuccessor" /> or <see cref="P:Microsoft.CodeAnalysis.FlowAnalysis.BasicBlock.ConditionalSuccessor" />)
+            into this basic block.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

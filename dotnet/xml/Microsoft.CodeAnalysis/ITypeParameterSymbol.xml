@@ -1,4 +1,4 @@
-﻿<Type Name="ITypeParameterSymbol" FullName="Microsoft.CodeAnalysis.ITypeParameterSymbol">
+<Type Name="ITypeParameterSymbol" FullName="Microsoft.CodeAnalysis.ITypeParameterSymbol">
   <TypeSignature Language="C#" Value="public interface ITypeParameterSymbol : IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;, Microsoft.CodeAnalysis.ITypeSymbol" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeParameterSymbol implements class Microsoft.CodeAnalysis.INamespaceOrTypeSymbol, class Microsoft.CodeAnalysis.ISymbol, class Microsoft.CodeAnalysis.ITypeSymbol, class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ITypeParameterSymbol" />
@@ -7,9 +7,20 @@
   <TypeSignature Language="C++ CLI" Value="public interface class ITypeParameterSymbol : IEquatable&lt;Microsoft::CodeAnalysis::ISymbol ^&gt;, Microsoft::CodeAnalysis::ITypeSymbol" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.INamespaceOrTypeSymbol</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.ISymbol</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.CodeAnalysis.ITypeSymbol</InterfaceName>
     </Interface>
@@ -27,17 +38,48 @@
             </remarks>
   </Docs>
   <Members>
+    <Member MemberName="ConstraintNullableAnnotations">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.NullableAnnotation&gt; ConstraintNullableAnnotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.NullableAnnotation&gt; ConstraintNullableAnnotations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.ConstraintNullableAnnotations" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConstraintNullableAnnotations As ImmutableArray(Of NullableAnnotation)" />
+      <MemberSignature Language="F#" Value="member this.ConstraintNullableAnnotations : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.NullableAnnotation&gt;" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.ConstraintNullableAnnotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.NullableAnnotation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The top-level nullabilities that were directly specified as constraints on the
+            constraint types.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ConstraintTypes">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeSymbol ^&gt; ConstraintTypes { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeSymbol ^&gt; get(); };" />
       <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt; ConstraintTypes { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ITypeSymbol&gt; ConstraintTypes" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.ConstraintTypes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConstraintTypes As ImmutableArray(Of ITypeSymbol)" />
       <MemberSignature Language="F#" Value="member this.ConstraintTypes : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt;" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.ConstraintTypes" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeSymbol ^&gt; ConstraintTypes { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::ITypeSymbol ^&gt; get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ITypeSymbol&gt;</ReturnType>
@@ -51,16 +93,21 @@
       </Docs>
     </Member>
     <Member MemberName="DeclaringMethod">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ DeclaringMethod { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol DeclaringMethod { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IMethodSymbol DeclaringMethod" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.DeclaringMethod" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeclaringMethod As IMethodSymbol" />
       <MemberSignature Language="F#" Value="member this.DeclaringMethod : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.DeclaringMethod" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ DeclaringMethod { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
@@ -74,16 +121,21 @@
       </Docs>
     </Member>
     <Member MemberName="DeclaringType">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamedTypeSymbol ^ DeclaringType { Microsoft::CodeAnalysis::INamedTypeSymbol ^ get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol DeclaringType { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamedTypeSymbol DeclaringType" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.DeclaringType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeclaringType As INamedTypeSymbol" />
       <MemberSignature Language="F#" Value="member this.DeclaringType : Microsoft.CodeAnalysis.INamedTypeSymbol" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.DeclaringType" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamedTypeSymbol ^ DeclaringType { Microsoft::CodeAnalysis::INamedTypeSymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
@@ -97,17 +149,21 @@
       </Docs>
     </Member>
     <Member MemberName="HasConstructorConstraint">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasConstructorConstraint { bool get(); };" />
       <MemberSignature Language="C#" Value="public bool HasConstructorConstraint { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool HasConstructorConstraint" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.HasConstructorConstraint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasConstructorConstraint As Boolean" />
       <MemberSignature Language="F#" Value="member this.HasConstructorConstraint : bool" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.HasConstructorConstraint" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasConstructorConstraint { bool get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool HasConstructorConstraint { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -120,18 +176,46 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="HasNotNullConstraint">
+      <MemberSignature Language="C#" Value="public bool HasNotNullConstraint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasNotNullConstraint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.HasNotNullConstraint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasNotNullConstraint As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasNotNullConstraint : bool" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.HasNotNullConstraint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the notnull constraint (<c>notnull</c>) was specified for the type parameter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="HasReferenceTypeConstraint">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasReferenceTypeConstraint { bool get(); };" />
       <MemberSignature Language="C#" Value="public bool HasReferenceTypeConstraint { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool HasReferenceTypeConstraint" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.HasReferenceTypeConstraint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasReferenceTypeConstraint As Boolean" />
       <MemberSignature Language="F#" Value="member this.HasReferenceTypeConstraint : bool" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.HasReferenceTypeConstraint" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasReferenceTypeConstraint { bool get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool HasReferenceTypeConstraint { bool get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -144,42 +228,78 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="HasValueTypeConstraint">
-      <MemberSignature Language="C#" Value="public bool HasValueTypeConstraint { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool HasValueTypeConstraint" />
-      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.HasValueTypeConstraint" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasValueTypeConstraint As Boolean" />
-      <MemberSignature Language="F#" Value="member this.HasValueTypeConstraint : bool" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.HasValueTypeConstraint" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasValueTypeConstraint { bool get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property bool HasValueTypeConstraint { bool get(); };" />
+    <Member MemberName="HasUnmanagedTypeConstraint">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasUnmanagedTypeConstraint { bool get(); };" />
+      <MemberSignature Language="C#" Value="public bool HasUnmanagedTypeConstraint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasUnmanagedTypeConstraint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.HasUnmanagedTypeConstraint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasUnmanagedTypeConstraint As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasUnmanagedTypeConstraint : bool" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.HasUnmanagedTypeConstraint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            True if the value type constraint (<c>struct</c>)was specified for the type parameter.
+            True if the value type constraint (<c>unmanaged</c>) was specified for the type parameter.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValueTypeConstraint">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasValueTypeConstraint { bool get(); };" />
+      <MemberSignature Language="C#" Value="public bool HasValueTypeConstraint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasValueTypeConstraint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.HasValueTypeConstraint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasValueTypeConstraint As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasValueTypeConstraint : bool" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.HasValueTypeConstraint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the value type constraint (<c>struct</c>) was specified for the type parameter.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Ordinal">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Ordinal { int get(); };" />
       <MemberSignature Language="C#" Value="public int Ordinal { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 Ordinal" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.Ordinal" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Ordinal As Integer" />
       <MemberSignature Language="F#" Value="member this.Ordinal : int" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.Ordinal" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Ordinal { int get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property int Ordinal { int get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -194,16 +314,21 @@
       </Docs>
     </Member>
     <Member MemberName="OriginalDefinition">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ITypeParameterSymbol ^ OriginalDefinition { Microsoft::CodeAnalysis::ITypeParameterSymbol ^ get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ITypeParameterSymbol OriginalDefinition { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ITypeParameterSymbol OriginalDefinition" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.OriginalDefinition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginalDefinition As ITypeParameterSymbol" />
       <MemberSignature Language="F#" Value="member this.OriginalDefinition : Microsoft.CodeAnalysis.ITypeParameterSymbol" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.OriginalDefinition" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ITypeParameterSymbol ^ OriginalDefinition { Microsoft::CodeAnalysis::ITypeParameterSymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ITypeParameterSymbol</ReturnType>
@@ -219,16 +344,21 @@
       </Docs>
     </Member>
     <Member MemberName="ReducedFrom">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ITypeParameterSymbol ^ ReducedFrom { Microsoft::CodeAnalysis::ITypeParameterSymbol ^ get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ITypeParameterSymbol ReducedFrom { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ITypeParameterSymbol ReducedFrom" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.ReducedFrom" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReducedFrom As ITypeParameterSymbol" />
       <MemberSignature Language="F#" Value="member this.ReducedFrom : Microsoft.CodeAnalysis.ITypeParameterSymbol" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.ReducedFrom" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ITypeParameterSymbol ^ ReducedFrom { Microsoft::CodeAnalysis::ITypeParameterSymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ITypeParameterSymbol</ReturnType>
@@ -242,18 +372,49 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ReferenceTypeConstraintNullableAnnotation">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.NullableAnnotation ReferenceTypeConstraintNullableAnnotation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.NullableAnnotation ReferenceTypeConstraintNullableAnnotation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.ReferenceTypeConstraintNullableAnnotation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferenceTypeConstraintNullableAnnotation As NullableAnnotation" />
+      <MemberSignature Language="F#" Value="member this.ReferenceTypeConstraintNullableAnnotation : Microsoft.CodeAnalysis.NullableAnnotation" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.ReferenceTypeConstraintNullableAnnotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.NullableAnnotation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If <see cref="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.HasReferenceTypeConstraint" /> is true, returns the top-level nullability of the
+            <c>class</c> constraint that was specified for the type parameter. If there was no <c>class</c>
+            constraint, this returns <see cref="F:Microsoft.CodeAnalysis.NullableAnnotation.None" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TypeParameterKind">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::TypeParameterKind TypeParameterKind { Microsoft::CodeAnalysis::TypeParameterKind get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TypeParameterKind TypeParameterKind { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.TypeParameterKind TypeParameterKind" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.TypeParameterKind" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TypeParameterKind As TypeParameterKind" />
       <MemberSignature Language="F#" Value="member this.TypeParameterKind : Microsoft.CodeAnalysis.TypeParameterKind" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.TypeParameterKind" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::TypeParameterKind TypeParameterKind { Microsoft::CodeAnalysis::TypeParameterKind get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::TypeParameterKind TypeParameterKind { Microsoft::CodeAnalysis::TypeParameterKind get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.TypeParameterKind</ReturnType>
@@ -267,17 +428,21 @@
       </Docs>
     </Member>
     <Member MemberName="Variance">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::VarianceKind Variance { Microsoft::CodeAnalysis::VarianceKind get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.VarianceKind Variance { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.VarianceKind Variance" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.Variance" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Variance As VarianceKind" />
       <MemberSignature Language="F#" Value="member this.Variance : Microsoft.CodeAnalysis.VarianceKind" Usage="Microsoft.CodeAnalysis.ITypeParameterSymbol.Variance" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::VarianceKind Variance { Microsoft::CodeAnalysis::VarianceKind get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; property Microsoft::CodeAnalysis::VarianceKind Variance { Microsoft::CodeAnalysis::VarianceKind get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.VarianceKind</ReturnType>

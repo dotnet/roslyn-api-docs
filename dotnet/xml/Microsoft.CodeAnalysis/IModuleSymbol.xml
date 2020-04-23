@@ -1,4 +1,4 @@
-﻿<Type Name="IModuleSymbol" FullName="Microsoft.CodeAnalysis.IModuleSymbol">
+<Type Name="IModuleSymbol" FullName="Microsoft.CodeAnalysis.IModuleSymbol">
   <TypeSignature Language="C#" Value="public interface IModuleSymbol : IEquatable&lt;Microsoft.CodeAnalysis.ISymbol&gt;, Microsoft.CodeAnalysis.ISymbol" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IModuleSymbol implements class Microsoft.CodeAnalysis.ISymbol, class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.IModuleSymbol" />
@@ -7,7 +7,12 @@
   <TypeSignature Language="C++ CLI" Value="public interface class IModuleSymbol : IEquatable&lt;Microsoft::CodeAnalysis::ISymbol ^&gt;, Microsoft::CodeAnalysis::ISymbol" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -28,18 +33,21 @@
   </Docs>
   <Members>
     <Member MemberName="GetMetadata">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::ModuleMetadata ^ GetMetadata();" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ModuleMetadata GetMetadata ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.ModuleMetadata GetMetadata() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IModuleSymbol.GetMetadata" />
       <MemberSignature Language="VB.NET" Value="Public Function GetMetadata () As ModuleMetadata" />
       <MemberSignature Language="F#" Value="abstract member GetMetadata : unit -&gt; Microsoft.CodeAnalysis.ModuleMetadata" Usage="iModuleSymbol.GetMetadata " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::ModuleMetadata ^ GetMetadata();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Microsoft::CodeAnalysis::ModuleMetadata ^ GetMetadata();" />
-      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::ModuleMetadata GetMetadata();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
@@ -49,23 +57,28 @@
         <summary>
             If this symbol represents a metadata module returns the underlying <see cref="T:Microsoft.CodeAnalysis.ModuleMetadata" />.
             
-            Otherwise, this returns <code>null</code>.
+            Otherwise, this returns <see langword="null" />.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="GetModuleNamespace">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::INamespaceSymbol ^ GetModuleNamespace(Microsoft::CodeAnalysis::INamespaceSymbol ^ namespaceSymbol);" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamespaceSymbol GetModuleNamespace (Microsoft.CodeAnalysis.INamespaceSymbol namespaceSymbol);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.INamespaceSymbol GetModuleNamespace(class Microsoft.CodeAnalysis.INamespaceSymbol namespaceSymbol) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IModuleSymbol.GetModuleNamespace(Microsoft.CodeAnalysis.INamespaceSymbol)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetModuleNamespace (namespaceSymbol As INamespaceSymbol) As INamespaceSymbol" />
       <MemberSignature Language="F#" Value="abstract member GetModuleNamespace : Microsoft.CodeAnalysis.INamespaceSymbol -&gt; Microsoft.CodeAnalysis.INamespaceSymbol" Usage="iModuleSymbol.GetModuleNamespace namespaceSymbol" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::INamespaceSymbol ^ GetModuleNamespace(Microsoft::CodeAnalysis::INamespaceSymbol ^ namespaceSymbol);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.INamespaceSymbol</ReturnType>
@@ -83,16 +96,21 @@
       </Docs>
     </Member>
     <Member MemberName="GlobalNamespace">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamespaceSymbol ^ GlobalNamespace { Microsoft::CodeAnalysis::INamespaceSymbol ^ get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamespaceSymbol GlobalNamespace { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamespaceSymbol GlobalNamespace" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IModuleSymbol.GlobalNamespace" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GlobalNamespace As INamespaceSymbol" />
       <MemberSignature Language="F#" Value="member this.GlobalNamespace : Microsoft.CodeAnalysis.INamespaceSymbol" Usage="Microsoft.CodeAnalysis.IModuleSymbol.GlobalNamespace" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamespaceSymbol ^ GlobalNamespace { Microsoft::CodeAnalysis::INamespaceSymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.INamespaceSymbol</ReturnType>
@@ -107,16 +125,21 @@
       </Docs>
     </Member>
     <Member MemberName="ReferencedAssemblies">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::AssemblyIdentity ^&gt; ReferencedAssemblies { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::AssemblyIdentity ^&gt; get(); };" />
       <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AssemblyIdentity&gt; ReferencedAssemblies { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.AssemblyIdentity&gt; ReferencedAssemblies" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IModuleSymbol.ReferencedAssemblies" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferencedAssemblies As ImmutableArray(Of AssemblyIdentity)" />
       <MemberSignature Language="F#" Value="member this.ReferencedAssemblies : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AssemblyIdentity&gt;" Usage="Microsoft.CodeAnalysis.IModuleSymbol.ReferencedAssemblies" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::AssemblyIdentity ^&gt; ReferencedAssemblies { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::AssemblyIdentity ^&gt; get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AssemblyIdentity&gt;</ReturnType>
@@ -132,16 +155,21 @@
       </Docs>
     </Member>
     <Member MemberName="ReferencedAssemblySymbols">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IAssemblySymbol ^&gt; ReferencedAssemblySymbols { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IAssemblySymbol ^&gt; get(); };" />
       <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IAssemblySymbol&gt; ReferencedAssemblySymbols { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IAssemblySymbol&gt; ReferencedAssemblySymbols" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IModuleSymbol.ReferencedAssemblySymbols" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferencedAssemblySymbols As ImmutableArray(Of IAssemblySymbol)" />
       <MemberSignature Language="F#" Value="member this.ReferencedAssemblySymbols : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IAssemblySymbol&gt;" Usage="Microsoft.CodeAnalysis.IModuleSymbol.ReferencedAssemblySymbols" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IAssemblySymbol ^&gt; ReferencedAssemblySymbols { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::IAssemblySymbol ^&gt; get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IAssemblySymbol&gt;</ReturnType>

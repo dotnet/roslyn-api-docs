@@ -1,20 +1,27 @@
-﻿<Type Name="CSharpSyntaxNode" FullName="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode">
-  <TypeSignature Language="C#" Value="public abstract class CSharpSyntaxNode : Microsoft.CodeAnalysis.SyntaxNode" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CSharpSyntaxNode extends Microsoft.CodeAnalysis.SyntaxNode" />
+<Type Name="CSharpSyntaxNode" FullName="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode">
+  <TypeSignature Language="C#" Value="public abstract class CSharpSyntaxNode : Microsoft.CodeAnalysis.SyntaxNode, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CSharpSyntaxNode extends Microsoft.CodeAnalysis.SyntaxNode implements class System.IFormattable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CSharpSyntaxNode&#xA;Inherits SyntaxNode" />
-  <TypeSignature Language="F#" Value="type CSharpSyntaxNode = class&#xA;    inherit SyntaxNode&#xA;    interface IMessageSerializable" />
-  <TypeSignature Language="C++ CLI" Value="public ref class CSharpSyntaxNode abstract : Microsoft::CodeAnalysis::SyntaxNode" />
-  <TypeSignature Language="C++ CX" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;public ref class CSharpSyntaxNode abstract : Microsoft::CodeAnalysis::SyntaxNode" />
-  <TypeSignature Language="C++ WINRT" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;class CSharpSyntaxNode abstract : Microsoft::CodeAnalysis::SyntaxNode" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CSharpSyntaxNode&#xA;Inherits SyntaxNode&#xA;Implements IFormattable" />
+  <TypeSignature Language="F#" Value="type CSharpSyntaxNode = class&#xA;    inherit SyntaxNode&#xA;    interface IFormattable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CSharpSyntaxNode abstract : Microsoft::CodeAnalysis::SyntaxNode, IFormattable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.SyntaxNode</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
             Represents a non-terminal node in the syntax tree.
@@ -23,18 +30,21 @@
   </Docs>
   <Members>
     <Member MemberName="Accept">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor ^ visitor);" />
       <MemberSignature Language="C#" Value="public abstract void Accept (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor visitor);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Accept(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Accept (visitor As CSharpSyntaxVisitor)" />
       <MemberSignature Language="F#" Value="abstract member Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor -&gt; unit" Usage="cSharpSyntaxNode.Accept visitor" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor ^ visitor);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; abstract void Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor ^ visitor);" />
-      <MemberSignature Language="C++ WINRT" Value=" abstract void Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor const &amp; visitor);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -49,17 +59,21 @@
       </Docs>
     </Member>
     <Member MemberName="Accept&lt;TResult&gt;">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA; abstract TResult Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor&lt;TResult&gt; ^ visitor);" />
       <MemberSignature Language="C#" Value="public abstract TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function Accept(Of TResult) (visitor As CSharpSyntaxVisitor(Of TResult)) As TResult" />
       <MemberSignature Language="F#" Value="abstract member Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;'Result&gt; -&gt; 'Result" Usage="cSharpSyntaxNode.Accept visitor" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA; abstract TResult Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor&lt;TResult&gt; ^ visitor);" />
-      <MemberSignature Language="C++ WINRT" Value="template &lt;typename TResult&gt;&#xA; abstract TResult Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor&lt;TResult&gt; const &amp; visitor);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
@@ -86,7 +100,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -106,18 +125,21 @@
       </Docs>
     </Member>
     <Member MemberName="EquivalentToCore">
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool EquivalentToCore(Microsoft::CodeAnalysis::SyntaxNode ^ other);" />
       <MemberSignature Language="C#" Value="protected override bool EquivalentToCore (Microsoft.CodeAnalysis.SyntaxNode other);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EquivalentToCore(class Microsoft.CodeAnalysis.SyntaxNode other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.EquivalentToCore(Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function EquivalentToCore (other As SyntaxNode) As Boolean" />
       <MemberSignature Language="F#" Value="override this.EquivalentToCore : Microsoft.CodeAnalysis.SyntaxNode -&gt; bool" Usage="cSharpSyntaxNode.EquivalentToCore other" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool EquivalentToCore(Microsoft::CodeAnalysis::SyntaxNode ^ other);" />
-      <MemberSignature Language="C++ CX" Value="protected:&#xA; override bool EquivalentToCore(Microsoft::CodeAnalysis::SyntaxNode ^ other);" />
-      <MemberSignature Language="C++ WINRT" Value=" override bool EquivalentToCore(Microsoft::CodeAnalysis::SyntaxNode const &amp; other);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -126,7 +148,8 @@
         <Parameter Name="other" Type="Microsoft.CodeAnalysis.SyntaxNode" />
       </Parameters>
       <Docs>
-        <param name="other"></param>
+        <param name="other">
+        </param>
         <summary>
             Determine if this node is structurally equivalent to another.
             </summary>
@@ -143,7 +166,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -178,7 +206,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
@@ -199,16 +232,21 @@
       </Docs>
     </Member>
     <Member MemberName="FindTrivia">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTrivia FindTrivia(int position, Func&lt;Microsoft::CodeAnalysis::SyntaxTrivia, bool&gt; ^ stepInto);" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTrivia FindTrivia (int position, Func&lt;Microsoft.CodeAnalysis.SyntaxTrivia,bool&gt; stepInto);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTrivia FindTrivia(int32 position, class System.Func`2&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia, bool&gt; stepInto) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindTrivia(System.Int32,System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="Public Function FindTrivia (position As Integer, stepInto As Func(Of SyntaxTrivia, Boolean)) As SyntaxTrivia" />
       <MemberSignature Language="F#" Value="override this.FindTrivia : int * Func&lt;Microsoft.CodeAnalysis.SyntaxTrivia, bool&gt; -&gt; Microsoft.CodeAnalysis.SyntaxTrivia" Usage="cSharpSyntaxNode.FindTrivia (position, stepInto)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTrivia FindTrivia(int position, Func&lt;Microsoft::CodeAnalysis::SyntaxTrivia, bool&gt; ^ stepInto);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
@@ -231,16 +269,21 @@
       </Docs>
     </Member>
     <Member MemberName="GetDiagnostics">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^ GetDiagnostics();" />
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; GetDiagnostics() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetDiagnostics" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDiagnostics () As IEnumerable(Of Diagnostic)" />
       <MemberSignature Language="F#" Value="override this.GetDiagnostics : unit -&gt; seq&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="cSharpSyntaxNode.GetDiagnostics " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Diagnostic ^&gt; ^ GetDiagnostics();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
@@ -265,7 +308,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax</ReturnType>
@@ -291,7 +339,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -325,7 +378,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax</ReturnType>
@@ -351,7 +409,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -377,16 +440,21 @@
       </Docs>
     </Member>
     <Member MemberName="GetLeadingTrivia">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList GetLeadingTrivia();" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTriviaList GetLeadingTrivia ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTriviaList GetLeadingTrivia() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetLeadingTrivia" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLeadingTrivia () As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="override this.GetLeadingTrivia : unit -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="cSharpSyntaxNode.GetLeadingTrivia " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList GetLeadingTrivia();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -401,18 +469,21 @@
       </Docs>
     </Member>
     <Member MemberName="GetLocation">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Location ^ GetLocation();" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Location GetLocation ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Location GetLocation() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetLocation" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLocation () As Location" />
       <MemberSignature Language="F#" Value="override this.GetLocation : unit -&gt; Microsoft.CodeAnalysis.Location" Usage="cSharpSyntaxNode.GetLocation " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Location ^ GetLocation();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Microsoft::CodeAnalysis::Location ^ GetLocation();" />
-      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::Location GetLocation();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
@@ -427,16 +498,21 @@
       </Docs>
     </Member>
     <Member MemberName="GetTrailingTrivia">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList GetTrailingTrivia();" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTriviaList GetTrailingTrivia ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.SyntaxTriviaList GetTrailingTrivia() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetTrailingTrivia" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTrailingTrivia () As SyntaxTriviaList" />
       <MemberSignature Language="F#" Value="override this.GetTrailingTrivia : unit -&gt; Microsoft.CodeAnalysis.SyntaxTriviaList" Usage="cSharpSyntaxNode.GetTrailingTrivia " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::SyntaxTriviaList GetTrailingTrivia();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -451,16 +527,21 @@
       </Docs>
     </Member>
     <Member MemberName="InsertNodesInListCore">
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ InsertNodesInListCore(Microsoft::CodeAnalysis::SyntaxNode ^ nodeInList, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt; ^ nodesToInsert, bool insertBefore);" />
       <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode InsertNodesInListCore (Microsoft.CodeAnalysis.SyntaxNode nodeInList, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; nodesToInsert, bool insertBefore);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode InsertNodesInListCore(class Microsoft.CodeAnalysis.SyntaxNode nodeInList, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; nodesToInsert, bool insertBefore) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.InsertNodesInListCore(Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function InsertNodesInListCore (nodeInList As SyntaxNode, nodesToInsert As IEnumerable(Of SyntaxNode), insertBefore As Boolean) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.InsertNodesInListCore : Microsoft.CodeAnalysis.SyntaxNode * seq&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; * bool -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.InsertNodesInListCore (nodeInList, nodesToInsert, insertBefore)" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ InsertNodesInListCore(Microsoft::CodeAnalysis::SyntaxNode ^ nodeInList, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt; ^ nodesToInsert, bool insertBefore);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -480,16 +561,21 @@
       </Docs>
     </Member>
     <Member MemberName="InsertTokensInListCore">
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ InsertTokensInListCore(Microsoft::CodeAnalysis::SyntaxToken originalToken, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxToken&gt; ^ newTokens, bool insertBefore);" />
       <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode InsertTokensInListCore (Microsoft.CodeAnalysis.SyntaxToken originalToken, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; newTokens, bool insertBefore);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode InsertTokensInListCore(valuetype Microsoft.CodeAnalysis.SyntaxToken originalToken, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; newTokens, bool insertBefore) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.InsertTokensInListCore(Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function InsertTokensInListCore (originalToken As SyntaxToken, newTokens As IEnumerable(Of SyntaxToken), insertBefore As Boolean) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.InsertTokensInListCore : Microsoft.CodeAnalysis.SyntaxToken * seq&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; * bool -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.InsertTokensInListCore (originalToken, newTokens, insertBefore)" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ InsertTokensInListCore(Microsoft::CodeAnalysis::SyntaxToken originalToken, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxToken&gt; ^ newTokens, bool insertBefore);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -509,16 +595,21 @@
       </Docs>
     </Member>
     <Member MemberName="InsertTriviaInListCore">
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ InsertTriviaInListCore(Microsoft::CodeAnalysis::SyntaxTrivia originalTrivia, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ newTrivia, bool insertBefore);" />
       <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode InsertTriviaInListCore (Microsoft.CodeAnalysis.SyntaxTrivia originalTrivia, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; newTrivia, bool insertBefore);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode InsertTriviaInListCore(valuetype Microsoft.CodeAnalysis.SyntaxTrivia originalTrivia, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; newTrivia, bool insertBefore) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.InsertTriviaInListCore(Microsoft.CodeAnalysis.SyntaxTrivia,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function InsertTriviaInListCore (originalTrivia As SyntaxTrivia, newTrivia As IEnumerable(Of SyntaxTrivia), insertBefore As Boolean) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.InsertTriviaInListCore : Microsoft.CodeAnalysis.SyntaxTrivia * seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; * bool -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.InsertTriviaInListCore (originalTrivia, newTrivia, insertBefore)" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ InsertTriviaInListCore(Microsoft::CodeAnalysis::SyntaxTrivia originalTrivia, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ newTrivia, bool insertBefore);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -543,11 +634,15 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.IsEquivalentToCore(Microsoft.CodeAnalysis.SyntaxNode,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsEquivalentToCore (node As SyntaxNode, Optional topLevel As Boolean = false) As Boolean" />
       <MemberSignature Language="F#" Value="override this.IsEquivalentToCore : Microsoft.CodeAnalysis.SyntaxNode * bool -&gt; bool" Usage="cSharpSyntaxNode.IsEquivalentToCore (node, topLevel)" />
-      <MemberSignature Language="C++ WINRT" Value=" override bool IsEquivalentToCore(Microsoft::CodeAnalysis::SyntaxNode const &amp; node, bool topLevel = false);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -565,18 +660,21 @@
       </Docs>
     </Member>
     <Member MemberName="Kind">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::SyntaxKind Kind();" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.SyntaxKind Kind ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.CSharp.SyntaxKind Kind() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Kind" />
       <MemberSignature Language="VB.NET" Value="Public Function Kind () As SyntaxKind" />
       <MemberSignature Language="F#" Value="member this.Kind : unit -&gt; Microsoft.CodeAnalysis.CSharp.SyntaxKind" Usage="cSharpSyntaxNode.Kind " />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::SyntaxKind Kind();" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::SyntaxKind Kind();" />
-      <MemberSignature Language="C++ WINRT" Value="Microsoft::CodeAnalysis::CSharp::SyntaxKind Kind();" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.SyntaxKind</ReturnType>
@@ -591,17 +689,21 @@
       </Docs>
     </Member>
     <Member MemberName="Language">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Language { System::String ^ get(); };" />
       <MemberSignature Language="C#" Value="public override string Language { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Language" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Language" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Language As String" />
       <MemberSignature Language="F#" Value="member this.Language : string" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.Language" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Language { System::String ^ get(); };" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; virtual property Platform::String ^ Language { Platform::String ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -615,18 +717,21 @@
       </Docs>
     </Member>
     <Member MemberName="NormalizeWhitespaceCore">
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ NormalizeWhitespaceCore(System::String ^ indentation, System::String ^ eol, bool elasticTrivia);" />
       <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode NormalizeWhitespaceCore (string indentation, string eol, bool elasticTrivia);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode NormalizeWhitespaceCore(string indentation, string eol, bool elasticTrivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.NormalizeWhitespaceCore(System.String,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function NormalizeWhitespaceCore (indentation As String, eol As String, elasticTrivia As Boolean) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.NormalizeWhitespaceCore : string * string * bool -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.NormalizeWhitespaceCore (indentation, eol, elasticTrivia)" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ NormalizeWhitespaceCore(System::String ^ indentation, System::String ^ eol, bool elasticTrivia);" />
-      <MemberSignature Language="C++ CX" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ NormalizeWhitespaceCore(Platform::String ^ indentation, Platform::String ^ eol, bool elasticTrivia);" />
-      <MemberSignature Language="C++ WINRT" Value=" override Microsoft::CodeAnalysis::SyntaxNode NormalizeWhitespaceCore(std::wstring const &amp; indentation, std::wstring const &amp; eol, bool elasticTrivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -646,16 +751,21 @@
       </Docs>
     </Member>
     <Member MemberName="RemoveNodesCore">
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ RemoveNodesCore(System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt; ^ nodes, Microsoft::CodeAnalysis::SyntaxRemoveOptions options);" />
       <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode RemoveNodesCore (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; nodes, Microsoft.CodeAnalysis.SyntaxRemoveOptions options);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode RemoveNodesCore(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; nodes, valuetype Microsoft.CodeAnalysis.SyntaxRemoveOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.RemoveNodesCore(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},Microsoft.CodeAnalysis.SyntaxRemoveOptions)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function RemoveNodesCore (nodes As IEnumerable(Of SyntaxNode), options As SyntaxRemoveOptions) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.RemoveNodesCore : seq&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; * Microsoft.CodeAnalysis.SyntaxRemoveOptions -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.RemoveNodesCore (nodes, options)" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ RemoveNodesCore(System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt; ^ nodes, Microsoft::CodeAnalysis::SyntaxRemoveOptions options);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -681,7 +791,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -715,16 +830,21 @@
       </Docs>
     </Member>
     <Member MemberName="ReplaceNodeInListCore">
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ ReplaceNodeInListCore(Microsoft::CodeAnalysis::SyntaxNode ^ originalNode, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt; ^ replacementNodes);" />
       <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode ReplaceNodeInListCore (Microsoft.CodeAnalysis.SyntaxNode originalNode, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; replacementNodes);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode ReplaceNodeInListCore(class Microsoft.CodeAnalysis.SyntaxNode originalNode, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; replacementNodes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.ReplaceNodeInListCore(Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ReplaceNodeInListCore (originalNode As SyntaxNode, replacementNodes As IEnumerable(Of SyntaxNode)) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.ReplaceNodeInListCore : Microsoft.CodeAnalysis.SyntaxNode * seq&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.ReplaceNodeInListCore (originalNode, replacementNodes)" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ ReplaceNodeInListCore(Microsoft::CodeAnalysis::SyntaxNode ^ originalNode, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt; ^ replacementNodes);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -742,16 +862,21 @@
       </Docs>
     </Member>
     <Member MemberName="ReplaceTokenInListCore">
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ ReplaceTokenInListCore(Microsoft::CodeAnalysis::SyntaxToken originalToken, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxToken&gt; ^ newTokens);" />
       <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode ReplaceTokenInListCore (Microsoft.CodeAnalysis.SyntaxToken originalToken, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; newTokens);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode ReplaceTokenInListCore(valuetype Microsoft.CodeAnalysis.SyntaxToken originalToken, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; newTokens) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.ReplaceTokenInListCore(Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken})" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ReplaceTokenInListCore (originalToken As SyntaxToken, newTokens As IEnumerable(Of SyntaxToken)) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.ReplaceTokenInListCore : Microsoft.CodeAnalysis.SyntaxToken * seq&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.ReplaceTokenInListCore (originalToken, newTokens)" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ ReplaceTokenInListCore(Microsoft::CodeAnalysis::SyntaxToken originalToken, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxToken&gt; ^ newTokens);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -769,16 +894,21 @@
       </Docs>
     </Member>
     <Member MemberName="ReplaceTriviaInListCore">
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ ReplaceTriviaInListCore(Microsoft::CodeAnalysis::SyntaxTrivia originalTrivia, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ newTrivia);" />
       <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode ReplaceTriviaInListCore (Microsoft.CodeAnalysis.SyntaxTrivia originalTrivia, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; newTrivia);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode ReplaceTriviaInListCore(valuetype Microsoft.CodeAnalysis.SyntaxTrivia originalTrivia, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; newTrivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.ReplaceTriviaInListCore(Microsoft.CodeAnalysis.SyntaxTrivia,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia})" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ReplaceTriviaInListCore (originalTrivia As SyntaxTrivia, newTrivia As IEnumerable(Of SyntaxTrivia)) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.ReplaceTriviaInListCore : Microsoft.CodeAnalysis.SyntaxTrivia * seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.ReplaceTriviaInListCore (originalTrivia, newTrivia)" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ ReplaceTriviaInListCore(Microsoft::CodeAnalysis::SyntaxTrivia originalTrivia, System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxTrivia&gt; ^ newTrivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -796,17 +926,21 @@
       </Docs>
     </Member>
     <Member MemberName="SyntaxTreeCore">
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property Microsoft::CodeAnalysis::SyntaxTree ^ SyntaxTreeCore { Microsoft::CodeAnalysis::SyntaxTree ^ get(); };" />
       <MemberSignature Language="C#" Value="protected override Microsoft.CodeAnalysis.SyntaxTree SyntaxTreeCore { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SyntaxTree SyntaxTreeCore" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.SyntaxTreeCore" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property SyntaxTreeCore As SyntaxTree" />
       <MemberSignature Language="F#" Value="member this.SyntaxTreeCore : Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.SyntaxTreeCore" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property Microsoft::CodeAnalysis::SyntaxTree ^ SyntaxTreeCore { Microsoft::CodeAnalysis::SyntaxTree ^ get(); };" />
-      <MemberSignature Language="C++ CX" Value="protected:&#xA; virtual property Microsoft::CodeAnalysis::SyntaxTree ^ SyntaxTreeCore { Microsoft::CodeAnalysis::SyntaxTree ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
@@ -814,6 +948,40 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C++ CLI" Value=" virtual System::String ^ System.IFormattable.ToString(System::String ^ format, IFormatProvider ^ formatProvider) = IFormattable::ToString;" />
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberSignature Language="VB.NET" Value="Function ToString (format As String, formatProvider As IFormatProvider) As String Implements IFormattable.ToString" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IFormattable.ToString(System.String,System.IFormatProvider)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">To be added.</param>
+        <param name="formatProvider">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

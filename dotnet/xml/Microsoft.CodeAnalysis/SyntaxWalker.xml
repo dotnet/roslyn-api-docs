@@ -1,15 +1,18 @@
-﻿<Type Name="SyntaxWalker" FullName="Microsoft.CodeAnalysis.SyntaxWalker">
+<Type Name="SyntaxWalker" FullName="Microsoft.CodeAnalysis.SyntaxWalker">
   <TypeSignature Language="C#" Value="public abstract class SyntaxWalker" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SyntaxWalker extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SyntaxWalker" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class SyntaxWalker" />
   <TypeSignature Language="F#" Value="type SyntaxWalker = class" />
   <TypeSignature Language="C++ CLI" Value="public ref class SyntaxWalker abstract" />
-  <TypeSignature Language="C++ CX" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;public ref class SyntaxWalker abstract" />
-  <TypeSignature Language="C++ WINRT" Value="[Windows::Foundation::Metadata::WebHostHidden]&#xA;class SyntaxWalker abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,17 +32,21 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxWalker.#ctor(Microsoft.CodeAnalysis.SyntaxWalkerDepth)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (Optional depth As SyntaxWalkerDepth = Microsoft.CodeAnalysis.SyntaxWalkerDepth.Node)" />
       <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.SyntaxWalker : Microsoft.CodeAnalysis.SyntaxWalkerDepth -&gt; Microsoft.CodeAnalysis.SyntaxWalker" Usage="new Microsoft.CodeAnalysis.SyntaxWalker depth" />
-      <MemberSignature Language="C++ WINRT" Value=" SyntaxWalker(Microsoft::CodeAnalysis::SyntaxWalkerDepth depth = Microsoft.CodeAnalysis.SyntaxWalkerDepth.Node);" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="depth" Type="Microsoft.CodeAnalysis.SyntaxWalkerDepth" />
       </Parameters>
       <Docs>
-        <param name="depth">Syntax the <see cref="T:Microsoft.CodeAnalysis.SyntaxWalker" /> should descent into.</param>
+        <param name="depth">Syntax the <see cref="T:Microsoft.CodeAnalysis.SyntaxWalker" /> should descend into.</param>
         <summary>
             Creates a new walker instance.
             </summary>
@@ -47,42 +54,49 @@
       </Docs>
     </Member>
     <Member MemberName="Depth">
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property Microsoft::CodeAnalysis::SyntaxWalkerDepth Depth { Microsoft::CodeAnalysis::SyntaxWalkerDepth get(); };" />
       <MemberSignature Language="C#" Value="protected Microsoft.CodeAnalysis.SyntaxWalkerDepth Depth { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxWalkerDepth Depth" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SyntaxWalker.Depth" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property Depth As SyntaxWalkerDepth" />
       <MemberSignature Language="F#" Value="member this.Depth : Microsoft.CodeAnalysis.SyntaxWalkerDepth" Usage="Microsoft.CodeAnalysis.SyntaxWalker.Depth" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property Microsoft::CodeAnalysis::SyntaxWalkerDepth Depth { Microsoft::CodeAnalysis::SyntaxWalkerDepth get(); };" />
-      <MemberSignature Language="C++ CX" Value="protected:&#xA; property Microsoft::CodeAnalysis::SyntaxWalkerDepth Depth { Microsoft::CodeAnalysis::SyntaxWalkerDepth get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxWalkerDepth</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Syntax the <see cref="T:Microsoft.CodeAnalysis.SyntaxWalker" /> should descent into.
+            Syntax the <see cref="T:Microsoft.CodeAnalysis.SyntaxWalker" /> should descend into.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Visit">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Visit(Microsoft::CodeAnalysis::SyntaxNode ^ node);" />
       <MemberSignature Language="C#" Value="public virtual void Visit (Microsoft.CodeAnalysis.SyntaxNode node);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Visit(class Microsoft.CodeAnalysis.SyntaxNode node) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxWalker.Visit(Microsoft.CodeAnalysis.SyntaxNode)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub Visit (node As SyntaxNode)" />
       <MemberSignature Language="F#" Value="abstract member Visit : Microsoft.CodeAnalysis.SyntaxNode -&gt; unit&#xA;override this.Visit : Microsoft.CodeAnalysis.SyntaxNode -&gt; unit" Usage="syntaxWalker.Visit node" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Visit(Microsoft::CodeAnalysis::SyntaxNode ^ node);" />
-      <MemberSignature Language="C++ CX" Value="public:&#xA; virtual void Visit(Microsoft::CodeAnalysis::SyntaxNode ^ node);" />
-      <MemberSignature Language="C++ WINRT" Value=" virtual void Visit(Microsoft::CodeAnalysis::SyntaxNode const &amp; node);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -101,16 +115,21 @@
       </Docs>
     </Member>
     <Member MemberName="VisitToken">
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void VisitToken(Microsoft::CodeAnalysis::SyntaxToken token);" />
       <MemberSignature Language="C#" Value="protected virtual void VisitToken (Microsoft.CodeAnalysis.SyntaxToken token);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void VisitToken(valuetype Microsoft.CodeAnalysis.SyntaxToken token) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxWalker.VisitToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub VisitToken (token As SyntaxToken)" />
       <MemberSignature Language="F#" Value="abstract member VisitToken : Microsoft.CodeAnalysis.SyntaxToken -&gt; unit&#xA;override this.VisitToken : Microsoft.CodeAnalysis.SyntaxToken -&gt; unit" Usage="syntaxWalker.VisitToken token" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void VisitToken(Microsoft::CodeAnalysis::SyntaxToken token);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -129,16 +148,21 @@
       </Docs>
     </Member>
     <Member MemberName="VisitTrivia">
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void VisitTrivia(Microsoft::CodeAnalysis::SyntaxTrivia trivia);" />
       <MemberSignature Language="C#" Value="protected virtual void VisitTrivia (Microsoft.CodeAnalysis.SyntaxTrivia trivia);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void VisitTrivia(valuetype Microsoft.CodeAnalysis.SyntaxTrivia trivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxWalker.VisitTrivia(Microsoft.CodeAnalysis.SyntaxTrivia)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub VisitTrivia (trivia As SyntaxTrivia)" />
       <MemberSignature Language="F#" Value="abstract member VisitTrivia : Microsoft.CodeAnalysis.SyntaxTrivia -&gt; unit&#xA;override this.VisitTrivia : Microsoft.CodeAnalysis.SyntaxTrivia -&gt; unit" Usage="syntaxWalker.VisitTrivia trivia" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void VisitTrivia(Microsoft::CodeAnalysis::SyntaxTrivia trivia);" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

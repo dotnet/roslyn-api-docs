@@ -1,17 +1,23 @@
-﻿<Type Name="IDeclarationPatternOperation" FullName="Microsoft.CodeAnalysis.Operations.IDeclarationPatternOperation">
+<Type Name="IDeclarationPatternOperation" FullName="Microsoft.CodeAnalysis.Operations.IDeclarationPatternOperation">
   <TypeSignature Language="C#" Value="public interface IDeclarationPatternOperation : Microsoft.CodeAnalysis.Operations.IPatternOperation" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDeclarationPatternOperation implements class Microsoft.CodeAnalysis.IOperation, class Microsoft.CodeAnalysis.Operations.IPatternOperation" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IDeclarationPatternOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface IDeclarationPatternOperation&#xA;Implements IPatternOperation" />
   <TypeSignature Language="F#" Value="type IDeclarationPatternOperation = interface&#xA;    interface IPatternOperation&#xA;    interface IOperation" />
   <TypeSignature Language="C++ CLI" Value="public interface class IDeclarationPatternOperation : Microsoft::CodeAnalysis::Operations::IPatternOperation" />
-  <TypeSignature Language="C++ CX" Value="public interface class IDeclarationPatternOperation : Microsoft::CodeAnalysis::Operations::IPatternOperation" />
-  <TypeSignature Language="C++ WINRT" Value="__interface IDeclarationPatternOperation : Microsoft::CodeAnalysis::Operations::IPatternOperation" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-    <AssemblyVersion>2.6.0.0</AssemblyVersion>
+    <AssemblyVersion>2.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.3.0.0</AssemblyVersion>
+    <AssemblyVersion>3.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.CodeAnalysis.Operations.IPatternOperation</InterfaceName>
     </Interface>
@@ -30,23 +36,82 @@
   </Docs>
   <Members>
     <Member MemberName="DeclaredSymbol">
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ISymbol ^ DeclaredSymbol { Microsoft::CodeAnalysis::ISymbol ^ get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol DeclaredSymbol { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISymbol DeclaredSymbol" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IDeclarationPatternOperation.DeclaredSymbol" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeclaredSymbol As ISymbol" />
       <MemberSignature Language="F#" Value="member this.DeclaredSymbol : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.Operations.IDeclarationPatternOperation.DeclaredSymbol" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ISymbol ^ DeclaredSymbol { Microsoft::CodeAnalysis::ISymbol ^ get(); };" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.6.0.0</AssemblyVersion>
+        <AssemblyVersion>2.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Symbol declared by the pattern.
+            Symbol declared by the pattern, if any.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchedType">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ITypeSymbol MatchedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ITypeSymbol MatchedType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IDeclarationPatternOperation.MatchedType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MatchedType As ITypeSymbol" />
+      <MemberSignature Language="F#" Value="member this.MatchedType : Microsoft.CodeAnalysis.ITypeSymbol" Usage="Microsoft.CodeAnalysis.Operations.IDeclarationPatternOperation.MatchedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type explicitly specified, or null if it was inferred (e.g. using <code>var</code> in C#).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesNull">
+      <MemberSignature Language="C#" Value="public bool MatchesNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MatchesNull" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IDeclarationPatternOperation.MatchesNull" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MatchesNull As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MatchesNull : bool" Usage="Microsoft.CodeAnalysis.Operations.IDeclarationPatternOperation.MatchesNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.1.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.3.0.0</AssemblyVersion>
+        <AssemblyVersion>3.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the pattern is of a form that accepts null.
+            For example, in C# the pattern `var x` will match a null input,
+            while the pattern `string x` will not.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
