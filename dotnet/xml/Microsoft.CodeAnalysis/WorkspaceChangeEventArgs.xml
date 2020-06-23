@@ -1,10 +1,10 @@
 <Type Name="WorkspaceChangeEventArgs" FullName="Microsoft.CodeAnalysis.WorkspaceChangeEventArgs">
+  <TypeSignature Language="C++ CLI" Value="public ref class WorkspaceChangeEventArgs : EventArgs" />
   <TypeSignature Language="C#" Value="public class WorkspaceChangeEventArgs : EventArgs" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkspaceChangeEventArgs extends System.EventArgs" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public Class WorkspaceChangeEventArgs&#xA;Inherits EventArgs" />
   <TypeSignature Language="F#" Value="type WorkspaceChangeEventArgs = class&#xA;    inherit EventArgs" />
-  <TypeSignature Language="C++ CLI" Value="public ref class WorkspaceChangeEventArgs : EventArgs" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.EventArgs</BaseTypeName>
@@ -32,9 +34,10 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public WorkspaceChangeEventArgs (Microsoft.CodeAnalysis.WorkspaceChangeKind kind, Microsoft.CodeAnalysis.Solution oldSolution, Microsoft.CodeAnalysis.Solution newSolution, Microsoft.CodeAnalysis.ProjectId projectId = null, Microsoft.CodeAnalysis.DocumentId documentId = null);" />
+      <MemberSignature Language="C#" Value="public WorkspaceChangeEventArgs (Microsoft.CodeAnalysis.WorkspaceChangeKind kind, Microsoft.CodeAnalysis.Solution oldSolution, Microsoft.CodeAnalysis.Solution newSolution, Microsoft.CodeAnalysis.ProjectId projectId = default, Microsoft.CodeAnalysis.DocumentId documentId = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.WorkspaceChangeKind kind, class Microsoft.CodeAnalysis.Solution oldSolution, class Microsoft.CodeAnalysis.Solution newSolution, class Microsoft.CodeAnalysis.ProjectId projectId, class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs.#ctor(Microsoft.CodeAnalysis.WorkspaceChangeKind,Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.DocumentId)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (kind As WorkspaceChangeKind, oldSolution As Solution, newSolution As Solution, Optional projectId As ProjectId = null, Optional documentId As DocumentId = null)" />
       <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.WorkspaceChangeEventArgs : Microsoft.CodeAnalysis.WorkspaceChangeKind * Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.ProjectId * Microsoft.CodeAnalysis.DocumentId -&gt; Microsoft.CodeAnalysis.WorkspaceChangeEventArgs" Usage="new Microsoft.CodeAnalysis.WorkspaceChangeEventArgs (kind, oldSolution, newSolution, projectId, documentId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
@@ -45,6 +48,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="kind" Type="Microsoft.CodeAnalysis.WorkspaceChangeKind" />
@@ -79,12 +84,17 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DocumentId</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The id of the affected <see cref="T:Microsoft.CodeAnalysis.Document" />.  Can be <see langword="null" /> if this is an change unrelated
+            to a document (for example <see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.ProjectAdded" />. Should be non-<see langword="null" /> for:
+            <list type="bullet"><item><see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.DocumentAdded" /></item><item><see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.DocumentChanged" /></item><item><see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.DocumentInfoChanged" /></item><item><see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.DocumentReloaded" /></item><item><see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.DocumentRemoved" /></item></list></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -105,6 +115,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.WorkspaceChangeKind</ReturnType>
@@ -131,6 +143,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -139,8 +153,9 @@
         <summary>To be added.</summary>
         <value>To be added.</value>
         <remarks>
-            If linked documents are being changed, there may be multiple events with the same
-            <see cref="P:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs.OldSolution" /> and <see cref="P:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs.NewSolution" />.
+            If linked documents are being changed, there may be multiple events with the same <see cref="P:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs.OldSolution" />
+            and <see cref="P:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs.NewSolution" />. Note <see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.SolutionRemoved" /> replaces the previous
+            solution with the empty one.
             </remarks>
       </Docs>
     </Member>
@@ -160,6 +175,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -168,8 +185,10 @@
         <summary>To be added.</summary>
         <value>To be added.</value>
         <remarks>
-            If linked documents are being changed, there may be multiple events with the same
-            <see cref="P:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs.OldSolution" /> and <see cref="P:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs.NewSolution" />.
+            If linked documents are being changed, there may be multiple events with the same <see cref="P:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs.OldSolution" />
+            and <see cref="P:Microsoft.CodeAnalysis.WorkspaceChangeEventArgs.NewSolution" />.  Note that the workspace starts with its solution set to an empty solution.
+            <see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.SolutionAdded" /> replaces the previous solution, which might be the empty
+            one.
             </remarks>
       </Docs>
     </Member>
@@ -189,12 +208,17 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ProjectId</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            The id of the affected <see cref="T:Microsoft.CodeAnalysis.Project" />.  Can be <see langword="null" /> if this is an change unrelated
+            to a project (for example <see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.SolutionReloaded" />.  Should be non-<see langword="null" /> for:
+            <list type="bullet"><item><see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.ProjectAdded" /></item><item><see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.ProjectChanged" /></item><item><see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.ProjectReloaded" /></item><item><see cref="F:Microsoft.CodeAnalysis.WorkspaceChangeKind.ProjectRemoved" /></item></list></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

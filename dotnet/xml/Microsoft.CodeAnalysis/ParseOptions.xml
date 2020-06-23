@@ -1,10 +1,10 @@
 <Type Name="ParseOptions" FullName="Microsoft.CodeAnalysis.ParseOptions">
+  <TypeSignature Language="C++ CLI" Value="public ref class ParseOptions abstract" />
   <TypeSignature Language="C#" Value="public abstract class ParseOptions" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ParseOptions extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ParseOptions" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ParseOptions" />
   <TypeSignature Language="F#" Value="type ParseOptions = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class ParseOptions abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -30,6 +32,7 @@
       <MemberSignature Language="C#" Value="protected abstract Microsoft.CodeAnalysis.ParseOptions CommonWithDocumentationMode (Microsoft.CodeAnalysis.DocumentationMode documentationMode);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.ParseOptions CommonWithDocumentationMode(valuetype Microsoft.CodeAnalysis.DocumentationMode documentationMode) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ParseOptions.CommonWithDocumentationMode(Microsoft.CodeAnalysis.DocumentationMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function CommonWithDocumentationMode (documentationMode As DocumentationMode) As ParseOptions" />
       <MemberSignature Language="F#" Value="abstract member CommonWithDocumentationMode : Microsoft.CodeAnalysis.DocumentationMode -&gt; Microsoft.CodeAnalysis.ParseOptions" Usage="parseOptions.CommonWithDocumentationMode documentationMode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -40,6 +43,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ParseOptions</ReturnType>
@@ -70,6 +75,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ParseOptions</ReturnType>
@@ -100,10 +107,12 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -135,6 +144,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DocumentationMode</ReturnType>
@@ -164,6 +175,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -194,12 +207,20 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="other" Type="Microsoft.CodeAnalysis.ParseOptions" />
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.ParseOptions">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet">
+              <AttributeName>System.Diagnostics.CodeAnalysis.NotNullWhen(true)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="other">To be added.</param>
@@ -224,6 +245,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
@@ -252,6 +275,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,System.String&gt;</ReturnType>
@@ -280,6 +305,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -307,6 +334,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -334,6 +363,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SourceCodeKind</ReturnType>
@@ -362,6 +393,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -390,6 +423,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -422,6 +457,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -454,6 +491,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -482,6 +521,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SourceCodeKind</ReturnType>
@@ -500,6 +541,7 @@
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ParseOptions WithDocumentationMode (Microsoft.CodeAnalysis.DocumentationMode documentationMode);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.ParseOptions WithDocumentationMode(valuetype Microsoft.CodeAnalysis.DocumentationMode documentationMode) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ParseOptions.WithDocumentationMode(Microsoft.CodeAnalysis.DocumentationMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithDocumentationMode (documentationMode As DocumentationMode) As ParseOptions" />
       <MemberSignature Language="F#" Value="member this.WithDocumentationMode : Microsoft.CodeAnalysis.DocumentationMode -&gt; Microsoft.CodeAnalysis.ParseOptions" Usage="parseOptions.WithDocumentationMode documentationMode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -510,6 +552,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ParseOptions</ReturnType>
@@ -542,6 +586,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ParseOptions</ReturnType>
@@ -574,6 +620,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ParseOptions</ReturnType>

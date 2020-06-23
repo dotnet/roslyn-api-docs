@@ -1,10 +1,10 @@
 <Type Name="TextLoader" FullName="Microsoft.CodeAnalysis.TextLoader">
+  <TypeSignature Language="C++ CLI" Value="public ref class TextLoader abstract" />
   <TypeSignature Language="C#" Value="public abstract class TextLoader" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextLoader extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.TextLoader" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class TextLoader" />
   <TypeSignature Language="F#" Value="type TextLoader = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class TextLoader abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -40,6 +42,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -52,6 +56,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.TextLoader From (Microsoft.CodeAnalysis.TextAndVersion textAndVersion);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.TextLoader From(class Microsoft.CodeAnalysis.TextAndVersion textAndVersion) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.TextLoader.From(Microsoft.CodeAnalysis.TextAndVersion)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function From (textAndVersion As TextAndVersion) As TextLoader" />
       <MemberSignature Language="F#" Value="static member From : Microsoft.CodeAnalysis.TextAndVersion -&gt; Microsoft.CodeAnalysis.TextLoader" Usage="Microsoft.CodeAnalysis.TextLoader.From textAndVersion" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -62,6 +67,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.TextLoader</ReturnType>
@@ -72,14 +79,14 @@
       <Docs>
         <param name="textAndVersion">To be added.</param>
         <summary>
-            Creates a new TextLoader from an already existing source text and version.
+            Creates a new <see cref="T:Microsoft.CodeAnalysis.TextLoader" /> from an already existing source text and version.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="From">
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.TextLoader From (Microsoft.CodeAnalysis.Text.SourceTextContainer container, Microsoft.CodeAnalysis.VersionStamp version, string filePath = null);" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.TextLoader From (Microsoft.CodeAnalysis.Text.SourceTextContainer container, Microsoft.CodeAnalysis.VersionStamp version, string filePath = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.TextLoader From(class Microsoft.CodeAnalysis.Text.SourceTextContainer container, valuetype Microsoft.CodeAnalysis.VersionStamp version, string filePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.TextLoader.From(Microsoft.CodeAnalysis.Text.SourceTextContainer,Microsoft.CodeAnalysis.VersionStamp,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function From (container As SourceTextContainer, version As VersionStamp, Optional filePath As String = null) As TextLoader" />
@@ -93,6 +100,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.TextLoader</ReturnType>
@@ -107,7 +116,7 @@
         <param name="version">To be added.</param>
         <param name="filePath">To be added.</param>
         <summary>
-            Creates a TextLoader from a SourceTextContainer and version. 
+            Creates a <see cref="T:Microsoft.CodeAnalysis.TextLoader" /> from a <see cref="T:Microsoft.CodeAnalysis.Text.SourceTextContainer" /> and version. 
             
             The text obtained from the loader will be the current text of the container at the time
             the loader is accessed.
@@ -121,6 +130,7 @@
       <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync (Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.DocumentId documentId, System.Threading.CancellationToken cancellationToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync(class Microsoft.CodeAnalysis.Workspace workspace, class Microsoft.CodeAnalysis.DocumentId documentId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.TextLoader.LoadTextAndVersionAsync(Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.DocumentId,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function LoadTextAndVersionAsync (workspace As Workspace, documentId As DocumentId, cancellationToken As CancellationToken) As Task(Of TextAndVersion)" />
       <MemberSignature Language="F#" Value="abstract member LoadTextAndVersionAsync : Microsoft.CodeAnalysis.Workspace * Microsoft.CodeAnalysis.DocumentId * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt;" Usage="textLoader.LoadTextAndVersionAsync (workspace, documentId, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -131,6 +141,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt;</ReturnType>
@@ -145,10 +157,13 @@
         <param name="documentId">To be added.</param>
         <param name="cancellationToken">To be added.</param>
         <summary>
-            Load a text and a version of the document in the workspace.
+            Load a text and a version of the document.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException" />
+        <exception cref="T:System.IO.InvalidDataException" />
+        <exception cref="T:System.OperationCanceledException" />
       </Docs>
     </Member>
   </Members>

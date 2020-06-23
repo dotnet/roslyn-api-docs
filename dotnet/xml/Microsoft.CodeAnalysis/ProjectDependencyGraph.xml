@@ -1,10 +1,10 @@
 <Type Name="ProjectDependencyGraph" FullName="Microsoft.CodeAnalysis.ProjectDependencyGraph">
+  <TypeSignature Language="C++ CLI" Value="public ref class ProjectDependencyGraph" />
   <TypeSignature Language="C#" Value="public class ProjectDependencyGraph" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectDependencyGraph extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ProjectDependencyGraph" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectDependencyGraph" />
   <TypeSignature Language="F#" Value="type ProjectDependencyGraph = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class ProjectDependencyGraph" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -26,9 +28,10 @@
   </Docs>
   <Members>
     <Member MemberName="GetDependencySets">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt;&gt; GetDependencySets (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt;&gt; GetDependencySets (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt;&gt; GetDependencySets(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetDependencySets(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDependencySets (Optional cancellationToken As CancellationToken = null) As IEnumerable(Of IEnumerable(Of ProjectId))" />
       <MemberSignature Language="F#" Value="member this.GetDependencySets : System.Threading.CancellationToken -&gt; seq&lt;seq&lt;Microsoft.CodeAnalysis.ProjectId&gt;&gt;" Usage="projectDependencyGraph.GetDependencySets cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -39,6 +42,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt;&gt;</ReturnType>
@@ -61,6 +66,7 @@
       <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatDirectlyDependOnThisProject (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatDirectlyDependOnThisProject(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetProjectsThatDirectlyDependOnThisProject(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetProjectsThatDirectlyDependOnThisProject (projectId As ProjectId) As IImmutableSet(Of ProjectId)" />
       <MemberSignature Language="F#" Value="member this.GetProjectsThatDirectlyDependOnThisProject : Microsoft.CodeAnalysis.ProjectId -&gt; System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetProjectsThatDirectlyDependOnThisProject projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -71,6 +77,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
@@ -92,6 +100,7 @@
       <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatThisProjectDirectlyDependsOn (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatThisProjectDirectlyDependsOn(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetProjectsThatThisProjectDirectlyDependsOn(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetProjectsThatThisProjectDirectlyDependsOn (projectId As ProjectId) As IImmutableSet(Of ProjectId)" />
       <MemberSignature Language="F#" Value="member this.GetProjectsThatThisProjectDirectlyDependsOn : Microsoft.CodeAnalysis.ProjectId -&gt; System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetProjectsThatThisProjectDirectlyDependsOn projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -102,6 +111,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
@@ -123,6 +134,7 @@
       <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatThisProjectTransitivelyDependsOn (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatThisProjectTransitivelyDependsOn(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetProjectsThatThisProjectTransitivelyDependsOn(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetProjectsThatThisProjectTransitivelyDependsOn (projectId As ProjectId) As IImmutableSet(Of ProjectId)" />
       <MemberSignature Language="F#" Value="member this.GetProjectsThatThisProjectTransitivelyDependsOn : Microsoft.CodeAnalysis.ProjectId -&gt; System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetProjectsThatThisProjectTransitivelyDependsOn projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -133,6 +145,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
@@ -154,6 +168,7 @@
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatTransitivelyDependOnThisProject (Microsoft.CodeAnalysis.ProjectId projectId);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetProjectsThatTransitivelyDependOnThisProject(class Microsoft.CodeAnalysis.ProjectId projectId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetProjectsThatTransitivelyDependOnThisProject(Microsoft.CodeAnalysis.ProjectId)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetProjectsThatTransitivelyDependOnThisProject (projectId As ProjectId) As IEnumerable(Of ProjectId)" />
       <MemberSignature Language="F#" Value="member this.GetProjectsThatTransitivelyDependOnThisProject : Microsoft.CodeAnalysis.ProjectId -&gt; seq&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetProjectsThatTransitivelyDependOnThisProject projectId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -164,6 +179,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>
@@ -181,9 +198,10 @@
       </Docs>
     </Member>
     <Member MemberName="GetTopologicallySortedProjects">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetTopologicallySortedProjects (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt; GetTopologicallySortedProjects (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ProjectId&gt; GetTopologicallySortedProjects(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ProjectDependencyGraph.GetTopologicallySortedProjects(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTopologicallySortedProjects (Optional cancellationToken As CancellationToken = null) As IEnumerable(Of ProjectId)" />
       <MemberSignature Language="F#" Value="member this.GetTopologicallySortedProjects : System.Threading.CancellationToken -&gt; seq&lt;Microsoft.CodeAnalysis.ProjectId&gt;" Usage="projectDependencyGraph.GetTopologicallySortedProjects cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -194,6 +212,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectId&gt;</ReturnType>

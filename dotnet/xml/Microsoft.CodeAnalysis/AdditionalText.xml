@@ -1,10 +1,10 @@
 <Type Name="AdditionalText" FullName="Microsoft.CodeAnalysis.AdditionalText">
+  <TypeSignature Language="C++ CLI" Value="public ref class AdditionalText abstract" />
   <TypeSignature Language="C#" Value="public abstract class AdditionalText" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AdditionalText extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.AdditionalText" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class AdditionalText" />
   <TypeSignature Language="F#" Value="type AdditionalText = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class AdditionalText abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -40,6 +42,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -48,9 +52,10 @@
       </Docs>
     </Member>
     <Member MemberName="GetText">
-      <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.Text.SourceText GetText (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.Text.SourceText GetText (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.CodeAnalysis.Text.SourceText GetText(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AdditionalText.GetText(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetText (Optional cancellationToken As CancellationToken = null) As SourceText" />
       <MemberSignature Language="F#" Value="abstract member GetText : System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="additionalText.GetText cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -61,6 +66,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Text.SourceText</ReturnType>
@@ -71,7 +78,8 @@
       <Docs>
         <param name="cancellationToken">To be added.</param>
         <summary>
-            Retrieves a <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" /> with the contents of this file.
+            Returns a <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" /> with the contents of this file, or <c>null</c> if
+            there were errors reading the file.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -93,6 +101,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
