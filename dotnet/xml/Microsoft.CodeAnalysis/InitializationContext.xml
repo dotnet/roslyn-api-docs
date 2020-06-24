@@ -1,0 +1,86 @@
+<Type Name="InitializationContext" FullName="Microsoft.CodeAnalysis.InitializationContext">
+  <TypeSignature Language="C#" Value="public struct InitializationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit InitializationContext extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.InitializationContext" />
+  <TypeSignature Language="VB.NET" Value="Public Structure InitializationContext" />
+  <TypeSignature Language="F#" Value="type InitializationContext = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Context passed to a source generator when <see cref="M:Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.InitializationContext)" /> is called
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.InitializationContext.CancellationToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CancellationToken As CancellationToken" />
+      <MemberSignature Language="F#" Value="member this.CancellationToken : System.Threading.CancellationToken" Usage="Microsoft.CodeAnalysis.InitializationContext.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.CompilerServices.IsReadOnly</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A <see cref="P:Microsoft.CodeAnalysis.InitializationContext.CancellationToken" /> that can be checked to see if the initialization should be cancelled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterForSyntaxNotifications">
+      <MemberSignature Language="C#" Value="public void RegisterForSyntaxNotifications (Microsoft.CodeAnalysis.SyntaxReceiverCreator receiverCreator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterForSyntaxNotifications(class Microsoft.CodeAnalysis.SyntaxReceiverCreator receiverCreator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications(Microsoft.CodeAnalysis.SyntaxReceiverCreator)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterForSyntaxNotifications (receiverCreator As SyntaxReceiverCreator)" />
+      <MemberSignature Language="F#" Value="member this.RegisterForSyntaxNotifications : Microsoft.CodeAnalysis.SyntaxReceiverCreator -&gt; unit" Usage="initializationContext.RegisterForSyntaxNotifications receiverCreator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receiverCreator" Type="Microsoft.CodeAnalysis.SyntaxReceiverCreator" />
+      </Parameters>
+      <Docs>
+        <param name="receiverCreator">A <see cref="T:Microsoft.CodeAnalysis.SyntaxReceiverCreator" /> that can be invoked to create an instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /></param>
+        <summary>
+            Register a <see cref="T:Microsoft.CodeAnalysis.SyntaxReceiverCreator" /> for this generator, which can be used to create an instance of an <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" />.
+            </summary>
+        <remarks>
+            This method allows generators to be 'syntax aware'. Before each generation the <paramref name="receiverCreator" /> will be invoked to create
+            an instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" />. This receiver will have its <see cref="M:Microsoft.CodeAnalysis.ISyntaxReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.SyntaxNode)" /> 
+            invoked for each syntax node in the compilation, allowing the receiver to build up information about the compilation before generation occurs.
+            
+            During <see cref="M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.SourceGeneratorContext)" /> the generator can obtain the <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /> instance that was
+            created by accessing the <see cref="P:Microsoft.CodeAnalysis.SourceGeneratorContext.SyntaxReceiver" /> property. Any information that was collected by the receiver can be
+            used to generate the final output.
+            
+            A new instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /> is created per-generation, meaning there is no need to manage the lifetime of the 
+            receiver or its contents.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

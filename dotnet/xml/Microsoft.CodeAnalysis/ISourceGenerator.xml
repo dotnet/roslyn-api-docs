@@ -1,0 +1,85 @@
+<Type Name="ISourceGenerator" FullName="Microsoft.CodeAnalysis.ISourceGenerator">
+  <TypeSignature Language="C#" Value="public interface ISourceGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISourceGenerator" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ISourceGenerator" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISourceGenerator" />
+  <TypeSignature Language="F#" Value="type ISourceGenerator = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The base interface required to implement a source generator
+            </summary>
+    <remarks>
+            The lifetime of a generator is controlled by the compiler.
+            State should not be stored directly on the generator, as there
+            is no guarantee that the same instance will be used on a 
+            subsequent generation pass.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public void Execute (Microsoft.CodeAnalysis.SourceGeneratorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(valuetype Microsoft.CodeAnalysis.SourceGeneratorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.SourceGeneratorContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Execute (context As SourceGeneratorContext)" />
+      <MemberSignature Language="F#" Value="abstract member Execute : Microsoft.CodeAnalysis.SourceGeneratorContext -&gt; unit" Usage="iSourceGenerator.Execute context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.SourceGeneratorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">The <see cref="T:Microsoft.CodeAnalysis.SourceGeneratorContext" /> to add source to</param>
+        <summary>
+            Called to peform source generation. A generator can use the <paramref name="context" />
+            to add source files via the <see cref="M:Microsoft.CodeAnalysis.SourceGeneratorContext.AddSource(System.String,Microsoft.CodeAnalysis.Text.SourceText)" /> 
+            method.
+            </summary>
+        <remarks>
+            This call represents the main generation step. It is called after a <see cref="T:Microsoft.CodeAnalysis.Compilation" /> is 
+            created that contains the user written code. 
+            
+            A generator can use the <see cref="P:Microsoft.CodeAnalysis.SourceGeneratorContext.Compilation" /> property to
+            discover information about the users compilation and make decisions on what source to 
+            provide. 
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.CodeAnalysis.InitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(valuetype Microsoft.CodeAnalysis.InitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.InitializationContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize (context As InitializationContext)" />
+      <MemberSignature Language="F#" Value="abstract member Initialize : Microsoft.CodeAnalysis.InitializationContext -&gt; unit" Usage="iSourceGenerator.Initialize context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.InitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">The <see cref="T:Microsoft.CodeAnalysis.InitializationContext" /> to register callbacks on</param>
+        <summary>
+            Called before generation occurs. A generator can use the <paramref name="context" />
+            to register callbacks required to peform generation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

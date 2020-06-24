@@ -1,10 +1,10 @@
 <Type Name="Recommender" FullName="Microsoft.CodeAnalysis.Recommendations.Recommender">
+  <TypeSignature Language="C++ CLI" Value="public ref class Recommender abstract sealed" />
   <TypeSignature Language="C#" Value="public static class Recommender" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Recommender extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Recommendations.Recommender" />
   <TypeSignature Language="VB.NET" Value="Public Class Recommender" />
   <TypeSignature Language="F#" Value="type Recommender = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class Recommender abstract sealed" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -24,9 +26,10 @@
   </Docs>
   <Members>
     <Member MemberName="GetRecommendedSymbolsAtPosition">
-      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt; GetRecommendedSymbolsAtPosition (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet options = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt; GetRecommendedSymbolsAtPosition (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet options = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; GetRecommendedSymbolsAtPosition(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.Workspace workspace, class Microsoft.CodeAnalysis.Options.OptionSet options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Recommendations.Recommender.GetRecommendedSymbolsAtPosition(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetRecommendedSymbolsAtPosition (semanticModel As SemanticModel, position As Integer, workspace As Workspace, Optional options As OptionSet = null, Optional cancellationToken As CancellationToken = null) As IEnumerable(Of ISymbol)" />
       <MemberSignature Language="F#" Value="static member GetRecommendedSymbolsAtPosition : Microsoft.CodeAnalysis.SemanticModel * int * Microsoft.CodeAnalysis.Workspace * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -&gt; seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="Microsoft.CodeAnalysis.Recommendations.Recommender.GetRecommendedSymbolsAtPosition (semanticModel, position, workspace, options, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -37,6 +40,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -67,9 +72,10 @@
       </Docs>
     </Member>
     <Member MemberName="GetRecommendedSymbolsAtPositionAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; GetRecommendedSymbolsAtPositionAsync (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet options = null, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; GetRecommendedSymbolsAtPositionAsync (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet options = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; GetRecommendedSymbolsAtPositionAsync(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.Workspace workspace, class Microsoft.CodeAnalysis.Options.OptionSet options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Recommendations.Recommender.GetRecommendedSymbolsAtPositionAsync(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetRecommendedSymbolsAtPositionAsync (semanticModel As SemanticModel, position As Integer, workspace As Workspace, Optional options As OptionSet = null, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member GetRecommendedSymbolsAtPositionAsync : Microsoft.CodeAnalysis.SemanticModel * int * Microsoft.CodeAnalysis.Workspace * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.Recommendations.Recommender.GetRecommendedSymbolsAtPositionAsync (semanticModel, position, workspace, options, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -80,6 +86,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>

@@ -1,0 +1,60 @@
+<Type Name="ISyntaxReceiver" FullName="Microsoft.CodeAnalysis.ISyntaxReceiver">
+  <TypeSignature Language="C#" Value="public interface ISyntaxReceiver" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISyntaxReceiver" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ISyntaxReceiver" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISyntaxReceiver" />
+  <TypeSignature Language="F#" Value="type ISyntaxReceiver = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Receives notifications of each syntax node in the compilation before generation runs
+            </summary>
+    <remarks>
+            A <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> can provide an instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" />
+            via a <see cref="T:Microsoft.CodeAnalysis.SyntaxReceiverCreator" />.
+            
+            The compiler will invoke the <see cref="T:Microsoft.CodeAnalysis.SyntaxReceiverCreator" /> prior to generation to 
+            obtain an instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" />. This instance will have its 
+            <see cref="M:Microsoft.CodeAnalysis.ISyntaxReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.SyntaxNode)" /> called for every syntax node in the compilation.
+            
+            The <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /> can record any information about the nodes visited. During
+            <see cref="M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.SourceGeneratorContext)" /> the generator can obtain the 
+            created instance via the <see cref="P:Microsoft.CodeAnalysis.SourceGeneratorContext.SyntaxReceiver" /> property. The
+            information contained can be used to perform final generation.
+            
+            A new instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /> is created per-generation, meaning the instance
+            is free to store state without worrying about lifetime or reuse.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnVisitSyntaxNode">
+      <MemberSignature Language="C#" Value="public void OnVisitSyntaxNode (Microsoft.CodeAnalysis.SyntaxNode syntaxNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnVisitSyntaxNode(class Microsoft.CodeAnalysis.SyntaxNode syntaxNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISyntaxReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.SyntaxNode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OnVisitSyntaxNode (syntaxNode As SyntaxNode)" />
+      <MemberSignature Language="F#" Value="abstract member OnVisitSyntaxNode : Microsoft.CodeAnalysis.SyntaxNode -&gt; unit" Usage="iSyntaxReceiver.OnVisitSyntaxNode syntaxNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="syntaxNode" Type="Microsoft.CodeAnalysis.SyntaxNode" />
+      </Parameters>
+      <Docs>
+        <param name="syntaxNode">The current <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> being visited</param>
+        <summary>
+            Called for each <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> in the compilation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

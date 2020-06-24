@@ -1,10 +1,10 @@
 <Type Name="StatementSyntax" FullName="Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax">
+  <TypeSignature Language="C++ CLI" Value="public ref class StatementSyntax abstract : Microsoft::CodeAnalysis::CSharp::CSharpSyntaxNode" />
   <TypeSignature Language="C#" Value="public abstract class StatementSyntax : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StatementSyntax extends Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class StatementSyntax&#xA;Inherits CSharpSyntaxNode" />
   <TypeSignature Language="F#" Value="type StatementSyntax = class&#xA;    inherit CSharpSyntaxNode" />
-  <TypeSignature Language="C++ CLI" Value="public ref class StatementSyntax abstract : Microsoft::CodeAnalysis::CSharp::CSharpSyntaxNode" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode</BaseTypeName>
@@ -22,5 +24,80 @@
     <summary>Represents the base class for all statements syntax classes.</summary>
     <remarks>To be added.</remarks>
   </Docs>
-  <Members />
+  <Members>
+    <Member MemberName="AddAttributeLists">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax AddAttributeLists (params Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax AddAttributeLists(class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddAttributeLists (ParamArray items As AttributeListSyntax()) As StatementSyntax" />
+      <MemberSignature Language="F#" Value="member this.AddAttributeLists : Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[] -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax" Usage="statementSyntax.AddAttributeLists items" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet">
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="items">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeLists">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax.AttributeLists" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property AttributeLists As SyntaxList(Of AttributeListSyntax)" />
+      <MemberSignature Language="F#" Value="member this.AttributeLists : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax.AttributeLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithAttributeLists">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax WithAttributeLists(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithAttributeLists (attributeLists As SyntaxList(Of AttributeListSyntax)) As StatementSyntax" />
+      <MemberSignature Language="F#" Value="member this.WithAttributeLists : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax" Usage="statementSyntax.WithAttributeLists attributeLists" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="attributeLists">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
 </Type>

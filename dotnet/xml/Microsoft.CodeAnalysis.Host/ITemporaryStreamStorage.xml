@@ -1,10 +1,10 @@
 <Type Name="ITemporaryStreamStorage" FullName="Microsoft.CodeAnalysis.Host.ITemporaryStreamStorage">
+  <TypeSignature Language="C++ CLI" Value="public interface class ITemporaryStreamStorage : IDisposable" />
   <TypeSignature Language="C#" Value="public interface ITemporaryStreamStorage : IDisposable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITemporaryStreamStorage implements class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Host.ITemporaryStreamStorage" />
   <TypeSignature Language="VB.NET" Value="Public Interface ITemporaryStreamStorage&#xA;Implements IDisposable" />
   <TypeSignature Language="F#" Value="type ITemporaryStreamStorage = interface&#xA;    interface IDisposable" />
-  <TypeSignature Language="C++ CLI" Value="public interface class ITemporaryStreamStorage : IDisposable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -25,9 +27,10 @@
   </Docs>
   <Members>
     <Member MemberName="ReadStream">
-      <MemberSignature Language="C#" Value="public System.IO.Stream ReadStream (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public System.IO.Stream ReadStream (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream ReadStream(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.ITemporaryStreamStorage.ReadStream(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadStream (Optional cancellationToken As CancellationToken = null) As Stream" />
       <MemberSignature Language="F#" Value="abstract member ReadStream : System.Threading.CancellationToken -&gt; System.IO.Stream" Usage="iTemporaryStreamStorage.ReadStream cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -38,6 +41,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.Stream</ReturnType>
@@ -53,9 +58,10 @@
       </Docs>
     </Member>
     <Member MemberName="ReadStreamAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; ReadStreamAsync (System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; ReadStreamAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.IO.Stream&gt; ReadStreamAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.ITemporaryStreamStorage.ReadStreamAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadStreamAsync (Optional cancellationToken As CancellationToken = null) As Task(Of Stream)" />
       <MemberSignature Language="F#" Value="abstract member ReadStreamAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.IO.Stream&gt;" Usage="iTemporaryStreamStorage.ReadStreamAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -66,6 +72,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</ReturnType>
@@ -81,9 +89,10 @@
       </Docs>
     </Member>
     <Member MemberName="WriteStream">
-      <MemberSignature Language="C#" Value="public void WriteStream (System.IO.Stream stream, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public void WriteStream (System.IO.Stream stream, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteStream(class System.IO.Stream stream, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.ITemporaryStreamStorage.WriteStream(System.IO.Stream,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteStream (stream As Stream, Optional cancellationToken As CancellationToken = null)" />
       <MemberSignature Language="F#" Value="abstract member WriteStream : System.IO.Stream * System.Threading.CancellationToken -&gt; unit" Usage="iTemporaryStreamStorage.WriteStream (stream, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -94,6 +103,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -110,9 +121,10 @@
       </Docs>
     </Member>
     <Member MemberName="WriteStreamAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WriteStreamAsync (System.IO.Stream stream, System.Threading.CancellationToken cancellationToken = null);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WriteStreamAsync (System.IO.Stream stream, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task WriteStreamAsync(class System.IO.Stream stream, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.ITemporaryStreamStorage.WriteStreamAsync(System.IO.Stream,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteStreamAsync (stream As Stream, Optional cancellationToken As CancellationToken = null) As Task" />
       <MemberSignature Language="F#" Value="abstract member WriteStreamAsync : System.IO.Stream * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="iTemporaryStreamStorage.WriteStreamAsync (stream, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -123,6 +135,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
