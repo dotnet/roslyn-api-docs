@@ -1,10 +1,10 @@
 <Type Name="ICoalesceOperation" FullName="Microsoft.CodeAnalysis.Operations.ICoalesceOperation">
+  <TypeSignature Language="C++ CLI" Value="public interface class ICoalesceOperation : Microsoft::CodeAnalysis::IOperation" />
   <TypeSignature Language="C#" Value="public interface ICoalesceOperation : Microsoft.CodeAnalysis.IOperation" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICoalesceOperation implements class Microsoft.CodeAnalysis.IOperation" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.ICoalesceOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface ICoalesceOperation&#xA;Implements IOperation" />
   <TypeSignature Language="F#" Value="type ICoalesceOperation = interface&#xA;    interface IOperation" />
-  <TypeSignature Language="C++ CLI" Value="public interface class ICoalesceOperation : Microsoft::CodeAnalysis::IOperation" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -22,8 +24,8 @@
   <Docs>
     <summary>
             Represents a coalesce operation with two operands:
-             (1) <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" />, which is the first operand that is unconditionally evaluated and is the result of the operation if non null.
-             (2) <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.WhenNull" />, which is the second operand that is conditionally evaluated and is the result of the operation iff <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" /> is null.
+            (1) <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" />, which is the first operand that is unconditionally evaluated and is the result of the operation if non null.
+            (2) <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.WhenNull" />, which is the second operand that is conditionally evaluated and is the result of the operation if <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" /> is null.
             <para>
             Current usage:
              (1) C# null-coalescing expression "Value ?? WhenNull".
@@ -51,6 +53,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
@@ -79,6 +83,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Operations.CommonConversion</ReturnType>
@@ -86,9 +92,8 @@
       <Docs>
         <summary>
             Conversion associated with <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" /> when it is not null/Nothing.
-            
             Identity if result type of the operation is the same as type of <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" />.
-            Otherwise, if type of <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" /> is nullable, then conversion is applied to an 
+            Otherwise, if type of <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" /> is nullable, then conversion is applied to an
             unwrapped <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" />, otherwise to the <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" /> itself.
             </summary>
         <value>To be added.</value>
@@ -111,6 +116,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>

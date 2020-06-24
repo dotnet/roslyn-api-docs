@@ -1,0 +1,168 @@
+<Type Name="SourceGeneratorContext" FullName="Microsoft.CodeAnalysis.SourceGeneratorContext">
+  <TypeSignature Language="C#" Value="public struct SourceGeneratorContext" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SourceGeneratorContext extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SourceGeneratorContext" />
+  <TypeSignature Language="VB.NET" Value="Public Structure SourceGeneratorContext" />
+  <TypeSignature Language="F#" Value="type SourceGeneratorContext = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.IsReadOnly</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Context passed to a source generator when <see cref="M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.SourceGeneratorContext)" /> is called
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdditionalFiles">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt; AdditionalFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.AdditionalText&gt; AdditionalFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SourceGeneratorContext.AdditionalFiles" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AdditionalFiles As ImmutableArray(Of AdditionalText)" />
+      <MemberSignature Language="F#" Value="member this.AdditionalFiles : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt;" Usage="Microsoft.CodeAnalysis.SourceGeneratorContext.AdditionalFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A set of additional non-code text files that can be used by generators.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSource">
+      <MemberSignature Language="C#" Value="public void AddSource (string hintName, Microsoft.CodeAnalysis.Text.SourceText sourceText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSource(string hintName, class Microsoft.CodeAnalysis.Text.SourceText sourceText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SourceGeneratorContext.AddSource(System.String,Microsoft.CodeAnalysis.Text.SourceText)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddSource (hintName As String, sourceText As SourceText)" />
+      <MemberSignature Language="F#" Value="member this.AddSource : string * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit" Usage="sourceGeneratorContext.AddSource (hintName, sourceText)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hintName" Type="System.String" />
+        <Parameter Name="sourceText" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+      </Parameters>
+      <Docs>
+        <param name="hintName">To be added.</param>
+        <param name="sourceText">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SourceGeneratorContext.CancellationToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CancellationToken As CancellationToken" />
+      <MemberSignature Language="F#" Value="member this.CancellationToken : System.Threading.CancellationToken" Usage="Microsoft.CodeAnalysis.SourceGeneratorContext.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A <see cref="P:Microsoft.CodeAnalysis.SourceGeneratorContext.CancellationToken" /> that can be checked to see if the generation should be cancelled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compilation">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Compilation Compilation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.Compilation Compilation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SourceGeneratorContext.Compilation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Compilation As Compilation" />
+      <MemberSignature Language="F#" Value="member this.Compilation : Microsoft.CodeAnalysis.Compilation" Usage="Microsoft.CodeAnalysis.SourceGeneratorContext.Compilation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Compilation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the current <see cref="P:Microsoft.CodeAnalysis.SourceGeneratorContext.Compilation" /> at the time of execution.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This compilation contains only the user supplied code; other generated code is not
+            available. As user code can depend on the results of generation, it is possible that
+            this compilation will contain errors.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportDiagnostic">
+      <MemberSignature Language="C#" Value="public void ReportDiagnostic (Microsoft.CodeAnalysis.Diagnostic diagnostic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReportDiagnostic(class Microsoft.CodeAnalysis.Diagnostic diagnostic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SourceGeneratorContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ReportDiagnostic (diagnostic As Diagnostic)" />
+      <MemberSignature Language="F#" Value="member this.ReportDiagnostic : Microsoft.CodeAnalysis.Diagnostic -&gt; unit" Usage="sourceGeneratorContext.ReportDiagnostic diagnostic" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="diagnostic" Type="Microsoft.CodeAnalysis.Diagnostic" />
+      </Parameters>
+      <Docs>
+        <param name="diagnostic">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyntaxReceiver">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISyntaxReceiver SyntaxReceiver { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISyntaxReceiver SyntaxReceiver" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SourceGeneratorContext.SyntaxReceiver" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SyntaxReceiver As ISyntaxReceiver" />
+      <MemberSignature Language="F#" Value="member this.SyntaxReceiver : Microsoft.CodeAnalysis.ISyntaxReceiver" Usage="Microsoft.CodeAnalysis.SourceGeneratorContext.SyntaxReceiver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISyntaxReceiver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If the generator registered an <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /> during initialization, this will be the instance created for this generation pass.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="roslyn-dotnet">
   <Assemblies>
-    <Assembly Name="Microsoft.CodeAnalysis.CSharp" Version="3.4.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.4.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis" Version="3.4.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis.VisualBasic" Version="3.4.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis.VisualBasic.Workspaces" Version="3.4.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis.Workspaces" Version="3.4.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.CSharp" Version="3.6.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.6.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis" Version="3.6.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.VisualBasic" Version="3.6.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.VisualBasic.Workspaces" Version="3.6.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.Workspaces" Version="3.6.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.CodeAnalysis">
     <Type Name="Microsoft.CodeAnalysis.Accessibility" Id="T:Microsoft.CodeAnalysis.Accessibility">
@@ -311,6 +311,8 @@
     </Type>
     <Type Name="Microsoft.CodeAnalysis.CommandLineSourceFile" Id="T:Microsoft.CodeAnalysis.CommandLineSourceFile">
       <Member Id="M:Microsoft.CodeAnalysis.CommandLineSourceFile.#ctor(System.String,System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CommandLineSourceFile.#ctor(System.String,System.Boolean,System.Boolean)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CommandLineSourceFile.IsInputRedirected" />
       <Member Id="P:Microsoft.CodeAnalysis.CommandLineSourceFile.IsScript" />
       <Member Id="P:Microsoft.CodeAnalysis.CommandLineSourceFile.Path" />
     </Type>
@@ -341,7 +343,6 @@
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.CommonGetCompilationNamespace(Microsoft.CodeAnalysis.INamespaceSymbol)" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.CommonGetEntryPoint(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.CommonGetSemanticModel(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)" />
-      <Member Id="M:Microsoft.CodeAnalysis.Compilation.CommonGetSpecialType(Microsoft.CodeAnalysis.SpecialType)" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.CommonGetTypeByMetadataName(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.CommonRemoveAllSyntaxTrees" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.CommonRemoveSyntaxTrees(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTree})" />
@@ -771,6 +772,21 @@
       <Member Id="P:Microsoft.CodeAnalysis.FileTextLoader.DefaultEncoding" />
       <Member Id="P:Microsoft.CodeAnalysis.FileTextLoader.Path" />
     </Type>
+    <Type Name="Microsoft.CodeAnalysis.GeneratedSourceText" Id="T:Microsoft.CodeAnalysis.GeneratedSourceText">
+      <Member Id="M:Microsoft.CodeAnalysis.GeneratedSourceText.#ctor(System.String,Microsoft.CodeAnalysis.Text.SourceText)" />
+      <Member Id="P:Microsoft.CodeAnalysis.GeneratedSourceText.HintName" />
+      <Member Id="P:Microsoft.CodeAnalysis.GeneratedSourceText.Text" />
+    </Type>
+    <Type Name="Microsoft.CodeAnalysis.GeneratorAttribute" Id="T:Microsoft.CodeAnalysis.GeneratorAttribute">
+      <Member Id="M:Microsoft.CodeAnalysis.GeneratorAttribute.#ctor" />
+    </Type>
+    <Type Name="Microsoft.CodeAnalysis.GeneratorDriver" Id="T:Microsoft.CodeAnalysis.GeneratorDriver">
+      <Member Id="M:Microsoft.CodeAnalysis.GeneratorDriver.AddAdditionalTexts(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AdditionalText})" />
+      <Member Id="M:Microsoft.CodeAnalysis.GeneratorDriver.AddGenerators(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ISourceGenerator})" />
+      <Member Id="M:Microsoft.CodeAnalysis.GeneratorDriver.RemoveGenerators(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ISourceGenerator})" />
+      <Member Id="M:Microsoft.CodeAnalysis.GeneratorDriver.RunFullGeneration(Microsoft.CodeAnalysis.Compilation,Microsoft.CodeAnalysis.Compilation@,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic}@,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.GeneratorDriver.TryApplyEdits(Microsoft.CodeAnalysis.Compilation,Microsoft.CodeAnalysis.Compilation@,System.Boolean@,System.Threading.CancellationToken)" />
+    </Type>
     <Type Name="Microsoft.CodeAnalysis.IAliasSymbol" Id="T:Microsoft.CodeAnalysis.IAliasSymbol">
       <Member Id="P:Microsoft.CodeAnalysis.IAliasSymbol.Target" />
     </Type>
@@ -946,6 +962,10 @@
       <Member Id="P:Microsoft.CodeAnalysis.INamespaceSymbol.IsGlobalNamespace" />
       <Member Id="P:Microsoft.CodeAnalysis.INamespaceSymbol.NamespaceKind" />
     </Type>
+    <Type Name="Microsoft.CodeAnalysis.InitializationContext" Id="T:Microsoft.CodeAnalysis.InitializationContext">
+      <Member Id="M:Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications(Microsoft.CodeAnalysis.SyntaxReceiverCreator)" />
+      <Member Id="P:Microsoft.CodeAnalysis.InitializationContext.CancellationToken" />
+    </Type>
     <Type Name="Microsoft.CodeAnalysis.IOperation" Id="T:Microsoft.CodeAnalysis.IOperation">
       <Member Id="M:Microsoft.CodeAnalysis.IOperation.Accept(Microsoft.CodeAnalysis.Operations.OperationVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.IOperation.Accept``2(Microsoft.CodeAnalysis.Operations.OperationVisitor{``0,``1},``0)" />
@@ -963,6 +983,7 @@
       <Member Id="P:Microsoft.CodeAnalysis.IParameterSymbol.CustomModifiers" />
       <Member Id="P:Microsoft.CodeAnalysis.IParameterSymbol.ExplicitDefaultValue" />
       <Member Id="P:Microsoft.CodeAnalysis.IParameterSymbol.HasExplicitDefaultValue" />
+      <Member Id="P:Microsoft.CodeAnalysis.IParameterSymbol.IsDiscard" />
       <Member Id="P:Microsoft.CodeAnalysis.IParameterSymbol.IsOptional" />
       <Member Id="P:Microsoft.CodeAnalysis.IParameterSymbol.IsParams" />
       <Member Id="P:Microsoft.CodeAnalysis.IParameterSymbol.IsThis" />
@@ -1003,6 +1024,10 @@
     </Type>
     <Type Name="Microsoft.CodeAnalysis.ISourceAssemblySymbol" Id="T:Microsoft.CodeAnalysis.ISourceAssemblySymbol">
       <Member Id="P:Microsoft.CodeAnalysis.ISourceAssemblySymbol.Compilation" />
+    </Type>
+    <Type Name="Microsoft.CodeAnalysis.ISourceGenerator" Id="T:Microsoft.CodeAnalysis.ISourceGenerator">
+      <Member Id="M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.SourceGeneratorContext)" />
+      <Member Id="M:Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.InitializationContext)" />
     </Type>
     <Type Name="Microsoft.CodeAnalysis.IStructuredTriviaSyntax" Id="T:Microsoft.CodeAnalysis.IStructuredTriviaSyntax">
       <Member Id="P:Microsoft.CodeAnalysis.IStructuredTriviaSyntax.ParentTrivia" />
@@ -1045,6 +1070,9 @@
     <Type Name="Microsoft.CodeAnalysis.ISymbolExtensions" Id="T:Microsoft.CodeAnalysis.ISymbolExtensions">
       <Member Id="M:Microsoft.CodeAnalysis.ISymbolExtensions.GetConstructedReducedFrom(Microsoft.CodeAnalysis.IMethodSymbol)" />
     </Type>
+    <Type Name="Microsoft.CodeAnalysis.ISyntaxReceiver" Id="T:Microsoft.CodeAnalysis.ISyntaxReceiver">
+      <Member Id="M:Microsoft.CodeAnalysis.ISyntaxReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.SyntaxNode)" />
+    </Type>
     <Type Name="Microsoft.CodeAnalysis.ITypeParameterSymbol" Id="T:Microsoft.CodeAnalysis.ITypeParameterSymbol">
       <Member Id="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.ConstraintNullableAnnotations" />
       <Member Id="P:Microsoft.CodeAnalysis.ITypeParameterSymbol.ConstraintTypes" />
@@ -1068,6 +1096,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.ITypeSymbol.ToDisplayString(Microsoft.CodeAnalysis.NullableFlowState,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
       <Member Id="M:Microsoft.CodeAnalysis.ITypeSymbol.ToMinimalDisplayParts(Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.NullableFlowState,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
       <Member Id="M:Microsoft.CodeAnalysis.ITypeSymbol.ToMinimalDisplayString(Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.NullableFlowState,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
+      <Member Id="M:Microsoft.CodeAnalysis.ITypeSymbol.WithNullableAnnotation(Microsoft.CodeAnalysis.NullableAnnotation)" />
       <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.AllInterfaces" />
       <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.BaseType" />
       <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.Interfaces" />
@@ -1078,6 +1107,7 @@
       <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.IsTupleType" />
       <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.IsUnmanagedType" />
       <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.IsValueType" />
+      <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.NullableAnnotation" />
       <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.OriginalDefinition" />
       <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.SpecialType" />
       <Member Id="P:Microsoft.CodeAnalysis.ITypeSymbol.TypeKind" />
@@ -1516,6 +1546,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Project.RemoveAnalyzerConfigDocument(Microsoft.CodeAnalysis.DocumentId)" />
       <Member Id="M:Microsoft.CodeAnalysis.Project.RemoveAnalyzerReference(Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
       <Member Id="M:Microsoft.CodeAnalysis.Project.RemoveDocument(Microsoft.CodeAnalysis.DocumentId)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Project.RemoveDocuments(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DocumentId})" />
       <Member Id="M:Microsoft.CodeAnalysis.Project.RemoveMetadataReference(Microsoft.CodeAnalysis.MetadataReference)" />
       <Member Id="M:Microsoft.CodeAnalysis.Project.RemoveProjectReference(Microsoft.CodeAnalysis.ProjectReference)" />
       <Member Id="M:Microsoft.CodeAnalysis.Project.TryGetCompilation(Microsoft.CodeAnalysis.Compilation@)" />
@@ -1839,9 +1870,12 @@
       <Member Id="M:Microsoft.CodeAnalysis.Solution.GetProject(Microsoft.CodeAnalysis.ProjectId)" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.GetProjectDependencyGraph" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveAdditionalDocument(Microsoft.CodeAnalysis.DocumentId)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveAdditionalDocuments(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DocumentId})" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveAnalyzerConfigDocument(Microsoft.CodeAnalysis.DocumentId)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveAnalyzerConfigDocuments(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DocumentId})" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveAnalyzerReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference)" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveDocument(Microsoft.CodeAnalysis.DocumentId)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveDocuments(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DocumentId})" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveMetadataReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.MetadataReference)" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveProject(Microsoft.CodeAnalysis.ProjectId)" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.RemoveProjectReference(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.ProjectReference)" />
@@ -1860,6 +1894,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Solution.WithDocumentText(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.TextAndVersion,Microsoft.CodeAnalysis.PreservationMode)" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.WithDocumentText(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.DocumentId},Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.PreservationMode)" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.WithDocumentTextLoader(Microsoft.CodeAnalysis.DocumentId,Microsoft.CodeAnalysis.TextLoader,Microsoft.CodeAnalysis.PreservationMode)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Solution.WithOptions(Microsoft.CodeAnalysis.Options.OptionSet)" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.WithProjectAnalyzerReferences(Microsoft.CodeAnalysis.ProjectId,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference})" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.WithProjectAssemblyName(Microsoft.CodeAnalysis.ProjectId,System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.Solution.WithProjectCompilationOptions(Microsoft.CodeAnalysis.ProjectId,Microsoft.CodeAnalysis.CompilationOptions)" />
@@ -1922,6 +1957,14 @@
       <Member Id="P:Microsoft.CodeAnalysis.SourceFileResolver.Default" />
       <Member Id="P:Microsoft.CodeAnalysis.SourceFileResolver.PathMap" />
       <Member Id="P:Microsoft.CodeAnalysis.SourceFileResolver.SearchPaths" />
+    </Type>
+    <Type Name="Microsoft.CodeAnalysis.SourceGeneratorContext" Id="T:Microsoft.CodeAnalysis.SourceGeneratorContext">
+      <Member Id="M:Microsoft.CodeAnalysis.SourceGeneratorContext.AddSource(System.String,Microsoft.CodeAnalysis.Text.SourceText)" />
+      <Member Id="M:Microsoft.CodeAnalysis.SourceGeneratorContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)" />
+      <Member Id="P:Microsoft.CodeAnalysis.SourceGeneratorContext.AdditionalFiles" />
+      <Member Id="P:Microsoft.CodeAnalysis.SourceGeneratorContext.CancellationToken" />
+      <Member Id="P:Microsoft.CodeAnalysis.SourceGeneratorContext.Compilation" />
+      <Member Id="P:Microsoft.CodeAnalysis.SourceGeneratorContext.SyntaxReceiver" />
     </Type>
     <Type Name="Microsoft.CodeAnalysis.SourceReferenceResolver" Id="T:Microsoft.CodeAnalysis.SourceReferenceResolver">
       <Member Id="M:Microsoft.CodeAnalysis.SourceReferenceResolver.#ctor" />
@@ -2106,6 +2149,7 @@
       <Member Id="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.AllowDefaultLiteral" />
       <Member Id="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.EscapeKeywordIdentifiers" />
       <Member Id="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.ExpandNullable" />
+      <Member Id="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.IncludeNotNullableReferenceTypeModifier" />
       <Member Id="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.IncludeNullableReferenceTypeModifier" />
       <Member Id="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.None" />
       <Member Id="F:Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions.RemoveAttributeSuffix" />
@@ -2347,6 +2391,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.FindTrivia(System.Int32,System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,System.Boolean})" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.FindTriviaCore(System.Int32,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.FirstAncestorOrSelf``1(System.Func{``0,System.Boolean},System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.FirstAncestorOrSelf``2(System.Func{``0,``1,System.Boolean},``1,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.GetAnnotatedNodes(Microsoft.CodeAnalysis.SyntaxAnnotation)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.GetAnnotatedNodes(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.GetAnnotatedNodesAndTokens(Microsoft.CodeAnalysis.SyntaxAnnotation)" />
@@ -2542,6 +2587,7 @@
       <Member Id="P:Microsoft.CodeAnalysis.SyntaxNodeOrTokenList.Enumerator.Current" />
       <Member Id="P:Microsoft.CodeAnalysis.SyntaxNodeOrTokenList.Enumerator.System#Collections#IEnumerator#Current" />
     </Type>
+    <Type Name="Microsoft.CodeAnalysis.SyntaxReceiverCreator" Id="T:Microsoft.CodeAnalysis.SyntaxReceiverCreator" />
     <Type Name="Microsoft.CodeAnalysis.SyntaxReference" Id="T:Microsoft.CodeAnalysis.SyntaxReference">
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxReference.#ctor" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxReference.GetSyntax(System.Threading.CancellationToken)" />
@@ -2923,6 +2969,7 @@
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownDiagnosticTags.AnalyzerException" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownDiagnosticTags.Build" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownDiagnosticTags.Compiler" />
+      <Member Id="F:Microsoft.CodeAnalysis.WellKnownDiagnosticTags.CustomObsolete" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownDiagnosticTags.EditAndContinue" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownDiagnosticTags.NotConfigurable" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownDiagnosticTags.Telemetry" />
@@ -3559,7 +3606,6 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.CommonGetCompilationNamespace(Microsoft.CodeAnalysis.INamespaceSymbol)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.CommonGetEntryPoint(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.CommonGetSemanticModel(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)" />
-      <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.CommonGetSpecialType(Microsoft.CodeAnalysis.SpecialType)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.CommonGetTypeByMetadataName(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.CommonRemoveAllSyntaxTrees" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.CommonRemoveSyntaxTrees(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTree})" />
@@ -3786,6 +3832,9 @@
     </Type>
     <Type Name="Microsoft.CodeAnalysis.CSharp.CSharpFileSystemExtensions" Id="T:Microsoft.CodeAnalysis.CSharp.CSharpFileSystemExtensions">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpFileSystemExtensions.Emit(Microsoft.CodeAnalysis.CSharp.CSharpCompilation,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.ResourceDescription},System.Threading.CancellationToken)" />
+    </Type>
+    <Type Name="Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver" Id="T:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver">
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver.#ctor(Microsoft.CodeAnalysis.ParseOptions,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ISourceGenerator},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AdditionalText})" />
     </Type>
     <Type Name="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Id="T:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.#ctor(Microsoft.CodeAnalysis.CSharp.LanguageVersion,Microsoft.CodeAnalysis.DocumentationMode,Microsoft.CodeAnalysis.SourceCodeKind,System.Collections.Generic.IEnumerable{System.String})" />
@@ -4078,6 +4127,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.CloneNodeAsRoot``1(``0)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.Create(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Text.Encoding)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.Create(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Text.Encoding,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.Create(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Text.Encoding,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Nullable{System.Boolean})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetChangedSpans(Microsoft.CodeAnalysis.SyntaxTree)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetChanges(Microsoft.CodeAnalysis.SyntaxTree)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetCompilationUnitRoot(System.Threading.CancellationToken)" />
@@ -4096,8 +4146,10 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.GetRootCore(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.HasHiddenRegions" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.IsEquivalentTo(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText(System.String,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Text.Encoding,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText(System.String,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Text.Encoding,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.ParseText(System.String,Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,System.String,System.Text.Encoding,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree.TryGetRoot(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode@)" />
@@ -4701,6 +4753,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BinaryExpression(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BinaryExpression(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Block(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Block(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Block(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Block(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Block(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Block(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax})" />
@@ -4709,6 +4763,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BracketedParameterList(Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BracketedParameterList(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BreakStatement" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BreakStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BreakStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.BreakStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CasePatternSwitchLabel(Microsoft.CodeAnalysis.CSharp.Syntax.PatternSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.WhenClauseSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CasePatternSwitchLabel(Microsoft.CodeAnalysis.CSharp.Syntax.PatternSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
@@ -4729,6 +4785,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CheckedExpression(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CheckedExpression(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CheckedStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CheckedStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CheckedStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CheckedStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ClassDeclaration(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.BaseListSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax},Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ClassDeclaration(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.BaseListSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
@@ -4759,6 +4817,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ConstructorInitializer(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ConstructorInitializer(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ContinueStatement" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ContinueStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ContinueStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ContinueStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ConversionOperatorDeclaration(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ConversionOperatorDeclaration(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
@@ -4805,6 +4865,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.DocumentationCommentTrivia(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.XmlNodeSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.DocumentationCommentTrivia(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.XmlNodeSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.DoStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.DoStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.DoStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.DoStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ElasticEndOfLine(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ElasticWhitespace(System.String)" />
@@ -4819,6 +4881,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ElseDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,System.Boolean,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ElseDirectiveTrivia(System.Boolean,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.EmptyStatement" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.EmptyStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.EmptyStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.EmptyStatement(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.EndIfDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.EndIfDirectiveTrivia(System.Boolean)" />
@@ -4851,6 +4915,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ExplicitInterfaceSpecifier(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ExpressionStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ExpressionStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ExpressionStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ExpressionStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ExternAliasDirective(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ExternAliasDirective(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ExternAliasDirective(System.String)" />
@@ -4860,16 +4926,24 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.FinallyClause(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.FinallyClause(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.FixedStatement(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.FixedStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.FixedStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.FixedStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,System.String,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachVariableStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachVariableStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachVariableStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachVariableStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForEachVariableStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForStatement(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ForStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.FromClause(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.FromClause(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
@@ -4883,6 +4957,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.GlobalStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.GlobalStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.GotoStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.GotoStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.GotoStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.GotoStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.GotoStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.GroupClause(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
@@ -4896,6 +4972,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IfDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,System.Boolean,System.Boolean,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IfStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IfStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IfStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IfStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IfStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ImplicitArrayCreationExpression(Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ImplicitArrayCreationExpression(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax)" />
@@ -4941,6 +5019,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.JoinIntoClause(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.JoinIntoClause(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.JoinIntoClause(System.String)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LabeledStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LabeledStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LabeledStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LabeledStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LabeledStatement(System.String,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
@@ -4984,14 +5064,20 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LoadDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LoadDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalDeclarationStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalDeclarationStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalDeclarationStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalDeclarationStatement(Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalDeclarationStatement(Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalFunctionStatement(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalFunctionStatement(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,System.String)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalFunctionStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalFunctionStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalFunctionStatement(Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LocalFunctionStatement(Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LockStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LockStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LockStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.LockStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.MakeRefExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.MakeRefExpression(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
@@ -5070,8 +5156,10 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseName(System.String,System.Int32,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseParameterList(System.String,System.Int32,Microsoft.CodeAnalysis.ParseOptions,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseStatement(System.String,System.Int32,Microsoft.CodeAnalysis.ParseOptions,System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseSyntaxTree(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.ParseOptions,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseSyntaxTree(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.ParseOptions,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseSyntaxTree(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.ParseOptions,System.String,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseSyntaxTree(System.String,Microsoft.CodeAnalysis.ParseOptions,System.String,System.Text.Encoding,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Nullable{System.Boolean},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseSyntaxTree(System.String,Microsoft.CodeAnalysis.ParseOptions,System.String,System.Text.Encoding,System.Collections.Immutable.ImmutableDictionary{System.String,Microsoft.CodeAnalysis.ReportDiagnostic},System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseSyntaxTree(System.String,Microsoft.CodeAnalysis.ParseOptions,System.String,System.Text.Encoding,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ParseToken(System.String,System.Int32)" />
@@ -5129,6 +5217,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.RegionDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.RegionDirectiveTrivia(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ReturnStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ReturnStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ReturnStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ReturnStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.SelectClause(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.SelectClause(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
@@ -5172,6 +5262,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.SwitchSection(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax},Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.SwitchStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.SwitchStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.SwitchStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.SwitchStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.SyntaxTree(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.ParseOptions,System.String,System.Text.Encoding)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.SyntaxTrivia(Microsoft.CodeAnalysis.CSharp.SyntaxKind,System.String)" />
@@ -5180,6 +5271,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ThrowExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ThrowExpression(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ThrowStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ThrowStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ThrowStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.ThrowStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Token(Microsoft.CodeAnalysis.CSharp.SyntaxKind)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Token(Microsoft.CodeAnalysis.SyntaxTriviaList,Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxTriviaList)" />
@@ -5194,6 +5287,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.TriviaList(Microsoft.CodeAnalysis.SyntaxTrivia[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.TriviaList(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.TryStatement(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.TryStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.TryStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.TryStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.TryStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.TupleElement(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax)" />
@@ -5224,6 +5319,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UndefDirectiveTrivia(Microsoft.CodeAnalysis.SyntaxToken,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UndefDirectiveTrivia(System.String,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UnsafeStatement(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UnsafeStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UnsafeStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UnsafeStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.NameEqualsSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)" />
@@ -5231,6 +5328,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UsingDirective(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.NameEqualsSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UsingStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UsingStatement(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UsingStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UsingStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UsingStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.UsingStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.VariableDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax)" />
@@ -5248,6 +5347,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.WhereClause(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.WhereClause(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.WhileStatement(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.WhileStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.WhileStatement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.WhileStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Whitespace(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.Whitespace(System.String,System.Boolean)" />
@@ -5335,6 +5436,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.XmlValueElement(Microsoft.CodeAnalysis.CSharp.Syntax.XmlNodeSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.XmlValueElement(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.XmlNodeSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.YieldStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.YieldStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.YieldStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.YieldStatement(Microsoft.CodeAnalysis.CSharp.SyntaxKind,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CarriageReturn" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.CarriageReturnLineFeed" />
@@ -6010,6 +6113,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.AddBodyAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.AddBodyStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.AddModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
@@ -6051,6 +6155,7 @@
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.AliasQualifiedNameSyntax.Name" />
     </Type>
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousFunctionExpressionSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousFunctionExpressionSyntax">
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousFunctionExpressionSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousFunctionExpressionSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousFunctionExpressionSyntax.WithAsyncKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousFunctionExpressionSyntax.WithBlock(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
@@ -6064,6 +6169,7 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousMethodExpressionSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousMethodExpressionSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousMethodExpressionSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousMethodExpressionSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousMethodExpressionSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousMethodExpressionSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousMethodExpressionSyntax.AddParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.AnonymousMethodExpressionSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode)" />
@@ -6303,6 +6409,7 @@
     </Type>
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.BaseMethodDeclarationSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.BaseMethodDeclarationSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseMethodDeclarationSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseMethodDeclarationSyntax.AddBodyAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseMethodDeclarationSyntax.AddBodyStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseMethodDeclarationSyntax.AddModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BaseMethodDeclarationSyntax.AddParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[])" />
@@ -6374,11 +6481,15 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.AddStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.WithCloseBraceToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.WithOpenBraceToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.WithStatements(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax})" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.CloseBraceToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.OpenBraceToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.Statements" />
@@ -6415,9 +6526,13 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.WithBreakKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.BreakKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.BreakStatementSyntax.SemicolonToken" />
     </Type>
@@ -6461,6 +6576,7 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.CatchDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.CatchFilterClauseSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax.WithBlock(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
@@ -6514,10 +6630,15 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.WithBlock(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.WithKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.Block" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.CheckedStatementSyntax.Keyword" />
     </Type>
@@ -6565,6 +6686,8 @@
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ClassOrStructConstraintSyntax.QuestionToken" />
     </Type>
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.CommonForEachStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.CommonForEachStatementSyntax">
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CommonForEachStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CommonForEachStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CommonForEachStatementSyntax.WithAwaitKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CommonForEachStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.CommonForEachStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
@@ -6654,6 +6777,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConstructorDeclarationSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConstructorDeclarationSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConstructorDeclarationSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConstructorDeclarationSyntax.AddBodyAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConstructorDeclarationSyntax.AddBodyStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConstructorDeclarationSyntax.AddModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConstructorDeclarationSyntax.AddParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[])" />
@@ -6691,9 +6815,13 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.WithContinueKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.ContinueKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.SemicolonToken" />
     </Type>
@@ -6701,6 +6829,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConversionOperatorDeclarationSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConversionOperatorDeclarationSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConversionOperatorDeclarationSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConversionOperatorDeclarationSyntax.AddBodyAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConversionOperatorDeclarationSyntax.AddBodyStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConversionOperatorDeclarationSyntax.AddModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ConversionOperatorDeclarationSyntax.AddParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[])" />
@@ -6862,6 +6991,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DestructorDeclarationSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DestructorDeclarationSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DestructorDeclarationSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DestructorDeclarationSyntax.AddBodyAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DestructorDeclarationSyntax.AddBodyStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DestructorDeclarationSyntax.AddModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DestructorDeclarationSyntax.AddParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[])" />
@@ -6922,7 +7052,10 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.WithCondition(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.WithDoKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
@@ -6930,6 +7063,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.WithWhileKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.Condition" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.DoStatementSyntax.DoKeyword" />
@@ -7002,8 +7136,12 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.EmptyStatementSyntax.SemicolonToken" />
     </Type>
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.EndIfDirectiveTriviaSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.EndIfDirectiveTriviaSyntax">
@@ -7153,10 +7291,14 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.Update(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.AllowsAnyExpression" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.Expression" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.SemicolonToken" />
     </Type>
@@ -7193,6 +7335,7 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax.WithBlock(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
@@ -7203,13 +7346,17 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.AddDeclarationVariables(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.WithDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.WithFixedKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.Declaration" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.FixedStatementSyntax.FixedKeyword" />
@@ -7219,8 +7366,11 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.WithAwaitKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
@@ -7230,6 +7380,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.WithType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.AwaitKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachStatementSyntax.Expression" />
@@ -7243,8 +7394,11 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.WithAwaitKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
@@ -7253,6 +7407,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.WithVariable(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.AwaitKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForEachVariableStatementSyntax.Expression" />
@@ -7265,9 +7420,12 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.AddIncrementors(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.AddInitializers(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.WithCondition(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.WithDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax)" />
@@ -7278,6 +7436,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.WithSecondSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.Condition" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ForStatementSyntax.Declaration" />
@@ -7332,11 +7491,15 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.WithCaseOrDefaultKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.WithGotoKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.CaseOrDefaultKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.Expression" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.GotoStatementSyntax.GotoKeyword" />
@@ -7384,13 +7547,17 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.WithCondition(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.WithElse(Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.WithIfKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.Condition" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax.Else" />
@@ -7646,15 +7813,20 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.WithColonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.WithIdentifier(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.ColonToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.Identifier" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LabeledStatementSyntax.Statement" />
     </Type>
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.LambdaExpressionSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.LambdaExpressionSyntax">
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LambdaExpressionSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LambdaExpressionSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LambdaExpressionSyntax.WithArrowToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LambdaExpressionSyntax.WithAsyncKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
@@ -7718,15 +7890,19 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.AddDeclarationVariables(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.AddModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.WithAwaitKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.WithDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.WithModifiers(Microsoft.CodeAnalysis.SyntaxTokenList)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.WithUsingKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.AwaitKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.Declaration" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax.IsConst" />
@@ -7737,12 +7913,16 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.AddBodyAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.AddBodyStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.AddConstraintClauses(Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.AddModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.AddParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.AddTypeParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.WithBody(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.WithConstraintClauses(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.WithExpressionBody(Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax)" />
@@ -7752,6 +7932,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.WithReturnType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.WithTypeParameterList(Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterListSyntax)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.Body" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.ConstraintClauses" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LocalFunctionStatementSyntax.ExpressionBody" />
@@ -7765,12 +7946,16 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.WithLockKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.Expression" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.LockStatementSyntax.LockKeyword" />
@@ -7823,6 +8008,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax.AddBodyAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax.AddBodyStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax.AddConstraintClauses(Microsoft.CodeAnalysis.CSharp.Syntax.TypeParameterConstraintClauseSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax.AddModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
@@ -7973,6 +8159,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.OperatorDeclarationSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.OperatorDeclarationSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.OperatorDeclarationSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.OperatorDeclarationSyntax.AddBodyAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.OperatorDeclarationSyntax.AddBodyStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.OperatorDeclarationSyntax.AddModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.OperatorDeclarationSyntax.AddParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[])" />
@@ -8070,6 +8257,7 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.ParenthesizedLambdaExpressionSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.ParenthesizedLambdaExpressionSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ParenthesizedLambdaExpressionSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ParenthesizedLambdaExpressionSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ParenthesizedLambdaExpressionSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ParenthesizedLambdaExpressionSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ParenthesizedLambdaExpressionSyntax.AddParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ParenthesizedLambdaExpressionSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ParameterListSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode)" />
@@ -8391,10 +8579,14 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.WithReturnKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.Expression" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.ReturnKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ReturnStatementSyntax.SemicolonToken" />
@@ -8432,6 +8624,7 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.SimpleLambdaExpressionSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.SimpleLambdaExpressionSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SimpleLambdaExpressionSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SimpleLambdaExpressionSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SimpleLambdaExpressionSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SimpleLambdaExpressionSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SimpleLambdaExpressionSyntax.AddParameterAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SimpleLambdaExpressionSyntax.AddParameterModifiers(Microsoft.CodeAnalysis.SyntaxToken[])" />
@@ -8493,7 +8686,11 @@
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.StackAllocArrayCreationExpressionSyntax.StackAllocKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.StackAllocArrayCreationExpressionSyntax.Type" />
     </Type>
-    <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax" />
+    <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax">
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax.AttributeLists" />
+    </Type>
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
@@ -8588,8 +8785,11 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.AddSections(Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.WithCloseBraceToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
@@ -8597,6 +8797,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.WithSections(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.WithSwitchKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.CloseBraceToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchStatementSyntax.Expression" />
@@ -8624,10 +8825,14 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.WithThrowKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.Expression" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.SemicolonToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.ThrowStatementSyntax.ThrowKeyword" />
@@ -8635,13 +8840,18 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.AddCatches(Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.WithBlock(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.WithCatches(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CatchClauseSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.WithFinally(Microsoft.CodeAnalysis.CSharp.Syntax.FinallyClauseSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.WithTryKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.Block" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.Catches" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.TryStatementSyntax.Finally" />
@@ -8805,10 +9015,15 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.AddBlockAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.AddBlockStatements(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.WithBlock(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.WithUnsafeKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.Block" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.UnsafeStatementSyntax.UnsafeKeyword" />
     </Type>
@@ -8830,8 +9045,11 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.WithAwaitKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.WithDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclarationSyntax)" />
@@ -8839,6 +9057,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.WithUsingKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.AwaitKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.UsingStatementSyntax.Declaration" />
@@ -8913,12 +9132,16 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.WithCloseParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.WithCondition(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.WithOpenParenToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.WithStatement(Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.WithWhileKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.CloseParenToken" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.Condition" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.WhileStatementSyntax.OpenParenToken" />
@@ -9107,11 +9330,15 @@
     <Type Name="Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax" Id="T:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax">
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.Accept(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.AddAttributeLists(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.WithExpression(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.WithReturnOrBreakKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.WithSemicolonToken(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.WithYieldKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.AttributeLists" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.Expression" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.ReturnOrBreakKeyword" />
       <Member Id="P:Microsoft.CodeAnalysis.CSharp.Syntax.YieldStatementSyntax.SemicolonToken" />
@@ -9167,6 +9394,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetAnalyzers(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetAnalyzersForAllLanguages" />
       <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetAssembly" />
+      <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetGenerators" />
       <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.GetHashCode" />
       <Member Id="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.Display" />
       <Member Id="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerFileReference.FullPath" />
@@ -9206,6 +9434,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.#ctor" />
       <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.GetAnalyzers(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.GetAnalyzersForAllLanguages" />
+      <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.GetGenerators" />
       <Member Id="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.Display" />
       <Member Id="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.FullPath" />
       <Member Id="P:Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference.Id" />
@@ -9370,6 +9599,11 @@
     </Type>
     <Type Name="Microsoft.CodeAnalysis.Diagnostics.Suppression" Id="T:Microsoft.CodeAnalysis.Diagnostics.Suppression">
       <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.Suppression.Create(Microsoft.CodeAnalysis.SuppressionDescriptor,Microsoft.CodeAnalysis.Diagnostic)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.Suppression.Equals(Microsoft.CodeAnalysis.Diagnostics.Suppression)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.Suppression.Equals(System.Object)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.Suppression.GetHashCode" />
+      <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.Suppression.op_Equality(Microsoft.CodeAnalysis.Diagnostics.Suppression,Microsoft.CodeAnalysis.Diagnostics.Suppression)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Diagnostics.Suppression.op_Inequality(Microsoft.CodeAnalysis.Diagnostics.Suppression,Microsoft.CodeAnalysis.Diagnostics.Suppression)" />
       <Member Id="P:Microsoft.CodeAnalysis.Diagnostics.Suppression.Descriptor" />
       <Member Id="P:Microsoft.CodeAnalysis.Diagnostics.Suppression.SuppressedDiagnostic" />
     </Type>
@@ -9559,6 +9793,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithAsync(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsAbstract(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsConst(System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsExtern(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsNew(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsOverride(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsReadOnly(System.Boolean)" />
@@ -9567,15 +9802,18 @@
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsStatic(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsUnsafe(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsVirtual(System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsVolatile(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithIsWriteOnly(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithPartial(System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithWithEvents(System.Boolean)" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.Abstract" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.Async" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.Const" />
+      <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.Extern" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsAbstract" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsAsync" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsConst" />
+      <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsExtern" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsNew" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsOverride" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsPartial" />
@@ -9585,6 +9823,7 @@
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsStatic" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsUnsafe" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsVirtual" />
+      <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsVolatile" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsWithEvents" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.IsWriteOnly" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.New" />
@@ -9597,6 +9836,7 @@
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.Static" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.Unsafe" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.Virtual" />
+      <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.Volatile" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WithEvents" />
       <Member Id="P:Microsoft.CodeAnalysis.Editing.DeclarationModifiers.WriteOnly" />
     </Type>
@@ -9764,6 +10004,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.CoalesceExpression(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.CompilationUnit(Microsoft.CodeAnalysis.SyntaxNode[])" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.CompilationUnit(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
+      <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.ConditionalAccessExpression(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.ConditionalExpression(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.ConstructorDeclaration(Microsoft.CodeAnalysis.IMethodSymbol,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.ConstructorDeclaration(System.String,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},Microsoft.CodeAnalysis.Accessibility,Microsoft.CodeAnalysis.Editing.DeclarationModifiers,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
@@ -9780,6 +10021,8 @@
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.DottedName(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.ElementAccessExpression(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode[])" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.ElementAccessExpression(Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
+      <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.ElementBindingExpression(Microsoft.CodeAnalysis.SyntaxNode[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.ElementBindingExpression(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.EnumDeclaration(System.String,Microsoft.CodeAnalysis.Accessibility,Microsoft.CodeAnalysis.Editing.DeclarationModifiers,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.EnumMember(System.String,Microsoft.CodeAnalysis.SyntaxNode)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.EventDeclaration(Microsoft.CodeAnalysis.IEventSymbol)" />
@@ -9860,6 +10103,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.LogicalOrExpression(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.MemberAccessExpression(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.MemberAccessExpression(Microsoft.CodeAnalysis.SyntaxNode,System.String)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.MemberBindingExpression(Microsoft.CodeAnalysis.SyntaxNode)" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.MethodDeclaration(Microsoft.CodeAnalysis.IMethodSymbol,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.MethodDeclaration(System.String,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},System.Collections.Generic.IEnumerable{System.String},Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.Accessibility,Microsoft.CodeAnalysis.Editing.DeclarationModifiers,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})" />
       <Member Id="M:Microsoft.CodeAnalysis.Editing.SyntaxGenerator.ModuloExpression(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)" />
@@ -11119,7 +11363,6 @@
   </Namespace>
   <Namespace Name="Microsoft.CodeAnalysis.Options">
     <Type Name="Microsoft.CodeAnalysis.Options.DocumentOptionSet" Id="T:Microsoft.CodeAnalysis.Options.DocumentOptionSet">
-      <Member Id="M:Microsoft.CodeAnalysis.Options.DocumentOptionSet.GetOption(Microsoft.CodeAnalysis.Options.OptionKey)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.DocumentOptionSet.GetOption``1(Microsoft.CodeAnalysis.Options.PerLanguageOption{``0})" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.DocumentOptionSet.WithChangedOption(Microsoft.CodeAnalysis.Options.OptionKey,System.Object)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.DocumentOptionSet.WithChangedOption``1(Microsoft.CodeAnalysis.Options.PerLanguageOption{``0},``0)" />
@@ -11136,7 +11379,10 @@
       <Member Id="M:Microsoft.CodeAnalysis.Options.Option`1.#ctor(System.String,System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.Option`1.#ctor(System.String,System.String,`0)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.Option`1.#ctor(System.String,System.String,`0,Microsoft.CodeAnalysis.Options.OptionStorageLocation[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.Options.Option`1.Equals(System.Object)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Options.Option`1.GetHashCode" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.Option`1.op_Implicit(Microsoft.CodeAnalysis.Options.Option{`0})~Microsoft.CodeAnalysis.Options.OptionKey" />
+      <Member Id="M:Microsoft.CodeAnalysis.Options.Option`1.System#IEquatable&lt;Microsoft#CodeAnalysis#Options#IOption2&gt;#Equals(Microsoft.CodeAnalysis.Options.IOption2)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.Option`1.ToString" />
       <Member Id="P:Microsoft.CodeAnalysis.Options.Option`1.DefaultValue" />
       <Member Id="P:Microsoft.CodeAnalysis.Options.Option`1.Feature" />
@@ -11161,6 +11407,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Options.OptionSet.#ctor" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.OptionSet.GetOption(Microsoft.CodeAnalysis.Options.OptionKey)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.OptionSet.GetOption``1(Microsoft.CodeAnalysis.Options.Option{``0})" />
+      <Member Id="M:Microsoft.CodeAnalysis.Options.OptionSet.GetOption``1(Microsoft.CodeAnalysis.Options.OptionKey)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.OptionSet.GetOption``1(Microsoft.CodeAnalysis.Options.PerLanguageOption{``0},System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.OptionSet.WithChangedOption(Microsoft.CodeAnalysis.Options.OptionKey,System.Object)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.OptionSet.WithChangedOption``1(Microsoft.CodeAnalysis.Options.Option{``0},``0)" />
@@ -11172,6 +11419,9 @@
     <Type Name="Microsoft.CodeAnalysis.Options.PerLanguageOption`1" Id="T:Microsoft.CodeAnalysis.Options.PerLanguageOption`1">
       <Member Id="M:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.#ctor(System.String,System.String,`0)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.#ctor(System.String,System.String,`0,Microsoft.CodeAnalysis.Options.OptionStorageLocation[])" />
+      <Member Id="M:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.Equals(System.Object)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.GetHashCode" />
+      <Member Id="M:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.System#IEquatable&lt;Microsoft#CodeAnalysis#Options#IOption2&gt;#Equals(Microsoft.CodeAnalysis.Options.IOption2)" />
       <Member Id="M:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.ToString" />
       <Member Id="P:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.DefaultValue" />
       <Member Id="P:Microsoft.CodeAnalysis.Options.PerLanguageOption`1.Feature" />
@@ -13524,7 +13774,6 @@
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.CommonGetCompilationNamespace(Microsoft.CodeAnalysis.INamespaceSymbol)" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.CommonGetEntryPoint(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.CommonGetSemanticModel(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)" />
-      <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.CommonGetSpecialType(Microsoft.CodeAnalysis.SpecialType)" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.CommonGetTypeByMetadataName(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.CommonRemoveAllSyntaxTrees" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.CommonRemoveSyntaxTrees(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTree})" />

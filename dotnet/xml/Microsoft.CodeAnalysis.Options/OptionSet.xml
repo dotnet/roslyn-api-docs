@@ -1,10 +1,10 @@
 <Type Name="OptionSet" FullName="Microsoft.CodeAnalysis.Options.OptionSet">
+  <TypeSignature Language="C++ CLI" Value="public ref class OptionSet abstract" />
   <TypeSignature Language="C#" Value="public abstract class OptionSet" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit OptionSet extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Options.OptionSet" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class OptionSet" />
   <TypeSignature Language="F#" Value="type OptionSet = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class OptionSet abstract" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -38,6 +40,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -47,10 +51,15 @@
     </Member>
     <Member MemberName="GetOption">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Object ^ GetOption(Microsoft::CodeAnalysis::Options::OptionKey optionKey);" />
-      <MemberSignature Language="C#" Value="public abstract object GetOption (Microsoft.CodeAnalysis.Options.OptionKey optionKey);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOption(valuetype Microsoft.CodeAnalysis.Options.OptionKey optionKey) cil managed" />
+      <MemberSignature Language="C#" Value="public object GetOption (Microsoft.CodeAnalysis.Options.OptionKey optionKey);" FrameworkAlternate="roslyn-dotnet" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetOption(valuetype Microsoft.CodeAnalysis.Options.OptionKey optionKey) cil managed" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.OptionSet.GetOption(Microsoft.CodeAnalysis.Options.OptionKey)" />
-      <MemberSignature Language="F#" Value="abstract member GetOption : Microsoft.CodeAnalysis.Options.OptionKey -&gt; obj" Usage="optionSet.GetOption optionKey" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOption (optionKey As OptionKey) As Object" FrameworkAlternate="roslyn-dotnet" />
+      <MemberSignature Language="F#" Value="member this.GetOption : Microsoft.CodeAnalysis.Options.OptionKey -&gt; obj" Usage="optionSet.GetOption optionKey" FrameworkAlternate="roslyn-dotnet" />
+      <MemberSignature Language="C#" Value="public abstract object GetOption (Microsoft.CodeAnalysis.Options.OptionKey optionKey);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOption(valuetype Microsoft.CodeAnalysis.Options.OptionKey optionKey) cil managed" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetOption (optionKey As OptionKey) As Object" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+      <MemberSignature Language="F#" Value="abstract member GetOption : Microsoft.CodeAnalysis.Options.OptionKey -&gt; obj" Usage="optionSet.GetOption optionKey" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -60,6 +69,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -70,7 +81,7 @@
       <Docs>
         <param name="optionKey">To be added.</param>
         <summary>
-            Gets the value of the option.
+            Gets the value of the option, or the default value if not otherwise set.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -92,6 +103,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -106,7 +119,37 @@
         <typeparam name="T">To be added.</typeparam>
         <param name="option">To be added.</param>
         <summary>
-            Gets the value of the option.
+            Gets the value of the option, or the default value if not otherwise set.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOption&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetOption&lt;T&gt; (Microsoft.CodeAnalysis.Options.OptionKey optionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetOption&lt;T&gt;(valuetype Microsoft.CodeAnalysis.Options.OptionKey optionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.OptionSet.GetOption``1(Microsoft.CodeAnalysis.Options.OptionKey)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOption(Of T) (optionKey As OptionKey) As T" />
+      <MemberSignature Language="F#" Value="member this.GetOption : Microsoft.CodeAnalysis.Options.OptionKey -&gt; 'T" Usage="optionSet.GetOption optionKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="optionKey" Type="Microsoft.CodeAnalysis.Options.OptionKey" Index="0" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="optionKey">To be added.</param>
+        <summary>
+            Gets the value of the option cast to type <typeparamref name="T" />, or the default value if not otherwise set.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -128,6 +171,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -144,7 +189,7 @@
         <param name="option">To be added.</param>
         <param name="language">To be added.</param>
         <summary>
-            Gets the value of the option.
+            Gets the value of the option, or the default value if not otherwise set.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -166,6 +211,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Options.OptionSet</ReturnType>
@@ -200,6 +247,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Options.OptionSet</ReturnType>
@@ -238,6 +287,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Options.OptionSet</ReturnType>

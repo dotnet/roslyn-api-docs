@@ -1,10 +1,14 @@
 <Type Name="Option&lt;T&gt;" FullName="Microsoft.CodeAnalysis.Options.Option&lt;T&gt;">
-  <TypeSignature Language="C#" Value="public class Option&lt;T&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Option`1&lt;T&gt; extends System.Object implements class Microsoft.CodeAnalysis.Options.IOption" />
-  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Options.Option`1" />
-  <TypeSignature Language="VB.NET" Value="Public Class Option(Of T)" />
-  <TypeSignature Language="F#" Value="type Option&lt;'T&gt; = class&#xA;    interface IOption" />
   <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA;public ref class Option : Microsoft::CodeAnalysis::Options::IOption" />
+  <TypeSignature Language="C#" Value="public class Option&lt;T&gt; : IEquatable&lt;Microsoft.CodeAnalysis.Options.IOption2&gt;" FrameworkAlternate="roslyn-dotnet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Option`1&lt;T&gt; extends System.Object implements class Microsoft.CodeAnalysis.Options.IOption, class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.Options.IOption2&gt;" FrameworkAlternate="roslyn-dotnet" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Options.Option`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class Option(Of T)&#xA;Implements IEquatable(Of IOption2)" FrameworkAlternate="roslyn-dotnet" />
+  <TypeSignature Language="F#" Value="type Option&lt;'T&gt; = class&#xA;    interface IEquatable&lt;IOption2&gt;&#xA;    interface IOption" FrameworkAlternate="roslyn-dotnet" />
+  <TypeSignature Language="C#" Value="public class Option&lt;T&gt;" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Option`1&lt;T&gt; extends System.Object implements class Microsoft.CodeAnalysis.Options.IOption" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+  <TypeSignature Language="VB.NET" Value="Public Class Option(Of T)" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+  <TypeSignature Language="F#" Value="type Option&lt;'T&gt; = class&#xA;    interface IOption" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +17,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T" />
@@ -24,6 +30,9 @@
     <Interface>
       <InterfaceName>Microsoft.CodeAnalysis.Options.IOption</InterfaceName>
     </Interface>
+    <Interface FrameworkAlternate="roslyn-dotnet">
+      <InterfaceName>System.IEquatable&lt;Microsoft.CodeAnalysis.Options.IOption2&gt;</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
     <typeparam name="T">To be added.</typeparam>
@@ -31,6 +40,7 @@
             An global option. An instance of this class can be used to access an option value from an OptionSet.
             </summary>
     <remarks>To be added.</remarks>
+    <inheritdoc cref="T:Microsoft.CodeAnalysis.Options.Option2`1" />
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -49,7 +59,14 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet">
+          <AttributeName>System.Obsolete("Use a constructor that specifies an explicit default value.")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="feature" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
@@ -77,6 +94,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="feature" Type="System.String" />
@@ -107,6 +126,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="feature" Type="System.String" />
@@ -145,6 +166,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -154,6 +177,31 @@
             The default value of the option.
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.CodeAnalysis.Options.OptionDefinition.DefaultValue" />
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.Option`1.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="option.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" Index="0" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -176,6 +224,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -186,6 +236,28 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.CodeAnalysis.Options.OptionDefinition.Feature" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.Option`1.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="option.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Microsoft.CodeAnalysis.Options.IOption.DefaultValue">
@@ -194,7 +266,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Microsoft.CodeAnalysis.Options.IOption.DefaultValue" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.Option`1.Microsoft#CodeAnalysis#Options#IOption#DefaultValue" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property DefaultValue As Object Implements IOption.DefaultValue" />
-      <MemberSignature Language="F#" Usage="Microsoft.CodeAnalysis.Options.IOption.DefaultValue" />
+      <MemberSignature Language="F#" Value="member this.Microsoft.CodeAnalysis.Options.IOption.DefaultValue : obj" Usage="Microsoft.CodeAnalysis.Options.IOption.DefaultValue" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.CodeAnalysis.Options.IOption.DefaultValue</InterfaceMember>
@@ -207,6 +279,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -223,7 +297,7 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool Microsoft.CodeAnalysis.Options.IOption.IsPerLanguage" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Options.Option`1.Microsoft#CodeAnalysis#Options#IOption#IsPerLanguage" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsPerLanguage As Boolean Implements IOption.IsPerLanguage" />
-      <MemberSignature Language="F#" Usage="Microsoft.CodeAnalysis.Options.IOption.IsPerLanguage" />
+      <MemberSignature Language="F#" Value="member this.Microsoft.CodeAnalysis.Options.IOption.IsPerLanguage : bool" Usage="Microsoft.CodeAnalysis.Options.IOption.IsPerLanguage" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.CodeAnalysis.Options.IOption.IsPerLanguage</InterfaceMember>
@@ -236,6 +310,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -265,6 +341,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -275,6 +353,7 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.CodeAnalysis.Options.OptionDefinition.Name" />
       </Docs>
     </Member>
     <Member MemberName="op_Implicit">
@@ -293,6 +372,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Options.OptionKey</ReturnType>
@@ -326,6 +407,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Options.OptionStorageLocation&gt;</ReturnType>
@@ -333,6 +416,34 @@
       <Docs>
         <summary>To be added.</summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.CodeAnalysis.Options.Option2`1.StorageLocations" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.IEquatable&lt;Microsoft.CodeAnalysis.Options.IOption2&gt;.Equals">
+      <MemberSignature Language="C#" Value="bool IEquatable&lt;IOption2&gt;.Equals (Microsoft.CodeAnalysis.Options.IOption2 other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.IEquatable&lt;Microsoft.CodeAnalysis.Options.IOption2&gt;.Equals(class Microsoft.CodeAnalysis.Options.IOption2 other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Options.Option`1.System#IEquatable&lt;Microsoft#CodeAnalysis#Options#IOption2&gt;#Equals(Microsoft.CodeAnalysis.Options.IOption2)" />
+      <MemberSignature Language="VB.NET" Value="Function Equals (other As IOption2) As Boolean Implements IEquatable(Of IOption2).Equals" />
+      <MemberSignature Language="F#" Value="abstract member System.IEquatable&lt;Microsoft.CodeAnalysis.Options.IOption2&gt;.Equals : Microsoft.CodeAnalysis.Options.IOption2 -&gt; bool&#xA;override this.System.IEquatable&lt;Microsoft.CodeAnalysis.Options.IOption2&gt;.Equals : Microsoft.CodeAnalysis.Options.IOption2 -&gt; bool" Usage="option.System.IEquatable&lt;Microsoft.CodeAnalysis.Options.IOption2&gt;.Equals other" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.Options.IOption2" Index="0" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -352,6 +463,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -382,6 +495,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
@@ -392,6 +507,7 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <inheritdoc cref="P:Microsoft.CodeAnalysis.Options.OptionDefinition.Type" />
       </Docs>
     </Member>
   </Members>

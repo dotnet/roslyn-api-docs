@@ -1,10 +1,10 @@
 <Type Name="IVariableDeclarationOperation" FullName="Microsoft.CodeAnalysis.Operations.IVariableDeclarationOperation">
+  <TypeSignature Language="C++ CLI" Value="public interface class IVariableDeclarationOperation : Microsoft::CodeAnalysis::IOperation" />
   <TypeSignature Language="C#" Value="public interface IVariableDeclarationOperation : Microsoft.CodeAnalysis.IOperation" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IVariableDeclarationOperation implements class Microsoft.CodeAnalysis.IOperation" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IVariableDeclarationOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface IVariableDeclarationOperation&#xA;Implements IOperation" />
   <TypeSignature Language="F#" Value="type IVariableDeclarationOperation = interface&#xA;    interface IOperation" />
-  <TypeSignature Language="C++ CLI" Value="public interface class IVariableDeclarationOperation : Microsoft::CodeAnalysis::IOperation" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -13,6 +13,8 @@
     <AssemblyVersion>3.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.3.0.0</AssemblyVersion>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>3.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -21,17 +23,16 @@
   </Interfaces>
   <Docs>
     <summary>
-             Represents a declarator that declares multiple individual variables.
-             </summary>
+            Represents a declarator that declares multiple individual variables.
+            </summary>
     <remarks>
-             The initializer of this node is applied to all individual declarations in <see cref="P:Microsoft.CodeAnalysis.Operations.IVariableDeclarationOperation.Declarators" />. There cannot
-             be initializers in both locations except in invalid code scenarios.
-             In C#, this node will never have an initializer.
-             This corresponds to the VariableDeclarationSyntax in C#, and the VariableDeclaratorSyntax in Visual Basic.
-            
-             This interface is reserved for implementation by its associated APIs. We reserve the right to
-             change it in the future.
-             </remarks>
+            The initializer of this node is applied to all individual declarations in <see cref="P:Microsoft.CodeAnalysis.Operations.IVariableDeclarationOperation.Declarators" />. There cannot
+            be initializers in both locations except in invalid code scenarios.
+            In C#, this node will never have an initializer.
+            This corresponds to the VariableDeclarationSyntax in C#, and the VariableDeclaratorSyntax in Visual Basic.
+            This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.
+            </remarks>
     <para>
             Current Usage:
               (1) C# VariableDeclaration
@@ -39,14 +40,6 @@
               (3) VB Dim statement declaration groups
               (4) VB Using statement variable declarations
             </para>
-    <para>
-             Current Usage:
-               (1) C# VariableDeclaration
-               (2) C# fixed declarations
-               (3) C# using declarations
-               (4) VB Dim statement declaration groups
-               (5) VB Using statement variable declarations
-             </para>
   </Docs>
   <Members>
     <Member MemberName="Declarators">
@@ -65,6 +58,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Operations.IVariableDeclaratorOperation&gt;</ReturnType>
@@ -93,6 +88,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
@@ -122,6 +119,8 @@
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
         <AssemblyVersion>3.3.0.0</AssemblyVersion>
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+        <AssemblyVersion>3.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Operations.IVariableInitializerOperation</ReturnType>
