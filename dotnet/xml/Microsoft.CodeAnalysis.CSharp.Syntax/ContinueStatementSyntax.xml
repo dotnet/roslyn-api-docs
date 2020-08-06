@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax</BaseTypeName>
@@ -43,6 +44,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -74,9 +76,16 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="roslyn-dotnet">
+            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -102,15 +111,17 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet">
+        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -123,7 +134,7 @@
       </Docs>
     </Member>
     <Member MemberName="AttributeLists">
-      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists { get; }" />
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? AttributeLists { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.AttributeLists" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property AttributeLists As SyntaxList(Of AttributeListSyntax)" />
@@ -132,6 +143,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;</ReturnType>
@@ -160,6 +172,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -188,6 +201,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -216,6 +230,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax</ReturnType>
@@ -233,7 +248,7 @@
       </Docs>
     </Member>
     <Member MemberName="Update">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, Microsoft.CodeAnalysis.SyntaxToken continueKeyword, Microsoft.CodeAnalysis.SyntaxToken semicolonToken);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? attributeLists, Microsoft.CodeAnalysis.SyntaxToken continueKeyword, Microsoft.CodeAnalysis.SyntaxToken semicolonToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, valuetype Microsoft.CodeAnalysis.SyntaxToken continueKeyword, valuetype Microsoft.CodeAnalysis.SyntaxToken semicolonToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (attributeLists As SyntaxList(Of AttributeListSyntax), continueKeyword As SyntaxToken, semicolonToken As SyntaxToken) As ContinueStatementSyntax" />
@@ -242,14 +257,15 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet" />
-        <Parameter Name="continueKeyword" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="1" FrameworkAlternate="roslyn-dotnet" />
-        <Parameter Name="semicolonToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="2" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
+        <Parameter Name="continueKeyword" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
+        <Parameter Name="semicolonToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="attributeLists">To be added.</param>
@@ -261,7 +277,7 @@
       </Docs>
     </Member>
     <Member MemberName="WithAttributeLists">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? attributeLists);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax WithAttributeLists(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithAttributeLists (attributeLists As SyntaxList(Of AttributeListSyntax)) As ContinueStatementSyntax" />
@@ -270,12 +286,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="attributeLists">To be added.</param>
@@ -302,6 +319,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax</ReturnType>
@@ -334,6 +352,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ContinueStatementSyntax</ReturnType>

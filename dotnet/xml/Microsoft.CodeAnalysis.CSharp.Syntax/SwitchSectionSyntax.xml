@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode</BaseTypeName>
@@ -43,6 +44,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -74,9 +76,16 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="roslyn-dotnet">
+            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -110,6 +119,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax</ReturnType>
@@ -118,7 +128,8 @@
         <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax[]">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -148,6 +159,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax</ReturnType>
@@ -156,7 +168,8 @@
         <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[]">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -170,11 +183,12 @@
     </Member>
     <Member MemberName="Labels">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::SwitchLabelSyntax ^&gt; Labels { Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::SwitchLabelSyntax ^&gt; get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; Labels { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt;? Labels { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; Labels" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax.Labels" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Labels As SyntaxList(Of SwitchLabelSyntax)" />
       <MemberSignature Language="F#" Value="member this.Labels : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt;" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax.Labels" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; Labels { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -186,6 +200,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt;</ReturnType>
@@ -200,11 +215,12 @@
     </Member>
     <Member MemberName="Statements">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::StatementSyntax ^&gt; Statements { Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::StatementSyntax ^&gt; get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; Statements { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;? Statements { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; Statements" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax.Statements" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Statements As SyntaxList(Of StatementSyntax)" />
       <MemberSignature Language="F#" Value="member this.Statements : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax.Statements" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; Statements { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -216,6 +232,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;</ReturnType>
@@ -230,11 +247,12 @@
     </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::SwitchSectionSyntax ^ Update(Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::SwitchLabelSyntax ^&gt; labels, Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::StatementSyntax ^&gt; statements);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; labels, Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt;? labels, Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;? statements);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; labels, valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax},Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (labels As SyntaxList(Of SwitchLabelSyntax), statements As SyntaxList(Of StatementSyntax)) As SwitchSectionSyntax" />
       <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; * Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax" Usage="switchSectionSyntax.Update (labels, statements)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; labels, Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -246,6 +264,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax</ReturnType>
@@ -264,11 +283,12 @@
     </Member>
     <Member MemberName="WithLabels">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::SwitchSectionSyntax ^ WithLabels(Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::SwitchLabelSyntax ^&gt; labels);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax WithLabels (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; labels);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax WithLabels (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt;? labels);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax WithLabels(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; labels) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax.WithLabels(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithLabels (labels As SyntaxList(Of SwitchLabelSyntax)) As SwitchSectionSyntax" />
       <MemberSignature Language="F#" Value="member this.WithLabels : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax" Usage="switchSectionSyntax.WithLabels labels" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax WithLabels (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchLabelSyntax&gt; labels);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -280,6 +300,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax</ReturnType>
@@ -296,11 +317,12 @@
     </Member>
     <Member MemberName="WithStatements">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::SwitchSectionSyntax ^ WithStatements(Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::StatementSyntax ^&gt; statements);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax WithStatements (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax WithStatements (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;? statements);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax WithStatements(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax.WithStatements(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithStatements (statements As SyntaxList(Of StatementSyntax)) As SwitchSectionSyntax" />
       <MemberSignature Language="F#" Value="member this.WithStatements : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax" Usage="switchSectionSyntax.WithStatements statements" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax WithStatements (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -312,6 +334,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchSectionSyntax</ReturnType>

@@ -1,10 +1,14 @@
 <Type Name="ObjectCreationExpressionSyntax" FullName="Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax">
   <TypeSignature Language="C++ CLI" Value="public ref class ObjectCreationExpressionSyntax sealed : Microsoft::CodeAnalysis::CSharp::Syntax::ExpressionSyntax" />
-  <TypeSignature Language="C#" Value="public sealed class ObjectCreationExpressionSyntax : Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectCreationExpressionSyntax extends Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax" />
+  <TypeSignature Language="C#" Value="public sealed class ObjectCreationExpressionSyntax : Microsoft.CodeAnalysis.CSharp.Syntax.BaseObjectCreationExpressionSyntax" FrameworkAlternate="roslyn-dotnet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectCreationExpressionSyntax extends Microsoft.CodeAnalysis.CSharp.Syntax.BaseObjectCreationExpressionSyntax" FrameworkAlternate="roslyn-dotnet" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ObjectCreationExpressionSyntax&#xA;Inherits ExpressionSyntax" />
-  <TypeSignature Language="F#" Value="type ObjectCreationExpressionSyntax = class&#xA;    inherit ExpressionSyntax" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ObjectCreationExpressionSyntax&#xA;Inherits BaseObjectCreationExpressionSyntax" FrameworkAlternate="roslyn-dotnet" />
+  <TypeSignature Language="F#" Value="type ObjectCreationExpressionSyntax = class&#xA;    inherit BaseObjectCreationExpressionSyntax" FrameworkAlternate="roslyn-dotnet" />
+  <TypeSignature Language="C#" Value="public sealed class ObjectCreationExpressionSyntax : Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectCreationExpressionSyntax extends Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ObjectCreationExpressionSyntax&#xA;Inherits ExpressionSyntax" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+  <TypeSignature Language="F#" Value="type ObjectCreationExpressionSyntax = class&#xA;    inherit ExpressionSyntax" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -15,9 +19,11 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax</BaseTypeName>
+    <BaseTypeName>Microsoft.CodeAnalysis.CSharp.Syntax.BaseObjectCreationExpressionSyntax</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0">Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -43,6 +49,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -74,9 +81,16 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="roslyn-dotnet">
+            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -98,7 +112,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax AddArgumentListArguments(class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[] items) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.AddArgumentListArguments(Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[])" />
       <MemberSignature Language="VB.NET" Value="Public Function AddArgumentListArguments (ParamArray items As ArgumentSyntax()) As ObjectCreationExpressionSyntax" />
-      <MemberSignature Language="F#" Value="member this.AddArgumentListArguments : Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[] -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.AddArgumentListArguments items" />
+      <MemberSignature Language="F#" Value="override this.AddArgumentListArguments : Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[] -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.AddArgumentListArguments items" FrameworkAlternate="roslyn-dotnet" />
+      <MemberSignature Language="F#" Value="member this.AddArgumentListArguments : Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[] -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.AddArgumentListArguments items" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -110,6 +125,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax</ReturnType>
@@ -118,7 +134,8 @@
         <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[]">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -132,11 +149,14 @@
     </Member>
     <Member MemberName="ArgumentList">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentListSyntax ^ ArgumentList { Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentListSyntax ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax ArgumentList { get; }" />
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax? ArgumentList { get; }" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax ArgumentList" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.ArgumentList" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ArgumentList As ArgumentListSyntax" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ArgumentList As ArgumentListSyntax" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="F#" Value="member this.ArgumentList : Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.ArgumentList" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax ArgumentList { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ArgumentList As ArgumentListSyntax" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax? ArgumentList { get; }" FrameworkAlternate="roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -148,6 +168,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax</ReturnType>
@@ -160,11 +181,14 @@
     </Member>
     <Member MemberName="Initializer">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::CSharp::Syntax::InitializerExpressionSyntax ^ Initializer { Microsoft::CodeAnalysis::CSharp::Syntax::InitializerExpressionSyntax ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax Initializer { get; }" />
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax? Initializer { get; }" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax Initializer" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.Initializer" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Initializer As InitializerExpressionSyntax" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Initializer As InitializerExpressionSyntax" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="F#" Value="member this.Initializer : Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.Initializer" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax Initializer { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Initializer As InitializerExpressionSyntax" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax? Initializer { get; }" FrameworkAlternate="roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -176,6 +200,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax</ReturnType>
@@ -188,11 +213,13 @@
     </Member>
     <Member MemberName="NewKeyword">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SyntaxToken NewKeyword { Microsoft::CodeAnalysis::SyntaxToken get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxToken NewKeyword { get; }" />
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SyntaxToken NewKeyword { get; }" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxToken NewKeyword" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.NewKeyword" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NewKeyword As SyntaxToken" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property NewKeyword As SyntaxToken" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="F#" Value="member this.NewKeyword : Microsoft.CodeAnalysis.SyntaxToken" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.NewKeyword" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxToken NewKeyword { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NewKeyword As SyntaxToken" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -204,6 +231,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -232,6 +260,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax</ReturnType>
@@ -244,11 +273,12 @@
     </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::ObjectCreationExpressionSyntax ^ Update(Microsoft::CodeAnalysis::SyntaxToken newKeyword, Microsoft::CodeAnalysis::CSharp::Syntax::TypeSyntax ^ type, Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentListSyntax ^ argumentList, Microsoft::CodeAnalysis::CSharp::Syntax::InitializerExpressionSyntax ^ initializer);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax Update (Microsoft.CodeAnalysis.SyntaxToken newKeyword, Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type, Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax argumentList, Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax initializer);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax Update (Microsoft.CodeAnalysis.SyntaxToken newKeyword, Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type, Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax? argumentList, Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax? initializer);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxToken newKeyword, class Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type, class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax argumentList, class Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax initializer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (newKeyword As SyntaxToken, type As TypeSyntax, argumentList As ArgumentListSyntax, initializer As InitializerExpressionSyntax) As ObjectCreationExpressionSyntax" />
       <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax * Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax * Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.Update (newKeyword, type, argumentList, initializer)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax Update (Microsoft.CodeAnalysis.SyntaxToken newKeyword, Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type, Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax argumentList, Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax initializer);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -260,6 +290,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax</ReturnType>
@@ -282,11 +313,13 @@
     </Member>
     <Member MemberName="WithArgumentList">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::ObjectCreationExpressionSyntax ^ WithArgumentList(Microsoft::CodeAnalysis::CSharp::Syntax::ArgumentListSyntax ^ argumentList);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax WithArgumentList (Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax argumentList);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax WithArgumentList (Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax? argumentList);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax WithArgumentList(class Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax argumentList) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.WithArgumentList(Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithArgumentList (argumentList As ArgumentListSyntax) As ObjectCreationExpressionSyntax" />
-      <MemberSignature Language="F#" Value="member this.WithArgumentList : Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.WithArgumentList argumentList" />
+      <MemberSignature Language="F#" Value="override this.WithArgumentList : Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.WithArgumentList argumentList" FrameworkAlternate="roslyn-dotnet" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax WithArgumentList (Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax argumentList);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
+      <MemberSignature Language="F#" Value="member this.WithArgumentList : Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentListSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.WithArgumentList argumentList" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -298,6 +331,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax</ReturnType>
@@ -314,11 +348,13 @@
     </Member>
     <Member MemberName="WithInitializer">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::ObjectCreationExpressionSyntax ^ WithInitializer(Microsoft::CodeAnalysis::CSharp::Syntax::InitializerExpressionSyntax ^ initializer);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax WithInitializer (Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax initializer);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax WithInitializer (Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax? initializer);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax WithInitializer(class Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax initializer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.WithInitializer(Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithInitializer (initializer As InitializerExpressionSyntax) As ObjectCreationExpressionSyntax" />
-      <MemberSignature Language="F#" Value="member this.WithInitializer : Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.WithInitializer initializer" />
+      <MemberSignature Language="F#" Value="override this.WithInitializer : Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.WithInitializer initializer" FrameworkAlternate="roslyn-dotnet" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax WithInitializer (Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax initializer);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
+      <MemberSignature Language="F#" Value="member this.WithInitializer : Microsoft.CodeAnalysis.CSharp.Syntax.InitializerExpressionSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.WithInitializer initializer" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -330,6 +366,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax</ReturnType>
@@ -350,7 +387,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax WithNewKeyword(valuetype Microsoft.CodeAnalysis.SyntaxToken newKeyword) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax.WithNewKeyword(Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithNewKeyword (newKeyword As SyntaxToken) As ObjectCreationExpressionSyntax" />
-      <MemberSignature Language="F#" Value="member this.WithNewKeyword : Microsoft.CodeAnalysis.SyntaxToken -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.WithNewKeyword newKeyword" />
+      <MemberSignature Language="F#" Value="override this.WithNewKeyword : Microsoft.CodeAnalysis.SyntaxToken -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.WithNewKeyword newKeyword" FrameworkAlternate="roslyn-dotnet" />
+      <MemberSignature Language="F#" Value="member this.WithNewKeyword : Microsoft.CodeAnalysis.SyntaxToken -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax" Usage="objectCreationExpressionSyntax.WithNewKeyword newKeyword" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -362,6 +400,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax</ReturnType>
@@ -394,6 +433,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ObjectCreationExpressionSyntax</ReturnType>

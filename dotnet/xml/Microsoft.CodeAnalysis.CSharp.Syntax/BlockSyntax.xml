@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax</BaseTypeName>
@@ -43,6 +44,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -74,9 +76,16 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="roslyn-dotnet">
+            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -102,15 +111,17 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet">
+        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -140,6 +151,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax</ReturnType>
@@ -148,7 +160,8 @@
         <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax[]">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -161,7 +174,7 @@
       </Docs>
     </Member>
     <Member MemberName="AttributeLists">
-      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists { get; }" />
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? AttributeLists { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.AttributeLists" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property AttributeLists As SyntaxList(Of AttributeListSyntax)" />
@@ -170,6 +183,7 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;</ReturnType>
@@ -198,6 +212,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -226,6 +241,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -238,11 +254,12 @@
     </Member>
     <Member MemberName="Statements">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::StatementSyntax ^&gt; Statements { Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::StatementSyntax ^&gt; get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; Statements { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;? Statements { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; Statements" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.Statements" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Statements As SyntaxList(Of StatementSyntax)" />
       <MemberSignature Language="F#" Value="member this.Statements : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.Statements" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; Statements { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -254,6 +271,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;</ReturnType>
@@ -266,11 +284,12 @@
     </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::BlockSyntax ^ Update(Microsoft::CodeAnalysis::SyntaxToken openBraceToken, Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::StatementSyntax ^&gt; statements, Microsoft::CodeAnalysis::SyntaxToken closeBraceToken);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Update (Microsoft.CodeAnalysis.SyntaxToken openBraceToken, Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements, Microsoft.CodeAnalysis.SyntaxToken closeBraceToken);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Update (Microsoft.CodeAnalysis.SyntaxToken openBraceToken, Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;? statements, Microsoft.CodeAnalysis.SyntaxToken closeBraceToken);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxToken openBraceToken, valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements, valuetype Microsoft.CodeAnalysis.SyntaxToken closeBraceToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (openBraceToken As SyntaxToken, statements As SyntaxList(Of StatementSyntax), closeBraceToken As SyntaxToken) As BlockSyntax" />
       <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; * Microsoft.CodeAnalysis.SyntaxToken -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax" Usage="blockSyntax.Update (openBraceToken, statements, closeBraceToken)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Update (Microsoft.CodeAnalysis.SyntaxToken openBraceToken, Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements, Microsoft.CodeAnalysis.SyntaxToken closeBraceToken);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -282,6 +301,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax</ReturnType>
@@ -301,7 +321,7 @@
       </Docs>
     </Member>
     <Member MemberName="Update">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, Microsoft.CodeAnalysis.SyntaxToken openBraceToken, Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements, Microsoft.CodeAnalysis.SyntaxToken closeBraceToken);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? attributeLists, Microsoft.CodeAnalysis.SyntaxToken openBraceToken, Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;? statements, Microsoft.CodeAnalysis.SyntaxToken closeBraceToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, valuetype Microsoft.CodeAnalysis.SyntaxToken openBraceToken, valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements, valuetype Microsoft.CodeAnalysis.SyntaxToken closeBraceToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (attributeLists As SyntaxList(Of AttributeListSyntax), openBraceToken As SyntaxToken, statements As SyntaxList(Of StatementSyntax), closeBraceToken As SyntaxToken) As BlockSyntax" />
@@ -310,15 +330,16 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet" />
-        <Parameter Name="openBraceToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="1" FrameworkAlternate="roslyn-dotnet" />
-        <Parameter Name="statements" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;" Index="2" FrameworkAlternate="roslyn-dotnet" />
-        <Parameter Name="closeBraceToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="3" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
+        <Parameter Name="openBraceToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
+        <Parameter Name="statements" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
+        <Parameter Name="closeBraceToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="attributeLists">To be added.</param>
@@ -331,7 +352,7 @@
       </Docs>
     </Member>
     <Member MemberName="WithAttributeLists">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? attributeLists);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax WithAttributeLists(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithAttributeLists (attributeLists As SyntaxList(Of AttributeListSyntax)) As BlockSyntax" />
@@ -340,12 +361,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="attributeLists">To be added.</param>
@@ -372,6 +394,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax</ReturnType>
@@ -404,6 +427,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax</ReturnType>
@@ -420,11 +444,12 @@
     </Member>
     <Member MemberName="WithStatements">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::BlockSyntax ^ WithStatements(Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::StatementSyntax ^&gt; statements);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax WithStatements (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax WithStatements (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt;? statements);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax WithStatements(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax.WithStatements(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithStatements (statements As SyntaxList(Of StatementSyntax)) As BlockSyntax" />
       <MemberSignature Language="F#" Value="member this.WithStatements : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax" Usage="blockSyntax.WithStatements statements" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax WithStatements (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax&gt; statements);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -436,6 +461,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax</ReturnType>

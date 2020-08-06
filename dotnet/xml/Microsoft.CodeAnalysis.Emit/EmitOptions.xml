@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -49,6 +50,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataOnly" Type="System.Boolean" />
@@ -81,11 +83,12 @@
     </Member>
     <Member MemberName=".ctor">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EmitOptions(bool metadataOnly, Microsoft::CodeAnalysis::Emit::DebugInformationFormat debugInformationFormat, System::String ^ pdbFilePath, System::String ^ outputNameOverride, int fileAlignment, System::UInt64 baseAddress, bool highEntropyVirtualAddressSpace, Microsoft::CodeAnalysis::SubsystemVersion subsystemVersion, System::String ^ runtimeMetadataVersion, bool tolerateErrors, bool includePrivateMembers, System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Emit::InstrumentationKind&gt; instrumentationKinds);" />
-      <MemberSignature Language="C#" Value="public EmitOptions (bool metadataOnly, Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat, string pdbFilePath, string outputNameOverride, int fileAlignment, ulong baseAddress, bool highEntropyVirtualAddressSpace, Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion, string runtimeMetadataVersion, bool tolerateErrors, bool includePrivateMembers, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds);" />
+      <MemberSignature Language="C#" Value="public EmitOptions (bool metadataOnly, Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat, string pdbFilePath, string outputNameOverride, int fileAlignment, ulong baseAddress, bool highEntropyVirtualAddressSpace, Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion, string runtimeMetadataVersion, bool tolerateErrors, bool includePrivateMembers, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt;? instrumentationKinds);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool metadataOnly, valuetype Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat, string pdbFilePath, string outputNameOverride, int32 fileAlignment, unsigned int64 baseAddress, bool highEntropyVirtualAddressSpace, valuetype Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion, string runtimeMetadataVersion, bool tolerateErrors, bool includePrivateMembers, valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EmitOptions.#ctor(System.Boolean,Microsoft.CodeAnalysis.Emit.DebugInformationFormat,System.String,System.String,System.Int32,System.UInt64,System.Boolean,Microsoft.CodeAnalysis.SubsystemVersion,System.String,System.Boolean,System.Boolean,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Emit.InstrumentationKind})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (metadataOnly As Boolean, debugInformationFormat As DebugInformationFormat, pdbFilePath As String, outputNameOverride As String, fileAlignment As Integer, baseAddress As ULong, highEntropyVirtualAddressSpace As Boolean, subsystemVersion As SubsystemVersion, runtimeMetadataVersion As String, tolerateErrors As Boolean, includePrivateMembers As Boolean, instrumentationKinds As ImmutableArray(Of InstrumentationKind))" />
       <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Emit.EmitOptions : bool * Microsoft.CodeAnalysis.Emit.DebugInformationFormat * string * string * int * uint64 * bool * Microsoft.CodeAnalysis.SubsystemVersion * string * bool * bool * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; -&gt; Microsoft.CodeAnalysis.Emit.EmitOptions" Usage="new Microsoft.CodeAnalysis.Emit.EmitOptions (metadataOnly, debugInformationFormat, pdbFilePath, outputNameOverride, fileAlignment, baseAddress, highEntropyVirtualAddressSpace, subsystemVersion, runtimeMetadataVersion, tolerateErrors, includePrivateMembers, instrumentationKinds)" />
+      <MemberSignature Language="C#" Value="public EmitOptions (bool metadataOnly, Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat, string pdbFilePath, string outputNameOverride, int fileAlignment, ulong baseAddress, bool highEntropyVirtualAddressSpace, Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion, string runtimeMetadataVersion, bool tolerateErrors, bool includePrivateMembers, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -97,6 +100,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataOnly" Type="System.Boolean" />
@@ -130,11 +134,14 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public EmitOptions (bool metadataOnly = false, Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat = (Microsoft.CodeAnalysis.Emit.DebugInformationFormat) 0, string pdbFilePath = default, string outputNameOverride = default, int fileAlignment = 0, ulong baseAddress = 0, bool highEntropyVirtualAddressSpace = false, Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion = default, string runtimeMetadataVersion = default, bool tolerateErrors = false, bool includePrivateMembers = true, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds = default, System.Security.Cryptography.HashAlgorithmName? pdbChecksumAlgorithm = default);" />
+      <MemberSignature Language="C#" Value="public EmitOptions (bool metadataOnly, Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat, string pdbFilePath, string outputNameOverride, int fileAlignment, ulong baseAddress, bool highEntropyVirtualAddressSpace, Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion, string runtimeMetadataVersion, bool tolerateErrors, bool includePrivateMembers, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt;? instrumentationKinds, System.Security.Cryptography.HashAlgorithmName? pdbChecksumAlgorithm);" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool metadataOnly, valuetype Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat, string pdbFilePath, string outputNameOverride, int32 fileAlignment, unsigned int64 baseAddress, bool highEntropyVirtualAddressSpace, valuetype Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion, string runtimeMetadataVersion, bool tolerateErrors, bool includePrivateMembers, valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds, valuetype System.Nullable`1&lt;valuetype System.Security.Cryptography.HashAlgorithmName&gt; pdbChecksumAlgorithm) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EmitOptions.#ctor(System.Boolean,Microsoft.CodeAnalysis.Emit.DebugInformationFormat,System.String,System.String,System.Int32,System.UInt64,System.Boolean,Microsoft.CodeAnalysis.SubsystemVersion,System.String,System.Boolean,System.Boolean,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Emit.InstrumentationKind},System.Nullable{System.Security.Cryptography.HashAlgorithmName})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional metadataOnly As Boolean = false, Optional debugInformationFormat As DebugInformationFormat = (Microsoft.CodeAnalysis.Emit.DebugInformationFormat) 0, Optional pdbFilePath As String = null, Optional outputNameOverride As String = null, Optional fileAlignment As Integer = 0, Optional baseAddress As ULong = 0, Optional highEntropyVirtualAddressSpace As Boolean = false, Optional subsystemVersion As SubsystemVersion = null, Optional runtimeMetadataVersion As String = null, Optional tolerateErrors As Boolean = false, Optional includePrivateMembers As Boolean = true, Optional instrumentationKinds As ImmutableArray(Of InstrumentationKind) = null, Optional pdbChecksumAlgorithm As Nullable(Of HashAlgorithmName) = null)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (metadataOnly As Boolean, debugInformationFormat As DebugInformationFormat, pdbFilePath As String, outputNameOverride As String, fileAlignment As Integer, baseAddress As ULong, highEntropyVirtualAddressSpace As Boolean, subsystemVersion As SubsystemVersion, runtimeMetadataVersion As String, tolerateErrors As Boolean, includePrivateMembers As Boolean, instrumentationKinds As ImmutableArray(Of InstrumentationKind), pdbChecksumAlgorithm As Nullable(Of HashAlgorithmName))" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Emit.EmitOptions : bool * Microsoft.CodeAnalysis.Emit.DebugInformationFormat * string * string * int * uint64 * bool * Microsoft.CodeAnalysis.SubsystemVersion * string * bool * bool * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; * Nullable&lt;System.Security.Cryptography.HashAlgorithmName&gt; -&gt; Microsoft.CodeAnalysis.Emit.EmitOptions" Usage="new Microsoft.CodeAnalysis.Emit.EmitOptions (metadataOnly, debugInformationFormat, pdbFilePath, outputNameOverride, fileAlignment, baseAddress, highEntropyVirtualAddressSpace, subsystemVersion, runtimeMetadataVersion, tolerateErrors, includePrivateMembers, instrumentationKinds, pdbChecksumAlgorithm)" />
+      <MemberSignature Language="C#" Value="public EmitOptions (bool metadataOnly = false, Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat = (Microsoft.CodeAnalysis.Emit.DebugInformationFormat) 0, string pdbFilePath = default, string outputNameOverride = default, int fileAlignment = 0, ulong baseAddress = 0, bool highEntropyVirtualAddressSpace = false, Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion = default, string runtimeMetadataVersion = default, bool tolerateErrors = false, bool includePrivateMembers = true, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds = default, System.Security.Cryptography.HashAlgorithmName? pdbChecksumAlgorithm = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional metadataOnly As Boolean = false, Optional debugInformationFormat As DebugInformationFormat = (Microsoft.CodeAnalysis.Emit.DebugInformationFormat) 0, Optional pdbFilePath As String = Nothing, Optional outputNameOverride As String = Nothing, Optional fileAlignment As Integer = 0, Optional baseAddress As ULong = 0, Optional highEntropyVirtualAddressSpace As Boolean = false, Optional subsystemVersion As SubsystemVersion = Nothing, Optional runtimeMetadataVersion As String = Nothing, Optional tolerateErrors As Boolean = false, Optional includePrivateMembers As Boolean = true, Optional instrumentationKinds As ImmutableArray(Of InstrumentationKind) = Nothing, Optional pdbChecksumAlgorithm As Nullable(Of HashAlgorithmName) = Nothing)" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public EmitOptions (bool metadataOnly = false, Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat = (Microsoft.CodeAnalysis.Emit.DebugInformationFormat) 0, string pdbFilePath = default, string outputNameOverride = default, int fileAlignment = 0, ulong baseAddress = 0, bool highEntropyVirtualAddressSpace = false, Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion = default, string runtimeMetadataVersion = default, bool tolerateErrors = false, bool includePrivateMembers = true, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt;? instrumentationKinds = default, System.Security.Cryptography.HashAlgorithmName? pdbChecksumAlgorithm = default);" FrameworkAlternate="roslyn-dotnet-3.6.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -146,6 +153,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="metadataOnly" Type="System.Boolean" />
@@ -180,6 +188,54 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmitOptions (bool metadataOnly = false, Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat = (Microsoft.CodeAnalysis.Emit.DebugInformationFormat) 0, string pdbFilePath = default, string outputNameOverride = default, int fileAlignment = 0, ulong baseAddress = 0, bool highEntropyVirtualAddressSpace = false, Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion = default, string runtimeMetadataVersion = default, bool tolerateErrors = false, bool includePrivateMembers = true, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt;? instrumentationKinds = default, System.Security.Cryptography.HashAlgorithmName? pdbChecksumAlgorithm = default, System.Text.Encoding defaultSourceFileEncoding = default, System.Text.Encoding fallbackSourceFileEncoding = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool metadataOnly, valuetype Microsoft.CodeAnalysis.Emit.DebugInformationFormat debugInformationFormat, string pdbFilePath, string outputNameOverride, int32 fileAlignment, unsigned int64 baseAddress, bool highEntropyVirtualAddressSpace, valuetype Microsoft.CodeAnalysis.SubsystemVersion subsystemVersion, string runtimeMetadataVersion, bool tolerateErrors, bool includePrivateMembers, valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds, valuetype System.Nullable`1&lt;valuetype System.Security.Cryptography.HashAlgorithmName&gt; pdbChecksumAlgorithm, class System.Text.Encoding defaultSourceFileEncoding, class System.Text.Encoding fallbackSourceFileEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EmitOptions.#ctor(System.Boolean,Microsoft.CodeAnalysis.Emit.DebugInformationFormat,System.String,System.String,System.Int32,System.UInt64,System.Boolean,Microsoft.CodeAnalysis.SubsystemVersion,System.String,System.Boolean,System.Boolean,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Emit.InstrumentationKind},System.Nullable{System.Security.Cryptography.HashAlgorithmName},System.Text.Encoding,System.Text.Encoding)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional metadataOnly As Boolean = false, Optional debugInformationFormat As DebugInformationFormat = (Microsoft.CodeAnalysis.Emit.DebugInformationFormat) 0, Optional pdbFilePath As String = Nothing, Optional outputNameOverride As String = Nothing, Optional fileAlignment As Integer = 0, Optional baseAddress As ULong = 0, Optional highEntropyVirtualAddressSpace As Boolean = false, Optional subsystemVersion As SubsystemVersion = Nothing, Optional runtimeMetadataVersion As String = Nothing, Optional tolerateErrors As Boolean = false, Optional includePrivateMembers As Boolean = true, Optional instrumentationKinds As ImmutableArray(Of InstrumentationKind) = Nothing, Optional pdbChecksumAlgorithm As Nullable(Of HashAlgorithmName) = Nothing, Optional defaultSourceFileEncoding As Encoding = Nothing, Optional fallbackSourceFileEncoding As Encoding = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.Emit.EmitOptions : bool * Microsoft.CodeAnalysis.Emit.DebugInformationFormat * string * string * int * uint64 * bool * Microsoft.CodeAnalysis.SubsystemVersion * string * bool * bool * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; * Nullable&lt;System.Security.Cryptography.HashAlgorithmName&gt; * System.Text.Encoding * System.Text.Encoding -&gt; Microsoft.CodeAnalysis.Emit.EmitOptions" Usage="new Microsoft.CodeAnalysis.Emit.EmitOptions (metadataOnly, debugInformationFormat, pdbFilePath, outputNameOverride, fileAlignment, baseAddress, highEntropyVirtualAddressSpace, subsystemVersion, runtimeMetadataVersion, tolerateErrors, includePrivateMembers, instrumentationKinds, pdbChecksumAlgorithm, defaultSourceFileEncoding, fallbackSourceFileEncoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metadataOnly" Type="System.Boolean" Index="0" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="debugInformationFormat" Type="Microsoft.CodeAnalysis.Emit.DebugInformationFormat" Index="1" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="pdbFilePath" Type="System.String" Index="2" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="outputNameOverride" Type="System.String" Index="3" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="fileAlignment" Type="System.Int32" Index="4" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="baseAddress" Type="System.UInt64" Index="5" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="highEntropyVirtualAddressSpace" Type="System.Boolean" Index="6" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="subsystemVersion" Type="Microsoft.CodeAnalysis.SubsystemVersion" Index="7" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="runtimeMetadataVersion" Type="System.String" Index="8" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="tolerateErrors" Type="System.Boolean" Index="9" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="includePrivateMembers" Type="System.Boolean" Index="10" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="instrumentationKinds" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt;" Index="11" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="pdbChecksumAlgorithm" Type="System.Nullable&lt;System.Security.Cryptography.HashAlgorithmName&gt;" Index="12" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="defaultSourceFileEncoding" Type="System.Text.Encoding" Index="13" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="fallbackSourceFileEncoding" Type="System.Text.Encoding" Index="14" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="metadataOnly">To be added.</param>
+        <param name="debugInformationFormat">To be added.</param>
+        <param name="pdbFilePath">To be added.</param>
+        <param name="outputNameOverride">To be added.</param>
+        <param name="fileAlignment">To be added.</param>
+        <param name="baseAddress">To be added.</param>
+        <param name="highEntropyVirtualAddressSpace">To be added.</param>
+        <param name="subsystemVersion">To be added.</param>
+        <param name="runtimeMetadataVersion">To be added.</param>
+        <param name="tolerateErrors">To be added.</param>
+        <param name="includePrivateMembers">To be added.</param>
+        <param name="instrumentationKinds">To be added.</param>
+        <param name="pdbChecksumAlgorithm">To be added.</param>
+        <param name="defaultSourceFileEncoding">To be added.</param>
+        <param name="fallbackSourceFileEncoding">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BaseAddress">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::UInt64 BaseAddress { System::UInt64 get(); };" />
       <MemberSignature Language="C#" Value="public ulong BaseAddress { get; }" />
@@ -198,6 +254,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -228,6 +285,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.DebugInformationFormat</ReturnType>
@@ -235,6 +293,29 @@
       <Docs>
         <summary>
             Debug information format.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSourceFileEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding DefaultSourceFileEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding DefaultSourceFileEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.EmitOptions.DefaultSourceFileEncoding" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultSourceFileEncoding As Encoding" />
+      <MemberSignature Language="F#" Value="member this.DefaultSourceFileEncoding : System.Text.Encoding" Usage="Microsoft.CodeAnalysis.Emit.EmitOptions.DefaultSourceFileEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The encoding used to parse source files that do not have a Byte Order Mark. If specified,
+            is stored in the emitted PDB in order to allow recreating the original compilation.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -258,6 +339,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -291,6 +373,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -323,6 +406,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -334,6 +418,29 @@
         <param name="obj">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackSourceFileEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding FallbackSourceFileEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding FallbackSourceFileEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.EmitOptions.FallbackSourceFileEncoding" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FallbackSourceFileEncoding As Encoding" />
+      <MemberSignature Language="F#" Value="member this.FallbackSourceFileEncoding : System.Text.Encoding" Usage="Microsoft.CodeAnalysis.Emit.EmitOptions.FallbackSourceFileEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If <see cref="P:Microsoft.CodeAnalysis.Emit.EmitOptions.DefaultSourceFileEncoding" /> is not specified, the encoding used to parse source files
+            that do not declare their encoding via Byte Order Mark and are not UTF8-encoded.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -355,6 +462,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -388,6 +496,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -417,6 +526,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -447,6 +557,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -463,11 +574,12 @@
     </Member>
     <Member MemberName="InstrumentationKinds">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Emit::InstrumentationKind&gt; InstrumentationKinds { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Emit::InstrumentationKind&gt; get(); };" />
-      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; InstrumentationKinds { get; }" />
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt;? InstrumentationKinds { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; InstrumentationKinds" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.EmitOptions.InstrumentationKinds" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstrumentationKinds As ImmutableArray(Of InstrumentationKind)" />
       <MemberSignature Language="F#" Value="member this.InstrumentationKinds : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt;" Usage="Microsoft.CodeAnalysis.Emit.EmitOptions.InstrumentationKinds" />
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; InstrumentationKinds { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -479,6 +591,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt;</ReturnType>
@@ -509,6 +622,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -543,6 +657,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -561,11 +676,12 @@
     </Member>
     <Member MemberName="OutputNameOverride">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OutputNameOverride { System::String ^ get(); };" />
-      <MemberSignature Language="C#" Value="public string OutputNameOverride { get; }" />
+      <MemberSignature Language="C#" Value="public string OutputNameOverride { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string OutputNameOverride" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.EmitOptions.OutputNameOverride" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutputNameOverride As String" />
       <MemberSignature Language="F#" Value="member this.OutputNameOverride : string" Usage="Microsoft.CodeAnalysis.Emit.EmitOptions.OutputNameOverride" />
+      <MemberSignature Language="C#" Value="public string? OutputNameOverride { get; }" FrameworkAlternate="roslyn-dotnet-3.6.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -577,6 +693,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -614,6 +731,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.HashAlgorithmName</ReturnType>
@@ -629,11 +747,12 @@
     </Member>
     <Member MemberName="PdbFilePath">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PdbFilePath { System::String ^ get(); };" />
-      <MemberSignature Language="C#" Value="public string PdbFilePath { get; }" />
+      <MemberSignature Language="C#" Value="public string PdbFilePath { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string PdbFilePath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.EmitOptions.PdbFilePath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PdbFilePath As String" />
       <MemberSignature Language="F#" Value="member this.PdbFilePath : string" Usage="Microsoft.CodeAnalysis.Emit.EmitOptions.PdbFilePath" />
+      <MemberSignature Language="C#" Value="public string? PdbFilePath { get; }" FrameworkAlternate="roslyn-dotnet-3.6.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -645,6 +764,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -661,11 +781,12 @@
     </Member>
     <Member MemberName="RuntimeMetadataVersion">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RuntimeMetadataVersion { System::String ^ get(); };" />
-      <MemberSignature Language="C#" Value="public string RuntimeMetadataVersion { get; }" />
+      <MemberSignature Language="C#" Value="public string RuntimeMetadataVersion { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string RuntimeMetadataVersion" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Emit.EmitOptions.RuntimeMetadataVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RuntimeMetadataVersion As String" />
       <MemberSignature Language="F#" Value="member this.RuntimeMetadataVersion : string" Usage="Microsoft.CodeAnalysis.Emit.EmitOptions.RuntimeMetadataVersion" />
+      <MemberSignature Language="C#" Value="public string? RuntimeMetadataVersion { get; }" FrameworkAlternate="roslyn-dotnet-3.6.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -677,6 +798,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -707,6 +829,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SubsystemVersion</ReturnType>
@@ -737,6 +860,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -767,6 +891,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -799,6 +924,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -808,6 +934,30 @@
       </Parameters>
       <Docs>
         <param name="format">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithDefaultSourceFileEncoding">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Emit.EmitOptions WithDefaultSourceFileEncoding (System.Text.Encoding? defaultSourceFileEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Emit.EmitOptions WithDefaultSourceFileEncoding(class System.Text.Encoding defaultSourceFileEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EmitOptions.WithDefaultSourceFileEncoding(System.Text.Encoding)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithDefaultSourceFileEncoding (defaultSourceFileEncoding As Encoding) As EmitOptions" />
+      <MemberSignature Language="F#" Value="member this.WithDefaultSourceFileEncoding : System.Text.Encoding -&gt; Microsoft.CodeAnalysis.Emit.EmitOptions" Usage="emitOptions.WithDefaultSourceFileEncoding defaultSourceFileEncoding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultSourceFileEncoding" Type="System.Text.Encoding" Index="0" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="defaultSourceFileEncoding">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -831,6 +981,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -840,6 +991,30 @@
       </Parameters>
       <Docs>
         <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithFallbackSourceFileEncoding">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Emit.EmitOptions WithFallbackSourceFileEncoding (System.Text.Encoding? fallbackSourceFileEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Emit.EmitOptions WithFallbackSourceFileEncoding(class System.Text.Encoding fallbackSourceFileEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EmitOptions.WithFallbackSourceFileEncoding(System.Text.Encoding)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithFallbackSourceFileEncoding (fallbackSourceFileEncoding As Encoding) As EmitOptions" />
+      <MemberSignature Language="F#" Value="member this.WithFallbackSourceFileEncoding : System.Text.Encoding -&gt; Microsoft.CodeAnalysis.Emit.EmitOptions" Usage="emitOptions.WithFallbackSourceFileEncoding fallbackSourceFileEncoding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fallbackSourceFileEncoding" Type="System.Text.Encoding" Index="0" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="fallbackSourceFileEncoding">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -863,6 +1038,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -897,6 +1073,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -929,6 +1106,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -945,11 +1123,12 @@
     </Member>
     <Member MemberName="WithInstrumentationKinds">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Emit::EmitOptions ^ WithInstrumentationKinds(System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Emit::InstrumentationKind&gt; instrumentationKinds);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Emit.EmitOptions WithInstrumentationKinds (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Emit.EmitOptions? WithInstrumentationKinds (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Emit.EmitOptions WithInstrumentationKinds(valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EmitOptions.WithInstrumentationKinds(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Emit.InstrumentationKind})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithInstrumentationKinds (instrumentationKinds As ImmutableArray(Of InstrumentationKind)) As EmitOptions" />
       <MemberSignature Language="F#" Value="member this.WithInstrumentationKinds : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; -&gt; Microsoft.CodeAnalysis.Emit.EmitOptions" Usage="emitOptions.WithInstrumentationKinds instrumentationKinds" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Emit.EmitOptions WithInstrumentationKinds (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Emit.InstrumentationKind&gt; instrumentationKinds);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -961,6 +1140,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -993,6 +1173,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -1025,6 +1206,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -1057,6 +1239,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -1089,6 +1272,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -1121,6 +1305,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>
@@ -1153,6 +1338,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitOptions</ReturnType>

@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode</BaseTypeName>
@@ -43,6 +44,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -74,9 +76,16 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="roslyn-dotnet">
+            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -110,6 +119,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax</ReturnType>
@@ -118,7 +128,8 @@
         <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.ArgumentSyntax[]">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -148,6 +159,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax</ReturnType>
@@ -176,6 +188,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -204,6 +217,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax</ReturnType>
@@ -216,11 +230,12 @@
     </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::VariableDeclaratorSyntax ^ Update(Microsoft::CodeAnalysis::SyntaxToken identifier, Microsoft::CodeAnalysis::CSharp::Syntax::BracketedArgumentListSyntax ^ argumentList, Microsoft::CodeAnalysis::CSharp::Syntax::EqualsValueClauseSyntax ^ initializer);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax Update (Microsoft.CodeAnalysis.SyntaxToken identifier, Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax argumentList, Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax initializer);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax? Update (Microsoft.CodeAnalysis.SyntaxToken identifier, Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax argumentList, Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax initializer);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxToken identifier, class Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax argumentList, class Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax initializer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (identifier As SyntaxToken, argumentList As BracketedArgumentListSyntax, initializer As EqualsValueClauseSyntax) As VariableDeclaratorSyntax" />
       <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax * Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax" Usage="variableDeclaratorSyntax.Update (identifier, argumentList, initializer)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax Update (Microsoft.CodeAnalysis.SyntaxToken identifier, Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax argumentList, Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax initializer);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -232,6 +247,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax</ReturnType>
@@ -252,11 +268,12 @@
     </Member>
     <Member MemberName="WithArgumentList">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::VariableDeclaratorSyntax ^ WithArgumentList(Microsoft::CodeAnalysis::CSharp::Syntax::BracketedArgumentListSyntax ^ argumentList);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax WithArgumentList (Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax argumentList);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax WithArgumentList (Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax? argumentList);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax WithArgumentList(class Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax argumentList) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax.WithArgumentList(Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithArgumentList (argumentList As BracketedArgumentListSyntax) As VariableDeclaratorSyntax" />
       <MemberSignature Language="F#" Value="member this.WithArgumentList : Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax" Usage="variableDeclaratorSyntax.WithArgumentList argumentList" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax WithArgumentList (Microsoft.CodeAnalysis.CSharp.Syntax.BracketedArgumentListSyntax argumentList);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -268,6 +285,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax</ReturnType>
@@ -300,6 +318,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax</ReturnType>
@@ -316,11 +335,12 @@
     </Member>
     <Member MemberName="WithInitializer">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::VariableDeclaratorSyntax ^ WithInitializer(Microsoft::CodeAnalysis::CSharp::Syntax::EqualsValueClauseSyntax ^ initializer);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax WithInitializer (Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax initializer);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax WithInitializer (Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax? initializer);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax WithInitializer(class Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax initializer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax.WithInitializer(Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithInitializer (initializer As EqualsValueClauseSyntax) As VariableDeclaratorSyntax" />
       <MemberSignature Language="F#" Value="member this.WithInitializer : Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax" Usage="variableDeclaratorSyntax.WithInitializer initializer" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax WithInitializer (Microsoft.CodeAnalysis.CSharp.Syntax.EqualsValueClauseSyntax initializer);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -332,6 +352,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.VariableDeclaratorSyntax</ReturnType>
