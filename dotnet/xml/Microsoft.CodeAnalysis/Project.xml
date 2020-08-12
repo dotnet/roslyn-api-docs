@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,7 +23,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(),nq}")</AttributeName>
+      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(),nq}")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(),nq}")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -33,11 +35,12 @@
   </Docs>
   <Members>
     <Member MemberName="AddAdditionalDocument">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument AddAdditionalDocument (string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument AddAdditionalDocument (string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt;? folders = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.TextDocument AddAdditionalDocument(string name, class Microsoft.CodeAnalysis.Text.SourceText text, class System.Collections.Generic.IEnumerable`1&lt;string&gt; folders, string filePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.AddAdditionalDocument(System.String,Microsoft.CodeAnalysis.Text.SourceText,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Function AddAdditionalDocument (name As String, text As SourceText, Optional folders As IEnumerable(Of String) = null, Optional filePath As String = null) As TextDocument" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddAdditionalDocument (name As String, text As SourceText, Optional folders As IEnumerable(Of String) = Nothing, Optional filePath As String = Nothing) As TextDocument" />
       <MemberSignature Language="F#" Value="member this.AddAdditionalDocument : string * Microsoft.CodeAnalysis.Text.SourceText * seq&lt;string&gt; * string -&gt; Microsoft.CodeAnalysis.TextDocument" Usage="project.AddAdditionalDocument (name, text, folders, filePath)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument AddAdditionalDocument (string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -49,6 +52,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.TextDocument</ReturnType>
@@ -72,11 +76,12 @@
       </Docs>
     </Member>
     <Member MemberName="AddAdditionalDocument">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument AddAdditionalDocument (string name, string text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument AddAdditionalDocument (string name, string text, System.Collections.Generic.IEnumerable&lt;string&gt;? folders = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.TextDocument AddAdditionalDocument(string name, string text, class System.Collections.Generic.IEnumerable`1&lt;string&gt; folders, string filePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.AddAdditionalDocument(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Function AddAdditionalDocument (name As String, text As String, Optional folders As IEnumerable(Of String) = null, Optional filePath As String = null) As TextDocument" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddAdditionalDocument (name As String, text As String, Optional folders As IEnumerable(Of String) = Nothing, Optional filePath As String = Nothing) As TextDocument" />
       <MemberSignature Language="F#" Value="member this.AddAdditionalDocument : string * string * seq&lt;string&gt; * string -&gt; Microsoft.CodeAnalysis.TextDocument" Usage="project.AddAdditionalDocument (name, text, folders, filePath)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument AddAdditionalDocument (string name, string text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -88,6 +93,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.TextDocument</ReturnType>
@@ -111,11 +117,12 @@
       </Docs>
     </Member>
     <Member MemberName="AddAnalyzerConfigDocument">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument AddAnalyzerConfigDocument (string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument AddAnalyzerConfigDocument (string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt;? folders = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.TextDocument AddAnalyzerConfigDocument(string name, class Microsoft.CodeAnalysis.Text.SourceText text, class System.Collections.Generic.IEnumerable`1&lt;string&gt; folders, string filePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.AddAnalyzerConfigDocument(System.String,Microsoft.CodeAnalysis.Text.SourceText,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Function AddAnalyzerConfigDocument (name As String, text As SourceText, Optional folders As IEnumerable(Of String) = null, Optional filePath As String = null) As TextDocument" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddAnalyzerConfigDocument (name As String, text As SourceText, Optional folders As IEnumerable(Of String) = Nothing, Optional filePath As String = Nothing) As TextDocument" />
       <MemberSignature Language="F#" Value="member this.AddAnalyzerConfigDocument : string * Microsoft.CodeAnalysis.Text.SourceText * seq&lt;string&gt; * string -&gt; Microsoft.CodeAnalysis.TextDocument" Usage="project.AddAnalyzerConfigDocument (name, text, folders, filePath)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument AddAnalyzerConfigDocument (string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" FrameworkAlternate="roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -124,15 +131,16 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.TextDocument</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
-        <Parameter Name="text" Type="Microsoft.CodeAnalysis.Text.SourceText" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
-        <Parameter Name="folders" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
-        <Parameter Name="filePath" Type="System.String" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+        <Parameter Name="text" Type="Microsoft.CodeAnalysis.Text.SourceText" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+        <Parameter Name="folders" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+        <Parameter Name="filePath" Type="System.String" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="name">To be added.</param>
@@ -164,6 +172,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -199,6 +208,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -217,11 +227,12 @@
       </Docs>
     </Member>
     <Member MemberName="AddDocument">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document AddDocument (string name, Microsoft.CodeAnalysis.SyntaxNode syntaxRoot, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document AddDocument (string name, Microsoft.CodeAnalysis.SyntaxNode syntaxRoot, System.Collections.Generic.IEnumerable&lt;string&gt;? folders = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document AddDocument(string name, class Microsoft.CodeAnalysis.SyntaxNode syntaxRoot, class System.Collections.Generic.IEnumerable`1&lt;string&gt; folders, string filePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.AddDocument(System.String,Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Function AddDocument (name As String, syntaxRoot As SyntaxNode, Optional folders As IEnumerable(Of String) = null, Optional filePath As String = null) As Document" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddDocument (name As String, syntaxRoot As SyntaxNode, Optional folders As IEnumerable(Of String) = Nothing, Optional filePath As String = Nothing) As Document" />
       <MemberSignature Language="F#" Value="member this.AddDocument : string * Microsoft.CodeAnalysis.SyntaxNode * seq&lt;string&gt; * string -&gt; Microsoft.CodeAnalysis.Document" Usage="project.AddDocument (name, syntaxRoot, folders, filePath)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document AddDocument (string name, Microsoft.CodeAnalysis.SyntaxNode syntaxRoot, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -233,6 +244,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -256,11 +268,12 @@
       </Docs>
     </Member>
     <Member MemberName="AddDocument">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document AddDocument (string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document AddDocument (string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt;? folders = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document AddDocument(string name, class Microsoft.CodeAnalysis.Text.SourceText text, class System.Collections.Generic.IEnumerable`1&lt;string&gt; folders, string filePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.AddDocument(System.String,Microsoft.CodeAnalysis.Text.SourceText,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Function AddDocument (name As String, text As SourceText, Optional folders As IEnumerable(Of String) = null, Optional filePath As String = null) As Document" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddDocument (name As String, text As SourceText, Optional folders As IEnumerable(Of String) = Nothing, Optional filePath As String = Nothing) As Document" />
       <MemberSignature Language="F#" Value="member this.AddDocument : string * Microsoft.CodeAnalysis.Text.SourceText * seq&lt;string&gt; * string -&gt; Microsoft.CodeAnalysis.Document" Usage="project.AddDocument (name, text, folders, filePath)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document AddDocument (string name, Microsoft.CodeAnalysis.Text.SourceText text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -272,6 +285,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -295,11 +309,12 @@
       </Docs>
     </Member>
     <Member MemberName="AddDocument">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document AddDocument (string name, string text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document AddDocument (string name, string text, System.Collections.Generic.IEnumerable&lt;string&gt;? folders = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document AddDocument(string name, string text, class System.Collections.Generic.IEnumerable`1&lt;string&gt; folders, string filePath) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.AddDocument(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Function AddDocument (name As String, text As String, Optional folders As IEnumerable(Of String) = null, Optional filePath As String = null) As Document" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddDocument (name As String, text As String, Optional folders As IEnumerable(Of String) = Nothing, Optional filePath As String = Nothing) As Document" />
       <MemberSignature Language="F#" Value="member this.AddDocument : string * string * seq&lt;string&gt; * string -&gt; Microsoft.CodeAnalysis.Document" Usage="project.AddDocument (name, text, folders, filePath)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document AddDocument (string name, string text, System.Collections.Generic.IEnumerable&lt;string&gt; folders = default, string filePath = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -311,6 +326,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -351,6 +367,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.DocumentId&gt;</ReturnType>
@@ -381,6 +398,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.TextDocument&gt;</ReturnType>
@@ -411,6 +429,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -446,6 +465,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -481,6 +501,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -516,6 +537,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -551,6 +573,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.ProjectReference&gt;</ReturnType>
@@ -578,6 +601,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.AnalyzerConfigDocument&gt;</ReturnType>
@@ -608,6 +632,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions</ReturnType>
@@ -638,6 +663,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;</ReturnType>
@@ -668,6 +694,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -682,11 +709,12 @@
     </Member>
     <Member MemberName="CompilationOptions">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::CompilationOptions ^ CompilationOptions { Microsoft::CodeAnalysis::CompilationOptions ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions CompilationOptions { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions? CompilationOptions { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CompilationOptions CompilationOptions" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Project.CompilationOptions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CompilationOptions As CompilationOptions" />
       <MemberSignature Language="F#" Value="member this.CompilationOptions : Microsoft.CodeAnalysis.CompilationOptions" Usage="Microsoft.CodeAnalysis.Project.CompilationOptions" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOptions CompilationOptions { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -698,6 +726,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CompilationOptions</ReturnType>
@@ -705,6 +734,28 @@
       <Docs>
         <summary>
             The options used when building the compilation for this project.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompilationOutputInfo">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CompilationOutputInfo CompilationOutputInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.CompilationOutputInfo CompilationOutputInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Project.CompilationOutputInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CompilationOutputInfo As CompilationOutputInfo" />
+      <MemberSignature Language="F#" Value="member this.CompilationOutputInfo : Microsoft.CodeAnalysis.CompilationOutputInfo" Usage="Microsoft.CodeAnalysis.Project.CompilationOutputInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CompilationOutputInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Compilation output file paths.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -728,6 +779,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -758,12 +810,13 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="documentId">To be added.</param>
@@ -792,6 +845,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -809,7 +863,7 @@
       </Docs>
     </Member>
     <Member MemberName="DefaultNamespace">
-      <MemberSignature Language="C#" Value="public string DefaultNamespace { get; }" />
+      <MemberSignature Language="C#" Value="public string? DefaultNamespace { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DefaultNamespace" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Project.DefaultNamespace" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultNamespace As String" />
@@ -821,6 +875,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -858,6 +913,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.DocumentId&gt;</ReturnType>
@@ -888,6 +944,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
@@ -902,11 +959,12 @@
     </Member>
     <Member MemberName="FilePath">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FilePath { System::String ^ get(); };" />
-      <MemberSignature Language="C#" Value="public string FilePath { get; }" />
+      <MemberSignature Language="C#" Value="public string? FilePath { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Project.FilePath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FilePath As String" />
       <MemberSignature Language="F#" Value="member this.FilePath : string" Usage="Microsoft.CodeAnalysis.Project.FilePath" />
+      <MemberSignature Language="C#" Value="public string FilePath { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -918,6 +976,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -932,11 +991,12 @@
     </Member>
     <Member MemberName="GetAdditionalDocument">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::TextDocument ^ GetAdditionalDocument(Microsoft::CodeAnalysis::DocumentId ^ documentId);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument GetAdditionalDocument (Microsoft.CodeAnalysis.DocumentId documentId);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument? GetAdditionalDocument (Microsoft.CodeAnalysis.DocumentId documentId);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.TextDocument GetAdditionalDocument(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.GetAdditionalDocument(Microsoft.CodeAnalysis.DocumentId)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAdditionalDocument (documentId As DocumentId) As TextDocument" />
       <MemberSignature Language="F#" Value="member this.GetAdditionalDocument : Microsoft.CodeAnalysis.DocumentId -&gt; Microsoft.CodeAnalysis.TextDocument" Usage="project.GetAdditionalDocument documentId" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.TextDocument GetAdditionalDocument (Microsoft.CodeAnalysis.DocumentId documentId);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -948,6 +1008,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.TextDocument</ReturnType>
@@ -965,11 +1026,12 @@
       </Docs>
     </Member>
     <Member MemberName="GetAnalyzerConfigDocument">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.AnalyzerConfigDocument GetAnalyzerConfigDocument (Microsoft.CodeAnalysis.DocumentId documentId);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.AnalyzerConfigDocument? GetAnalyzerConfigDocument (Microsoft.CodeAnalysis.DocumentId documentId);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.AnalyzerConfigDocument GetAnalyzerConfigDocument(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.GetAnalyzerConfigDocument(Microsoft.CodeAnalysis.DocumentId)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAnalyzerConfigDocument (documentId As DocumentId) As AnalyzerConfigDocument" />
       <MemberSignature Language="F#" Value="member this.GetAnalyzerConfigDocument : Microsoft.CodeAnalysis.DocumentId -&gt; Microsoft.CodeAnalysis.AnalyzerConfigDocument" Usage="project.GetAnalyzerConfigDocument documentId" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.AnalyzerConfigDocument GetAnalyzerConfigDocument (Microsoft.CodeAnalysis.DocumentId documentId);" FrameworkAlternate="roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -978,12 +1040,13 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigDocument</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="documentId">To be added.</param>
@@ -1012,6 +1075,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ProjectChanges</ReturnType>
@@ -1029,11 +1093,12 @@
       </Docs>
     </Member>
     <Member MemberName="GetCompilationAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Compilation&gt; GetCompilationAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Compilation&gt;? GetCompilationAsync (System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Compilation&gt; GetCompilationAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.GetCompilationAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetCompilationAsync (Optional cancellationToken As CancellationToken = null) As Task(Of Compilation)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCompilationAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of Compilation)" />
       <MemberSignature Language="F#" Value="member this.GetCompilationAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Compilation&gt;" Usage="project.GetCompilationAsync cancellationToken" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Compilation&gt; GetCompilationAsync (System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1045,6 +1110,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Compilation&gt;</ReturnType>
@@ -1068,7 +1134,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt; GetDependentSemanticVersionAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.CodeAnalysis.VersionStamp&gt; GetDependentSemanticVersionAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.GetDependentSemanticVersionAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetDependentSemanticVersionAsync (Optional cancellationToken As CancellationToken = null) As Task(Of VersionStamp)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDependentSemanticVersionAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of VersionStamp)" />
       <MemberSignature Language="F#" Value="member this.GetDependentSemanticVersionAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;" Usage="project.GetDependentSemanticVersionAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1081,6 +1147,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;</ReturnType>
@@ -1102,7 +1169,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt; GetDependentVersionAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.CodeAnalysis.VersionStamp&gt; GetDependentVersionAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.GetDependentVersionAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetDependentVersionAsync (Optional cancellationToken As CancellationToken = null) As Task(Of VersionStamp)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDependentVersionAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of VersionStamp)" />
       <MemberSignature Language="F#" Value="member this.GetDependentVersionAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;" Usage="project.GetDependentVersionAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1115,6 +1182,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;</ReturnType>
@@ -1133,11 +1201,12 @@
     </Member>
     <Member MemberName="GetDocument">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::Document ^ GetDocument(Microsoft::CodeAnalysis::DocumentId ^ documentId);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document GetDocument (Microsoft.CodeAnalysis.DocumentId documentId);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document? GetDocument (Microsoft.CodeAnalysis.DocumentId documentId);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Document GetDocument(class Microsoft.CodeAnalysis.DocumentId documentId) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.GetDocument(Microsoft.CodeAnalysis.DocumentId)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDocument (documentId As DocumentId) As Document" />
       <MemberSignature Language="F#" Value="member this.GetDocument : Microsoft.CodeAnalysis.DocumentId -&gt; Microsoft.CodeAnalysis.Document" Usage="project.GetDocument documentId" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Document GetDocument (Microsoft.CodeAnalysis.DocumentId documentId);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1149,6 +1218,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -1183,6 +1253,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Document</ReturnType>
@@ -1217,6 +1288,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DocumentId</ReturnType>
@@ -1237,7 +1309,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt; GetLatestDocumentVersionAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.CodeAnalysis.VersionStamp&gt; GetLatestDocumentVersionAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.GetLatestDocumentVersionAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetLatestDocumentVersionAsync (Optional cancellationToken As CancellationToken = null) As Task(Of VersionStamp)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetLatestDocumentVersionAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of VersionStamp)" />
       <MemberSignature Language="F#" Value="member this.GetLatestDocumentVersionAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;" Usage="project.GetLatestDocumentVersionAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1250,6 +1322,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;</ReturnType>
@@ -1270,7 +1343,7 @@
       <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt; GetSemanticVersionAsync (System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype Microsoft.CodeAnalysis.VersionStamp&gt; GetSemanticVersionAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.GetSemanticVersionAsync(System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetSemanticVersionAsync (Optional cancellationToken As CancellationToken = null) As Task(Of VersionStamp)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSemanticVersionAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of VersionStamp)" />
       <MemberSignature Language="F#" Value="member this.GetSemanticVersionAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;" Usage="project.GetSemanticVersionAsync cancellationToken" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1283,6 +1356,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.VersionStamp&gt;</ReturnType>
@@ -1318,6 +1392,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1348,6 +1423,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ProjectId</ReturnType>
@@ -1379,6 +1455,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1409,6 +1486,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1439,6 +1517,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Host.HostLanguageServices</ReturnType>
@@ -1469,6 +1548,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.MetadataReference&gt;</ReturnType>
@@ -1499,6 +1579,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1513,11 +1594,12 @@
     </Member>
     <Member MemberName="OutputFilePath">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OutputFilePath { System::String ^ get(); };" />
-      <MemberSignature Language="C#" Value="public string OutputFilePath { get; }" />
+      <MemberSignature Language="C#" Value="public string? OutputFilePath { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string OutputFilePath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Project.OutputFilePath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutputFilePath As String" />
       <MemberSignature Language="F#" Value="member this.OutputFilePath : string" Usage="Microsoft.CodeAnalysis.Project.OutputFilePath" />
+      <MemberSignature Language="C#" Value="public string OutputFilePath { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1529,6 +1611,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1543,11 +1626,12 @@
     </Member>
     <Member MemberName="OutputRefFilePath">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OutputRefFilePath { System::String ^ get(); };" />
-      <MemberSignature Language="C#" Value="public string OutputRefFilePath { get; }" />
+      <MemberSignature Language="C#" Value="public string? OutputRefFilePath { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string OutputRefFilePath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Project.OutputRefFilePath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutputRefFilePath As String" />
       <MemberSignature Language="F#" Value="member this.OutputRefFilePath : string" Usage="Microsoft.CodeAnalysis.Project.OutputRefFilePath" />
+      <MemberSignature Language="C#" Value="public string OutputRefFilePath { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1559,6 +1643,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1573,11 +1658,12 @@
     </Member>
     <Member MemberName="ParseOptions">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ParseOptions ^ ParseOptions { Microsoft::CodeAnalysis::ParseOptions ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ParseOptions ParseOptions { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ParseOptions? ParseOptions { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ParseOptions ParseOptions" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Project.ParseOptions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParseOptions As ParseOptions" />
       <MemberSignature Language="F#" Value="member this.ParseOptions : Microsoft.CodeAnalysis.ParseOptions" Usage="Microsoft.CodeAnalysis.Project.ParseOptions" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ParseOptions ParseOptions { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1589,6 +1675,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ParseOptions</ReturnType>
@@ -1619,6 +1706,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectReference&gt;</ReturnType>
@@ -1649,6 +1737,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -1660,6 +1749,32 @@
         <param name="documentId">To be added.</param>
         <summary>
             Creates a new instance of this project updated to no longer include the specified additional document.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAdditionalDocuments">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Project RemoveAdditionalDocuments (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;? documentIds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Project RemoveAdditionalDocuments(valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.DocumentId&gt; documentIds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.RemoveAdditionalDocuments(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DocumentId})" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAdditionalDocuments (documentIds As ImmutableArray(Of DocumentId)) As Project" />
+      <MemberSignature Language="F#" Value="member this.RemoveAdditionalDocuments : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt; -&gt; Microsoft.CodeAnalysis.Project" Usage="project.RemoveAdditionalDocuments documentIds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentIds" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;" Index="0" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="documentIds">To be added.</param>
+        <summary>
+            Creates a new instance of this project updated to no longer include the specified additional documents.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1679,17 +1794,44 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+        <Parameter Name="documentId" Type="Microsoft.CodeAnalysis.DocumentId" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="documentId">To be added.</param>
         <summary>
             Creates a new instance of this project updated to no longer include the specified analyzer config document.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAnalyzerConfigDocuments">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Project RemoveAnalyzerConfigDocuments (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;? documentIds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Project RemoveAnalyzerConfigDocuments(valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.DocumentId&gt; documentIds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.RemoveAnalyzerConfigDocuments(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DocumentId})" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAnalyzerConfigDocuments (documentIds As ImmutableArray(Of DocumentId)) As Project" />
+      <MemberSignature Language="F#" Value="member this.RemoveAnalyzerConfigDocuments : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt; -&gt; Microsoft.CodeAnalysis.Project" Usage="project.RemoveAnalyzerConfigDocuments documentIds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentIds" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;" Index="0" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="documentIds">To be added.</param>
+        <summary>
+            Creates a new solution instance that no longer includes the specified <see cref="T:Microsoft.CodeAnalysis.AnalyzerConfigDocument" />s.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1713,6 +1855,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -1747,6 +1890,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -1764,7 +1908,7 @@
       </Docs>
     </Member>
     <Member MemberName="RemoveDocuments">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Project RemoveDocuments (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt; documentIds);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Project RemoveDocuments (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;? documentIds);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Project RemoveDocuments(valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.DocumentId&gt; documentIds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.RemoveDocuments(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DocumentId})" />
       <MemberSignature Language="VB.NET" Value="Public Function RemoveDocuments (documentIds As ImmutableArray(Of DocumentId)) As Project" />
@@ -1773,12 +1917,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="documentIds" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;" Index="0" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="documentIds" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.DocumentId&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="documentIds">To be added.</param>
@@ -1807,6 +1952,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -1841,6 +1987,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -1875,6 +2022,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
@@ -1905,6 +2053,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1938,6 +2087,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1946,7 +2096,8 @@
         <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" RefType="out">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.Diagnostics.CodeAnalysis.NotNullWhen(true)</AttributeName>
+              <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -1980,6 +2131,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.VersionStamp</ReturnType>
@@ -2010,6 +2162,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -2045,6 +2198,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -2079,6 +2233,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -2096,11 +2251,11 @@
       </Docs>
     </Member>
     <Member MemberName="WithDefaultNamespace">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Project WithDefaultNamespace (string defaultNamespace);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Project WithDefaultNamespace(string defaultNamespace) cil managed" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.WithDefaultNamespace(System.String)" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
-      <MemberSignature Language="VB.NET" Value="Public Function WithDefaultNamespace (defaultNamespace As String) As Project" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
-      <MemberSignature Language="F#" Value="member this.WithDefaultNamespace : string -&gt; Microsoft.CodeAnalysis.Project" Usage="project.WithDefaultNamespace defaultNamespace" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Project WithDefaultNamespace (string defaultNamespace);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.Project WithDefaultNamespace(string defaultNamespace) cil managed" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Project.WithDefaultNamespace(System.String)" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithDefaultNamespace (defaultNamespace As String) As Project" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="F#" Value="member this.WithDefaultNamespace : string -&gt; Microsoft.CodeAnalysis.Project" Usage="project.WithDefaultNamespace defaultNamespace" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -2108,12 +2263,13 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0">Microsoft.CodeAnalysis.Project</ReturnType>
+        <ReturnType FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0">Microsoft.CodeAnalysis.Project</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="defaultNamespace" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
+        <Parameter Name="defaultNamespace" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       </Parameters>
       <Docs>
         <param name="defaultNamespace">To be added.</param>
@@ -2142,6 +2298,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -2177,6 +2334,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>
@@ -2211,6 +2369,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Project</ReturnType>

@@ -1,0 +1,119 @@
+<Type Name="Renamer+RenameDocumentActionSet" FullName="Microsoft.CodeAnalysis.Rename.Renamer+RenameDocumentActionSet">
+  <TypeSignature Language="C#" Value="public sealed class Renamer.RenameDocumentActionSet" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed beforefieldinit Renamer/RenameDocumentActionSet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Renamer.RenameDocumentActionSet" />
+  <TypeSignature Language="F#" Value="type Renamer.RenameDocumentActionSet = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Information about rename document calls that allows them to be applied as individual actions. Actions are individual units of work
+            that can change the contents of one or more document in the solution. Even if the <see cref="P:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.ApplicableActions" /> is empty, the 
+            document metadata will still be updated by calling <see cref="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.UpdateSolutionAsync(Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction},System.Threading.CancellationToken)" /><para />
+            To apply all actions use <see cref="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.UpdateSolutionAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />, or use a subset
+            of the actions by calling <see cref="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.UpdateSolutionAsync(Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction},System.Threading.CancellationToken)" />. 
+            Actions can be applied in any order.
+            Each action has a description of the changes that it will apply that can be presented to a user.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicableActions">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction&gt;? ApplicableActions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Rename.Renamer/RenameDocumentAction&gt; ApplicableActions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.ApplicableActions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicableActions As ImmutableArray(Of Renamer.RenameDocumentAction)" />
+      <MemberSignature Language="F#" Value="member this.ApplicableActions : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction&gt;" Usage="Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.ApplicableActions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Rename.Renamer+RenameDocumentAction&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            All applicable actions computed for the action. Action set may be empty, which represents updates to document 
+            contents rather than metadata. Document metadata will still not be updated unless <see cref="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.UpdateSolutionAsync(Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction},System.Threading.CancellationToken)" /> 
+            is called.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSolutionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; UpdateSolutionAsync (Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt; UpdateSolutionAsync(class Microsoft.CodeAnalysis.Solution solution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.UpdateSolutionAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function UpdateSolutionAsync (solution As Solution, cancellationToken As CancellationToken) As Task(Of Solution)" />
+      <MemberSignature Language="F#" Value="member this.UpdateSolutionAsync : Microsoft.CodeAnalysis.Solution * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;" Usage="renameDocumentActionSet.UpdateSolutionAsync (solution, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="solution">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Same as calling <see cref="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.UpdateSolutionAsync(Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction},System.Threading.CancellationToken)" /> with 
+            <see cref="P:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.ApplicableActions" /> as the argument
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSolutionAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; UpdateSolutionAsync (Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction&gt;? actions, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt; UpdateSolutionAsync(class Microsoft.CodeAnalysis.Solution solution, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Rename.Renamer/RenameDocumentAction&gt; actions, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.UpdateSolutionAsync(Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function UpdateSolutionAsync (solution As Solution, actions As ImmutableArray(Of Renamer.RenameDocumentAction), cancellationToken As CancellationToken) As Task(Of Solution)" />
+      <MemberSignature Language="F#" Value="member this.UpdateSolutionAsync : Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;" Usage="renameDocumentActionSet.UpdateSolutionAsync (solution, actions, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
+        <Parameter Name="actions" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Rename.Renamer+RenameDocumentAction&gt;" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="solution">To be added.</param>
+        <param name="actions">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Applies each <see cref="T:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction" /> in order and returns the final solution. 
+            All actions must be contained in <see cref="P:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.ApplicableActions" /></summary>
+        <returns>To be added.</returns>
+        <remarks>
+            An empty action set is still allowed and will return a modified solution
+            that will update the document properties as appropriate. This means we 
+            can still support when <see cref="P:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.ApplicableActions" /> is empty. It's desirable
+            that consumers can call a rename API to produce a <see cref="T:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet" /> and
+            immediately call <see cref="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.UpdateSolutionAsync(Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction},System.Threading.CancellationToken)" /> without
+            having to inspect the returned <see cref="P:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.ApplicableActions" />.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,81 @@
+<Type Name="Renamer+RenameDocumentAction" FullName="Microsoft.CodeAnalysis.Rename.Renamer+RenameDocumentAction">
+  <TypeSignature Language="C#" Value="public abstract class Renamer.RenameDocumentAction" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract beforefieldinit Renamer/RenameDocumentAction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Renamer.RenameDocumentAction" />
+  <TypeSignature Language="F#" Value="type Renamer.RenameDocumentAction = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Individual action from RenameDocument APIs in <see cref="T:Microsoft.CodeAnalysis.Rename.Renamer" />. Represents
+            changes that will be done to one or more document contents to help facilitate
+            a smooth experience while moving documents around.
+            
+            See <see cref="T:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet" /> on use case and how to apply them to a solution.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDescription">
+      <MemberSignature Language="C#" Value="public abstract string GetDescription (System.Globalization.CultureInfo? culture = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDescription(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction.GetDescription(System.Globalization.CultureInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetDescription (Optional culture As CultureInfo = Nothing) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetDescription : System.Globalization.CultureInfo -&gt; string" Usage="renameDocumentAction.GetDescription culture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">To be added.</param>
+        <summary>
+            Gets the description of the action. Can be used to present to a user to describe
+            what extra actions will be taken.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrors">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;string&gt;? GetErrors (System.Globalization.CultureInfo culture = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;string&gt; GetErrors(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction.GetErrors(System.Globalization.CultureInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetErrors (Optional culture As CultureInfo = Nothing) As ImmutableArray(Of String)" />
+      <MemberSignature Language="F#" Value="member this.GetErrors : System.Globalization.CultureInfo -&gt; System.Collections.Immutable.ImmutableArray&lt;string&gt;" Usage="renameDocumentAction.GetErrors culture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">To be added.</param>
+        <summary>
+            Get any errors that have been noted for this action before it is applied.
+            Can be used to present to a user.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

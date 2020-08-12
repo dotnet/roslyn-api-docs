@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,7 +30,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindCallersAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindCallersAsync (symbol As ISymbol, solution As Solution, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of SymbolCallerInfo))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindCallersAsync (symbol As ISymbol, solution As Solution, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of SymbolCallerInfo))" />
       <MemberSignature Language="F#" Value="static member FindCallersAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindCallersAsync (symbol, solution, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -42,6 +43,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt;</ReturnType>
@@ -66,7 +68,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; documents, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Document&gt; documents, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindCallersAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Document},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindCallersAsync (symbol As ISymbol, solution As Solution, documents As IImmutableSet(Of Document), Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of SymbolCallerInfo))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindCallersAsync (symbol As ISymbol, solution As Solution, documents As IImmutableSet(Of Document), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of SymbolCallerInfo))" />
       <MemberSignature Language="F#" Value="static member FindCallersAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindCallersAsync (symbol, solution, documents, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -79,6 +81,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt;</ReturnType>
@@ -105,7 +108,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindDeclarationsAsync (Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.String,System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDeclarationsAsync (project As Project, name As String, ignoreCase As Boolean, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDeclarationsAsync (project As Project, name As String, ignoreCase As Boolean, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindDeclarationsAsync : Microsoft.CodeAnalysis.Project * string * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDeclarationsAsync (project, name, ignoreCase, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -118,6 +121,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -144,7 +148,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindDeclarationsAsync (Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.String,System.Boolean,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDeclarationsAsync (project As Project, name As String, ignoreCase As Boolean, filter As SymbolFilter, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDeclarationsAsync (project As Project, name As String, ignoreCase As Boolean, filter As SymbolFilter, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindDeclarationsAsync : Microsoft.CodeAnalysis.Project * string * bool * Microsoft.CodeAnalysis.SymbolFilter * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDeclarationsAsync (project, name, ignoreCase, filter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -157,6 +161,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -182,11 +187,13 @@
       </Docs>
     </Member>
     <Member MemberName="FindDerivedClassesAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync(class Microsoft.CodeAnalysis.INamedTypeSymbol type, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedClassesAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedClassesAsync (type As INamedTypeSymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = null, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of INamedTypeSymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedClassesAsync (type As INamedTypeSymbol, solution As Solution, projects As IImmutableSet(Of Project), cancellationToken As CancellationToken) As Task(Of IEnumerable(Of INamedTypeSymbol))" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="F#" Value="static member FindDerivedClassesAsync : Microsoft.CodeAnalysis.INamedTypeSymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedClassesAsync (type, solution, projects, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedClassesAsync (type As INamedTypeSymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of INamedTypeSymbol))" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -198,7 +205,14 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -214,10 +228,79 @@
         <param name="projects">The projects to search. Can be null to search the entire solution.</param>
         <param name="cancellationToken" />
         <summary>
-            Finds the derived classes of the given type. Implementations of an interface are not considered "derived", but can be found
-            with <see cref="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />.
+            Finds all the derived classes of the given type. Implementations of an interface are not considered
+            "derived", but can be found with <see cref="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />.
             </summary>
         <returns>The derived types of the symbol. The symbol passed in is not included in this list.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDerivedClassesAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync(class Microsoft.CodeAnalysis.INamedTypeSymbol type, class Microsoft.CodeAnalysis.Solution solution, bool transitive, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedClassesAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Boolean,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedClassesAsync (type As INamedTypeSymbol, solution As Solution, Optional transitive As Boolean = true, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of INamedTypeSymbol))" />
+      <MemberSignature Language="F#" Value="static member FindDerivedClassesAsync : Microsoft.CodeAnalysis.INamedTypeSymbol * Microsoft.CodeAnalysis.Solution * bool * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedClassesAsync (type, solution, transitive, projects, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" Index="0" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="1" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="transitive" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" Index="3" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="type">The symbol to find derived types of.</param>
+        <param name="solution">The solution to search in.</param>
+        <param name="transitive">If the search should stop at immediately derived classes, or should continue past that.</param>
+        <param name="projects">The projects to search. Can be null to search the entire solution.</param>
+        <param name="cancellationToken" />
+        <summary>
+            Finds the derived classes of the given type. Implementations of an interface are not considered
+            "derived", but can be found with <see cref="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />.
+            </summary>
+        <returns>The derived types of the symbol. The symbol passed in is not included in this list.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDerivedInterfacesAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedInterfacesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedInterfacesAsync(class Microsoft.CodeAnalysis.INamedTypeSymbol type, class Microsoft.CodeAnalysis.Solution solution, bool transitive, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedInterfacesAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Boolean,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedInterfacesAsync (type As INamedTypeSymbol, solution As Solution, Optional transitive As Boolean = true, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of INamedTypeSymbol))" />
+      <MemberSignature Language="F#" Value="static member FindDerivedInterfacesAsync : Microsoft.CodeAnalysis.INamedTypeSymbol * Microsoft.CodeAnalysis.Solution * bool * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedInterfacesAsync (type, solution, transitive, projects, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" Index="0" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="1" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="transitive" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" Index="3" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <param name="type">The symbol to find derived types of.</param>
+        <param name="solution">The solution to search in.</param>
+        <param name="transitive">If the search should stop at immediately derived interfaces, or should continue past that.</param>
+        <param name="projects">The projects to search. Can be null to search the entire solution.</param>
+        <summary>
+            Finds the derived interfaces of the given interfaces.
+            </summary>
+        <returns>The derived interfaces of the symbol. The symbol passed in is not included in this list.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -225,7 +308,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementationsAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementationsAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindImplementationsAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = null, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindImplementationsAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindImplementationsAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync (symbol, solution, projects, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -238,6 +321,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -254,7 +338,42 @@
         <param name="projects">To be added.</param>
         <param name="cancellationToken">To be added.</param>
         <summary>
-            Finds the symbols that implement an interface or interface member.
+            Finds all the accessible symbols that implement an interface or interface member.  For an <see cref="T:Microsoft.CodeAnalysis.INamedTypeSymbol" /> this will be both immediate and transitive implementations.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindImplementationsAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindImplementationsAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindImplementationsAsync(class Microsoft.CodeAnalysis.INamedTypeSymbol type, class Microsoft.CodeAnalysis.Solution solution, bool transitive, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Boolean,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindImplementationsAsync (type As INamedTypeSymbol, solution As Solution, Optional transitive As Boolean = true, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of INamedTypeSymbol))" />
+      <MemberSignature Language="F#" Value="static member FindImplementationsAsync : Microsoft.CodeAnalysis.INamedTypeSymbol * Microsoft.CodeAnalysis.Solution * bool * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync (type, solution, transitive, projects, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" Index="0" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="1" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="transitive" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" Index="3" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <param name="type">The symbol to find derived types of.</param>
+        <param name="solution">The solution to search in.</param>
+        <param name="transitive">If the search should stop at immediately derived interfaces, or should continue past that.</param>
+        <param name="projects">The projects to search. Can be null to search the entire solution.</param>
+        <summary>
+            Finds the accessible <see langword="class" /> or <see langword="struct" /> types that implement the given
+            interface.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -264,7 +383,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementedInterfaceMembersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementedInterfaceMembersAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementedInterfaceMembersAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindImplementedInterfaceMembersAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = null, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindImplementedInterfaceMembersAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindImplementedInterfaceMembersAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementedInterfaceMembersAsync (symbol, solution, projects, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -277,6 +396,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -303,7 +423,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindOverridesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects = default, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindOverridesAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Project&gt; projects, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindOverridesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindOverridesAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = null, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindOverridesAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindOverridesAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindOverridesAsync (symbol, solution, projects, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -316,6 +436,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -342,7 +463,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindReferencesAsync (symbol As ISymbol, solution As Solution, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ReferencedSymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindReferencesAsync (symbol As ISymbol, solution As Solution, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ReferencedSymbol))" />
       <MemberSignature Language="F#" Value="static member FindReferencesAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync (symbol, solution, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -355,6 +476,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;</ReturnType>
@@ -379,7 +501,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; documents, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Document&gt; documents, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Document},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindReferencesAsync (symbol As ISymbol, solution As Solution, documents As IImmutableSet(Of Document), Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ReferencedSymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindReferencesAsync (symbol As ISymbol, solution As Solution, documents As IImmutableSet(Of Document), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ReferencedSymbol))" />
       <MemberSignature Language="F#" Value="static member FindReferencesAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync (symbol, solution, documents, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -392,6 +514,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;</ReturnType>
@@ -418,7 +541,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress progress, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; documents, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, class Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress progress, class System.Collections.Immutable.IImmutableSet`1&lt;class Microsoft.CodeAnalysis.Document&gt; documents, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Document},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindReferencesAsync (symbol As ISymbol, solution As Solution, progress As IFindReferencesProgress, documents As IImmutableSet(Of Document), Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ReferencedSymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindReferencesAsync (symbol As ISymbol, solution As Solution, progress As IFindReferencesProgress, documents As IImmutableSet(Of Document), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ReferencedSymbol))" />
       <MemberSignature Language="F#" Value="static member FindReferencesAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync (symbol, solution, progress, documents, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -431,6 +554,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;</ReturnType>
@@ -460,7 +584,7 @@
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;TSymbol&gt; FindSimilarSymbols&lt;TSymbol&gt; (TSymbol symbol, Microsoft.CodeAnalysis.Compilation compilation, System.Threading.CancellationToken cancellationToken = default) where TSymbol : Microsoft.CodeAnalysis.ISymbol;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;!!TSymbol&gt; FindSimilarSymbols&lt;(class Microsoft.CodeAnalysis.ISymbol) TSymbol&gt;(!!TSymbol symbol, class Microsoft.CodeAnalysis.Compilation compilation, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSimilarSymbols``1(``0,Microsoft.CodeAnalysis.Compilation,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSimilarSymbols(Of TSymbol As ISymbol) (symbol As TSymbol, compilation As Compilation, Optional cancellationToken As CancellationToken = null) As IEnumerable(Of TSymbol)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSimilarSymbols(Of TSymbol As ISymbol) (symbol As TSymbol, compilation As Compilation, Optional cancellationToken As CancellationToken = Nothing) As IEnumerable(Of TSymbol)" />
       <MemberSignature Language="F#" Value="static member FindSimilarSymbols : 'Symbol * Microsoft.CodeAnalysis.Compilation * System.Threading.CancellationToken -&gt; seq&lt;'Symbol (requires 'Symbol :&gt; Microsoft.CodeAnalysis.ISymbol)&gt; (requires 'Symbol :&gt; Microsoft.CodeAnalysis.ISymbol)" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSimilarSymbols (symbol, compilation, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -473,6 +597,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;TSymbol&gt;</ReturnType>
@@ -511,7 +636,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Project project, Func&lt;string,bool&gt; predicate, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, class System.Func`2&lt;string, bool&gt; predicate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.Func{System.String,System.Boolean},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (project As Project, predicate As Func(Of String, Boolean), Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (project As Project, predicate As Func(Of String, Boolean), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsAsync : Microsoft.CodeAnalysis.Project * Func&lt;string, bool&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync (project, predicate, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -524,6 +649,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -548,7 +674,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Solution solution, Func&lt;string,bool&gt; predicate, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Solution solution, class System.Func`2&lt;string, bool&gt; predicate, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Solution,System.Func{System.String,System.Boolean},System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (solution As Solution, predicate As Func(Of String, Boolean), Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (solution As Solution, predicate As Func(Of String, Boolean), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsAsync : Microsoft.CodeAnalysis.Solution * Func&lt;string, bool&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync (solution, predicate, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -561,6 +687,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -585,7 +712,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Project project, Func&lt;string,bool&gt; predicate, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, class System.Func`2&lt;string, bool&gt; predicate, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.Func{System.String,System.Boolean},Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (project As Project, predicate As Func(Of String, Boolean), filter As SymbolFilter, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (project As Project, predicate As Func(Of String, Boolean), filter As SymbolFilter, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsAsync : Microsoft.CodeAnalysis.Project * Func&lt;string, bool&gt; * Microsoft.CodeAnalysis.SymbolFilter * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync (project, predicate, filter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -598,6 +725,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -624,7 +752,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.String,System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (project As Project, name As String, ignoreCase As Boolean, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (project As Project, name As String, ignoreCase As Boolean, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsAsync : Microsoft.CodeAnalysis.Project * string * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync (project, name, ignoreCase, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -637,6 +765,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -663,7 +792,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Solution solution, Func&lt;string,bool&gt; predicate, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Solution solution, class System.Func`2&lt;string, bool&gt; predicate, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Solution,System.Func{System.String,System.Boolean},Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (solution As Solution, predicate As Func(Of String, Boolean), filter As SymbolFilter, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (solution As Solution, predicate As Func(Of String, Boolean), filter As SymbolFilter, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsAsync : Microsoft.CodeAnalysis.Solution * Func&lt;string, bool&gt; * Microsoft.CodeAnalysis.SymbolFilter * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync (solution, predicate, filter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -676,6 +805,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -702,7 +832,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Solution solution, string name, bool ignoreCase, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Solution solution, string name, bool ignoreCase, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Solution,System.String,System.Boolean,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (solution As Solution, name As String, ignoreCase As Boolean, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (solution As Solution, name As String, ignoreCase As Boolean, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsAsync : Microsoft.CodeAnalysis.Solution * string * bool * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync (solution, name, ignoreCase, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -715,6 +845,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -741,7 +872,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Project project, string name, bool ignoreCase, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Project,System.String,System.Boolean,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (project As Project, name As String, ignoreCase As Boolean, filter As SymbolFilter, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (project As Project, name As String, ignoreCase As Boolean, filter As SymbolFilter, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsAsync : Microsoft.CodeAnalysis.Project * string * bool * Microsoft.CodeAnalysis.SymbolFilter * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync (project, name, ignoreCase, filter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -754,6 +885,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -782,7 +914,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync (Microsoft.CodeAnalysis.Solution solution, string name, bool ignoreCase, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsAsync(class Microsoft.CodeAnalysis.Solution solution, string name, bool ignoreCase, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync(Microsoft.CodeAnalysis.Solution,System.String,System.Boolean,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (solution As Solution, name As String, ignoreCase As Boolean, filter As SymbolFilter, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsAsync (solution As Solution, name As String, ignoreCase As Boolean, filter As SymbolFilter, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsAsync : Microsoft.CodeAnalysis.Solution * string * bool * Microsoft.CodeAnalysis.SymbolFilter * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsAsync (solution, name, ignoreCase, filter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -795,6 +927,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -823,7 +956,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsWithPatternAsync (Microsoft.CodeAnalysis.Project project, string pattern, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsWithPatternAsync(class Microsoft.CodeAnalysis.Project project, string pattern, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsWithPatternAsync(Microsoft.CodeAnalysis.Project,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsWithPatternAsync (project As Project, pattern As String, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsWithPatternAsync (project As Project, pattern As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsWithPatternAsync : Microsoft.CodeAnalysis.Project * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsWithPatternAsync (project, pattern, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -836,6 +969,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -864,7 +998,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsWithPatternAsync (Microsoft.CodeAnalysis.Solution solution, string pattern, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsWithPatternAsync(class Microsoft.CodeAnalysis.Solution solution, string pattern, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsWithPatternAsync(Microsoft.CodeAnalysis.Solution,System.String,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsWithPatternAsync (solution As Solution, pattern As String, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsWithPatternAsync (solution As Solution, pattern As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsWithPatternAsync : Microsoft.CodeAnalysis.Solution * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsWithPatternAsync (solution, pattern, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -877,6 +1011,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -905,7 +1040,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsWithPatternAsync (Microsoft.CodeAnalysis.Project project, string pattern, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsWithPatternAsync(class Microsoft.CodeAnalysis.Project project, string pattern, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsWithPatternAsync(Microsoft.CodeAnalysis.Project,System.String,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsWithPatternAsync (project As Project, pattern As String, filter As SymbolFilter, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsWithPatternAsync (project As Project, pattern As String, filter As SymbolFilter, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsWithPatternAsync : Microsoft.CodeAnalysis.Project * string * Microsoft.CodeAnalysis.SymbolFilter * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsWithPatternAsync (project, pattern, filter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -918,6 +1053,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -948,7 +1084,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsWithPatternAsync (Microsoft.CodeAnalysis.Solution solution, string pattern, Microsoft.CodeAnalysis.SymbolFilter filter, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindSourceDeclarationsWithPatternAsync(class Microsoft.CodeAnalysis.Solution solution, string pattern, valuetype Microsoft.CodeAnalysis.SymbolFilter filter, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsWithPatternAsync(Microsoft.CodeAnalysis.Solution,System.String,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsWithPatternAsync (solution As Solution, pattern As String, filter As SymbolFilter, Optional cancellationToken As CancellationToken = null) As Task(Of IEnumerable(Of ISymbol))" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDeclarationsWithPatternAsync (solution As Solution, pattern As String, filter As SymbolFilter, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindSourceDeclarationsWithPatternAsync : Microsoft.CodeAnalysis.Solution * string * Microsoft.CodeAnalysis.SymbolFilter * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDeclarationsWithPatternAsync (solution, pattern, filter, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -961,6 +1097,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -991,7 +1128,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt; FindSourceDefinitionAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; FindSourceDefinitionAsync(class Microsoft.CodeAnalysis.ISymbol symbol, class Microsoft.CodeAnalysis.Solution solution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDefinitionAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDefinitionAsync (symbol As ISymbol, solution As Solution, Optional cancellationToken As CancellationToken = null) As Task(Of ISymbol)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDefinitionAsync (symbol As ISymbol, solution As Solution, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ISymbol)" />
       <MemberSignature Language="F#" Value="static member FindSourceDefinitionAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDefinitionAsync (symbol, solution, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1004,6 +1141,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
@@ -1029,7 +1167,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISymbol FindSymbolAtPosition (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.Workspace workspace, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.ISymbol FindSymbolAtPosition(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.Workspace workspace, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPosition(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.Workspace,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSymbolAtPosition (semanticModel As SemanticModel, position As Integer, workspace As Workspace, Optional cancellationToken As CancellationToken = null) As ISymbol" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSymbolAtPosition (semanticModel As SemanticModel, position As Integer, workspace As Workspace, Optional cancellationToken As CancellationToken = Nothing) As ISymbol" />
       <MemberSignature Language="F#" Value="static member FindSymbolAtPosition : Microsoft.CodeAnalysis.SemanticModel * int * Microsoft.CodeAnalysis.Workspace * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPosition (semanticModel, position, workspace, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1042,10 +1180,12 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Obsolete("Use FindSymbolAtPositionAsync instead.")</AttributeName>
+          <AttributeName Language="C#">[System.Obsolete("Use FindSymbolAtPositionAsync instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use FindSymbolAtPositionAsync instead.")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1073,7 +1213,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt; FindSymbolAtPositionAsync (Microsoft.CodeAnalysis.Document document, int position, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; FindSymbolAtPositionAsync(class Microsoft.CodeAnalysis.Document document, int32 position, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPositionAsync(Microsoft.CodeAnalysis.Document,System.Int32,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSymbolAtPositionAsync (document As Document, position As Integer, Optional cancellationToken As CancellationToken = null) As Task(Of ISymbol)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSymbolAtPositionAsync (document As Document, position As Integer, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ISymbol)" />
       <MemberSignature Language="F#" Value="static member FindSymbolAtPositionAsync : Microsoft.CodeAnalysis.Document * int * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPositionAsync (document, position, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1086,6 +1226,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
@@ -1108,7 +1249,7 @@
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt; FindSymbolAtPositionAsync (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.Workspace workspace, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt; FindSymbolAtPositionAsync(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.Workspace workspace, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPositionAsync(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.Workspace,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSymbolAtPositionAsync (semanticModel As SemanticModel, position As Integer, workspace As Workspace, Optional cancellationToken As CancellationToken = null) As Task(Of ISymbol)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindSymbolAtPositionAsync (semanticModel As SemanticModel, position As Integer, workspace As Workspace, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ISymbol)" />
       <MemberSignature Language="F#" Value="static member FindSymbolAtPositionAsync : Microsoft.CodeAnalysis.SemanticModel * int * Microsoft.CodeAnalysis.Workspace * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSymbolAtPositionAsync (semanticModel, position, workspace, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -1121,6 +1262,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>

@@ -12,6 +12,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -40,6 +41,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigSet</ReturnType>
@@ -62,6 +64,40 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Create&lt;TList&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.AnalyzerConfigSet Create&lt;TList&gt; (TList analyzerConfigs, out System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;? diagnostics) where TList : System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.CodeAnalysis.AnalyzerConfig&gt;;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.AnalyzerConfigSet Create&lt;(class System.Collections.Generic.IReadOnlyCollection`1&lt;class Microsoft.CodeAnalysis.AnalyzerConfig&gt;) TList&gt;(!!TList analyzerConfigs, [out] valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&amp; diagnostics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AnalyzerConfigSet.Create``1(``0,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic}@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create(Of TList As IReadOnlyCollection(Of AnalyzerConfig)) (analyzerConfigs As TList, ByRef diagnostics As ImmutableArray(Of Diagnostic)) As AnalyzerConfigSet" />
+      <MemberSignature Language="F#" Value="static member Create : 'List * ImmutableArray -&gt; Microsoft.CodeAnalysis.AnalyzerConfigSet (requires 'List :&gt; System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.CodeAnalysis.AnalyzerConfig&gt;)" Usage="Microsoft.CodeAnalysis.AnalyzerConfigSet.Create (analyzerConfigs, diagnostics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigSet</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TList">
+          <Constraints>
+            <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.CodeAnalysis.AnalyzerConfig&gt;</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="analyzerConfigs" Type="TList" Index="0" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="diagnostics" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" RefType="out" Index="1" FrameworkAlternate="roslyn-dotnet" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TList">To be added.</typeparam>
+        <param name="analyzerConfigs">To be added.</param>
+        <param name="diagnostics">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetOptionsForSourcePath">
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult GetOptionsForSourcePath (string sourcePath);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult GetOptionsForSourcePath(string sourcePath) cil managed" />
@@ -77,6 +113,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult</ReturnType>

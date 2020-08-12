@@ -15,16 +15,50 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="roslyn-dotnet">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>To be added.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="GetAddedAnalyzerReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt; GetAddedAnalyzerReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt; GetAddedAnalyzerReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SolutionChanges.GetAddedAnalyzerReferences" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function GetAddedAnalyzerReferences () As IEnumerable(Of AnalyzerReference)" />
+      <MemberSignature Language="F#" Value="member this.GetAddedAnalyzerReferences : unit -&gt; seq&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;" Usage="solutionChanges.GetAddedAnalyzerReferences " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetAddedAnalyzerReferences&gt;d__6))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetAddedAnalyzerReferences&gt;d__6))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetAddedProjects">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::Project ^&gt; ^ GetAddedProjects();" />
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Project&gt; GetAddedProjects ();" />
@@ -43,10 +77,12 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetAddedProjects&gt;d__3))</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetAddedProjects&gt;d__3))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetAddedProjects&gt;d__3))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -77,14 +113,43 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetProjectChanges&gt;d__4))</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetProjectChanges&gt;d__4))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetProjectChanges&gt;d__4))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectChanges&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemovedAnalyzerReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt; GetRemovedAnalyzerReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt; GetRemovedAnalyzerReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SolutionChanges.GetRemovedAnalyzerReferences" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function GetRemovedAnalyzerReferences () As IEnumerable(Of AnalyzerReference)" />
+      <MemberSignature Language="F#" Value="member this.GetRemovedAnalyzerReferences : unit -&gt; seq&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;" Usage="solutionChanges.GetRemovedAnalyzerReferences " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetRemovedAnalyzerReferences&gt;d__7))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetRemovedAnalyzerReferences&gt;d__7))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
@@ -111,10 +176,12 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetRemovedProjects&gt;d__5))</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetRemovedProjects&gt;d__5))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SolutionChanges/&lt;GetRemovedProjects&gt;d__5))&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.SyntaxNode</BaseTypeName>
@@ -49,6 +50,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -80,6 +82,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
@@ -102,7 +105,7 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SyntaxNode DeserializeFrom (System.IO.Stream stream, System.Threading.CancellationToken cancellationToken = default);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.SyntaxNode DeserializeFrom(class System.IO.Stream stream, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.DeserializeFrom(System.IO.Stream,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function DeserializeFrom (stream As Stream, Optional cancellationToken As CancellationToken = null) As SyntaxNode" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DeserializeFrom (stream As Stream, Optional cancellationToken As CancellationToken = Nothing) As SyntaxNode" />
       <MemberSignature Language="F#" Value="static member DeserializeFrom : System.IO.Stream * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.DeserializeFrom (stream, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -115,6 +118,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -151,6 +155,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -184,6 +189,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -226,6 +232,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
@@ -263,6 +270,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTrivia</ReturnType>
@@ -302,6 +310,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
@@ -318,11 +327,12 @@
       </Docs>
     </Member>
     <Member MemberName="GetFirstDirective">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetFirstDirective (Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,bool&gt; predicate = default);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetFirstDirective (Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,bool&gt;? predicate = default);" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetFirstDirective(class System.Func`2&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax, bool&gt; predicate) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetFirstDirective(System.Func{Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,System.Boolean})" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetFirstDirective (Optional predicate As Func(Of DirectiveTriviaSyntax, Boolean) = null) As DirectiveTriviaSyntax" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFirstDirective (Optional predicate As Func(Of DirectiveTriviaSyntax, Boolean) = Nothing) As DirectiveTriviaSyntax" />
       <MemberSignature Language="F#" Value="member this.GetFirstDirective : Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax, bool&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax" Usage="cSharpSyntaxNode.GetFirstDirective predicate" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetFirstDirective (Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,bool&gt; predicate = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -334,6 +344,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax</ReturnType>
@@ -367,6 +378,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -392,11 +404,12 @@
       </Docs>
     </Member>
     <Member MemberName="GetLastDirective">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetLastDirective (Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,bool&gt; predicate = default);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetLastDirective (Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,bool&gt;? predicate = default);" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetLastDirective(class System.Func`2&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax, bool&gt; predicate) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.GetLastDirective(System.Func{Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,System.Boolean})" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetLastDirective (Optional predicate As Func(Of DirectiveTriviaSyntax, Boolean) = null) As DirectiveTriviaSyntax" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetLastDirective (Optional predicate As Func(Of DirectiveTriviaSyntax, Boolean) = Nothing) As DirectiveTriviaSyntax" />
       <MemberSignature Language="F#" Value="member this.GetLastDirective : Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax, bool&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax" Usage="cSharpSyntaxNode.GetLastDirective predicate" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax GetLastDirective (Func&lt;Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax,bool&gt; predicate = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -408,6 +421,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.DirectiveTriviaSyntax</ReturnType>
@@ -441,6 +455,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -483,6 +498,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -514,6 +530,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Location</ReturnType>
@@ -545,6 +562,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTriviaList</ReturnType>
@@ -576,6 +594,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -612,6 +631,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -648,6 +668,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -683,6 +704,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -717,6 +739,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.SyntaxKind</ReturnType>
@@ -748,6 +771,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -778,6 +802,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -798,11 +823,12 @@
     </Member>
     <Member MemberName="RemoveNodesCore">
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override Microsoft::CodeAnalysis::SyntaxNode ^ RemoveNodesCore(System::Collections::Generic::IEnumerable&lt;Microsoft::CodeAnalysis::SyntaxNode ^&gt; ^ nodes, Microsoft::CodeAnalysis::SyntaxRemoveOptions options);" />
-      <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode RemoveNodesCore (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; nodes, Microsoft.CodeAnalysis.SyntaxRemoveOptions options);" />
+      <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode? RemoveNodesCore (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; nodes, Microsoft.CodeAnalysis.SyntaxRemoveOptions options);" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode RemoveNodesCore(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.SyntaxNode&gt; nodes, valuetype Microsoft.CodeAnalysis.SyntaxRemoveOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.RemoveNodesCore(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},Microsoft.CodeAnalysis.SyntaxRemoveOptions)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function RemoveNodesCore (nodes As IEnumerable(Of SyntaxNode), options As SyntaxRemoveOptions) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.RemoveNodesCore : seq&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; * Microsoft.CodeAnalysis.SyntaxRemoveOptions -&gt; Microsoft.CodeAnalysis.SyntaxNode" Usage="cSharpSyntaxNode.RemoveNodesCore (nodes, options)" />
+      <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode RemoveNodesCore (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxNode&gt; nodes, Microsoft.CodeAnalysis.SyntaxRemoveOptions options);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -814,6 +840,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -831,11 +858,12 @@
       </Docs>
     </Member>
     <Member MemberName="ReplaceCore&lt;TNode&gt;">
-      <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode ReplaceCore&lt;TNode&gt; (System.Collections.Generic.IEnumerable&lt;TNode&gt; nodes = default, Func&lt;TNode,TNode,Microsoft.CodeAnalysis.SyntaxNode&gt; computeReplacementNode = default, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; tokens = default, Func&lt;Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken&gt; computeReplacementToken = default, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; trivia = default, Func&lt;Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia&gt; computeReplacementTrivia = default) where TNode : Microsoft.CodeAnalysis.SyntaxNode;" />
+      <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode? ReplaceCore&lt;TNode&gt; (System.Collections.Generic.IEnumerable&lt;TNode&gt;? nodes = default, Func&lt;TNode,TNode,Microsoft.CodeAnalysis.SyntaxNode&gt;? computeReplacementNode = default, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; tokens = default, Func&lt;Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken&gt; computeReplacementToken = default, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; trivia = default, Func&lt;Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia&gt; computeReplacementTrivia = default) where TNode : Microsoft.CodeAnalysis.SyntaxNode;" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class Microsoft.CodeAnalysis.SyntaxNode ReplaceCore&lt;(class Microsoft.CodeAnalysis.SyntaxNode) TNode&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TNode&gt; nodes, class System.Func`3&lt;!!TNode, !!TNode, class Microsoft.CodeAnalysis.SyntaxNode&gt; computeReplacementNode, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; tokens, class System.Func`3&lt;valuetype Microsoft.CodeAnalysis.SyntaxToken, valuetype Microsoft.CodeAnalysis.SyntaxToken, valuetype Microsoft.CodeAnalysis.SyntaxToken&gt; computeReplacementToken, class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; trivia, class System.Func`3&lt;valuetype Microsoft.CodeAnalysis.SyntaxTrivia, valuetype Microsoft.CodeAnalysis.SyntaxTrivia, valuetype Microsoft.CodeAnalysis.SyntaxTrivia&gt; computeReplacementTrivia) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.ReplaceCore``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``0,Microsoft.CodeAnalysis.SyntaxNode},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken},System.Func{Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia})" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ReplaceCore(Of TNode As SyntaxNode) (Optional nodes As IEnumerable(Of TNode) = null, Optional computeReplacementNode As Func(Of TNode, TNode, SyntaxNode) = null, Optional tokens As IEnumerable(Of SyntaxToken) = null, Optional computeReplacementToken As Func(Of SyntaxToken, SyntaxToken, SyntaxToken) = null, Optional trivia As IEnumerable(Of SyntaxTrivia) = null, Optional computeReplacementTrivia As Func(Of SyntaxTrivia, SyntaxTrivia, SyntaxTrivia) = null) As SyntaxNode" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ReplaceCore(Of TNode As SyntaxNode) (Optional nodes As IEnumerable(Of TNode) = Nothing, Optional computeReplacementNode As Func(Of TNode, TNode, SyntaxNode) = Nothing, Optional tokens As IEnumerable(Of SyntaxToken) = Nothing, Optional computeReplacementToken As Func(Of SyntaxToken, SyntaxToken, SyntaxToken) = Nothing, Optional trivia As IEnumerable(Of SyntaxTrivia) = Nothing, Optional computeReplacementTrivia As Func(Of SyntaxTrivia, SyntaxTrivia, SyntaxTrivia) = Nothing) As SyntaxNode" />
       <MemberSignature Language="F#" Value="override this.ReplaceCore : seq&lt;'Node (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; * Func&lt;'Node, 'Node, Microsoft.CodeAnalysis.SyntaxNode (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode and 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)&gt; * seq&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; * Func&lt;Microsoft.CodeAnalysis.SyntaxToken, Microsoft.CodeAnalysis.SyntaxToken, Microsoft.CodeAnalysis.SyntaxToken&gt; * seq&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; * Func&lt;Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia&gt; -&gt; Microsoft.CodeAnalysis.SyntaxNode (requires 'Node :&gt; Microsoft.CodeAnalysis.SyntaxNode)" Usage="cSharpSyntaxNode.ReplaceCore (nodes, computeReplacementNode, tokens, computeReplacementToken, trivia, computeReplacementTrivia)" />
+      <MemberSignature Language="C#" Value="protected internal override Microsoft.CodeAnalysis.SyntaxNode ReplaceCore&lt;TNode&gt; (System.Collections.Generic.IEnumerable&lt;TNode&gt; nodes = default, Func&lt;TNode,TNode,Microsoft.CodeAnalysis.SyntaxNode&gt; computeReplacementNode = default, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxToken&gt; tokens = default, Func&lt;Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken&gt; computeReplacementToken = default, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.SyntaxTrivia&gt; trivia = default, Func&lt;Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia&gt; computeReplacementTrivia = default) where TNode : Microsoft.CodeAnalysis.SyntaxNode;" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -847,6 +875,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -897,6 +926,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -931,6 +961,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -965,6 +996,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -999,6 +1031,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
@@ -1011,11 +1044,12 @@
     </Member>
     <Member MemberName="System.IFormattable.ToString">
       <MemberSignature Language="C++ CLI" Value=" virtual System::String ^ System.IFormattable.ToString(System::String ^ format, IFormatProvider ^ formatProvider) = IFormattable::ToString;" />
-      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider formatProvider);" />
+      <MemberSignature Language="C#" Value="string? IFormattable.ToString (string format, IFormatProvider formatProvider);" FrameworkAlternate="roslyn-dotnet" />
       <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider formatProvider) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
       <MemberSignature Language="VB.NET" Value="Function ToString (format As String, formatProvider As IFormatProvider) As String Implements IFormattable.ToString" />
       <MemberSignature Language="F#" Value="abstract member System.IFormattable.ToString : string * IFormatProvider -&gt; string&#xA;override this.System.IFormattable.ToString : string * IFormatProvider -&gt; string" Usage="cSharpSyntaxNode.System.IFormattable.ToString (format, formatProvider)" />
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider formatProvider);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IFormattable.ToString(System.String,System.IFormatProvider)</InterfaceMember>
@@ -1030,6 +1064,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

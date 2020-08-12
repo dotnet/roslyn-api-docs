@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="TLanguageKindEnum">
@@ -57,6 +58,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="codeBlock" Type="Microsoft.CodeAnalysis.SyntaxNode" />
@@ -93,6 +95,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -123,6 +126,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -153,6 +157,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions</ReturnType>
@@ -183,6 +188,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -213,6 +219,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -231,11 +238,12 @@
     </Member>
     <Member MemberName="RegisterSyntaxNodeAction">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RegisterSyntaxNodeAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::SyntaxNodeAnalysisContext&gt; ^ action, System::Collections::Immutable::ImmutableArray&lt;TLanguageKindEnum&gt; syntaxKinds);" />
-      <MemberSignature Language="C#" Value="public abstract void RegisterSyntaxNodeAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, System.Collections.Immutable.ImmutableArray&lt;TLanguageKindEnum&gt; syntaxKinds);" />
+      <MemberSignature Language="C#" Value="public abstract void RegisterSyntaxNodeAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt;? action, System.Collections.Immutable.ImmutableArray&lt;TLanguageKindEnum&gt; syntaxKinds);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterSyntaxNodeAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!TLanguageKindEnum&gt; syntaxKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext`1.RegisterSyntaxNodeAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext},System.Collections.Immutable.ImmutableArray{`0})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RegisterSyntaxNodeAction (action As Action(Of SyntaxNodeAnalysisContext), syntaxKinds As ImmutableArray(Of TLanguageKindEnum))" />
       <MemberSignature Language="F#" Value="abstract member RegisterSyntaxNodeAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; * System.Collections.Immutable.ImmutableArray&lt;'LanguageKindEnum (requires 'LanguageKindEnum : struct)&gt; -&gt; unit" Usage="codeBlockStartAnalysisContext.RegisterSyntaxNodeAction (action, syntaxKinds)" />
+      <MemberSignature Language="C#" Value="public abstract void RegisterSyntaxNodeAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, System.Collections.Immutable.ImmutableArray&lt;TLanguageKindEnum&gt; syntaxKinds);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -247,6 +255,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -268,11 +277,12 @@
     </Member>
     <Member MemberName="RegisterSyntaxNodeAction">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterSyntaxNodeAction(Action&lt;Microsoft::CodeAnalysis::Diagnostics::SyntaxNodeAnalysisContext&gt; ^ action, ... cli::array &lt;TLanguageKindEnum&gt; ^ syntaxKinds);" />
-      <MemberSignature Language="C#" Value="public void RegisterSyntaxNodeAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, params TLanguageKindEnum[] syntaxKinds);" />
+      <MemberSignature Language="C#" Value="public void RegisterSyntaxNodeAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, params TLanguageKindEnum[]? syntaxKinds);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterSyntaxNodeAction(class System.Action`1&lt;valuetype Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, !TLanguageKindEnum[] syntaxKinds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext`1.RegisterSyntaxNodeAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext},`0[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub RegisterSyntaxNodeAction (action As Action(Of SyntaxNodeAnalysisContext), ParamArray syntaxKinds As TLanguageKindEnum())" />
       <MemberSignature Language="F#" Value="member this.RegisterSyntaxNodeAction : Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; * 'LanguageKindEnum[] -&gt; unit" Usage="codeBlockStartAnalysisContext.RegisterSyntaxNodeAction (action, syntaxKinds)" />
+      <MemberSignature Language="C#" Value="public void RegisterSyntaxNodeAction (Action&lt;Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext&gt; action, params TLanguageKindEnum[] syntaxKinds);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -284,6 +294,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -293,7 +304,8 @@
         <Parameter Name="syntaxKinds" Type="TLanguageKindEnum[]">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -327,6 +339,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SemanticModel</ReturnType>
