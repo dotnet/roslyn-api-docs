@@ -15,6 +15,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -26,7 +27,8 @@
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(),nq}")</AttributeName>
+      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(),nq}")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{GetDebuggerDisplay(),nq}")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -38,11 +40,12 @@
   </Docs>
   <Members>
     <Member MemberName="CreateFromSerialized">
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.DocumentId CreateFromSerialized (Microsoft.CodeAnalysis.ProjectId projectId, Guid id, string debugName = default);" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.DocumentId CreateFromSerialized (Microsoft.CodeAnalysis.ProjectId projectId, Guid id, string? debugName = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.DocumentId CreateFromSerialized(class Microsoft.CodeAnalysis.ProjectId projectId, valuetype System.Guid id, string debugName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentId.CreateFromSerialized(Microsoft.CodeAnalysis.ProjectId,System.Guid,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromSerialized (projectId As ProjectId, id As Guid, Optional debugName As String = null) As DocumentId" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromSerialized (projectId As ProjectId, id As Guid, Optional debugName As String = Nothing) As DocumentId" />
       <MemberSignature Language="F#" Value="static member CreateFromSerialized : Microsoft.CodeAnalysis.ProjectId * Guid * string -&gt; Microsoft.CodeAnalysis.DocumentId" Usage="Microsoft.CodeAnalysis.DocumentId.CreateFromSerialized (projectId, id, debugName)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.DocumentId CreateFromSerialized (Microsoft.CodeAnalysis.ProjectId projectId, Guid id, string debugName = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -54,6 +57,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DocumentId</ReturnType>
@@ -73,11 +77,12 @@
       </Docs>
     </Member>
     <Member MemberName="CreateNewId">
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.DocumentId CreateNewId (Microsoft.CodeAnalysis.ProjectId projectId, string debugName = default);" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.DocumentId CreateNewId (Microsoft.CodeAnalysis.ProjectId projectId, string? debugName = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.DocumentId CreateNewId(class Microsoft.CodeAnalysis.ProjectId projectId, string debugName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentId.CreateNewId(Microsoft.CodeAnalysis.ProjectId,System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateNewId (projectId As ProjectId, Optional debugName As String = null) As DocumentId" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateNewId (projectId As ProjectId, Optional debugName As String = Nothing) As DocumentId" />
       <MemberSignature Language="F#" Value="static member CreateNewId : Microsoft.CodeAnalysis.ProjectId * string -&gt; Microsoft.CodeAnalysis.DocumentId" Usage="Microsoft.CodeAnalysis.DocumentId.CreateNewId (projectId, debugName)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.DocumentId CreateNewId (Microsoft.CodeAnalysis.ProjectId projectId, string debugName = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -89,6 +94,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.DocumentId</ReturnType>
@@ -128,6 +134,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -160,6 +167,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -192,6 +200,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -221,6 +230,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
@@ -249,6 +259,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -283,6 +294,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -317,6 +329,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ProjectId</ReturnType>
@@ -345,6 +358,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

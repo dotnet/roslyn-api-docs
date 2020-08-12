@@ -13,6 +13,7 @@
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.Syntax.PatternSyntax</BaseTypeName>
@@ -39,6 +40,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -68,9 +70,16 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="roslyn-dotnet">
+            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -102,6 +111,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax</ReturnType>
@@ -110,7 +120,8 @@
         <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.SubpatternSyntax[]">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -138,6 +149,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax</ReturnType>
@@ -146,7 +158,8 @@
         <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.SubpatternSyntax[]">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
-              <AttributeName>System.ParamArray</AttributeName>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -174,6 +187,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax</ReturnType>
@@ -200,6 +214,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax</ReturnType>
@@ -226,6 +241,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax</ReturnType>
@@ -252,6 +268,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax</ReturnType>
@@ -263,11 +280,12 @@
       </Docs>
     </Member>
     <Member MemberName="Update">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax Update (Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type, Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax positionalPatternClause, Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax propertyPatternClause, Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax designation);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax? Update (Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type, Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax positionalPatternClause, Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax propertyPatternClause, Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax designation);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax Update(class Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type, class Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax positionalPatternClause, class Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax propertyPatternClause, class Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax designation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax.Update(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (type As TypeSyntax, positionalPatternClause As PositionalPatternClauseSyntax, propertyPatternClause As PropertyPatternClauseSyntax, designation As VariableDesignationSyntax) As RecursivePatternSyntax" />
       <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax * Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax * Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax * Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax" Usage="recursivePatternSyntax.Update (type, positionalPatternClause, propertyPatternClause, designation)" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax Update (Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type, Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax positionalPatternClause, Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax propertyPatternClause, Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax designation);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -278,6 +296,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax</ReturnType>
@@ -299,11 +318,12 @@
       </Docs>
     </Member>
     <Member MemberName="WithDesignation">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithDesignation (Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax designation);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithDesignation (Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax? designation);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithDesignation(class Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax designation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax.WithDesignation(Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithDesignation (designation As VariableDesignationSyntax) As RecursivePatternSyntax" />
       <MemberSignature Language="F#" Value="member this.WithDesignation : Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax" Usage="recursivePatternSyntax.WithDesignation designation" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithDesignation (Microsoft.CodeAnalysis.CSharp.Syntax.VariableDesignationSyntax designation);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -314,6 +334,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax</ReturnType>
@@ -329,11 +350,12 @@
       </Docs>
     </Member>
     <Member MemberName="WithPositionalPatternClause">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithPositionalPatternClause (Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax positionalPatternClause);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithPositionalPatternClause (Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax? positionalPatternClause);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithPositionalPatternClause(class Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax positionalPatternClause) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax.WithPositionalPatternClause(Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithPositionalPatternClause (positionalPatternClause As PositionalPatternClauseSyntax) As RecursivePatternSyntax" />
       <MemberSignature Language="F#" Value="member this.WithPositionalPatternClause : Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax" Usage="recursivePatternSyntax.WithPositionalPatternClause positionalPatternClause" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithPositionalPatternClause (Microsoft.CodeAnalysis.CSharp.Syntax.PositionalPatternClauseSyntax positionalPatternClause);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -344,6 +366,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax</ReturnType>
@@ -359,11 +382,12 @@
       </Docs>
     </Member>
     <Member MemberName="WithPropertyPatternClause">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithPropertyPatternClause (Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax propertyPatternClause);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithPropertyPatternClause (Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax? propertyPatternClause);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithPropertyPatternClause(class Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax propertyPatternClause) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax.WithPropertyPatternClause(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithPropertyPatternClause (propertyPatternClause As PropertyPatternClauseSyntax) As RecursivePatternSyntax" />
       <MemberSignature Language="F#" Value="member this.WithPropertyPatternClause : Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax" Usage="recursivePatternSyntax.WithPropertyPatternClause propertyPatternClause" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithPropertyPatternClause (Microsoft.CodeAnalysis.CSharp.Syntax.PropertyPatternClauseSyntax propertyPatternClause);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -374,6 +398,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax</ReturnType>
@@ -389,11 +414,12 @@
       </Docs>
     </Member>
     <Member MemberName="WithType">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithType (Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithType (Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax? type);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithType(class Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax.WithType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithType (type As TypeSyntax) As RecursivePatternSyntax" />
       <MemberSignature Language="F#" Value="member this.WithType : Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax" Usage="recursivePatternSyntax.WithType type" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax WithType (Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax type);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -404,6 +430,7 @@
         <AssemblyVersion>3.4.0.0</AssemblyVersion>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.RecursivePatternSyntax</ReturnType>
