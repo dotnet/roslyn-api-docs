@@ -1,0 +1,153 @@
+<Type Name="DocumentBasedFixAllProvider" FullName="Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider">
+  <TypeSignature Language="C#" Value="public abstract class DocumentBasedFixAllProvider : Microsoft.CodeAnalysis.CodeFixes.FixAllProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DocumentBasedFixAllProvider extends Microsoft.CodeAnalysis.CodeFixes.FixAllProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class DocumentBasedFixAllProvider&#xA;Inherits FixAllProvider" />
+  <TypeSignature Language="F#" Value="type DocumentBasedFixAllProvider = class&#xA;    inherit FixAllProvider" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.CodeAnalysis.CodeFixes.FixAllProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides a base class to write a <see cref="T:Microsoft.CodeAnalysis.CodeFixes.FixAllProvider" /> that fixes documents independently. This type
+            should be used instead of <see cref="P:Microsoft.CodeAnalysis.CodeFixes.WellKnownFixAllProviders.BatchFixer" /> in the case where fixes for a <see cref="T:Microsoft.CodeAnalysis.Diagnostic" /> only affect the <see cref="T:Microsoft.CodeAnalysis.Document" /> the diagnostic was produced in.
+            </summary>
+    <remarks>
+            This type provides suitable logic for fixing large solutions in an efficient manner.  Projects are serially
+            processed, with all the documents in the project being processed in parallel.  Diagnostics are computed for the
+            project and then appropriately bucketed by document.  These are then passed to <see cref="M:Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider.FixAllAsync(Microsoft.CodeAnalysis.CodeFixes.FixAllContext,Microsoft.CodeAnalysis.Document,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic})" /> for implementors to process.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DocumentBasedFixAllProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FixAllAsync">
+      <MemberSignature Language="C#" Value="protected abstract System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document?&gt; FixAllAsync (Microsoft.CodeAnalysis.CodeFixes.FixAllContext fixAllContext, Microsoft.CodeAnalysis.Document document, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; FixAllAsync(class Microsoft.CodeAnalysis.CodeFixes.FixAllContext fixAllContext, class Microsoft.CodeAnalysis.Document document, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider.FixAllAsync(Microsoft.CodeAnalysis.CodeFixes.FixAllContext,Microsoft.CodeAnalysis.Document,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic})" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function FixAllAsync (fixAllContext As FixAllContext, document As Document, diagnostics As ImmutableArray(Of Diagnostic)) As Task(Of Document)" />
+      <MemberSignature Language="F#" Value="abstract member FixAllAsync : Microsoft.CodeAnalysis.CodeFixes.FixAllContext * Microsoft.CodeAnalysis.Document * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;" Usage="documentBasedFixAllProvider.FixAllAsync (fixAllContext, document, diagnostics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixAllContext" Type="Microsoft.CodeAnalysis.CodeFixes.FixAllContext" />
+        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" />
+        <Parameter Name="diagnostics" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fixAllContext">The context for the Fix All operation.</param>
+        <param name="document">The document to fix.</param>
+        <param name="diagnostics">The diagnostics to fix in the document.</param>
+        <summary>
+            Fix all the <paramref name="diagnostics" /> present in <paramref name="document" />.  The document returned
+            will only be examined for its content (e.g. it's <see cref="T:Microsoft.CodeAnalysis.SyntaxTree" /> or <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" />.  No
+            other aspects of (like it's properties), or changes to the <see cref="T:Microsoft.CodeAnalysis.Project" /> or <see cref="T:Microsoft.CodeAnalysis.Solution" />
+            it points at will be considered.
+            </summary>
+        <returns>
+          <para>The new <see cref="T:Microsoft.CodeAnalysis.Document" /> representing the content fixed document.</para>
+          <para>-or-</para>
+          <para>
+            <see langword="null" />, if no changes were made to the document.</para>
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFixAllTitle">
+      <MemberSignature Language="C#" Value="protected virtual string GetFixAllTitle (Microsoft.CodeAnalysis.CodeFixes.FixAllContext fixAllContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetFixAllTitle(class Microsoft.CodeAnalysis.CodeFixes.FixAllContext fixAllContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider.GetFixAllTitle(Microsoft.CodeAnalysis.CodeFixes.FixAllContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetFixAllTitle (fixAllContext As FixAllContext) As String" />
+      <MemberSignature Language="F#" Value="abstract member GetFixAllTitle : Microsoft.CodeAnalysis.CodeFixes.FixAllContext -&gt; string&#xA;override this.GetFixAllTitle : Microsoft.CodeAnalysis.CodeFixes.FixAllContext -&gt; string" Usage="documentBasedFixAllProvider.GetFixAllTitle fixAllContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixAllContext" Type="Microsoft.CodeAnalysis.CodeFixes.FixAllContext" />
+      </Parameters>
+      <Docs>
+        <param name="fixAllContext">To be added.</param>
+        <summary>
+            Produce a suitable title for the fix-all <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> this type creates in <see cref="M:Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider.GetFixAsync(Microsoft.CodeAnalysis.CodeFixes.FixAllContext)" />.  Override this if customizing that title is desired.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFixAsync">
+      <MemberSignature Language="C#" Value="public override sealed System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction?&gt; GetFixAsync (Microsoft.CodeAnalysis.CodeFixes.FixAllContext fixAllContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; GetFixAsync(class Microsoft.CodeAnalysis.CodeFixes.FixAllContext fixAllContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider.GetFixAsync(Microsoft.CodeAnalysis.CodeFixes.FixAllContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Function GetFixAsync (fixAllContext As FixAllContext) As Task(Of CodeAction)" />
+      <MemberSignature Language="F#" Value="override this.GetFixAsync : Microsoft.CodeAnalysis.CodeFixes.FixAllContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;" Usage="documentBasedFixAllProvider.GetFixAsync fixAllContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixAllContext" Type="Microsoft.CodeAnalysis.CodeFixes.FixAllContext" />
+      </Parameters>
+      <Docs>
+        <param name="fixAllContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedFixAllScopes">
+      <MemberSignature Language="C#" Value="public override sealed System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllScope&gt; GetSupportedFixAllScopes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.CodeFixes.FixAllScope&gt; GetSupportedFixAllScopes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider.GetSupportedFixAllScopes" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Function GetSupportedFixAllScopes () As IEnumerable(Of FixAllScope)" />
+      <MemberSignature Language="F#" Value="override this.GetSupportedFixAllScopes : unit -&gt; seq&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllScope&gt;" Usage="documentBasedFixAllProvider.GetSupportedFixAllScopes " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllScope&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

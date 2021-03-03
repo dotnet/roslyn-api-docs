@@ -1,0 +1,127 @@
+<Type Name="GeneratorRunResult" FullName="Microsoft.CodeAnalysis.GeneratorRunResult">
+  <TypeSignature Language="C#" Value="public struct GeneratorRunResult" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit GeneratorRunResult extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.GeneratorRunResult" />
+  <TypeSignature Language="VB.NET" Value="Public Structure GeneratorRunResult" />
+  <TypeSignature Language="F#" Value="type GeneratorRunResult = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents the results of a single <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> generation pass.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Diagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; Diagnostics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; Diagnostics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.GeneratorRunResult.Diagnostics" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Diagnostics As ImmutableArray(Of Diagnostic)" />
+      <MemberSignature Language="F#" Value="member this.Diagnostics : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="Microsoft.CodeAnalysis.GeneratorRunResult.Diagnostics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A collection of <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s reported by <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.Generator" /></summary>
+        <value>To be added.</value>
+        <remarks>
+            When generation fails due to an <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.Exception" /> being thrown, a single diagnostic is added
+            to represent the failure. Any generator reported diagnostics up to the failure point are not included.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception? Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.GeneratorRunResult.Exception" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Exception As Exception" />
+      <MemberSignature Language="F#" Value="member this.Exception : Exception" Usage="Microsoft.CodeAnalysis.GeneratorRunResult.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            An <see cref="T:System.Exception" /> instance that was thrown by the generator, or <c>null</c> if the generator completed without error.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When this property has a value, <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.GeneratedSources" /> property is guaranteed to be empty, and the <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.Diagnostics" />
+            collection will contain a single diagnostic indicating that the generator failed.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedSources">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.GeneratedSourceResult&gt; GeneratedSources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.GeneratedSourceResult&gt; GeneratedSources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.GeneratorRunResult.GeneratedSources" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GeneratedSources As ImmutableArray(Of GeneratedSourceResult)" />
+      <MemberSignature Language="F#" Value="member this.GeneratedSources : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.GeneratedSourceResult&gt;" Usage="Microsoft.CodeAnalysis.GeneratorRunResult.GeneratedSources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.GeneratedSourceResult&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The sources that were added by <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.Generator" /> during the generation pass this result represents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generator">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISourceGenerator Generator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISourceGenerator Generator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.GeneratorRunResult.Generator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Generator As ISourceGenerator" />
+      <MemberSignature Language="F#" Value="member this.Generator : Microsoft.CodeAnalysis.ISourceGenerator" Usage="Microsoft.CodeAnalysis.GeneratorRunResult.Generator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISourceGenerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> that produced this result.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

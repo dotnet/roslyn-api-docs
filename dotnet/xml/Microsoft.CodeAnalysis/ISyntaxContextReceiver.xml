@@ -1,0 +1,64 @@
+<Type Name="ISyntaxContextReceiver" FullName="Microsoft.CodeAnalysis.ISyntaxContextReceiver">
+  <TypeSignature Language="C#" Value="public interface ISyntaxContextReceiver" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISyntaxContextReceiver" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ISyntaxContextReceiver" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISyntaxContextReceiver" />
+  <TypeSignature Language="F#" Value="type ISyntaxContextReceiver = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Receives notifications of each <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> in the compilation, along with a  
+            <see cref="T:Microsoft.CodeAnalysis.SemanticModel" /> that can be queried to obtain more information, before generation
+            runs.
+            </summary>
+    <remarks>
+            A <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> can provide an instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxContextReceiver" />
+            via a <see cref="T:Microsoft.CodeAnalysis.SyntaxReceiverCreator" />.
+            
+            The compiler will invoke the <see cref="T:Microsoft.CodeAnalysis.SyntaxReceiverCreator" /> prior to generation to 
+            obtain an instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxContextReceiver" />. This instance will have its 
+            <see cref="M:Microsoft.CodeAnalysis.ISyntaxContextReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.GeneratorSyntaxContext)" /> called for every syntax node
+            in the compilation.
+            
+            The <see cref="T:Microsoft.CodeAnalysis.ISyntaxContextReceiver" /> can record any information about the nodes visited. 
+            During <see cref="M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)" /> the generator can obtain the 
+            created instance via the <see cref="P:Microsoft.CodeAnalysis.GeneratorExecutionContext.SyntaxContextReceiver" /> property. The
+            information contained can be used to perform final generation.
+            
+            A new instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxContextReceiver" /> is created per-generation, meaning the instance
+            is free to store state without worrying about lifetime or reuse. 
+            
+            An <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> may provide only a single <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /> or
+            <see cref="T:Microsoft.CodeAnalysis.ISyntaxContextReceiver" />, not both.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnVisitSyntaxNode">
+      <MemberSignature Language="C#" Value="public void OnVisitSyntaxNode (Microsoft.CodeAnalysis.GeneratorSyntaxContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnVisitSyntaxNode(valuetype Microsoft.CodeAnalysis.GeneratorSyntaxContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISyntaxContextReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.GeneratorSyntaxContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OnVisitSyntaxNode (context As GeneratorSyntaxContext)" />
+      <MemberSignature Language="F#" Value="abstract member OnVisitSyntaxNode : Microsoft.CodeAnalysis.GeneratorSyntaxContext -&gt; unit" Usage="iSyntaxContextReceiver.OnVisitSyntaxNode context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.GeneratorSyntaxContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
