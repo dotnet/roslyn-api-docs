@@ -1,0 +1,132 @@
+<Type Name="SyntaxTreeOptionsProvider" FullName="Microsoft.CodeAnalysis.SyntaxTreeOptionsProvider">
+  <TypeSignature Language="C#" Value="public abstract class SyntaxTreeOptionsProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SyntaxTreeOptionsProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SyntaxTreeOptionsProvider" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SyntaxTreeOptionsProvider" />
+  <TypeSignature Language="F#" Value="type SyntaxTreeOptionsProvider = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SyntaxTreeOptionsProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTreeOptionsProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGenerated">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.CodeAnalysis.GeneratedKind IsGenerated (Microsoft.CodeAnalysis.SyntaxTree tree, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.GeneratedKind IsGenerated(class Microsoft.CodeAnalysis.SyntaxTree tree, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTreeOptionsProvider.IsGenerated(Microsoft.CodeAnalysis.SyntaxTree,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function IsGenerated (tree As SyntaxTree, cancellationToken As CancellationToken) As GeneratedKind" />
+      <MemberSignature Language="F#" Value="abstract member IsGenerated : Microsoft.CodeAnalysis.SyntaxTree * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.GeneratedKind" Usage="syntaxTreeOptionsProvider.IsGenerated (tree, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.GeneratedKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tree" Type="Microsoft.CodeAnalysis.SyntaxTree" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="tree">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Get whether the given tree is generated.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetDiagnosticValue">
+      <MemberSignature Language="C#" Value="public abstract bool TryGetDiagnosticValue (Microsoft.CodeAnalysis.SyntaxTree tree, string diagnosticId, System.Threading.CancellationToken cancellationToken, out Microsoft.CodeAnalysis.ReportDiagnostic severity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetDiagnosticValue(class Microsoft.CodeAnalysis.SyntaxTree tree, string diagnosticId, valuetype System.Threading.CancellationToken cancellationToken, [out] valuetype Microsoft.CodeAnalysis.ReportDiagnostic&amp; severity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTreeOptionsProvider.TryGetDiagnosticValue(Microsoft.CodeAnalysis.SyntaxTree,System.String,System.Threading.CancellationToken,Microsoft.CodeAnalysis.ReportDiagnostic@)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function TryGetDiagnosticValue (tree As SyntaxTree, diagnosticId As String, cancellationToken As CancellationToken, ByRef severity As ReportDiagnostic) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryGetDiagnosticValue : Microsoft.CodeAnalysis.SyntaxTree * string * System.Threading.CancellationToken * ReportDiagnostic -&gt; bool" Usage="syntaxTreeOptionsProvider.TryGetDiagnosticValue (tree, diagnosticId, cancellationToken, severity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tree" Type="Microsoft.CodeAnalysis.SyntaxTree" />
+        <Parameter Name="diagnosticId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="severity" Type="Microsoft.CodeAnalysis.ReportDiagnostic" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="tree">To be added.</param>
+        <param name="diagnosticId">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <param name="severity">To be added.</param>
+        <summary>
+            Get diagnostic severity setting for a given diagnostic identifier in a given tree.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetGlobalDiagnosticValue">
+      <MemberSignature Language="C#" Value="public abstract bool TryGetGlobalDiagnosticValue (string diagnosticId, System.Threading.CancellationToken cancellationToken, out Microsoft.CodeAnalysis.ReportDiagnostic severity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetGlobalDiagnosticValue(string diagnosticId, valuetype System.Threading.CancellationToken cancellationToken, [out] valuetype Microsoft.CodeAnalysis.ReportDiagnostic&amp; severity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxTreeOptionsProvider.TryGetGlobalDiagnosticValue(System.String,System.Threading.CancellationToken,Microsoft.CodeAnalysis.ReportDiagnostic@)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function TryGetGlobalDiagnosticValue (diagnosticId As String, cancellationToken As CancellationToken, ByRef severity As ReportDiagnostic) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryGetGlobalDiagnosticValue : string * System.Threading.CancellationToken * ReportDiagnostic -&gt; bool" Usage="syntaxTreeOptionsProvider.TryGetGlobalDiagnosticValue (diagnosticId, cancellationToken, severity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="diagnosticId" Type="System.String" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+        <Parameter Name="severity" Type="Microsoft.CodeAnalysis.ReportDiagnostic" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="diagnosticId">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <param name="severity">To be added.</param>
+        <summary>
+            Get diagnostic severity set globally for a given diagnostic identifier
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

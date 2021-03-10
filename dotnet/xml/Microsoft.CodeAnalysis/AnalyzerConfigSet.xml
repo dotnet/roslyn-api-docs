@@ -13,6 +13,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -42,6 +44,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigSet</ReturnType>
@@ -65,7 +69,7 @@
       </Docs>
     </Member>
     <Member MemberName="Create&lt;TList&gt;">
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.AnalyzerConfigSet Create&lt;TList&gt; (TList analyzerConfigs, out System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;? diagnostics) where TList : System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.CodeAnalysis.AnalyzerConfig&gt;;" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.AnalyzerConfigSet Create&lt;TList&gt; (TList analyzerConfigs, out System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; diagnostics) where TList : System.Collections.Generic.IReadOnlyCollection&lt;Microsoft.CodeAnalysis.AnalyzerConfig&gt;;" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.AnalyzerConfigSet Create&lt;(class System.Collections.Generic.IReadOnlyCollection`1&lt;class Microsoft.CodeAnalysis.AnalyzerConfig&gt;) TList&gt;(!!TList analyzerConfigs, [out] valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;&amp; diagnostics) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.AnalyzerConfigSet.Create``1(``0,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic}@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create(Of TList As IReadOnlyCollection(Of AnalyzerConfig)) (analyzerConfigs As TList, ByRef diagnostics As ImmutableArray(Of Diagnostic)) As AnalyzerConfigSet" />
@@ -74,6 +78,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigSet</ReturnType>
@@ -86,8 +92,8 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="analyzerConfigs" Type="TList" Index="0" FrameworkAlternate="roslyn-dotnet" />
-        <Parameter Name="diagnostics" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" RefType="out" Index="1" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="analyzerConfigs" Type="TList" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="diagnostics" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" RefType="out" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       </Parameters>
       <Docs>
         <typeparam name="TList">To be added.</typeparam>
@@ -114,6 +120,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult</ReturnType>
@@ -129,6 +137,29 @@
             </summary>
         <returns>To be added.</returns>
         <remarks>This method is safe to call from multiple threads.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalConfigOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult GlobalConfigOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult GlobalConfigOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.AnalyzerConfigSet.GlobalConfigOptions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GlobalConfigOptions As AnalyzerConfigOptionsResult" />
+      <MemberSignature Language="F#" Value="member this.GlobalConfigOptions : Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult" Usage="Microsoft.CodeAnalysis.AnalyzerConfigSet.GlobalConfigOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an <see cref="T:Microsoft.CodeAnalysis.AnalyzerConfigOptionsResult" /> that contain the options that apply globally
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

@@ -8,11 +8,13 @@
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
     <summary>
-            Receives notifications of each syntax node in the compilation before generation runs
+            Receives notifications of each <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> in the compilation before generation runs
             </summary>
     <remarks>
             A <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> can provide an instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" />
@@ -23,12 +25,15 @@
             <see cref="M:Microsoft.CodeAnalysis.ISyntaxReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.SyntaxNode)" /> called for every syntax node in the compilation.
             
             The <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /> can record any information about the nodes visited. During
-            <see cref="M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.SourceGeneratorContext)" /> the generator can obtain the 
-            created instance via the <see cref="P:Microsoft.CodeAnalysis.SourceGeneratorContext.SyntaxReceiver" /> property. The
+            <see cref="M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)" /> the generator can obtain the 
+            created instance via the <see cref="P:Microsoft.CodeAnalysis.GeneratorExecutionContext.SyntaxReceiver" /> property. The
             information contained can be used to perform final generation.
             
             A new instance of <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /> is created per-generation, meaning the instance
             is free to store state without worrying about lifetime or reuse.
+            
+            An <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> may provide only a single <see cref="T:Microsoft.CodeAnalysis.ISyntaxReceiver" /> or
+            <see cref="T:Microsoft.CodeAnalysis.ISyntaxContextReceiver" />, not both.
             </remarks>
   </Docs>
   <Members>
@@ -43,6 +48,8 @@
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

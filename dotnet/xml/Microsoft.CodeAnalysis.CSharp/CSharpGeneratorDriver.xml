@@ -8,18 +8,22 @@
     <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.GeneratorDriver</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            A <see cref="T:Microsoft.CodeAnalysis.GeneratorDriver" /> implementation for the CSharp language.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public CSharpGeneratorDriver (Microsoft.CodeAnalysis.ParseOptions parseOptions, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISourceGenerator&gt;? generators, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt;? additionalTexts);" />
+      <MemberSignature Language="C#" Value="public CSharpGeneratorDriver (Microsoft.CodeAnalysis.ParseOptions parseOptions, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISourceGenerator&gt; generators, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt; additionalTexts);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.ParseOptions parseOptions, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISourceGenerator&gt; generators, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.AdditionalText&gt; additionalTexts) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver.#ctor(Microsoft.CodeAnalysis.ParseOptions,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ISourceGenerator},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AdditionalText})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (parseOptions As ParseOptions, generators As ImmutableArray(Of ISourceGenerator), additionalTexts As ImmutableArray(Of AdditionalText))" />
@@ -43,7 +47,7 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public CSharpGeneratorDriver (Microsoft.CodeAnalysis.ParseOptions parseOptions, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISourceGenerator&gt;? generators, Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider optionsProvider, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt;? additionalTexts);" />
+      <MemberSignature Language="C#" Value="public CSharpGeneratorDriver (Microsoft.CodeAnalysis.ParseOptions parseOptions, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISourceGenerator&gt; generators, Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider optionsProvider, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt; additionalTexts);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.CodeAnalysis.ParseOptions parseOptions, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.ISourceGenerator&gt; generators, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider optionsProvider, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.AdditionalText&gt; additionalTexts) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver.#ctor(Microsoft.CodeAnalysis.ParseOptions,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ISourceGenerator},Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AdditionalText})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (parseOptions As ParseOptions, generators As ImmutableArray(Of ISourceGenerator), optionsProvider As AnalyzerConfigOptionsProvider, additionalTexts As ImmutableArray(Of AdditionalText))" />
@@ -54,10 +58,10 @@
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="parseOptions" Type="Microsoft.CodeAnalysis.ParseOptions" Index="0" FrameworkAlternate="roslyn-dotnet" />
-        <Parameter Name="generators" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISourceGenerator&gt;" Index="1" FrameworkAlternate="roslyn-dotnet" />
-        <Parameter Name="optionsProvider" Type="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" Index="2" FrameworkAlternate="roslyn-dotnet" />
-        <Parameter Name="additionalTexts" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt;" Index="3" FrameworkAlternate="roslyn-dotnet" />
+        <Parameter Name="parseOptions" Type="Microsoft.CodeAnalysis.ParseOptions" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.7.0" />
+        <Parameter Name="generators" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISourceGenerator&gt;" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.7.0" />
+        <Parameter Name="optionsProvider" Type="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.7.0" />
+        <Parameter Name="additionalTexts" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt;" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.7.0" />
       </Parameters>
       <Docs>
         <param name="parseOptions">To be added.</param>
@@ -65,6 +69,73 @@
         <param name="optionsProvider">To be added.</param>
         <param name="additionalTexts">To be added.</param>
         <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver Create (params Microsoft.CodeAnalysis.ISourceGenerator[] generators);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver Create(class Microsoft.CodeAnalysis.ISourceGenerator[] generators) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver.Create(Microsoft.CodeAnalysis.ISourceGenerator[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (ParamArray generators As ISourceGenerator()) As CSharpGeneratorDriver" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.ISourceGenerator[] -&gt; Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver" Usage="Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver.Create generators" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="generators" Type="Microsoft.CodeAnalysis.ISourceGenerator[]" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet">
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="generators">The generators to create this driver with</param>
+        <summary>
+            Creates a new instance of <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver" /> with the specified <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" />s and default options
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver" /> instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver Create (System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISourceGenerator&gt; generators, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.AdditionalText&gt;? additionalTexts = default, Microsoft.CodeAnalysis.CSharp.CSharpParseOptions? parseOptions = default, Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider? optionsProvider = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver Create(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ISourceGenerator&gt; generators, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.AdditionalText&gt; additionalTexts, class Microsoft.CodeAnalysis.CSharp.CSharpParseOptions parseOptions, class Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider optionsProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver.Create(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.ISourceGenerator},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.AdditionalText},Microsoft.CodeAnalysis.CSharp.CSharpParseOptions,Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (generators As IEnumerable(Of ISourceGenerator), Optional additionalTexts As IEnumerable(Of AdditionalText) = Nothing, Optional parseOptions As CSharpParseOptions = Nothing, Optional optionsProvider As AnalyzerConfigOptionsProvider = Nothing) As CSharpGeneratorDriver" />
+      <MemberSignature Language="F#" Value="static member Create : seq&lt;Microsoft.CodeAnalysis.ISourceGenerator&gt; * seq&lt;Microsoft.CodeAnalysis.AdditionalText&gt; * Microsoft.CodeAnalysis.CSharp.CSharpParseOptions * Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider -&gt; Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver" Usage="Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver.Create (generators, additionalTexts, parseOptions, optionsProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="generators" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISourceGenerator&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="additionalTexts" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.AdditionalText&gt;" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="parseOptions" Type="Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="optionsProvider" Type="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="generators">The generators to create this driver with</param>
+        <param name="additionalTexts">A list of <see cref="T:Microsoft.CodeAnalysis.AdditionalText" />s available to generators in this driver, or <c>null</c> if there are none.</param>
+        <param name="parseOptions">The <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions" /> that should be used when parsing generated files, or <c>null</c> to use <see cref="P:Microsoft.CodeAnalysis.CSharp.CSharpParseOptions.Default" /></param>
+        <param name="optionsProvider">An <see cref="T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" /> that can be used to retrieve analyzer config values by the generators in this driver, or <c>null</c> if there are none.</param>
+        <summary>
+            Creates a new instance of <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver" /> with the specified <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" />s and the provided options or default.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.CSharp.CSharpGeneratorDriver" /> instance.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

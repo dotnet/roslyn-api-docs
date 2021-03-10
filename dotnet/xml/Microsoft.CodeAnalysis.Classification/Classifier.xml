@@ -16,6 +16,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,6 +46,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Classification.ClassifiedSpan&gt;</ReturnType>
@@ -59,7 +63,14 @@
         <param name="textSpan">To be added.</param>
         <param name="workspace">To be added.</param>
         <param name="cancellationToken">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+            Returns classified spans in ascending <see cref="T:Microsoft.CodeAnalysis.Classification.ClassifiedSpan" /> order.
+            <see cref="T:Microsoft.CodeAnalysis.Classification.ClassifiedSpan" />s may have the same <see cref="P:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.TextSpan" />. This occurs when there are multiple
+            <see cref="P:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.ClassificationType" />s for the same region of code. For example, a reference to a static method
+            will have two spans, one that designates it as a method, and one that designates it as static.
+            <see cref="T:Microsoft.CodeAnalysis.Classification.ClassifiedSpan" />s may also have overlapping <see cref="P:Microsoft.CodeAnalysis.Classification.ClassifiedSpan.TextSpan" />s. This occurs when there are
+            strings containing regex and/or escape characters.
+            </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -82,6 +93,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Classification.ClassifiedSpan&gt;&gt;</ReturnType>

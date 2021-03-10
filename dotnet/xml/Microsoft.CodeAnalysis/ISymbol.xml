@@ -16,6 +16,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -52,6 +54,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -67,11 +71,12 @@
     </Member>
     <Member MemberName="Accept&lt;TResult&gt;">
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA; TResult Accept(Microsoft::CodeAnalysis::SymbolVisitor&lt;TResult&gt; ^ visitor);" />
-      <MemberSignature Language="C#" Value="public TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.SymbolVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="C#" Value="public TResult? Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.SymbolVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.SymbolVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.Accept``1(Microsoft.CodeAnalysis.SymbolVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Function Accept(Of TResult) (visitor As SymbolVisitor(Of TResult)) As TResult" />
       <MemberSignature Language="F#" Value="abstract member Accept : Microsoft.CodeAnalysis.SymbolVisitor&lt;'Result&gt; -&gt; 'Result" Usage="iSymbol.Accept visitor" />
+      <MemberSignature Language="C#" Value="public TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.SymbolVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -84,6 +89,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
@@ -121,6 +128,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -135,12 +144,11 @@
     </Member>
     <Member MemberName="ContainingAssembly">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IAssemblySymbol ^ ContainingAssembly { Microsoft::CodeAnalysis::IAssemblySymbol ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IAssemblySymbol? ContainingAssembly { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IAssemblySymbol ContainingAssembly { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IAssemblySymbol ContainingAssembly" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingAssembly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingAssembly As IAssemblySymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingAssembly : Microsoft.CodeAnalysis.IAssemblySymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingAssembly" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IAssemblySymbol ContainingAssembly { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -153,6 +161,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IAssemblySymbol</ReturnType>
@@ -168,12 +178,11 @@
     </Member>
     <Member MemberName="ContainingModule">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IModuleSymbol ^ ContainingModule { Microsoft::CodeAnalysis::IModuleSymbol ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IModuleSymbol? ContainingModule { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IModuleSymbol ContainingModule { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IModuleSymbol ContainingModule" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingModule" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingModule As IModuleSymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingModule : Microsoft.CodeAnalysis.IModuleSymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingModule" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IModuleSymbol ContainingModule { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -186,6 +195,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IModuleSymbol</ReturnType>
@@ -201,12 +212,11 @@
     </Member>
     <Member MemberName="ContainingNamespace">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamespaceSymbol ^ ContainingNamespace { Microsoft::CodeAnalysis::INamespaceSymbol ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamespaceSymbol? ContainingNamespace { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamespaceSymbol ContainingNamespace { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamespaceSymbol ContainingNamespace" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingNamespace" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingNamespace As INamespaceSymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingNamespace : Microsoft.CodeAnalysis.INamespaceSymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingNamespace" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamespaceSymbol ContainingNamespace { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -219,6 +229,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.INamespaceSymbol</ReturnType>
@@ -234,12 +246,11 @@
     </Member>
     <Member MemberName="ContainingSymbol">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::ISymbol ^ ContainingSymbol { Microsoft::CodeAnalysis::ISymbol ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol? ContainingSymbol { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol ContainingSymbol { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.ISymbol ContainingSymbol" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingSymbol" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingSymbol As ISymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingSymbol : Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingSymbol" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.ISymbol ContainingSymbol { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -252,6 +263,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -266,12 +279,11 @@
     </Member>
     <Member MemberName="ContainingType">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::INamedTypeSymbol ^ ContainingType { Microsoft::CodeAnalysis::INamedTypeSymbol ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol? ContainingType { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol ContainingType { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.INamedTypeSymbol ContainingType" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.ContainingType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingType As INamedTypeSymbol" />
       <MemberSignature Language="F#" Value="member this.ContainingType : Microsoft.CodeAnalysis.INamedTypeSymbol" Usage="Microsoft.CodeAnalysis.ISymbol.ContainingType" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.INamedTypeSymbol ContainingType { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -284,6 +296,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.INamedTypeSymbol</ReturnType>
@@ -316,6 +330,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Accessibility</ReturnType>
@@ -331,12 +347,11 @@
     </Member>
     <Member MemberName="DeclaringSyntaxReferences">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::SyntaxReference ^&gt; DeclaringSyntaxReferences { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::SyntaxReference ^&gt; get(); };" />
-      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt;? DeclaringSyntaxReferences { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt; DeclaringSyntaxReferences { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.SyntaxReference&gt; DeclaringSyntaxReferences" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeclaringSyntaxReferences As ImmutableArray(Of SyntaxReference)" />
       <MemberSignature Language="F#" Value="member this.DeclaringSyntaxReferences : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt;" Usage="Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences" />
-      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt; DeclaringSyntaxReferences { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -349,6 +364,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxReference&gt;</ReturnType>
@@ -374,7 +391,7 @@
       </Docs>
     </Member>
     <Member MemberName="Equals">
-      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.CodeAnalysis.ISymbol? other, Microsoft.CodeAnalysis.SymbolEqualityComparer equalityComparer);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.CodeAnalysis.ISymbol? other, Microsoft.CodeAnalysis.SymbolEqualityComparer equalityComparer);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.CodeAnalysis.ISymbol other, class Microsoft.CodeAnalysis.SymbolEqualityComparer equalityComparer) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.Equals(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.SymbolEqualityComparer)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ISymbol, equalityComparer As SymbolEqualityComparer) As Boolean" />
@@ -388,12 +405,14 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="other" Type="Microsoft.CodeAnalysis.ISymbol" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0">
+        <Parameter Name="other" Type="Microsoft.CodeAnalysis.ISymbol" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
@@ -401,7 +420,7 @@
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="equalityComparer" Type="Microsoft.CodeAnalysis.SymbolEqualityComparer" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+        <Parameter Name="equalityComparer" Type="Microsoft.CodeAnalysis.SymbolEqualityComparer" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       </Parameters>
       <Docs>
         <param name="other">The other symbol to compare against</param>
@@ -414,12 +433,11 @@
     </Member>
     <Member MemberName="GetAttributes">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::AttributeData ^&gt; GetAttributes();" />
-      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt;? GetAttributes ();" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt; GetAttributes ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.AttributeData&gt; GetAttributes() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.GetAttributes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAttributes () As ImmutableArray(Of AttributeData)" />
       <MemberSignature Language="F#" Value="abstract member GetAttributes : unit -&gt; System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt;" Usage="iSymbol.GetAttributes " />
-      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt; GetAttributes ();" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -432,6 +450,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AttributeData&gt;</ReturnType>
@@ -448,11 +468,12 @@
     </Member>
     <Member MemberName="GetDocumentationCommentId">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetDocumentationCommentId();" />
-      <MemberSignature Language="C#" Value="public string GetDocumentationCommentId ();" />
+      <MemberSignature Language="C#" Value="public string? GetDocumentationCommentId ();" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDocumentationCommentId() cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.GetDocumentationCommentId" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDocumentationCommentId () As String" />
       <MemberSignature Language="F#" Value="abstract member GetDocumentationCommentId : unit -&gt; string" Usage="iSymbol.GetDocumentationCommentId " />
+      <MemberSignature Language="C#" Value="public string GetDocumentationCommentId ();" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -465,6 +486,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -480,11 +503,12 @@
       </Docs>
     </Member>
     <Member MemberName="GetDocumentationCommentXml">
-      <MemberSignature Language="C#" Value="public string GetDocumentationCommentXml (System.Globalization.CultureInfo preferredCulture = default, bool expandIncludes = false, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public string? GetDocumentationCommentXml (System.Globalization.CultureInfo? preferredCulture = default, bool expandIncludes = false, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDocumentationCommentXml(class System.Globalization.CultureInfo preferredCulture, bool expandIncludes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.GetDocumentationCommentXml(System.Globalization.CultureInfo,System.Boolean,System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDocumentationCommentXml (Optional preferredCulture As CultureInfo = Nothing, Optional expandIncludes As Boolean = false, Optional cancellationToken As CancellationToken = Nothing) As String" />
       <MemberSignature Language="F#" Value="abstract member GetDocumentationCommentXml : System.Globalization.CultureInfo * bool * System.Threading.CancellationToken -&gt; string" Usage="iSymbol.GetDocumentationCommentXml (preferredCulture, expandIncludes, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public string GetDocumentationCommentXml (System.Globalization.CultureInfo preferredCulture = default, bool expandIncludes = false, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -497,6 +521,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -536,6 +562,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -575,6 +603,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -606,6 +636,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -638,6 +670,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -669,6 +703,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -676,7 +712,7 @@
       <Docs>
         <summary>
             Returns true if this symbol was automatically created by the compiler, and does not have
-            an explicit corresponding source code declaration. 
+            an explicit corresponding source code declaration.
             </summary>
         <value>To be added.</value>
         <remarks>
@@ -686,7 +722,9 @@
             
             <para>
             Examples include (this list is not exhaustive):
-            <list type="bullet"><item><description>The default constructor for a class or struct that is created if one is not provided.</description></item><item><description>The BeginInvoke/Invoke/EndInvoke methods for a delegate.</description></item><item><description>The generated backing field for an auto property or a field-like event.</description></item><item><description>The "this" parameter for non-static methods.</description></item><item><description>The "value" parameter for a property setter.</description></item><item><description>The parameters on indexer accessor methods (not on the indexer itself).</description></item><item><description>Methods in anonymous types.</description></item></list></para></remarks>
+            <list type="bullet"><item><description>The default constructor for a class or struct that is created if one is not provided.</description></item><item><description>The BeginInvoke/Invoke/EndInvoke methods for a delegate.</description></item><item><description>The generated backing field for an auto property or a field-like event.</description></item><item><description>The "this" parameter for non-static methods.</description></item><item><description>The "value" parameter for a property setter.</description></item><item><description>The parameters on indexer accessor methods (not on the indexer itself).</description></item><item><description>Methods in anonymous types.</description></item></list></para><para>
+            The class and entry point method for top-level statements are not considered as implicitly declared.
+            </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsOverride">
@@ -708,6 +746,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -739,6 +779,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -770,6 +812,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -801,6 +845,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -832,6 +878,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolKind</ReturnType>
@@ -863,6 +911,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -877,12 +927,11 @@
     </Member>
     <Member MemberName="Locations">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Location ^&gt; Locations { System::Collections::Immutable::ImmutableArray&lt;Microsoft::CodeAnalysis::Location ^&gt; get(); };" />
-      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt;? Locations { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt; Locations { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Location&gt; Locations" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.ISymbol.Locations" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Locations As ImmutableArray(Of Location)" />
       <MemberSignature Language="F#" Value="member this.Locations : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt;" Usage="Microsoft.CodeAnalysis.ISymbol.Locations" />
-      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt; Locations { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -895,6 +944,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Location&gt;</ReturnType>
@@ -928,6 +979,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -963,6 +1016,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -994,6 +1049,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -1009,7 +1066,7 @@
       </Docs>
     </Member>
     <Member MemberName="ToDisplayParts">
-      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToDisplayParts (Microsoft.CodeAnalysis.SymbolDisplayFormat? format = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToDisplayParts (Microsoft.CodeAnalysis.SymbolDisplayFormat? format = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToDisplayParts(class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToDisplayParts(Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Function ToDisplayParts (Optional format As SymbolDisplayFormat = Nothing) As ImmutableArray(Of SymbolDisplayPart)" />
@@ -1027,6 +1084,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;</ReturnType>
@@ -1046,7 +1105,7 @@
       </Docs>
     </Member>
     <Member MemberName="ToDisplayString">
-      <MemberSignature Language="C#" Value="public string ToDisplayString (Microsoft.CodeAnalysis.SymbolDisplayFormat? format = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public string ToDisplayString (Microsoft.CodeAnalysis.SymbolDisplayFormat? format = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToDisplayString(class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToDisplayString(Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Function ToDisplayString (Optional format As SymbolDisplayFormat = Nothing) As String" />
@@ -1064,6 +1123,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1081,7 +1142,7 @@
       </Docs>
     </Member>
     <Member MemberName="ToMinimalDisplayParts">
-      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToMinimalDisplayParts (Microsoft.CodeAnalysis.SemanticModel? semanticModel, int position, Microsoft.CodeAnalysis.SymbolDisplayFormat? format = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToMinimalDisplayParts (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.SymbolDisplayFormat? format = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.SymbolDisplayPart&gt; ToMinimalDisplayParts(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToMinimalDisplayParts(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Function ToMinimalDisplayParts (semanticModel As SemanticModel, position As Integer, Optional format As SymbolDisplayFormat = Nothing) As ImmutableArray(Of SymbolDisplayPart)" />
@@ -1099,6 +1160,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SymbolDisplayPart&gt;</ReturnType>
@@ -1123,7 +1186,7 @@
       </Docs>
     </Member>
     <Member MemberName="ToMinimalDisplayString">
-      <MemberSignature Language="C#" Value="public string ToMinimalDisplayString (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.SymbolDisplayFormat? format = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public string ToMinimalDisplayString (Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.SymbolDisplayFormat? format = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToMinimalDisplayString(class Microsoft.CodeAnalysis.SemanticModel semanticModel, int32 position, class Microsoft.CodeAnalysis.SymbolDisplayFormat format) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISymbol.ToMinimalDisplayString(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.SymbolDisplayFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Function ToMinimalDisplayString (semanticModel As SemanticModel, position As Integer, Optional format As SymbolDisplayFormat = Nothing) As String" />
@@ -1141,6 +1204,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

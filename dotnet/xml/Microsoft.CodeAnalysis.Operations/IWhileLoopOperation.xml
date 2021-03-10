@@ -16,6 +16,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -34,18 +36,19 @@
              (2) VB 'While', 'Do While' and 'Do Until' loop statements.
             </para></summary>
     <remarks>
-            This interface is reserved for implementation by its associated APIs. We reserve the right to
-            change it in the future.
-            </remarks>
+      <para>This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.</para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Condition">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ Condition { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation Condition { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation? Condition { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IOperation Condition" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IWhileLoopOperation.Condition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Condition As IOperation" />
       <MemberSignature Language="F#" Value="member this.Condition : Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.Operations.IWhileLoopOperation.Condition" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation Condition { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -58,13 +61,15 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Condition of the loop.
+            Condition of the loop. This can only be null in error scenarios.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -89,6 +94,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -121,6 +128,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -135,11 +144,12 @@
     </Member>
     <Member MemberName="IgnoredCondition">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IOperation ^ IgnoredCondition { Microsoft::CodeAnalysis::IOperation ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation IgnoredCondition { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation? IgnoredCondition { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IOperation IgnoredCondition" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Operations.IWhileLoopOperation.IgnoredCondition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IgnoredCondition As IOperation" />
       <MemberSignature Language="F#" Value="member this.IgnoredCondition : Microsoft.CodeAnalysis.IOperation" Usage="Microsoft.CodeAnalysis.Operations.IWhileLoopOperation.IgnoredCondition" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IOperation IgnoredCondition { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -152,6 +162,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
