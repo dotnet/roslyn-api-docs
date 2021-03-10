@@ -16,6 +16,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,6 +30,37 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public static int Compare (ReadOnlySpan&lt;char&gt; left, ReadOnlySpan&lt;char&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Compare(valuetype System.ReadOnlySpan`1&lt;char&gt; left, valuetype System.ReadOnlySpan`1&lt;char&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CaseInsensitiveComparison.Compare(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Compare (left As ReadOnlySpan(Of Char), right As ReadOnlySpan(Of Char)) As Integer" />
+      <MemberSignature Language="F#" Value="static member Compare : ReadOnlySpan&lt;char&gt; * ReadOnlySpan&lt;char&gt; -&gt; int" Usage="Microsoft.CodeAnalysis.CaseInsensitiveComparison.Compare (left, right)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.9.0" />
+        <Parameter Name="right" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="left">First identifier to compare</param>
+        <param name="right">Second identifier to compare</param>
+        <summary>
+            Compares two strings according to the Unicode rules for case-insensitive
+            identifier comparison (lower-case mapping).
+            </summary>
+        <returns>-1 if <paramref name="left" /> &lt; <paramref name="right" />, 1 if <paramref name="left" /> &gt; <paramref name="right" />, 0 if they are equal.</returns>
+        <remarks>
+            These are also the rules used for VB identifier comparison.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Compare">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static int Compare(System::String ^ left, System::String ^ right);" />
       <MemberSignature Language="C#" Value="public static int Compare (string left, string right);" />
@@ -47,6 +80,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -87,6 +122,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.StringComparer</ReturnType>
@@ -121,6 +158,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -137,6 +176,37 @@
             </summary>
         <returns />
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (ReadOnlySpan&lt;char&gt; left, ReadOnlySpan&lt;char&gt; right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.ReadOnlySpan`1&lt;char&gt; left, valuetype System.ReadOnlySpan`1&lt;char&gt; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CaseInsensitiveComparison.Equals(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Equals (left As ReadOnlySpan(Of Char), right As ReadOnlySpan(Of Char)) As Boolean" />
+      <MemberSignature Language="F#" Value="static member Equals : ReadOnlySpan&lt;char&gt; * ReadOnlySpan&lt;char&gt; -&gt; bool" Usage="Microsoft.CodeAnalysis.CaseInsensitiveComparison.Equals (left, right)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.9.0" />
+        <Parameter Name="right" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="left">First identifier to compare</param>
+        <param name="right">Second identifier to compare</param>
+        <summary>
+            Determines if two strings are equal according to Unicode rules for case-insensitive
+            identifier comparison (lower-case mapping).
+            </summary>
+        <returns>true if the identifiers should be considered the same.</returns>
+        <remarks>
+            These are also the rules used for VB identifier comparison.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="Equals">
@@ -158,6 +228,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -198,6 +270,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -235,6 +309,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -272,6 +348,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Char</ReturnType>
@@ -292,11 +370,12 @@
     </Member>
     <Member MemberName="ToLower">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ ToLower(System::String ^ value);" />
-      <MemberSignature Language="C#" Value="public static string ToLower (string value);" />
+      <MemberSignature Language="C#" Value="public static string? ToLower (string? value);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToLower(string value) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CaseInsensitiveComparison.ToLower(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ToLower (value As String) As String" />
       <MemberSignature Language="F#" Value="static member ToLower : string -&gt; string" Usage="Microsoft.CodeAnalysis.CaseInsensitiveComparison.ToLower value" />
+      <MemberSignature Language="C#" Value="public static string ToLower (string value);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -309,6 +388,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -350,6 +431,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

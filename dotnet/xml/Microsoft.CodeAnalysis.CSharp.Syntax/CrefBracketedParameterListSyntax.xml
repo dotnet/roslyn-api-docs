@@ -16,6 +16,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.Syntax.BaseCrefParameterListSyntax</BaseTypeName>
@@ -25,7 +27,16 @@
     <summary>
             A bracketed list of cref parameters.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <para>This node is associated with the following syntax kinds:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.CrefBracketedParameterList" />
+          </description>
+        </item>
+      </list>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Accept">
@@ -47,6 +58,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -62,11 +75,12 @@
     </Member>
     <Member MemberName="Accept&lt;TResult&gt;">
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA; override TResult Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor&lt;TResult&gt; ^ visitor);" />
-      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="C#" Value="public override TResult? Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Accept(Of TResult) (visitor As CSharpSyntaxVisitor(Of TResult)) As TResult" />
       <MemberSignature Language="F#" Value="override this.Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;'Result&gt; -&gt; 'Result" Usage="crefBracketedParameterListSyntax.Accept visitor" />
+      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -79,15 +93,11 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
-        <Attributes>
-          <Attribute FrameworkAlternate="roslyn-dotnet">
-            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
-            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
-          </Attribute>
-        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -122,6 +132,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax</ReturnType>
@@ -162,6 +174,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -191,6 +205,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -203,12 +219,11 @@
     </Member>
     <Member MemberName="Parameters">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::CrefParameterSyntax ^&gt; Parameters { Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::CrefParameterSyntax ^&gt; get(); };" />
-      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt;? Parameters { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; Parameters { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; Parameters" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax.Parameters" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Parameters As SeparatedSyntaxList(Of CrefParameterSyntax)" />
       <MemberSignature Language="F#" Value="member this.Parameters : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt;" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax.Parameters" />
-      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; Parameters { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -221,6 +236,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt;</ReturnType>
@@ -233,12 +250,11 @@
     </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::CrefBracketedParameterListSyntax ^ Update(Microsoft::CodeAnalysis::SyntaxToken openBracketToken, Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::CrefParameterSyntax ^&gt; parameters, Microsoft::CodeAnalysis::SyntaxToken closeBracketToken);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax Update (Microsoft.CodeAnalysis.SyntaxToken openBracketToken, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt;? parameters, Microsoft.CodeAnalysis.SyntaxToken closeBracketToken);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax Update (Microsoft.CodeAnalysis.SyntaxToken openBracketToken, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; parameters, Microsoft.CodeAnalysis.SyntaxToken closeBracketToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxToken openBracketToken, valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; parameters, valuetype Microsoft.CodeAnalysis.SyntaxToken closeBracketToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (openBracketToken As SyntaxToken, parameters As SeparatedSyntaxList(Of CrefParameterSyntax), closeBracketToken As SyntaxToken) As CrefBracketedParameterListSyntax" />
       <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; * Microsoft.CodeAnalysis.SyntaxToken -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax" Usage="crefBracketedParameterListSyntax.Update (openBracketToken, parameters, closeBracketToken)" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax Update (Microsoft.CodeAnalysis.SyntaxToken openBracketToken, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; parameters, Microsoft.CodeAnalysis.SyntaxToken closeBracketToken);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -251,6 +267,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax</ReturnType>
@@ -288,6 +306,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax</ReturnType>
@@ -321,6 +341,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax</ReturnType>
@@ -337,12 +359,11 @@
     </Member>
     <Member MemberName="WithParameters">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::CrefBracketedParameterListSyntax ^ WithParameters(Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::CrefParameterSyntax ^&gt; parameters);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax WithParameters (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt;? parameters);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax WithParameters (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; parameters);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax WithParameters(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; parameters) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax.WithParameters(Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithParameters (parameters As SeparatedSyntaxList(Of CrefParameterSyntax)) As CrefBracketedParameterListSyntax" />
       <MemberSignature Language="F#" Value="override this.WithParameters : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax" Usage="crefBracketedParameterListSyntax.WithParameters parameters" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax WithParameters (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.CrefParameterSyntax&gt; parameters);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -355,6 +376,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.CrefBracketedParameterListSyntax</ReturnType>

@@ -16,6 +16,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.Syntax.StatementSyntax</BaseTypeName>
@@ -23,7 +25,16 @@
   <Interfaces />
   <Docs>
     <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <para>This node is associated with the following syntax kinds:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.ExpressionStatement" />
+          </description>
+        </item>
+      </list>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Accept">
@@ -45,6 +56,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -60,11 +73,12 @@
     </Member>
     <Member MemberName="Accept&lt;TResult&gt;">
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA; override TResult Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor&lt;TResult&gt; ^ visitor);" />
-      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="C#" Value="public override TResult? Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Accept(Of TResult) (visitor As CSharpSyntaxVisitor(Of TResult)) As TResult" />
       <MemberSignature Language="F#" Value="override this.Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;'Result&gt; -&gt; 'Result" Usage="expressionStatementSyntax.Accept visitor" />
+      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -77,15 +91,11 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
-        <Attributes>
-          <Attribute FrameworkAlternate="roslyn-dotnet">
-            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
-            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
-          </Attribute>
-        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -112,12 +122,14 @@
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0">
+        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
@@ -152,6 +164,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -169,7 +183,7 @@
       </Docs>
     </Member>
     <Member MemberName="AttributeLists">
-      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? AttributeLists { get; }" />
+      <MemberSignature Language="C#" Value="public override Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.AttributeLists" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property AttributeLists As SyntaxList(Of AttributeListSyntax)" />
@@ -179,6 +193,8 @@
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;</ReturnType>
@@ -208,6 +224,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax</ReturnType>
@@ -237,6 +255,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -266,6 +286,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax</ReturnType>
@@ -283,7 +305,7 @@
       </Docs>
     </Member>
     <Member MemberName="Update">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? attributeLists, Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax expression, Microsoft.CodeAnalysis.SyntaxToken semicolonToken);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax expression, Microsoft.CodeAnalysis.SyntaxToken semicolonToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, class Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax expression, valuetype Microsoft.CodeAnalysis.SyntaxToken semicolonToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (attributeLists As SyntaxList(Of AttributeListSyntax), expression As ExpressionSyntax, semicolonToken As SyntaxToken) As ExpressionStatementSyntax" />
@@ -293,14 +315,16 @@
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
-        <Parameter Name="expression" Type="Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
-        <Parameter Name="semicolonToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
+        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="expression" Type="Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="semicolonToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       </Parameters>
       <Docs>
         <param name="attributeLists">To be added.</param>
@@ -312,7 +336,7 @@
       </Docs>
     </Member>
     <Member MemberName="WithAttributeLists">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? attributeLists);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax WithAttributeLists(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithAttributeLists (attributeLists As SyntaxList(Of AttributeListSyntax)) As ExpressionStatementSyntax" />
@@ -322,12 +346,14 @@
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0" />
+        <Parameter Name="attributeLists" Type="Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       </Parameters>
       <Docs>
         <param name="attributeLists">To be added.</param>
@@ -355,6 +381,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax</ReturnType>
@@ -388,6 +416,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionStatementSyntax</ReturnType>

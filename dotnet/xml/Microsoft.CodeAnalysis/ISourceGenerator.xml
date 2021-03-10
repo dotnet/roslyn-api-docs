@@ -8,6 +8,8 @@
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -22,6 +24,41 @@
             </remarks>
   </Docs>
   <Members>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public void Execute (Microsoft.CodeAnalysis.GeneratorExecutionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(valuetype Microsoft.CodeAnalysis.GeneratorExecutionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Execute (context As GeneratorExecutionContext)" />
+      <MemberSignature Language="F#" Value="abstract member Execute : Microsoft.CodeAnalysis.GeneratorExecutionContext -&gt; unit" Usage="iSourceGenerator.Execute context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.GeneratorExecutionContext" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="context">The <see cref="T:Microsoft.CodeAnalysis.GeneratorExecutionContext" /> to add source to</param>
+        <summary>
+            Called to perform source generation. A generator can use the <paramref name="context" />
+            to add source files via the <see cref="M:Microsoft.CodeAnalysis.GeneratorExecutionContext.AddSource(System.String,Microsoft.CodeAnalysis.Text.SourceText)" /> 
+            method.
+            </summary>
+        <remarks>
+            This call represents the main generation step. It is called after a <see cref="T:Microsoft.CodeAnalysis.Compilation" /> is 
+            created that contains the user written code. 
+            
+            A generator can use the <see cref="P:Microsoft.CodeAnalysis.GeneratorExecutionContext.Compilation" /> property to
+            discover information about the users compilation and make decisions on what source to 
+            provide. 
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Execute">
       <MemberSignature Language="C#" Value="public void Execute (Microsoft.CodeAnalysis.SourceGeneratorContext context);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(valuetype Microsoft.CodeAnalysis.SourceGeneratorContext context) cil managed" />
@@ -38,7 +75,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="context" Type="Microsoft.CodeAnalysis.SourceGeneratorContext" />
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.SourceGeneratorContext" Index="0" FrameworkAlternate="roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0" />
       </Parameters>
       <Docs>
         <param name="context">The <see cref="T:Microsoft.CodeAnalysis.SourceGeneratorContext" /> to add source to</param>
@@ -58,6 +95,33 @@
       </Docs>
     </Member>
     <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.CodeAnalysis.GeneratorInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(valuetype Microsoft.CodeAnalysis.GeneratorInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.GeneratorInitializationContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize (context As GeneratorInitializationContext)" />
+      <MemberSignature Language="F#" Value="abstract member Initialize : Microsoft.CodeAnalysis.GeneratorInitializationContext -&gt; unit" Usage="iSourceGenerator.Initialize context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.GeneratorInitializationContext" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="context">The <see cref="T:Microsoft.CodeAnalysis.GeneratorInitializationContext" /> to register callbacks on</param>
+        <summary>
+            Called before generation occurs. A generator can use the <paramref name="context" />
+            to register callbacks required to perform generation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
       <MemberSignature Language="C#" Value="public void Initialize (Microsoft.CodeAnalysis.InitializationContext context);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(valuetype Microsoft.CodeAnalysis.InitializationContext context) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISourceGenerator.Initialize(Microsoft.CodeAnalysis.InitializationContext)" />
@@ -73,7 +137,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="context" Type="Microsoft.CodeAnalysis.InitializationContext" />
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.InitializationContext" Index="0" FrameworkAlternate="roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0" />
       </Parameters>
       <Docs>
         <param name="context">The <see cref="T:Microsoft.CodeAnalysis.InitializationContext" /> to register callbacks on</param>

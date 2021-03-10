@@ -1,0 +1,104 @@
+<Type Name="GeneratorPostInitializationContext" FullName="Microsoft.CodeAnalysis.GeneratorPostInitializationContext">
+  <TypeSignature Language="C#" Value="public struct GeneratorPostInitializationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit GeneratorPostInitializationContext extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.GeneratorPostInitializationContext" />
+  <TypeSignature Language="VB.NET" Value="Public Structure GeneratorPostInitializationContext" />
+  <TypeSignature Language="F#" Value="type GeneratorPostInitializationContext = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Context passed to a source generator when it has opted-in to PostInitialization via <see cref="M:Microsoft.CodeAnalysis.GeneratorInitializationContext.RegisterForPostInitialization(System.Action{Microsoft.CodeAnalysis.GeneratorPostInitializationContext})" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddSource">
+      <MemberSignature Language="C#" Value="public void AddSource (string hintName, Microsoft.CodeAnalysis.Text.SourceText sourceText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSource(string hintName, class Microsoft.CodeAnalysis.Text.SourceText sourceText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.GeneratorPostInitializationContext.AddSource(System.String,Microsoft.CodeAnalysis.Text.SourceText)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddSource (hintName As String, sourceText As SourceText)" />
+      <MemberSignature Language="F#" Value="member this.AddSource : string * Microsoft.CodeAnalysis.Text.SourceText -&gt; unit" Usage="generatorPostInitializationContext.AddSource (hintName, sourceText)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hintName" Type="System.String" />
+        <Parameter Name="sourceText" Type="Microsoft.CodeAnalysis.Text.SourceText" />
+      </Parameters>
+      <Docs>
+        <param name="hintName">An identifier that can be used to reference this source text, must be unique within this generator</param>
+        <param name="sourceText">The <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" /> to add to the compilation</param>
+        <summary>
+            Adds a <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" /> to the compilation that will be available during subsequent phases
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSource">
+      <MemberSignature Language="C#" Value="public void AddSource (string hintName, string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSource(string hintName, string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.GeneratorPostInitializationContext.AddSource(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddSource (hintName As String, source As String)" />
+      <MemberSignature Language="F#" Value="member this.AddSource : string * string -&gt; unit" Usage="generatorPostInitializationContext.AddSource (hintName, source)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hintName" Type="System.String" />
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hintName">An identifier that can be used to reference this source text, must be unique within this generator</param>
+        <param name="source">The source code to add to the compilation</param>
+        <summary>
+            Adds source code in the form of a <see cref="T:System.String" /> to the compilation that will be available during subsequent phases
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.GeneratorPostInitializationContext.CancellationToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CancellationToken As CancellationToken" />
+      <MemberSignature Language="F#" Value="member this.CancellationToken : System.Threading.CancellationToken" Usage="Microsoft.CodeAnalysis.GeneratorPostInitializationContext.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A <see cref="P:Microsoft.CodeAnalysis.GeneratorPostInitializationContext.CancellationToken" /> that can be checked to see if the PostInitialization should be cancelled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

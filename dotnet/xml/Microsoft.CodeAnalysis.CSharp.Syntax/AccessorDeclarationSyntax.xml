@@ -16,6 +16,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode</BaseTypeName>
@@ -23,7 +25,41 @@
   <Interfaces />
   <Docs>
     <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <para>This node is associated with the following syntax kinds:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.GetAccessorDeclaration" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SetAccessorDeclaration" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.InitAccessorDeclaration" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddAccessorDeclaration" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.RemoveAccessorDeclaration" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.UnknownAccessorDeclaration" />
+          </description>
+        </item>
+      </list>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Accept">
@@ -45,6 +81,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -60,11 +98,12 @@
     </Member>
     <Member MemberName="Accept&lt;TResult&gt;">
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA; override TResult Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor&lt;TResult&gt; ^ visitor);" />
-      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="C#" Value="public override TResult? Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Accept(Of TResult) (visitor As CSharpSyntaxVisitor(Of TResult)) As TResult" />
       <MemberSignature Language="F#" Value="override this.Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;'Result&gt; -&gt; 'Result" Usage="accessorDeclarationSyntax.Accept visitor" />
+      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -77,15 +116,11 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
-        <Attributes>
-          <Attribute FrameworkAlternate="roslyn-dotnet">
-            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
-            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
-          </Attribute>
-        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -120,6 +155,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -152,12 +189,14 @@
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0">
+        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0">
           <Attributes>
             <Attribute FrameworkAlternate="roslyn-dotnet">
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
@@ -192,6 +231,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -232,6 +273,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -255,12 +298,11 @@
     </Member>
     <Member MemberName="AttributeLists">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::AttributeListSyntax ^&gt; AttributeLists { Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::AttributeListSyntax ^&gt; get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? AttributeLists { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.AttributeLists" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AttributeLists As SyntaxList(Of AttributeListSyntax)" />
       <MemberSignature Language="F#" Value="member this.AttributeLists : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.AttributeLists" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; AttributeLists { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -273,6 +315,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;</ReturnType>
@@ -285,7 +329,7 @@
     </Member>
     <Member MemberName="Body">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::CSharp::Syntax::BlockSyntax ^ Body { Microsoft::CodeAnalysis::CSharp::Syntax::BlockSyntax ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax? Body { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax? Body { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax Body" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.Body" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Body As BlockSyntax" />
@@ -303,6 +347,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax</ReturnType>
@@ -315,7 +361,7 @@
     </Member>
     <Member MemberName="ExpressionBody">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::CSharp::Syntax::ArrowExpressionClauseSyntax ^ ExpressionBody { Microsoft::CodeAnalysis::CSharp::Syntax::ArrowExpressionClauseSyntax ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax? ExpressionBody { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax? ExpressionBody { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax ExpressionBody" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.ExpressionBody" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExpressionBody As ArrowExpressionClauseSyntax" />
@@ -333,6 +379,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax</ReturnType>
@@ -362,6 +410,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -391,6 +441,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxTokenList</ReturnType>
@@ -420,6 +472,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -432,12 +486,11 @@
     </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::AccessorDeclarationSyntax ^ Update(Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::AttributeListSyntax ^&gt; attributeLists, Microsoft::CodeAnalysis::SyntaxTokenList modifiers, Microsoft::CodeAnalysis::SyntaxToken keyword, Microsoft::CodeAnalysis::CSharp::Syntax::BlockSyntax ^ body, Microsoft::CodeAnalysis::SyntaxToken semicolonToken);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? attributeLists, Microsoft.CodeAnalysis.SyntaxTokenList modifiers, Microsoft.CodeAnalysis.SyntaxToken keyword, Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax body, Microsoft.CodeAnalysis.SyntaxToken semicolonToken);" FrameworkAlternate="roslyn-dotnet" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, Microsoft.CodeAnalysis.SyntaxTokenList modifiers, Microsoft.CodeAnalysis.SyntaxToken keyword, Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax body, Microsoft.CodeAnalysis.SyntaxToken semicolonToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, valuetype Microsoft.CodeAnalysis.SyntaxTokenList modifiers, valuetype Microsoft.CodeAnalysis.SyntaxToken keyword, class Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax body, valuetype Microsoft.CodeAnalysis.SyntaxToken semicolonToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (attributeLists As SyntaxList(Of AttributeListSyntax), modifiers As SyntaxTokenList, keyword As SyntaxToken, body As BlockSyntax, semicolonToken As SyntaxToken) As AccessorDeclarationSyntax" />
       <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; * Microsoft.CodeAnalysis.SyntaxTokenList * Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax * Microsoft.CodeAnalysis.SyntaxToken -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax" Usage="accessorDeclarationSyntax.Update (attributeLists, modifiers, keyword, body, semicolonToken)" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, Microsoft.CodeAnalysis.SyntaxTokenList modifiers, Microsoft.CodeAnalysis.SyntaxToken keyword, Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax body, Microsoft.CodeAnalysis.SyntaxToken semicolonToken);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -450,6 +503,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -474,7 +529,7 @@
     </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::AccessorDeclarationSyntax ^ Update(Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::AttributeListSyntax ^&gt; attributeLists, Microsoft::CodeAnalysis::SyntaxTokenList modifiers, Microsoft::CodeAnalysis::SyntaxToken keyword, Microsoft::CodeAnalysis::CSharp::Syntax::BlockSyntax ^ body, Microsoft::CodeAnalysis::CSharp::Syntax::ArrowExpressionClauseSyntax ^ expressionBody, Microsoft::CodeAnalysis::SyntaxToken semicolonToken);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax? Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? attributeLists, Microsoft.CodeAnalysis.SyntaxTokenList modifiers, Microsoft.CodeAnalysis.SyntaxToken keyword, Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax body, Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax expressionBody, Microsoft.CodeAnalysis.SyntaxToken semicolonToken);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax Update (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, Microsoft.CodeAnalysis.SyntaxTokenList modifiers, Microsoft.CodeAnalysis.SyntaxToken keyword, Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax? body, Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax? expressionBody, Microsoft.CodeAnalysis.SyntaxToken semicolonToken);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists, valuetype Microsoft.CodeAnalysis.SyntaxTokenList modifiers, valuetype Microsoft.CodeAnalysis.SyntaxToken keyword, class Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax body, class Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax expressionBody, valuetype Microsoft.CodeAnalysis.SyntaxToken semicolonToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.Update(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax},Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax,Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (attributeLists As SyntaxList(Of AttributeListSyntax), modifiers As SyntaxTokenList, keyword As SyntaxToken, body As BlockSyntax, expressionBody As ArrowExpressionClauseSyntax, semicolonToken As SyntaxToken) As AccessorDeclarationSyntax" />
@@ -492,6 +547,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -518,12 +575,11 @@
     </Member>
     <Member MemberName="WithAttributeLists">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::AccessorDeclarationSyntax ^ WithAttributeLists(Microsoft::CodeAnalysis::SyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::AttributeListSyntax ^&gt; attributeLists);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt;? attributeLists);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithAttributeLists(valuetype Microsoft.CodeAnalysis.SyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.WithAttributeLists(Microsoft.CodeAnalysis.SyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithAttributeLists (attributeLists As SyntaxList(Of AttributeListSyntax)) As AccessorDeclarationSyntax" />
       <MemberSignature Language="F#" Value="member this.WithAttributeLists : Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax" Usage="accessorDeclarationSyntax.WithAttributeLists attributeLists" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithAttributeLists (Microsoft.CodeAnalysis.SyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax&gt; attributeLists);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -536,6 +592,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -552,7 +610,7 @@
     </Member>
     <Member MemberName="WithBody">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::AccessorDeclarationSyntax ^ WithBody(Microsoft::CodeAnalysis::CSharp::Syntax::BlockSyntax ^ body);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithBody (Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax? body);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithBody (Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax? body);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithBody(class Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax body) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.WithBody(Microsoft.CodeAnalysis.CSharp.Syntax.BlockSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithBody (body As BlockSyntax) As AccessorDeclarationSyntax" />
@@ -570,6 +628,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -586,7 +646,7 @@
     </Member>
     <Member MemberName="WithExpressionBody">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::AccessorDeclarationSyntax ^ WithExpressionBody(Microsoft::CodeAnalysis::CSharp::Syntax::ArrowExpressionClauseSyntax ^ expressionBody);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithExpressionBody (Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax? expressionBody);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithExpressionBody (Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax? expressionBody);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax WithExpressionBody(class Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax expressionBody) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax.WithExpressionBody(Microsoft.CodeAnalysis.CSharp.Syntax.ArrowExpressionClauseSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithExpressionBody (expressionBody As ArrowExpressionClauseSyntax) As AccessorDeclarationSyntax" />
@@ -604,6 +664,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -637,6 +699,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -670,6 +734,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>
@@ -703,6 +769,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AccessorDeclarationSyntax</ReturnType>

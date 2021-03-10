@@ -16,6 +16,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode</BaseTypeName>
@@ -23,7 +25,16 @@
   <Interfaces />
   <Docs>
     <summary>Class representing one or more attributes applied to a language construct.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <para>This node is associated with the following syntax kinds:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AttributeList" />
+          </description>
+        </item>
+      </list>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Accept">
@@ -45,6 +56,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -60,11 +73,12 @@
     </Member>
     <Member MemberName="Accept&lt;TResult&gt;">
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA; override TResult Accept(Microsoft::CodeAnalysis::CSharp::CSharpSyntaxVisitor&lt;TResult&gt; ^ visitor);" />
-      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="C#" Value="public override TResult? Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Accept(Of TResult) (visitor As CSharpSyntaxVisitor(Of TResult)) As TResult" />
       <MemberSignature Language="F#" Value="override this.Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;'Result&gt; -&gt; 'Result" Usage="attributeListSyntax.Accept visitor" />
+      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -77,15 +91,11 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
-        <Attributes>
-          <Attribute FrameworkAlternate="roslyn-dotnet">
-            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
-            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
-          </Attribute>
-        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -120,6 +130,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax</ReturnType>
@@ -143,12 +155,11 @@
     </Member>
     <Member MemberName="Attributes">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::AttributeSyntax ^&gt; Attributes { Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::AttributeSyntax ^&gt; get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt;? Attributes { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt; Attributes { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt; Attributes" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax.Attributes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Attributes As SeparatedSyntaxList(Of AttributeSyntax)" />
       <MemberSignature Language="F#" Value="member this.Attributes : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt;" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax.Attributes" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt; Attributes { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -161,6 +172,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt;</ReturnType>
@@ -190,6 +203,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -219,6 +234,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -231,7 +248,7 @@
     </Member>
     <Member MemberName="Target">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::CSharp::Syntax::AttributeTargetSpecifierSyntax ^ Target { Microsoft::CodeAnalysis::CSharp::Syntax::AttributeTargetSpecifierSyntax ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax? Target { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax? Target { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax Target" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax.Target" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Target As AttributeTargetSpecifierSyntax" />
@@ -249,6 +266,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax</ReturnType>
@@ -261,7 +280,7 @@
     </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::AttributeListSyntax ^ Update(Microsoft::CodeAnalysis::SyntaxToken openBracketToken, Microsoft::CodeAnalysis::CSharp::Syntax::AttributeTargetSpecifierSyntax ^ target, Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::AttributeSyntax ^&gt; attributes, Microsoft::CodeAnalysis::SyntaxToken closeBracketToken);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax Update (Microsoft.CodeAnalysis.SyntaxToken openBracketToken, Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax? target, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt;? attributes, Microsoft.CodeAnalysis.SyntaxToken closeBracketToken);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax Update (Microsoft.CodeAnalysis.SyntaxToken openBracketToken, Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax? target, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt; attributes, Microsoft.CodeAnalysis.SyntaxToken closeBracketToken);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxToken openBracketToken, class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax target, valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt; attributes, valuetype Microsoft.CodeAnalysis.SyntaxToken closeBracketToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (openBracketToken As SyntaxToken, target As AttributeTargetSpecifierSyntax, attributes As SeparatedSyntaxList(Of AttributeSyntax), closeBracketToken As SyntaxToken) As AttributeListSyntax" />
@@ -279,6 +298,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax</ReturnType>
@@ -301,12 +322,11 @@
     </Member>
     <Member MemberName="WithAttributes">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::AttributeListSyntax ^ WithAttributes(Microsoft::CodeAnalysis::SeparatedSyntaxList&lt;Microsoft::CodeAnalysis::CSharp::Syntax::AttributeSyntax ^&gt; attributes);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax WithAttributes (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt;? attributes);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax WithAttributes (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt; attributes);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax WithAttributes(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt; attributes) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax.WithAttributes(Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithAttributes (attributes As SeparatedSyntaxList(Of AttributeSyntax)) As AttributeListSyntax" />
       <MemberSignature Language="F#" Value="member this.WithAttributes : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax" Usage="attributeListSyntax.WithAttributes attributes" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax WithAttributes (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.AttributeSyntax&gt; attributes);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -319,6 +339,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax</ReturnType>
@@ -352,6 +374,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax</ReturnType>
@@ -385,6 +409,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax</ReturnType>
@@ -401,7 +427,7 @@
     </Member>
     <Member MemberName="WithTarget">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::CodeAnalysis::CSharp::Syntax::AttributeListSyntax ^ WithTarget(Microsoft::CodeAnalysis::CSharp::Syntax::AttributeTargetSpecifierSyntax ^ target);" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax WithTarget (Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax? target);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax WithTarget (Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax? target);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax WithTarget(class Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax target) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax.WithTarget(Microsoft.CodeAnalysis.CSharp.Syntax.AttributeTargetSpecifierSyntax)" />
       <MemberSignature Language="VB.NET" Value="Public Function WithTarget (target As AttributeTargetSpecifierSyntax) As AttributeListSyntax" />
@@ -419,6 +445,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.AttributeListSyntax</ReturnType>

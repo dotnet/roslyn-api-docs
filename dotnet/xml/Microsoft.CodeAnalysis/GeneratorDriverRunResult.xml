@@ -1,0 +1,96 @@
+<Type Name="GeneratorDriverRunResult" FullName="Microsoft.CodeAnalysis.GeneratorDriverRunResult">
+  <TypeSignature Language="C#" Value="public class GeneratorDriverRunResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GeneratorDriverRunResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.GeneratorDriverRunResult" />
+  <TypeSignature Language="VB.NET" Value="Public Class GeneratorDriverRunResult" />
+  <TypeSignature Language="F#" Value="type GeneratorDriverRunResult = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the results of running a generation pass over a set of <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" />s.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Diagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt; Diagnostics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt; Diagnostics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.GeneratorDriverRunResult.Diagnostics" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Diagnostics As ImmutableArray(Of Diagnostic)" />
+      <MemberSignature Language="F#" Value="member this.Diagnostics : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" Usage="Microsoft.CodeAnalysis.GeneratorDriverRunResult.Diagnostics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />s produced by all generators run during this generation pass.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is equivalent to the union of all <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.Diagnostics" /> in <see cref="P:Microsoft.CodeAnalysis.GeneratorDriverRunResult.Results" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedTrees">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxTree&gt; GeneratedTrees { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.SyntaxTree&gt; GeneratedTrees" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.GeneratorDriverRunResult.GeneratedTrees" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GeneratedTrees As ImmutableArray(Of SyntaxTree)" />
+      <MemberSignature Language="F#" Value="member this.GeneratedTrees : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxTree&gt;" Usage="Microsoft.CodeAnalysis.GeneratorDriverRunResult.GeneratedTrees" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.SyntaxTree&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The <see cref="T:Microsoft.CodeAnalysis.SyntaxTree" />s produced during this generation pass by parsing each <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" /> added by each generator.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This is equivalent to the union of all <see cref="P:Microsoft.CodeAnalysis.GeneratedSourceResult.SyntaxTree" />s in each <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.GeneratedSources" /> in each <see cref="P:Microsoft.CodeAnalysis.GeneratorDriverRunResult.Results" /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Results">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.GeneratorRunResult&gt; Results { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.GeneratorRunResult&gt; Results" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.GeneratorDriverRunResult.Results" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Results As ImmutableArray(Of GeneratorRunResult)" />
+      <MemberSignature Language="F#" Value="member this.Results : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.GeneratorRunResult&gt;" Usage="Microsoft.CodeAnalysis.GeneratorDriverRunResult.Results" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.GeneratorRunResult&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The individual result of each <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> that was run in this generator pass, one per generator.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

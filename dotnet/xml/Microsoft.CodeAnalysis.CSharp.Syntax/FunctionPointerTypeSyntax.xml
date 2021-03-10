@@ -7,6 +7,8 @@
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.Syntax.TypeSyntax</BaseTypeName>
@@ -14,7 +16,16 @@
   <Interfaces />
   <Docs>
     <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <para>This node is associated with the following syntax kinds:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.FunctionPointerType" />
+          </description>
+        </item>
+      </list>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Accept">
@@ -27,6 +38,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -41,24 +54,21 @@
       </Docs>
     </Member>
     <Member MemberName="Accept&lt;TResult&gt;">
-      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="C#" Value="public override TResult? Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Accept(Of TResult) (visitor As CSharpSyntaxVisitor(Of TResult)) As TResult" />
       <MemberSignature Language="F#" Value="override this.Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;'Result&gt; -&gt; 'Result" Usage="functionPointerTypeSyntax.Accept visitor" />
+      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet-3.7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
-        <Attributes>
-          <Attribute>
-            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
-            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
-          </Attribute>
-        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -69,6 +79,38 @@
       <Docs>
         <typeparam name="TResult">To be added.</typeparam>
         <param name="visitor">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameterListParameters">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax AddParameterListParameters (params Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterSyntax[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax AddParameterListParameters(class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterSyntax[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.AddParameterListParameters(Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterSyntax[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddParameterListParameters (ParamArray items As FunctionPointerParameterSyntax()) As FunctionPointerTypeSyntax" />
+      <MemberSignature Language="F#" Value="member this.AddParameterListParameters : Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterSyntax[] -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax" Usage="functionPointerTypeSyntax.AddParameterListParameters items" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet">
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="items">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -89,7 +131,7 @@
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[]">
+        <Parameter Name="items" Type="Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax[]" Index="0" FrameworkAlternate="roslyn-dotnet-3.7.0">
           <Attributes>
             <Attribute>
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
@@ -115,6 +157,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -126,21 +170,28 @@
       </Docs>
     </Member>
     <Member MemberName="CallingConvention">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxToken CallingConvention { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxToken CallingConvention" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax? CallingConvention { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax CallingConvention" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.CallingConvention" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallingConvention As SyntaxToken" />
-      <MemberSignature Language="F#" Value="member this.CallingConvention : Microsoft.CodeAnalysis.SyntaxToken" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.CallingConvention" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallingConvention As FunctionPointerCallingConventionSyntax" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      <MemberSignature Language="F#" Value="member this.CallingConvention : Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.CallingConvention" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxToken CallingConvention { get; }" FrameworkAlternate="roslyn-dotnet-3.7.0" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SyntaxToken CallingConvention" FrameworkAlternate="roslyn-dotnet-3.7.0" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallingConvention As SyntaxToken" FrameworkAlternate="roslyn-dotnet-3.7.0" />
+      <MemberSignature Language="F#" Value="member this.CallingConvention : Microsoft.CodeAnalysis.SyntaxToken" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.CallingConvention" FrameworkAlternate="roslyn-dotnet-3.7.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
+        <ReturnType FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0">Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax</ReturnType>
+        <ReturnType FrameworkAlternate="roslyn-dotnet-3.7.0">Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>SyntaxToken representing the optional calling convention.</summary>
+        <summary>Node representing the optional calling convention.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -155,6 +206,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -205,8 +258,29 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ParameterList">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax ParameterList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax ParameterList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.ParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterList As FunctionPointerParameterListSyntax" />
+      <MemberSignature Language="F#" Value="member this.ParameterList : Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.ParameterList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>List of the parameter types and return type of the function pointer.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Parameters">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt;? Parameters { get; }" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt; Parameters { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt; Parameters" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.Parameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parameters As SeparatedSyntaxList(Of ParameterSyntax)" />
@@ -226,7 +300,38 @@
       </Docs>
     </Member>
     <Member MemberName="Update">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax Update (Microsoft.CodeAnalysis.SyntaxToken delegateKeyword, Microsoft.CodeAnalysis.SyntaxToken asteriskToken, Microsoft.CodeAnalysis.SyntaxToken callingConvention, Microsoft.CodeAnalysis.SyntaxToken lessThanToken, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt;? parameters, Microsoft.CodeAnalysis.SyntaxToken greaterThanToken);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax Update (Microsoft.CodeAnalysis.SyntaxToken delegateKeyword, Microsoft.CodeAnalysis.SyntaxToken asteriskToken, Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax? callingConvention, Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax parameterList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxToken delegateKeyword, valuetype Microsoft.CodeAnalysis.SyntaxToken asteriskToken, class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax callingConvention, class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax parameterList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax,Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Update (delegateKeyword As SyntaxToken, asteriskToken As SyntaxToken, callingConvention As FunctionPointerCallingConventionSyntax, parameterList As FunctionPointerParameterListSyntax) As FunctionPointerTypeSyntax" />
+      <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax * Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax" Usage="functionPointerTypeSyntax.Update (delegateKeyword, asteriskToken, callingConvention, parameterList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateKeyword" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="asteriskToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="callingConvention" Type="Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="parameterList" Type="Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="delegateKeyword">To be added.</param>
+        <param name="asteriskToken">To be added.</param>
+        <param name="callingConvention">To be added.</param>
+        <param name="parameterList">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax Update (Microsoft.CodeAnalysis.SyntaxToken delegateKeyword, Microsoft.CodeAnalysis.SyntaxToken asteriskToken, Microsoft.CodeAnalysis.SyntaxToken callingConvention, Microsoft.CodeAnalysis.SyntaxToken lessThanToken, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt; parameters, Microsoft.CodeAnalysis.SyntaxToken greaterThanToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax Update(valuetype Microsoft.CodeAnalysis.SyntaxToken delegateKeyword, valuetype Microsoft.CodeAnalysis.SyntaxToken asteriskToken, valuetype Microsoft.CodeAnalysis.SyntaxToken callingConvention, valuetype Microsoft.CodeAnalysis.SyntaxToken lessThanToken, valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt; parameters, valuetype Microsoft.CodeAnalysis.SyntaxToken greaterThanToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.Update(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (delegateKeyword As SyntaxToken, asteriskToken As SyntaxToken, callingConvention As SyntaxToken, lessThanToken As SyntaxToken, parameters As SeparatedSyntaxList(Of ParameterSyntax), greaterThanToken As SyntaxToken) As FunctionPointerTypeSyntax" />
@@ -240,12 +345,12 @@
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="delegateKeyword" Type="Microsoft.CodeAnalysis.SyntaxToken" />
-        <Parameter Name="asteriskToken" Type="Microsoft.CodeAnalysis.SyntaxToken" />
-        <Parameter Name="callingConvention" Type="Microsoft.CodeAnalysis.SyntaxToken" />
-        <Parameter Name="lessThanToken" Type="Microsoft.CodeAnalysis.SyntaxToken" />
-        <Parameter Name="parameters" Type="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt;" />
-        <Parameter Name="greaterThanToken" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+        <Parameter Name="delegateKeyword" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="0" FrameworkAlternate="roslyn-dotnet-3.7.0" />
+        <Parameter Name="asteriskToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="1" FrameworkAlternate="roslyn-dotnet-3.7.0" />
+        <Parameter Name="callingConvention" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="2" FrameworkAlternate="roslyn-dotnet-3.7.0" />
+        <Parameter Name="lessThanToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="3" FrameworkAlternate="roslyn-dotnet-3.7.0" />
+        <Parameter Name="parameters" Type="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt;" Index="4" FrameworkAlternate="roslyn-dotnet-3.7.0" />
+        <Parameter Name="greaterThanToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="5" FrameworkAlternate="roslyn-dotnet-3.7.0" />
       </Parameters>
       <Docs>
         <param name="delegateKeyword">To be added.</param>
@@ -269,6 +374,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
@@ -278,6 +385,31 @@
       </Parameters>
       <Docs>
         <param name="asteriskToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCallingConvention">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax WithCallingConvention (Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax? callingConvention);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax WithCallingConvention(class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax callingConvention) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.WithCallingConvention(Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithCallingConvention (callingConvention As FunctionPointerCallingConventionSyntax) As FunctionPointerTypeSyntax" />
+      <MemberSignature Language="F#" Value="member this.WithCallingConvention : Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax" Usage="functionPointerTypeSyntax.WithCallingConvention callingConvention" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callingConvention" Type="Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerCallingConventionSyntax" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="callingConvention">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -298,7 +430,7 @@
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="callingConvention" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+        <Parameter Name="callingConvention" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="0" FrameworkAlternate="roslyn-dotnet-3.7.0" />
       </Parameters>
       <Docs>
         <param name="callingConvention">To be added.</param>
@@ -317,6 +449,8 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
@@ -346,7 +480,7 @@
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="greaterThanToken" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+        <Parameter Name="greaterThanToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="0" FrameworkAlternate="roslyn-dotnet-3.7.0" />
       </Parameters>
       <Docs>
         <param name="greaterThanToken">To be added.</param>
@@ -370,7 +504,7 @@
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="lessThanToken" Type="Microsoft.CodeAnalysis.SyntaxToken" />
+        <Parameter Name="lessThanToken" Type="Microsoft.CodeAnalysis.SyntaxToken" Index="0" FrameworkAlternate="roslyn-dotnet-3.7.0" />
       </Parameters>
       <Docs>
         <param name="lessThanToken">To be added.</param>
@@ -379,8 +513,33 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="WithParameterList">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax WithParameterList (Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax parameterList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax WithParameterList(class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax parameterList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.WithParameterList(Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithParameterList (parameterList As FunctionPointerParameterListSyntax) As FunctionPointerTypeSyntax" />
+      <MemberSignature Language="F#" Value="member this.WithParameterList : Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax" Usage="functionPointerTypeSyntax.WithParameterList parameterList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterList" Type="Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerParameterListSyntax" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="parameterList">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="WithParameters">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax WithParameters (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt;? parameters);" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax WithParameters (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt; parameters);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax WithParameters(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt; parameters) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax.WithParameters(Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithParameters (parameters As SeparatedSyntaxList(Of ParameterSyntax)) As FunctionPointerTypeSyntax" />
@@ -394,7 +553,7 @@
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.FunctionPointerTypeSyntax</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="parameters" Type="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt;" />
+        <Parameter Name="parameters" Type="Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.ParameterSyntax&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-3.7.0" />
       </Parameters>
       <Docs>
         <param name="parameters">To be added.</param>

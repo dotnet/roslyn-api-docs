@@ -14,6 +14,8 @@
     <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax</BaseTypeName>
@@ -21,7 +23,16 @@
   <Interfaces />
   <Docs>
     <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+      <para>This node is associated with the following syntax kinds:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SwitchExpression" />
+          </description>
+        </item>
+      </list>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Accept">
@@ -41,6 +52,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -55,11 +68,12 @@
       </Docs>
     </Member>
     <Member MemberName="Accept&lt;TResult&gt;">
-      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" />
+      <MemberSignature Language="C#" Value="public override TResult? Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResult Accept&lt;TResult&gt;(class Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1&lt;!!TResult&gt; visitor) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax.Accept``1(Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Accept(Of TResult) (visitor As CSharpSyntaxVisitor(Of TResult)) As TResult" />
       <MemberSignature Language="F#" Value="override this.Accept : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;'Result&gt; -&gt; 'Result" Usage="switchExpressionSyntax.Accept visitor" />
+      <MemberSignature Language="C#" Value="public override TResult Accept&lt;TResult&gt; (Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor&lt;TResult&gt; visitor);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -71,15 +85,11 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TResult</ReturnType>
-        <Attributes>
-          <Attribute FrameworkAlternate="roslyn-dotnet">
-            <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MaybeNull]</AttributeName>
-            <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MaybeNull&gt;]</AttributeName>
-          </Attribute>
-        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TResult" />
@@ -112,6 +122,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax</ReturnType>
@@ -134,12 +146,11 @@
       </Docs>
     </Member>
     <Member MemberName="Arms">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt;? Arms { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; Arms { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; Arms" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax.Arms" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Arms As SeparatedSyntaxList(Of SwitchExpressionArmSyntax)" />
       <MemberSignature Language="F#" Value="member this.Arms : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt;" Usage="Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax.Arms" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; Arms { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -151,6 +162,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt;</ReturnType>
@@ -178,6 +191,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -205,6 +220,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax</ReturnType>
@@ -232,6 +249,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -259,6 +278,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxToken</ReturnType>
@@ -270,12 +291,11 @@
       </Docs>
     </Member>
     <Member MemberName="Update">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax Update (Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax governingExpression, Microsoft.CodeAnalysis.SyntaxToken switchKeyword, Microsoft.CodeAnalysis.SyntaxToken openBraceToken, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt;? arms, Microsoft.CodeAnalysis.SyntaxToken closeBraceToken);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax Update (Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax governingExpression, Microsoft.CodeAnalysis.SyntaxToken switchKeyword, Microsoft.CodeAnalysis.SyntaxToken openBraceToken, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; arms, Microsoft.CodeAnalysis.SyntaxToken closeBraceToken);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax Update(class Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax governingExpression, valuetype Microsoft.CodeAnalysis.SyntaxToken switchKeyword, valuetype Microsoft.CodeAnalysis.SyntaxToken openBraceToken, valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; arms, valuetype Microsoft.CodeAnalysis.SyntaxToken closeBraceToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax.Update(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax},Microsoft.CodeAnalysis.SyntaxToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (governingExpression As ExpressionSyntax, switchKeyword As SyntaxToken, openBraceToken As SyntaxToken, arms As SeparatedSyntaxList(Of SwitchExpressionArmSyntax), closeBraceToken As SyntaxToken) As SwitchExpressionSyntax" />
       <MemberSignature Language="F#" Value="member this.Update : Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax * Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; * Microsoft.CodeAnalysis.SyntaxToken -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax" Usage="switchExpressionSyntax.Update (governingExpression, switchKeyword, openBraceToken, arms, closeBraceToken)" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax Update (Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax governingExpression, Microsoft.CodeAnalysis.SyntaxToken switchKeyword, Microsoft.CodeAnalysis.SyntaxToken openBraceToken, Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; arms, Microsoft.CodeAnalysis.SyntaxToken closeBraceToken);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -287,6 +307,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax</ReturnType>
@@ -310,12 +332,11 @@
       </Docs>
     </Member>
     <Member MemberName="WithArms">
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax WithArms (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt;? arms);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax WithArms (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; arms);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax WithArms(valuetype Microsoft.CodeAnalysis.SeparatedSyntaxList`1&lt;class Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; arms) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax.WithArms(Microsoft.CodeAnalysis.SeparatedSyntaxList{Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax})" />
       <MemberSignature Language="VB.NET" Value="Public Function WithArms (arms As SeparatedSyntaxList(Of SwitchExpressionArmSyntax)) As SwitchExpressionSyntax" />
       <MemberSignature Language="F#" Value="member this.WithArms : Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; -&gt; Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax" Usage="switchExpressionSyntax.WithArms arms" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax WithArms (Microsoft.CodeAnalysis.SeparatedSyntaxList&lt;Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionArmSyntax&gt; arms);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
@@ -327,6 +348,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax</ReturnType>
@@ -358,6 +381,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax</ReturnType>
@@ -389,6 +414,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax</ReturnType>
@@ -420,6 +447,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax</ReturnType>
@@ -451,6 +480,8 @@
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>3.6.0.0</AssemblyVersion>
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CSharp.Syntax.SwitchExpressionSyntax</ReturnType>
