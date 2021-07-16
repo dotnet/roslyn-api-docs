@@ -1,10 +1,14 @@
 <Type Name="IPersistentStorage" FullName="Microsoft.CodeAnalysis.Host.IPersistentStorage">
   <TypeSignature Language="C++ CLI" Value="public interface class IPersistentStorage : IDisposable" />
-  <TypeSignature Language="C#" Value="public interface IPersistentStorage : IDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPersistentStorage implements class System.IDisposable" />
+  <TypeSignature Language="C#" Value="public interface IPersistentStorage : IAsyncDisposable, IDisposable" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPersistentStorage implements class System.IAsyncDisposable, class System.IDisposable" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Host.IPersistentStorage" />
-  <TypeSignature Language="VB.NET" Value="Public Interface IPersistentStorage&#xA;Implements IDisposable" />
-  <TypeSignature Language="F#" Value="type IPersistentStorage = interface&#xA;    interface IDisposable" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPersistentStorage&#xA;Implements IAsyncDisposable, IDisposable" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0" />
+  <TypeSignature Language="F#" Value="type IPersistentStorage = interface&#xA;    interface IDisposable&#xA;    interface IAsyncDisposable" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0" />
+  <TypeSignature Language="C#" Value="public interface IPersistentStorage : IDisposable" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPersistentStorage implements class System.IDisposable" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPersistentStorage&#xA;Implements IDisposable" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+  <TypeSignature Language="F#" Value="type IPersistentStorage = interface&#xA;    interface IDisposable" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -18,8 +22,12 @@
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
     <AssemblyVersion>3.8.0.0</AssemblyVersion>
     <AssemblyVersion>3.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
+    <Interface FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0">
+      <InterfaceName>System.IAsyncDisposable</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>System.IDisposable</InterfaceName>
     </Interface>
@@ -30,11 +38,12 @@
   </Docs>
   <Members>
     <Member MemberName="ReadStreamAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; ReadStreamAsync (string name, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream?&gt; ReadStreamAsync (string name, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.IO.Stream&gt; ReadStreamAsync(string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.IPersistentStorage.ReadStreamAsync(System.String,System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function ReadStreamAsync (name As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Stream)" />
       <MemberSignature Language="F#" Value="abstract member ReadStreamAsync : string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.IO.Stream&gt;" Usage="iPersistentStorage.ReadStreamAsync (name, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; ReadStreamAsync (string name, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -49,6 +58,7 @@
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</ReturnType>
@@ -66,11 +76,12 @@
       </Docs>
     </Member>
     <Member MemberName="ReadStreamAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; ReadStreamAsync (Microsoft.CodeAnalysis.Document document, string name, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream?&gt; ReadStreamAsync (Microsoft.CodeAnalysis.Document document, string name, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.IO.Stream&gt; ReadStreamAsync(class Microsoft.CodeAnalysis.Document document, string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.IPersistentStorage.ReadStreamAsync(Microsoft.CodeAnalysis.Document,System.String,System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function ReadStreamAsync (document As Document, name As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Stream)" />
       <MemberSignature Language="F#" Value="abstract member ReadStreamAsync : Microsoft.CodeAnalysis.Document * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.IO.Stream&gt;" Usage="iPersistentStorage.ReadStreamAsync (document, name, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; ReadStreamAsync (Microsoft.CodeAnalysis.Document document, string name, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -85,6 +96,7 @@
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</ReturnType>
@@ -104,11 +116,12 @@
       </Docs>
     </Member>
     <Member MemberName="ReadStreamAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; ReadStreamAsync (Microsoft.CodeAnalysis.Project project, string name, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream?&gt; ReadStreamAsync (Microsoft.CodeAnalysis.Project project, string name, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.IO.Stream&gt; ReadStreamAsync(class Microsoft.CodeAnalysis.Project project, string name, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.IPersistentStorage.ReadStreamAsync(Microsoft.CodeAnalysis.Project,System.String,System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Function ReadStreamAsync (project As Project, name As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Stream)" />
       <MemberSignature Language="F#" Value="abstract member ReadStreamAsync : Microsoft.CodeAnalysis.Project * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.IO.Stream&gt;" Usage="iPersistentStorage.ReadStreamAsync (project, name, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.IO.Stream&gt; ReadStreamAsync (Microsoft.CodeAnalysis.Project project, string name, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -123,6 +136,7 @@
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</ReturnType>
@@ -161,6 +175,7 @@
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
@@ -199,6 +214,7 @@
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
@@ -239,6 +255,7 @@
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.10.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>

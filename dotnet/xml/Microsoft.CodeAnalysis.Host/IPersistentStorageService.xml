@@ -18,6 +18,7 @@
     <AssemblyVersion>3.7.0.0</AssemblyVersion>
     <AssemblyVersion>3.8.0.0</AssemblyVersion>
     <AssemblyVersion>3.9.0.0</AssemblyVersion>
+    <AssemblyVersion>3.10.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -52,7 +53,14 @@
         <AssemblyVersion>3.7.0.0</AssemblyVersion>
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.10.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0">
+          <AttributeName Language="C#">[System.Obsolete("Use GetStorageAsync instead", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use GetStorageAsync instead", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Host.IPersistentStorage</ReturnType>
       </ReturnValue>
@@ -61,6 +69,32 @@
       </Parameters>
       <Docs>
         <param name="solution">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStorageAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.ValueTask&lt;Microsoft.CodeAnalysis.Host.IPersistentStorage&gt; GetStorageAsync (Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Threading.Tasks.ValueTask`1&lt;class Microsoft.CodeAnalysis.Host.IPersistentStorage&gt; GetStorageAsync(class Microsoft.CodeAnalysis.Solution solution, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.IPersistentStorageService.GetStorageAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetStorageAsync (solution As Solution, Optional cancellationToken As CancellationToken = Nothing) As ValueTask(Of IPersistentStorage)" />
+      <MemberSignature Language="F#" Value="abstract member GetStorageAsync : Microsoft.CodeAnalysis.Solution * System.Threading.CancellationToken -&gt; System.Threading.Tasks.ValueTask&lt;Microsoft.CodeAnalysis.Host.IPersistentStorage&gt;" Usage="iPersistentStorageService.GetStorageAsync (solution, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.10.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;Microsoft.CodeAnalysis.Host.IPersistentStorage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0" />
+      </Parameters>
+      <Docs>
+        <param name="solution">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
