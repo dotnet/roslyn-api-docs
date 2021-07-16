@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="roslyn-dotnet">
   <Assemblies>
-    <Assembly Name="Microsoft.CodeAnalysis.CSharp" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis.VisualBasic" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis.VisualBasic.Workspaces" Version="3.9.0.0" />
-    <Assembly Name="Microsoft.CodeAnalysis.Workspaces" Version="3.9.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.CSharp" Version="3.10.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.10.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis" Version="3.10.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.VisualBasic" Version="3.10.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.VisualBasic.Workspaces" Version="3.10.0.0" />
+    <Assembly Name="Microsoft.CodeAnalysis.Workspaces" Version="3.10.0.0" />
   </Assemblies>
   <Namespace Name="Microsoft.CodeAnalysis">
     <Type Name="Microsoft.CodeAnalysis.Accessibility" Id="T:Microsoft.CodeAnalysis.Accessibility">
@@ -309,6 +309,10 @@
       <Member Id="P:Microsoft.CodeAnalysis.CommandLineParser.RegularFileExtension" />
       <Member Id="P:Microsoft.CodeAnalysis.CommandLineParser.ScriptFileExtension" />
     </Type>
+    <Type Name="Microsoft.CodeAnalysis.CommandLineProject" Id="T:Microsoft.CodeAnalysis.CommandLineProject">
+      <Member Id="M:Microsoft.CodeAnalysis.CommandLineProject.CreateProjectInfo(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,Microsoft.CodeAnalysis.Workspace)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CommandLineProject.CreateProjectInfo(System.String,System.String,System.String,System.String,Microsoft.CodeAnalysis.Workspace)" />
+    </Type>
     <Type Name="Microsoft.CodeAnalysis.CommandLineReference" Id="T:Microsoft.CodeAnalysis.CommandLineReference">
       <Member Id="M:Microsoft.CodeAnalysis.CommandLineReference.#ctor(System.String,Microsoft.CodeAnalysis.MetadataReferenceProperties)" />
       <Member Id="M:Microsoft.CodeAnalysis.CommandLineReference.Equals(Microsoft.CodeAnalysis.CommandLineReference)" />
@@ -399,6 +403,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.GetSymbolsWithName(System.String,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.GetTypeByMetadataName(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.GetUnreferencedAssemblyIdentities(Microsoft.CodeAnalysis.Diagnostic)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Compilation.GetUsedAssemblyReferences(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.HasImplicitConversion(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.IsSymbolAccessibleWithin(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol)" />
       <Member Id="M:Microsoft.CodeAnalysis.Compilation.RemoveAllReferences" />
@@ -921,6 +926,7 @@
       <Member Id="P:Microsoft.CodeAnalysis.IFieldSymbol.CustomModifiers" />
       <Member Id="P:Microsoft.CodeAnalysis.IFieldSymbol.HasConstantValue" />
       <Member Id="P:Microsoft.CodeAnalysis.IFieldSymbol.IsConst" />
+      <Member Id="P:Microsoft.CodeAnalysis.IFieldSymbol.IsExplicitlyNamedTupleElement" />
       <Member Id="P:Microsoft.CodeAnalysis.IFieldSymbol.IsFixedSizeBuffer" />
       <Member Id="P:Microsoft.CodeAnalysis.IFieldSymbol.IsReadOnly" />
       <Member Id="P:Microsoft.CodeAnalysis.IFieldSymbol.IsVolatile" />
@@ -965,8 +971,10 @@
       <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.IsExtensionMethod" />
       <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.IsGenericMethod" />
       <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.IsInitOnly" />
+      <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.IsPartialDefinition" />
       <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.IsReadOnly" />
       <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.IsVararg" />
+      <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.MethodImplementationFlags" />
       <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.MethodKind" />
       <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.OriginalDefinition" />
       <Member Id="P:Microsoft.CodeAnalysis.IMethodSymbol.OverriddenMethod" />
@@ -2530,6 +2538,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.IsEquivalentTo(Microsoft.CodeAnalysis.SyntaxNode)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.IsEquivalentTo(Microsoft.CodeAnalysis.SyntaxNode,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.IsEquivalentToCore(Microsoft.CodeAnalysis.SyntaxNode,System.Boolean)" />
+      <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.IsIncrementallyIdenticalTo(Microsoft.CodeAnalysis.SyntaxNode)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.IsPartOfStructuredTrivia" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.NormalizeWhitespaceCore(System.String,System.String,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNode.RemoveNodesCore(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},Microsoft.CodeAnalysis.SyntaxRemoveOptions)" />
@@ -2619,6 +2628,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNodeOrToken.HasAnnotations(System.Collections.Generic.IEnumerable{System.String})" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNodeOrToken.HasAnnotations(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNodeOrToken.IsEquivalentTo(Microsoft.CodeAnalysis.SyntaxNodeOrToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.SyntaxNodeOrToken.IsIncrementallyIdenticalTo(Microsoft.CodeAnalysis.SyntaxNodeOrToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNodeOrToken.op_Equality(Microsoft.CodeAnalysis.SyntaxNodeOrToken,Microsoft.CodeAnalysis.SyntaxNodeOrToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNodeOrToken.op_Explicit(Microsoft.CodeAnalysis.SyntaxNodeOrToken)~Microsoft.CodeAnalysis.SyntaxNode" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxNodeOrToken.op_Explicit(Microsoft.CodeAnalysis.SyntaxNodeOrToken)~Microsoft.CodeAnalysis.SyntaxToken" />
@@ -2729,6 +2739,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxToken.HasAnnotations(System.String)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxToken.HasAnnotations(System.String[])" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxToken.IsEquivalentTo(Microsoft.CodeAnalysis.SyntaxToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.SyntaxToken.IsIncrementallyIdenticalTo(Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxToken.IsPartOfStructuredTrivia" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxToken.op_Equality(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.SyntaxToken.op_Inequality(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)" />
@@ -3145,6 +3156,7 @@
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownMemberNames.ObjectToString" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownMemberNames.OnCompleted" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownMemberNames.OnesComplementOperatorName" />
+      <Member Id="F:Microsoft.CodeAnalysis.WellKnownMemberNames.PrintMembersMethodName" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownMemberNames.RightShiftOperatorName" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownMemberNames.SliceMethodName" />
       <Member Id="F:Microsoft.CodeAnalysis.WellKnownMemberNames.StaticConstructorName" />
@@ -3757,6 +3769,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.GetSemanticModel(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.GetSymbolsWithName(System.Func{System.String,System.Boolean},Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.GetSymbolsWithName(System.String,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.GetUsedAssemblyReferences(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.RemoveAllReferences" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.RemoveAllSyntaxTrees" />
       <Member Id="M:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.RemoveReferences(Microsoft.CodeAnalysis.MetadataReference[])" />
@@ -11051,6 +11064,7 @@
     </Type>
     <Type Name="Microsoft.CodeAnalysis.Host.IPersistentStorageService" Id="T:Microsoft.CodeAnalysis.Host.IPersistentStorageService">
       <Member Id="M:Microsoft.CodeAnalysis.Host.IPersistentStorageService.GetStorage(Microsoft.CodeAnalysis.Solution)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Host.IPersistentStorageService.GetStorageAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
     </Type>
     <Type Name="Microsoft.CodeAnalysis.Host.ITemporaryStorageService" Id="T:Microsoft.CodeAnalysis.Host.ITemporaryStorageService">
       <Member Id="M:Microsoft.CodeAnalysis.Host.ITemporaryStorageService.CreateTemporaryStreamStorage(System.Threading.CancellationToken)" />
@@ -12190,6 +12204,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.Text.TextChangeRange.GetHashCode" />
       <Member Id="M:Microsoft.CodeAnalysis.Text.TextChangeRange.op_Equality(Microsoft.CodeAnalysis.Text.TextChangeRange,Microsoft.CodeAnalysis.Text.TextChangeRange)" />
       <Member Id="M:Microsoft.CodeAnalysis.Text.TextChangeRange.op_Inequality(Microsoft.CodeAnalysis.Text.TextChangeRange,Microsoft.CodeAnalysis.Text.TextChangeRange)" />
+      <Member Id="M:Microsoft.CodeAnalysis.Text.TextChangeRange.ToString" />
       <Member Id="P:Microsoft.CodeAnalysis.Text.TextChangeRange.NewLength" />
       <Member Id="P:Microsoft.CodeAnalysis.Text.TextChangeRange.NoChanges" />
       <Member Id="P:Microsoft.CodeAnalysis.Text.TextChangeRange.Span" />
@@ -14362,6 +14377,7 @@
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.GetSemanticModel(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.GetSymbolsWithName(System.Func{System.String,System.Boolean},Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.GetSymbolsWithName(System.String,Microsoft.CodeAnalysis.SymbolFilter,System.Threading.CancellationToken)" />
+      <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.GetUsedAssemblyReferences(System.Threading.CancellationToken)" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.RemoveAllReferences" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.RemoveAllSyntaxTrees" />
       <Member Id="M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation.RemoveReferences(Microsoft.CodeAnalysis.MetadataReference[])" />
