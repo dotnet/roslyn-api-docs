@@ -19,6 +19,7 @@
     <AssemblyVersion>3.8.0.0</AssemblyVersion>
     <AssemblyVersion>3.9.0.0</AssemblyVersion>
     <AssemblyVersion>3.10.0.0</AssemblyVersion>
+    <AssemblyVersion>3.11.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,6 +45,7 @@
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;</ReturnType>
@@ -57,13 +59,13 @@
       </Docs>
     </Member>
     <Member MemberName="Create">
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SolutionInfo Create (Microsoft.CodeAnalysis.SolutionId id, Microsoft.CodeAnalysis.VersionStamp version, string? filePath, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectInfo&gt;? projects);" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SolutionInfo Create (Microsoft.CodeAnalysis.SolutionId id, Microsoft.CodeAnalysis.VersionStamp version, string filePath = default, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectInfo&gt; projects = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.SolutionInfo Create(class Microsoft.CodeAnalysis.SolutionId id, valuetype Microsoft.CodeAnalysis.VersionStamp version, string filePath, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CodeAnalysis.ProjectInfo&gt; projects) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SolutionInfo.Create(Microsoft.CodeAnalysis.SolutionId,Microsoft.CodeAnalysis.VersionStamp,System.String,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.ProjectInfo})" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (id As SolutionId, version As VersionStamp, filePath As String, projects As IEnumerable(Of ProjectInfo)) As SolutionInfo" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
-      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.SolutionId * Microsoft.CodeAnalysis.VersionStamp * string * seq&lt;Microsoft.CodeAnalysis.ProjectInfo&gt; -&gt; Microsoft.CodeAnalysis.SolutionInfo" Usage="Microsoft.CodeAnalysis.SolutionInfo.Create (id, version, filePath, projects)" />
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SolutionInfo Create (Microsoft.CodeAnalysis.SolutionId id, Microsoft.CodeAnalysis.VersionStamp version, string filePath = default, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectInfo&gt; projects = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (id As SolutionId, version As VersionStamp, Optional filePath As String = Nothing, Optional projects As IEnumerable(Of ProjectInfo) = Nothing) As SolutionInfo" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
+      <MemberSignature Language="F#" Value="static member Create : Microsoft.CodeAnalysis.SolutionId * Microsoft.CodeAnalysis.VersionStamp * string * seq&lt;Microsoft.CodeAnalysis.ProjectInfo&gt; -&gt; Microsoft.CodeAnalysis.SolutionInfo" Usage="Microsoft.CodeAnalysis.SolutionInfo.Create (id, version, filePath, projects)" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SolutionInfo Create (Microsoft.CodeAnalysis.SolutionId id, Microsoft.CodeAnalysis.VersionStamp version, string? filePath, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectInfo&gt;? projects);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (id As SolutionId, version As VersionStamp, filePath As String, projects As IEnumerable(Of ProjectInfo)) As SolutionInfo" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.SolutionInfo Create (Microsoft.CodeAnalysis.SolutionId id, Microsoft.CodeAnalysis.VersionStamp version, string? filePath = default, System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectInfo&gt;? projects = default);" FrameworkAlternate="roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -80,9 +82,10 @@
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0">
+        <Attribute FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -121,16 +124,17 @@
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SolutionInfo</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="id" Type="Microsoft.CodeAnalysis.SolutionId" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
-        <Parameter Name="version" Type="Microsoft.CodeAnalysis.VersionStamp" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
-        <Parameter Name="filePath" Type="System.String" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
-        <Parameter Name="projects" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectInfo&gt;" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
-        <Parameter Name="analyzerReferences" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+        <Parameter Name="id" Type="Microsoft.CodeAnalysis.SolutionId" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0" />
+        <Parameter Name="version" Type="Microsoft.CodeAnalysis.VersionStamp" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0" />
+        <Parameter Name="filePath" Type="System.String" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0" />
+        <Parameter Name="projects" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ProjectInfo&gt;" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0" />
+        <Parameter Name="analyzerReferences" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerReference&gt;" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0" />
       </Parameters>
       <Docs>
         <param name="id">To be added.</param>
@@ -147,12 +151,12 @@
     </Member>
     <Member MemberName="FilePath">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FilePath { System::String ^ get(); };" />
-      <MemberSignature Language="C#" Value="public string? FilePath { get; }" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
+      <MemberSignature Language="C#" Value="public string FilePath { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
       <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SolutionInfo.FilePath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FilePath As String" />
       <MemberSignature Language="F#" Value="member this.FilePath : string" Usage="Microsoft.CodeAnalysis.SolutionInfo.FilePath" />
-      <MemberSignature Language="C#" Value="public string FilePath { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1" />
+      <MemberSignature Language="C#" Value="public string? FilePath { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -168,6 +172,7 @@
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -202,6 +207,7 @@
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SolutionId</ReturnType>
@@ -236,6 +242,7 @@
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Microsoft.CodeAnalysis.ProjectInfo&gt;</ReturnType>
@@ -270,6 +277,7 @@
         <AssemblyVersion>3.8.0.0</AssemblyVersion>
         <AssemblyVersion>3.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.VersionStamp</ReturnType>
