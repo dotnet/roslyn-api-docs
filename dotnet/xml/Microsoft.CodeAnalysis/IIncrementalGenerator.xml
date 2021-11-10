@@ -1,0 +1,50 @@
+<Type Name="IIncrementalGenerator" FullName="Microsoft.CodeAnalysis.IIncrementalGenerator">
+  <TypeSignature Language="C#" Value="public interface IIncrementalGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IIncrementalGenerator" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.IIncrementalGenerator" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IIncrementalGenerator" />
+  <TypeSignature Language="F#" Value="type IIncrementalGenerator = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The base interface required to implement an incremental generator
+            </summary>
+    <remarks>
+            The lifetime of a generator is controlled by the compiler.
+            State should not be stored directly on the generator, as there
+            is no guarantee that the same instance will be used on a 
+            subsequent generation pass.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(valuetype Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IIncrementalGenerator.Initialize(Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize (context As IncrementalGeneratorInitializationContext)" />
+      <MemberSignature Language="F#" Value="abstract member Initialize : Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext -&gt; unit" Usage="iIncrementalGenerator.Initialize context" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">The <see cref="T:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext" /> to register callbacks on</param>
+        <summary>
+            Called to initialize the generator and register generation steps via callbacks
+            on the <paramref name="context" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
