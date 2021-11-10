@@ -1,0 +1,113 @@
+<Type Name="IncrementalGeneratorOutputKind" FullName="Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind">
+  <TypeSignature Language="C#" Value="public enum IncrementalGeneratorOutputKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IncrementalGeneratorOutputKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind" />
+  <TypeSignature Language="VB.NET" Value="Public Enum IncrementalGeneratorOutputKind" />
+  <TypeSignature Language="F#" Value="type IncrementalGeneratorOutputKind = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Flags]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Flags&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents the various output kinds of an <see cref="T:Microsoft.CodeAnalysis.IIncrementalGenerator" />. 
+            </summary>
+    <remarks>
+            Can be passed as a bit field when creating a <see cref="T:Microsoft.CodeAnalysis.GeneratorDriver" /> to selectively disable outputs.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Implementation">
+      <MemberSignature Language="C#" Value="Implementation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind Implementation = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.Implementation" />
+      <MemberSignature Language="VB.NET" Value="Implementation" />
+      <MemberSignature Language="F#" Value="Implementation = 4" Usage="Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.Implementation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            An Implementation only source output, registered via <see cref="M:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.RegisterImplementationSourceOutput``1(Microsoft.CodeAnalysis.IncrementalValueProvider{``0},System.Action{Microsoft.CodeAnalysis.SourceProductionContext,``0})" />
+            or <see cref="M:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.RegisterImplementationSourceOutput``1(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},System.Action{Microsoft.CodeAnalysis.SourceProductionContext,``0})" /></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Represents no output kinds. Can be used when creating a driver to indicate that no outputs should be disabled.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PostInit">
+      <MemberSignature Language="C#" Value="PostInit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind PostInit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.PostInit" />
+      <MemberSignature Language="VB.NET" Value="PostInit" />
+      <MemberSignature Language="F#" Value="PostInit = 2" Usage="Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.PostInit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            A post-initialization output, which will be visible to later phases, registered via <see cref="M:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.RegisterPostInitializationOutput(System.Action{Microsoft.CodeAnalysis.IncrementalGeneratorPostInitializationContext})" /></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="Source" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind Source = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.Source" />
+      <MemberSignature Language="VB.NET" Value="Source" />
+      <MemberSignature Language="F#" Value="Source = 1" Usage="Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.Source" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            A regular source output, registered via <see cref="M:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.RegisterSourceOutput``1(Microsoft.CodeAnalysis.IncrementalValueProvider{``0},System.Action{Microsoft.CodeAnalysis.SourceProductionContext,``0})" /> 
+            or <see cref="M:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.RegisterSourceOutput``1(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},System.Action{Microsoft.CodeAnalysis.SourceProductionContext,``0})" /></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

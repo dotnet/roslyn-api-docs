@@ -1,0 +1,55 @@
+<Type Name="SyntaxValueProvider" FullName="Microsoft.CodeAnalysis.SyntaxValueProvider">
+  <TypeSignature Language="C#" Value="public struct SyntaxValueProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SyntaxValueProvider extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SyntaxValueProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Structure SyntaxValueProvider" />
+  <TypeSignature Language="F#" Value="type SyntaxValueProvider = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Allows a user to create Syntax based input nodes for incremental generation
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateSyntaxProvider&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;T&gt; CreateSyntaxProvider&lt;T&gt; (Func&lt;Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,bool&gt; predicate, Func&lt;Microsoft.CodeAnalysis.GeneratorSyntaxContext,System.Threading.CancellationToken,T&gt; transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!T&gt; CreateSyntaxProvider&lt;T&gt;(class System.Func`3&lt;class Microsoft.CodeAnalysis.SyntaxNode, valuetype System.Threading.CancellationToken, bool&gt; predicate, class System.Func`3&lt;valuetype Microsoft.CodeAnalysis.GeneratorSyntaxContext, valuetype System.Threading.CancellationToken, !!T&gt; transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider``1(System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,System.Boolean},System.Func{Microsoft.CodeAnalysis.GeneratorSyntaxContext,System.Threading.CancellationToken,``0})" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateSyntaxProvider(Of T) (predicate As Func(Of SyntaxNode, CancellationToken, Boolean), transform As Func(Of GeneratorSyntaxContext, CancellationToken, T)) As IncrementalValuesProvider(Of T)" />
+      <MemberSignature Language="F#" Value="member this.CreateSyntaxProvider : Func&lt;Microsoft.CodeAnalysis.SyntaxNode, System.Threading.CancellationToken, bool&gt; * Func&lt;Microsoft.CodeAnalysis.GeneratorSyntaxContext, System.Threading.CancellationToken, 'T&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'T&gt;" Usage="syntaxValueProvider.CreateSyntaxProvider (predicate, transform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.Func&lt;Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,System.Boolean&gt;" />
+        <Parameter Name="transform" Type="System.Func&lt;Microsoft.CodeAnalysis.GeneratorSyntaxContext,System.Threading.CancellationToken,T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the value the syntax node is transformed into</typeparam>
+        <param name="predicate">A function that determines if the given <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> should be transformed</param>
+        <param name="transform">A function that performs the transform, when <paramref name="predicate" />returns <c>true</c> for a given node</param>
+        <summary>
+            Creates an <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that can provide a transform over <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" />s
+            </summary>
+        <returns>An <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides the results of the transformation</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

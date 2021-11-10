@@ -1,0 +1,407 @@
+<Type Name="IncrementalValueProviderExtensions" FullName="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions">
+  <TypeSignature Language="C#" Value="public static class IncrementalValueProviderExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit IncrementalValueProviderExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module IncrementalValueProviderExtensions" />
+  <TypeSignature Language="F#" Value="type IncrementalValueProviderExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Collect&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValueProvider&lt;System.Collections.Immutable.ImmutableArray&lt;TSource&gt;&gt; Collect&lt;TSource&gt; (this Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TSource&gt;&gt; Collect&lt;TSource&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TSource&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Collect``1(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Collect(Of TSource) (source As IncrementalValuesProvider(Of TSource)) As IncrementalValueProvider(Of ImmutableArray(Of TSource))" />
+      <MemberSignature Language="F#" Value="static member Collect : Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Source&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValueProvider&lt;System.Collections.Immutable.ImmutableArray&lt;'Source&gt;&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Collect source" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;System.Collections.Immutable.ImmutableArray&lt;TSource&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine&lt;TLeft,TRight&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValueProvider&lt;(TLeft,TRight)&gt; Combine&lt;TLeft,TRight&gt; (this Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TLeft&gt; provider1, Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TRight&gt; provider2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;valuetype System.ValueTuple`2&lt;!!TLeft, !!TRight&gt;&gt; Combine&lt;TLeft, TRight&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;!!TLeft&gt; provider1, valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;!!TRight&gt; provider2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Combine``2(Microsoft.CodeAnalysis.IncrementalValueProvider{``0},Microsoft.CodeAnalysis.IncrementalValueProvider{``1})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Combine(Of TLeft, TRight) (provider1 As IncrementalValueProvider(Of TLeft), provider2 As IncrementalValueProvider(Of TRight)) As IncrementalValueProvider(Of ValueTuple(Of TLeft, TRight))" />
+      <MemberSignature Language="F#" Value="static member Combine : Microsoft.CodeAnalysis.IncrementalValueProvider&lt;'Left&gt; * Microsoft.CodeAnalysis.IncrementalValueProvider&lt;'Right&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValueProvider&lt;ValueTuple&lt;'Left, 'Right&gt;&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Combine (provider1, provider2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;System.ValueTuple&lt;TLeft,TRight&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Left", "Right" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Left", "Right" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TLeft" />
+        <TypeParameter Name="TRight" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="provider1" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TLeft&gt;" RefType="this" />
+        <Parameter Name="provider2" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TRight&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TLeft">To be added.</typeparam>
+        <typeparam name="TRight">To be added.</typeparam>
+        <param name="provider1">To be added.</param>
+        <param name="provider2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine&lt;TLeft,TRight&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;(TLeft,TRight)&gt; Combine&lt;TLeft,TRight&gt; (this Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TLeft&gt; provider1, Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TRight&gt; provider2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;valuetype System.ValueTuple`2&lt;!!TLeft, !!TRight&gt;&gt; Combine&lt;TLeft, TRight&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TLeft&gt; provider1, valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;!!TRight&gt; provider2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Combine``2(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},Microsoft.CodeAnalysis.IncrementalValueProvider{``1})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Combine(Of TLeft, TRight) (provider1 As IncrementalValuesProvider(Of TLeft), provider2 As IncrementalValueProvider(Of TRight)) As IncrementalValuesProvider(Of ValueTuple(Of TLeft, TRight))" />
+      <MemberSignature Language="F#" Value="static member Combine : Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Left&gt; * Microsoft.CodeAnalysis.IncrementalValueProvider&lt;'Right&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;ValueTuple&lt;'Left, 'Right&gt;&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Combine (provider1, provider2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;System.ValueTuple&lt;TLeft,TRight&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Left", "Right" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Left", "Right" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TLeft" />
+        <TypeParameter Name="TRight" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="provider1" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TLeft&gt;" RefType="this" />
+        <Parameter Name="provider2" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TRight&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TLeft">To be added.</typeparam>
+        <typeparam name="TRight">To be added.</typeparam>
+        <param name="provider1">To be added.</param>
+        <param name="provider2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select&lt;TSource,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TResult&gt; Select&lt;TSource,TResult&gt; (this Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt; source, Func&lt;TSource,System.Threading.CancellationToken,TResult&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;!!TResult&gt; Select&lt;TSource, TResult&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;!!TSource&gt; source, class System.Func`3&lt;!!TSource, valuetype System.Threading.CancellationToken, !!TResult&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Select``2(Microsoft.CodeAnalysis.IncrementalValueProvider{``0},System.Func{``0,System.Threading.CancellationToken,``1})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Select(Of TSource, TResult) (source As IncrementalValueProvider(Of TSource), selector As Func(Of TSource, CancellationToken, TResult)) As IncrementalValueProvider(Of TResult)" />
+      <MemberSignature Language="F#" Value="static member Select : Microsoft.CodeAnalysis.IncrementalValueProvider&lt;'Source&gt; * Func&lt;'Source, System.Threading.CancellationToken, 'Result&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValueProvider&lt;'Result&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Select (source, selector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="selector">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select&lt;TSource,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt; Select&lt;TSource,TResult&gt; (this Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt; source, Func&lt;TSource,System.Threading.CancellationToken,TResult&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TResult&gt; Select&lt;TSource, TResult&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TSource&gt; source, class System.Func`3&lt;!!TSource, valuetype System.Threading.CancellationToken, !!TResult&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Select``2(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},System.Func{``0,System.Threading.CancellationToken,``1})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Select(Of TSource, TResult) (source As IncrementalValuesProvider(Of TSource), selector As Func(Of TSource, CancellationToken, TResult)) As IncrementalValuesProvider(Of TResult)" />
+      <MemberSignature Language="F#" Value="static member Select : Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Source&gt; * Func&lt;'Source, System.Threading.CancellationToken, 'Result&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Result&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Select (source, selector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="selector">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMany&lt;TSource,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt; SelectMany&lt;TSource,TResult&gt; (this Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt; source, Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable&lt;TResult&gt;&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TResult&gt; SelectMany&lt;TSource, TResult&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;!!TSource&gt; source, class System.Func`3&lt;!!TSource, valuetype System.Threading.CancellationToken, class System.Collections.Generic.IEnumerable`1&lt;!!TResult&gt;&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.SelectMany``2(Microsoft.CodeAnalysis.IncrementalValueProvider{``0},System.Func{``0,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{``1}})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function SelectMany(Of TSource, TResult) (source As IncrementalValueProvider(Of TSource), selector As Func(Of TSource, CancellationToken, IEnumerable(Of TResult))) As IncrementalValuesProvider(Of TResult)" />
+      <MemberSignature Language="F#" Value="static member SelectMany : Microsoft.CodeAnalysis.IncrementalValueProvider&lt;'Source&gt; * Func&lt;'Source, System.Threading.CancellationToken, seq&lt;'Result&gt;&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Result&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.SelectMany (source, selector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable&lt;TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="selector">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMany&lt;TSource,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt; SelectMany&lt;TSource,TResult&gt; (this Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt; source, Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Immutable.ImmutableArray&lt;TResult&gt;&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TResult&gt; SelectMany&lt;TSource, TResult&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;!!TSource&gt; source, class System.Func`3&lt;!!TSource, valuetype System.Threading.CancellationToken, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TResult&gt;&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.SelectMany``2(Microsoft.CodeAnalysis.IncrementalValueProvider{``0},System.Func{``0,System.Threading.CancellationToken,System.Collections.Immutable.ImmutableArray{``1}})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function SelectMany(Of TSource, TResult) (source As IncrementalValueProvider(Of TSource), selector As Func(Of TSource, CancellationToken, ImmutableArray(Of TResult))) As IncrementalValuesProvider(Of TResult)" />
+      <MemberSignature Language="F#" Value="static member SelectMany : Microsoft.CodeAnalysis.IncrementalValueProvider&lt;'Source&gt; * Func&lt;'Source, System.Threading.CancellationToken, System.Collections.Immutable.ImmutableArray&lt;'Result&gt;&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Result&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.SelectMany (source, selector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Immutable.ImmutableArray&lt;TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="selector">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMany&lt;TSource,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt; SelectMany&lt;TSource,TResult&gt; (this Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt; source, Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable&lt;TResult&gt;&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TResult&gt; SelectMany&lt;TSource, TResult&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TSource&gt; source, class System.Func`3&lt;!!TSource, valuetype System.Threading.CancellationToken, class System.Collections.Generic.IEnumerable`1&lt;!!TResult&gt;&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.SelectMany``2(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},System.Func{``0,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{``1}})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function SelectMany(Of TSource, TResult) (source As IncrementalValuesProvider(Of TSource), selector As Func(Of TSource, CancellationToken, IEnumerable(Of TResult))) As IncrementalValuesProvider(Of TResult)" />
+      <MemberSignature Language="F#" Value="static member SelectMany : Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Source&gt; * Func&lt;'Source, System.Threading.CancellationToken, seq&lt;'Result&gt;&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Result&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.SelectMany (source, selector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable&lt;TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="selector">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMany&lt;TSource,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt; SelectMany&lt;TSource,TResult&gt; (this Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt; source, Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Immutable.ImmutableArray&lt;TResult&gt;&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TResult&gt; SelectMany&lt;TSource, TResult&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TSource&gt; source, class System.Func`3&lt;!!TSource, valuetype System.Threading.CancellationToken, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TResult&gt;&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.SelectMany``2(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},System.Func{``0,System.Threading.CancellationToken,System.Collections.Immutable.ImmutableArray{``1}})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function SelectMany(Of TSource, TResult) (source As IncrementalValuesProvider(Of TSource), selector As Func(Of TSource, CancellationToken, ImmutableArray(Of TResult))) As IncrementalValuesProvider(Of TResult)" />
+      <MemberSignature Language="F#" Value="static member SelectMany : Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Source&gt; * Func&lt;'Source, System.Threading.CancellationToken, System.Collections.Immutable.ImmutableArray&lt;'Result&gt;&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Result&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.SelectMany (source, selector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Immutable.ImmutableArray&lt;TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="selector">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Where&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt; Where&lt;TSource&gt; (this Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt; source, Func&lt;TSource,bool&gt; predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TSource&gt; Where&lt;TSource&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TSource&gt; source, class System.Func`2&lt;!!TSource, bool&gt; predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Where``1(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},System.Func{``0,System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Where(Of TSource) (source As IncrementalValuesProvider(Of TSource), predicate As Func(Of TSource, Boolean)) As IncrementalValuesProvider(Of TSource)" />
+      <MemberSignature Language="F#" Value="static member Where : Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Source&gt; * Func&lt;'Source, bool&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Source&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.Where (source, predicate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="predicate" Type="System.Func&lt;TSource,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="predicate">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithComparer&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt; WithComparer&lt;TSource&gt; (this Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt; source, System.Collections.Generic.IEqualityComparer&lt;TSource&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;!!TSource&gt; WithComparer&lt;TSource&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValueProvider`1&lt;!!TSource&gt; source, class System.Collections.Generic.IEqualityComparer`1&lt;!!TSource&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.WithComparer``1(Microsoft.CodeAnalysis.IncrementalValueProvider{``0},System.Collections.Generic.IEqualityComparer{``0})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithComparer(Of TSource) (source As IncrementalValueProvider(Of TSource), comparer As IEqualityComparer(Of TSource)) As IncrementalValueProvider(Of TSource)" />
+      <MemberSignature Language="F#" Value="static member WithComparer : Microsoft.CodeAnalysis.IncrementalValueProvider&lt;'Source&gt; * System.Collections.Generic.IEqualityComparer&lt;'Source&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValueProvider&lt;'Source&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.WithComparer (source, comparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;TSource&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="comparer">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithComparer&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt; WithComparer&lt;TSource&gt; (this Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt; source, System.Collections.Generic.IEqualityComparer&lt;TSource&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TSource&gt; WithComparer&lt;TSource&gt;(valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;!!TSource&gt; source, class System.Collections.Generic.IEqualityComparer`1&lt;!!TSource&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.WithComparer``1(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},System.Collections.Generic.IEqualityComparer{``0})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithComparer(Of TSource) (source As IncrementalValuesProvider(Of TSource), comparer As IEqualityComparer(Of TSource)) As IncrementalValuesProvider(Of TSource)" />
+      <MemberSignature Language="F#" Value="static member WithComparer : Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Source&gt; * System.Collections.Generic.IEqualityComparer&lt;'Source&gt; -&gt; Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;'Source&gt;" Usage="Microsoft.CodeAnalysis.IncrementalValueProviderExtensions.WithComparer (source, comparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;TSource&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="comparer">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
