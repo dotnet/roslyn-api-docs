@@ -1,0 +1,76 @@
+<Type Name="GeneratorExtensions" FullName="Microsoft.CodeAnalysis.GeneratorExtensions">
+  <TypeSignature Language="C#" Value="public static class GeneratorExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit GeneratorExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.GeneratorExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module GeneratorExtensions" />
+  <TypeSignature Language="F#" Value="type GeneratorExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsSourceGenerator">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISourceGenerator AsSourceGenerator (this Microsoft.CodeAnalysis.IIncrementalGenerator incrementalGenerator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.ISourceGenerator AsSourceGenerator(class Microsoft.CodeAnalysis.IIncrementalGenerator incrementalGenerator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.GeneratorExtensions.AsSourceGenerator(Microsoft.CodeAnalysis.IIncrementalGenerator)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AsSourceGenerator (incrementalGenerator As IIncrementalGenerator) As ISourceGenerator" />
+      <MemberSignature Language="F#" Value="static member AsSourceGenerator : Microsoft.CodeAnalysis.IIncrementalGenerator -&gt; Microsoft.CodeAnalysis.ISourceGenerator" Usage="Microsoft.CodeAnalysis.GeneratorExtensions.AsSourceGenerator incrementalGenerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ISourceGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="incrementalGenerator" Type="Microsoft.CodeAnalysis.IIncrementalGenerator" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="incrementalGenerator">The incremental generator to wrap</param>
+        <summary>
+            Converts an <see cref="T:Microsoft.CodeAnalysis.IIncrementalGenerator" /> in an <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> object that can be used when constructing a <see cref="T:Microsoft.CodeAnalysis.GeneratorDriver" /></summary>
+        <returns>A wrapped generator that can be passed to a generator driver</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGeneratorType">
+      <MemberSignature Language="C#" Value="public static Type GetGeneratorType (this Microsoft.CodeAnalysis.ISourceGenerator generator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetGeneratorType(class Microsoft.CodeAnalysis.ISourceGenerator generator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.GeneratorExtensions.GetGeneratorType(Microsoft.CodeAnalysis.ISourceGenerator)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetGeneratorType (generator As ISourceGenerator) As Type" />
+      <MemberSignature Language="F#" Value="static member GetGeneratorType : Microsoft.CodeAnalysis.ISourceGenerator -&gt; Type" Usage="Microsoft.CodeAnalysis.GeneratorExtensions.GetGeneratorType generator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="generator" Type="Microsoft.CodeAnalysis.ISourceGenerator" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="generator">The generator to get the type of</param>
+        <summary>
+            Returns the underlying type of a given generator
+            </summary>
+        <returns>The underlying generator type</returns>
+        <remarks>
+            For <see cref="T:Microsoft.CodeAnalysis.IIncrementalGenerator" />s a wrapper is created that also implements
+            <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" />. This method will unwrap and return the underlying type
+            in those cases.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
