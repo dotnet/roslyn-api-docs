@@ -13,6 +13,7 @@
     <AssemblyVersion>3.10.0.0</AssemblyVersion>
     <AssemblyVersion>3.11.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -45,6 +46,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
@@ -75,6 +77,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
@@ -103,6 +106,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriverRunResult</ReturnType>
@@ -128,12 +132,13 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="additionalTexts" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1" />
+        <Parameter Name="additionalTexts" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
       </Parameters>
       <Docs>
         <param name="additionalTexts">To be added.</param>
@@ -158,6 +163,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
@@ -182,17 +188,42 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="oldText" Type="Microsoft.CodeAnalysis.AdditionalText" Index="0" FrameworkAlternate="roslyn-dotnet-4.0.1" />
-        <Parameter Name="newText" Type="Microsoft.CodeAnalysis.AdditionalText" Index="1" FrameworkAlternate="roslyn-dotnet-4.0.1" />
+        <Parameter Name="oldText" Type="Microsoft.CodeAnalysis.AdditionalText" Index="0" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
+        <Parameter Name="newText" Type="Microsoft.CodeAnalysis.AdditionalText" Index="1" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
       </Parameters>
       <Docs>
         <param name="oldText">To be added.</param>
         <param name="newText">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceAdditionalTexts">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.GeneratorDriver ReplaceAdditionalTexts (System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt; newTexts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.CodeAnalysis.GeneratorDriver ReplaceAdditionalTexts(valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.AdditionalText&gt; newTexts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.GeneratorDriver.ReplaceAdditionalTexts(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AdditionalText})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReplaceAdditionalTexts (newTexts As ImmutableArray(Of AdditionalText)) As GeneratorDriver" />
+      <MemberSignature Language="F#" Value="member this.ReplaceAdditionalTexts : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt; -&gt; Microsoft.CodeAnalysis.GeneratorDriver" Usage="generatorDriver.ReplaceAdditionalTexts newTexts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newTexts" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.AdditionalText&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.1.0" />
+      </Parameters>
+      <Docs>
+        <param name="newTexts">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -243,13 +274,14 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1" />
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
       </Parameters>
       <Docs>
         <param name="compilation">To be added.</param>
@@ -273,15 +305,16 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1" />
-        <Parameter Name="outputCompilation" Type="Microsoft.CodeAnalysis.Compilation" RefType="out" Index="1" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1" />
-        <Parameter Name="diagnostics" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" RefType="out" Index="2" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1" />
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
+        <Parameter Name="outputCompilation" Type="Microsoft.CodeAnalysis.Compilation" RefType="out" Index="1" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
+        <Parameter Name="diagnostics" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;" RefType="out" Index="2" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
       </Parameters>
       <Docs>
         <param name="compilation">To be added.</param>
@@ -334,12 +367,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="newOptions" Type="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" Index="0" FrameworkAlternate="roslyn-dotnet-4.0.1" />
+        <Parameter Name="newOptions" Type="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" Index="0" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
       </Parameters>
       <Docs>
         <param name="newOptions">To be added.</param>
@@ -358,12 +392,13 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.GeneratorDriver</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="newOptions" Type="Microsoft.CodeAnalysis.ParseOptions" Index="0" FrameworkAlternate="roslyn-dotnet-4.0.1" />
+        <Parameter Name="newOptions" Type="Microsoft.CodeAnalysis.ParseOptions" Index="0" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
       </Parameters>
       <Docs>
         <param name="newOptions">To be added.</param>

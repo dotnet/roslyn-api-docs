@@ -21,6 +21,7 @@
     <AssemblyVersion>3.10.0.0</AssemblyVersion>
     <AssemblyVersion>3.11.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -56,6 +57,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="globalNamespaceStyle" Type="Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle" />
@@ -135,6 +137,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -177,6 +180,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -221,6 +225,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -265,6 +270,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -309,6 +315,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -351,6 +358,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -395,6 +403,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -431,6 +440,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -467,6 +477,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayDelegateStyle</ReturnType>
@@ -503,6 +514,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayExtensionMethodStyle</ReturnType>
@@ -539,6 +551,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -548,7 +561,11 @@
             Formats the names of all types and namespaces in a fully qualified style (including the global alias).
             </summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The current behavior will not output the fully qualified style as expected for member symbols (such as properties) because memberOptions is not set.
+            For example, MyNamespace.MyClass.MyPublicProperty will return as MyPublicProperty.
+            The current behavior displayed here will be maintained for backwards compatibility.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="GenericsOptions">
@@ -575,6 +592,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayGenericsOptions</ReturnType>
@@ -611,6 +629,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayGlobalNamespaceStyle</ReturnType>
@@ -647,6 +666,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayKindOptions</ReturnType>
@@ -683,6 +703,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayLocalOptions</ReturnType>
@@ -719,6 +740,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMemberOptions</ReturnType>
@@ -755,6 +777,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -791,6 +814,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayMiscellaneousOptions</ReturnType>
@@ -827,6 +851,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayParameterOptions</ReturnType>
@@ -863,6 +888,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayPropertyStyle</ReturnType>
@@ -900,6 +926,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -944,6 +971,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -988,6 +1016,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1032,6 +1061,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1076,6 +1106,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1118,6 +1149,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1162,6 +1194,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayTypeQualificationStyle</ReturnType>
@@ -1198,6 +1231,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1234,6 +1268,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1270,6 +1305,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1312,6 +1348,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1354,6 +1391,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1398,6 +1436,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1440,6 +1479,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1482,6 +1522,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
@@ -1524,6 +1565,7 @@
         <AssemblyVersion>3.10.0.0</AssemblyVersion>
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SymbolDisplayFormat</ReturnType>
