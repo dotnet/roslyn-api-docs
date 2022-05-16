@@ -22,6 +22,7 @@
     <AssemblyVersion>3.11.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,37 +34,31 @@
   </Docs>
   <Members>
     <Member MemberName="RenameDocumentAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet&gt; RenameDocumentAsync (Microsoft.CodeAnalysis.Document document, string newDocumentName, System.Collections.Generic.IReadOnlyList&lt;string&gt;? newDocumentFolders = default, Microsoft.CodeAnalysis.Options.OptionSet? optionSet = default, System.Threading.CancellationToken cancellationToken = default);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Rename.Renamer/RenameDocumentActionSet&gt; RenameDocumentAsync(class Microsoft.CodeAnalysis.Document document, string newDocumentName, class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; newDocumentFolders, class Microsoft.CodeAnalysis.Options.OptionSet optionSet, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAsync(Microsoft.CodeAnalysis.Document,System.String,System.Collections.Generic.IReadOnlyList{System.String},Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function RenameDocumentAsync (document As Document, newDocumentName As String, Optional newDocumentFolders As IReadOnlyList(Of String) = Nothing, Optional optionSet As OptionSet = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Renamer.RenameDocumentActionSet)" />
-      <MemberSignature Language="F#" Value="static member RenameDocumentAsync : Microsoft.CodeAnalysis.Document * string * System.Collections.Generic.IReadOnlyList&lt;string&gt; * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet&gt;" Usage="Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAsync (document, newDocumentName, newDocumentFolders, optionSet, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet&gt; RenameDocumentAsync (Microsoft.CodeAnalysis.Document document, Microsoft.CodeAnalysis.Rename.DocumentRenameOptions options, string? newDocumentName, System.Collections.Generic.IReadOnlyList&lt;string&gt;? newDocumentFolders = default, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Rename.Renamer/RenameDocumentActionSet&gt; RenameDocumentAsync(class Microsoft.CodeAnalysis.Document document, valuetype Microsoft.CodeAnalysis.Rename.DocumentRenameOptions options, string newDocumentName, class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; newDocumentFolders, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAsync(Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Rename.DocumentRenameOptions,System.String,System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RenameDocumentAsync (document As Document, options As DocumentRenameOptions, newDocumentName As String, Optional newDocumentFolders As IReadOnlyList(Of String) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Renamer.RenameDocumentActionSet)" />
+      <MemberSignature Language="F#" Value="static member RenameDocumentAsync : Microsoft.CodeAnalysis.Document * Microsoft.CodeAnalysis.Rename.DocumentRenameOptions * string * System.Collections.Generic.IReadOnlyList&lt;string&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet&gt;" Usage="Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAsync (document, options, newDocumentName, newDocumentFolders, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>3.7.0.0</AssemblyVersion>
-        <AssemblyVersion>3.8.0.0</AssemblyVersion>
-        <AssemblyVersion>3.9.0.0</AssemblyVersion>
-        <AssemblyVersion>3.10.0.0</AssemblyVersion>
-        <AssemblyVersion>3.11.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Rename.Renamer+RenameDocumentActionSet&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
-        <Parameter Name="newDocumentName" Type="System.String" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
-        <Parameter Name="newDocumentFolders" Type="System.Collections.Generic.IReadOnlyList&lt;System.String&gt;" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
-        <Parameter Name="optionSet" Type="Microsoft.CodeAnalysis.Options.OptionSet" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
+        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" Index="0" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.Rename.DocumentRenameOptions" Index="1" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+        <Parameter Name="newDocumentName" Type="System.String" Index="2" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+        <Parameter Name="newDocumentFolders" Type="System.Collections.Generic.IReadOnlyList&lt;System.String&gt;" Index="3" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet-4.2.0" />
       </Parameters>
       <Docs>
-        <param name="optionSet">To be added.</param>
         <param name="cancellationToken">To be added.</param>
         <param name="document">The document to be modified</param>
         <param name="newDocumentName">The new name for the document. Pass null or the same name to keep unchanged.</param>
+        <param name="options">Options used to configure rename of a type contained in the document that matches the document's name.</param>
         <param name="newDocumentFolders">The new set of folders for the <see cref="P:Microsoft.CodeAnalysis.TextDocument.Folders" /> property</param>
         <summary>
              Call to perform a rename of document or change in document folders. Returns additional code changes related to the document
@@ -81,12 +76,102 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RenameDocumentAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet&gt; RenameDocumentAsync (Microsoft.CodeAnalysis.Document document, string newDocumentName, System.Collections.Generic.IReadOnlyList&lt;string&gt;? newDocumentFolders = default, Microsoft.CodeAnalysis.Options.OptionSet? optionSet = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Rename.Renamer/RenameDocumentActionSet&gt; RenameDocumentAsync(class Microsoft.CodeAnalysis.Document document, string newDocumentName, class System.Collections.Generic.IReadOnlyList`1&lt;string&gt; newDocumentFolders, class Microsoft.CodeAnalysis.Options.OptionSet optionSet, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAsync(Microsoft.CodeAnalysis.Document,System.String,System.Collections.Generic.IReadOnlyList{System.String},Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RenameDocumentAsync (document As Document, newDocumentName As String, Optional newDocumentFolders As IReadOnlyList(Of String) = Nothing, Optional optionSet As OptionSet = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Renamer.RenameDocumentActionSet)" />
+      <MemberSignature Language="F#" Value="static member RenameDocumentAsync : Microsoft.CodeAnalysis.Document * string * System.Collections.Generic.IReadOnlyList&lt;string&gt; * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet&gt;" Usage="Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAsync (document, newDocumentName, newDocumentFolders, optionSet, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet&gt; RenameDocumentAsync (Microsoft.CodeAnalysis.Document document, string? newDocumentName, System.Collections.Generic.IReadOnlyList&lt;string&gt;? newDocumentFolders = default, Microsoft.CodeAnalysis.Options.OptionSet? optionSet = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>3.7.0.0</AssemblyVersion>
+        <AssemblyVersion>3.8.0.0</AssemblyVersion>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>3.10.0.0</AssemblyVersion>
+        <AssemblyVersion>3.11.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.2.0">
+          <AttributeName Language="C#">[System.Obsolete("Use overload taking RenameOptions")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use overload taking RenameOptions")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Rename.Renamer+RenameDocumentActionSet&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="Microsoft.CodeAnalysis.Document" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
+        <Parameter Name="newDocumentName" Type="System.String" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
+        <Parameter Name="newDocumentFolders" Type="System.Collections.Generic.IReadOnlyList&lt;System.String&gt;" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
+        <Parameter Name="optionSet" Type="Microsoft.CodeAnalysis.Options.OptionSet" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
+      </Parameters>
+      <Docs>
+        <param name="document">The document to be modified</param>
+        <param name="newDocumentName">The new name for the document. Pass null or the same name to keep unchanged.</param>
+        <param name="newDocumentFolders">The new set of folders for the <see cref="P:Microsoft.CodeAnalysis.TextDocument.Folders" /> property</param>
+        <param name="optionSet">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+             Call to perform a rename of document or change in document folders. Returns additional code changes related to the document
+             being modified, such as renaming symbols in the file. 
+            
+             Each change is added as a <see cref="T:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction" /> in the returned <see cref="P:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentActionSet.ApplicableActions" />.
+             
+             Each action may individually encounter errors that prevent it from behaving correctly. Those are reported in <see cref="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameDocumentAction.GetErrors(System.Globalization.CultureInfo)" />.
+             
+             <para />
+             
+             Current supported actions that may be returned: 
+             <list><item>Rename symbol action that will rename the type to match the document name.</item><item>Sync namespace action that will sync the namespace(s) of the document to match the document folders. </item></list></summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RenameSymbolAsync">
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; RenameSymbolAsync (Microsoft.CodeAnalysis.Solution solution, Microsoft.CodeAnalysis.ISymbol symbol, string newName, Microsoft.CodeAnalysis.Options.OptionSet optionSet, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; RenameSymbolAsync (Microsoft.CodeAnalysis.Solution solution, Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Rename.SymbolRenameOptions options, string newName, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt; RenameSymbolAsync(class Microsoft.CodeAnalysis.Solution solution, class Microsoft.CodeAnalysis.ISymbol symbol, valuetype Microsoft.CodeAnalysis.Rename.SymbolRenameOptions options, string newName, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameSymbolAsync(Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Rename.SymbolRenameOptions,System.String,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RenameSymbolAsync (solution As Solution, symbol As ISymbol, options As SymbolRenameOptions, newName As String, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Solution)" />
+      <MemberSignature Language="F#" Value="static member RenameSymbolAsync : Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Rename.SymbolRenameOptions * string * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;" Usage="Microsoft.CodeAnalysis.Rename.Renamer.RenameSymbolAsync (solution, symbol, options, newName, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="0" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" Index="1" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.Rename.SymbolRenameOptions" Index="2" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+        <Parameter Name="newName" Type="System.String" Index="3" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet-4.2.0" />
+      </Parameters>
+      <Docs>
+        <param name="solution">To be added.</param>
+        <param name="symbol">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="newName">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenameSymbolAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; RenameSymbolAsync (Microsoft.CodeAnalysis.Solution solution, Microsoft.CodeAnalysis.ISymbol symbol, string newName, Microsoft.CodeAnalysis.Options.OptionSet optionSet, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt; RenameSymbolAsync(class Microsoft.CodeAnalysis.Solution solution, class Microsoft.CodeAnalysis.ISymbol symbol, string newName, class Microsoft.CodeAnalysis.Options.OptionSet optionSet, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Rename.Renamer.RenameSymbolAsync(Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.ISymbol,System.String,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function RenameSymbolAsync (solution As Solution, symbol As ISymbol, newName As String, optionSet As OptionSet, Optional cancellationToken As CancellationToken = Nothing) As Task(Of Solution)" />
       <MemberSignature Language="F#" Value="static member RenameSymbolAsync : Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.ISymbol * string * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;" Usage="Microsoft.CodeAnalysis.Rename.Renamer.RenameSymbolAsync (solution, symbol, newName, optionSet, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt; RenameSymbolAsync (Microsoft.CodeAnalysis.Solution solution, Microsoft.CodeAnalysis.ISymbol symbol, string newName, Microsoft.CodeAnalysis.Options.OptionSet? optionSet, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.2.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -105,7 +190,14 @@
         <AssemblyVersion>3.11.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.2.0">
+          <AttributeName Language="C#">[System.Obsolete("Use overload taking RenameOptions")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use overload taking RenameOptions")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
       </ReturnValue>
