@@ -1306,13 +1306,14 @@
       <Docs>
         <param name="changes">To be added.</param>
         <summary>
-            Constructs a new SourceText from this text with the specified changes.
-            <exception cref="T:System.ArgumentException">If any changes are not in bounds of this <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" />.</exception><exception cref="T:System.ArgumentException">If any changes overlap other changes.</exception></summary>
+            Constructs a new SourceText from this text with the specified changes.</summary>
         <returns>To be added.</returns>
         <remarks>
             Changes do not have to be in sorted order.  However, <see cref="M:Microsoft.CodeAnalysis.Text.SourceText.WithChanges(System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Text.TextChange})" /> will
             perform better if they are.
             </remarks>
+        <exception cref="T:System.ArgumentException">If any changes are not in bounds of this <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" />.</exception>
+        <exception cref="T:System.ArgumentException">If any changes overlap other changes.</exception>
       </Docs>
     </Member>
     <Member MemberName="WithChanges">
