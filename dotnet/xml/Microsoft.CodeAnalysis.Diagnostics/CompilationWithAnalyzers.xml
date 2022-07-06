@@ -1305,15 +1305,14 @@
         <Parameter Name="onAnalyzerException" Type="System.Action&lt;System.Exception,Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer,Microsoft.CodeAnalysis.Diagnostic&gt;" />
       </Parameters>
       <Docs>
-        <param name="analyzer">To be added.</param>
-        <param name="options">To be added.</param>
-        <param name="onAnalyzerException">To be added.</param>
+        <param name="analyzer">Analyzer to be checked for suppression.</param>
+        <param name="options">Compilation options.</param>
+        <param name="onAnalyzerException">
+          Optional delegate which is invoked when an analyzer throws an exception. Delegate can do custom tasks
+          such as report the given analyzer exception diagnostic, report a non-fatal watson for the exception, etc.</param>
         <summary>
-            Returns true if all the diagnostics that can be produced by this analyzer are suppressed through options.
-            <param name="analyzer">Analyzer to be checked for suppression.</param><param name="options">Compilation options.</param><param name="onAnalyzerException">
-            Optional delegate which is invoked when an analyzer throws an exception.
-            Delegate can do custom tasks such as report the given analyzer exception diagnostic, report a non-fatal watson for the exception, etc.
-            </param></summary>
+          Returns true if all the diagnostics that can be produced by this analyzer are suppressed through options.
+        </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
