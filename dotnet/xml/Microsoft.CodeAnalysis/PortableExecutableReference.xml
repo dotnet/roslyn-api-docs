@@ -330,10 +330,10 @@
              
              The calling <see cref="T:Microsoft.CodeAnalysis.Compilation" /> doesn't take ownership of the <see cref="T:Microsoft.CodeAnalysis.Metadata" /> objects returned by this method.
              The implementation needs to retrieve the object from a provider that manages their lifetime (such as metadata cache).
-             The <see cref="T:Microsoft.CodeAnalysis.Metadata" /> object is kept alive by the <see cref="T:Microsoft.CodeAnalysis.Compilation" /> that called <see cref="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataNoCopy" />
+             The <see cref="T:Microsoft.CodeAnalysis.Metadata" /> object is kept alive by the <see cref="T:Microsoft.CodeAnalysis.Compilation" /> that called **Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataNoCopy**<!--<see cref="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataNoCopy" />-->
              and by all compilations created from it via calls to With- factory methods on <see cref="T:Microsoft.CodeAnalysis.Compilation" />, 
              other than <see cref="M:Microsoft.CodeAnalysis.Compilation.WithReferences(Microsoft.CodeAnalysis.MetadataReference[])" /> overloads. A compilation created using 
-             <see cref="M:Microsoft.CodeAnalysis.Compilation.WithReferences(Microsoft.CodeAnalysis.MetadataReference[])" /> will call to <see cref="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataNoCopy" /> again.
+             <see cref="M:Microsoft.CodeAnalysis.Compilation.WithReferences(Microsoft.CodeAnalysis.MetadataReference[])" /> will call to **Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataNoCopy**<!--<see cref="M:Microsoft.CodeAnalysis.PortableExecutableReference.GetMetadataNoCopy" />--> again.
              </remarks>
         <exception cref="T:System.BadImageFormatException">If the PE image format is invalid.</exception>
         <exception cref="T:System.IO.IOException">The metadata image content can't be read.</exception>
