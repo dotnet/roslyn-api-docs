@@ -1,0 +1,191 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.ModuleMetadata?alt=Microsoft.CodeAnalysis.ModuleMetadata&text=ModuleMetadata" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: metadata
+    description: Pointer to the start of metadata block.
+    type: <xref href="System.IntPtr?alt=System.IntPtr&text=IntPtr" data-throw-if-not-resolved="True"/>
+    typePerLanguage:
+    - value: <xref href="System.IntPtr?alt=System.IntPtr&text=IntPtr" data-throw-if-not-resolved="True"/>
+      langs:
+      - cpp
+      - csharp
+      - vb
+    - value: nativeint
+      langs:
+      - fsharp
+  - namesWithMoniker:
+    - value: size
+    description: The size of the metadata block.
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">metadata</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: <code data-dev-comment-type="paramref">size</code> is not positive.
+    type: <xref href="System.ArgumentOutOfRangeException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata(System.IntPtr,System.Int32)
+  commentId: M:Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata(System.IntPtr,System.Int32)
+  name: CreateFromMetadata(IntPtr, Int32)
+  fullName: Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata(IntPtr, Int32)
+  nameWithType: ModuleMetadata.CreateFromMetadata(IntPtr, Int32)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static Microsoft::CodeAnalysis::ModuleMetadata ^ CreateFromMetadata(IntPtr metadata, int size);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.ModuleMetadata CreateFromMetadata (IntPtr metadata, int size);
+  - lang: fsharp
+    values:
+    - value: 'static member CreateFromMetadata : nativeint * int -> Microsoft.CodeAnalysis.ModuleMetadata'
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateFromMetadata (metadata As IntPtr, size As Integer) As ModuleMetadata
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Create metadata module from a raw memory pointer to metadata directory of a PE image or .cormeta section of an object file.
+
+    Only manifest modules are currently supported.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata*
+commentId: Overload:Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata
+namespace: Microsoft.CodeAnalysis
+name: CreateFromMetadata
+fullName: Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata
+nameWithType: ModuleMetadata.CreateFromMetadata
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata
+  - Microsoft::CodeAnalysis::ModuleMetadata::CreateFromMetadata
+  - CreateFromMetadata
+  - ModuleMetadata.CreateFromMetadata
+  - ModuleMetadata::CreateFromMetadata
+  helpviewer_keywords:
+  - ModuleMetadata.CreateFromMetadata method [.NET]
+  - CreateFromMetadata method [.NET], class ModuleMetadata
+  - ModuleMetadata.CreateFromMetadata(IntPtr, Int32) method [.NET]
+  - CreateFromMetadata(IntPtr, Int32) method [.NET], class ModuleMetadata
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

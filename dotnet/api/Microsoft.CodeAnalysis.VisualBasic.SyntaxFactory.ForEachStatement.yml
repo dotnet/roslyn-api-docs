@@ -1,0 +1,281 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.VisualBasic.Syntax.ForEachStatementSyntax?alt=Microsoft.CodeAnalysis.VisualBasic.Syntax.ForEachStatementSyntax&text=ForEachStatementSyntax" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: controlVariable
+    description: >-
+      If the For or For Each statement is of a form that does not declare a new loop
+
+      control variable, this is the expression that denotes the loop control
+
+      variable. If this loop is of a form that does declare a new control variable,
+
+      this is a VariableDeclarator that has the variable being declared.
+    type: <xref href="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode?alt=Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode&text=VisualBasicSyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: expression
+    description: The expression denoting the collection to iterate over.
+    type: <xref href="Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax?alt=Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax&text=ExpressionSyntax" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode,Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax)
+  commentId: M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode,Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax)
+  name: ForEachStatement(VisualBasicSyntaxNode, ExpressionSyntax)
+  fullName: Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement(VisualBasicSyntaxNode, ExpressionSyntax)
+  nameWithType: SyntaxFactory.ForEachStatement(VisualBasicSyntaxNode, ExpressionSyntax)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static Microsoft::CodeAnalysis::VisualBasic::Syntax::ForEachStatementSyntax ^ ForEachStatement(Microsoft::CodeAnalysis::VisualBasic::VisualBasicSyntaxNode ^ controlVariable, Microsoft::CodeAnalysis::VisualBasic::Syntax::ExpressionSyntax ^ expression);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.VisualBasic.Syntax.ForEachStatementSyntax ForEachStatement (Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode controlVariable, Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax expression);
+  - lang: fsharp
+    values:
+    - value: 'static member ForEachStatement : Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode * Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax -> Microsoft.CodeAnalysis.VisualBasic.Syntax.ForEachStatementSyntax'
+  - lang: vb
+    values:
+    - value: Public Shared Function ForEachStatement (controlVariable As VisualBasicSyntaxNode, expression As ExpressionSyntax) As ForEachStatementSyntax
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    The For Each statement that begins a For Each-Next block. This statement always
+
+    occurs as the Begin of a ForBlock, and the body of the For Each-Next is the
+
+    Body of that ForBlock. Most of the time, the End of that ForBlock is the
+
+    corresponding Next statement. However, multiple nested For statements are ended
+
+    by a single Next statement with multiple variables, then the inner For
+
+    statements will have End set to Nothing, and the Next statement is the End of
+
+    the outermost For statement that is being ended.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.VisualBasic.Syntax.ForEachStatementSyntax?alt=Microsoft.CodeAnalysis.VisualBasic.Syntax.ForEachStatementSyntax&text=ForEachStatementSyntax" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: forKeyword
+    description: The "For" keyword.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: eachKeyword
+    description: The "Each" keyword.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: controlVariable
+    description: >-
+      If the For or For Each statement is of a form that does not declare a new loop
+
+      control variable, this is the expression that denotes the loop control
+
+      variable. If this loop is of a form that does declare a new control variable,
+
+      this is a VariableDeclarator that has the variable being declared.
+    type: <xref href="Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode?alt=Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode&text=VisualBasicSyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: inKeyword
+    description: The "In" keyword.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: expression
+    description: The expression denoting the collection to iterate over.
+    type: <xref href="Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax?alt=Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax&text=ExpressionSyntax" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax)
+  commentId: M:Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax)
+  name: ForEachStatement(SyntaxToken, SyntaxToken, VisualBasicSyntaxNode, SyntaxToken, ExpressionSyntax)
+  fullName: Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement(SyntaxToken, SyntaxToken, VisualBasicSyntaxNode, SyntaxToken, ExpressionSyntax)
+  nameWithType: SyntaxFactory.ForEachStatement(SyntaxToken, SyntaxToken, VisualBasicSyntaxNode, SyntaxToken, ExpressionSyntax)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static Microsoft::CodeAnalysis::VisualBasic::Syntax::ForEachStatementSyntax ^ ForEachStatement(Microsoft::CodeAnalysis::SyntaxToken forKeyword, Microsoft::CodeAnalysis::SyntaxToken eachKeyword, Microsoft::CodeAnalysis::VisualBasic::VisualBasicSyntaxNode ^ controlVariable, Microsoft::CodeAnalysis::SyntaxToken inKeyword, Microsoft::CodeAnalysis::VisualBasic::Syntax::ExpressionSyntax ^ expression);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.VisualBasic.Syntax.ForEachStatementSyntax ForEachStatement (Microsoft.CodeAnalysis.SyntaxToken forKeyword, Microsoft.CodeAnalysis.SyntaxToken eachKeyword, Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode controlVariable, Microsoft.CodeAnalysis.SyntaxToken inKeyword, Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax expression);
+  - lang: fsharp
+    values:
+    - value: 'static member ForEachStatement : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxNode * Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax -> Microsoft.CodeAnalysis.VisualBasic.Syntax.ForEachStatementSyntax'
+  - lang: vb
+    values:
+    - value: Public Shared Function ForEachStatement (forKeyword As SyntaxToken, eachKeyword As SyntaxToken, controlVariable As VisualBasicSyntaxNode, inKeyword As SyntaxToken, expression As ExpressionSyntax) As ForEachStatementSyntax
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    The For Each statement that begins a For Each-Next block. This statement always
+
+    occurs as the Begin of a ForBlock, and the body of the For Each-Next is the
+
+    Body of that ForBlock. Most of the time, the End of that ForBlock is the
+
+    corresponding Next statement. However, multiple nested For statements are ended
+
+    by a single Next statement with multiple variables, then the inner For
+
+    statements will have End set to Nothing, and the Next statement is the End of
+
+    the outermost For statement that is being ended.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement*
+commentId: Overload:Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement
+namespace: Microsoft.CodeAnalysis.VisualBasic
+name: ForEachStatement
+fullName: Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement
+nameWithType: SyntaxFactory.ForEachStatement
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.VisualBasic.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.VisualBasic v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.VisualBasic v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.VisualBasic v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.VisualBasic v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.VisualBasic v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.VisualBasic v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.VisualBasic v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.VisualBasic v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement
+  api_location:
+  - Microsoft.CodeAnalysis.VisualBasic.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.VisualBasic.SyntaxFactory.ForEachStatement
+  - Microsoft::CodeAnalysis::VisualBasic::SyntaxFactory::ForEachStatement
+  - ForEachStatement
+  - SyntaxFactory.ForEachStatement
+  - SyntaxFactory::ForEachStatement
+  helpviewer_keywords:
+  - SyntaxFactory.ForEachStatement method [.NET]
+  - ForEachStatement method [.NET], class SyntaxFactory
+  - SyntaxFactory.ForEachStatement(VisualBasicSyntaxNode, ExpressionSyntax) method [.NET]
+  - ForEachStatement(VisualBasicSyntaxNode, ExpressionSyntax) method [.NET], class SyntaxFactory
+  - SyntaxFactory.ForEachStatement(SyntaxToken, SyntaxToken, VisualBasicSyntaxNode, SyntaxToken, ExpressionSyntax) method [.NET]
+  - ForEachStatement(SyntaxToken, SyntaxToken, VisualBasicSyntaxNode, SyntaxToken, ExpressionSyntax) method [.NET], class SyntaxFactory
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

@@ -1,0 +1,262 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - name: TRoot
+  returnsWithMoniker:
+    type:
+    - value: TRoot
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root of the subtree containing the nodes to be tracked.
+    type: TRoot
+  - namesWithMoniker:
+    - value: nodes
+    description: One or more nodes that are descendants of the root node.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes``1(``0,Microsoft.CodeAnalysis.SyntaxNode[])
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes``1(``0,Microsoft.CodeAnalysis.SyntaxNode[])
+  name: TrackNodes<TRoot>(TRoot, SyntaxNode[])
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes<TRoot>(TRoot, SyntaxNode[])
+  nameWithType: SyntaxNodeExtensions.TrackNodes<TRoot>(TRoot, SyntaxNode[])
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TRoot>
+         where TRoot : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TRoot TrackNodes(TRoot root, ... cli::array <Microsoft::CodeAnalysis::SyntaxNode ^> ^ nodes);
+  - lang: csharp
+    values:
+    - value: 'public static TRoot TrackNodes<TRoot> (this TRoot root, params Microsoft.CodeAnalysis.SyntaxNode[] nodes) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member TrackNodes : 'Root * Microsoft.CodeAnalysis.SyntaxNode[] -> 'Root (requires 'Root :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function TrackNodes(Of TRoot As SyntaxNode) (root As TRoot, ParamArray nodes As SyntaxNode()) As TRoot
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates a new tree of nodes with the specified nodes being tracked.
+
+
+    Use GetCurrentNode on the subtree resulting from this operation, or any transformation of it,
+
+    to get the current node corresponding to the original tracked node.
+  metadata: {}
+- typeParameters:
+  - name: TRoot
+  returnsWithMoniker:
+    type:
+    - value: TRoot
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root of the subtree containing the nodes to be tracked.
+    type: TRoot
+  - namesWithMoniker:
+    - value: nodes
+    description: One or more nodes that are descendants of the root node.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes``1(``0,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes``1(``0,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode})
+  name: TrackNodes<TRoot>(TRoot, IEnumerable<SyntaxNode>)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes<TRoot>(TRoot, IEnumerable<SyntaxNode>)
+  nameWithType: SyntaxNodeExtensions.TrackNodes<TRoot>(TRoot, IEnumerable<SyntaxNode>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TRoot>
+         where TRoot : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TRoot TrackNodes(TRoot root, System::Collections::Generic::IEnumerable<Microsoft::CodeAnalysis::SyntaxNode ^> ^ nodes);
+  - lang: csharp
+    values:
+    - value: 'public static TRoot TrackNodes<TRoot> (this TRoot root, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxNode> nodes) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member TrackNodes : 'Root * seq<Microsoft.CodeAnalysis.SyntaxNode> -> 'Root (requires 'Root :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function TrackNodes(Of TRoot As SyntaxNode) (root As TRoot, nodes As IEnumerable(Of SyntaxNode)) As TRoot
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates a new tree of nodes with the specified nodes being tracked.
+
+
+    Use GetCurrentNode on the subtree resulting from this operation, or any transformation of it,
+
+    to get the current node corresponding to the original tracked node.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes*
+commentId: Overload:Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes
+namespace: Microsoft.CodeAnalysis
+name: TrackNodes
+fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes
+nameWithType: SyntaxNodeExtensions.TrackNodes
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::TrackNodes
+  - TrackNodes
+  - SyntaxNodeExtensions.TrackNodes
+  - SyntaxNodeExtensions::TrackNodes
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.TrackNodes``1
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::TrackNodes``1
+  - TrackNodes``1
+  - SyntaxNodeExtensions.TrackNodes``1
+  - SyntaxNodeExtensions::TrackNodes``1
+  helpviewer_keywords:
+  - SyntaxNodeExtensions.TrackNodes method [.NET]
+  - TrackNodes method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.TrackNodes<TRoot>(TRoot, SyntaxNode[]) extension method [.NET]
+  - TrackNodes<TRoot>(TRoot, SyntaxNode[]) extension method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.TrackNodes<TRoot>(TRoot, IEnumerable<SyntaxNode>) extension method [.NET]
+  - TrackNodes<TRoot>(TRoot, IEnumerable<SyntaxNode>) extension method [.NET], class SyntaxNodeExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

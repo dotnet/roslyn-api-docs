@@ -1,0 +1,204 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: kind
+    description: The type of edit.
+    type: <xref href="Microsoft.CodeAnalysis.Emit.SemanticEditKind?alt=Microsoft.CodeAnalysis.Emit.SemanticEditKind&text=SemanticEditKind" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: oldSymbol
+    description: The symbol from the earlier compilation, or null if the edit represents an addition.
+    type: <xref href="Microsoft.CodeAnalysis.ISymbol?alt=Microsoft.CodeAnalysis.ISymbol&text=ISymbol" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newSymbol
+    description: The symbol from the later compilation, or null if the edit represents a deletion.
+    type: <xref href="Microsoft.CodeAnalysis.ISymbol?alt=Microsoft.CodeAnalysis.ISymbol&text=ISymbol" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: syntaxMap
+    description: >-
+      A map from syntax node in the later compilation to syntax node in the previous compilation, 
+
+      or null if <code data-dev-comment-type="paramref">preserveLocalVariables</code> is false and the map is not needed or 
+
+      the source of the current method is the same as the source of the previous method.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: preserveLocalVariables
+    description: True if the edit is an update of an active method and local values should be preserved; false otherwise.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">oldSymbol</code> or <code data-dev-comment-type="paramref">newSymbol</code> is null and the edit isn't a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.SemanticEditKind.Insert"></xref> or <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.SemanticEditKind.Delete"></xref>, respectively.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: <code data-dev-comment-type="paramref">kind</code> is not a valid kind.
+    type: <xref href="System.ArgumentOutOfRangeException" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.CodeAnalysis.Emit.SemanticEdit.#ctor(Microsoft.CodeAnalysis.Emit.SemanticEditKind,Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol,System.Func{Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode},System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.Emit.SemanticEdit.#ctor(Microsoft.CodeAnalysis.Emit.SemanticEditKind,Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol,System.Func{Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode},System.Boolean)
+  name: SemanticEdit(SemanticEditKind, ISymbol, ISymbol, Func<SyntaxNode,SyntaxNode>, Boolean)
+  fullName: Microsoft.CodeAnalysis.Emit.SemanticEdit.SemanticEdit(SemanticEditKind, ISymbol, ISymbol, Func<SyntaxNode,SyntaxNode>, Boolean)
+  nameWithType: SemanticEdit.SemanticEdit(SemanticEditKind, ISymbol, ISymbol, Func<SyntaxNode,SyntaxNode>, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public SemanticEdit (Microsoft.CodeAnalysis.Emit.SemanticEditKind kind, Microsoft.CodeAnalysis.ISymbol oldSymbol, Microsoft.CodeAnalysis.ISymbol newSymbol, Func<Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode> syntaxMap = default, bool preserveLocalVariables = false);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: public SemanticEdit (Microsoft.CodeAnalysis.Emit.SemanticEditKind kind, Microsoft.CodeAnalysis.ISymbol? oldSymbol, Microsoft.CodeAnalysis.ISymbol? newSymbol, Func<Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode?>? syntaxMap = default, bool preserveLocalVariables = false);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.CodeAnalysis.Emit.SemanticEdit : Microsoft.CodeAnalysis.Emit.SemanticEditKind * Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.ISymbol * Func<Microsoft.CodeAnalysis.SyntaxNode, Microsoft.CodeAnalysis.SyntaxNode> * bool -> Microsoft.CodeAnalysis.Emit.SemanticEdit'
+  - lang: vb
+    values:
+    - value: Public Sub New (kind As SemanticEditKind, oldSymbol As ISymbol, newSymbol As ISymbol, Optional syntaxMap As Func(Of SyntaxNode, SyntaxNode) = Nothing, Optional preserveLocalVariables As Boolean = false)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Initializes an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.SemanticEdit"></xref>.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Emit.SemanticEdit.#ctor*
+commentId: Overload:Microsoft.CodeAnalysis.Emit.SemanticEdit.#ctor
+namespace: Microsoft.CodeAnalysis.Emit
+name: SemanticEdit
+fullName: Microsoft.CodeAnalysis.Emit.SemanticEdit.SemanticEdit
+nameWithType: SemanticEdit.SemanticEdit
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Emit.SemanticEdit..ctor
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Emit.SemanticEdit.#ctor
+  - Microsoft::CodeAnalysis::Emit::SemanticEdit::#ctor
+  - '#ctor'
+  - SemanticEdit.#ctor
+  - SemanticEdit::#ctor
+  helpviewer_keywords:
+  - SemanticEdit struct [.NET], constructors
+  - SemanticEdit(SemanticEditKind, ISymbol, ISymbol, Func<SyntaxNode,SyntaxNode>, Boolean) struct [.NET], constructors
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

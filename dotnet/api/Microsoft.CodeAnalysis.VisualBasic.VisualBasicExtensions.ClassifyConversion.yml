@@ -1,0 +1,318 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.VisualBasic.Conversion?alt=Microsoft.CodeAnalysis.VisualBasic.Conversion&text=Conversion" data-throw-if-not-resolved="True"/>
+    description: A Conversion instance, representing the kind of conversion between the expression and type symbol; otherwise Null if semantic model instance is Null.
+  parameters:
+  - namesWithMoniker:
+    - value: semanticModel
+    description: A source semantic model.
+    type: <xref href="Microsoft.CodeAnalysis.SemanticModel?alt=Microsoft.CodeAnalysis.SemanticModel&text=SemanticModel" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: position
+    description: A position within the expression syntax.
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: expression
+    description: A source expression syntax.
+    type: <xref href="Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax?alt=Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax&text=ExpressionSyntax" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: destination
+    description: A destination TypeSymbol.
+    type: <xref href="Microsoft.CodeAnalysis.ITypeSymbol?alt=Microsoft.CodeAnalysis.ITypeSymbol&text=ITypeSymbol" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.ITypeSymbol)
+  name: ClassifyConversion(SemanticModel, Int32, ExpressionSyntax, ITypeSymbol)
+  fullName: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion(SemanticModel, Int32, ExpressionSyntax, ITypeSymbol)
+  nameWithType: VisualBasicExtensions.ClassifyConversion(SemanticModel, Int32, ExpressionSyntax, ITypeSymbol)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        [System::Runtime::CompilerServices::Extension]
+         static Microsoft::CodeAnalysis::VisualBasic::Conversion ClassifyConversion(Microsoft::CodeAnalysis::SemanticModel ^ semanticModel, int position, Microsoft::CodeAnalysis::VisualBasic::Syntax::ExpressionSyntax ^ expression, Microsoft::CodeAnalysis::ITypeSymbol ^ destination);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.VisualBasic.Conversion ClassifyConversion (this Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax expression, Microsoft.CodeAnalysis.ITypeSymbol destination);
+  - lang: fsharp
+    values:
+    - value: 'static member ClassifyConversion : Microsoft.CodeAnalysis.SemanticModel * int * Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax * Microsoft.CodeAnalysis.ITypeSymbol -> Microsoft.CodeAnalysis.VisualBasic.Conversion'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ClassifyConversion (semanticModel As SemanticModel, position As Integer, expression As ExpressionSyntax, destination As ITypeSymbol) As Conversion
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines what kind of conversion there is between the expression syntax and a specified type.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.VisualBasic.Conversion?alt=Microsoft.CodeAnalysis.VisualBasic.Conversion&text=Conversion" data-throw-if-not-resolved="True"/>
+    description: A Conversion instance, representing the kind of conversion between the two type symbols; otherwise Null if compilation instance is Null.
+  parameters:
+  - namesWithMoniker:
+    - value: compilation
+    description: A source Compilation object.
+    type: <xref href="Microsoft.CodeAnalysis.Compilation?alt=Microsoft.CodeAnalysis.Compilation&text=Compilation" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: source
+    description: A source Typesymbol
+    type: <xref href="Microsoft.CodeAnalysis.ITypeSymbol?alt=Microsoft.CodeAnalysis.ITypeSymbol&text=ITypeSymbol" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: destination
+    description: A destination Typesymbol
+    type: <xref href="Microsoft.CodeAnalysis.ITypeSymbol?alt=Microsoft.CodeAnalysis.ITypeSymbol&text=ITypeSymbol" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion(Microsoft.CodeAnalysis.Compilation,Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion(Microsoft.CodeAnalysis.Compilation,Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  name: ClassifyConversion(Compilation, ITypeSymbol, ITypeSymbol)
+  fullName: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion(Compilation, ITypeSymbol, ITypeSymbol)
+  nameWithType: VisualBasicExtensions.ClassifyConversion(Compilation, ITypeSymbol, ITypeSymbol)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        [System::Runtime::CompilerServices::Extension]
+         static Microsoft::CodeAnalysis::VisualBasic::Conversion ClassifyConversion(Microsoft::CodeAnalysis::Compilation ^ compilation, Microsoft::CodeAnalysis::ITypeSymbol ^ source, Microsoft::CodeAnalysis::ITypeSymbol ^ destination);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.VisualBasic.Conversion ClassifyConversion (this Microsoft.CodeAnalysis.Compilation compilation, Microsoft.CodeAnalysis.ITypeSymbol source, Microsoft.CodeAnalysis.ITypeSymbol destination);
+  - lang: fsharp
+    values:
+    - value: 'static member ClassifyConversion : Microsoft.CodeAnalysis.Compilation * Microsoft.CodeAnalysis.ITypeSymbol * Microsoft.CodeAnalysis.ITypeSymbol -> Microsoft.CodeAnalysis.VisualBasic.Conversion'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ClassifyConversion (compilation As Compilation, source As ITypeSymbol, destination As ITypeSymbol) As Conversion
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines what kind of conversion there is between the specified types.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.VisualBasic.Conversion?alt=Microsoft.CodeAnalysis.VisualBasic.Conversion&text=Conversion" data-throw-if-not-resolved="True"/>
+    description: A Conversion instance, representing the kind of conversion between the expression and type symbol; otherwise Null if semantic model instance is Null.
+  parameters:
+  - namesWithMoniker:
+    - value: semanticModel
+    description: A source semantic model.
+    type: <xref href="Microsoft.CodeAnalysis.SemanticModel?alt=Microsoft.CodeAnalysis.SemanticModel&text=SemanticModel" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: expression
+    description: A source expression syntax.
+    type: <xref href="Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax?alt=Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax&text=ExpressionSyntax" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: destination
+    description: A destination TypeSymbol.
+    type: <xref href="Microsoft.CodeAnalysis.ITypeSymbol?alt=Microsoft.CodeAnalysis.ITypeSymbol&text=ITypeSymbol" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion(Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion(Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax,Microsoft.CodeAnalysis.ITypeSymbol)
+  name: ClassifyConversion(SemanticModel, ExpressionSyntax, ITypeSymbol)
+  fullName: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion(SemanticModel, ExpressionSyntax, ITypeSymbol)
+  nameWithType: VisualBasicExtensions.ClassifyConversion(SemanticModel, ExpressionSyntax, ITypeSymbol)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        [System::Runtime::CompilerServices::Extension]
+         static Microsoft::CodeAnalysis::VisualBasic::Conversion ClassifyConversion(Microsoft::CodeAnalysis::SemanticModel ^ semanticModel, Microsoft::CodeAnalysis::VisualBasic::Syntax::ExpressionSyntax ^ expression, Microsoft::CodeAnalysis::ITypeSymbol ^ destination);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.VisualBasic.Conversion ClassifyConversion (this Microsoft.CodeAnalysis.SemanticModel semanticModel, Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax expression, Microsoft.CodeAnalysis.ITypeSymbol destination);
+  - lang: fsharp
+    values:
+    - value: 'static member ClassifyConversion : Microsoft.CodeAnalysis.SemanticModel * Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax * Microsoft.CodeAnalysis.ITypeSymbol -> Microsoft.CodeAnalysis.VisualBasic.Conversion'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ClassifyConversion (semanticModel As SemanticModel, expression As ExpressionSyntax, destination As ITypeSymbol) As Conversion
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines what kind of conversion there is between the expression syntax and a specified type.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion*
+commentId: Overload:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion
+namespace: Microsoft.CodeAnalysis.VisualBasic
+name: ClassifyConversion
+fullName: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion
+nameWithType: VisualBasicExtensions.ClassifyConversion
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.VisualBasic.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.VisualBasic v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.VisualBasic v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.VisualBasic v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.VisualBasic v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.VisualBasic v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.VisualBasic v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.VisualBasic v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.VisualBasic v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.VisualBasic v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion
+  api_location:
+  - Microsoft.CodeAnalysis.VisualBasic.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.ClassifyConversion
+  - Microsoft::CodeAnalysis::VisualBasic::VisualBasicExtensions::ClassifyConversion
+  - ClassifyConversion
+  - VisualBasicExtensions.ClassifyConversion
+  - VisualBasicExtensions::ClassifyConversion
+  helpviewer_keywords:
+  - VisualBasicExtensions.ClassifyConversion method [.NET]
+  - ClassifyConversion method [.NET], class VisualBasicExtensions
+  - VisualBasicExtensions.ClassifyConversion(SemanticModel, Int32, ExpressionSyntax, ITypeSymbol) extension method [.NET]
+  - ClassifyConversion(SemanticModel, Int32, ExpressionSyntax, ITypeSymbol) extension method [.NET], class VisualBasicExtensions
+  - VisualBasicExtensions.ClassifyConversion(Compilation, ITypeSymbol, ITypeSymbol) extension method [.NET]
+  - ClassifyConversion(Compilation, ITypeSymbol, ITypeSymbol) extension method [.NET], class VisualBasicExtensions
+  - VisualBasicExtensions.ClassifyConversion(SemanticModel, ExpressionSyntax, ITypeSymbol) extension method [.NET]
+  - ClassifyConversion(SemanticModel, ExpressionSyntax, ITypeSymbol) extension method [.NET], class VisualBasicExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

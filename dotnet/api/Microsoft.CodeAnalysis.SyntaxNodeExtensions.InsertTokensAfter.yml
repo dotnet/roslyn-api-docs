@@ -1,0 +1,192 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - description: The type of the root node.
+    name: TRoot
+  returnsWithMoniker:
+    type:
+    - value: TRoot
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root of the tree of nodes.
+    type: TRoot
+  - namesWithMoniker:
+    - value: tokenInList
+    description: The token to insert after; a descendant of the root node and an element of a list member.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newTokens
+    description: A sequence of tokens to insert into the tree immediately after the specified token.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.InsertTokensAfter``1(``0,Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken})
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.InsertTokensAfter``1(``0,Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken})
+  name: InsertTokensAfter<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.InsertTokensAfter<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>)
+  nameWithType: SyntaxNodeExtensions.InsertTokensAfter<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TRoot>
+         where TRoot : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TRoot InsertTokensAfter(TRoot root, Microsoft::CodeAnalysis::SyntaxToken tokenInList, System::Collections::Generic::IEnumerable<Microsoft::CodeAnalysis::SyntaxToken> ^ newTokens);
+  - lang: csharp
+    values:
+    - value: 'public static TRoot InsertTokensAfter<TRoot> (this TRoot root, Microsoft.CodeAnalysis.SyntaxToken tokenInList, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxToken> newTokens) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member InsertTokensAfter : 'Root * Microsoft.CodeAnalysis.SyntaxToken * seq<Microsoft.CodeAnalysis.SyntaxToken> -> 'Root (requires 'Root :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function InsertTokensAfter(Of TRoot As SyntaxNode) (root As TRoot, tokenInList As SyntaxToken, newTokens As IEnumerable(Of SyntaxToken)) As TRoot
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a new tree of nodes with new tokens inserted after the specified token.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.InsertTokensAfter*
+commentId: Overload:Microsoft.CodeAnalysis.SyntaxNodeExtensions.InsertTokensAfter
+namespace: Microsoft.CodeAnalysis
+name: InsertTokensAfter
+fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.InsertTokensAfter
+nameWithType: SyntaxNodeExtensions.InsertTokensAfter
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.InsertTokensAfter
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.InsertTokensAfter
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::InsertTokensAfter
+  - InsertTokensAfter
+  - SyntaxNodeExtensions.InsertTokensAfter
+  - SyntaxNodeExtensions::InsertTokensAfter
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.InsertTokensAfter``1
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::InsertTokensAfter``1
+  - InsertTokensAfter``1
+  - SyntaxNodeExtensions.InsertTokensAfter``1
+  - SyntaxNodeExtensions::InsertTokensAfter``1
+  helpviewer_keywords:
+  - SyntaxNodeExtensions.InsertTokensAfter method [.NET]
+  - InsertTokensAfter method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.InsertTokensAfter<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>) extension method [.NET]
+  - InsertTokensAfter<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>) extension method [.NET], class SyntaxNodeExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

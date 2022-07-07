@@ -1,0 +1,253 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: trivia
+    description: The trivia to be replaced; descendants of the root token.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: computeReplacementTrivia
+    description: >-
+      A function that computes a replacement trivia for
+                  the argument trivia. The first argument is the original trivia. The second argument is
+                  the same trivia rewritten with replaced structure.
+    type: <xref href="System.Func`3?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia(Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia})
+  commentId: M:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia(Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia})
+  name: ReplaceTrivia(SyntaxToken, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>)
+  fullName: Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia(SyntaxToken, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>)
+  nameWithType: CSharpExtensions.ReplaceTrivia(SyntaxToken, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        [System::Runtime::CompilerServices::Extension]
+         static Microsoft::CodeAnalysis::SyntaxToken ReplaceTrivia(Microsoft::CodeAnalysis::SyntaxToken token, System::Collections::Generic::IEnumerable<Microsoft::CodeAnalysis::SyntaxTrivia> ^ trivia, Func<Microsoft::CodeAnalysis::SyntaxTrivia, Microsoft::CodeAnalysis::SyntaxTrivia, Microsoft::CodeAnalysis::SyntaxTrivia> ^ computeReplacementTrivia);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.SyntaxToken ReplaceTrivia (this Microsoft.CodeAnalysis.SyntaxToken token, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxTrivia> trivia, Func<Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia> computeReplacementTrivia);
+  - lang: fsharp
+    values:
+    - value: 'static member ReplaceTrivia : Microsoft.CodeAnalysis.SyntaxToken * seq<Microsoft.CodeAnalysis.SyntaxTrivia> * Func<Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia> -> Microsoft.CodeAnalysis.SyntaxToken'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ReplaceTrivia (token As SyntaxToken, trivia As IEnumerable(Of SyntaxTrivia), computeReplacementTrivia As Func(Of SyntaxTrivia, SyntaxTrivia, SyntaxTrivia)) As SyntaxToken
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a new token with the specified old trivia replaced with computed new trivia.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: token
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: oldTrivia
+    description: The trivia to be replaced.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newTrivia
+    description: >-
+      The new trivia to use in the new tree in place of the old
+                  trivia.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia)
+  commentId: M:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia)
+  name: ReplaceTrivia(SyntaxToken, SyntaxTrivia, SyntaxTrivia)
+  fullName: Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia(SyntaxToken, SyntaxTrivia, SyntaxTrivia)
+  nameWithType: CSharpExtensions.ReplaceTrivia(SyntaxToken, SyntaxTrivia, SyntaxTrivia)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        [System::Runtime::CompilerServices::Extension]
+         static Microsoft::CodeAnalysis::SyntaxToken ReplaceTrivia(Microsoft::CodeAnalysis::SyntaxToken token, Microsoft::CodeAnalysis::SyntaxTrivia oldTrivia, Microsoft::CodeAnalysis::SyntaxTrivia newTrivia);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.SyntaxToken ReplaceTrivia (this Microsoft.CodeAnalysis.SyntaxToken token, Microsoft.CodeAnalysis.SyntaxTrivia oldTrivia, Microsoft.CodeAnalysis.SyntaxTrivia newTrivia);
+  - lang: fsharp
+    values:
+    - value: 'static member ReplaceTrivia : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SyntaxTrivia * Microsoft.CodeAnalysis.SyntaxTrivia -> Microsoft.CodeAnalysis.SyntaxToken'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ReplaceTrivia (token As SyntaxToken, oldTrivia As SyntaxTrivia, newTrivia As SyntaxTrivia) As SyntaxToken
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates a new token with the specified old trivia replaced with a new trivia. The old trivia may appear in
+
+    the token's leading or trailing trivia.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia*
+commentId: Overload:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia
+namespace: Microsoft.CodeAnalysis.CSharp
+name: ReplaceTrivia
+fullName: Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia
+nameWithType: CSharpExtensions.ReplaceTrivia
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.CSharp.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.CSharp v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.CSharp v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.CSharp v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.CSharp v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.CSharp v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.CSharp v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.CSharp v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.CSharp v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.CSharp v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.CSharp v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.CSharp v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.CSharp v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.CSharp v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.CSharp v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.CSharp v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.CSharp v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia
+  api_location:
+  - Microsoft.CodeAnalysis.CSharp.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.CSharp.CSharpExtensions.ReplaceTrivia
+  - Microsoft::CodeAnalysis::CSharp::CSharpExtensions::ReplaceTrivia
+  - ReplaceTrivia
+  - CSharpExtensions.ReplaceTrivia
+  - CSharpExtensions::ReplaceTrivia
+  helpviewer_keywords:
+  - CSharpExtensions.ReplaceTrivia method [.NET]
+  - ReplaceTrivia method [.NET], class CSharpExtensions
+  - CSharpExtensions.ReplaceTrivia(SyntaxToken, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>) extension method [.NET]
+  - ReplaceTrivia(SyntaxToken, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>) extension method [.NET], class CSharpExtensions
+  - CSharpExtensions.ReplaceTrivia(SyntaxToken, SyntaxTrivia, SyntaxTrivia) extension method [.NET]
+  - ReplaceTrivia(SyntaxToken, SyntaxTrivia, SyntaxTrivia) extension method [.NET], class CSharpExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

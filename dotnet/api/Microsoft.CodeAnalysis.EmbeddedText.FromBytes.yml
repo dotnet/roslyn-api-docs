@@ -1,0 +1,184 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.EmbeddedText?alt=Microsoft.CodeAnalysis.EmbeddedText&text=EmbeddedText" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: filePath
+    description: The file path (pre-normalization) to use in the PDB.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: bytes
+    description: The bytes.
+    type: <xref href="System.ArraySegment`1?alt=System.ArraySegment&text=ArraySegment" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: checksumAlgorithm
+    description: Hash algorithm to use to calculate checksum of the text that's saved to PDB.
+    type: <xref href="Microsoft.CodeAnalysis.Text.SourceHashAlgorithm?alt=Microsoft.CodeAnalysis.Text.SourceHashAlgorithm&text=SourceHashAlgorithm" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: >-
+      <code data-dev-comment-type="paramref">bytes</code> is default-initialized.
+        <code data-dev-comment-type="paramref">filePath</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: >-
+      <code data-dev-comment-type="paramref">filePath</code> is empty.
+        <code data-dev-comment-type="paramref">checksumAlgorithm</code> is not supported.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  - description: An I/O error occurs.
+    type: <xref href="System.IO.IOException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.EmbeddedText.FromBytes(System.String,System.ArraySegment{System.Byte},Microsoft.CodeAnalysis.Text.SourceHashAlgorithm)
+  commentId: M:Microsoft.CodeAnalysis.EmbeddedText.FromBytes(System.String,System.ArraySegment{System.Byte},Microsoft.CodeAnalysis.Text.SourceHashAlgorithm)
+  name: FromBytes(String, ArraySegment<Byte>, SourceHashAlgorithm)
+  fullName: Microsoft.CodeAnalysis.EmbeddedText.FromBytes(String, ArraySegment<Byte>, SourceHashAlgorithm)
+  nameWithType: EmbeddedText.FromBytes(String, ArraySegment<Byte>, SourceHashAlgorithm)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.EmbeddedText FromBytes (string filePath, ArraySegment<byte> bytes, Microsoft.CodeAnalysis.Text.SourceHashAlgorithm checksumAlgorithm = Microsoft.CodeAnalysis.Text.SourceHashAlgorithm.Sha1);
+  - lang: fsharp
+    values:
+    - value: 'static member FromBytes : string * ArraySegment<byte> * Microsoft.CodeAnalysis.Text.SourceHashAlgorithm -> Microsoft.CodeAnalysis.EmbeddedText'
+  - lang: vb
+    values:
+    - value: Public Shared Function FromBytes (filePath As String, bytes As ArraySegment(Of Byte), Optional checksumAlgorithm As SourceHashAlgorithm = Microsoft.CodeAnalysis.Text.SourceHashAlgorithm.Sha1) As EmbeddedText
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Constructs an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.EmbeddedText"></xref> from bytes.
+  remarks: Reads from the beginning of the stream. Leaves the stream open.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.EmbeddedText.FromBytes*
+commentId: Overload:Microsoft.CodeAnalysis.EmbeddedText.FromBytes
+namespace: Microsoft.CodeAnalysis
+name: FromBytes
+fullName: Microsoft.CodeAnalysis.EmbeddedText.FromBytes
+nameWithType: EmbeddedText.FromBytes
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.EmbeddedText.FromBytes
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.EmbeddedText.FromBytes
+  - Microsoft::CodeAnalysis::EmbeddedText::FromBytes
+  - FromBytes
+  - EmbeddedText.FromBytes
+  - EmbeddedText::FromBytes
+  helpviewer_keywords:
+  - EmbeddedText.FromBytes method [.NET]
+  - FromBytes method [.NET], class EmbeddedText
+  - EmbeddedText.FromBytes(String, ArraySegment<Byte>, SourceHashAlgorithm) method [.NET]
+  - FromBytes(String, ArraySegment<Byte>, SourceHashAlgorithm) method [.NET], class EmbeddedText
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

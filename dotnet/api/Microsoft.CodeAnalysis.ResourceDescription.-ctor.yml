@@ -1,0 +1,257 @@
+### YamlMime:NetMember
+type: constructor
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: resourceName
+    description: Resource name.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: dataProvider
+    description: >-
+      The callers will dispose the result after use.
+                  This allows the resources to be opened and read one at a time.
+    type: <xref href="System.Func`1?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: isPublic
+    description: True if the resource is public.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.CodeAnalysis.ResourceDescription.#ctor(System.String,System.Func{System.IO.Stream},System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.ResourceDescription.#ctor(System.String,System.Func{System.IO.Stream},System.Boolean)
+  name: ResourceDescription(String, Func<Stream>, Boolean)
+  fullName: Microsoft.CodeAnalysis.ResourceDescription.ResourceDescription(String, Func<Stream>, Boolean)
+  nameWithType: ResourceDescription.ResourceDescription(String, Func<Stream>, Boolean)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         ResourceDescription(System::String ^ resourceName, Func<System::IO::Stream ^> ^ dataProvider, bool isPublic);
+  - lang: csharp
+    values:
+    - value: public ResourceDescription (string resourceName, Func<System.IO.Stream> dataProvider, bool isPublic);
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.CodeAnalysis.ResourceDescription : string * Func<System.IO.Stream> * bool -> Microsoft.CodeAnalysis.ResourceDescription'
+  - lang: vb
+    values:
+    - value: Public Sub New (resourceName As String, dataProvider As Func(Of Stream), isPublic As Boolean)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a representation of a resource whose contents are to be embedded in the output assembly.
+  remarks: Returns a stream of the data to embed.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: resourceName
+    description: Resource name.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: fileName
+    description: File name with an extension to be stored in metadata.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: dataProvider
+    description: >-
+      The callers will dispose the result after use.
+                  This allows the resources to be opened and read one at a time.
+    type: <xref href="System.Func`1?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: isPublic
+    description: True if the resource is public.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: constructor
+  uid: Microsoft.CodeAnalysis.ResourceDescription.#ctor(System.String,System.String,System.Func{System.IO.Stream},System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.ResourceDescription.#ctor(System.String,System.String,System.Func{System.IO.Stream},System.Boolean)
+  name: ResourceDescription(String, String, Func<Stream>, Boolean)
+  fullName: Microsoft.CodeAnalysis.ResourceDescription.ResourceDescription(String, String, Func<Stream>, Boolean)
+  nameWithType: ResourceDescription.ResourceDescription(String, String, Func<Stream>, Boolean)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         ResourceDescription(System::String ^ resourceName, System::String ^ fileName, Func<System::IO::Stream ^> ^ dataProvider, bool isPublic);
+  - lang: csharp
+    values:
+    - value: public ResourceDescription (string resourceName, string fileName, Func<System.IO.Stream> dataProvider, bool isPublic);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+    - value: public ResourceDescription (string resourceName, string? fileName, Func<System.IO.Stream> dataProvider, bool isPublic);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'new Microsoft.CodeAnalysis.ResourceDescription : string * string * Func<System.IO.Stream> * bool -> Microsoft.CodeAnalysis.ResourceDescription'
+  - lang: vb
+    values:
+    - value: Public Sub New (resourceName As String, fileName As String, dataProvider As Func(Of Stream), isPublic As Boolean)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a representation of a resource whose file name will be recorded in the assembly.
+  remarks: Function returning a stream of the resource content (used to calculate hash).
+  metadata: {}
+uid: Microsoft.CodeAnalysis.ResourceDescription.#ctor*
+commentId: Overload:Microsoft.CodeAnalysis.ResourceDescription.#ctor
+namespace: Microsoft.CodeAnalysis
+name: ResourceDescription
+fullName: Microsoft.CodeAnalysis.ResourceDescription.ResourceDescription
+nameWithType: ResourceDescription.ResourceDescription
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.ResourceDescription..ctor
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.ResourceDescription.#ctor
+  - Microsoft::CodeAnalysis::ResourceDescription::#ctor
+  - '#ctor'
+  - ResourceDescription.#ctor
+  - ResourceDescription::#ctor
+  helpviewer_keywords:
+  - ResourceDescription class [.NET], constructors
+  - ResourceDescription(String, Func<Stream>, Boolean) class [.NET], constructors
+  - ResourceDescription(String, String, Func<Stream>, Boolean) class [.NET], constructors
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

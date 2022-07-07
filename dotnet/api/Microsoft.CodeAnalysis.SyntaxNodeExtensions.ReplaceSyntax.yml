@@ -1,0 +1,236 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - description: The type of the root node.
+    name: TRoot
+  returnsWithMoniker:
+    type:
+    - value: TRoot
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root node of the tree of nodes.
+    type: TRoot
+  - namesWithMoniker:
+    - value: nodes
+    description: The nodes to be replaced.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: computeReplacementNode
+    description: >-
+      A function that computes a replacement node for the
+                  argument nodes. The first argument is the original node. The second argument is the same
+                  node potentially rewritten with replaced descendants.
+    type: <xref href="System.Func`3?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: tokens
+    description: The tokens to be replaced.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: computeReplacementToken
+    description: >-
+      A function that computes a replacement token for
+                  the argument tokens. The first argument is the original token. The second argument is
+                  the same token potentially rewritten with replaced trivia.
+    type: <xref href="System.Func`3?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: trivia
+    description: The trivia to be replaced.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: computeReplacementTrivia
+    description: >-
+      A function that computes replacement trivia for
+                  the specified arguments. The first argument is the original trivia. The second argument is
+                  the same trivia with potentially rewritten sub structure.
+    type: <xref href="System.Func`3?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceSyntax``1(``0,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},System.Func{Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken},System.Func{Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia})
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceSyntax``1(``0,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxNode},System.Func{Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken},System.Func{Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken},System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia})
+  name: ReplaceSyntax<TRoot>(TRoot, IEnumerable<SyntaxNode>, Func<SyntaxNode,SyntaxNode,SyntaxNode>, IEnumerable<SyntaxToken>, Func<SyntaxToken,SyntaxToken,SyntaxToken>, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceSyntax<TRoot>(TRoot, IEnumerable<SyntaxNode>, Func<SyntaxNode,SyntaxNode,SyntaxNode>, IEnumerable<SyntaxToken>, Func<SyntaxToken,SyntaxToken,SyntaxToken>, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>)
+  nameWithType: SyntaxNodeExtensions.ReplaceSyntax<TRoot>(TRoot, IEnumerable<SyntaxNode>, Func<SyntaxNode,SyntaxNode,SyntaxNode>, IEnumerable<SyntaxToken>, Func<SyntaxToken,SyntaxToken,SyntaxToken>, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TRoot>
+         where TRoot : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TRoot ReplaceSyntax(TRoot root, System::Collections::Generic::IEnumerable<Microsoft::CodeAnalysis::SyntaxNode ^> ^ nodes, Func<Microsoft::CodeAnalysis::SyntaxNode ^, Microsoft::CodeAnalysis::SyntaxNode ^, Microsoft::CodeAnalysis::SyntaxNode ^> ^ computeReplacementNode, System::Collections::Generic::IEnumerable<Microsoft::CodeAnalysis::SyntaxToken> ^ tokens, Func<Microsoft::CodeAnalysis::SyntaxToken, Microsoft::CodeAnalysis::SyntaxToken, Microsoft::CodeAnalysis::SyntaxToken> ^ computeReplacementToken, System::Collections::Generic::IEnumerable<Microsoft::CodeAnalysis::SyntaxTrivia> ^ trivia, Func<Microsoft::CodeAnalysis::SyntaxTrivia, Microsoft::CodeAnalysis::SyntaxTrivia, Microsoft::CodeAnalysis::SyntaxTrivia> ^ computeReplacementTrivia);
+  - lang: csharp
+    values:
+    - value: 'public static TRoot ReplaceSyntax<TRoot> (this TRoot root, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxNode> nodes, Func<Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode> computeReplacementNode, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxToken> tokens, Func<Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken> computeReplacementToken, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxTrivia> trivia, Func<Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia> computeReplacementTrivia) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+    - value: 'public static TRoot ReplaceSyntax<TRoot> (this TRoot root, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxNode>? nodes, Func<Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode>? computeReplacementNode, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxToken>? tokens, Func<Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken>? computeReplacementToken, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxTrivia>? trivia, Func<Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia>? computeReplacementTrivia) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+      monikers:
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: "static member ReplaceSyntax : 'Root * seq<Microsoft.CodeAnalysis.SyntaxNode> * Func<Microsoft.CodeAnalysis.SyntaxNode, Microsoft.CodeAnalysis.SyntaxNode, Microsoft.CodeAnalysis.SyntaxNode> * seq<Microsoft.CodeAnalysis.SyntaxToken> * Func<Microsoft.CodeAnalysis.SyntaxToken, Microsoft.CodeAnalysis.SyntaxToken, Microsoft.CodeAnalysis.SyntaxToken> * seq<Microsoft.CodeAnalysis.SyntaxTrivia> * Func<Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia> -> 'Root (requires 'Root :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ReplaceSyntax(Of TRoot As SyntaxNode) (root As TRoot, nodes As IEnumerable(Of SyntaxNode), computeReplacementNode As Func(Of SyntaxNode, SyntaxNode, SyntaxNode), tokens As IEnumerable(Of SyntaxToken), computeReplacementToken As Func(Of SyntaxToken, SyntaxToken, SyntaxToken), trivia As IEnumerable(Of SyntaxTrivia), computeReplacementTrivia As Func(Of SyntaxTrivia, SyntaxTrivia, SyntaxTrivia)) As TRoot
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a new tree of nodes with the specified nodes, tokens and trivia replaced.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceSyntax*
+commentId: Overload:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceSyntax
+namespace: Microsoft.CodeAnalysis
+name: ReplaceSyntax
+fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceSyntax
+nameWithType: SyntaxNodeExtensions.ReplaceSyntax
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceSyntax
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceSyntax
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::ReplaceSyntax
+  - ReplaceSyntax
+  - SyntaxNodeExtensions.ReplaceSyntax
+  - SyntaxNodeExtensions::ReplaceSyntax
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceSyntax``1
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::ReplaceSyntax``1
+  - ReplaceSyntax``1
+  - SyntaxNodeExtensions.ReplaceSyntax``1
+  - SyntaxNodeExtensions::ReplaceSyntax``1
+  helpviewer_keywords:
+  - SyntaxNodeExtensions.ReplaceSyntax method [.NET]
+  - ReplaceSyntax method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.ReplaceSyntax<TRoot>(TRoot, IEnumerable<SyntaxNode>, Func<SyntaxNode,SyntaxNode,SyntaxNode>, IEnumerable<SyntaxToken>, Func<SyntaxToken,SyntaxToken,SyntaxToken>, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>) extension method [.NET]
+  - ReplaceSyntax<TRoot>(TRoot, IEnumerable<SyntaxNode>, Func<SyntaxNode,SyntaxNode,SyntaxNode>, IEnumerable<SyntaxToken>, Func<SyntaxToken,SyntaxToken,SyntaxToken>, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>) extension method [.NET], class SyntaxNodeExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

@@ -1,0 +1,245 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.TextLoader?alt=Microsoft.CodeAnalysis.TextLoader&text=TextLoader" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: textAndVersion
+    type: <xref href="Microsoft.CodeAnalysis.TextAndVersion?alt=Microsoft.CodeAnalysis.TextAndVersion&text=TextAndVersion" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.TextLoader.From(Microsoft.CodeAnalysis.TextAndVersion)
+  commentId: M:Microsoft.CodeAnalysis.TextLoader.From(Microsoft.CodeAnalysis.TextAndVersion)
+  name: From(TextAndVersion)
+  fullName: Microsoft.CodeAnalysis.TextLoader.From(TextAndVersion)
+  nameWithType: TextLoader.From(TextAndVersion)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static Microsoft::CodeAnalysis::TextLoader ^ From(Microsoft::CodeAnalysis::TextAndVersion ^ textAndVersion);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.TextLoader From (Microsoft.CodeAnalysis.TextAndVersion textAndVersion);
+  - lang: fsharp
+    values:
+    - value: 'static member From : Microsoft.CodeAnalysis.TextAndVersion -> Microsoft.CodeAnalysis.TextLoader'
+  - lang: vb
+    values:
+    - value: Public Shared Function From (textAndVersion As TextAndVersion) As TextLoader
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a new <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.TextLoader"></xref> from an already existing source text and version.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.TextLoader?alt=Microsoft.CodeAnalysis.TextLoader&text=TextLoader" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: container
+    type: <xref href="Microsoft.CodeAnalysis.Text.SourceTextContainer?alt=Microsoft.CodeAnalysis.Text.SourceTextContainer&text=SourceTextContainer" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: version
+    type: <xref href="Microsoft.CodeAnalysis.VersionStamp?alt=Microsoft.CodeAnalysis.VersionStamp&text=VersionStamp" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: filePath
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.TextLoader.From(Microsoft.CodeAnalysis.Text.SourceTextContainer,Microsoft.CodeAnalysis.VersionStamp,System.String)
+  commentId: M:Microsoft.CodeAnalysis.TextLoader.From(Microsoft.CodeAnalysis.Text.SourceTextContainer,Microsoft.CodeAnalysis.VersionStamp,System.String)
+  name: From(SourceTextContainer, VersionStamp, String)
+  fullName: Microsoft.CodeAnalysis.TextLoader.From(SourceTextContainer, VersionStamp, String)
+  nameWithType: TextLoader.From(SourceTextContainer, VersionStamp, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.TextLoader From (Microsoft.CodeAnalysis.Text.SourceTextContainer container, Microsoft.CodeAnalysis.VersionStamp version, string filePath = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+    - value: public static Microsoft.CodeAnalysis.TextLoader From (Microsoft.CodeAnalysis.Text.SourceTextContainer container, Microsoft.CodeAnalysis.VersionStamp version, string? filePath = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member From : Microsoft.CodeAnalysis.Text.SourceTextContainer * Microsoft.CodeAnalysis.VersionStamp * string -> Microsoft.CodeAnalysis.TextLoader'
+  - lang: vb
+    values:
+    - value: Public Shared Function From (container As SourceTextContainer, version As VersionStamp, Optional filePath As String = Nothing) As TextLoader
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.TextLoader"></xref> from a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Text.SourceTextContainer"></xref> and version. 
+
+
+    The text obtained from the loader will be the current text of the container at the time
+
+    the loader is accessed.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.TextLoader.From*
+commentId: Overload:Microsoft.CodeAnalysis.TextLoader.From
+namespace: Microsoft.CodeAnalysis
+name: From
+fullName: Microsoft.CodeAnalysis.TextLoader.From
+nameWithType: TextLoader.From
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.TextLoader.From
+  api_location:
+  - Microsoft.CodeAnalysis.Workspaces.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.TextLoader.From
+  - Microsoft::CodeAnalysis::TextLoader::From
+  - From
+  - TextLoader.From
+  - TextLoader::From
+  helpviewer_keywords:
+  - TextLoader.From method [.NET]
+  - From method [.NET], class TextLoader
+  - TextLoader.From(TextAndVersion) method [.NET]
+  - From(TextAndVersion) method [.NET], class TextLoader
+  - TextLoader.From(SourceTextContainer, VersionStamp, String) method [.NET]
+  - From(SourceTextContainer, VersionStamp, String) method [.NET], class TextLoader
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

@@ -1,0 +1,331 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - description: The type of the root node.
+    name: TRoot
+  returnsWithMoniker:
+    type:
+    - value: TRoot
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root node of the tree of nodes.
+    type: TRoot
+  - namesWithMoniker:
+    - value: trivia
+    description: The trivia to be replaced.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newTrivia
+    description: The new trivia to use in the new tree in place of the old trivia.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia``1(``0,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia)
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia``1(``0,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia)
+  name: ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, SyntaxTrivia)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, SyntaxTrivia)
+  nameWithType: SyntaxNodeExtensions.ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, SyntaxTrivia)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TRoot>
+         where TRoot : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TRoot ReplaceTrivia(TRoot root, Microsoft::CodeAnalysis::SyntaxTrivia trivia, Microsoft::CodeAnalysis::SyntaxTrivia newTrivia);
+  - lang: csharp
+    values:
+    - value: 'public static TRoot ReplaceTrivia<TRoot> (this TRoot root, Microsoft.CodeAnalysis.SyntaxTrivia trivia, Microsoft.CodeAnalysis.SyntaxTrivia newTrivia) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member ReplaceTrivia : 'Root * Microsoft.CodeAnalysis.SyntaxTrivia * Microsoft.CodeAnalysis.SyntaxTrivia -> 'Root (requires 'Root :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ReplaceTrivia(Of TRoot As SyntaxNode) (root As TRoot, trivia As SyntaxTrivia, newTrivia As SyntaxTrivia) As TRoot
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a new tree of nodes with the specified trivia replaced with new trivia.
+  metadata: {}
+- typeParameters:
+  - description: The type of the root node.
+    name: TRoot
+  returnsWithMoniker:
+    type:
+    - value: TRoot
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root of the tree of nodes.
+    type: TRoot
+  - namesWithMoniker:
+    - value: oldTrivia
+    description: The trivia to be replaced; a descendant of the root node.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newTrivia
+    description: A sequence of trivia to use in the tree in place of the specified trivia.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia``1(``0,Microsoft.CodeAnalysis.SyntaxTrivia,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia})
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia``1(``0,Microsoft.CodeAnalysis.SyntaxTrivia,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia})
+  name: ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, IEnumerable<SyntaxTrivia>)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, IEnumerable<SyntaxTrivia>)
+  nameWithType: SyntaxNodeExtensions.ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, IEnumerable<SyntaxTrivia>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TRoot>
+         where TRoot : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TRoot ReplaceTrivia(TRoot root, Microsoft::CodeAnalysis::SyntaxTrivia oldTrivia, System::Collections::Generic::IEnumerable<Microsoft::CodeAnalysis::SyntaxTrivia> ^ newTrivia);
+  - lang: csharp
+    values:
+    - value: 'public static TRoot ReplaceTrivia<TRoot> (this TRoot root, Microsoft.CodeAnalysis.SyntaxTrivia oldTrivia, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxTrivia> newTrivia) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member ReplaceTrivia : 'Root * Microsoft.CodeAnalysis.SyntaxTrivia * seq<Microsoft.CodeAnalysis.SyntaxTrivia> -> 'Root (requires 'Root :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ReplaceTrivia(Of TRoot As SyntaxNode) (root As TRoot, oldTrivia As SyntaxTrivia, newTrivia As IEnumerable(Of SyntaxTrivia)) As TRoot
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a new tree of nodes with the specified old trivia replaced with new trivia.
+  metadata: {}
+- typeParameters:
+  - description: The type of the root node.
+    name: TRoot
+  returnsWithMoniker:
+    type:
+    - value: TRoot
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root node of the tree of nodes.
+    type: TRoot
+  - namesWithMoniker:
+    - value: trivia
+    description: The trivia to be replaced; descendants of the root node.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: computeReplacementTrivia
+    description: >-
+      A function that computes replacement trivia for
+                  the specified arguments. The first argument is the original trivia. The second argument is
+                  the same trivia with potentially rewritten sub structure.
+    type: <xref href="System.Func`3?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxTrivia?alt=Microsoft.CodeAnalysis.SyntaxTrivia&text=SyntaxTrivia" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia``1(``0,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia})
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia``1(``0,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxTrivia},System.Func{Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia})
+  name: ReplaceTrivia<TRoot>(TRoot, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia<TRoot>(TRoot, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>)
+  nameWithType: SyntaxNodeExtensions.ReplaceTrivia<TRoot>(TRoot, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TRoot>
+         where TRoot : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TRoot ReplaceTrivia(TRoot root, System::Collections::Generic::IEnumerable<Microsoft::CodeAnalysis::SyntaxTrivia> ^ trivia, Func<Microsoft::CodeAnalysis::SyntaxTrivia, Microsoft::CodeAnalysis::SyntaxTrivia, Microsoft::CodeAnalysis::SyntaxTrivia> ^ computeReplacementTrivia);
+  - lang: csharp
+    values:
+    - value: 'public static TRoot ReplaceTrivia<TRoot> (this TRoot root, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxTrivia> trivia, Func<Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia,Microsoft.CodeAnalysis.SyntaxTrivia> computeReplacementTrivia) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member ReplaceTrivia : 'Root * seq<Microsoft.CodeAnalysis.SyntaxTrivia> * Func<Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia, Microsoft.CodeAnalysis.SyntaxTrivia> -> 'Root (requires 'Root :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ReplaceTrivia(Of TRoot As SyntaxNode) (root As TRoot, trivia As IEnumerable(Of SyntaxTrivia), computeReplacementTrivia As Func(Of SyntaxTrivia, SyntaxTrivia, SyntaxTrivia)) As TRoot
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a new tree of nodes with the specified trivia replaced with new trivia.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia*
+commentId: Overload:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia
+namespace: Microsoft.CodeAnalysis
+name: ReplaceTrivia
+fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia
+nameWithType: SyntaxNodeExtensions.ReplaceTrivia
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::ReplaceTrivia
+  - ReplaceTrivia
+  - SyntaxNodeExtensions.ReplaceTrivia
+  - SyntaxNodeExtensions::ReplaceTrivia
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceTrivia``1
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::ReplaceTrivia``1
+  - ReplaceTrivia``1
+  - SyntaxNodeExtensions.ReplaceTrivia``1
+  - SyntaxNodeExtensions::ReplaceTrivia``1
+  helpviewer_keywords:
+  - SyntaxNodeExtensions.ReplaceTrivia method [.NET]
+  - ReplaceTrivia method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, SyntaxTrivia) extension method [.NET]
+  - ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, SyntaxTrivia) extension method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, IEnumerable<SyntaxTrivia>) extension method [.NET]
+  - ReplaceTrivia<TRoot>(TRoot, SyntaxTrivia, IEnumerable<SyntaxTrivia>) extension method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.ReplaceTrivia<TRoot>(TRoot, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>) extension method [.NET]
+  - ReplaceTrivia<TRoot>(TRoot, IEnumerable<SyntaxTrivia>, Func<SyntaxTrivia,SyntaxTrivia,SyntaxTrivia>) extension method [.NET], class SyntaxNodeExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

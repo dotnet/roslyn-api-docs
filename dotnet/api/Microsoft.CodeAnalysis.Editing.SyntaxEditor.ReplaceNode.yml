@@ -1,0 +1,225 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: node
+    description: The node to replace that already exists in the tree.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newNode
+    description: The new node that will be placed into the tree in the existing node's location.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)
+  commentId: M:Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode)
+  name: ReplaceNode(SyntaxNode, SyntaxNode)
+  fullName: Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode(SyntaxNode, SyntaxNode)
+  nameWithType: SyntaxEditor.ReplaceNode(SyntaxNode, SyntaxNode)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         void ReplaceNode(Microsoft::CodeAnalysis::SyntaxNode ^ node, Microsoft::CodeAnalysis::SyntaxNode ^ newNode);
+  - lang: csharp
+    values:
+    - value: public void ReplaceNode (Microsoft.CodeAnalysis.SyntaxNode node, Microsoft.CodeAnalysis.SyntaxNode newNode);
+  - lang: fsharp
+    values:
+    - value: 'member this.ReplaceNode : Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SyntaxNode -> unit'
+  - lang: vb
+    values:
+    - value: Public Sub ReplaceNode (node As SyntaxNode, newNode As SyntaxNode)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Replace the specified node with a different node.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: node
+    description: The node to replace that already exists in the tree.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: computeReplacement
+    description: >-
+      A function that computes a replacement node. 
+                  The node passed into the compute function includes changes from prior edits. It will not appear as a descendant of the original root.
+    type: <xref href="System.Func`3?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.Editing.SyntaxGenerator?alt=Microsoft.CodeAnalysis.Editing.SyntaxGenerator&text=SyntaxGenerator" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode(Microsoft.CodeAnalysis.SyntaxNode,System.Func{Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.Editing.SyntaxGenerator,Microsoft.CodeAnalysis.SyntaxNode})
+  commentId: M:Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode(Microsoft.CodeAnalysis.SyntaxNode,System.Func{Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.Editing.SyntaxGenerator,Microsoft.CodeAnalysis.SyntaxNode})
+  name: ReplaceNode(SyntaxNode, Func<SyntaxNode,SyntaxGenerator,SyntaxNode>)
+  fullName: Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode(SyntaxNode, Func<SyntaxNode,SyntaxGenerator,SyntaxNode>)
+  nameWithType: SyntaxEditor.ReplaceNode(SyntaxNode, Func<SyntaxNode,SyntaxGenerator,SyntaxNode>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         void ReplaceNode(Microsoft::CodeAnalysis::SyntaxNode ^ node, Func<Microsoft::CodeAnalysis::SyntaxNode ^, Microsoft::CodeAnalysis::Editing::SyntaxGenerator ^, Microsoft::CodeAnalysis::SyntaxNode ^> ^ computeReplacement);
+  - lang: csharp
+    values:
+    - value: public void ReplaceNode (Microsoft.CodeAnalysis.SyntaxNode node, Func<Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.Editing.SyntaxGenerator,Microsoft.CodeAnalysis.SyntaxNode> computeReplacement);
+  - lang: fsharp
+    values:
+    - value: 'member this.ReplaceNode : Microsoft.CodeAnalysis.SyntaxNode * Func<Microsoft.CodeAnalysis.SyntaxNode, Microsoft.CodeAnalysis.Editing.SyntaxGenerator, Microsoft.CodeAnalysis.SyntaxNode> -> unit'
+  - lang: vb
+    values:
+    - value: Public Sub ReplaceNode (node As SyntaxNode, computeReplacement As Func(Of SyntaxNode, SyntaxGenerator, SyntaxNode))
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Replace the specified node with a node produced by the function.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode*
+commentId: Overload:Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode
+namespace: Microsoft.CodeAnalysis.Editing
+name: ReplaceNode
+fullName: Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode
+nameWithType: SyntaxEditor.ReplaceNode
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode
+  api_location:
+  - Microsoft.CodeAnalysis.Workspaces.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Editing.SyntaxEditor.ReplaceNode
+  - Microsoft::CodeAnalysis::Editing::SyntaxEditor::ReplaceNode
+  - ReplaceNode
+  - SyntaxEditor.ReplaceNode
+  - SyntaxEditor::ReplaceNode
+  helpviewer_keywords:
+  - SyntaxEditor.ReplaceNode method [.NET]
+  - ReplaceNode method [.NET], class SyntaxEditor
+  - SyntaxEditor.ReplaceNode(SyntaxNode, SyntaxNode) method [.NET]
+  - ReplaceNode(SyntaxNode, SyntaxNode) method [.NET], class SyntaxEditor
+  - SyntaxEditor.ReplaceNode(SyntaxNode, Func<SyntaxNode,SyntaxGenerator,SyntaxNode>) method [.NET]
+  - ReplaceNode(SyntaxNode, Func<SyntaxNode,SyntaxGenerator,SyntaxNode>) method [.NET], class SyntaxEditor
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

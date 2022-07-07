@@ -1,0 +1,768 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: oldTree
+    description: The original tree.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxTree?alt=Microsoft.CodeAnalysis.SyntaxTree&text=SyntaxTree" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newTree
+    description: The new tree.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxTree?alt=Microsoft.CodeAnalysis.SyntaxTree&text=SyntaxTree" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: topLevel
+    description: >-
+      If true then the trees are equivalent if the contained nodes and tokens declaring
+
+      metadata visible symbolic information are equivalent, ignoring any differences of nodes inside method bodies
+
+      or initializer expressions, otherwise all nodes and tokens must be equivalent.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.SyntaxTree,System.Boolean)
+  name: AreEquivalent(SyntaxTree, SyntaxTree, Boolean)
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(SyntaxTree, SyntaxTree, Boolean)
+  nameWithType: SyntaxFactory.AreEquivalent(SyntaxTree, SyntaxTree, Boolean)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static bool AreEquivalent(Microsoft::CodeAnalysis::SyntaxTree ^ oldTree, Microsoft::CodeAnalysis::SyntaxTree ^ newTree, bool topLevel);
+  - lang: csharp
+    values:
+    - value: public static bool AreEquivalent (Microsoft.CodeAnalysis.SyntaxTree oldTree, Microsoft.CodeAnalysis.SyntaxTree newTree, bool topLevel);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: public static bool AreEquivalent (Microsoft.CodeAnalysis.SyntaxTree? oldTree, Microsoft.CodeAnalysis.SyntaxTree? newTree, bool topLevel);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member AreEquivalent : Microsoft.CodeAnalysis.SyntaxTree * Microsoft.CodeAnalysis.SyntaxTree * bool -> bool'
+  - lang: vb
+    values:
+    - value: Public Shared Function AreEquivalent (oldTree As SyntaxTree, newTree As SyntaxTree, topLevel As Boolean) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if two trees are the same, disregarding trivia differences.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: oldNode
+    description: The old node.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newNode
+    description: The new node.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: ignoreChildNode
+    description: >-
+      If specified called for every child syntax node (not token) that is visited during the comparison. 
+
+      If it returns true the child is recursively visited, otherwise the child and its subtree is disregarded.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind?alt=Microsoft.CodeAnalysis.CSharp.SyntaxKind&text=SyntaxKind" data-throw-if-not-resolved="True"/>,<xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode,System.Func{Microsoft.CodeAnalysis.CSharp.SyntaxKind,System.Boolean})
+  commentId: M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode,System.Func{Microsoft.CodeAnalysis.CSharp.SyntaxKind,System.Boolean})
+  name: AreEquivalent(SyntaxNode, SyntaxNode, Func<SyntaxKind,Boolean>)
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(SyntaxNode, SyntaxNode, Func<SyntaxKind,Boolean>)
+  nameWithType: SyntaxFactory.AreEquivalent(SyntaxNode, SyntaxNode, Func<SyntaxKind,Boolean>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static bool AreEquivalent (Microsoft.CodeAnalysis.SyntaxNode oldNode, Microsoft.CodeAnalysis.SyntaxNode newNode, Func<Microsoft.CodeAnalysis.CSharp.SyntaxKind,bool> ignoreChildNode = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: public static bool AreEquivalent (Microsoft.CodeAnalysis.SyntaxNode? oldNode, Microsoft.CodeAnalysis.SyntaxNode? newNode, Func<Microsoft.CodeAnalysis.CSharp.SyntaxKind,bool>? ignoreChildNode = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member AreEquivalent : Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SyntaxNode * Func<Microsoft.CodeAnalysis.CSharp.SyntaxKind, bool> -> bool'
+  - lang: vb
+    values:
+    - value: Public Shared Function AreEquivalent (oldNode As SyntaxNode, newNode As SyntaxNode, Optional ignoreChildNode As Func(Of SyntaxKind, Boolean) = Nothing) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if two syntax nodes are the same, disregarding trivia differences.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: oldNode
+    description: The old node.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newNode
+    description: The new node.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: topLevel
+    description: >-
+      If true then the nodes are equivalent if the contained nodes and tokens declaring
+
+      metadata visible symbolic information are equivalent, ignoring any differences of nodes inside method bodies
+
+      or initializer expressions, otherwise all nodes and tokens must be equivalent.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode,System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SyntaxNode,System.Boolean)
+  name: AreEquivalent(SyntaxNode, SyntaxNode, Boolean)
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(SyntaxNode, SyntaxNode, Boolean)
+  nameWithType: SyntaxFactory.AreEquivalent(SyntaxNode, SyntaxNode, Boolean)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static bool AreEquivalent(Microsoft::CodeAnalysis::SyntaxNode ^ oldNode, Microsoft::CodeAnalysis::SyntaxNode ^ newNode, bool topLevel);
+  - lang: csharp
+    values:
+    - value: public static bool AreEquivalent (Microsoft.CodeAnalysis.SyntaxNode oldNode, Microsoft.CodeAnalysis.SyntaxNode newNode, bool topLevel);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: public static bool AreEquivalent (Microsoft.CodeAnalysis.SyntaxNode? oldNode, Microsoft.CodeAnalysis.SyntaxNode? newNode, bool topLevel);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member AreEquivalent : Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SyntaxNode * bool -> bool'
+  - lang: vb
+    values:
+    - value: Public Shared Function AreEquivalent (oldNode As SyntaxNode, newNode As SyntaxNode, topLevel As Boolean) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if two syntax nodes are the same, disregarding trivia differences.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: oldList
+    description: The old token list.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxTokenList?alt=Microsoft.CodeAnalysis.SyntaxTokenList&text=SyntaxTokenList" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newList
+    description: The new token list.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxTokenList?alt=Microsoft.CodeAnalysis.SyntaxTokenList&text=SyntaxTokenList" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxTokenList)
+  commentId: M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxTokenList,Microsoft.CodeAnalysis.SyntaxTokenList)
+  name: AreEquivalent(SyntaxTokenList, SyntaxTokenList)
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(SyntaxTokenList, SyntaxTokenList)
+  nameWithType: SyntaxFactory.AreEquivalent(SyntaxTokenList, SyntaxTokenList)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static bool AreEquivalent(Microsoft::CodeAnalysis::SyntaxTokenList oldList, Microsoft::CodeAnalysis::SyntaxTokenList newList);
+  - lang: csharp
+    values:
+    - value: public static bool AreEquivalent (Microsoft.CodeAnalysis.SyntaxTokenList oldList, Microsoft.CodeAnalysis.SyntaxTokenList newList);
+  - lang: fsharp
+    values:
+    - value: 'static member AreEquivalent : Microsoft.CodeAnalysis.SyntaxTokenList * Microsoft.CodeAnalysis.SyntaxTokenList -> bool'
+  - lang: vb
+    values:
+    - value: Public Shared Function AreEquivalent (oldList As SyntaxTokenList, newList As SyntaxTokenList) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if two lists of tokens are the same, disregarding trivia differences.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: oldToken
+    description: The old token.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newToken
+    description: The new token.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)
+  commentId: M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)
+  name: AreEquivalent(SyntaxToken, SyntaxToken)
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent(SyntaxToken, SyntaxToken)
+  nameWithType: SyntaxFactory.AreEquivalent(SyntaxToken, SyntaxToken)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static bool AreEquivalent(Microsoft::CodeAnalysis::SyntaxToken oldToken, Microsoft::CodeAnalysis::SyntaxToken newToken);
+  - lang: csharp
+    values:
+    - value: public static bool AreEquivalent (Microsoft.CodeAnalysis.SyntaxToken oldToken, Microsoft.CodeAnalysis.SyntaxToken newToken);
+  - lang: fsharp
+    values:
+    - value: 'static member AreEquivalent : Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SyntaxToken -> bool'
+  - lang: vb
+    values:
+    - value: Public Shared Function AreEquivalent (oldToken As SyntaxToken, newToken As SyntaxToken) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if two syntax tokens are the same, disregarding trivia differences.
+  metadata: {}
+- typeParameters:
+  - name: TNode
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: oldList
+    description: The old list.
+    type: <xref href="Microsoft.CodeAnalysis.SeparatedSyntaxList`1?alt=Microsoft.CodeAnalysis.SeparatedSyntaxList`1&text=SeparatedSyntaxList%3CTNode%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newList
+    description: The new list.
+    type: <xref href="Microsoft.CodeAnalysis.SeparatedSyntaxList`1?alt=Microsoft.CodeAnalysis.SeparatedSyntaxList`1&text=SeparatedSyntaxList%3CTNode%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: topLevel
+    description: >-
+      If true then the nodes are equivalent if the contained nodes and tokens declaring
+
+      metadata visible symbolic information are equivalent, ignoring any differences of nodes inside method bodies
+
+      or initializer expressions, otherwise all nodes and tokens must be equivalent.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent``1(Microsoft.CodeAnalysis.SeparatedSyntaxList{``0},Microsoft.CodeAnalysis.SeparatedSyntaxList{``0},System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent``1(Microsoft.CodeAnalysis.SeparatedSyntaxList{``0},Microsoft.CodeAnalysis.SeparatedSyntaxList{``0},System.Boolean)
+  name: AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Boolean)
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Boolean)
+  nameWithType: SyntaxFactory.AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Boolean)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TNode>
+         where TNode : Microsoft::CodeAnalysis::SyntaxNode static bool AreEquivalent(Microsoft::CodeAnalysis::SeparatedSyntaxList<TNode> oldList, Microsoft::CodeAnalysis::SeparatedSyntaxList<TNode> newList, bool topLevel);
+  - lang: csharp
+    values:
+    - value: 'public static bool AreEquivalent<TNode> (Microsoft.CodeAnalysis.SeparatedSyntaxList<TNode> oldList, Microsoft.CodeAnalysis.SeparatedSyntaxList<TNode> newList, bool topLevel) where TNode : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member AreEquivalent : Microsoft.CodeAnalysis.SeparatedSyntaxList<'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)> * Microsoft.CodeAnalysis.SeparatedSyntaxList<'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)> * bool -> bool (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: Public Shared Function AreEquivalent(Of TNode As SyntaxNode) (oldList As SeparatedSyntaxList(Of TNode), newList As SeparatedSyntaxList(Of TNode), topLevel As Boolean) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if two lists of syntax nodes are the same, disregarding trivia differences.
+  metadata: {}
+- typeParameters:
+  - name: TNode
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: oldList
+    description: The old list.
+    type: <xref href="Microsoft.CodeAnalysis.SeparatedSyntaxList`1?alt=Microsoft.CodeAnalysis.SeparatedSyntaxList`1&text=SeparatedSyntaxList%3CTNode%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newList
+    description: The new list.
+    type: <xref href="Microsoft.CodeAnalysis.SeparatedSyntaxList`1?alt=Microsoft.CodeAnalysis.SeparatedSyntaxList`1&text=SeparatedSyntaxList%3CTNode%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: ignoreChildNode
+    description: >-
+      If specified called for every child syntax node (not token) that is visited during the comparison. 
+
+      If it returns true the child is recursively visited, otherwise the child and its subtree is disregarded.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind?alt=Microsoft.CodeAnalysis.CSharp.SyntaxKind&text=SyntaxKind" data-throw-if-not-resolved="True"/>,<xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent``1(Microsoft.CodeAnalysis.SeparatedSyntaxList{``0},Microsoft.CodeAnalysis.SeparatedSyntaxList{``0},System.Func{Microsoft.CodeAnalysis.CSharp.SyntaxKind,System.Boolean})
+  commentId: M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent``1(Microsoft.CodeAnalysis.SeparatedSyntaxList{``0},Microsoft.CodeAnalysis.SeparatedSyntaxList{``0},System.Func{Microsoft.CodeAnalysis.CSharp.SyntaxKind,System.Boolean})
+  name: AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Func<SyntaxKind,Boolean>)
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Func<SyntaxKind,Boolean>)
+  nameWithType: SyntaxFactory.AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Func<SyntaxKind,Boolean>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static bool AreEquivalent<TNode> (Microsoft.CodeAnalysis.SeparatedSyntaxList<TNode> oldList, Microsoft.CodeAnalysis.SeparatedSyntaxList<TNode> newList, Func<Microsoft.CodeAnalysis.CSharp.SyntaxKind,bool> ignoreChildNode = default) where TNode : Microsoft.CodeAnalysis.SyntaxNode;'
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: 'public static bool AreEquivalent<TNode> (Microsoft.CodeAnalysis.SeparatedSyntaxList<TNode> oldList, Microsoft.CodeAnalysis.SeparatedSyntaxList<TNode> newList, Func<Microsoft.CodeAnalysis.CSharp.SyntaxKind,bool>? ignoreChildNode = default) where TNode : Microsoft.CodeAnalysis.SyntaxNode;'
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: "static member AreEquivalent : Microsoft.CodeAnalysis.SeparatedSyntaxList<'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)> * Microsoft.CodeAnalysis.SeparatedSyntaxList<'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)> * Func<Microsoft.CodeAnalysis.CSharp.SyntaxKind, bool> -> bool (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: Public Shared Function AreEquivalent(Of TNode As SyntaxNode) (oldList As SeparatedSyntaxList(Of TNode), newList As SeparatedSyntaxList(Of TNode), Optional ignoreChildNode As Func(Of SyntaxKind, Boolean) = Nothing) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if two lists of syntax nodes are the same, disregarding trivia differences.
+  metadata: {}
+- typeParameters:
+  - name: TNode
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: oldList
+    description: The old list.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxList`1?alt=Microsoft.CodeAnalysis.SyntaxList`1&text=SyntaxList%3CTNode%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newList
+    description: The new list.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxList`1?alt=Microsoft.CodeAnalysis.SyntaxList`1&text=SyntaxList%3CTNode%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: topLevel
+    description: >-
+      If true then the nodes are equivalent if the contained nodes and tokens declaring
+
+      metadata visible symbolic information are equivalent, ignoring any differences of nodes inside method bodies
+
+      or initializer expressions, otherwise all nodes and tokens must be equivalent.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent``1(Microsoft.CodeAnalysis.SyntaxList{``0},Microsoft.CodeAnalysis.SyntaxList{``0},System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent``1(Microsoft.CodeAnalysis.SyntaxList{``0},Microsoft.CodeAnalysis.SyntaxList{``0},System.Boolean)
+  name: AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Boolean)
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Boolean)
+  nameWithType: SyntaxFactory.AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Boolean)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TNode>
+         where TNode : Microsoft::CodeAnalysis::CSharp::CSharpSyntaxNode static bool AreEquivalent(Microsoft::CodeAnalysis::SyntaxList<TNode> oldList, Microsoft::CodeAnalysis::SyntaxList<TNode> newList, bool topLevel);
+  - lang: csharp
+    values:
+    - value: 'public static bool AreEquivalent<TNode> (Microsoft.CodeAnalysis.SyntaxList<TNode> oldList, Microsoft.CodeAnalysis.SyntaxList<TNode> newList, bool topLevel) where TNode : Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member AreEquivalent : Microsoft.CodeAnalysis.SyntaxList<'Node (requires 'Node :> Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode)> * Microsoft.CodeAnalysis.SyntaxList<'Node (requires 'Node :> Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode)> * bool -> bool (requires 'Node :> Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode)"
+  - lang: vb
+    values:
+    - value: Public Shared Function AreEquivalent(Of TNode As CSharpSyntaxNode) (oldList As SyntaxList(Of TNode), newList As SyntaxList(Of TNode), topLevel As Boolean) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if two lists of syntax nodes are the same, disregarding trivia differences.
+  metadata: {}
+- typeParameters:
+  - name: TNode
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: oldList
+    description: The old list.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxList`1?alt=Microsoft.CodeAnalysis.SyntaxList`1&text=SyntaxList%3CTNode%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newList
+    description: The new list.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxList`1?alt=Microsoft.CodeAnalysis.SyntaxList`1&text=SyntaxList%3CTNode%3E" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: ignoreChildNode
+    description: >-
+      If specified called for every child syntax node (not token) that is visited during the comparison. 
+
+      If it returns true the child is recursively visited, otherwise the child and its subtree is disregarded.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind?alt=Microsoft.CodeAnalysis.CSharp.SyntaxKind&text=SyntaxKind" data-throw-if-not-resolved="True"/>,<xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent``1(Microsoft.CodeAnalysis.SyntaxList{``0},Microsoft.CodeAnalysis.SyntaxList{``0},System.Func{Microsoft.CodeAnalysis.CSharp.SyntaxKind,System.Boolean})
+  commentId: M:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent``1(Microsoft.CodeAnalysis.SyntaxList{``0},Microsoft.CodeAnalysis.SyntaxList{``0},System.Func{Microsoft.CodeAnalysis.CSharp.SyntaxKind,System.Boolean})
+  name: AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Func<SyntaxKind,Boolean>)
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Func<SyntaxKind,Boolean>)
+  nameWithType: SyntaxFactory.AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Func<SyntaxKind,Boolean>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static bool AreEquivalent<TNode> (Microsoft.CodeAnalysis.SyntaxList<TNode> oldList, Microsoft.CodeAnalysis.SyntaxList<TNode> newList, Func<Microsoft.CodeAnalysis.CSharp.SyntaxKind,bool> ignoreChildNode = default) where TNode : Microsoft.CodeAnalysis.SyntaxNode;'
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: 'public static bool AreEquivalent<TNode> (Microsoft.CodeAnalysis.SyntaxList<TNode> oldList, Microsoft.CodeAnalysis.SyntaxList<TNode> newList, Func<Microsoft.CodeAnalysis.CSharp.SyntaxKind,bool>? ignoreChildNode = default) where TNode : Microsoft.CodeAnalysis.SyntaxNode;'
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: "static member AreEquivalent : Microsoft.CodeAnalysis.SyntaxList<'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)> * Microsoft.CodeAnalysis.SyntaxList<'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)> * Func<Microsoft.CodeAnalysis.CSharp.SyntaxKind, bool> -> bool (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: Public Shared Function AreEquivalent(Of TNode As SyntaxNode) (oldList As SyntaxList(Of TNode), newList As SyntaxList(Of TNode), Optional ignoreChildNode As Func(Of SyntaxKind, Boolean) = Nothing) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if two lists of syntax nodes are the same, disregarding trivia differences.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent*
+commentId: Overload:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent
+namespace: Microsoft.CodeAnalysis.CSharp
+name: AreEquivalent
+fullName: Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent
+nameWithType: SyntaxFactory.AreEquivalent
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.CSharp.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.CSharp v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.CSharp v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.CSharp v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.CSharp v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.CSharp v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.CSharp v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.CSharp v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.CSharp v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.CSharp v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.CSharp v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.CSharp v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.CSharp v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.CSharp v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.CSharp v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.CSharp v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.CSharp v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent
+  api_location:
+  - Microsoft.CodeAnalysis.CSharp.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent
+  - Microsoft::CodeAnalysis::CSharp::SyntaxFactory::AreEquivalent
+  - AreEquivalent
+  - SyntaxFactory.AreEquivalent
+  - SyntaxFactory::AreEquivalent
+  - Microsoft.CodeAnalysis.CSharp.SyntaxFactory.AreEquivalent``1
+  - Microsoft::CodeAnalysis::CSharp::SyntaxFactory::AreEquivalent``1
+  - AreEquivalent``1
+  - SyntaxFactory.AreEquivalent``1
+  - SyntaxFactory::AreEquivalent``1
+  helpviewer_keywords:
+  - SyntaxFactory.AreEquivalent method [.NET]
+  - AreEquivalent method [.NET], class SyntaxFactory
+  - SyntaxFactory.AreEquivalent(SyntaxTree, SyntaxTree, Boolean) method [.NET]
+  - AreEquivalent(SyntaxTree, SyntaxTree, Boolean) method [.NET], class SyntaxFactory
+  - SyntaxFactory.AreEquivalent(SyntaxNode, SyntaxNode, Func<SyntaxKind,Boolean>) method [.NET]
+  - AreEquivalent(SyntaxNode, SyntaxNode, Func<SyntaxKind,Boolean>) method [.NET], class SyntaxFactory
+  - SyntaxFactory.AreEquivalent(SyntaxNode, SyntaxNode, Boolean) method [.NET]
+  - AreEquivalent(SyntaxNode, SyntaxNode, Boolean) method [.NET], class SyntaxFactory
+  - SyntaxFactory.AreEquivalent(SyntaxTokenList, SyntaxTokenList) method [.NET]
+  - AreEquivalent(SyntaxTokenList, SyntaxTokenList) method [.NET], class SyntaxFactory
+  - SyntaxFactory.AreEquivalent(SyntaxToken, SyntaxToken) method [.NET]
+  - AreEquivalent(SyntaxToken, SyntaxToken) method [.NET], class SyntaxFactory
+  - SyntaxFactory.AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Boolean) method [.NET]
+  - AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Boolean) method [.NET], class SyntaxFactory
+  - SyntaxFactory.AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Func<SyntaxKind,Boolean>) method [.NET]
+  - AreEquivalent<TNode>(SeparatedSyntaxList<TNode>, SeparatedSyntaxList<TNode>, Func<SyntaxKind,Boolean>) method [.NET], class SyntaxFactory
+  - SyntaxFactory.AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Boolean) method [.NET]
+  - AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Boolean) method [.NET], class SyntaxFactory
+  - SyntaxFactory.AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Func<SyntaxKind,Boolean>) method [.NET]
+  - AreEquivalent<TNode>(SyntaxList<TNode>, SyntaxList<TNode>, Func<SyntaxKind,Boolean>) method [.NET], class SyntaxFactory
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

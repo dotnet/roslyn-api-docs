@@ -1,0 +1,228 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.ISymbol?alt=Microsoft.CodeAnalysis.ISymbol&text=ISymbol" data-throw-if-not-resolved="True"/>&gt;&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: symbol
+    type: <xref href="Microsoft.CodeAnalysis.ISymbol?alt=Microsoft.CodeAnalysis.ISymbol&text=ISymbol" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: solution
+    type: <xref href="Microsoft.CodeAnalysis.Solution?alt=Microsoft.CodeAnalysis.Solution&text=Solution" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: projects
+    type: <xref href="System.Collections.Immutable.IImmutableSet`1?alt=System.Collections.Immutable.IImmutableSet&text=IImmutableSet" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Project?alt=Microsoft.CodeAnalysis.Project&text=Project" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: cancellationToken
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)
+  name: FindImplementationsAsync(ISymbol, Solution, IImmutableSet<Project>, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(ISymbol, Solution, IImmutableSet<Project>, CancellationToken)
+  nameWithType: SymbolFinder.FindImplementationsAsync(ISymbol, Solution, IImmutableSet<Project>, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.ISymbol>> FindImplementationsAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet<Microsoft.CodeAnalysis.Project> projects = default, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: 'static member FindImplementationsAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet<Microsoft.CodeAnalysis.Project> * System.Threading.CancellationToken -> System.Threading.Tasks.Task<seq<Microsoft.CodeAnalysis.ISymbol>>'
+  - lang: vb
+    values:
+    - value: Public Shared Function FindImplementationsAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Finds all the accessible symbols that implement an interface or interface member.  For an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.INamedTypeSymbol"></xref> this will be both immediate and transitive implementations.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.INamedTypeSymbol?alt=Microsoft.CodeAnalysis.INamedTypeSymbol&text=INamedTypeSymbol" data-throw-if-not-resolved="True"/>&gt;&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: type
+    description: The symbol to find derived types of.
+    type: <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol?alt=Microsoft.CodeAnalysis.INamedTypeSymbol&text=INamedTypeSymbol" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: solution
+    description: The solution to search in.
+    type: <xref href="Microsoft.CodeAnalysis.Solution?alt=Microsoft.CodeAnalysis.Solution&text=Solution" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: transitive
+    description: If the search should stop at immediately derived interfaces, or should continue past that.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: projects
+    description: The projects to search. Can be null to search the entire solution.
+    type: <xref href="System.Collections.Immutable.IImmutableSet`1?alt=System.Collections.Immutable.IImmutableSet&text=IImmutableSet" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Project?alt=Microsoft.CodeAnalysis.Project&text=Project" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: cancellationToken
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Boolean,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Boolean,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)
+  name: FindImplementationsAsync(INamedTypeSymbol, Solution, Boolean, IImmutableSet<Project>, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(INamedTypeSymbol, Solution, Boolean, IImmutableSet<Project>, CancellationToken)
+  nameWithType: SymbolFinder.FindImplementationsAsync(INamedTypeSymbol, Solution, Boolean, IImmutableSet<Project>, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.INamedTypeSymbol>> FindImplementationsAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet<Microsoft.CodeAnalysis.Project> projects = default, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: 'static member FindImplementationsAsync : Microsoft.CodeAnalysis.INamedTypeSymbol * Microsoft.CodeAnalysis.Solution * bool * System.Collections.Immutable.IImmutableSet<Microsoft.CodeAnalysis.Project> * System.Threading.CancellationToken -> System.Threading.Tasks.Task<seq<Microsoft.CodeAnalysis.INamedTypeSymbol>>'
+  - lang: vb
+    values:
+    - value: Public Shared Function FindImplementationsAsync (type As INamedTypeSymbol, solution As Solution, Optional transitive As Boolean = true, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of INamedTypeSymbol))
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Finds the accessible <code data-dev-comment-type="langword">class</code> or <code data-dev-comment-type="langword">struct</code> types that implement the given
+
+    interface.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync*
+commentId: Overload:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync
+namespace: Microsoft.CodeAnalysis.FindSymbols
+name: FindImplementationsAsync
+fullName: Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync
+nameWithType: SymbolFinder.FindImplementationsAsync
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync
+  api_location:
+  - Microsoft.CodeAnalysis.Workspaces.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync
+  - Microsoft::CodeAnalysis::FindSymbols::SymbolFinder::FindImplementationsAsync
+  - FindImplementationsAsync
+  - SymbolFinder.FindImplementationsAsync
+  - SymbolFinder::FindImplementationsAsync
+  helpviewer_keywords:
+  - SymbolFinder.FindImplementationsAsync method [.NET]
+  - FindImplementationsAsync method [.NET], class SymbolFinder
+  - SymbolFinder.FindImplementationsAsync(ISymbol, Solution, IImmutableSet<Project>, CancellationToken) method [.NET]
+  - FindImplementationsAsync(ISymbol, Solution, IImmutableSet<Project>, CancellationToken) method [.NET], class SymbolFinder
+  - SymbolFinder.FindImplementationsAsync(INamedTypeSymbol, Solution, Boolean, IImmutableSet<Project>, CancellationToken) method [.NET]
+  - FindImplementationsAsync(INamedTypeSymbol, Solution, Boolean, IImmutableSet<Project>, CancellationToken) method [.NET], class SymbolFinder
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

@@ -1,0 +1,178 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Immutable.ImmutableArray`1?alt=System.Collections.Immutable.ImmutableArray&text=ImmutableArray" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.ISymbol?alt=Microsoft.CodeAnalysis.ISymbol&text=ISymbol" data-throw-if-not-resolved="True"/>&gt;
+    description: The symbols declared by the node.
+  parameters:
+  - namesWithMoniker:
+    - value: declaration
+    description: >-
+      A syntax node that is a declaration. This can be any type
+                  derived from MemberDeclarationSyntax, TypeDeclarationSyntax, EnumDeclarationSyntax,
+                  NamespaceDeclarationSyntax, ParameterSyntax, TypeParameterSyntax, or the alias part of a
+                  UsingDirectiveSyntax
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: The cancellation token.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolsCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolsCore(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)
+  name: GetDeclaredSymbolsCore(SyntaxNode, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolsCore(SyntaxNode, CancellationToken)
+  nameWithType: SemanticModel.GetDeclaredSymbolsCore(SyntaxNode, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected abstract System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.ISymbol> GetDeclaredSymbolsCore (Microsoft.CodeAnalysis.SyntaxNode declaration, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: 'abstract member GetDeclaredSymbolsCore : Microsoft.CodeAnalysis.SyntaxNode * System.Threading.CancellationToken -> System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.ISymbol>'
+  - lang: vb
+    values:
+    - value: Protected MustOverride Function GetDeclaredSymbolsCore (declaration As SyntaxNode, Optional cancellationToken As CancellationToken = Nothing) As ImmutableArray(Of ISymbol)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Gets the symbol associated with a declaration syntax node. Unlike **Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolForNode(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)**<!--<see cref="M:Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolForNode(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken)" />-->,
+
+    this method returns all symbols declared by a given declaration syntax node. Specifically, in the case of field declaration syntax nodes,
+
+    which can declare multiple symbols, this method returns all declared symbols.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolsCore*
+commentId: Overload:Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolsCore
+namespace: Microsoft.CodeAnalysis
+name: GetDeclaredSymbolsCore
+fullName: Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolsCore
+nameWithType: SemanticModel.GetDeclaredSymbolsCore
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolsCore
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolsCore
+  - Microsoft::CodeAnalysis::SemanticModel::GetDeclaredSymbolsCore
+  - GetDeclaredSymbolsCore
+  - SemanticModel.GetDeclaredSymbolsCore
+  - SemanticModel::GetDeclaredSymbolsCore
+  helpviewer_keywords:
+  - SemanticModel.GetDeclaredSymbolsCore method [.NET]
+  - GetDeclaredSymbolsCore method [.NET], class SemanticModel
+  - SemanticModel.GetDeclaredSymbolsCore(SyntaxNode, CancellationToken) method [.NET]
+  - GetDeclaredSymbolsCore(SyntaxNode, CancellationToken) method [.NET], class SemanticModel
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

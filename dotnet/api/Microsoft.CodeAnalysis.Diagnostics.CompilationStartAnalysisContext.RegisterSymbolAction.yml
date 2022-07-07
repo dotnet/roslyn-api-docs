@@ -1,0 +1,229 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: action
+    description: Action to be executed for an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISymbol"></xref>.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext?alt=Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&text=SymbolAnalysisContext" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: symbolKinds
+    description: Action will be executed only if an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISymbol"></xref>'s Kind matches one of the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SymbolKind"></xref> values.
+    type: <xref href="Microsoft.CodeAnalysis.SymbolKind?alt=Microsoft.CodeAnalysis.SymbolKind&text=SymbolKind" data-throw-if-not-resolved="True"/>[]
+  type: method
+  uid: Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext},Microsoft.CodeAnalysis.SymbolKind[])
+  commentId: M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext},Microsoft.CodeAnalysis.SymbolKind[])
+  name: RegisterSymbolAction(Action<SymbolAnalysisContext>, SymbolKind[])
+  fullName: Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction(Action<SymbolAnalysisContext>, SymbolKind[])
+  nameWithType: CompilationStartAnalysisContext.RegisterSymbolAction(Action<SymbolAnalysisContext>, SymbolKind[])
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         void RegisterSymbolAction(Action<Microsoft::CodeAnalysis::Diagnostics::SymbolAnalysisContext> ^ action, ... cli::array <Microsoft::CodeAnalysis::SymbolKind> ^ symbolKinds);
+  - lang: csharp
+    values:
+    - value: public void RegisterSymbolAction (Action<Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext> action, params Microsoft.CodeAnalysis.SymbolKind[] symbolKinds);
+  - lang: fsharp
+    values:
+    - value: 'member this.RegisterSymbolAction : Action<Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext> * Microsoft.CodeAnalysis.SymbolKind[] -> unit'
+  - lang: vb
+    values:
+    - value: Public Sub RegisterSymbolAction (action As Action(Of SymbolAnalysisContext), ParamArray symbolKinds As SymbolKind())
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Register an action to be executed at completion of semantic analysis of an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISymbol"></xref> with an appropriate Kind.
+
+    A symbol action reports <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Diagnostic"></xref>s about <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISymbol"></xref>s.
+  metadata: {}
+- parameters:
+  - namesWithMoniker:
+    - value: action
+    description: Action to be executed for an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISymbol"></xref>.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext?alt=Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext&text=SymbolAnalysisContext" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: symbolKinds
+    description: Action will be executed only if an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISymbol"></xref>'s Kind matches one of the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SymbolKind"></xref> values.
+    type: <xref href="System.Collections.Immutable.ImmutableArray`1?alt=System.Collections.Immutable.ImmutableArray&text=ImmutableArray" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SymbolKind?alt=Microsoft.CodeAnalysis.SymbolKind&text=SymbolKind" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.SymbolKind})
+  commentId: M:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction(System.Action{Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.SymbolKind})
+  name: RegisterSymbolAction(Action<SymbolAnalysisContext>, ImmutableArray<SymbolKind>)
+  fullName: Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction(Action<SymbolAnalysisContext>, ImmutableArray<SymbolKind>)
+  nameWithType: CompilationStartAnalysisContext.RegisterSymbolAction(Action<SymbolAnalysisContext>, ImmutableArray<SymbolKind>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         abstract void RegisterSymbolAction(Action<Microsoft::CodeAnalysis::Diagnostics::SymbolAnalysisContext> ^ action, System::Collections::Immutable::ImmutableArray<Microsoft::CodeAnalysis::SymbolKind> symbolKinds);
+  - lang: csharp
+    values:
+    - value: public abstract void RegisterSymbolAction (Action<Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext> action, System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.SymbolKind> symbolKinds);
+  - lang: fsharp
+    values:
+    - value: 'abstract member RegisterSymbolAction : Action<Microsoft.CodeAnalysis.Diagnostics.SymbolAnalysisContext> * System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.SymbolKind> -> unit'
+  - lang: vb
+    values:
+    - value: Public MustOverride Sub RegisterSymbolAction (action As Action(Of SymbolAnalysisContext), symbolKinds As ImmutableArray(Of SymbolKind))
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Register an action to be executed at completion of semantic analysis of an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISymbol"></xref> with an appropriate Kind.
+
+    A symbol action reports <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Diagnostic"></xref>s about <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISymbol"></xref>s.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction*
+commentId: Overload:Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction
+namespace: Microsoft.CodeAnalysis.Diagnostics
+name: RegisterSymbolAction
+fullName: Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction
+nameWithType: CompilationStartAnalysisContext.RegisterSymbolAction
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Diagnostics.CompilationStartAnalysisContext.RegisterSymbolAction
+  - Microsoft::CodeAnalysis::Diagnostics::CompilationStartAnalysisContext::RegisterSymbolAction
+  - RegisterSymbolAction
+  - CompilationStartAnalysisContext.RegisterSymbolAction
+  - CompilationStartAnalysisContext::RegisterSymbolAction
+  helpviewer_keywords:
+  - CompilationStartAnalysisContext.RegisterSymbolAction method [.NET]
+  - RegisterSymbolAction method [.NET], class CompilationStartAnalysisContext
+  - CompilationStartAnalysisContext.RegisterSymbolAction(Action<SymbolAnalysisContext>, SymbolKind[]) method [.NET]
+  - RegisterSymbolAction(Action<SymbolAnalysisContext>, SymbolKind[]) method [.NET], class CompilationStartAnalysisContext
+  - CompilationStartAnalysisContext.RegisterSymbolAction(Action<SymbolAnalysisContext>, ImmutableArray<SymbolKind>) method [.NET]
+  - RegisterSymbolAction(Action<SymbolAnalysisContext>, ImmutableArray<SymbolKind>) method [.NET], class CompilationStartAnalysisContext
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

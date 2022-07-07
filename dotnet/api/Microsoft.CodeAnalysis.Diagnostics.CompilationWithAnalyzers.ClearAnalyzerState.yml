@@ -1,0 +1,180 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: analyzers
+    description: Analyzers whose state needs to be cleared.
+    type: <xref href="System.Collections.Immutable.ImmutableArray`1?alt=System.Collections.Immutable.ImmutableArray&text=ImmutableArray" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer?alt=Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&text=DiagnosticAnalyzer" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers.ClearAnalyzerState(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer})
+  commentId: M:Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers.ClearAnalyzerState(System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer})
+  name: ClearAnalyzerState(ImmutableArray<DiagnosticAnalyzer>)
+  fullName: Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers.ClearAnalyzerState(ImmutableArray<DiagnosticAnalyzer>)
+  nameWithType: CompilationWithAnalyzers.ClearAnalyzerState(ImmutableArray<DiagnosticAnalyzer>)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static void ClearAnalyzerState(System::Collections::Immutable::ImmutableArray<Microsoft::CodeAnalysis::Diagnostics::DiagnosticAnalyzer ^> analyzers);
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Obsolete("This API is no longer required to be invoked. Analyzer state is automatically cleaned up when CompilationWithAnalyzers instance is released.")]
+
+        public static void ClearAnalyzerState (System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> analyzers);
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Obsolete("This API is no longer required to be invoked. Analyzer state is automatically cleaned up when CompilationWithAnalyzers instance is released.")>]
+
+        static member ClearAnalyzerState : System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> -> unit
+  - lang: vb
+    values:
+    - value: Public Shared Sub ClearAnalyzerState (analyzers As ImmutableArray(Of DiagnosticAnalyzer))
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  obsoleteMessagesWithMoniker:
+  - value: This API is no longer required to be invoked. Analyzer state is automatically cleaned up when CompilationWithAnalyzers instance is released.
+  summary: >-
+    This method should be invoked when the analyzer host is disposing off the given <code data-dev-comment-type="paramref">analyzers</code>.
+
+    It clears the cached internal state (supported descriptors, registered actions, exception handlers, etc.) for analyzers.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers.ClearAnalyzerState*
+commentId: Overload:Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers.ClearAnalyzerState
+namespace: Microsoft.CodeAnalysis.Diagnostics
+name: ClearAnalyzerState
+fullName: Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers.ClearAnalyzerState
+nameWithType: CompilationWithAnalyzers.ClearAnalyzerState
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers.ClearAnalyzerState
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers.ClearAnalyzerState
+  - Microsoft::CodeAnalysis::Diagnostics::CompilationWithAnalyzers::ClearAnalyzerState
+  - ClearAnalyzerState
+  - CompilationWithAnalyzers.ClearAnalyzerState
+  - CompilationWithAnalyzers::ClearAnalyzerState
+  helpviewer_keywords:
+  - CompilationWithAnalyzers.ClearAnalyzerState method [.NET]
+  - ClearAnalyzerState method [.NET], class CompilationWithAnalyzers
+  - CompilationWithAnalyzers.ClearAnalyzerState(ImmutableArray<DiagnosticAnalyzer>) method [.NET]
+  - ClearAnalyzerState(ImmutableArray<DiagnosticAnalyzer>) method [.NET], class CompilationWithAnalyzers
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

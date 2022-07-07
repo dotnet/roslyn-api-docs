@@ -1,0 +1,262 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - description: The type of the root node.
+    name: TRoot
+  returnsWithMoniker:
+    type:
+    - value: TRoot
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root of the tree of nodes.
+    type: TRoot
+  - namesWithMoniker:
+    - value: tokenInList
+    description: The token to be replaced; a descendant of the root node and an element of a list member.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newTokens
+    description: A sequence of tokens to use in the tree in place of the specified token.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken``1(``0,Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken})
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken``1(``0,Microsoft.CodeAnalysis.SyntaxToken,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.SyntaxToken})
+  name: ReplaceToken<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>)
+  nameWithType: SyntaxNodeExtensions.ReplaceToken<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TRoot>
+         where TRoot : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TRoot ReplaceToken(TRoot root, Microsoft::CodeAnalysis::SyntaxToken tokenInList, System::Collections::Generic::IEnumerable<Microsoft::CodeAnalysis::SyntaxToken> ^ newTokens);
+  - lang: csharp
+    values:
+    - value: 'public static TRoot ReplaceToken<TRoot> (this TRoot root, Microsoft.CodeAnalysis.SyntaxToken tokenInList, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxToken> newTokens) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member ReplaceToken : 'Root * Microsoft.CodeAnalysis.SyntaxToken * seq<Microsoft.CodeAnalysis.SyntaxToken> -> 'Root (requires 'Root :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ReplaceToken(Of TRoot As SyntaxNode) (root As TRoot, tokenInList As SyntaxToken, newTokens As IEnumerable(Of SyntaxToken)) As TRoot
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a new tree of nodes with the specified old token replaced with new tokens.
+  metadata: {}
+- typeParameters:
+  - description: The type of the root node.
+    name: TRoot
+  returnsWithMoniker:
+    type:
+    - value: TRoot
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root node of the tree of nodes.
+    type: TRoot
+  - namesWithMoniker:
+    - value: oldToken
+    description: The token to be replaced.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: newToken
+    description: >-
+      The new token to use in the new tree in place of the old
+                  token.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken``1(``0,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken``1(``0,Microsoft.CodeAnalysis.SyntaxToken,Microsoft.CodeAnalysis.SyntaxToken)
+  name: ReplaceToken<TRoot>(TRoot, SyntaxToken, SyntaxToken)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken<TRoot>(TRoot, SyntaxToken, SyntaxToken)
+  nameWithType: SyntaxNodeExtensions.ReplaceToken<TRoot>(TRoot, SyntaxToken, SyntaxToken)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TRoot>
+         where TRoot : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TRoot ReplaceToken(TRoot root, Microsoft::CodeAnalysis::SyntaxToken oldToken, Microsoft::CodeAnalysis::SyntaxToken newToken);
+  - lang: csharp
+    values:
+    - value: 'public static TRoot ReplaceToken<TRoot> (this TRoot root, Microsoft.CodeAnalysis.SyntaxToken oldToken, Microsoft.CodeAnalysis.SyntaxToken newToken) where TRoot : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member ReplaceToken : 'Root * Microsoft.CodeAnalysis.SyntaxToken * Microsoft.CodeAnalysis.SyntaxToken -> 'Root (requires 'Root :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function ReplaceToken(Of TRoot As SyntaxNode) (root As TRoot, oldToken As SyntaxToken, newToken As SyntaxToken) As TRoot
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a new tree of nodes with the specified old token replaced with a new token.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken*
+commentId: Overload:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken
+namespace: Microsoft.CodeAnalysis
+name: ReplaceToken
+fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken
+nameWithType: SyntaxNodeExtensions.ReplaceToken
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::ReplaceToken
+  - ReplaceToken
+  - SyntaxNodeExtensions.ReplaceToken
+  - SyntaxNodeExtensions::ReplaceToken
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceToken``1
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::ReplaceToken``1
+  - ReplaceToken``1
+  - SyntaxNodeExtensions.ReplaceToken``1
+  - SyntaxNodeExtensions::ReplaceToken``1
+  helpviewer_keywords:
+  - SyntaxNodeExtensions.ReplaceToken method [.NET]
+  - ReplaceToken method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.ReplaceToken<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>) extension method [.NET]
+  - ReplaceToken<TRoot>(TRoot, SyntaxToken, IEnumerable<SyntaxToken>) extension method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.ReplaceToken<TRoot>(TRoot, SyntaxToken, SyntaxToken) extension method [.NET]
+  - ReplaceToken<TRoot>(TRoot, SyntaxToken, SyntaxToken) extension method [.NET], class SyntaxNodeExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

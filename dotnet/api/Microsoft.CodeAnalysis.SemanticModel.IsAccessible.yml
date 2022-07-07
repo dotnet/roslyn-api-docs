@@ -1,0 +1,179 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+    description: True if "symbol is accessible, false otherwise.
+  parameters:
+  - namesWithMoniker:
+    - value: position
+    description: >-
+      A character position used to identify a declaration scope and
+                  accessibility. This character position must be within the FullSpan of the Root syntax
+                  node in this SemanticModel.
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: symbol
+    description: The symbol that we are checking to see if it accessible.
+    type: <xref href="Microsoft.CodeAnalysis.ISymbol?alt=Microsoft.CodeAnalysis.ISymbol&text=ISymbol" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.SemanticModel.IsAccessible(System.Int32,Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:Microsoft.CodeAnalysis.SemanticModel.IsAccessible(System.Int32,Microsoft.CodeAnalysis.ISymbol)
+  name: IsAccessible(Int32, ISymbol)
+  fullName: Microsoft.CodeAnalysis.SemanticModel.IsAccessible(Int32, ISymbol)
+  nameWithType: SemanticModel.IsAccessible(Int32, ISymbol)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         bool IsAccessible(int position, Microsoft::CodeAnalysis::ISymbol ^ symbol);
+  - lang: csharp
+    values:
+    - value: public bool IsAccessible (int position, Microsoft.CodeAnalysis.ISymbol symbol);
+  - lang: fsharp
+    values:
+    - value: 'member this.IsAccessible : int * Microsoft.CodeAnalysis.ISymbol -> bool'
+  - lang: vb
+    values:
+    - value: Public Function IsAccessible (position As Integer, symbol As ISymbol) As Boolean
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines if the symbol is accessible from the specified location.
+  remarks: <p>This method only checks accessibility from the point of view of the accessibility modifiers on symbol and its containing types. Even if true is returned, the given symbol may not be able to be referenced for other reasons, such as name hiding.</p>
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SemanticModel.IsAccessible*
+commentId: Overload:Microsoft.CodeAnalysis.SemanticModel.IsAccessible
+namespace: Microsoft.CodeAnalysis
+name: IsAccessible
+fullName: Microsoft.CodeAnalysis.SemanticModel.IsAccessible
+nameWithType: SemanticModel.IsAccessible
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SemanticModel.IsAccessible
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SemanticModel.IsAccessible
+  - Microsoft::CodeAnalysis::SemanticModel::IsAccessible
+  - IsAccessible
+  - SemanticModel.IsAccessible
+  - SemanticModel::IsAccessible
+  helpviewer_keywords:
+  - SemanticModel.IsAccessible method [.NET]
+  - IsAccessible method [.NET], class SemanticModel
+  - SemanticModel.IsAccessible(Int32, ISymbol) method [.NET]
+  - IsAccessible(Int32, ISymbol) method [.NET], class SemanticModel
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

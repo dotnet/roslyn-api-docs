@@ -1,0 +1,236 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Document?alt=Microsoft.CodeAnalysis.Document&text=Document" data-throw-if-not-resolved="True"/>&gt;
+    description: A document with the post processing changes applied.
+  parameters:
+  - namesWithMoniker:
+    - value: document
+    description: The document changed by the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref>.
+    type: <xref href="Microsoft.CodeAnalysis.Document?alt=Microsoft.CodeAnalysis.Document&text=Document" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: A cancellation token.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Microsoft.CodeAnalysis.Document,System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Microsoft.CodeAnalysis.Document,System.Threading.CancellationToken)
+  name: PostProcessChangesAsync(Document, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Document, CancellationToken)
+  nameWithType: CodeAction.PostProcessChangesAsync(Document, CancellationToken)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        protected:
+         virtual System::Threading::Tasks::Task<Microsoft::CodeAnalysis::Document ^> ^ PostProcessChangesAsync(Microsoft::CodeAnalysis::Document ^ document, System::Threading::CancellationToken cancellationToken);
+  - lang: csharp
+    values:
+    - value: protected virtual System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Document> PostProcessChangesAsync (Microsoft.CodeAnalysis.Document document, System.Threading.CancellationToken cancellationToken);
+  - lang: fsharp
+    values:
+    - value: >-
+        abstract member PostProcessChangesAsync : Microsoft.CodeAnalysis.Document * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Document>
+
+        override this.PostProcessChangesAsync : Microsoft.CodeAnalysis.Document * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Document>
+  - lang: vb
+    values:
+    - value: Protected Overridable Function PostProcessChangesAsync (document As Document, cancellationToken As CancellationToken) As Task(Of Document)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Apply post processing steps to a single document:
+      Reducing nodes annotated with <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Simplification.Simplifier.Annotation"></xref>
+      Formatting nodes annotated with <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Formatting.Formatter.Annotation"></xref>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Solution?alt=Microsoft.CodeAnalysis.Solution&text=Solution" data-throw-if-not-resolved="True"/>&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: changedSolution
+    description: The solution changed by the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref>.
+    type: <xref href="Microsoft.CodeAnalysis.Solution?alt=Microsoft.CodeAnalysis.Solution&text=Solution" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: A cancellation token
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)
+  name: PostProcessChangesAsync(Solution, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync(Solution, CancellationToken)
+  nameWithType: CodeAction.PostProcessChangesAsync(Solution, CancellationToken)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        protected:
+         System::Threading::Tasks::Task<Microsoft::CodeAnalysis::Solution ^> ^ PostProcessChangesAsync(Microsoft::CodeAnalysis::Solution ^ changedSolution, System::Threading::CancellationToken cancellationToken);
+  - lang: csharp
+    values:
+    - value: protected System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Solution> PostProcessChangesAsync (Microsoft.CodeAnalysis.Solution changedSolution, System.Threading.CancellationToken cancellationToken);
+  - lang: fsharp
+    values:
+    - value: 'member this.PostProcessChangesAsync : Microsoft.CodeAnalysis.Solution * System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Solution>'
+  - lang: vb
+    values:
+    - value: Protected Function PostProcessChangesAsync (changedSolution As Solution, cancellationToken As CancellationToken) As Task(Of Solution)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Apply post processing steps to solution changes, like formatting and simplification.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync*
+commentId: Overload:Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync
+namespace: Microsoft.CodeAnalysis.CodeActions
+name: PostProcessChangesAsync
+fullName: Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync
+nameWithType: CodeAction.PostProcessChangesAsync
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync
+  api_location:
+  - Microsoft.CodeAnalysis.Workspaces.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.CodeActions.CodeAction.PostProcessChangesAsync
+  - Microsoft::CodeAnalysis::CodeActions::CodeAction::PostProcessChangesAsync
+  - PostProcessChangesAsync
+  - CodeAction.PostProcessChangesAsync
+  - CodeAction::PostProcessChangesAsync
+  helpviewer_keywords:
+  - CodeAction.PostProcessChangesAsync method [.NET]
+  - PostProcessChangesAsync method [.NET], class CodeAction
+  - CodeAction.PostProcessChangesAsync(Document, CancellationToken) method [.NET]
+  - PostProcessChangesAsync(Document, CancellationToken) method [.NET], class CodeAction
+  - CodeAction.PostProcessChangesAsync(Solution, CancellationToken) method [.NET]
+  - PostProcessChangesAsync(Solution, CancellationToken) method [.NET], class CodeAction
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

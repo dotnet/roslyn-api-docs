@@ -1,0 +1,322 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.CodeActions.CodeAction?alt=Microsoft.CodeAnalysis.CodeActions.CodeAction&text=CodeAction" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: title
+    description: Title of the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref> group.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: nestedActions
+    description: The code actions within the group.
+    type: <xref href="System.Collections.Immutable.ImmutableArray`1?alt=System.Collections.Immutable.ImmutableArray&text=ImmutableArray" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.CodeActions.CodeAction?alt=Microsoft.CodeAnalysis.CodeActions.CodeAction&text=CodeAction" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: isInlinable
+    description: >-
+      <code data-dev-comment-type="langword">true</code> to allow inlining the members of the group into the parent;
+        otherwise, <code data-dev-comment-type="langword">false</code> to require that this group appear as a group with nested actions.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CodeActions.CodeAction},System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CodeActions.CodeAction},System.Boolean)
+  name: Create(String, ImmutableArray<CodeAction>, Boolean)
+  fullName: Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(String, ImmutableArray<CodeAction>, Boolean)
+  nameWithType: CodeAction.Create(String, ImmutableArray<CodeAction>, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.CodeActions.CodeAction> nestedActions, bool isInlinable);
+  - lang: fsharp
+    values:
+    - value: 'static member Create : string * System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.CodeActions.CodeAction> * bool -> Microsoft.CodeAnalysis.CodeActions.CodeAction'
+  - lang: vb
+    values:
+    - value: Public Shared Function Create (title As String, nestedActions As ImmutableArray(Of CodeAction), isInlinable As Boolean) As CodeAction
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref> representing a group of code actions.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.CodeActions.CodeAction?alt=Microsoft.CodeAnalysis.CodeActions.CodeAction&text=CodeAction" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: title
+    description: Title of the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref>.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: createChangedDocument
+    description: Function to create the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Document"></xref>.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Document?alt=Microsoft.CodeAnalysis.Document&text=Document" data-throw-if-not-resolved="True"/>&gt;&gt;
+  - namesWithMoniker:
+    - value: equivalenceKey
+    description: Optional value used to determine the equivalence of the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref> with other <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref>s. See <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey"></xref>.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String)
+  commentId: M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String)
+  name: Create(String, Func<CancellationToken,Task<Document>>, String)
+  fullName: Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(String, Func<CancellationToken,Task<Document>>, String)
+  nameWithType: CodeAction.Create(String, Func<CancellationToken,Task<Document>>, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func<System.Threading.CancellationToken,System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Document>> createChangedDocument, string equivalenceKey = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func<System.Threading.CancellationToken,System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Document>> createChangedDocument, string? equivalenceKey = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member Create : string * Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Document>> * string -> Microsoft.CodeAnalysis.CodeActions.CodeAction'
+  - lang: vb
+    values:
+    - value: Public Shared Function Create (title As String, createChangedDocument As Func(Of CancellationToken, Task(Of Document)), Optional equivalenceKey As String = Nothing) As CodeAction
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref> for a change to a single <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Document"></xref>.
+
+    Use this factory when the change is expensive to compute and should be deferred until requested.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.CodeActions.CodeAction?alt=Microsoft.CodeAnalysis.CodeActions.CodeAction&text=CodeAction" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: title
+    description: Title of the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref>.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: createChangedSolution
+    description: Function to create the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Solution"></xref>.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Solution?alt=Microsoft.CodeAnalysis.Solution&text=Solution" data-throw-if-not-resolved="True"/>&gt;&gt;
+  - namesWithMoniker:
+    - value: equivalenceKey
+    description: Optional value used to determine the equivalence of the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref> with other <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref>s. See <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey"></xref>.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Solution}},System.String)
+  commentId: M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Solution}},System.String)
+  name: Create(String, Func<CancellationToken,Task<Solution>>, String)
+  fullName: Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(String, Func<CancellationToken,Task<Solution>>, String)
+  nameWithType: CodeAction.Create(String, Func<CancellationToken,Task<Solution>>, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func<System.Threading.CancellationToken,System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Solution>> createChangedSolution, string equivalenceKey = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func<System.Threading.CancellationToken,System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Solution>> createChangedSolution, string? equivalenceKey = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member Create : string * Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<Microsoft.CodeAnalysis.Solution>> * string -> Microsoft.CodeAnalysis.CodeActions.CodeAction'
+  - lang: vb
+    values:
+    - value: Public Shared Function Create (title As String, createChangedSolution As Func(Of CancellationToken, Task(Of Solution)), Optional equivalenceKey As String = Nothing) As CodeAction
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.CodeActions.CodeAction"></xref> for a change to more than one <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Document"></xref> within a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Solution"></xref>.
+
+    Use this factory when the change is expensive to compute and should be deferred until requested.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.CodeActions.CodeAction.Create*
+commentId: Overload:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create
+namespace: Microsoft.CodeAnalysis.CodeActions
+name: Create
+fullName: Microsoft.CodeAnalysis.CodeActions.CodeAction.Create
+nameWithType: CodeAction.Create
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.CodeActions.CodeAction.Create
+  api_location:
+  - Microsoft.CodeAnalysis.Workspaces.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.CodeActions.CodeAction.Create
+  - Microsoft::CodeAnalysis::CodeActions::CodeAction::Create
+  - Create
+  - CodeAction.Create
+  - CodeAction::Create
+  helpviewer_keywords:
+  - CodeAction.Create method [.NET]
+  - Create method [.NET], class CodeAction
+  - CodeAction.Create(String, ImmutableArray<CodeAction>, Boolean) method [.NET]
+  - Create(String, ImmutableArray<CodeAction>, Boolean) method [.NET], class CodeAction
+  - CodeAction.Create(String, Func<CancellationToken,Task<Document>>, String) method [.NET]
+  - Create(String, Func<CancellationToken,Task<Document>>, String) method [.NET], class CodeAction
+  - CodeAction.Create(String, Func<CancellationToken,Task<Solution>>, String) method [.NET]
+  - Create(String, Func<CancellationToken,Task<Solution>>, String) method [.NET], class CodeAction
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1

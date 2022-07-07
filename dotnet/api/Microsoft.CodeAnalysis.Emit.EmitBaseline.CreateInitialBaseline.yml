@@ -1,0 +1,281 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.Emit.EmitBaseline?alt=Microsoft.CodeAnalysis.Emit.EmitBaseline&text=EmitBaseline" data-throw-if-not-resolved="True"/>
+    description: An <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.EmitBaseline"></xref> for the module.
+  parameters:
+  - namesWithMoniker:
+    - value: module
+    description: The metadata of the module before editing.
+    type: <xref href="Microsoft.CodeAnalysis.ModuleMetadata?alt=Microsoft.CodeAnalysis.ModuleMetadata&text=ModuleMetadata" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: debugInformationProvider
+    description: >-
+      A function that for a method handle returns Edit and Continue debug information emitted by the compiler into the PDB.
+
+      The function shall throw <xref data-throw-if-not-resolved="true" uid="System.IO.InvalidDataException"></xref> if the debug information can't be read for the specified method.
+
+      This exception and <xref data-throw-if-not-resolved="true" uid="System.IO.IOException"></xref> are caught and converted to an emit diagnostic. Other exceptions are passed through.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Reflection.Metadata.MethodDefinitionHandle?alt=System.Reflection.Metadata.MethodDefinitionHandle&text=MethodDefinitionHandle" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation?alt=Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&text=EditAndContinueMethodDebugInformation" data-throw-if-not-resolved="True"/>&gt;
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">module</code> is not a PE image.
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  - description: <code data-dev-comment-type="paramref">debugInformationProvider</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: Error reading module metadata.
+    type: <xref href="System.IO.IOException" data-throw-if-not-resolved="True"/>
+  - description: Module metadata is invalid.
+    type: <xref href="System.BadImageFormatException" data-throw-if-not-resolved="True"/>
+  - description: Module has been disposed.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline(Microsoft.CodeAnalysis.ModuleMetadata,System.Func{System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation})
+  commentId: M:Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline(Microsoft.CodeAnalysis.ModuleMetadata,System.Func{System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation})
+  name: CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>)
+  fullName: Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>)
+  nameWithType: EmitBaseline.CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static Microsoft::CodeAnalysis::Emit::EmitBaseline ^ CreateInitialBaseline(Microsoft::CodeAnalysis::ModuleMetadata ^ module, Func<System::Reflection::Metadata::MethodDefinitionHandle, Microsoft::CodeAnalysis::Emit::EditAndContinueMethodDebugInformation> ^ debugInformationProvider);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.Emit.EmitBaseline CreateInitialBaseline (Microsoft.CodeAnalysis.ModuleMetadata module, Func<System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation> debugInformationProvider);
+  - lang: fsharp
+    values:
+    - value: 'static member CreateInitialBaseline : Microsoft.CodeAnalysis.ModuleMetadata * Func<System.Reflection.Metadata.MethodDefinitionHandle, Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation> -> Microsoft.CodeAnalysis.Emit.EmitBaseline'
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateInitialBaseline (module As ModuleMetadata, debugInformationProvider As Func(Of MethodDefinitionHandle, EditAndContinueMethodDebugInformation)) As EmitBaseline
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.EmitBaseline"></xref> from the metadata of the module before editing
+
+    and from a function that maps from a method to an array of local names.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.Emit.EmitBaseline?alt=Microsoft.CodeAnalysis.Emit.EmitBaseline&text=EmitBaseline" data-throw-if-not-resolved="True"/>
+    description: An <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.EmitBaseline"></xref> for the module.
+  parameters:
+  - namesWithMoniker:
+    - value: module
+    description: The metadata of the module before editing.
+    type: <xref href="Microsoft.CodeAnalysis.ModuleMetadata?alt=Microsoft.CodeAnalysis.ModuleMetadata&text=ModuleMetadata" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: debugInformationProvider
+    description: >-
+      A function that for a method handle returns Edit and Continue debug information emitted by the compiler into the PDB.
+
+      The function shall throw <xref data-throw-if-not-resolved="true" uid="System.IO.InvalidDataException"></xref> if the debug information can't be read for the specified method.
+
+      This exception and <xref data-throw-if-not-resolved="true" uid="System.IO.IOException"></xref> are caught and converted to an emit diagnostic. Other exceptions are passed through.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Reflection.Metadata.MethodDefinitionHandle?alt=System.Reflection.Metadata.MethodDefinitionHandle&text=MethodDefinitionHandle" data-throw-if-not-resolved="True"/>,<xref href="Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation?alt=Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&text=EditAndContinueMethodDebugInformation" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: localSignatureProvider
+    description: >-
+      A function that for a method handle returns the signature of its local variables.
+
+      The function shall throw <xref data-throw-if-not-resolved="true" uid="System.IO.InvalidDataException"></xref> if the information can't be read for the specified method.
+
+      This exception and <xref data-throw-if-not-resolved="true" uid="System.IO.IOException"></xref> are caught and converted to an emit diagnostic. Other exceptions are passed through.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Reflection.Metadata.MethodDefinitionHandle?alt=System.Reflection.Metadata.MethodDefinitionHandle&text=MethodDefinitionHandle" data-throw-if-not-resolved="True"/>,<xref href="System.Reflection.Metadata.StandaloneSignatureHandle?alt=System.Reflection.Metadata.StandaloneSignatureHandle&text=StandaloneSignatureHandle" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: hasPortableDebugInformation
+    description: True if the baseline PDB is portable.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">localSignatureProvider</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: Error reading module metadata.
+    type: <xref href="System.IO.IOException" data-throw-if-not-resolved="True"/>
+  - description: Module metadata is invalid.
+    type: <xref href="System.BadImageFormatException" data-throw-if-not-resolved="True"/>
+  - description: Module has been disposed.
+    type: <xref href="System.ObjectDisposedException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline(Microsoft.CodeAnalysis.ModuleMetadata,System.Func{System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation},System.Func{System.Reflection.Metadata.MethodDefinitionHandle,System.Reflection.Metadata.StandaloneSignatureHandle},System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline(Microsoft.CodeAnalysis.ModuleMetadata,System.Func{System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation},System.Func{System.Reflection.Metadata.MethodDefinitionHandle,System.Reflection.Metadata.StandaloneSignatureHandle},System.Boolean)
+  name: CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>, Func<MethodDefinitionHandle,StandaloneSignatureHandle>, Boolean)
+  fullName: Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>, Func<MethodDefinitionHandle,StandaloneSignatureHandle>, Boolean)
+  nameWithType: EmitBaseline.CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>, Func<MethodDefinitionHandle,StandaloneSignatureHandle>, Boolean)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static Microsoft::CodeAnalysis::Emit::EmitBaseline ^ CreateInitialBaseline(Microsoft::CodeAnalysis::ModuleMetadata ^ module, Func<System::Reflection::Metadata::MethodDefinitionHandle, Microsoft::CodeAnalysis::Emit::EditAndContinueMethodDebugInformation> ^ debugInformationProvider, Func<System::Reflection::Metadata::MethodDefinitionHandle, System::Reflection::Metadata::StandaloneSignatureHandle> ^ localSignatureProvider, bool hasPortableDebugInformation);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.Emit.EmitBaseline CreateInitialBaseline (Microsoft.CodeAnalysis.ModuleMetadata module, Func<System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation> debugInformationProvider, Func<System.Reflection.Metadata.MethodDefinitionHandle,System.Reflection.Metadata.StandaloneSignatureHandle> localSignatureProvider, bool hasPortableDebugInformation);
+  - lang: fsharp
+    values:
+    - value: 'static member CreateInitialBaseline : Microsoft.CodeAnalysis.ModuleMetadata * Func<System.Reflection.Metadata.MethodDefinitionHandle, Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation> * Func<System.Reflection.Metadata.MethodDefinitionHandle, System.Reflection.Metadata.StandaloneSignatureHandle> * bool -> Microsoft.CodeAnalysis.Emit.EmitBaseline'
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateInitialBaseline (module As ModuleMetadata, debugInformationProvider As Func(Of MethodDefinitionHandle, EditAndContinueMethodDebugInformation), localSignatureProvider As Func(Of MethodDefinitionHandle, StandaloneSignatureHandle), hasPortableDebugInformation As Boolean) As EmitBaseline
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.EmitBaseline"></xref> from the metadata of the module before editing
+
+    and from a function that maps from a method to an array of local names.
+  remarks: <p>Only the initial baseline is created using this method; subsequent baselines are created automatically when emitting the differences in subsequent compilations.</p><p>When an active method (one for which a frame is allocated on a stack) is updated the values of its local variables need to be preserved. The mapping of local variable names to their slots in the frame is not included in the metadata and thus needs to be provided by <code data-dev-comment-type="paramref">debugInformationProvider</code>.</p><p>The <code data-dev-comment-type="paramref">debugInformationProvider</code> is only needed for the initial generation. The mapping for the subsequent generations is carried over through <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.EmitBaseline"></xref>. The compiler assigns slots to named local variables (including named temporary variables) it the order in which they appear in the source code. This property allows the compiler to reconstruct the local variable mapping for the initial generation. A subsequent generation may add a new variable in between two variables of the previous generation. Since the slots of the previous generation variables need to be preserved the only option is to add these new variables to the end. The slot ordering thus no longer matches the syntax ordering. It is therefore necessary to pass <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.EmitDifferenceResult.Baseline"></xref> to the next generation (rather than e.g. create new <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Emit.EmitBaseline"></xref>s from scratch based on metadata produced by subsequent compilations).</p>
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline*
+commentId: Overload:Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline
+namespace: Microsoft.CodeAnalysis.Emit
+name: CreateInitialBaseline
+fullName: Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline
+nameWithType: EmitBaseline.CreateInitialBaseline
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline
+  - Microsoft::CodeAnalysis::Emit::EmitBaseline::CreateInitialBaseline
+  - CreateInitialBaseline
+  - EmitBaseline.CreateInitialBaseline
+  - EmitBaseline::CreateInitialBaseline
+  helpviewer_keywords:
+  - EmitBaseline.CreateInitialBaseline method [.NET]
+  - CreateInitialBaseline method [.NET], class EmitBaseline
+  - EmitBaseline.CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>) method [.NET]
+  - CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>) method [.NET], class EmitBaseline
+  - EmitBaseline.CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>, Func<MethodDefinitionHandle,StandaloneSignatureHandle>, Boolean) method [.NET]
+  - CreateInitialBaseline(ModuleMetadata, Func<MethodDefinitionHandle,EditAndContinueMethodDebugInformation>, Func<MethodDefinitionHandle,StandaloneSignatureHandle>, Boolean) method [.NET], class EmitBaseline
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

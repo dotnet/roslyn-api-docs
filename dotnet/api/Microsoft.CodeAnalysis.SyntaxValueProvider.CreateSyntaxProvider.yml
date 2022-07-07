@@ -1,0 +1,96 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - description: The type of the value the syntax node is transformed into
+    name: T
+  returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.IncrementalValuesProvider`1?alt=Microsoft.CodeAnalysis.IncrementalValuesProvider&text=IncrementalValuesProvider" data-throw-if-not-resolved="True"/>&lt;T&gt;
+    description: An <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.IncrementalValueProvider`1"></xref> that provides the results of the transformation
+  parameters:
+  - namesWithMoniker:
+    - value: predicate
+    description: A function that determines if the given <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxNode"></xref> should be transformed
+    type: <xref href="System.Func`3?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>,<xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: transform
+    description: A function that performs the transform, when <code data-dev-comment-type="paramref">predicate</code>returns <code data-dev-comment-type="c">true</code> for a given node
+    type: <xref href="System.Func`3?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.GeneratorSyntaxContext?alt=Microsoft.CodeAnalysis.GeneratorSyntaxContext&text=GeneratorSyntaxContext" data-throw-if-not-resolved="True"/>,<xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>,T&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider``1(System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,System.Boolean},System.Func{Microsoft.CodeAnalysis.GeneratorSyntaxContext,System.Threading.CancellationToken,``0})
+  commentId: M:Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider``1(System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,System.Boolean},System.Func{Microsoft.CodeAnalysis.GeneratorSyntaxContext,System.Threading.CancellationToken,``0})
+  name: CreateSyntaxProvider<T>(Func<SyntaxNode,CancellationToken,Boolean>, Func<GeneratorSyntaxContext,CancellationToken,T>)
+  fullName: Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider<T>(Func<SyntaxNode,CancellationToken,Boolean>, Func<GeneratorSyntaxContext,CancellationToken,T>)
+  nameWithType: SyntaxValueProvider.CreateSyntaxProvider<T>(Func<SyntaxNode,CancellationToken,Boolean>, Func<GeneratorSyntaxContext,CancellationToken,T>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.CodeAnalysis.IncrementalValuesProvider<T> CreateSyntaxProvider<T> (Func<Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,bool> predicate, Func<Microsoft.CodeAnalysis.GeneratorSyntaxContext,System.Threading.CancellationToken,T> transform);
+  - lang: fsharp
+    values:
+    - value: "member this.CreateSyntaxProvider : Func<Microsoft.CodeAnalysis.SyntaxNode, System.Threading.CancellationToken, bool> * Func<Microsoft.CodeAnalysis.GeneratorSyntaxContext, System.Threading.CancellationToken, 'T> -> Microsoft.CodeAnalysis.IncrementalValuesProvider<'T>"
+  - lang: vb
+    values:
+    - value: Public Function CreateSyntaxProvider(Of T) (predicate As Func(Of SyntaxNode, CancellationToken, Boolean), transform As Func(Of GeneratorSyntaxContext, CancellationToken, T)) As IncrementalValuesProvider(Of T)
+  monikers:
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.IncrementalValueProvider`1"></xref> that can provide a transform over <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxNode"></xref>s
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider*
+commentId: Overload:Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider
+namespace: Microsoft.CodeAnalysis
+name: CreateSyntaxProvider
+fullName: Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider
+nameWithType: SyntaxValueProvider.CreateSyntaxProvider
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider
+  - Microsoft::CodeAnalysis::SyntaxValueProvider::CreateSyntaxProvider
+  - CreateSyntaxProvider
+  - SyntaxValueProvider.CreateSyntaxProvider
+  - SyntaxValueProvider::CreateSyntaxProvider
+  - Microsoft.CodeAnalysis.SyntaxValueProvider.CreateSyntaxProvider``1
+  - Microsoft::CodeAnalysis::SyntaxValueProvider::CreateSyntaxProvider``1
+  - CreateSyntaxProvider``1
+  - SyntaxValueProvider.CreateSyntaxProvider``1
+  - SyntaxValueProvider::CreateSyntaxProvider``1
+  helpviewer_keywords:
+  - SyntaxValueProvider.CreateSyntaxProvider method [.NET]
+  - CreateSyntaxProvider method [.NET], struct SyntaxValueProvider
+  - SyntaxValueProvider.CreateSyntaxProvider<T>(Func<SyntaxNode,CancellationToken,Boolean>, Func<GeneratorSyntaxContext,CancellationToken,T>) method [.NET]
+  - CreateSyntaxProvider<T>(Func<SyntaxNode,CancellationToken,Boolean>, Func<GeneratorSyntaxContext,CancellationToken,T>) method [.NET], struct SyntaxValueProvider
+  monikers:
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

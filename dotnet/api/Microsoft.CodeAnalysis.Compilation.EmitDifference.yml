@@ -1,0 +1,447 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.Emit.EmitDifferenceResult?alt=Microsoft.CodeAnalysis.Emit.EmitDifferenceResult&text=EmitDifferenceResult" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: baseline
+    type: <xref href="Microsoft.CodeAnalysis.Emit.EmitBaseline?alt=Microsoft.CodeAnalysis.Emit.EmitBaseline&text=EmitBaseline" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: edits
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Emit.SemanticEdit?alt=Microsoft.CodeAnalysis.Emit.SemanticEdit&text=SemanticEdit" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: isAddedSymbol
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.ISymbol?alt=Microsoft.CodeAnalysis.ISymbol&text=ISymbol" data-throw-if-not-resolved="True"/>,<xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: metadataStream
+    type: <xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: ilStream
+    type: <xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: pdbStream
+    type: <xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: updatedMethods
+    type: <xref href="System.Collections.Generic.ICollection`1?alt=System.Collections.Generic.ICollection&text=ICollection" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Reflection.Metadata.MethodDefinitionHandle?alt=System.Reflection.Metadata.MethodDefinitionHandle&text=MethodDefinitionHandle" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: cancellationToken
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Compilation.EmitDifference(Microsoft.CodeAnalysis.Emit.EmitBaseline,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Emit.SemanticEdit},System.Func{Microsoft.CodeAnalysis.ISymbol,System.Boolean},System.IO.Stream,System.IO.Stream,System.IO.Stream,System.Collections.Generic.ICollection{System.Reflection.Metadata.MethodDefinitionHandle},System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.Compilation.EmitDifference(Microsoft.CodeAnalysis.Emit.EmitBaseline,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Emit.SemanticEdit},System.Func{Microsoft.CodeAnalysis.ISymbol,System.Boolean},System.IO.Stream,System.IO.Stream,System.IO.Stream,System.Collections.Generic.ICollection{System.Reflection.Metadata.MethodDefinitionHandle},System.Threading.CancellationToken)
+  name: EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.Compilation.EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken)
+  nameWithType: Compilation.EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+    monikers:
+    - roslyn-dotnet-4.0.1
+    - roslyn-dotnet-4.1.0
+    - roslyn-dotnet-4.2.0
+  attributeMonikers:
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.CodeAnalysis.Emit.EmitDifferenceResult EmitDifference (Microsoft.CodeAnalysis.Emit.EmitBaseline baseline, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.Emit.SemanticEdit> edits, Func<Microsoft.CodeAnalysis.ISymbol,bool> isAddedSymbol, System.IO.Stream metadataStream, System.IO.Stream ilStream, System.IO.Stream pdbStream, System.Collections.Generic.ICollection<System.Reflection.Metadata.MethodDefinitionHandle> updatedMethods, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+    - value: >-
+        [System.Obsolete("UpdatedMethods is now part of EmitDifferenceResult, so you should use an overload that doesn't take it.")]
+
+        public Microsoft.CodeAnalysis.Emit.EmitDifferenceResult EmitDifference (Microsoft.CodeAnalysis.Emit.EmitBaseline baseline, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.Emit.SemanticEdit> edits, Func<Microsoft.CodeAnalysis.ISymbol,bool> isAddedSymbol, System.IO.Stream metadataStream, System.IO.Stream ilStream, System.IO.Stream pdbStream, System.Collections.Generic.ICollection<System.Reflection.Metadata.MethodDefinitionHandle> updatedMethods, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'member this.EmitDifference : Microsoft.CodeAnalysis.Emit.EmitBaseline * seq<Microsoft.CodeAnalysis.Emit.SemanticEdit> * Func<Microsoft.CodeAnalysis.ISymbol, bool> * System.IO.Stream * System.IO.Stream * System.IO.Stream * System.Collections.Generic.ICollection<System.Reflection.Metadata.MethodDefinitionHandle> * System.Threading.CancellationToken -> Microsoft.CodeAnalysis.Emit.EmitDifferenceResult'
+      monikers:
+      - roslyn-dotnet
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+    - value: >-
+        [<System.Obsolete("UpdatedMethods is now part of EmitDifferenceResult, so you should use an overload that doesn't take it.")>]
+
+        member this.EmitDifference : Microsoft.CodeAnalysis.Emit.EmitBaseline * seq<Microsoft.CodeAnalysis.Emit.SemanticEdit> * Func<Microsoft.CodeAnalysis.ISymbol, bool> * System.IO.Stream * System.IO.Stream * System.IO.Stream * System.Collections.Generic.ICollection<System.Reflection.Metadata.MethodDefinitionHandle> * System.Threading.CancellationToken -> Microsoft.CodeAnalysis.Emit.EmitDifferenceResult
+      monikers:
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: vb
+    values:
+    - value: Public Function EmitDifference (baseline As EmitBaseline, edits As IEnumerable(Of SemanticEdit), isAddedSymbol As Func(Of ISymbol, Boolean), metadataStream As Stream, ilStream As Stream, pdbStream As Stream, updatedMethods As ICollection(Of MethodDefinitionHandle), Optional cancellationToken As CancellationToken = Nothing) As EmitDifferenceResult
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  obsoleteMessagesWithMoniker:
+  - value: UpdatedMethods is now part of EmitDifferenceResult, so you should use an overload that doesn't take it.
+    monikers:
+    - roslyn-dotnet-4.0.1
+    - roslyn-dotnet-4.1.0
+    - roslyn-dotnet-4.2.0
+  summary: >-
+    Emit the differences between the compilation and the previous generation
+
+    for Edit and Continue. The differences are expressed as added and changed
+
+    symbols, and are emitted as metadata, IL, and PDB deltas. A representation
+
+    of the current compilation is returned as an EmitBaseline for use in a
+
+    subsequent Edit and Continue.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.Emit.EmitDifferenceResult?alt=Microsoft.CodeAnalysis.Emit.EmitDifferenceResult&text=EmitDifferenceResult" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: baseline
+    type: <xref href="Microsoft.CodeAnalysis.Emit.EmitBaseline?alt=Microsoft.CodeAnalysis.Emit.EmitBaseline&text=EmitBaseline" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: edits
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Emit.SemanticEdit?alt=Microsoft.CodeAnalysis.Emit.SemanticEdit&text=SemanticEdit" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: metadataStream
+    type: <xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: ilStream
+    type: <xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: pdbStream
+    type: <xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: updatedMethods
+    type: <xref href="System.Collections.Generic.ICollection`1?alt=System.Collections.Generic.ICollection&text=ICollection" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Reflection.Metadata.MethodDefinitionHandle?alt=System.Reflection.Metadata.MethodDefinitionHandle&text=MethodDefinitionHandle" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: cancellationToken
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Compilation.EmitDifference(Microsoft.CodeAnalysis.Emit.EmitBaseline,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Emit.SemanticEdit},System.IO.Stream,System.IO.Stream,System.IO.Stream,System.Collections.Generic.ICollection{System.Reflection.Metadata.MethodDefinitionHandle},System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.Compilation.EmitDifference(Microsoft.CodeAnalysis.Emit.EmitBaseline,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Emit.SemanticEdit},System.IO.Stream,System.IO.Stream,System.IO.Stream,System.Collections.Generic.ICollection{System.Reflection.Metadata.MethodDefinitionHandle},System.Threading.CancellationToken)
+  name: EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.Compilation.EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken)
+  nameWithType: Compilation.EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken)
+  attributesWithMoniker:
+  - value: System.ObsoleteAttribute
+    monikers:
+    - roslyn-dotnet-4.0.1
+    - roslyn-dotnet-4.1.0
+    - roslyn-dotnet-4.2.0
+  attributeMonikers:
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.CodeAnalysis.Emit.EmitDifferenceResult EmitDifference (Microsoft.CodeAnalysis.Emit.EmitBaseline baseline, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.Emit.SemanticEdit> edits, System.IO.Stream metadataStream, System.IO.Stream ilStream, System.IO.Stream pdbStream, System.Collections.Generic.ICollection<System.Reflection.Metadata.MethodDefinitionHandle> updatedMethods, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+    - value: >-
+        [System.Obsolete("UpdatedMethods is now part of EmitDifferenceResult, so you should use an overload that doesn't take it.")]
+
+        public Microsoft.CodeAnalysis.Emit.EmitDifferenceResult EmitDifference (Microsoft.CodeAnalysis.Emit.EmitBaseline baseline, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.Emit.SemanticEdit> edits, System.IO.Stream metadataStream, System.IO.Stream ilStream, System.IO.Stream pdbStream, System.Collections.Generic.ICollection<System.Reflection.Metadata.MethodDefinitionHandle> updatedMethods, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'member this.EmitDifference : Microsoft.CodeAnalysis.Emit.EmitBaseline * seq<Microsoft.CodeAnalysis.Emit.SemanticEdit> * System.IO.Stream * System.IO.Stream * System.IO.Stream * System.Collections.Generic.ICollection<System.Reflection.Metadata.MethodDefinitionHandle> * System.Threading.CancellationToken -> Microsoft.CodeAnalysis.Emit.EmitDifferenceResult'
+      monikers:
+      - roslyn-dotnet
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+    - value: >-
+        [<System.Obsolete("UpdatedMethods is now part of EmitDifferenceResult, so you should use an overload that doesn't take it.")>]
+
+        member this.EmitDifference : Microsoft.CodeAnalysis.Emit.EmitBaseline * seq<Microsoft.CodeAnalysis.Emit.SemanticEdit> * System.IO.Stream * System.IO.Stream * System.IO.Stream * System.Collections.Generic.ICollection<System.Reflection.Metadata.MethodDefinitionHandle> * System.Threading.CancellationToken -> Microsoft.CodeAnalysis.Emit.EmitDifferenceResult
+      monikers:
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: vb
+    values:
+    - value: Public Function EmitDifference (baseline As EmitBaseline, edits As IEnumerable(Of SemanticEdit), metadataStream As Stream, ilStream As Stream, pdbStream As Stream, updatedMethods As ICollection(Of MethodDefinitionHandle), Optional cancellationToken As CancellationToken = Nothing) As EmitDifferenceResult
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  obsoleteMessagesWithMoniker:
+  - value: UpdatedMethods is now part of EmitDifferenceResult, so you should use an overload that doesn't take it.
+    monikers:
+    - roslyn-dotnet-4.0.1
+    - roslyn-dotnet-4.1.0
+    - roslyn-dotnet-4.2.0
+  summary: >-
+    Emit the differences between the compilation and the previous generation
+
+    for Edit and Continue. The differences are expressed as added and changed
+
+    symbols, and are emitted as metadata, IL, and PDB deltas. A representation
+
+    of the current compilation is returned as an EmitBaseline for use in a
+
+    subsequent Edit and Continue.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.Emit.EmitDifferenceResult?alt=Microsoft.CodeAnalysis.Emit.EmitDifferenceResult&text=EmitDifferenceResult" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: baseline
+    type: <xref href="Microsoft.CodeAnalysis.Emit.EmitBaseline?alt=Microsoft.CodeAnalysis.Emit.EmitBaseline&text=EmitBaseline" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: edits
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Emit.SemanticEdit?alt=Microsoft.CodeAnalysis.Emit.SemanticEdit&text=SemanticEdit" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: isAddedSymbol
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.ISymbol?alt=Microsoft.CodeAnalysis.ISymbol&text=ISymbol" data-throw-if-not-resolved="True"/>,<xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: metadataStream
+    type: <xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: ilStream
+    type: <xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: pdbStream
+    type: <xref href="System.IO.Stream?alt=System.IO.Stream&text=Stream" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Compilation.EmitDifference(Microsoft.CodeAnalysis.Emit.EmitBaseline,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Emit.SemanticEdit},System.Func{Microsoft.CodeAnalysis.ISymbol,System.Boolean},System.IO.Stream,System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.Compilation.EmitDifference(Microsoft.CodeAnalysis.Emit.EmitBaseline,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Emit.SemanticEdit},System.Func{Microsoft.CodeAnalysis.ISymbol,System.Boolean},System.IO.Stream,System.IO.Stream,System.IO.Stream,System.Threading.CancellationToken)
+  name: EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.Compilation.EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, CancellationToken)
+  nameWithType: Compilation.EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.CodeAnalysis.Emit.EmitDifferenceResult EmitDifference (Microsoft.CodeAnalysis.Emit.EmitBaseline baseline, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.Emit.SemanticEdit> edits, Func<Microsoft.CodeAnalysis.ISymbol,bool> isAddedSymbol, System.IO.Stream metadataStream, System.IO.Stream ilStream, System.IO.Stream pdbStream, System.Threading.CancellationToken cancellationToken = default);
+  - lang: fsharp
+    values:
+    - value: 'member this.EmitDifference : Microsoft.CodeAnalysis.Emit.EmitBaseline * seq<Microsoft.CodeAnalysis.Emit.SemanticEdit> * Func<Microsoft.CodeAnalysis.ISymbol, bool> * System.IO.Stream * System.IO.Stream * System.IO.Stream * System.Threading.CancellationToken -> Microsoft.CodeAnalysis.Emit.EmitDifferenceResult'
+  - lang: vb
+    values:
+    - value: Public Function EmitDifference (baseline As EmitBaseline, edits As IEnumerable(Of SemanticEdit), isAddedSymbol As Func(Of ISymbol, Boolean), metadataStream As Stream, ilStream As Stream, pdbStream As Stream, Optional cancellationToken As CancellationToken = Nothing) As EmitDifferenceResult
+  monikers:
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Emit the differences between the compilation and the previous generation
+
+    for Edit and Continue. The differences are expressed as added and changed
+
+    symbols, and are emitted as metadata, IL, and PDB deltas. A representation
+
+    of the current compilation is returned as an EmitBaseline for use in a
+
+    subsequent Edit and Continue.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Compilation.EmitDifference*
+commentId: Overload:Microsoft.CodeAnalysis.Compilation.EmitDifference
+namespace: Microsoft.CodeAnalysis
+name: EmitDifference
+fullName: Microsoft.CodeAnalysis.Compilation.EmitDifference
+nameWithType: Compilation.EmitDifference
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Compilation.EmitDifference
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Compilation.EmitDifference
+  - Microsoft::CodeAnalysis::Compilation::EmitDifference
+  - EmitDifference
+  - Compilation.EmitDifference
+  - Compilation::EmitDifference
+  helpviewer_keywords:
+  - Compilation.EmitDifference method [.NET]
+  - EmitDifference method [.NET], class Compilation
+  - Compilation.EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken) method [.NET]
+  - EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken) method [.NET], class Compilation
+  - Compilation.EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken) method [.NET]
+  - EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Stream, Stream, Stream, ICollection<MethodDefinitionHandle>, CancellationToken) method [.NET], class Compilation
+  - Compilation.EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, CancellationToken) method [.NET]
+  - EmitDifference(EmitBaseline, IEnumerable<SemanticEdit>, Func<ISymbol,Boolean>, Stream, Stream, Stream, CancellationToken) method [.NET], class Compilation
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

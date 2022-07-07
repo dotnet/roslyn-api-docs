@@ -1,0 +1,259 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: action
+    type: <xref href="System.Action?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: taskName
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Workspace.ScheduleTask(System.Action,System.String)
+  commentId: M:Microsoft.CodeAnalysis.Workspace.ScheduleTask(System.Action,System.String)
+  name: ScheduleTask(Action, String)
+  fullName: Microsoft.CodeAnalysis.Workspace.ScheduleTask(Action, String)
+  nameWithType: Workspace.ScheduleTask(Action, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected internal System.Threading.Tasks.Task ScheduleTask (Action action, string taskName = "Workspace.Task");
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: protected internal System.Threading.Tasks.Task ScheduleTask (Action action, string? taskName = "Workspace.Task");
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'member this.ScheduleTask : Action * string -> System.Threading.Tasks.Task'
+  - lang: vb
+    values:
+    - value: Protected Friend Function ScheduleTask (action As Action, Optional taskName As String = "Workspace.Task") As Task
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Executes an action as a background task, as part of a sequential queue of tasks.
+  metadata: {}
+- typeParameters:
+  - name: T
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;T&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: func
+    type: <xref href="System.Func`1?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;T&gt;
+  - namesWithMoniker:
+    - value: taskName
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Workspace.ScheduleTask``1(System.Func{``0},System.String)
+  commentId: M:Microsoft.CodeAnalysis.Workspace.ScheduleTask``1(System.Func{``0},System.String)
+  name: ScheduleTask<T>(Func<T>, String)
+  fullName: Microsoft.CodeAnalysis.Workspace.ScheduleTask<T>(Func<T>, String)
+  nameWithType: Workspace.ScheduleTask<T>(Func<T>, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: protected internal System.Threading.Tasks.Task<T> ScheduleTask<T> (Func<T> func, string taskName = "Workspace.Task");
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: protected internal System.Threading.Tasks.Task<T> ScheduleTask<T> (Func<T> func, string? taskName = "Workspace.Task");
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: "member this.ScheduleTask : Func<'T> * string -> System.Threading.Tasks.Task<'T>"
+  - lang: vb
+    values:
+    - value: Protected Friend Function ScheduleTask(Of T) (func As Func(Of T), Optional taskName As String = "Workspace.Task") As Task(Of T)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Execute a function as a background task, as part of a sequential queue of tasks.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Workspace.ScheduleTask*
+commentId: Overload:Microsoft.CodeAnalysis.Workspace.ScheduleTask
+namespace: Microsoft.CodeAnalysis
+name: ScheduleTask
+fullName: Microsoft.CodeAnalysis.Workspace.ScheduleTask
+nameWithType: Workspace.ScheduleTask
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Workspace.ScheduleTask
+  api_location:
+  - Microsoft.CodeAnalysis.Workspaces.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Workspace.ScheduleTask
+  - Microsoft::CodeAnalysis::Workspace::ScheduleTask
+  - ScheduleTask
+  - Workspace.ScheduleTask
+  - Workspace::ScheduleTask
+  - Microsoft.CodeAnalysis.Workspace.ScheduleTask``1
+  - Microsoft::CodeAnalysis::Workspace::ScheduleTask``1
+  - ScheduleTask``1
+  - Workspace.ScheduleTask``1
+  - Workspace::ScheduleTask``1
+  helpviewer_keywords:
+  - Workspace.ScheduleTask method [.NET]
+  - ScheduleTask method [.NET], class Workspace
+  - Workspace.ScheduleTask(Action, String) method [.NET]
+  - ScheduleTask(Action, String) method [.NET], class Workspace
+  - Workspace.ScheduleTask<T>(Func<T>, String) method [.NET]
+  - ScheduleTask<T>(Func<T>, String) method [.NET], class Workspace
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

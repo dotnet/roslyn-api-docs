@@ -1,0 +1,174 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - description: Enum type giving the syntax node kinds of the source language for which the action applies.
+    name: TLanguageKindEnum
+  parameters:
+  - namesWithMoniker:
+    - value: action
+    description: Action to be executed at the start of semantic analysis of a code block.
+    type: <xref href="System.Action`1?alt=System.Action&text=Action" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext`1?alt=Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext&text=CodeBlockStartAnalysisContext" data-throw-if-not-resolved="True"/>&lt;TLanguageKindEnum&gt;&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.Diagnostics.SymbolStartAnalysisContext.RegisterCodeBlockStartAction``1(System.Action{Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext{``0}})
+  commentId: M:Microsoft.CodeAnalysis.Diagnostics.SymbolStartAnalysisContext.RegisterCodeBlockStartAction``1(System.Action{Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext{``0}})
+  name: RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>>)
+  fullName: Microsoft.CodeAnalysis.Diagnostics.SymbolStartAnalysisContext.RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>>)
+  nameWithType: SymbolStartAnalysisContext.RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>>)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public abstract void RegisterCodeBlockStartAction<TLanguageKindEnum> (Action<Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct;'
+  - lang: fsharp
+    values:
+    - value: "abstract member RegisterCodeBlockStartAction : Action<Microsoft.CodeAnalysis.Diagnostics.CodeBlockStartAnalysisContext<'LanguageKindEnum>> -> unit (requires 'LanguageKindEnum : struct)"
+  - lang: vb
+    values:
+    - value: Public MustOverride Sub RegisterCodeBlockStartAction(Of TLanguageKindEnum As Structure) (action As Action(Of CodeBlockStartAnalysisContext(Of TLanguageKindEnum)))
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Register an action to be executed at the start of semantic analysis of a method body or an expression appearing outside a method body.
+
+    A code block start action can register other actions and/or collect state information to be used in diagnostic analysis,
+
+    but cannot itself report any <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Diagnostic"></xref>s.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Diagnostics.SymbolStartAnalysisContext.RegisterCodeBlockStartAction*
+commentId: Overload:Microsoft.CodeAnalysis.Diagnostics.SymbolStartAnalysisContext.RegisterCodeBlockStartAction
+namespace: Microsoft.CodeAnalysis.Diagnostics
+name: RegisterCodeBlockStartAction
+fullName: Microsoft.CodeAnalysis.Diagnostics.SymbolStartAnalysisContext.RegisterCodeBlockStartAction
+nameWithType: SymbolStartAnalysisContext.RegisterCodeBlockStartAction
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Diagnostics.SymbolStartAnalysisContext.RegisterCodeBlockStartAction
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Diagnostics.SymbolStartAnalysisContext.RegisterCodeBlockStartAction
+  - Microsoft::CodeAnalysis::Diagnostics::SymbolStartAnalysisContext::RegisterCodeBlockStartAction
+  - RegisterCodeBlockStartAction
+  - SymbolStartAnalysisContext.RegisterCodeBlockStartAction
+  - SymbolStartAnalysisContext::RegisterCodeBlockStartAction
+  - Microsoft.CodeAnalysis.Diagnostics.SymbolStartAnalysisContext.RegisterCodeBlockStartAction``1
+  - Microsoft::CodeAnalysis::Diagnostics::SymbolStartAnalysisContext::RegisterCodeBlockStartAction``1
+  - RegisterCodeBlockStartAction``1
+  - SymbolStartAnalysisContext.RegisterCodeBlockStartAction``1
+  - SymbolStartAnalysisContext::RegisterCodeBlockStartAction``1
+  helpviewer_keywords:
+  - SymbolStartAnalysisContext.RegisterCodeBlockStartAction method [.NET]
+  - RegisterCodeBlockStartAction method [.NET], class SymbolStartAnalysisContext
+  - SymbolStartAnalysisContext.RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>>) method [.NET]
+  - RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>>) method [.NET], class SymbolStartAnalysisContext
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

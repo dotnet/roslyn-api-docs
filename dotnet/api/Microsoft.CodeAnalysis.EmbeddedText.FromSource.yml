@@ -1,0 +1,183 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.EmbeddedText?alt=Microsoft.CodeAnalysis.EmbeddedText&text=EmbeddedText" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: filePath
+    description: The file path (pre-normalization) to use in the PDB.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: text
+    description: The source text to embed.
+    type: <xref href="Microsoft.CodeAnalysis.Text.SourceText?alt=Microsoft.CodeAnalysis.Text.SourceText&text=SourceText" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: >-
+      <code data-dev-comment-type="paramref">filePath</code> is null.
+        <code data-dev-comment-type="paramref">text</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  - description: >-
+      <code data-dev-comment-type="paramref">filePath</code> empty.
+        <code data-dev-comment-type="paramref">text</code> cannot be embedded (see <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Text.SourceText.CanBeEmbedded"></xref>).
+    type: <xref href="System.ArgumentException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.EmbeddedText.FromSource(System.String,Microsoft.CodeAnalysis.Text.SourceText)
+  commentId: M:Microsoft.CodeAnalysis.EmbeddedText.FromSource(System.String,Microsoft.CodeAnalysis.Text.SourceText)
+  name: FromSource(String, SourceText)
+  fullName: Microsoft.CodeAnalysis.EmbeddedText.FromSource(String, SourceText)
+  nameWithType: EmbeddedText.FromSource(String, SourceText)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         static Microsoft::CodeAnalysis::EmbeddedText ^ FromSource(System::String ^ filePath, Microsoft::CodeAnalysis::Text::SourceText ^ text);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.EmbeddedText FromSource (string filePath, Microsoft.CodeAnalysis.Text.SourceText text);
+  - lang: fsharp
+    values:
+    - value: 'static member FromSource : string * Microsoft.CodeAnalysis.Text.SourceText -> Microsoft.CodeAnalysis.EmbeddedText'
+  - lang: vb
+    values:
+    - value: Public Shared Function FromSource (filePath As String, text As SourceText) As EmbeddedText
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Constructs a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.EmbeddedText"></xref> for embedding the given <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Text.SourceText"></xref>.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.EmbeddedText.FromSource*
+commentId: Overload:Microsoft.CodeAnalysis.EmbeddedText.FromSource
+namespace: Microsoft.CodeAnalysis
+name: FromSource
+fullName: Microsoft.CodeAnalysis.EmbeddedText.FromSource
+nameWithType: EmbeddedText.FromSource
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.EmbeddedText.FromSource
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.EmbeddedText.FromSource
+  - Microsoft::CodeAnalysis::EmbeddedText::FromSource
+  - FromSource
+  - EmbeddedText.FromSource
+  - EmbeddedText::FromSource
+  helpviewer_keywords:
+  - EmbeddedText.FromSource method [.NET]
+  - FromSource method [.NET], class EmbeddedText
+  - EmbeddedText.FromSource(String, SourceText) method [.NET]
+  - FromSource(String, SourceText) method [.NET], class EmbeddedText
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

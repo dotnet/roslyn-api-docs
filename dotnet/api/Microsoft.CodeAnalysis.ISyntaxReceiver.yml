@@ -1,0 +1,104 @@
+### YamlMime:NetType
+type: interface
+methods:
+- uid: Microsoft.CodeAnalysis.ISyntaxReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.SyntaxNode)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+uid: Microsoft.CodeAnalysis.ISyntaxReceiver
+commentId: T:Microsoft.CodeAnalysis.ISyntaxReceiver
+namespace: Microsoft.CodeAnalysis
+name: ISyntaxReceiver
+fullName: Microsoft.CodeAnalysis.ISyntaxReceiver
+nameWithType: Microsoft.CodeAnalysis.ISyntaxReceiver
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+syntaxWithMoniker:
+- lang: csharp
+  values:
+  - value: public interface ISyntaxReceiver
+- lang: fsharp
+  values:
+  - value: type ISyntaxReceiver = interface
+- lang: vb
+  values:
+  - value: Public Interface ISyntaxReceiver
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+summary: Receives notifications of each <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxNode"></xref> in the compilation before generation runs
+remarks: <p>A <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISourceGenerator"></xref> can provide an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref> via a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxReceiverCreator"></xref>.</p><p>The compiler will invoke the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxReceiverCreator"></xref> prior to generation to obtain an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref>. This instance will have its <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.SyntaxNode)"></xref> called for every syntax node in the compilation.</p><p>The <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref> can record any information about the nodes visited. During <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.GeneratorExecutionContext)"></xref> the generator can obtain the created instance via the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.GeneratorExecutionContext.SyntaxReceiver"></xref> property. The information contained can be used to perform final generation.</p><p>A new instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref> is created per-generation, meaning the instance is free to store state without worrying about lifetime or reuse.</p><p>An <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISourceGenerator"></xref> may provide only a single <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref> or <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxContextReceiver"></xref>, not both.</p>
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.ISyntaxReceiver
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.ISyntaxReceiver
+  - Microsoft::CodeAnalysis::ISyntaxReceiver
+  - ISyntaxReceiver
+  helpviewer_keywords:
+  - Microsoft.CodeAnalysis.ISyntaxReceiver interface [.NET]
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

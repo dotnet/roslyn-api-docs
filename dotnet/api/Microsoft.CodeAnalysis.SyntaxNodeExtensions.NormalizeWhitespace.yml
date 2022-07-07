@@ -1,0 +1,262 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - description: The type of the node.
+    name: TNode
+  returnsWithMoniker:
+    type:
+    - value: TNode
+  parameters:
+  - namesWithMoniker:
+    - value: node
+    description: The node to format.
+    type: TNode
+  - namesWithMoniker:
+    - value: indentation
+    description: A sequence of whitespace characters that defines a single level of indentation.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: elasticTrivia
+    description: If true the replaced trivia is elastic trivia.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace``1(``0,System.String,System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace``1(``0,System.String,System.Boolean)
+  name: NormalizeWhitespace<TNode>(TNode, String, Boolean)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace<TNode>(TNode, String, Boolean)
+  nameWithType: SyntaxNodeExtensions.NormalizeWhitespace<TNode>(TNode, String, Boolean)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TNode>
+         where TNode : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static TNode NormalizeWhitespace(TNode node, System::String ^ indentation, bool elasticTrivia);
+  - lang: csharp
+    values:
+    - value: 'public static TNode NormalizeWhitespace<TNode> (this TNode node, string indentation, bool elasticTrivia) where TNode : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member NormalizeWhitespace : 'Node * string * bool -> 'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function NormalizeWhitespace(Of TNode As SyntaxNode) (node As TNode, indentation As String, elasticTrivia As Boolean) As TNode
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates a new syntax node with all whitespace and end of line trivia replaced with
+
+    regularly formatted trivia.
+  metadata: {}
+- typeParameters:
+  - description: The type of the node.
+    name: TNode
+  returnsWithMoniker:
+    type:
+    - value: TNode
+  parameters:
+  - namesWithMoniker:
+    - value: node
+    description: The node to format.
+    type: TNode
+  - namesWithMoniker:
+    - value: indentation
+    description: An optional sequence of whitespace characters that defines a single level of indentation.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: eol
+    description: An optional sequence of whitespace characters used for end of line.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: elasticTrivia
+    description: If true the replaced trivia is elastic trivia.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace``1(``0,System.String,System.String,System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace``1(``0,System.String,System.String,System.Boolean)
+  name: NormalizeWhitespace<TNode>(TNode, String, String, Boolean)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace<TNode>(TNode, String, String, Boolean)
+  nameWithType: SyntaxNodeExtensions.NormalizeWhitespace<TNode>(TNode, String, String, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: 'public static TNode NormalizeWhitespace<TNode> (this TNode node, string indentation = "    ", string eol = "\r\n", bool elasticTrivia = false) where TNode : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member NormalizeWhitespace : 'Node * string * string * bool -> 'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function NormalizeWhitespace(Of TNode As SyntaxNode) (node As TNode, Optional indentation As String = "    ", Optional eol As String = "\r\n", Optional elasticTrivia As Boolean = false) As TNode
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Creates a new syntax node with all whitespace and end of line trivia replaced with
+
+    regularly formatted trivia.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace*
+commentId: Overload:Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace
+namespace: Microsoft.CodeAnalysis
+name: NormalizeWhitespace
+fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace
+nameWithType: SyntaxNodeExtensions.NormalizeWhitespace
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::NormalizeWhitespace
+  - NormalizeWhitespace
+  - SyntaxNodeExtensions.NormalizeWhitespace
+  - SyntaxNodeExtensions::NormalizeWhitespace
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.NormalizeWhitespace``1
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::NormalizeWhitespace``1
+  - NormalizeWhitespace``1
+  - SyntaxNodeExtensions.NormalizeWhitespace``1
+  - SyntaxNodeExtensions::NormalizeWhitespace``1
+  helpviewer_keywords:
+  - SyntaxNodeExtensions.NormalizeWhitespace method [.NET]
+  - NormalizeWhitespace method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.NormalizeWhitespace<TNode>(TNode, String, Boolean) extension method [.NET]
+  - NormalizeWhitespace<TNode>(TNode, String, Boolean) extension method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.NormalizeWhitespace<TNode>(TNode, String, String, Boolean) extension method [.NET]
+  - NormalizeWhitespace<TNode>(TNode, String, String, Boolean) extension method [.NET], class SyntaxNodeExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

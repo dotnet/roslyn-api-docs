@@ -1,0 +1,280 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.PortableExecutableReference?alt=Microsoft.CodeAnalysis.PortableExecutableReference&text=PortableExecutableReference" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: peImage
+    description: Assembly image.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: properties
+    description: Reference properties (extern aliases, type embedding, <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.MetadataImageKind"></xref>).
+    type: <xref href="Microsoft.CodeAnalysis.MetadataReferenceProperties?alt=Microsoft.CodeAnalysis.MetadataReferenceProperties&text=MetadataReferenceProperties" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: documentation
+    description: Provides XML documentation for symbol found in the reference.
+    type: <xref href="Microsoft.CodeAnalysis.DocumentationProvider?alt=Microsoft.CodeAnalysis.DocumentationProvider&text=DocumentationProvider" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: filePath
+    description: Optional path that describes the location of the metadata. The file doesn't need to exist on disk. The path is opaque to the compiler.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">peImage</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.MetadataReference.CreateFromImage(System.Collections.Generic.IEnumerable{System.Byte},Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider,System.String)
+  commentId: M:Microsoft.CodeAnalysis.MetadataReference.CreateFromImage(System.Collections.Generic.IEnumerable{System.Byte},Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider,System.String)
+  name: CreateFromImage(IEnumerable<Byte>, MetadataReferenceProperties, DocumentationProvider, String)
+  fullName: Microsoft.CodeAnalysis.MetadataReference.CreateFromImage(IEnumerable<Byte>, MetadataReferenceProperties, DocumentationProvider, String)
+  nameWithType: MetadataReference.CreateFromImage(IEnumerable<Byte>, MetadataReferenceProperties, DocumentationProvider, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromImage (System.Collections.Generic.IEnumerable<byte> peImage, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider documentation = default, string filePath = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromImage (System.Collections.Generic.IEnumerable<byte> peImage, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member CreateFromImage : seq<byte> * Microsoft.CodeAnalysis.MetadataReferenceProperties * Microsoft.CodeAnalysis.DocumentationProvider * string -> Microsoft.CodeAnalysis.PortableExecutableReference'
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateFromImage (peImage As IEnumerable(Of Byte), Optional properties As MetadataReferenceProperties = Nothing, Optional documentation As DocumentationProvider = Nothing, Optional filePath As String = Nothing) As PortableExecutableReference
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a reference to a single-module assembly or a standalone module stored in memory.
+  remarks: <p>Performance considerations:</p><p>It is recommended to use <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.AssemblyMetadata.CreateFromImage(System.Collections.Generic.IEnumerable{System.Byte})"></xref> or <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ModuleMetadata.CreateFromImage(System.Collections.Generic.IEnumerable{System.Byte})"></xref> API when creating multiple references to the same metadata. Reusing <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Metadata"></xref> object to create multiple references allows for sharing data across these references.</p><p>The method makes a copy of the data and pins it. To avoid making a copy use an overload that takes an <xref data-throw-if-not-resolved="true" uid="System.Collections.Immutable.ImmutableArray`1"></xref>. The pinned memory is released when the resulting reference becomes unreachable and GC collects it. To control the lifetime of the pinned memory deterministically use <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.AssemblyMetadata.CreateFromStream(System.IO.Stream,System.Reflection.PortableExecutable.PEStreamOptions)"></xref> to create an <xref data-throw-if-not-resolved="true" uid="System.IDisposable"></xref> metadata object and <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.AssemblyMetadata.GetReference(Microsoft.CodeAnalysis.DocumentationProvider,System.Collections.Immutable.ImmutableArray{System.String},System.Boolean,System.String,System.String)"></xref> to get a reference to it.</p>
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.PortableExecutableReference?alt=Microsoft.CodeAnalysis.PortableExecutableReference&text=PortableExecutableReference" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: peImage
+    description: Assembly image.
+    type: <xref href="System.Collections.Immutable.ImmutableArray`1?alt=System.Collections.Immutable.ImmutableArray&text=ImmutableArray" data-throw-if-not-resolved="True"/>&lt;<xref href="System.Byte?alt=System.Byte&text=Byte" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: properties
+    description: Reference properties (extern aliases, type embedding, <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.MetadataImageKind"></xref>).
+    type: <xref href="Microsoft.CodeAnalysis.MetadataReferenceProperties?alt=Microsoft.CodeAnalysis.MetadataReferenceProperties&text=MetadataReferenceProperties" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: documentation
+    description: Provides XML documentation for symbol found in the reference.
+    type: <xref href="Microsoft.CodeAnalysis.DocumentationProvider?alt=Microsoft.CodeAnalysis.DocumentationProvider&text=DocumentationProvider" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: filePath
+    description: Optional path that describes the location of the metadata. The file doesn't need to exist on disk. The path is opaque to the compiler.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  exceptions:
+  - description: <code data-dev-comment-type="paramref">peImage</code> is null.
+    type: <xref href="System.ArgumentNullException" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.MetadataReference.CreateFromImage(System.Collections.Immutable.ImmutableArray{System.Byte},Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider,System.String)
+  commentId: M:Microsoft.CodeAnalysis.MetadataReference.CreateFromImage(System.Collections.Immutable.ImmutableArray{System.Byte},Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider,System.String)
+  name: CreateFromImage(ImmutableArray<Byte>, MetadataReferenceProperties, DocumentationProvider, String)
+  fullName: Microsoft.CodeAnalysis.MetadataReference.CreateFromImage(ImmutableArray<Byte>, MetadataReferenceProperties, DocumentationProvider, String)
+  nameWithType: MetadataReference.CreateFromImage(ImmutableArray<Byte>, MetadataReferenceProperties, DocumentationProvider, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromImage (System.Collections.Immutable.ImmutableArray<byte> peImage, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider documentation = default, string filePath = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromImage (System.Collections.Immutable.ImmutableArray<byte> peImage, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member CreateFromImage : System.Collections.Immutable.ImmutableArray<byte> * Microsoft.CodeAnalysis.MetadataReferenceProperties * Microsoft.CodeAnalysis.DocumentationProvider * string -> Microsoft.CodeAnalysis.PortableExecutableReference'
+  - lang: vb
+    values:
+    - value: Public Shared Function CreateFromImage (peImage As ImmutableArray(Of Byte), Optional properties As MetadataReferenceProperties = Nothing, Optional documentation As DocumentationProvider = Nothing, Optional filePath As String = Nothing) As PortableExecutableReference
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a reference to a single-module assembly or a standalone module stored in memory.
+  remarks: <p>Performance considerations:</p><p>It is recommended to use <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.AssemblyMetadata.CreateFromImage(System.Collections.Immutable.ImmutableArray{System.Byte})"></xref> or <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ModuleMetadata.CreateFromImage(System.Collections.Immutable.ImmutableArray{System.Byte})"></xref> API when creating multiple references to the same metadata. Reusing <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Metadata"></xref> object to create multiple references allows for sharing data across these references.</p><p>The method pins <code data-dev-comment-type="paramref">peImage</code> in managed heap. The pinned memory is released when the resulting reference becomes unreachable and GC collects it. To control the lifetime of the pinned memory deterministically use <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.AssemblyMetadata.CreateFromImage(System.Collections.Immutable.ImmutableArray{System.Byte})"></xref> to create an <xref data-throw-if-not-resolved="true" uid="System.IDisposable"></xref> metadata object and <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.AssemblyMetadata.GetReference(Microsoft.CodeAnalysis.DocumentationProvider,System.Collections.Immutable.ImmutableArray{System.String},System.Boolean,System.String,System.String)"></xref> to get a reference to it.</p><p>The method creates a reference to a single-module assembly. To create a reference to a multi-module assembly or a stand-alone module use <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ModuleMetadata.CreateFromImage(System.Collections.Immutable.ImmutableArray{System.Byte})"></xref> and <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ModuleMetadata.GetReference(Microsoft.CodeAnalysis.DocumentationProvider,System.String,System.String)"></xref>.</p>
+  metadata: {}
+uid: Microsoft.CodeAnalysis.MetadataReference.CreateFromImage*
+commentId: Overload:Microsoft.CodeAnalysis.MetadataReference.CreateFromImage
+namespace: Microsoft.CodeAnalysis
+name: CreateFromImage
+fullName: Microsoft.CodeAnalysis.MetadataReference.CreateFromImage
+nameWithType: MetadataReference.CreateFromImage
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.MetadataReference.CreateFromImage
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.MetadataReference.CreateFromImage
+  - Microsoft::CodeAnalysis::MetadataReference::CreateFromImage
+  - CreateFromImage
+  - MetadataReference.CreateFromImage
+  - MetadataReference::CreateFromImage
+  helpviewer_keywords:
+  - MetadataReference.CreateFromImage method [.NET]
+  - CreateFromImage method [.NET], class MetadataReference
+  - MetadataReference.CreateFromImage(IEnumerable<Byte>, MetadataReferenceProperties, DocumentationProvider, String) method [.NET]
+  - CreateFromImage(IEnumerable<Byte>, MetadataReferenceProperties, DocumentationProvider, String) method [.NET], class MetadataReference
+  - MetadataReference.CreateFromImage(ImmutableArray<Byte>, MetadataReferenceProperties, DocumentationProvider, String) method [.NET]
+  - CreateFromImage(ImmutableArray<Byte>, MetadataReferenceProperties, DocumentationProvider, String) method [.NET], class MetadataReference
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

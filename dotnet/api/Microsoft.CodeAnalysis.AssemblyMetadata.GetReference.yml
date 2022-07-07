@@ -1,0 +1,200 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.PortableExecutableReference?alt=Microsoft.CodeAnalysis.PortableExecutableReference&text=PortableExecutableReference" data-throw-if-not-resolved="True"/>
+    description: A reference to the assembly metadata.
+  parameters:
+  - namesWithMoniker:
+    - value: documentation
+    description: Provider of XML documentation comments for the metadata symbols contained in the module.
+    type: <xref href="Microsoft.CodeAnalysis.DocumentationProvider?alt=Microsoft.CodeAnalysis.DocumentationProvider&text=DocumentationProvider" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: aliases
+    description: Aliases that can be used to refer to the assembly from source code (see "extern alias" directive in C#).
+    type: <xref href="System.Collections.Immutable.ImmutableArray`1?alt=System.Collections.Immutable.ImmutableArray&text=ImmutableArray" data-throw-if-not-resolved="True"/>&lt;<xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: embedInteropTypes
+    description: True to embed interop types from the referenced assembly to the referencing compilation. Must be false for a module.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: filePath
+    description: Path describing the location of the metadata, or null if the metadata have no location.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: display
+    description: Display string used in error messages to identity the reference.
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.AssemblyMetadata.GetReference(Microsoft.CodeAnalysis.DocumentationProvider,System.Collections.Immutable.ImmutableArray{System.String},System.Boolean,System.String,System.String)
+  commentId: M:Microsoft.CodeAnalysis.AssemblyMetadata.GetReference(Microsoft.CodeAnalysis.DocumentationProvider,System.Collections.Immutable.ImmutableArray{System.String},System.Boolean,System.String,System.String)
+  name: GetReference(DocumentationProvider, ImmutableArray<String>, Boolean, String, String)
+  fullName: Microsoft.CodeAnalysis.AssemblyMetadata.GetReference(DocumentationProvider, ImmutableArray<String>, Boolean, String, String)
+  nameWithType: AssemblyMetadata.GetReference(DocumentationProvider, ImmutableArray<String>, Boolean, String, String)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.CodeAnalysis.PortableExecutableReference GetReference (Microsoft.CodeAnalysis.DocumentationProvider documentation = default, System.Collections.Immutable.ImmutableArray<string> aliases = default, bool embedInteropTypes = false, string filePath = default, string display = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+    - value: public Microsoft.CodeAnalysis.PortableExecutableReference GetReference (Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, System.Collections.Immutable.ImmutableArray<string> aliases = default, bool embedInteropTypes = false, string? filePath = default, string? display = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'member this.GetReference : Microsoft.CodeAnalysis.DocumentationProvider * System.Collections.Immutable.ImmutableArray<string> * bool * string * string -> Microsoft.CodeAnalysis.PortableExecutableReference'
+  - lang: vb
+    values:
+    - value: Public Function GetReference (Optional documentation As DocumentationProvider = Nothing, Optional aliases As ImmutableArray(Of String) = Nothing, Optional embedInteropTypes As Boolean = false, Optional filePath As String = Nothing, Optional display As String = Nothing) As PortableExecutableReference
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Creates a reference to the assembly metadata.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.AssemblyMetadata.GetReference*
+commentId: Overload:Microsoft.CodeAnalysis.AssemblyMetadata.GetReference
+namespace: Microsoft.CodeAnalysis
+name: GetReference
+fullName: Microsoft.CodeAnalysis.AssemblyMetadata.GetReference
+nameWithType: AssemblyMetadata.GetReference
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.AssemblyMetadata.GetReference
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.AssemblyMetadata.GetReference
+  - Microsoft::CodeAnalysis::AssemblyMetadata::GetReference
+  - GetReference
+  - AssemblyMetadata.GetReference
+  - AssemblyMetadata::GetReference
+  helpviewer_keywords:
+  - AssemblyMetadata.GetReference method [.NET]
+  - GetReference method [.NET], class AssemblyMetadata
+  - AssemblyMetadata.GetReference(DocumentationProvider, ImmutableArray<String>, Boolean, String, String) method [.NET]
+  - GetReference(DocumentationProvider, ImmutableArray<String>, Boolean, String, String) method [.NET], class AssemblyMetadata
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

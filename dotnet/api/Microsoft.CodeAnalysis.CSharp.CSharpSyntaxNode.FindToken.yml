@@ -1,0 +1,175 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.SyntaxToken?alt=Microsoft.CodeAnalysis.SyntaxToken&text=SyntaxToken" data-throw-if-not-resolved="True"/>
+  parameters:
+  - namesWithMoniker:
+    - value: position
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: findInsideTrivia
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindToken(System.Int32,System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindToken(System.Int32,System.Boolean)
+  name: FindToken(Int32, Boolean)
+  fullName: Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindToken(Int32, Boolean)
+  nameWithType: CSharpSyntaxNode.FindToken(Int32, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public Microsoft.CodeAnalysis.SyntaxToken FindToken (int position, bool findInsideTrivia = false);
+  - lang: fsharp
+    values:
+    - value: 'override this.FindToken : int * bool -> Microsoft.CodeAnalysis.SyntaxToken'
+  - lang: vb
+    values:
+    - value: Public Function FindToken (position As Integer, Optional findInsideTrivia As Boolean = false) As SyntaxToken
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Finds a token according to the following rules:
+
+    1) If position matches the End of the node/s FullSpan and the node is CompilationUnit,
+       then EoF is returned. 
+
+     2) If node.FullSpan.Contains(position) then the token that contains given position is
+        returned.
+
+     3) Otherwise an ArgumentOutOfRangeException is thrown
+  metadata: {}
+uid: Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindToken*
+commentId: Overload:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindToken
+namespace: Microsoft.CodeAnalysis.CSharp
+name: FindToken
+fullName: Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindToken
+nameWithType: CSharpSyntaxNode.FindToken
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.CSharp.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.CSharp v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.CSharp v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.CSharp v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.CSharp v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.CSharp v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.CSharp v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.CSharp v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.CSharp v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.CSharp v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.CSharp v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.CSharp v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.CSharp v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.CSharp v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.CSharp v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.CSharp v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.CSharp v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindToken
+  api_location:
+  - Microsoft.CodeAnalysis.CSharp.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode.FindToken
+  - Microsoft::CodeAnalysis::CSharp::CSharpSyntaxNode::FindToken
+  - FindToken
+  - CSharpSyntaxNode.FindToken
+  - CSharpSyntaxNode::FindToken
+  helpviewer_keywords:
+  - CSharpSyntaxNode.FindToken method [.NET]
+  - FindToken method [.NET], class CSharpSyntaxNode
+  - CSharpSyntaxNode.FindToken(Int32, Boolean) method [.NET]
+  - FindToken(Int32, Boolean) method [.NET], class CSharpSyntaxNode
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

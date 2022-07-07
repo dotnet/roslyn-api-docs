@@ -1,0 +1,75 @@
+### YamlMime:NetMember
+type: method
+members:
+- parameters:
+  - namesWithMoniker:
+    - value: receiverCreator
+    description: A <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxReceiverCreator"></xref> that can be invoked to create an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref>
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxReceiverCreator?alt=Microsoft.CodeAnalysis.SyntaxReceiverCreator&text=SyntaxReceiverCreator" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications(Microsoft.CodeAnalysis.SyntaxReceiverCreator)
+  commentId: M:Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications(Microsoft.CodeAnalysis.SyntaxReceiverCreator)
+  name: RegisterForSyntaxNotifications(SyntaxReceiverCreator)
+  fullName: Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications(SyntaxReceiverCreator)
+  nameWithType: InitializationContext.RegisterForSyntaxNotifications(SyntaxReceiverCreator)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public void RegisterForSyntaxNotifications (Microsoft.CodeAnalysis.SyntaxReceiverCreator receiverCreator);
+  - lang: fsharp
+    values:
+    - value: 'member this.RegisterForSyntaxNotifications : Microsoft.CodeAnalysis.SyntaxReceiverCreator -> unit'
+  - lang: vb
+    values:
+    - value: Public Sub RegisterForSyntaxNotifications (receiverCreator As SyntaxReceiverCreator)
+  monikers:
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  summary: Register a <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxReceiverCreator"></xref> for this generator, which can be used to create an instance of an <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref>.
+  remarks: <p>This method allows generators to be 'syntax aware'. Before each generation the <code data-dev-comment-type="paramref">receiverCreator</code> will be invoked to create an instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref>. This receiver will have its <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver.OnVisitSyntaxNode(Microsoft.CodeAnalysis.SyntaxNode)"></xref> invoked for each syntax node in the compilation, allowing the receiver to build up information about the compilation before generation occurs.</p><p>During <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISourceGenerator.Execute(Microsoft.CodeAnalysis.SourceGeneratorContext)"></xref> the generator can obtain the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref> instance that was created by accessing the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SourceGeneratorContext.SyntaxReceiver"></xref> property. Any information that was collected by the receiver can be used to generate the final output.</p><p>A new instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.ISyntaxReceiver"></xref> is created per-generation, meaning there is no need to manage the lifetime of the receiver or its contents.</p>
+  metadata: {}
+uid: Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications*
+commentId: Overload:Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications
+namespace: Microsoft.CodeAnalysis
+name: RegisterForSyntaxNotifications
+fullName: Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications
+nameWithType: InitializationContext.RegisterForSyntaxNotifications
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.InitializationContext.RegisterForSyntaxNotifications
+  - Microsoft::CodeAnalysis::InitializationContext::RegisterForSyntaxNotifications
+  - RegisterForSyntaxNotifications
+  - InitializationContext.RegisterForSyntaxNotifications
+  - InitializationContext::RegisterForSyntaxNotifications
+  helpviewer_keywords:
+  - InitializationContext.RegisterForSyntaxNotifications method [.NET]
+  - RegisterForSyntaxNotifications method [.NET], struct InitializationContext
+  - InitializationContext.RegisterForSyntaxNotifications(SyntaxReceiverCreator) method [.NET]
+  - RegisterForSyntaxNotifications(SyntaxReceiverCreator) method [.NET], struct InitializationContext
+  monikers:
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0

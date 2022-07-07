@@ -1,0 +1,202 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.TypeInfo?alt=Microsoft.CodeAnalysis.TypeInfo&text=TypeInfo" data-throw-if-not-resolved="True"/>
+    description: The semantic information for the topmost node of the expression.
+  parameters:
+  - namesWithMoniker:
+    - value: semanticModel
+    type: <xref href="Microsoft.CodeAnalysis.SemanticModel?alt=Microsoft.CodeAnalysis.SemanticModel&text=SemanticModel" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: position
+    description: >-
+      A character position used to identify a declaration scope and
+                  accessibility. This character position must be within the FullSpan of the Root syntax
+                  node in this SemanticModel.
+    type: <xref href="System.Int32?alt=System.Int32&text=Int32" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: expression
+    description: >-
+      A syntax node that represents a parsed expression. This syntax
+                  node need not and typically does not appear in the source code referred to  SemanticModel
+                  instance.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: bindingOption
+    description: >-
+      Indicates whether to binding the expression as a full expressions,
+                  or as a type or namespace. If SpeculativeBindingOption.BindAsTypeOrNamespace is supplied, then
+                  expression should derive from TypeSyntax.
+    type: <xref href="Microsoft.CodeAnalysis.SpeculativeBindingOption?alt=Microsoft.CodeAnalysis.SpeculativeBindingOption&text=SpeculativeBindingOption" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.ModelExtensions.GetSpeculativeTypeInfo(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SpeculativeBindingOption)
+  commentId: M:Microsoft.CodeAnalysis.ModelExtensions.GetSpeculativeTypeInfo(Microsoft.CodeAnalysis.SemanticModel,System.Int32,Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SpeculativeBindingOption)
+  name: GetSpeculativeTypeInfo(SemanticModel, Int32, SyntaxNode, SpeculativeBindingOption)
+  fullName: Microsoft.CodeAnalysis.ModelExtensions.GetSpeculativeTypeInfo(SemanticModel, Int32, SyntaxNode, SpeculativeBindingOption)
+  nameWithType: ModelExtensions.GetSpeculativeTypeInfo(SemanticModel, Int32, SyntaxNode, SpeculativeBindingOption)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        [System::Runtime::CompilerServices::Extension]
+         static Microsoft::CodeAnalysis::TypeInfo GetSpeculativeTypeInfo(Microsoft::CodeAnalysis::SemanticModel ^ semanticModel, int position, Microsoft::CodeAnalysis::SyntaxNode ^ expression, Microsoft::CodeAnalysis::SpeculativeBindingOption bindingOption);
+  - lang: csharp
+    values:
+    - value: public static Microsoft.CodeAnalysis.TypeInfo GetSpeculativeTypeInfo (this Microsoft.CodeAnalysis.SemanticModel semanticModel, int position, Microsoft.CodeAnalysis.SyntaxNode expression, Microsoft.CodeAnalysis.SpeculativeBindingOption bindingOption);
+  - lang: fsharp
+    values:
+    - value: 'static member GetSpeculativeTypeInfo : Microsoft.CodeAnalysis.SemanticModel * int * Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.SpeculativeBindingOption -> Microsoft.CodeAnalysis.TypeInfo'
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function GetSpeculativeTypeInfo (semanticModel As SemanticModel, position As Integer, expression As SyntaxNode, bindingOption As SpeculativeBindingOption) As TypeInfo
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Binds the node in the context of the specified location and get semantic information
+
+    such as type, symbols and diagnostics. This method is used to get semantic information
+
+    about an expression that did not actually appear in the source code.
+  remarks: <p>The passed in expression is interpreted as a stand-alone expression, as if it appeared by itself somewhere within the scope that encloses "position".</p>
+  metadata: {}
+uid: Microsoft.CodeAnalysis.ModelExtensions.GetSpeculativeTypeInfo*
+commentId: Overload:Microsoft.CodeAnalysis.ModelExtensions.GetSpeculativeTypeInfo
+namespace: Microsoft.CodeAnalysis
+name: GetSpeculativeTypeInfo
+fullName: Microsoft.CodeAnalysis.ModelExtensions.GetSpeculativeTypeInfo
+nameWithType: ModelExtensions.GetSpeculativeTypeInfo
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.ModelExtensions.GetSpeculativeTypeInfo
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.ModelExtensions.GetSpeculativeTypeInfo
+  - Microsoft::CodeAnalysis::ModelExtensions::GetSpeculativeTypeInfo
+  - GetSpeculativeTypeInfo
+  - ModelExtensions.GetSpeculativeTypeInfo
+  - ModelExtensions::GetSpeculativeTypeInfo
+  helpviewer_keywords:
+  - ModelExtensions.GetSpeculativeTypeInfo method [.NET]
+  - GetSpeculativeTypeInfo method [.NET], class ModelExtensions
+  - ModelExtensions.GetSpeculativeTypeInfo(SemanticModel, Int32, SyntaxNode, SpeculativeBindingOption) extension method [.NET]
+  - GetSpeculativeTypeInfo(SemanticModel, Int32, SyntaxNode, SpeculativeBindingOption) extension method [.NET], class ModelExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

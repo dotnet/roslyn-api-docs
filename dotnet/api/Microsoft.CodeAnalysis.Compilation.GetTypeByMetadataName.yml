@@ -1,0 +1,209 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol?alt=Microsoft.CodeAnalysis.INamedTypeSymbol&text=INamedTypeSymbol" data-throw-if-not-resolved="True"/>
+    description: Null if the type can't be found or there was an ambiguity during lookup.
+  parameters:
+  - namesWithMoniker:
+    - value: fullyQualifiedMetadataName
+    type: <xref href="System.String?alt=System.String&text=String" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Compilation.GetTypeByMetadataName(System.String)
+  commentId: M:Microsoft.CodeAnalysis.Compilation.GetTypeByMetadataName(System.String)
+  name: GetTypeByMetadataName(String)
+  fullName: Microsoft.CodeAnalysis.Compilation.GetTypeByMetadataName(String)
+  nameWithType: Compilation.GetTypeByMetadataName(String)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+         Microsoft::CodeAnalysis::INamedTypeSymbol ^ GetTypeByMetadataName(System::String ^ fullyQualifiedMetadataName);
+  - lang: csharp
+    values:
+    - value: public Microsoft.CodeAnalysis.INamedTypeSymbol GetTypeByMetadataName (string fullyQualifiedMetadataName);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+    - value: public Microsoft.CodeAnalysis.INamedTypeSymbol? GetTypeByMetadataName (string fullyQualifiedMetadataName);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'member this.GetTypeByMetadataName : string -> Microsoft.CodeAnalysis.INamedTypeSymbol'
+  - lang: vb
+    values:
+    - value: Public Function GetTypeByMetadataName (fullyQualifiedMetadataName As String) As INamedTypeSymbol
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Gets the type within the compilation's assembly and all referenced assemblies (other than
+
+    those that can only be referenced via an extern alias) using its canonical CLR metadata name.
+
+    This lookup follows the following order:
+
+    <ol><li>If the type is found in the compilation's assembly, that type is returned.</li><li>
+
+    Next, the core library (the library that defines <code data-dev-comment-type="c">System.Object</code> and has no assembly references) is searched.
+
+    If the type is found there, that type is returned.
+
+    </li><li>
+
+    Finally, all remaining referenced non-extern assemblies are searched. If one and only one type matching the provided metadata name is found, that
+
+    single type is returned. Accessibility is ignored for this check.
+
+    </li></ol>
+  remarks: <p>Since VB does not have the concept of extern aliases, it considers all referenced assemblies.</p><p>In C#, if the core library is referenced as an extern assembly, it will be searched. All other extern-aliased assemblies will not be searched.</p><p>Because accessibility to the current assembly is ignored when searching for types that match the provided metadata name, if multiple referenced assemblies define the same type symbol (as often happens when users copy well-known types from the BCL or other sources) then this API will return null, even if all but one of those symbols would be otherwise inaccessible to user-written code in the current assembly. For fine-grained control over ambiguity resolution, consider using <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Compilation.GetTypesByMetadataName(System.String)"></xref> instead and filtering the results for the symbol required.</p><p>Assemblies can contain multiple modules. Within each assembly, the search is performed based on module's position in the module list of that assembly. When a match is found in one module in an assembly, no further modules within that assembly are searched.</p><p>Type forwarders are ignored, and not considered part of the assembly where the TypeForwardAttribute is written.</p><p>Ambiguities are detected on each nested level. For example, if <code data-dev-comment-type="c">A+B</code> is requested, and there are multiple <code data-dev-comment-type="c">A</code>s but only one of them has a <code data-dev-comment-type="c">B</code> nested type, the lookup will be considered ambiguous and null will be returned.</p>
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Compilation.GetTypeByMetadataName*
+commentId: Overload:Microsoft.CodeAnalysis.Compilation.GetTypeByMetadataName
+namespace: Microsoft.CodeAnalysis
+name: GetTypeByMetadataName
+fullName: Microsoft.CodeAnalysis.Compilation.GetTypeByMetadataName
+nameWithType: Compilation.GetTypeByMetadataName
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Compilation.GetTypeByMetadataName
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Compilation.GetTypeByMetadataName
+  - Microsoft::CodeAnalysis::Compilation::GetTypeByMetadataName
+  - GetTypeByMetadataName
+  - Compilation.GetTypeByMetadataName
+  - Compilation::GetTypeByMetadataName
+  helpviewer_keywords:
+  - Compilation.GetTypeByMetadataName method [.NET]
+  - GetTypeByMetadataName method [.NET], class Compilation
+  - Compilation.GetTypeByMetadataName(String) method [.NET]
+  - GetTypeByMetadataName(String) method [.NET], class Compilation
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

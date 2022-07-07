@@ -1,0 +1,264 @@
+### YamlMime:NetMember
+type: method
+members:
+- typeParameters:
+  - name: TNode
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;TNode&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root of the subtree containing the current nodes corresponding to the original tracked nodes.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: nodes
+    description: One or more node instances originally tracked.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;TNode&gt;
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes``1(Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes``1(Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{``0})
+  name: GetCurrentNodes<TNode>(SyntaxNode, IEnumerable<TNode>)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes<TNode>(SyntaxNode, IEnumerable<TNode>)
+  nameWithType: SyntaxNodeExtensions.GetCurrentNodes<TNode>(SyntaxNode, IEnumerable<TNode>)
+  attributesWithMoniker:
+  - value: System.Runtime.CompilerServices.IteratorStateMachineAttribute
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TNode>
+         where TNode : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static System::Collections::Generic::IEnumerable<TNode> ^ GetCurrentNodes(Microsoft::CodeAnalysis::SyntaxNode ^ root, System::Collections::Generic::IEnumerable<TNode> ^ nodes);
+  - lang: csharp
+    values:
+    - value: >-
+        [System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SyntaxNodeExtensions+<GetCurrentNodes>d__41<>))]
+
+        public static System.Collections.Generic.IEnumerable<TNode> GetCurrentNodes<TNode> (this Microsoft.CodeAnalysis.SyntaxNode root, System.Collections.Generic.IEnumerable<TNode> nodes) where TNode : Microsoft.CodeAnalysis.SyntaxNode;
+  - lang: fsharp
+    values:
+    - value: >-
+        [<System.Runtime.CompilerServices.IteratorStateMachine(typeof(Microsoft.CodeAnalysis.SyntaxNodeExtensions+<GetCurrentNodes>d__41<>))>]
+
+        static member GetCurrentNodes : Microsoft.CodeAnalysis.SyntaxNode * seq<'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)> -> seq<'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)> (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Iterator Function GetCurrentNodes(Of TNode As SyntaxNode) (root As SyntaxNode, nodes As IEnumerable(Of TNode)) As IEnumerable(Of TNode)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Gets the nodes within the subtree corresponding to the original tracked nodes.
+
+    Use TrackNodes to start tracking nodes.
+  metadata: {}
+- typeParameters:
+  - name: TNode
+  returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;TNode&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: root
+    description: The root of the subtree containing the current node corresponding to the original tracked node.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: node
+    description: The node instance originally tracked.
+    type: TNode
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes``1(Microsoft.CodeAnalysis.SyntaxNode,``0)
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes``1(Microsoft.CodeAnalysis.SyntaxNode,``0)
+  name: GetCurrentNodes<TNode>(SyntaxNode, TNode)
+  fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes<TNode>(SyntaxNode, TNode)
+  nameWithType: SyntaxNodeExtensions.GetCurrentNodes<TNode>(SyntaxNode, TNode)
+  syntaxWithMoniker:
+  - lang: cpp
+    values:
+    - value: >-
+        public:
+
+        generic <typename TNode>
+         where TNode : Microsoft::CodeAnalysis::SyntaxNode[System::Runtime::CompilerServices::Extension]
+         static System::Collections::Generic::IEnumerable<TNode> ^ GetCurrentNodes(Microsoft::CodeAnalysis::SyntaxNode ^ root, TNode node);
+  - lang: csharp
+    values:
+    - value: 'public static System.Collections.Generic.IEnumerable<TNode> GetCurrentNodes<TNode> (this Microsoft.CodeAnalysis.SyntaxNode root, TNode node) where TNode : Microsoft.CodeAnalysis.SyntaxNode;'
+  - lang: fsharp
+    values:
+    - value: "static member GetCurrentNodes : Microsoft.CodeAnalysis.SyntaxNode * 'Node -> seq<'Node (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)> (requires 'Node :> Microsoft.CodeAnalysis.SyntaxNode)"
+  - lang: vb
+    values:
+    - value: >-
+        <Extension()>
+
+        Public Function GetCurrentNodes(Of TNode As SyntaxNode) (root As SyntaxNode, node As TNode) As IEnumerable(Of TNode)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: >-
+    Gets the nodes within the subtree corresponding to the original tracked node.
+
+    Use TrackNodes to start tracking nodes.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes*
+commentId: Overload:Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes
+namespace: Microsoft.CodeAnalysis
+name: GetCurrentNodes
+fullName: Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes
+nameWithType: SyntaxNodeExtensions.GetCurrentNodes
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- cpp
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::GetCurrentNodes
+  - GetCurrentNodes
+  - SyntaxNodeExtensions.GetCurrentNodes
+  - SyntaxNodeExtensions::GetCurrentNodes
+  - Microsoft.CodeAnalysis.SyntaxNodeExtensions.GetCurrentNodes``1
+  - Microsoft::CodeAnalysis::SyntaxNodeExtensions::GetCurrentNodes``1
+  - GetCurrentNodes``1
+  - SyntaxNodeExtensions.GetCurrentNodes``1
+  - SyntaxNodeExtensions::GetCurrentNodes``1
+  helpviewer_keywords:
+  - SyntaxNodeExtensions.GetCurrentNodes method [.NET]
+  - GetCurrentNodes method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.GetCurrentNodes<TNode>(SyntaxNode, IEnumerable<TNode>) extension method [.NET]
+  - GetCurrentNodes<TNode>(SyntaxNode, IEnumerable<TNode>) extension method [.NET], class SyntaxNodeExtensions
+  - SyntaxNodeExtensions.GetCurrentNodes<TNode>(SyntaxNode, TNode) extension method [.NET]
+  - GetCurrentNodes<TNode>(SyntaxNode, TNode) extension method [.NET], class SyntaxNodeExtensions
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

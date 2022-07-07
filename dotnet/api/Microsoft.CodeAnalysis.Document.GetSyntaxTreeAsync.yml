@@ -1,0 +1,190 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Threading.Tasks.Task`1?alt=System.Threading.Tasks.Task&text=Task" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxTree?alt=Microsoft.CodeAnalysis.SyntaxTree&text=SyntaxTree" data-throw-if-not-resolved="True"/>&gt;
+    description: >-
+      The returned syntax tree can be <code data-dev-comment-type="langword">null</code> if the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.Document.SupportsSyntaxTree"></xref> returns <code data-dev-comment-type="langword">false</code>. This function may cause computation to occur the first time it is called, but will return
+
+      a cached result every subsequent time.  <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxTree"></xref>'s can hold onto their roots lazily. So calls 
+
+      to <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxTree.GetRoot(System.Threading.CancellationToken)"></xref> or <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxTree.GetRootAsync(System.Threading.CancellationToken)"></xref> may end up causing computation
+
+      to occur at that point.
+  parameters:
+  - namesWithMoniker:
+    - value: cancellationToken
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync(System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync(System.Threading.CancellationToken)
+  name: GetSyntaxTreeAsync(CancellationToken)
+  fullName: Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync(CancellationToken)
+  nameWithType: Document.GetSyntaxTreeAsync(CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Threading.Tasks.Task<Microsoft.CodeAnalysis.SyntaxTree> GetSyntaxTreeAsync (System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+    - value: public System.Threading.Tasks.Task<Microsoft.CodeAnalysis.SyntaxTree?> GetSyntaxTreeAsync (System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'member this.GetSyntaxTreeAsync : System.Threading.CancellationToken -> System.Threading.Tasks.Task<Microsoft.CodeAnalysis.SyntaxTree>'
+  - lang: vb
+    values:
+    - value: Public Function GetSyntaxTreeAsync (Optional cancellationToken As CancellationToken = Nothing) As Task(Of SyntaxTree)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Gets the <xref data-throw-if-not-resolved="true" uid="Microsoft.CodeAnalysis.SyntaxTree"></xref> for this document asynchronously.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync*
+commentId: Overload:Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync
+namespace: Microsoft.CodeAnalysis
+name: GetSyntaxTreeAsync
+fullName: Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync
+nameWithType: Document.GetSyntaxTreeAsync
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync
+  api_location:
+  - Microsoft.CodeAnalysis.Workspaces.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Document.GetSyntaxTreeAsync
+  - Microsoft::CodeAnalysis::Document::GetSyntaxTreeAsync
+  - GetSyntaxTreeAsync
+  - Document.GetSyntaxTreeAsync
+  - Document::GetSyntaxTreeAsync
+  helpviewer_keywords:
+  - Document.GetSyntaxTreeAsync method [.NET]
+  - GetSyntaxTreeAsync method [.NET], class Document
+  - Document.GetSyntaxTreeAsync(CancellationToken) method [.NET]
+  - GetSyntaxTreeAsync(CancellationToken) method [.NET], class Document
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

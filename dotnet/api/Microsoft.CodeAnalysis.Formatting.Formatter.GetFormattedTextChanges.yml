@@ -1,0 +1,360 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IList`1?alt=System.Collections.Generic.IList&text=IList" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Text.TextChange?alt=Microsoft.CodeAnalysis.Text.TextChange&text=TextChange" data-throw-if-not-resolved="True"/>&gt;
+    description: The changes necessary to format the tree.
+  parameters:
+  - namesWithMoniker:
+    - value: node
+    description: The root node of a syntax tree to format.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: workspace
+    description: A workspace used to give the formatting context.
+    type: <xref href="Microsoft.CodeAnalysis.Workspace?alt=Microsoft.CodeAnalysis.Workspace&text=Workspace" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: options
+    description: An optional set of formatting options. If these options are not supplied the current set of options from the workspace will be used.
+    type: <xref href="Microsoft.CodeAnalysis.Options.OptionSet?alt=Microsoft.CodeAnalysis.Options.OptionSet&text=OptionSet" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: An optional cancellation token.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)
+  name: GetFormattedTextChanges(SyntaxNode, Workspace, OptionSet, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges(SyntaxNode, Workspace, OptionSet, CancellationToken)
+  nameWithType: Formatter.GetFormattedTextChanges(SyntaxNode, Workspace, OptionSet, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Collections.Generic.IList<Microsoft.CodeAnalysis.Text.TextChange> GetFormattedTextChanges (Microsoft.CodeAnalysis.SyntaxNode node, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet options = default, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+    - value: public static System.Collections.Generic.IList<Microsoft.CodeAnalysis.Text.TextChange> GetFormattedTextChanges (Microsoft.CodeAnalysis.SyntaxNode node, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet? options = default, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member GetFormattedTextChanges : Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.Workspace * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -> System.Collections.Generic.IList<Microsoft.CodeAnalysis.Text.TextChange>'
+  - lang: vb
+    values:
+    - value: Public Shared Function GetFormattedTextChanges (node As SyntaxNode, workspace As Workspace, Optional options As OptionSet = Nothing, Optional cancellationToken As CancellationToken = Nothing) As IList(Of TextChange)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines the changes necessary to format the whitespace of a syntax tree.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IList`1?alt=System.Collections.Generic.IList&text=IList" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Text.TextChange?alt=Microsoft.CodeAnalysis.Text.TextChange&text=TextChange" data-throw-if-not-resolved="True"/>&gt;
+    description: The changes necessary to format the tree.
+  parameters:
+  - namesWithMoniker:
+    - value: node
+    description: The root node of a syntax tree to format.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: span
+    description: The span within the node's full span to format.
+    type: <xref href="Microsoft.CodeAnalysis.Text.TextSpan?alt=Microsoft.CodeAnalysis.Text.TextSpan&text=TextSpan" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: workspace
+    description: A workspace used to give the formatting context.
+    type: <xref href="Microsoft.CodeAnalysis.Workspace?alt=Microsoft.CodeAnalysis.Workspace&text=Workspace" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: options
+    description: An optional set of formatting options. If these options are not supplied the current set of options from the workspace will be used.
+    type: <xref href="Microsoft.CodeAnalysis.Options.OptionSet?alt=Microsoft.CodeAnalysis.Options.OptionSet&text=OptionSet" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: An optional cancellation token.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)
+  name: GetFormattedTextChanges(SyntaxNode, TextSpan, Workspace, OptionSet, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges(SyntaxNode, TextSpan, Workspace, OptionSet, CancellationToken)
+  nameWithType: Formatter.GetFormattedTextChanges(SyntaxNode, TextSpan, Workspace, OptionSet, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Collections.Generic.IList<Microsoft.CodeAnalysis.Text.TextChange> GetFormattedTextChanges (Microsoft.CodeAnalysis.SyntaxNode node, Microsoft.CodeAnalysis.Text.TextSpan span, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet options = default, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+    - value: public static System.Collections.Generic.IList<Microsoft.CodeAnalysis.Text.TextChange> GetFormattedTextChanges (Microsoft.CodeAnalysis.SyntaxNode node, Microsoft.CodeAnalysis.Text.TextSpan span, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet? options = default, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member GetFormattedTextChanges : Microsoft.CodeAnalysis.SyntaxNode * Microsoft.CodeAnalysis.Text.TextSpan * Microsoft.CodeAnalysis.Workspace * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -> System.Collections.Generic.IList<Microsoft.CodeAnalysis.Text.TextChange>'
+  - lang: vb
+    values:
+    - value: Public Shared Function GetFormattedTextChanges (node As SyntaxNode, span As TextSpan, workspace As Workspace, Optional options As OptionSet = Nothing, Optional cancellationToken As CancellationToken = Nothing) As IList(Of TextChange)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines the changes necessary to format the whitespace of a syntax tree.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IList`1?alt=System.Collections.Generic.IList&text=IList" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Text.TextChange?alt=Microsoft.CodeAnalysis.Text.TextChange&text=TextChange" data-throw-if-not-resolved="True"/>&gt;
+    description: The changes necessary to format the tree.
+  parameters:
+  - namesWithMoniker:
+    - value: node
+    description: The root node of a syntax tree to format.
+    type: <xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: spans
+    description: The spans within the node's full span to format.
+    type: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.Text.TextSpan?alt=Microsoft.CodeAnalysis.Text.TextSpan&text=TextSpan" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: workspace
+    description: A workspace used to give the formatting context.
+    type: <xref href="Microsoft.CodeAnalysis.Workspace?alt=Microsoft.CodeAnalysis.Workspace&text=Workspace" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: options
+    description: An optional set of formatting options. If these options are not supplied the current set of options from the workspace will be used.
+    type: <xref href="Microsoft.CodeAnalysis.Options.OptionSet?alt=Microsoft.CodeAnalysis.Options.OptionSet&text=OptionSet" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: cancellationToken
+    description: An optional cancellation token.
+    type: <xref href="System.Threading.CancellationToken?alt=System.Threading.CancellationToken&text=CancellationToken" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges(Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Text.TextSpan},Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)
+  commentId: M:Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges(Microsoft.CodeAnalysis.SyntaxNode,System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.Text.TextSpan},Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.Options.OptionSet,System.Threading.CancellationToken)
+  name: GetFormattedTextChanges(SyntaxNode, IEnumerable<TextSpan>, Workspace, OptionSet, CancellationToken)
+  fullName: Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges(SyntaxNode, IEnumerable<TextSpan>, Workspace, OptionSet, CancellationToken)
+  nameWithType: Formatter.GetFormattedTextChanges(SyntaxNode, IEnumerable<TextSpan>, Workspace, OptionSet, CancellationToken)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public static System.Collections.Generic.IList<Microsoft.CodeAnalysis.Text.TextChange> GetFormattedTextChanges (Microsoft.CodeAnalysis.SyntaxNode node, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.Text.TextSpan> spans, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet options = default, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+    - value: public static System.Collections.Generic.IList<Microsoft.CodeAnalysis.Text.TextChange> GetFormattedTextChanges (Microsoft.CodeAnalysis.SyntaxNode node, System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.Text.TextSpan>? spans, Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.Options.OptionSet? options = default, System.Threading.CancellationToken cancellationToken = default);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'static member GetFormattedTextChanges : Microsoft.CodeAnalysis.SyntaxNode * seq<Microsoft.CodeAnalysis.Text.TextSpan> * Microsoft.CodeAnalysis.Workspace * Microsoft.CodeAnalysis.Options.OptionSet * System.Threading.CancellationToken -> System.Collections.Generic.IList<Microsoft.CodeAnalysis.Text.TextChange>'
+  - lang: vb
+    values:
+    - value: Public Shared Function GetFormattedTextChanges (node As SyntaxNode, spans As IEnumerable(Of TextSpan), workspace As Workspace, Optional options As OptionSet = Nothing, Optional cancellationToken As CancellationToken = Nothing) As IList(Of TextChange)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Determines the changes necessary to format the whitespace of a syntax tree.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges*
+commentId: Overload:Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges
+namespace: Microsoft.CodeAnalysis.Formatting
+name: GetFormattedTextChanges
+fullName: Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges
+nameWithType: Formatter.GetFormattedTextChanges
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Workspaces.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges
+  api_location:
+  - Microsoft.CodeAnalysis.Workspaces.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.Formatting.Formatter.GetFormattedTextChanges
+  - Microsoft::CodeAnalysis::Formatting::Formatter::GetFormattedTextChanges
+  - GetFormattedTextChanges
+  - Formatter.GetFormattedTextChanges
+  - Formatter::GetFormattedTextChanges
+  helpviewer_keywords:
+  - Formatter.GetFormattedTextChanges method [.NET]
+  - GetFormattedTextChanges method [.NET], class Formatter
+  - Formatter.GetFormattedTextChanges(SyntaxNode, Workspace, OptionSet, CancellationToken) method [.NET]
+  - GetFormattedTextChanges(SyntaxNode, Workspace, OptionSet, CancellationToken) method [.NET], class Formatter
+  - Formatter.GetFormattedTextChanges(SyntaxNode, TextSpan, Workspace, OptionSet, CancellationToken) method [.NET]
+  - GetFormattedTextChanges(SyntaxNode, TextSpan, Workspace, OptionSet, CancellationToken) method [.NET], class Formatter
+  - Formatter.GetFormattedTextChanges(SyntaxNode, IEnumerable<TextSpan>, Workspace, OptionSet, CancellationToken) method [.NET]
+  - GetFormattedTextChanges(SyntaxNode, IEnumerable<TextSpan>, Workspace, OptionSet, CancellationToken) method [.NET], class Formatter
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0

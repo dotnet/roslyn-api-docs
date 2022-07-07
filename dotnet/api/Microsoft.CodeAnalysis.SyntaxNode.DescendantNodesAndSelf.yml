@@ -1,0 +1,260 @@
+### YamlMime:NetMember
+type: method
+members:
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: descendIntoChildren
+    description: An optional function that determines if the search descends into the argument node's children.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>,<xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: descendIntoTrivia
+    description: Determines if nodes that are part of structured trivia are included in the list.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf(System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Boolean},System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf(System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Boolean},System.Boolean)
+  name: DescendantNodesAndSelf(Func<SyntaxNode,Boolean>, Boolean)
+  fullName: Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf(Func<SyntaxNode,Boolean>, Boolean)
+  nameWithType: SyntaxNode.DescendantNodesAndSelf(Func<SyntaxNode,Boolean>, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxNode> DescendantNodesAndSelf (Func<Microsoft.CodeAnalysis.SyntaxNode,bool> descendIntoChildren = default, bool descendIntoTrivia = false);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+    - value: public System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxNode> DescendantNodesAndSelf (Func<Microsoft.CodeAnalysis.SyntaxNode,bool>? descendIntoChildren = default, bool descendIntoTrivia = false);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'member this.DescendantNodesAndSelf : Func<Microsoft.CodeAnalysis.SyntaxNode, bool> * bool -> seq<Microsoft.CodeAnalysis.SyntaxNode>'
+  - lang: vb
+    values:
+    - value: Public Function DescendantNodesAndSelf (Optional descendIntoChildren As Func(Of SyntaxNode, Boolean) = Nothing, Optional descendIntoTrivia As Boolean = false) As IEnumerable(Of SyntaxNode)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Gets a list of descendant nodes (including this node) in prefix document order.
+  metadata: {}
+- returnsWithMoniker:
+    type:
+    - value: <xref href="System.Collections.Generic.IEnumerable`1?alt=System.Collections.Generic.IEnumerable&text=IEnumerable" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>&gt;
+  parameters:
+  - namesWithMoniker:
+    - value: span
+    description: The span the node's full span must intersect.
+    type: <xref href="Microsoft.CodeAnalysis.Text.TextSpan?alt=Microsoft.CodeAnalysis.Text.TextSpan&text=TextSpan" data-throw-if-not-resolved="True"/>
+  - namesWithMoniker:
+    - value: descendIntoChildren
+    description: An optional function that determines if the search descends into the argument node's children.
+    type: <xref href="System.Func`2?alt=System.Func&text=Func" data-throw-if-not-resolved="True"/>&lt;<xref href="Microsoft.CodeAnalysis.SyntaxNode?alt=Microsoft.CodeAnalysis.SyntaxNode&text=SyntaxNode" data-throw-if-not-resolved="True"/>,<xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>&gt;
+  - namesWithMoniker:
+    - value: descendIntoTrivia
+    description: Determines if nodes that are part of structured trivia are included in the list.
+    type: <xref href="System.Boolean?alt=System.Boolean&text=Boolean" data-throw-if-not-resolved="True"/>
+  type: method
+  uid: Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf(Microsoft.CodeAnalysis.Text.TextSpan,System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Boolean},System.Boolean)
+  commentId: M:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf(Microsoft.CodeAnalysis.Text.TextSpan,System.Func{Microsoft.CodeAnalysis.SyntaxNode,System.Boolean},System.Boolean)
+  name: DescendantNodesAndSelf(TextSpan, Func<SyntaxNode,Boolean>, Boolean)
+  fullName: Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf(TextSpan, Func<SyntaxNode,Boolean>, Boolean)
+  nameWithType: SyntaxNode.DescendantNodesAndSelf(TextSpan, Func<SyntaxNode,Boolean>, Boolean)
+  syntaxWithMoniker:
+  - lang: csharp
+    values:
+    - value: public System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxNode> DescendantNodesAndSelf (Microsoft.CodeAnalysis.Text.TextSpan span, Func<Microsoft.CodeAnalysis.SyntaxNode,bool> descendIntoChildren = default, bool descendIntoTrivia = false);
+      monikers:
+      - roslyn-dotnet-3.0
+      - roslyn-dotnet-3.1
+      - roslyn-dotnet-3.2
+      - roslyn-dotnet-3.2.1
+      - roslyn-dotnet-3.3.1
+      - roslyn-dotnet-3.4.0
+    - value: public System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.SyntaxNode> DescendantNodesAndSelf (Microsoft.CodeAnalysis.Text.TextSpan span, Func<Microsoft.CodeAnalysis.SyntaxNode,bool>? descendIntoChildren = default, bool descendIntoTrivia = false);
+      monikers:
+      - roslyn-dotnet-3.10.0
+      - roslyn-dotnet-3.11.0
+      - roslyn-dotnet-3.5.0
+      - roslyn-dotnet-3.6.0
+      - roslyn-dotnet-3.7.0
+      - roslyn-dotnet-3.8.0
+      - roslyn-dotnet-3.9.0
+      - roslyn-dotnet-4.0.1
+      - roslyn-dotnet-4.1.0
+      - roslyn-dotnet-4.2.0
+  - lang: fsharp
+    values:
+    - value: 'member this.DescendantNodesAndSelf : Microsoft.CodeAnalysis.Text.TextSpan * Func<Microsoft.CodeAnalysis.SyntaxNode, bool> * bool -> seq<Microsoft.CodeAnalysis.SyntaxNode>'
+  - lang: vb
+    values:
+    - value: Public Function DescendantNodesAndSelf (span As TextSpan, Optional descendIntoChildren As Func(Of SyntaxNode, Boolean) = Nothing, Optional descendIntoTrivia As Boolean = false) As IEnumerable(Of SyntaxNode)
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
+  summary: Gets a list of descendant nodes (including this node) in prefix document order.
+  metadata: {}
+uid: Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf*
+commentId: Overload:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf
+namespace: Microsoft.CodeAnalysis
+name: DescendantNodesAndSelf
+fullName: Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf
+nameWithType: SyntaxNode.DescendantNodesAndSelf
+assembliesWithMoniker:
+- value: Microsoft.CodeAnalysis.dll
+packagesWithMoniker:
+- value: Microsoft.CodeAnalysis.Common v3.0.0
+  monikers:
+  - roslyn-dotnet-3.0
+- value: Microsoft.CodeAnalysis.Common v3.1.0
+  monikers:
+  - roslyn-dotnet-3.1
+- value: Microsoft.CodeAnalysis.Common v3.10.0
+  monikers:
+  - roslyn-dotnet-3.10.0
+- value: Microsoft.CodeAnalysis.Common v3.11.0
+  monikers:
+  - roslyn-dotnet-3.11.0
+- value: Microsoft.CodeAnalysis.Common v3.2.0
+  monikers:
+  - roslyn-dotnet-3.2
+- value: Microsoft.CodeAnalysis.Common v3.2.1
+  monikers:
+  - roslyn-dotnet-3.2.1
+- value: Microsoft.CodeAnalysis.Common v3.3.1
+  monikers:
+  - roslyn-dotnet-3.3.1
+- value: Microsoft.CodeAnalysis.Common v3.4.0
+  monikers:
+  - roslyn-dotnet-3.4.0
+- value: Microsoft.CodeAnalysis.Common v3.5.0
+  monikers:
+  - roslyn-dotnet-3.5.0
+- value: Microsoft.CodeAnalysis.Common v3.6.0
+  monikers:
+  - roslyn-dotnet-3.6.0
+- value: Microsoft.CodeAnalysis.Common v3.7.0
+  monikers:
+  - roslyn-dotnet-3.7.0
+- value: Microsoft.CodeAnalysis.Common v3.8.0
+  monikers:
+  - roslyn-dotnet-3.8.0
+- value: Microsoft.CodeAnalysis.Common v3.9.0
+  monikers:
+  - roslyn-dotnet-3.9.0
+- value: Microsoft.CodeAnalysis.Common v4.0.1
+  monikers:
+  - roslyn-dotnet-4.0.1
+- value: Microsoft.CodeAnalysis.Common v4.1.0
+  monikers:
+  - roslyn-dotnet-4.1.0
+- value: Microsoft.CodeAnalysis.Common v4.2.0
+  monikers:
+  - roslyn-dotnet-4.2.0
+devLangs:
+- csharp
+- vb
+- fsharp
+monikers:
+- roslyn-dotnet
+- roslyn-dotnet-3.0
+- roslyn-dotnet-3.1
+- roslyn-dotnet-3.10.0
+- roslyn-dotnet-3.11.0
+- roslyn-dotnet-3.2
+- roslyn-dotnet-3.2.1
+- roslyn-dotnet-3.3.1
+- roslyn-dotnet-3.4.0
+- roslyn-dotnet-3.5.0
+- roslyn-dotnet-3.6.0
+- roslyn-dotnet-3.7.0
+- roslyn-dotnet-3.8.0
+- roslyn-dotnet-3.9.0
+- roslyn-dotnet-4.0.1
+- roslyn-dotnet-4.1.0
+- roslyn-dotnet-4.2.0
+metadata:
+  api_name:
+  - Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf
+  api_location:
+  - Microsoft.CodeAnalysis.dll
+  topic_type:
+  - apiref
+  api_type:
+  - Assembly
+  f1_keywords:
+  - Microsoft.CodeAnalysis.SyntaxNode.DescendantNodesAndSelf
+  - Microsoft::CodeAnalysis::SyntaxNode::DescendantNodesAndSelf
+  - DescendantNodesAndSelf
+  - SyntaxNode.DescendantNodesAndSelf
+  - SyntaxNode::DescendantNodesAndSelf
+  helpviewer_keywords:
+  - SyntaxNode.DescendantNodesAndSelf method [.NET]
+  - DescendantNodesAndSelf method [.NET], class SyntaxNode
+  - SyntaxNode.DescendantNodesAndSelf(Func<SyntaxNode,Boolean>, Boolean) method [.NET]
+  - DescendantNodesAndSelf(Func<SyntaxNode,Boolean>, Boolean) method [.NET], class SyntaxNode
+  - SyntaxNode.DescendantNodesAndSelf(TextSpan, Func<SyntaxNode,Boolean>, Boolean) method [.NET]
+  - DescendantNodesAndSelf(TextSpan, Func<SyntaxNode,Boolean>, Boolean) method [.NET], class SyntaxNode
+  monikers:
+  - roslyn-dotnet
+  - roslyn-dotnet-3.0
+  - roslyn-dotnet-3.1
+  - roslyn-dotnet-3.10.0
+  - roslyn-dotnet-3.11.0
+  - roslyn-dotnet-3.2
+  - roslyn-dotnet-3.2.1
+  - roslyn-dotnet-3.3.1
+  - roslyn-dotnet-3.4.0
+  - roslyn-dotnet-3.5.0
+  - roslyn-dotnet-3.6.0
+  - roslyn-dotnet-3.7.0
+  - roslyn-dotnet-3.8.0
+  - roslyn-dotnet-3.9.0
+  - roslyn-dotnet-4.0.1
+  - roslyn-dotnet-4.1.0
+  - roslyn-dotnet-4.2.0
