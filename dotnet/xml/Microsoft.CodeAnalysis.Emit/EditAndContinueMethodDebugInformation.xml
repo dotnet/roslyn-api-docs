@@ -5,7 +5,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation" />
   <TypeSignature Language="VB.NET" Value="Public Structure EditAndContinueMethodDebugInformation" />
   <TypeSignature Language="F#" Value="type EditAndContinueMethodDebugInformation = struct" />
-  <TypeSignature Language="C#" Value="public readonly struct EditAndContinueMethodDebugInformation" FrameworkAlternate="roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
+  <TypeSignature Language="C#" Value="public readonly struct EditAndContinueMethodDebugInformation" FrameworkAlternate="roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -24,6 +24,7 @@
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -62,6 +63,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation</ReturnType>
@@ -73,6 +75,37 @@
       <Docs>
         <param name="compressedSlotMap">Local variable slot map.</param>
         <param name="compressedLambdaMap">Lambda and closure map.</param>
+        <summary>
+            Deserializes Edit and Continue method debug information from specified blobs.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.InvalidDataException">Invalid data.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation Create (System.Collections.Immutable.ImmutableArray&lt;byte&gt; compressedSlotMap, System.Collections.Immutable.ImmutableArray&lt;byte&gt; compressedLambdaMap, System.Collections.Immutable.ImmutableArray&lt;byte&gt; compressedStateMachineStateMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation Create(valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; compressedSlotMap, valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; compressedLambdaMap, valuetype System.Collections.Immutable.ImmutableArray`1&lt;unsigned int8&gt; compressedStateMachineStateMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation.Create(System.Collections.Immutable.ImmutableArray{System.Byte},System.Collections.Immutable.ImmutableArray{System.Byte},System.Collections.Immutable.ImmutableArray{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (compressedSlotMap As ImmutableArray(Of Byte), compressedLambdaMap As ImmutableArray(Of Byte), compressedStateMachineStateMap As ImmutableArray(Of Byte)) As EditAndContinueMethodDebugInformation" />
+      <MemberSignature Language="F#" Value="static member Create : System.Collections.Immutable.ImmutableArray&lt;byte&gt; * System.Collections.Immutable.ImmutableArray&lt;byte&gt; * System.Collections.Immutable.ImmutableArray&lt;byte&gt; -&gt; Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation" Usage="Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation.Create (compressedSlotMap, compressedLambdaMap, compressedStateMachineStateMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compressedSlotMap" Type="System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+        <Parameter Name="compressedLambdaMap" Type="System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+        <Parameter Name="compressedStateMachineStateMap" Type="System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;" Index="2" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+      </Parameters>
+      <Docs>
+        <param name="compressedSlotMap">Local variable slot map.</param>
+        <param name="compressedLambdaMap">Lambda and closure map.</param>
+        <param name="compressedStateMachineStateMap">State machine suspension points, if the method is the MoveNext method of the state machine.</param>
         <summary>
             Deserializes Edit and Continue method debug information from specified blobs.
             </summary>

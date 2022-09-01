@@ -1,0 +1,138 @@
+<Type Name="IImportScope" FullName="Microsoft.CodeAnalysis.IImportScope">
+  <TypeSignature Language="C#" Value="public interface IImportScope" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IImportScope" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.IImportScope" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IImportScope" />
+  <TypeSignature Language="F#" Value="type IImportScope = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the set of symbols that are imported to a particular position in a source file. Each import has a
+            reference to the location the import directive was declared at.  For the <see cref="T:Microsoft.CodeAnalysis.IAliasSymbol" /> import, the
+            location can be found using either <see cref="P:Microsoft.CodeAnalysis.ISymbol.Locations" /> or <see cref="P:Microsoft.CodeAnalysis.ISymbol.DeclaringSyntaxReferences" /> on the <see cref="T:Microsoft.CodeAnalysis.IAliasSymbol" /> itself.  For <see cref="P:Microsoft.CodeAnalysis.IImportScope.Imports" />
+            or <see cref="P:Microsoft.CodeAnalysis.IImportScope.XmlNamespaces" /> the location is found through <see cref="P:Microsoft.CodeAnalysis.ImportedNamespaceOrType.DeclaringSyntaxReference" /> or <see cref="P:Microsoft.CodeAnalysis.ImportedXmlNamespace.DeclaringSyntaxReference" /> respectively.
+            </summary>
+    <remarks>
+      <list type="bullet">
+        <item>Scopes returned will always have at least one non-empty property value in them.</item>
+        <item>Symbols may be imported, but may not necessarily be available at that location (for example, an alias
+            symbol hidden by another symbol).</item>
+        <item>
+            In C# there will be an <see cref="T:Microsoft.CodeAnalysis.IImportScope" /> for every containing namespace-declarations that include any
+            import directives.  There will also be an <see cref="T:Microsoft.CodeAnalysis.IImportScope" /> for the containing compilation-unit if it
+            includes any import directives or if there are global import directives pulled in from other files.
+            </item>
+        <item>
+            In Visual Basic there will commonly be one or two <see cref="T:Microsoft.CodeAnalysis.IImportScope" />s returned for any position.  This will
+            commonly be a scope for the containing compilation unit if it includes any import directives.  As well as a scope
+            representing any imports specified at the project level.
+            </item>
+        <item>
+            Elements of any property have no defined order.  Even if they represent items from a single document, they are
+            not guaranteed to be returned in any specific file-oriented order.
+            </item>
+        <item>There is no guarantee that the same scope instances will be returned from successive calls to <see cref="M:Microsoft.CodeAnalysis.SemanticModel.GetImportScopes(System.Int32,System.Threading.CancellationToken)" />.</item>
+      </list>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Aliases">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IAliasSymbol&gt; Aliases { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IAliasSymbol&gt; Aliases" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IImportScope.Aliases" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Aliases As ImmutableArray(Of IAliasSymbol)" />
+      <MemberSignature Language="F#" Value="member this.Aliases : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IAliasSymbol&gt;" Usage="Microsoft.CodeAnalysis.IImportScope.Aliases" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IAliasSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Aliases defined at this level of the chain.  This corresponds to <c>using X = TypeOrNamespace;</c> in C# or
+            <c>Imports X = TypeOrNamespace</c> in Visual Basic.  This will include global aliases if present for both
+            languages.
+            </summary>
+        <value>To be added.</value>
+        <remarks>May be <see cref="F:System.Collections.Immutable.ImmutableArray`1.Empty" />, will never be <see cref="P:System.Collections.Immutable.ImmutableArray`1.IsDefault" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternAliases">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IAliasSymbol&gt; ExternAliases { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.IAliasSymbol&gt; ExternAliases" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IImportScope.ExternAliases" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExternAliases As ImmutableArray(Of IAliasSymbol)" />
+      <MemberSignature Language="F#" Value="member this.ExternAliases : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IAliasSymbol&gt;" Usage="Microsoft.CodeAnalysis.IImportScope.ExternAliases" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IAliasSymbol&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Extern aliases defined at this level of the chain.  This corresponds to <c>extern alias X;</c> in C#.  It
+            will be empty in Visual Basic.
+            </summary>
+        <value>To be added.</value>
+        <remarks>May be <see cref="F:System.Collections.Immutable.ImmutableArray`1.Empty" />, will never be <see cref="P:System.Collections.Immutable.ImmutableArray`1.IsDefault" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imports">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ImportedNamespaceOrType&gt; Imports { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.ImportedNamespaceOrType&gt; Imports" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IImportScope.Imports" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Imports As ImmutableArray(Of ImportedNamespaceOrType)" />
+      <MemberSignature Language="F#" Value="member this.Imports : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ImportedNamespaceOrType&gt;" Usage="Microsoft.CodeAnalysis.IImportScope.Imports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ImportedNamespaceOrType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Types or namespaces imported at this level of the chain.  This corresponds to <c>using Namespace;</c> or
+            <c>using static Type;</c> in C#, or <c>Imports TypeOrNamespace</c> in Visual Basic.  This will include
+            global namespace or type imports for both languages.
+            </summary>
+        <value>To be added.</value>
+        <remarks>May be <see cref="F:System.Collections.Immutable.ImmutableArray`1.Empty" />, will never be <see cref="P:System.Collections.Immutable.ImmutableArray`1.IsDefault" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNamespaces">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ImportedXmlNamespace&gt; XmlNamespaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.ImportedXmlNamespace&gt; XmlNamespaces" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IImportScope.XmlNamespaces" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property XmlNamespaces As ImmutableArray(Of ImportedXmlNamespace)" />
+      <MemberSignature Language="F#" Value="member this.XmlNamespaces : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ImportedXmlNamespace&gt;" Usage="Microsoft.CodeAnalysis.IImportScope.XmlNamespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ImportedXmlNamespace&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Xml namespaces imported at this level of the chain.  This corresponds to <c>Imports &lt;xmlns:prefix =
+            "name"&gt;</c> in Visual Basic.  It will be empty in C#.
+            </summary>
+        <value>To be added.</value>
+        <remarks>May be <see cref="F:System.Collections.Immutable.ImmutableArray`1.Empty" />, will never be <see cref="P:System.Collections.Immutable.ImmutableArray`1.IsDefault" />.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

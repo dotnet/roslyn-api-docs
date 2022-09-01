@@ -1,0 +1,609 @@
+<Type Name="SymbolVisitor&lt;TArgument,TResult&gt;" FullName="Microsoft.CodeAnalysis.SymbolVisitor&lt;TArgument,TResult&gt;">
+  <TypeSignature Language="C#" Value="public abstract class SymbolVisitor&lt;TArgument,TResult&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SymbolVisitor`2&lt;TArgument, TResult&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.SymbolVisitor`2" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SymbolVisitor(Of TArgument, TResult)" />
+  <TypeSignature Language="F#" Value="type SymbolVisitor&lt;'Argument, 'Result&gt; = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TArgument" />
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TArgument">To be added.</typeparam>
+    <typeparam name="TResult">To be added.</typeparam>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SymbolVisitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultResult">
+      <MemberSignature Language="C#" Value="protected abstract TResult DefaultResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TResult DefaultResult" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.SymbolVisitor`2.DefaultResult" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property DefaultResult As TResult" />
+      <MemberSignature Language="F#" Value="member this.DefaultResult : 'Result" Usage="Microsoft.CodeAnalysis.SymbolVisitor&lt;'Argument, 'Result&gt;.DefaultResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultVisit">
+      <MemberSignature Language="C#" Value="public virtual TResult DefaultVisit (Microsoft.CodeAnalysis.ISymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult DefaultVisit(class Microsoft.CodeAnalysis.ISymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.DefaultVisit(Microsoft.CodeAnalysis.ISymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DefaultVisit (symbol As ISymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member DefaultVisit : Microsoft.CodeAnalysis.ISymbol * 'Argument -&gt; 'Result&#xA;override this.DefaultVisit : Microsoft.CodeAnalysis.ISymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.DefaultVisit (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public virtual TResult Visit (Microsoft.CodeAnalysis.ISymbol? symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult Visit(class Microsoft.CodeAnalysis.ISymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.Visit(Microsoft.CodeAnalysis.ISymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Visit (symbol As ISymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member Visit : Microsoft.CodeAnalysis.ISymbol * 'Argument -&gt; 'Result&#xA;override this.Visit : Microsoft.CodeAnalysis.ISymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.Visit (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitAlias">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitAlias (Microsoft.CodeAnalysis.IAliasSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitAlias(class Microsoft.CodeAnalysis.IAliasSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitAlias(Microsoft.CodeAnalysis.IAliasSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitAlias (symbol As IAliasSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitAlias : Microsoft.CodeAnalysis.IAliasSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitAlias : Microsoft.CodeAnalysis.IAliasSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitAlias (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IAliasSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitArrayType">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitArrayType (Microsoft.CodeAnalysis.IArrayTypeSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitArrayType(class Microsoft.CodeAnalysis.IArrayTypeSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitArrayType(Microsoft.CodeAnalysis.IArrayTypeSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitArrayType (symbol As IArrayTypeSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitArrayType : Microsoft.CodeAnalysis.IArrayTypeSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitArrayType : Microsoft.CodeAnalysis.IArrayTypeSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitArrayType (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IArrayTypeSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitAssembly">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitAssembly (Microsoft.CodeAnalysis.IAssemblySymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitAssembly(class Microsoft.CodeAnalysis.IAssemblySymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitAssembly(Microsoft.CodeAnalysis.IAssemblySymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitAssembly (symbol As IAssemblySymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitAssembly : Microsoft.CodeAnalysis.IAssemblySymbol * 'Argument -&gt; 'Result&#xA;override this.VisitAssembly : Microsoft.CodeAnalysis.IAssemblySymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitAssembly (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IAssemblySymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitDiscard">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitDiscard (Microsoft.CodeAnalysis.IDiscardSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitDiscard(class Microsoft.CodeAnalysis.IDiscardSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitDiscard(Microsoft.CodeAnalysis.IDiscardSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitDiscard (symbol As IDiscardSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitDiscard : Microsoft.CodeAnalysis.IDiscardSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitDiscard : Microsoft.CodeAnalysis.IDiscardSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitDiscard (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IDiscardSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitDynamicType">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitDynamicType (Microsoft.CodeAnalysis.IDynamicTypeSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitDynamicType(class Microsoft.CodeAnalysis.IDynamicTypeSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitDynamicType(Microsoft.CodeAnalysis.IDynamicTypeSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitDynamicType (symbol As IDynamicTypeSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitDynamicType : Microsoft.CodeAnalysis.IDynamicTypeSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitDynamicType : Microsoft.CodeAnalysis.IDynamicTypeSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitDynamicType (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IDynamicTypeSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitEvent">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitEvent (Microsoft.CodeAnalysis.IEventSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitEvent(class Microsoft.CodeAnalysis.IEventSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitEvent(Microsoft.CodeAnalysis.IEventSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitEvent (symbol As IEventSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitEvent : Microsoft.CodeAnalysis.IEventSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitEvent : Microsoft.CodeAnalysis.IEventSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitEvent (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IEventSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitField">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitField (Microsoft.CodeAnalysis.IFieldSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitField(class Microsoft.CodeAnalysis.IFieldSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitField(Microsoft.CodeAnalysis.IFieldSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitField (symbol As IFieldSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitField : Microsoft.CodeAnalysis.IFieldSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitField : Microsoft.CodeAnalysis.IFieldSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitField (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IFieldSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitFunctionPointerType">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitFunctionPointerType (Microsoft.CodeAnalysis.IFunctionPointerTypeSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitFunctionPointerType(class Microsoft.CodeAnalysis.IFunctionPointerTypeSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitFunctionPointerType(Microsoft.CodeAnalysis.IFunctionPointerTypeSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitFunctionPointerType (symbol As IFunctionPointerTypeSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitFunctionPointerType : Microsoft.CodeAnalysis.IFunctionPointerTypeSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitFunctionPointerType : Microsoft.CodeAnalysis.IFunctionPointerTypeSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitFunctionPointerType (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IFunctionPointerTypeSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitLabel">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitLabel (Microsoft.CodeAnalysis.ILabelSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitLabel(class Microsoft.CodeAnalysis.ILabelSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitLabel(Microsoft.CodeAnalysis.ILabelSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitLabel (symbol As ILabelSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitLabel : Microsoft.CodeAnalysis.ILabelSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitLabel : Microsoft.CodeAnalysis.ILabelSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitLabel (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ILabelSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitLocal">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitLocal (Microsoft.CodeAnalysis.ILocalSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitLocal(class Microsoft.CodeAnalysis.ILocalSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitLocal(Microsoft.CodeAnalysis.ILocalSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitLocal (symbol As ILocalSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitLocal : Microsoft.CodeAnalysis.ILocalSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitLocal : Microsoft.CodeAnalysis.ILocalSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitLocal (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ILocalSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitMethod">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitMethod (Microsoft.CodeAnalysis.IMethodSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitMethod(class Microsoft.CodeAnalysis.IMethodSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitMethod(Microsoft.CodeAnalysis.IMethodSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitMethod (symbol As IMethodSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitMethod : Microsoft.CodeAnalysis.IMethodSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitMethod : Microsoft.CodeAnalysis.IMethodSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitMethod (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IMethodSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitModule">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitModule (Microsoft.CodeAnalysis.IModuleSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitModule(class Microsoft.CodeAnalysis.IModuleSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitModule(Microsoft.CodeAnalysis.IModuleSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitModule (symbol As IModuleSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitModule : Microsoft.CodeAnalysis.IModuleSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitModule : Microsoft.CodeAnalysis.IModuleSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitModule (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IModuleSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitNamedType">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitNamedType (Microsoft.CodeAnalysis.INamedTypeSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitNamedType(class Microsoft.CodeAnalysis.INamedTypeSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitNamedType(Microsoft.CodeAnalysis.INamedTypeSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitNamedType (symbol As INamedTypeSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitNamedType : Microsoft.CodeAnalysis.INamedTypeSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitNamedType : Microsoft.CodeAnalysis.INamedTypeSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitNamedType (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitNamespace">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitNamespace (Microsoft.CodeAnalysis.INamespaceSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitNamespace(class Microsoft.CodeAnalysis.INamespaceSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitNamespace(Microsoft.CodeAnalysis.INamespaceSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitNamespace (symbol As INamespaceSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitNamespace : Microsoft.CodeAnalysis.INamespaceSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitNamespace : Microsoft.CodeAnalysis.INamespaceSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitNamespace (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.INamespaceSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitParameter">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitParameter (Microsoft.CodeAnalysis.IParameterSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitParameter(class Microsoft.CodeAnalysis.IParameterSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitParameter(Microsoft.CodeAnalysis.IParameterSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitParameter (symbol As IParameterSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitParameter : Microsoft.CodeAnalysis.IParameterSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitParameter : Microsoft.CodeAnalysis.IParameterSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitParameter (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IParameterSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitPointerType">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitPointerType (Microsoft.CodeAnalysis.IPointerTypeSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitPointerType(class Microsoft.CodeAnalysis.IPointerTypeSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitPointerType(Microsoft.CodeAnalysis.IPointerTypeSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitPointerType (symbol As IPointerTypeSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitPointerType : Microsoft.CodeAnalysis.IPointerTypeSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitPointerType : Microsoft.CodeAnalysis.IPointerTypeSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitPointerType (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IPointerTypeSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitProperty">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitProperty (Microsoft.CodeAnalysis.IPropertySymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitProperty(class Microsoft.CodeAnalysis.IPropertySymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitProperty(Microsoft.CodeAnalysis.IPropertySymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitProperty (symbol As IPropertySymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitProperty : Microsoft.CodeAnalysis.IPropertySymbol * 'Argument -&gt; 'Result&#xA;override this.VisitProperty : Microsoft.CodeAnalysis.IPropertySymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitProperty (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IPropertySymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitRangeVariable">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitRangeVariable (Microsoft.CodeAnalysis.IRangeVariableSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitRangeVariable(class Microsoft.CodeAnalysis.IRangeVariableSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitRangeVariable(Microsoft.CodeAnalysis.IRangeVariableSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitRangeVariable (symbol As IRangeVariableSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitRangeVariable : Microsoft.CodeAnalysis.IRangeVariableSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitRangeVariable : Microsoft.CodeAnalysis.IRangeVariableSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitRangeVariable (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.IRangeVariableSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitTypeParameter">
+      <MemberSignature Language="C#" Value="public virtual TResult VisitTypeParameter (Microsoft.CodeAnalysis.ITypeParameterSymbol symbol, TArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResult VisitTypeParameter(class Microsoft.CodeAnalysis.ITypeParameterSymbol symbol, !TArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.SymbolVisitor`2.VisitTypeParameter(Microsoft.CodeAnalysis.ITypeParameterSymbol,`0)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function VisitTypeParameter (symbol As ITypeParameterSymbol, argument As TArgument) As TResult" />
+      <MemberSignature Language="F#" Value="abstract member VisitTypeParameter : Microsoft.CodeAnalysis.ITypeParameterSymbol * 'Argument -&gt; 'Result&#xA;override this.VisitTypeParameter : Microsoft.CodeAnalysis.ITypeParameterSymbol * 'Argument -&gt; 'Result" Usage="symbolVisitor.VisitTypeParameter (symbol, argument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ITypeParameterSymbol" />
+        <Parameter Name="argument" Type="TArgument" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">To be added.</param>
+        <param name="argument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
