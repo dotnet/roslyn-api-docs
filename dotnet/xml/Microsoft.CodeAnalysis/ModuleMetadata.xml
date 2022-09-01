@@ -23,6 +23,7 @@
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.Metadata</BaseTypeName>
@@ -61,6 +62,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Metadata</ReturnType>
@@ -98,6 +100,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
@@ -150,6 +153,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
@@ -194,6 +198,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
@@ -238,6 +243,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
@@ -286,6 +292,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
@@ -307,6 +314,44 @@
           <paramref name="metadata" /> is null.</exception>
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="size" /> is not positive.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromMetadata">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ModuleMetadata CreateFromMetadata (IntPtr metadata, int size, IDisposable owner, bool disposeOwner);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.ModuleMetadata CreateFromMetadata(native int metadata, int32 size, class System.IDisposable owner, bool disposeOwner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata(System.IntPtr,System.Int32,System.IDisposable,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromMetadata (metadata As IntPtr, size As Integer, owner As IDisposable, disposeOwner As Boolean) As ModuleMetadata" />
+      <MemberSignature Language="F#" Value="static member CreateFromMetadata : nativeint * int * IDisposable * bool -&gt; Microsoft.CodeAnalysis.ModuleMetadata" Usage="Microsoft.CodeAnalysis.ModuleMetadata.CreateFromMetadata (metadata, size, owner, disposeOwner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.IntPtr" Index="0" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+        <Parameter Name="size" Type="System.Int32" Index="1" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+        <Parameter Name="owner" Type="System.IDisposable" Index="2" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+        <Parameter Name="disposeOwner" Type="System.Boolean" Index="3" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Pointer to the start of metadata block.</param>
+        <param name="size">The size of the metadata block.</param>
+        <param name="owner">Data that should be kept alive as long as this <see cref="T:Microsoft.CodeAnalysis.ModuleMetadata" /> is alive.  This can be
+            useful, for example, if there is backing memory that the metadata depends on that should be kept rooted so it
+            doesn't get garbage collected.</param>
+        <param name="disposeOwner">Whether or not <paramref name="owner" /> should be <see cref="M:System.IDisposable.Dispose" />'d when this object is
+            Disposed.</param>
+        <summary>
+            Create metadata module from a raw memory pointer to metadata directory of a PE image or .cormeta section of an object file.
+            Only manifest modules are currently supported.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owner" /> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateFromStream">
@@ -334,6 +379,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
@@ -384,6 +430,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
@@ -443,6 +490,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -481,6 +529,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Reflection.Metadata.MetadataReader</ReturnType>
@@ -522,6 +571,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.String&gt;</ReturnType>
@@ -563,6 +613,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
@@ -584,7 +635,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ModuleMetadata.GetReference(Microsoft.CodeAnalysis.DocumentationProvider,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetReference (Optional documentation As DocumentationProvider = Nothing, Optional filePath As String = Nothing, Optional display As String = Nothing) As PortableExecutableReference" />
       <MemberSignature Language="F#" Value="member this.GetReference : Microsoft.CodeAnalysis.DocumentationProvider * string * string -&gt; Microsoft.CodeAnalysis.PortableExecutableReference" Usage="moduleMetadata.GetReference (documentation, filePath, display)" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.PortableExecutableReference GetReference (Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default, string? display = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.PortableExecutableReference GetReference (Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default, string? display = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -604,6 +655,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
@@ -650,6 +702,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -688,6 +741,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.MetadataImageKind</ReturnType>
@@ -726,6 +780,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
