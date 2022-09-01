@@ -23,6 +23,7 @@
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -61,6 +62,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -83,12 +85,13 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CodeFixes.FixAllProvider</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fixAllAsync" Type="System.Func&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllContext,Microsoft.CodeAnalysis.Document,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
+        <Parameter Name="fixAllAsync" Type="System.Func&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllContext,Microsoft.CodeAnalysis.Document,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt;" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0" />
       </Parameters>
       <Docs>
         <param name="fixAllAsync">
@@ -106,6 +109,45 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeFixes.FixAllProvider Create (Func&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllContext,Microsoft.CodeAnalysis.Document,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document?&gt;&gt; fixAllAsync, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllScope&gt; supportedFixAllScopes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeFixes.FixAllProvider Create(class System.Func`4&lt;class Microsoft.CodeAnalysis.CodeFixes.FixAllContext, class Microsoft.CodeAnalysis.Document, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.Diagnostic&gt;, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt;&gt; fixAllAsync, valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.CodeFixes.FixAllScope&gt; supportedFixAllScopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.FixAllProvider.Create(System.Func{Microsoft.CodeAnalysis.CodeFixes.FixAllContext,Microsoft.CodeAnalysis.Document,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Diagnostic},System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CodeFixes.FixAllScope})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (fixAllAsync As Func(Of FixAllContext, Document, ImmutableArray(Of Diagnostic), Task(Of Document)), supportedFixAllScopes As ImmutableArray(Of FixAllScope)) As FixAllProvider" />
+      <MemberSignature Language="F#" Value="static member Create : Func&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllContext, Microsoft.CodeAnalysis.Document, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllScope&gt; -&gt; Microsoft.CodeAnalysis.CodeFixes.FixAllProvider" Usage="Microsoft.CodeAnalysis.CodeFixes.FixAllProvider.Create (fixAllAsync, supportedFixAllScopes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeFixes.FixAllProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixAllAsync" Type="System.Func&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllContext,Microsoft.CodeAnalysis.Document,System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostic&gt;,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+        <Parameter Name="supportedFixAllScopes" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllScope&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+      </Parameters>
+      <Docs>
+        <param name="fixAllAsync">
+            Callback that will the fix diagnostics present in the provided document.  The document returned will only be
+            examined for its content (e.g. it's <see cref="T:Microsoft.CodeAnalysis.SyntaxTree" /> or <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" />.  No other aspects
+            of it (like attributes), or changes to the <see cref="T:Microsoft.CodeAnalysis.Project" /> or <see cref="T:Microsoft.CodeAnalysis.Solution" /> it points at
+            will be considered.
+            </param>
+        <param name="supportedFixAllScopes">
+            Supported <see cref="T:Microsoft.CodeAnalysis.CodeFixes.FixAllScope" />s for the fix all provider.
+            Note that <see cref="F:Microsoft.CodeAnalysis.CodeFixes.FixAllScope.Custom" /> is not supported by the <see cref="T:Microsoft.CodeAnalysis.CodeFixes.DocumentBasedFixAllProvider" />
+            and should not be part of the supported scopes.
+            </param>
+        <summary>
+            Create a <see cref="T:Microsoft.CodeAnalysis.CodeFixes.FixAllProvider" /> that fixes documents independently for the given <paramref name="supportedFixAllScopes" />.
+            This should be used instead of <see cref="P:Microsoft.CodeAnalysis.CodeFixes.WellKnownFixAllProviders.BatchFixer" /> in the case where
+            fixes for a <see cref="T:Microsoft.CodeAnalysis.Diagnostic" /> only affect the <see cref="T:Microsoft.CodeAnalysis.Document" /> the diagnostic was produced in.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetFixAsync">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Threading::Tasks::Task&lt;Microsoft::CodeAnalysis::CodeActions::CodeAction ^&gt; ^ GetFixAsync(Microsoft::CodeAnalysis::CodeFixes::FixAllContext ^ fixAllContext);" />
       <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; GetFixAsync (Microsoft.CodeAnalysis.CodeFixes.FixAllContext fixAllContext);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0" />
@@ -113,7 +155,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeFixes.FixAllProvider.GetFixAsync(Microsoft.CodeAnalysis.CodeFixes.FixAllContext)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetFixAsync (fixAllContext As FixAllContext) As Task(Of CodeAction)" />
       <MemberSignature Language="F#" Value="abstract member GetFixAsync : Microsoft.CodeAnalysis.CodeFixes.FixAllContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;" Usage="fixAllProvider.GetFixAsync fixAllContext" />
-      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction?&gt; GetFixAsync (Microsoft.CodeAnalysis.CodeFixes.FixAllContext fixAllContext);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction?&gt; GetFixAsync (Microsoft.CodeAnalysis.CodeFixes.FixAllContext fixAllContext);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -133,6 +175,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;</ReturnType>
@@ -175,6 +218,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -218,6 +262,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeFixes.FixAllScope&gt;</ReturnType>
