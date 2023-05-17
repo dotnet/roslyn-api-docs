@@ -24,6 +24,9 @@
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.4.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Composition.ExportAttribute</BaseTypeName>
@@ -73,6 +76,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="firstLanguage" Type="System.String" />
@@ -91,6 +97,55 @@
         <summary>
             Attribute constructor used to specify availability of a code refactoring provider.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentExtensions">
+      <MemberSignature Language="C#" Value="public string[]? DocumentExtensions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DocumentExtensions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeRefactorings.ExportCodeRefactoringProviderAttribute.DocumentExtensions" />
+      <MemberSignature Language="VB.NET" Value="Public Property DocumentExtensions As String()" />
+      <MemberSignature Language="F#" Value="member this.DocumentExtensions : string[] with get, set" Usage="Microsoft.CodeAnalysis.CodeRefactorings.ExportCodeRefactoringProviderAttribute.DocumentExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The document extensions for which this provider can provide refactorings.
+            Each extension string must include the leading period, for example, ".txt", ".xaml", ".editorconfig", etc.
+            By default, this value is null and the document extension is not considered to determine applicability of refactorings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentKinds">
+      <MemberSignature Language="C#" Value="public string[] DocumentKinds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DocumentKinds" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeRefactorings.ExportCodeRefactoringProviderAttribute.DocumentKinds" />
+      <MemberSignature Language="VB.NET" Value="Public Property DocumentKinds As String()" />
+      <MemberSignature Language="F#" Value="member this.DocumentKinds : string[] with get, set" Usage="Microsoft.CodeAnalysis.CodeRefactorings.ExportCodeRefactoringProviderAttribute.DocumentKinds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The document kinds for which this provider can provide refactorings. See <see cref="T:Microsoft.CodeAnalysis.TextDocumentKind" />.
+            By default, the provider supports refactorings only for source documents, <see cref="F:Microsoft.CodeAnalysis.TextDocumentKind.Document" />.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -121,6 +176,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String[]</ReturnType>
@@ -140,7 +198,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeRefactorings.ExportCodeRefactoringProviderAttribute.Name" />
       <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
       <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.CodeAnalysis.CodeRefactorings.ExportCodeRefactoringProviderAttribute.Name" />
-      <MemberSignature Language="C#" Value="public string? Name { get; set; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0" />
+      <MemberSignature Language="C#" Value="public string? Name { get; set; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -161,6 +219,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

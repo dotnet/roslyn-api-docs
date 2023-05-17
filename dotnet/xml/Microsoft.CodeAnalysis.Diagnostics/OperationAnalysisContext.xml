@@ -1,10 +1,11 @@
 <Type Name="OperationAnalysisContext" FullName="Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext">
   <TypeSignature Language="C++ CLI" Value="public value class OperationAnalysisContext" />
-  <TypeSignature Language="C#" Value="public struct OperationAnalysisContext" />
+  <TypeSignature Language="C#" Value="public struct OperationAnalysisContext" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0" />
   <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit OperationAnalysisContext extends System.ValueType" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext" />
   <TypeSignature Language="VB.NET" Value="Public Structure OperationAnalysisContext" />
   <TypeSignature Language="F#" Value="type OperationAnalysisContext = struct" />
+  <TypeSignature Language="C#" Value="public readonly struct OperationAnalysisContext" FrameworkAlternate="roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -24,6 +25,9 @@
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.4.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -64,7 +68,16 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.6.0">
+          <AttributeName Language="C#">[System.Obsolete("Use CompilationWithAnalyzers instead. See https://github.com/dotnet/roslyn/issues/63440 for more details.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use CompilationWithAnalyzers instead. See https://github.com/dotnet/roslyn/issues/63440 for more details.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="operation" Type="Microsoft.CodeAnalysis.IOperation" />
         <Parameter Name="containingSymbol" Type="Microsoft.CodeAnalysis.ISymbol" />
@@ -113,6 +126,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -152,6 +168,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Compilation</ReturnType>
@@ -191,6 +210,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -230,6 +252,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
@@ -240,6 +265,30 @@
             Gets a <see cref="T:Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph" /> for the operation block containing the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext.Operation" />.
             </summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGeneratedCode">
+      <MemberSignature Language="C#" Value="public bool IsGeneratedCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGeneratedCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext.IsGeneratedCode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsGeneratedCode As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsGeneratedCode : bool" Usage="Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext.IsGeneratedCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates if the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.OperationAnalysisContext.Operation" /> is generated code.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -270,6 +319,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
@@ -309,6 +361,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions</ReturnType>
@@ -348,6 +403,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
