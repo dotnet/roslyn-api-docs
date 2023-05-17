@@ -10,6 +10,9 @@
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.4.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -35,6 +38,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;T&gt;</ReturnType>
@@ -67,6 +73,9 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;T&gt;</ReturnType>
@@ -75,9 +84,9 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="fullyQualifiedMetadataName" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet-4.3.0" />
-        <Parameter Name="predicate" Type="System.Func&lt;Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,System.Boolean&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.3.0" />
-        <Parameter Name="transform" Type="System.Func&lt;Microsoft.CodeAnalysis.GeneratorAttributeSyntaxContext,System.Threading.CancellationToken,T&gt;" Index="2" FrameworkAlternate="roslyn-dotnet-4.3.0" />
+        <Parameter Name="fullyQualifiedMetadataName" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
+        <Parameter Name="predicate" Type="System.Func&lt;Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,System.Boolean&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
+        <Parameter Name="transform" Type="System.Func&lt;Microsoft.CodeAnalysis.GeneratorAttributeSyntaxContext,System.Threading.CancellationToken,T&gt;" Index="2" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
       </Parameters>
       <Docs>
         <typeparam name="T">To be added.</typeparam>
@@ -89,7 +98,7 @@
         <summary>
             Creates an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that can provide a transform over all <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" />s if that node has an attribute on it that binds to a <see cref="T:Microsoft.CodeAnalysis.INamedTypeSymbol" /> with the
             same fully-qualified metadata as the provided <paramref name="fullyQualifiedMetadataName" />. <paramref name="fullyQualifiedMetadataName" /> should be the fully-qualified, metadata name of the attribute, including the
-            <c>Attribute</c> suffix.  For example <c>"System.CLSCompliantAttribute</c> for <see cref="T:System.CLSCompliantAttribute" />.
+            <c>Attribute</c> suffix.  For example <c>"System.CLSCompliantAttribute"</c> for <see cref="T:System.CLSCompliantAttribute" />.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

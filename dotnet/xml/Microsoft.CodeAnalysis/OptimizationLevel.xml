@@ -24,6 +24,9 @@
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.4.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -62,6 +65,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.OptimizationLevel</ReturnType>
@@ -70,7 +76,11 @@
       <Docs>
         <summary>
             Disables all optimizations and instruments the generated code to improve debugging experience.
-            </summary>
+            <para>
+            The compiler prefers debuggability over performance. Do not use for code running in a production environment.
+            </para><list type="bullet"><item><description>JIT optimizations are disabled via assembly level attribute (<see cref="T:System.Diagnostics.DebuggableAttribute" />).</description></item><item><description>Edit and Continue is enabled.</description></item><item><description>Slots for local variables are not reused, lifetime of local variables is extended to make the values available during debugging.</description></item></list><para>
+            Corresponds to command line argument /optimize-.
+            </para></summary>
         <remarks>
             The compiler prefers debuggability over performance. Do not use for code running in a production environment.
             <list type="bullet"><item><description>JIT optimizations are disabled via assembly level attribute (<see cref="T:System.Diagnostics.DebuggableAttribute" />).</description></item><item><description>Edit and Continue is enabled.</description></item><item><description>Slots for local variables are not reused, lifetime of local variables is extended to make the values available during debugging.</description></item></list><para>
@@ -105,6 +115,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.OptimizationLevel</ReturnType>
@@ -113,7 +126,11 @@
       <Docs>
         <summary>
             Enables all optimizations, debugging experience might be degraded.
-            </summary>
+            <para>
+            The compiler prefers performance over debuggability. Use for code running in a production environment.
+            </para><list type="bullet"><item><description>JIT optimizations are enabled via assembly level attribute (<see cref="T:System.Diagnostics.DebuggableAttribute" />).</description></item><item><description>Edit and Continue is disabled.</description></item><item><description>Sequence points may be optimized away. As a result it might not be possible to place or hit a breakpoint.</description></item><item><description>User-defined locals might be optimized away. They might not be available while debugging.</description></item></list><para>
+            Corresponds to command line argument /optimize+.
+            </para></summary>
         <remarks>
             The compiler prefers performance over debuggability. Use for code running in a production environment.
             <list type="bullet"><item><description>JIT optimizations are enabled via assembly level attribute (<see cref="T:System.Diagnostics.DebuggableAttribute" />).</description></item><item><description>Edit and Continue is disabled.</description></item><item><description>Sequence points may be optimized away. As a result it might not be possible to place or hit a breakpoint.</description></item><item><description>User-defined locals might be optimized away. They might not be available while debugging.</description></item></list><para>

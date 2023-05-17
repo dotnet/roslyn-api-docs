@@ -24,6 +24,9 @@
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.4.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.TextLoader</BaseTypeName>
@@ -47,7 +50,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileTextLoader.#ctor(System.String,System.Text.Encoding)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (path As String, defaultEncoding As Encoding)" />
       <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.FileTextLoader : string * System.Text.Encoding -&gt; Microsoft.CodeAnalysis.FileTextLoader" Usage="new Microsoft.CodeAnalysis.FileTextLoader (path, defaultEncoding)" />
-      <MemberSignature Language="C#" Value="public FileTextLoader (string path, System.Text.Encoding? defaultEncoding);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0" />
+      <MemberSignature Language="C#" Value="public FileTextLoader (string path, System.Text.Encoding? defaultEncoding);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -68,6 +71,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="path" Type="System.String" />
@@ -92,11 +98,12 @@
     </Member>
     <Member MemberName="CreateText">
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual Microsoft::CodeAnalysis::Text::SourceText ^ CreateText(System::IO::Stream ^ stream, Microsoft::CodeAnalysis::Workspace ^ workspace);" />
-      <MemberSignature Language="C#" Value="protected virtual Microsoft.CodeAnalysis.Text.SourceText CreateText (System.IO.Stream stream, Microsoft.CodeAnalysis.Workspace workspace);" />
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.CodeAnalysis.Text.SourceText CreateText (System.IO.Stream stream, Microsoft.CodeAnalysis.Workspace workspace);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.CodeAnalysis.Text.SourceText CreateText(class System.IO.Stream stream, class Microsoft.CodeAnalysis.Workspace workspace) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileTextLoader.CreateText(System.IO.Stream,Microsoft.CodeAnalysis.Workspace)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateText (stream As Stream, workspace As Workspace) As SourceText" />
       <MemberSignature Language="F#" Value="abstract member CreateText : System.IO.Stream * Microsoft.CodeAnalysis.Workspace -&gt; Microsoft.CodeAnalysis.Text.SourceText&#xA;override this.CreateText : System.IO.Stream * Microsoft.CodeAnalysis.Workspace -&gt; Microsoft.CodeAnalysis.Text.SourceText" Usage="fileTextLoader.CreateText (stream, workspace)" />
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.CodeAnalysis.Text.SourceText CreateText (System.IO.Stream stream, Microsoft.CodeAnalysis.Workspace? workspace);" FrameworkAlternate="roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -117,6 +124,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Text.SourceText</ReturnType>
@@ -126,9 +136,11 @@
         <Parameter Name="workspace" Type="Microsoft.CodeAnalysis.Workspace" />
       </Parameters>
       <Docs>
-        <param name="stream">To be added.</param>
-        <param name="workspace">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="stream">Stream.</param>
+        <param name="workspace">Obsolete. Null.</param>
+        <summary>
+            Creates <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" /> from <see cref="T:System.IO.Stream" />.
+            </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -140,7 +152,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.FileTextLoader.DefaultEncoding" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultEncoding As Encoding" />
       <MemberSignature Language="F#" Value="member this.DefaultEncoding : System.Text.Encoding" Usage="Microsoft.CodeAnalysis.FileTextLoader.DefaultEncoding" />
-      <MemberSignature Language="C#" Value="public System.Text.Encoding? DefaultEncoding { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0" />
+      <MemberSignature Language="C#" Value="public System.Text.Encoding? DefaultEncoding { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -161,6 +173,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Text.Encoding</ReturnType>
@@ -177,12 +192,44 @@
       </Docs>
     </Member>
     <Member MemberName="LoadTextAndVersionAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync (Microsoft.CodeAnalysis.LoadTextOptions options, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync(valuetype Microsoft.CodeAnalysis.LoadTextOptions options, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileTextLoader.LoadTextAndVersionAsync(Microsoft.CodeAnalysis.LoadTextOptions,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function LoadTextAndVersionAsync (options As LoadTextOptions, cancellationToken As CancellationToken) As Task(Of TextAndVersion)" />
+      <MemberSignature Language="F#" Value="override this.LoadTextAndVersionAsync : Microsoft.CodeAnalysis.LoadTextOptions * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt;" Usage="fileTextLoader.LoadTextAndVersionAsync (options, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.LoadTextOptions" Index="0" FrameworkAlternate="roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
+      </Parameters>
+      <Docs>
+        <param name="options">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Load a text and a version of the document in the workspace.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException" />
+        <exception cref="T:System.IO.InvalidDataException" />
+      </Docs>
+    </Member>
+    <Member MemberName="LoadTextAndVersionAsync">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Threading::Tasks::Task&lt;Microsoft::CodeAnalysis::TextAndVersion ^&gt; ^ LoadTextAndVersionAsync(Microsoft::CodeAnalysis::Workspace ^ workspace, Microsoft::CodeAnalysis::DocumentId ^ documentId, System::Threading::CancellationToken cancellationToken);" />
-      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync (Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.DocumentId documentId, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync (Microsoft.CodeAnalysis.Workspace workspace, Microsoft.CodeAnalysis.DocumentId documentId, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync(class Microsoft.CodeAnalysis.Workspace workspace, class Microsoft.CodeAnalysis.DocumentId documentId, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FileTextLoader.LoadTextAndVersionAsync(Microsoft.CodeAnalysis.Workspace,Microsoft.CodeAnalysis.DocumentId,System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function LoadTextAndVersionAsync (workspace As Workspace, documentId As DocumentId, cancellationToken As CancellationToken) As Task(Of TextAndVersion)" />
       <MemberSignature Language="F#" Value="override this.LoadTextAndVersionAsync : Microsoft.CodeAnalysis.Workspace * Microsoft.CodeAnalysis.DocumentId * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt;" Usage="fileTextLoader.LoadTextAndVersionAsync (workspace, documentId, cancellationToken)" />
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt; LoadTextAndVersionAsync (Microsoft.CodeAnalysis.Workspace? workspace, Microsoft.CodeAnalysis.DocumentId? documentId, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -203,7 +250,16 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0">
+          <AttributeName Language="C#">[System.Obsolete("Use/override LoadTextAndVersionAsync(LoadTextOptions, CancellationToken)", false)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use/override LoadTextAndVersionAsync(LoadTextOptions, CancellationToken)", false)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.TextAndVersion&gt;</ReturnType>
       </ReturnValue>
@@ -252,6 +308,9 @@
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
