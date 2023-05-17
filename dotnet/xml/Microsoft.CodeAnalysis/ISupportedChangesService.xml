@@ -1,0 +1,115 @@
+<Type Name="ISupportedChangesService" FullName="Microsoft.CodeAnalysis.ISupportedChangesService">
+  <TypeSignature Language="C#" Value="public interface ISupportedChangesService : Microsoft.CodeAnalysis.Host.IWorkspaceService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISupportedChangesService implements class Microsoft.CodeAnalysis.Host.IWorkspaceService" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ISupportedChangesService" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISupportedChangesService&#xA;Implements IWorkspaceService" />
+  <TypeSignature Language="F#" Value="type ISupportedChangesService = interface&#xA;    interface IWorkspaceService" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>4.4.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.Host.IWorkspaceService</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Can be acquired from <see cref="P:Microsoft.CodeAnalysis.Solution.Services" />, with <see cref="M:Microsoft.CodeAnalysis.Host.SolutionServices.GetService``1" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanApplyChange">
+      <MemberSignature Language="C#" Value="public bool CanApplyChange (Microsoft.CodeAnalysis.ApplyChangesKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanApplyChange(valuetype Microsoft.CodeAnalysis.ApplyChangesKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISupportedChangesService.CanApplyChange(Microsoft.CodeAnalysis.ApplyChangesKind)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CanApplyChange (kind As ApplyChangesKind) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member CanApplyChange : Microsoft.CodeAnalysis.ApplyChangesKind -&gt; bool" Usage="iSupportedChangesService.CanApplyChange kind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="Microsoft.CodeAnalysis.ApplyChangesKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.CodeAnalysis.Workspace.CanApplyChange(Microsoft.CodeAnalysis.ApplyChangesKind)" />
+      </Docs>
+    </Member>
+    <Member MemberName="CanApplyCompilationOptionChange">
+      <MemberSignature Language="C#" Value="public bool CanApplyCompilationOptionChange (Microsoft.CodeAnalysis.CompilationOptions oldOptions, Microsoft.CodeAnalysis.CompilationOptions newOptions, Microsoft.CodeAnalysis.Project project);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanApplyCompilationOptionChange(class Microsoft.CodeAnalysis.CompilationOptions oldOptions, class Microsoft.CodeAnalysis.CompilationOptions newOptions, class Microsoft.CodeAnalysis.Project project) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISupportedChangesService.CanApplyCompilationOptionChange(Microsoft.CodeAnalysis.CompilationOptions,Microsoft.CodeAnalysis.CompilationOptions,Microsoft.CodeAnalysis.Project)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CanApplyCompilationOptionChange (oldOptions As CompilationOptions, newOptions As CompilationOptions, project As Project) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member CanApplyCompilationOptionChange : Microsoft.CodeAnalysis.CompilationOptions * Microsoft.CodeAnalysis.CompilationOptions * Microsoft.CodeAnalysis.Project -&gt; bool" Usage="iSupportedChangesService.CanApplyCompilationOptionChange (oldOptions, newOptions, project)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldOptions" Type="Microsoft.CodeAnalysis.CompilationOptions" />
+        <Parameter Name="newOptions" Type="Microsoft.CodeAnalysis.CompilationOptions" />
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+      </Parameters>
+      <Docs>
+        <param name="oldOptions">To be added.</param>
+        <param name="newOptions">To be added.</param>
+        <param name="project">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.CodeAnalysis.Workspace.CanApplyCompilationOptionChange(Microsoft.CodeAnalysis.CompilationOptions,Microsoft.CodeAnalysis.CompilationOptions,Microsoft.CodeAnalysis.Project)" />
+      </Docs>
+    </Member>
+    <Member MemberName="CanApplyParseOptionChange">
+      <MemberSignature Language="C#" Value="public bool CanApplyParseOptionChange (Microsoft.CodeAnalysis.ParseOptions oldOptions, Microsoft.CodeAnalysis.ParseOptions newOptions, Microsoft.CodeAnalysis.Project project);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanApplyParseOptionChange(class Microsoft.CodeAnalysis.ParseOptions oldOptions, class Microsoft.CodeAnalysis.ParseOptions newOptions, class Microsoft.CodeAnalysis.Project project) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.ISupportedChangesService.CanApplyParseOptionChange(Microsoft.CodeAnalysis.ParseOptions,Microsoft.CodeAnalysis.ParseOptions,Microsoft.CodeAnalysis.Project)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CanApplyParseOptionChange (oldOptions As ParseOptions, newOptions As ParseOptions, project As Project) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member CanApplyParseOptionChange : Microsoft.CodeAnalysis.ParseOptions * Microsoft.CodeAnalysis.ParseOptions * Microsoft.CodeAnalysis.Project -&gt; bool" Usage="iSupportedChangesService.CanApplyParseOptionChange (oldOptions, newOptions, project)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldOptions" Type="Microsoft.CodeAnalysis.ParseOptions" />
+        <Parameter Name="newOptions" Type="Microsoft.CodeAnalysis.ParseOptions" />
+        <Parameter Name="project" Type="Microsoft.CodeAnalysis.Project" />
+      </Parameters>
+      <Docs>
+        <param name="oldOptions">To be added.</param>
+        <param name="newOptions">To be added.</param>
+        <param name="project">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.CodeAnalysis.Workspace.CanApplyParseOptionChange(Microsoft.CodeAnalysis.ParseOptions,Microsoft.CodeAnalysis.ParseOptions,Microsoft.CodeAnalysis.Project)" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>
