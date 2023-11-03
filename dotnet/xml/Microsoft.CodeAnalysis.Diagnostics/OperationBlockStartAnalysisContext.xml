@@ -27,6 +27,7 @@
     <AssemblyVersion>4.4.0.0</AssemblyVersion>
     <AssemblyVersion>4.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -51,7 +52,6 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -71,9 +71,10 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="roslyn-dotnet-4.6.0">
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0">
           <AttributeName Language="C#">[System.Obsolete("Use CompilationWithAnalyzers instead. See https://github.com/dotnet/roslyn/issues/63440 for more details.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use CompilationWithAnalyzers instead. See https://github.com/dotnet/roslyn/issues/63440 for more details.")&gt;]</AttributeName>
         </Attribute>
@@ -105,7 +106,6 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -125,6 +125,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
@@ -147,7 +148,6 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -167,6 +167,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Compilation</ReturnType>
@@ -174,6 +175,52 @@
       <Docs>
         <summary>
           <see cref="T:Microsoft.CodeAnalysis.Compilation" /> containing the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext.OperationBlocks" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterSpan">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.Text.TextSpan? FilterSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt; FilterSpan" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext.FilterSpan" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FilterSpan As Nullable(Of TextSpan)" />
+      <MemberSignature Language="F#" Value="member this.FilterSpan : Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;" Usage="Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext.FilterSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Optional filter span within the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext.FilterTree" /> for which to compute diagnostics.
+            <see langword="null" /> if we are analyzing the entire <see cref="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext.FilterTree" />
+            or the entire compilation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterTree">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.SyntaxTree FilterTree { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.SyntaxTree FilterTree" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext.FilterTree" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FilterTree As SyntaxTree" />
+      <MemberSignature Language="F#" Value="member this.FilterTree : Microsoft.CodeAnalysis.SyntaxTree" Usage="Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext.FilterTree" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.SyntaxTree</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Syntax tree for the <see cref="P:Microsoft.CodeAnalysis.Diagnostics.OperationBlockStartAnalysisContext.OperationBlocks" /> being analyzed.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -189,7 +236,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -209,6 +255,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.FlowAnalysis.ControlFlowGraph</ReturnType>
@@ -237,6 +284,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -259,7 +307,6 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -279,6 +326,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
@@ -303,7 +351,6 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -323,6 +370,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions</ReturnType>
@@ -345,7 +393,6 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -365,6 +412,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -387,7 +435,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -407,6 +454,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -443,7 +491,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -463,6 +510,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -492,7 +540,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -512,6 +559,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
