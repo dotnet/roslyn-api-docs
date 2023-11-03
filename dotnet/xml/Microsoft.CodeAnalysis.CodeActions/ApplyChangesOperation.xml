@@ -27,6 +27,7 @@
     <AssemblyVersion>4.4.0.0</AssemblyVersion>
     <AssemblyVersion>4.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.7.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.CodeAnalysis.CodeActions.CodeActionOperation</BaseTypeName>
@@ -55,7 +56,6 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -75,13 +75,22 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="changedSolution" Type="Microsoft.CodeAnalysis.Solution" />
       </Parameters>
       <Docs>
         <param name="changedSolution">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+            A <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" /> for applying solution changes to a workspace.
+            <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetOperationsAsync(System.Threading.CancellationToken)" /> may return at most one
+            <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />. Hosts may provide custom handling for 
+            <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />s, but if a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> requires custom
+            host behavior not supported by a single <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />, then instead:
+            <list type="bullet"><description><text>Implement a custom <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> and <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />s</text></description><description><text>Do not return any <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" /> from <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetOperationsAsync(System.Threading.CancellationToken)" /></text></description><description><text>Directly apply any workspace edits</text></description><description><text>Handle any custom host behavior</text></description><description><text>Produce a preview for <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetPreviewOperationsAsync(System.Threading.CancellationToken)" /> 
+              by creating a custom <see cref="T:Microsoft.CodeAnalysis.CodeActions.PreviewOperation" /> or returning a single <see cref="T:Microsoft.CodeAnalysis.CodeActions.ApplyChangesOperation" />
+              to use the built-in preview mechanism</text></description></list></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,7 +104,6 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -115,6 +123,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -140,7 +149,6 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
-        <AssemblyVersion>2.9.0.0</AssemblyVersion>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>3.1.0.0</AssemblyVersion>
         <AssemblyVersion>3.2.0.0</AssemblyVersion>
@@ -160,6 +168,7 @@
         <AssemblyVersion>4.4.0.0</AssemblyVersion>
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.7.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Solution</ReturnType>
