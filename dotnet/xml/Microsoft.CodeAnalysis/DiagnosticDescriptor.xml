@@ -105,16 +105,27 @@
         <summary>
             Create a DiagnosticDescriptor, which provides description about a <see cref="T:Microsoft.CodeAnalysis.Diagnostic" />.
             </summary>
-        <remarks>Example descriptor for rule CA1001:
-                internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(RuleId,
-                    new LocalizableResourceString(nameof(FxCopRulesResources.TypesThatOwnDisposableFieldsShouldBeDisposable), FxCopRulesResources.ResourceManager, typeof(FxCopRulesResources)),
-                    new LocalizableResourceString(nameof(FxCopRulesResources.TypeOwnsDisposableFieldButIsNotDisposable), FxCopRulesResources.ResourceManager, typeof(FxCopRulesResources)),
-                    FxCopDiagnosticCategory.Design,
-                    DiagnosticSeverity.Warning,
-                    isEnabledByDefault: true,
-                    helpLinkUri: "http://msdn.microsoft.com/library/ms182172.aspx",
-                    customTags: DiagnosticCustomTags.Microsoft);
-            </remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+Example descriptor for rule `CA1001`:
+
+```C#
+internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(RuleId,
+    new LocalizableResourceString(nameof(FxCopRulesResources.TypesThatOwnDisposableFieldsShouldBeDisposable), FxCopRulesResources.ResourceManager, typeof(FxCopRulesResources)),
+    new LocalizableResourceString(nameof(FxCopRulesResources.TypeOwnsDisposableFieldButIsNotDisposable), FxCopRulesResources.ResourceManager, typeof(FxCopRulesResources)),
+    FxCopDiagnosticCategory.Design,
+    DiagnosticSeverity.Warning,
+    isEnabledByDefault: true,
+    helpLinkUri: "http://msdn.microsoft.com/library/ms182172.aspx",
+    customTags: DiagnosticCustomTags.Microsoft);
+```
+
+[Choose an appropriate diagnostic ID](/dotnet/csharp/roslyn-sdk/choosing-diagnostic-ids) such that it is unique.
+       ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
