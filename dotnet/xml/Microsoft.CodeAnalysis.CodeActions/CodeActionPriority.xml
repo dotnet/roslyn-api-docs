@@ -1,0 +1,114 @@
+<Type Name="CodeActionPriority" FullName="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority">
+  <TypeSignature Language="C#" Value="public enum CodeActionPriority" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CodeActionPriority extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CodeActionPriority" />
+  <TypeSignature Language="F#" Value="type CodeActionPriority = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>4.8.0.0</AssemblyVersion>
+    <AssemblyVersion>4.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Priority of a particular code action produced by either a <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider" /> or a <see cref="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider" />.  Code actions use priorities to group themselves, with lower priority actions showing
+            up after higher priority ones.  Providers should put less relevant code actions into lower priority buckets to
+            have them appear later in the UI, allowing the user to get to important code actions more quickly.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority Default = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default" />
+      <MemberSignature Language="VB.NET" Value="Default" />
+      <MemberSignature Language="F#" Value="Default = 2" Usage="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionPriority</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Medium priority code action.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority High = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.High" />
+      <MemberSignature Language="VB.NET" Value="High" />
+      <MemberSignature Language="F#" Value="High = 3" Usage="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionPriority</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            High priority code action. Note: High priority is simply a request on the part of a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />.
+            The core engine may automatically downgrade these items to <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default" /> priority.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority Low = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Low" />
+      <MemberSignature Language="VB.NET" Value="Low" />
+      <MemberSignature Language="F#" Value="Low = 1" Usage="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionPriority</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Low priority code action.  Will show up after <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default" /> priority items.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Lowest">
+      <MemberSignature Language="C#" Value="Lowest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority Lowest = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Lowest" />
+      <MemberSignature Language="VB.NET" Value="Lowest" />
+      <MemberSignature Language="F#" Value="Lowest = 0" Usage="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Lowest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionPriority</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Lowest priority code actions.  Will show up after <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Low" /> priority items.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
