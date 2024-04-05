@@ -28,6 +28,8 @@
     <AssemblyVersion>4.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.6.0.0</AssemblyVersion>
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
+    <AssemblyVersion>4.8.0.0</AssemblyVersion>
+    <AssemblyVersion>4.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -69,6 +71,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -106,6 +110,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -117,6 +123,35 @@
         <param name="cancellationToken">To be added.</param>
         <summary>
             Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that includes custom <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />'s.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeOperationsAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync (IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; progress, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; ComputeOperationsAsync(class System.IProgress`1&lt;class Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; progress, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputeOperationsAsync(System.IProgress{Microsoft.CodeAnalysis.CodeAnalysisProgress},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ComputeOperationsAsync (progress As IProgress(Of CodeAnalysisProgress), cancellationToken As CancellationToken) As Task(Of ImmutableArray(Of CodeActionOperation))" />
+      <MemberSignature Language="F#" Value="abstract member ComputeOperationsAsync : IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;&#xA;override this.ComputeOperationsAsync : IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeAction.ComputeOperationsAsync (progress, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="progress" Type="System.IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="progress">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that includes custom <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionOperation" />'s.  Prefer overriding this method over <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputeOperationsAsync(System.Threading.CancellationToken)" /> when computation is long running and progress should be
+            shown to the user.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -152,6 +187,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -163,10 +200,38 @@
         <param name="cancellationToken">To be added.</param>
         <summary>
             Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> that has a set of preview operations that are different
-            than the operations produced by <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputeOperationsAsync(System.Threading.CancellationToken)" />.
+            than the operations produced by <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputeOperationsAsync(System.IProgress{Microsoft.CodeAnalysis.CodeAnalysisProgress},System.Threading.CancellationToken)" />.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputePriority">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.CodeAnalysis.CodeActions.CodeActionPriority ComputePriority ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority ComputePriority() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.ComputePriority" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ComputePriority () As CodeActionPriority" />
+      <MemberSignature Language="F#" Value="abstract member ComputePriority : unit -&gt; Microsoft.CodeAnalysis.CodeActions.CodeActionPriority&#xA;override this.ComputePriority : unit -&gt; Microsoft.CodeAnalysis.CodeActions.CodeActionPriority" Usage="codeAction.ComputePriority " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionPriority</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Computes the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority" /> group this code action should be presented in. Legal values
+            this can be must be between <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Lowest" /> and <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.High" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Values outside of this range will be clamped to be within that range.  Requests for <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.High" /> may be downgraded to <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default" /> as they
+            poorly behaving high-priority items can cause a negative user experience.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="Create">
@@ -195,14 +260,22 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="title" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
-        <Parameter Name="nestedActions" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
-        <Parameter Name="isInlinable" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
+        <Parameter Name="title" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="nestedActions" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="isInlinable" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       </Parameters>
       <Docs>
         <param name="title">Title of the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> group.</param>
@@ -221,9 +294,11 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string equivalenceKey = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string equivalenceKey) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedDocument As Func(Of CancellationToken, Task(Of Document)), Optional equivalenceKey As String = Nothing) As CodeAction" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedDocument As Func(Of CancellationToken, Task(Of Document)), Optional equivalenceKey As String = Nothing) As CodeAction" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
       <MemberSignature Language="F#" Value="static member Create : string * Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; * string -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, createChangedDocument, equivalenceKey)" />
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string? equivalenceKey = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string? equivalenceKey);" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedDocument As Func(Of CancellationToken, Task(Of Document)), equivalenceKey As String) As CodeAction" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -247,7 +322,15 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
       </ReturnValue>
@@ -272,9 +355,11 @@
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string equivalenceKey = default);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string equivalenceKey) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Solution}},System.String)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedSolution As Func(Of CancellationToken, Task(Of Solution)), Optional equivalenceKey As String = Nothing) As CodeAction" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedSolution As Func(Of CancellationToken, Task(Of Solution)), Optional equivalenceKey As String = Nothing) As CodeAction" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
       <MemberSignature Language="F#" Value="static member Create : string * Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; * string -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, createChangedSolution, equivalenceKey)" />
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string? equivalenceKey = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string? equivalenceKey);" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedSolution As Func(Of CancellationToken, Task(Of Solution)), equivalenceKey As String) As CodeAction" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -298,7 +383,15 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
       </ReturnValue>
@@ -319,6 +412,166 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; nestedActions, bool isInlinable, Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default);" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; nestedActions, bool isInlinable, valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority) cil managed" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CodeActions.CodeAction},System.Boolean,Microsoft.CodeAnalysis.CodeActions.CodeActionPriority)" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, nestedActions As ImmutableArray(Of CodeAction), isInlinable As Boolean, Optional priority As CodeActionPriority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default) As CodeAction" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="F#" Value="static member Create : string * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; * bool * Microsoft.CodeAnalysis.CodeActions.CodeActionPriority -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, nestedActions, isInlinable, priority)" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="nestedActions" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="isInlinable" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="priority" Type="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority" Index="3" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="title">To be added.</param>
+        <param name="nestedActions">To be added.</param>
+        <param name="isInlinable">To be added.</param>
+        <param name="priority">Priority of the code action</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CodeActions.CodeAction},System.Boolean)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;,System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string? equivalenceKey = default, Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`3&lt;class System.IProgress`1&lt;class Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;, valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string equivalenceKey, valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.IProgress{Microsoft.CodeAnalysis.CodeAnalysisProgress},System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String,Microsoft.CodeAnalysis.CodeActions.CodeActionPriority)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedDocument As Func(Of IProgress(Of CodeAnalysisProgress), CancellationToken, Task(Of Document)), Optional equivalenceKey As String = Nothing, Optional priority As CodeActionPriority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default) As CodeAction" />
+      <MemberSignature Language="F#" Value="static member Create : string * Func&lt;IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;, System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; * string * Microsoft.CodeAnalysis.CodeActions.CodeActionPriority -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, createChangedDocument, equivalenceKey, priority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="createChangedDocument" Type="System.Func&lt;System.IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;,System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="equivalenceKey" Type="System.String" Index="2" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="priority" Type="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority" Index="3" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="title">To be added.</param>
+        <param name="createChangedDocument">To be added.</param>
+        <param name="equivalenceKey">To be added.</param>
+        <param name="priority">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String,Microsoft.CodeAnalysis.CodeActions.CodeActionPriority)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;,System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string? equivalenceKey = default, Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`3&lt;class System.IProgress`1&lt;class Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;, valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string equivalenceKey, valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.IProgress{Microsoft.CodeAnalysis.CodeAnalysisProgress},System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Solution}},System.String,Microsoft.CodeAnalysis.CodeActions.CodeActionPriority)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedSolution As Func(Of IProgress(Of CodeAnalysisProgress), CancellationToken, Task(Of Solution)), Optional equivalenceKey As String = Nothing, Optional priority As CodeActionPriority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default) As CodeAction" />
+      <MemberSignature Language="F#" Value="static member Create : string * Func&lt;IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;, System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; * string * Microsoft.CodeAnalysis.CodeActions.CodeActionPriority -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, createChangedSolution, equivalenceKey, priority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="createChangedSolution" Type="System.Func&lt;System.IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;,System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="equivalenceKey" Type="System.String" Index="2" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="priority" Type="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority" Index="3" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="title">To be added.</param>
+        <param name="createChangedSolution">To be added.</param>
+        <param name="equivalenceKey">To be added.</param>
+        <param name="priority">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Solution}},System.String,Microsoft.CodeAnalysis.CodeActions.CodeActionPriority)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string? equivalenceKey = default, Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt;&gt; createChangedDocument, string equivalenceKey, valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String,Microsoft.CodeAnalysis.CodeActions.CodeActionPriority)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedDocument As Func(Of CancellationToken, Task(Of Document)), Optional equivalenceKey As String = Nothing, Optional priority As CodeActionPriority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default) As CodeAction" />
+      <MemberSignature Language="F#" Value="static member Create : string * Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; * string * Microsoft.CodeAnalysis.CodeActions.CodeActionPriority -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, createChangedDocument, equivalenceKey, priority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="createChangedDocument" Type="System.Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="equivalenceKey" Type="System.String" Index="2" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="priority" Type="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority" Index="3" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="title">To be added.</param>
+        <param name="createChangedDocument">To be added.</param>
+        <param name="equivalenceKey">To be added.</param>
+        <param name="priority">Code action priority</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeActions.CodeAction Create (string title, Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string? equivalenceKey = default, Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeActions.CodeAction Create(string title, class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt;&gt; createChangedSolution, string equivalenceKey, valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Solution}},System.String,Microsoft.CodeAnalysis.CodeActions.CodeActionPriority)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (title As String, createChangedSolution As Func(Of CancellationToken, Task(Of Solution)), Optional equivalenceKey As String = Nothing, Optional priority As CodeActionPriority = Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default) As CodeAction" />
+      <MemberSignature Language="F#" Value="static member Create : string * Func&lt;System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt; * string * Microsoft.CodeAnalysis.CodeActions.CodeActionPriority -&gt; Microsoft.CodeAnalysis.CodeActions.CodeAction" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Create (title, createChangedSolution, equivalenceKey, priority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeAction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="createChangedSolution" Type="System.Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="equivalenceKey" Type="System.String" Index="2" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="priority" Type="Microsoft.CodeAnalysis.CodeActions.CodeActionPriority" Index="3" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="priority">To be added.</param>
+        <param name="title">Title of the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />.</param>
+        <param name="createChangedSolution">Function to create the <see cref="T:Microsoft.CodeAnalysis.Solution" />.</param>
+        <param name="equivalenceKey">Optional value used to determine the equivalence of the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> with other <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />s. See <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" />.</param>
+        <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> for a change to more than one <see cref="T:Microsoft.CodeAnalysis.Document" /> within a <see cref="T:Microsoft.CodeAnalysis.Solution" />.
+            Use this factory when the change is expensive to compute and should be deferred until requested.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="EquivalenceKey">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EquivalenceKey { System::String ^ get(); };" />
       <MemberSignature Language="C#" Value="public virtual string EquivalenceKey { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0" />
@@ -326,7 +579,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property EquivalenceKey As String" />
       <MemberSignature Language="F#" Value="member this.EquivalenceKey : string" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.EquivalenceKey" />
-      <MemberSignature Language="C#" Value="public virtual string? EquivalenceKey { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
+      <MemberSignature Language="C#" Value="public virtual string? EquivalenceKey { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -350,6 +603,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -402,6 +657,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
@@ -412,8 +669,8 @@
       <Docs>
         <param name="cancellationToken">To be added.</param>
         <summary>
-            Computes changes for a single document. Override this method if you want to implement a
-            <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that changes a single document.
+            Computes changes for a single document. Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that changes a single document.  Override <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedDocumentAsync(System.IProgress{Microsoft.CodeAnalysis.CodeAnalysisProgress},System.Threading.CancellationToken)" /> to report progress
+            progress while computing the operations.
             </summary>
         <returns>To be added.</returns>
         <remarks>
@@ -421,7 +678,43 @@
             implementation of <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedSolutionAsync(System.Threading.CancellationToken)" /> for code actions that only need
             to change one document.
             </remarks>
-        <exception cref="T:System.NotSupportedException">If this code action does not support changing a single document.</exception>
+        <exception cref="T:System.NotSupportedException">If this code action does not support changing a single
+            document.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChangedDocumentAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt; GetChangedDocumentAsync (IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; progress, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt; GetChangedDocumentAsync(class System.IProgress`1&lt;class Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; progress, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedDocumentAsync(System.IProgress{Microsoft.CodeAnalysis.CodeAnalysisProgress},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetChangedDocumentAsync (progress As IProgress(Of CodeAnalysisProgress), cancellationToken As CancellationToken) As Task(Of Document)" />
+      <MemberSignature Language="F#" Value="abstract member GetChangedDocumentAsync : IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&#xA;override this.GetChangedDocumentAsync : IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;" Usage="codeAction.GetChangedDocumentAsync (progress, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="progress" Type="System.IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="progress">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Computes changes for a single document. Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that changes a single document. Prefer overriding this method over <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedDocumentAsync(System.Threading.CancellationToken)" /> when computation is long running and progress should be
+            shown to the user.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            All code actions are expected to operate on solutions. This method is a helper to simplify the
+            implementation of <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedSolutionAsync(System.Threading.CancellationToken)" /> for code actions that only need
+            to change one document.
+            </remarks>
+        <exception cref="T:System.NotSupportedException">If this code action does not support changing a single
+            document.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetChangedSolutionAsync">
@@ -431,7 +724,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedSolutionAsync(System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetChangedSolutionAsync (cancellationToken As CancellationToken) As Task(Of Solution)" />
       <MemberSignature Language="F#" Value="abstract member GetChangedSolutionAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&#xA;override this.GetChangedSolutionAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;" Usage="codeAction.GetChangedSolutionAsync cancellationToken" />
-      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution?&gt; GetChangedSolutionAsync (System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution?&gt; GetChangedSolutionAsync (System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -455,6 +748,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
@@ -465,8 +760,37 @@
       <Docs>
         <param name="cancellationToken">To be added.</param>
         <summary>
-            Computes all changes for an entire solution.
-            Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that changes more than one document.
+            Computes all changes for an entire solution. Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that changes more than one document.  Override <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedSolutionAsync(System.IProgress{Microsoft.CodeAnalysis.CodeAnalysisProgress},System.Threading.CancellationToken)" /> to report progress
+            progress while computing the operations.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChangedSolutionAsync">
+      <MemberSignature Language="C#" Value="protected virtual System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution?&gt; GetChangedSolutionAsync (IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; progress, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Solution&gt; GetChangedSolutionAsync(class System.IProgress`1&lt;class Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; progress, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedSolutionAsync(System.IProgress{Microsoft.CodeAnalysis.CodeAnalysisProgress},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetChangedSolutionAsync (progress As IProgress(Of CodeAnalysisProgress), cancellationToken As CancellationToken) As Task(Of Solution)" />
+      <MemberSignature Language="F#" Value="abstract member GetChangedSolutionAsync : IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;&#xA;override this.GetChangedSolutionAsync : IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;" Usage="codeAction.GetChangedSolutionAsync (progress, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="progress" Type="System.IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="progress">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            Computes all changes for an entire solution. Override this method if you want to implement a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> subclass that changes more than one document. Prefer overriding this method over <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetChangedSolutionAsync(System.Threading.CancellationToken)" /> when computation is long running and progress should be
+            shown to the user.
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -502,6 +826,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -510,6 +836,36 @@
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>
+            The sequence of operations that define the code action.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationsAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetOperationsAsync (Microsoft.CodeAnalysis.Solution originalSolution, IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; progress, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt; GetOperationsAsync(class Microsoft.CodeAnalysis.Solution originalSolution, class System.IProgress`1&lt;class Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; progress, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.GetOperationsAsync(Microsoft.CodeAnalysis.Solution,System.IProgress{Microsoft.CodeAnalysis.CodeAnalysisProgress},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOperationsAsync (originalSolution As Solution, progress As IProgress(Of CodeAnalysisProgress), cancellationToken As CancellationToken) As Task(Of ImmutableArray(Of CodeActionOperation))" />
+      <MemberSignature Language="F#" Value="member this.GetOperationsAsync : Microsoft.CodeAnalysis.Solution * IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;" Usage="codeAction.GetOperationsAsync (originalSolution, progress, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="originalSolution" Type="Microsoft.CodeAnalysis.Solution" Index="0" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="progress" Type="System.IProgress&lt;Microsoft.CodeAnalysis.CodeAnalysisProgress&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="originalSolution">To be added.</param>
+        <param name="progress">To be added.</param>
         <param name="cancellationToken">To be added.</param>
         <summary>
             The sequence of operations that define the code action.
@@ -548,6 +904,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -561,6 +919,57 @@
             The sequence of operations used to construct a preview.
             </summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInlinable">
+      <MemberSignature Language="C#" Value="public virtual bool IsInlinable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInlinable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.IsInlinable" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IsInlinable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsInlinable : bool" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.IsInlinable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this code action contains <see cref="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.NestedActions" />, this property provides a hint to hosts as to
+            whether or not it's ok to elide this code action and just present the nested actions instead.  When a host
+            already has a lot of top-level actions to show, it should consider <em>not</em> inlining this action, to
+            keep the number of options presented to the user low.  However, if there are few options to show to the
+            user, inlining this action could be beneficial as it would allow the user to see and choose one of the
+            nested options with less steps.  To create a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> with nested actions, use <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CodeActions.CodeAction},System.Boolean)" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NestedActions">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; NestedActions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; NestedActions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.NestedActions" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property NestedActions As ImmutableArray(Of CodeAction)" />
+      <MemberSignature Language="F#" Value="member this.NestedActions : System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.NestedActions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Child actions contained within this <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" />.  Can be presented in a host to provide more
+            potential solution actions to a particular problem.  To create a <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeAction" /> with nested
+            actions, use <see cref="M:Microsoft.CodeAnalysis.CodeActions.CodeAction.Create(System.String,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CodeActions.CodeAction},System.Boolean)" />.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -594,6 +1003,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeActions.CodeActionOperation&gt;&gt;</ReturnType>
@@ -642,6 +1053,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;</ReturnType>
@@ -691,6 +1104,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Solution&gt;</ReturnType>
@@ -706,6 +1121,31 @@
             Apply post processing steps to solution changes, like formatting and simplification.
             </summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CodeActions.CodeActionPriority Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionPriority Priority" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeActions.CodeAction.Priority" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Priority As CodeActionPriority" />
+      <MemberSignature Language="F#" Value="member this.Priority : Microsoft.CodeAnalysis.CodeActions.CodeActionPriority" Usage="Microsoft.CodeAnalysis.CodeActions.CodeAction.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Priority of this particular action within a group of other actions.  Less relevant actions should override
+            this and specify a lower priority so that more important actions are easily accessible to the user.  Returns
+            <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.Default" /> if not overridden.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -739,6 +1179,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;System.String&gt;</ReturnType>
@@ -782,6 +1224,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

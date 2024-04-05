@@ -28,6 +28,8 @@
     <AssemblyVersion>4.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.6.0.0</AssemblyVersion>
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
+    <AssemblyVersion>4.8.0.0</AssemblyVersion>
+    <AssemblyVersion>4.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -71,7 +73,19 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.9.0">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.9.0">
+          <AttributeName Language="C#">[System.Obsolete("This overload is no longer supported", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This overload is no longer supported", true)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitBaseline</ReturnType>
       </ReturnValue>
@@ -131,7 +145,19 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.9.0">
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.9.0">
+          <AttributeName Language="C#">[System.Obsolete("This overload is no longer supported", true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This overload is no longer supported", true)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Emit.EmitBaseline</ReturnType>
       </ReturnValue>
@@ -142,6 +168,71 @@
         <Parameter Name="hasPortableDebugInformation" Type="System.Boolean" />
       </Parameters>
       <Docs>
+        <param name="module">The metadata of the module before editing.</param>
+        <param name="debugInformationProvider">
+            A function that for a method handle returns Edit and Continue debug information emitted by the compiler into the PDB.
+            The function shall throw <see cref="T:System.IO.InvalidDataException" /> if the debug information can't be read for the specified method.
+            This exception and <see cref="T:System.IO.IOException" /> are caught and converted to an emit diagnostic. Other exceptions are passed through.
+            </param>
+        <param name="localSignatureProvider">
+            A function that for a method handle returns the signature of its local variables.
+            The function shall throw <see cref="T:System.IO.InvalidDataException" /> if the information can't be read for the specified method.
+            This exception and <see cref="T:System.IO.IOException" /> are caught and converted to an emit diagnostic. Other exceptions are passed through.
+            </param>
+        <param name="hasPortableDebugInformation">
+            True if the baseline PDB is portable.
+            </param>
+        <summary>
+            Creates an <see cref="T:Microsoft.CodeAnalysis.Emit.EmitBaseline" /> from the metadata of the module before editing
+            and from a function that maps from a method to an array of local names. 
+            </summary>
+        <returns>An <see cref="T:Microsoft.CodeAnalysis.Emit.EmitBaseline" /> for the module.</returns>
+        <remarks>
+            Only the initial baseline is created using this method; subsequent baselines are created
+            automatically when emitting the differences in subsequent compilations.
+            
+            When an active method (one for which a frame is allocated on a stack) is updated the values of its local variables need to be preserved.
+            The mapping of local variable names to their slots in the frame is not included in the metadata and thus needs to be provided by 
+            <paramref name="debugInformationProvider" />.
+            
+            The <paramref name="debugInformationProvider" /> is only needed for the initial generation. The mapping for the subsequent generations
+            is carried over through <see cref="T:Microsoft.CodeAnalysis.Emit.EmitBaseline" />. The compiler assigns slots to named local variables (including named temporary variables)
+            it the order in which they appear in the source code. This property allows the compiler to reconstruct the local variable mapping 
+            for the initial generation. A subsequent generation may add a new variable in between two variables of the previous generation. 
+            Since the slots of the previous generation variables need to be preserved the only option is to add these new variables to the end.
+            The slot ordering thus no longer matches the syntax ordering. It is therefore necessary to pass <see cref="P:Microsoft.CodeAnalysis.Emit.EmitDifferenceResult.Baseline" />
+            to the next generation (rather than e.g. create new <see cref="T:Microsoft.CodeAnalysis.Emit.EmitBaseline" />s from scratch based on metadata produced by subsequent compilations).
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="localSignatureProvider" /> is null.</exception>
+        <exception cref="T:System.IO.IOException">Error reading module metadata.</exception>
+        <exception cref="T:System.BadImageFormatException">Module metadata is invalid.</exception>
+        <exception cref="T:System.ObjectDisposedException">Module has been disposed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInitialBaseline">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Emit.EmitBaseline CreateInitialBaseline (Microsoft.CodeAnalysis.Compilation compilation, Microsoft.CodeAnalysis.ModuleMetadata module, Func&lt;System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&gt; debugInformationProvider, Func&lt;System.Reflection.Metadata.MethodDefinitionHandle,System.Reflection.Metadata.StandaloneSignatureHandle&gt; localSignatureProvider, bool hasPortableDebugInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.Emit.EmitBaseline CreateInitialBaseline(class Microsoft.CodeAnalysis.Compilation compilation, class Microsoft.CodeAnalysis.ModuleMetadata module, class System.Func`2&lt;valuetype System.Reflection.Metadata.MethodDefinitionHandle, valuetype Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&gt; debugInformationProvider, class System.Func`2&lt;valuetype System.Reflection.Metadata.MethodDefinitionHandle, valuetype System.Reflection.Metadata.StandaloneSignatureHandle&gt; localSignatureProvider, bool hasPortableDebugInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline(Microsoft.CodeAnalysis.Compilation,Microsoft.CodeAnalysis.ModuleMetadata,System.Func{System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation},System.Func{System.Reflection.Metadata.MethodDefinitionHandle,System.Reflection.Metadata.StandaloneSignatureHandle},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateInitialBaseline (compilation As Compilation, module As ModuleMetadata, debugInformationProvider As Func(Of MethodDefinitionHandle, EditAndContinueMethodDebugInformation), localSignatureProvider As Func(Of MethodDefinitionHandle, StandaloneSignatureHandle), hasPortableDebugInformation As Boolean) As EmitBaseline" />
+      <MemberSignature Language="F#" Value="static member CreateInitialBaseline : Microsoft.CodeAnalysis.Compilation * Microsoft.CodeAnalysis.ModuleMetadata * Func&lt;System.Reflection.Metadata.MethodDefinitionHandle, Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&gt; * Func&lt;System.Reflection.Metadata.MethodDefinitionHandle, System.Reflection.Metadata.StandaloneSignatureHandle&gt; * bool -&gt; Microsoft.CodeAnalysis.Emit.EmitBaseline" Usage="Microsoft.CodeAnalysis.Emit.EmitBaseline.CreateInitialBaseline (compilation, module, debugInformationProvider, localSignatureProvider, hasPortableDebugInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.Emit.EmitBaseline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" Index="0" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="module" Type="Microsoft.CodeAnalysis.ModuleMetadata" Index="1" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="debugInformationProvider" Type="System.Func&lt;System.Reflection.Metadata.MethodDefinitionHandle,Microsoft.CodeAnalysis.Emit.EditAndContinueMethodDebugInformation&gt;" Index="2" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="localSignatureProvider" Type="System.Func&lt;System.Reflection.Metadata.MethodDefinitionHandle,System.Reflection.Metadata.StandaloneSignatureHandle&gt;" Index="3" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+        <Parameter Name="hasPortableDebugInformation" Type="System.Boolean" Index="4" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+      </Parameters>
+      <Docs>
+        <param name="compilation">Initial <see cref="F:Microsoft.CodeAnalysis.Emit.EmitBaseline.Compilation" />.</param>
         <param name="module">The metadata of the module before editing.</param>
         <param name="debugInformationProvider">
             A function that for a method handle returns Edit and Continue debug information emitted by the compiler into the PDB.
@@ -214,6 +305,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ModuleMetadata</ReturnType>
