@@ -1,0 +1,137 @@
+<Type Name="CodeAnalysisProgress" FullName="Microsoft.CodeAnalysis.CodeAnalysisProgress">
+  <TypeSignature Language="C#" Value="public sealed class CodeAnalysisProgress" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CodeAnalysisProgress extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeAnalysisProgress" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CodeAnalysisProgress" />
+  <TypeSignature Language="F#" Value="type CodeAnalysisProgress = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>4.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the progress of an operation.  Commonly used to update a UI visible to a user when a long running
+            operation is happening.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeAnalysisProgress ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeAnalysisProgress.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCompleteItems">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeAnalysisProgress AddCompleteItems (int count, string? description = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeAnalysisProgress AddCompleteItems(int32 count, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeAnalysisProgress.AddCompleteItems(System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AddCompleteItems (count As Integer, Optional description As String = Nothing) As CodeAnalysisProgress" />
+      <MemberSignature Language="F#" Value="static member AddCompleteItems : int * string -&gt; Microsoft.CodeAnalysis.CodeAnalysisProgress" Usage="Microsoft.CodeAnalysis.CodeAnalysisProgress.AddCompleteItems (count, description)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeAnalysisProgress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="count">The number of items that were completed. Must be greater than or equal to 1.</param>
+        <param name="description">Optional description to update the UI to.</param>
+        <summary>
+            When passed to an appropriate <see cref="T:System.IProgress`1" />, will indicate that some items of work have
+            transitioned from being incomplete (see <see cref="M:Microsoft.CodeAnalysis.CodeAnalysisProgress.AddIncompleteItems(System.Int32,System.String)" /> to complete.  This is commonly
+            presented with a progress bar. An optional <paramref name="description" /> can also be provided to update the UI
+            accordingly (see <see cref="M:Microsoft.CodeAnalysis.CodeAnalysisProgress.Description(System.String)" />).
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+            progress.Report(CodeAnalysisProgress.CompleteItem());
+            </example>
+      </Docs>
+    </Member>
+    <Member MemberName="AddIncompleteItems">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeAnalysisProgress AddIncompleteItems (int count, string? description = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeAnalysisProgress AddIncompleteItems(int32 count, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeAnalysisProgress.AddIncompleteItems(System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AddIncompleteItems (count As Integer, Optional description As String = Nothing) As CodeAnalysisProgress" />
+      <MemberSignature Language="F#" Value="static member AddIncompleteItems : int * string -&gt; Microsoft.CodeAnalysis.CodeAnalysisProgress" Usage="Microsoft.CodeAnalysis.CodeAnalysisProgress.AddIncompleteItems (count, description)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeAnalysisProgress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="count">The number of incomplete items left to perform.</param>
+        <param name="description">Optional description to update the UI to.</param>
+        <summary>
+            When passed to an appropriate <see cref="T:System.IProgress`1" />, will add the requested number of incomplete items to
+            the UI showing the progress of the current operation.  This is commonly presented with a progress bar.  An
+            optional <paramref name="description" /> can also be provided to update the UI accordingly (see <see cref="M:Microsoft.CodeAnalysis.CodeAnalysisProgress.Description(System.String)" />).
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+            progress.Report(CodeAnalysisProgress.AddIncompleteItems(20));
+            </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeAnalysisProgress Description (string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeAnalysisProgress Description(string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeAnalysisProgress.Description(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Description (description As String) As CodeAnalysisProgress" />
+      <MemberSignature Language="F#" Value="static member Description : string -&gt; Microsoft.CodeAnalysis.CodeAnalysisProgress" Usage="Microsoft.CodeAnalysis.CodeAnalysisProgress.Description description" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeAnalysisProgress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="description">To be added.</param>
+        <summary>
+            When passed to an appropriate <see cref="T:System.IProgress`1" />, will updates the UI showing the progress of the
+            current operation to the specified <paramref name="description" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+            progress.Report(CodeAnalysisProgress.Description("Renaming files"));
+            </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

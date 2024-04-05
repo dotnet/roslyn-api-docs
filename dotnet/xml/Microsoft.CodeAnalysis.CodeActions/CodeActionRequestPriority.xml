@@ -1,0 +1,121 @@
+<Type Name="CodeActionRequestPriority" FullName="Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority">
+  <TypeSignature Language="C#" Value="public enum CodeActionRequestPriority" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CodeActionRequestPriority extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CodeActionRequestPriority" />
+  <TypeSignature Language="F#" Value="type CodeActionRequestPriority = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>4.8.0.0</AssemblyVersion>
+    <AssemblyVersion>4.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Priority class that a particular <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider" /> or <see cref="T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider" /> should
+            run at.  Providers are run in priority order, allowing the results of higher priority providers to be computed
+            and shown to the user without having to wait on, or share computing resources with, lower priority providers.
+            Providers should choose lower priority classes if they are either:
+            <list type="number"><item><description>Very slow.  Slow providers will impede computing results for other providers in the same priority class.
+            So running in a lower one means that fast providers can still get their results to users quickly.</description></item><item><description>Less relevant.  Providers that commonly show available options, but those options are less likely to be
+            taken, should run in lower priority groups.  This helps ensure their items are still there when the user wants
+            them, but aren't as prominently shown.</description></item></list></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority Default = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Default" />
+      <MemberSignature Language="VB.NET" Value="Default" />
+      <MemberSignature Language="F#" Value="Default = 3" Usage="Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Run this provider at default priority.  The provider will run in reasonable speeds and provide results that are
+            commonly relevant to the user.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority High = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.High" />
+      <MemberSignature Language="VB.NET" Value="High" />
+      <MemberSignature Language="F#" Value="High = 4" Usage="Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Run this provider at high priority. Note: High priority is simply a request on the part of a provider. The core
+            engine may automatically downgrade these items to <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Default" /> priority.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority Low = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Low" />
+      <MemberSignature Language="VB.NET" Value="Low" />
+      <MemberSignature Language="F#" Value="Low = 2" Usage="Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Run the priority below <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Default" /> priority.  The provider may run slow, or its results may be
+            commonly less relevant for the user.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Lowest">
+      <MemberSignature Language="C#" Value="Lowest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority Lowest = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Lowest" />
+      <MemberSignature Language="VB.NET" Value="Lowest" />
+      <MemberSignature Language="F#" Value="Lowest = 1" Usage="Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Lowest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Only lowest priority suppression and configuration fix providers should be run.  Specifically, <see cref="T:Microsoft.CodeAnalysis.CodeFixes.IConfigurationFixProvider" /> providers will be run. NOTE: This priority is reserved for suppression and
+            configuration fix providers and should not be used by regular code fix providers and refactoring providers.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

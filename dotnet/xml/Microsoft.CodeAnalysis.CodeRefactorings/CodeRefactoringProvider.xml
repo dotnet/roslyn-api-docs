@@ -28,6 +28,8 @@
     <AssemblyVersion>4.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.6.0.0</AssemblyVersion>
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
+    <AssemblyVersion>4.8.0.0</AssemblyVersion>
+    <AssemblyVersion>4.9.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -70,6 +72,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -107,6 +111,8 @@
         <AssemblyVersion>4.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.6.0.0</AssemblyVersion>
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -120,6 +126,58 @@
             Computes one or more refactorings for the specified <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext" />.
             </summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeRequestPriority">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority ComputeRequestPriority ();" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority ComputeRequestPriority() cil managed" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.ComputeRequestPriority" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ComputeRequestPriority () As CodeActionRequestPriority" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="F#" Value="abstract member ComputeRequestPriority : unit -&gt; Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority&#xA;override this.ComputeRequestPriority : unit -&gt; Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority" Usage="codeRefactoringProvider.ComputeRequestPriority " FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Computes the <see cref="T:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority" /> group this provider should be considered to run at. Legal values
+            this can be must be between <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Low" /> and <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionPriority.High" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Values outside of this range will be clamped to be within that range.  Requests for <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.High" /> may be downgraded to <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Default" /> as they
+            poorly behaving high-priority providers can cause a negative user experience.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestPriority">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority RequestPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority RequestPriority" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.RequestPriority" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestPriority As CodeActionRequestPriority" />
+      <MemberSignature Language="F#" Value="member this.RequestPriority : Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority" Usage="Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.RequestPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.8.0.0</AssemblyVersion>
+        <AssemblyVersion>4.9.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Priority class this refactoring provider should run at. Returns <see cref="F:Microsoft.CodeAnalysis.CodeActions.CodeActionRequestPriority.Default" /> if not overridden.  Slower, or less relevant, providers should
+            override this and return a lower value to not interfere with computation of normal priority providers.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
