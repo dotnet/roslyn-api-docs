@@ -5,7 +5,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IMemberInitializerOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface IMemberInitializerOperation&#xA;Implements IOperation" />
   <TypeSignature Language="F#" Value="type IMemberInitializerOperation = interface&#xA;    interface IOperation" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IMemberInitializerOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IMemberInitializerOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -31,6 +31,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -42,10 +43,11 @@
             Represents an initialization of member within an object initializer with a nested object or collection initializer.
             <para>
             Current usage:
-             (1) C# nested member initializer expression.
-              For example, given an object creation with initializer "new Class() { X = x, Y = { x, y, 3 }, Z = { X = z } }",
-              member initializers for Y and Z, i.e. "Y = { x, y, 3 }", and "Z = { X = z }" are nested member initializers represented by this operation.
-            </para></summary>
+            <list type="number"><item><description>
+                  C# nested member initializer expression.
+                  For example, given an object creation with initializer <c>new Class() { X = x, Y = { x, y, 3 }, Z = { X = z } }</c>,
+                  member initializers for Y and Z, i.e. <c>Y = { x, y, 3 }</c>, and <c>Z = { X = z }</c> are nested member initializers represented by this operation
+                </description></item><item><description>VB object or collection initializer expression</description></item></list></para></summary>
     <remarks>
       <para>This node is associated with the following operation kinds:</para>
       <list type="bullet">
@@ -92,6 +94,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
@@ -136,6 +139,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Operations.IObjectOrCollectionInitializerOperation</ReturnType>

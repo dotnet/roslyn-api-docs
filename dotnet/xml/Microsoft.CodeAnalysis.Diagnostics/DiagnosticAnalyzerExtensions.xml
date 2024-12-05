@@ -30,6 +30,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -51,14 +52,15 @@
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" RefType="this" Index="0" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="analyzers" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="options" Type="Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions" Index="2" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="compilation" Type="Microsoft.CodeAnalysis.Compilation" RefType="this" Index="0" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="analyzers" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="options" Type="Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions" Index="2" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
       </Parameters>
       <Docs>
         <param name="compilation">Compilation to which analyzers are to be added.</param>
@@ -103,6 +105,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers</ReturnType>
@@ -130,8 +133,8 @@
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAnalyzers (compilation As Compilation, analyzers As ImmutableArray(Of DiagnosticAnalyzer), Optional options As AnalyzerOptions = Nothing, Optional cancellationToken As CancellationToken = Nothing) As CompilationWithAnalyzers" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
       <MemberSignature Language="F#" Value="static member WithAnalyzers : Microsoft.CodeAnalysis.Compilation * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; * Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions * System.Threading.CancellationToken -&gt; Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers" Usage="Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzerExtensions.WithAnalyzers (compilation, analyzers, options, cancellationToken)" />
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers WithAnalyzers (this Microsoft.CodeAnalysis.Compilation compilation, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; analyzers, Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions? options = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0" />
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers WithAnalyzers (this Microsoft.CodeAnalysis.Compilation compilation, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; analyzers, Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions? options, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAnalyzers (compilation As Compilation, analyzers As ImmutableArray(Of DiagnosticAnalyzer), options As AnalyzerOptions, cancellationToken As CancellationToken) As CompilationWithAnalyzers" FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.Diagnostics.CompilationWithAnalyzers WithAnalyzers (this Microsoft.CodeAnalysis.Compilation compilation, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer&gt; analyzers, Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions? options, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function WithAnalyzers (compilation As Compilation, analyzers As ImmutableArray(Of DiagnosticAnalyzer), options As AnalyzerOptions, cancellationToken As CancellationToken) As CompilationWithAnalyzers" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -157,13 +160,14 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
           <AttributeName Language="C#">[System.Obsolete("Use WithAnalyzers overload without a cancellation token", false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use WithAnalyzers overload without a cancellation token", false)&gt;]</AttributeName>
         </Attribute>

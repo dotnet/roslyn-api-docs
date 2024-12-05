@@ -30,6 +30,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,11 +45,12 @@
   <Members>
     <Member MemberName="CreateDeclarationId">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ CreateDeclarationId(Microsoft::CodeAnalysis::ISymbol ^ symbol);" />
-      <MemberSignature Language="C#" Value="public static string CreateDeclarationId (Microsoft.CodeAnalysis.ISymbol symbol);" />
+      <MemberSignature Language="C#" Value="public static string CreateDeclarationId (Microsoft.CodeAnalysis.ISymbol symbol);" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateDeclarationId(class Microsoft.CodeAnalysis.ISymbol symbol) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationCommentId.CreateDeclarationId(Microsoft.CodeAnalysis.ISymbol)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateDeclarationId (symbol As ISymbol) As String" />
       <MemberSignature Language="F#" Value="static member CreateDeclarationId : Microsoft.CodeAnalysis.ISymbol -&gt; string" Usage="Microsoft.CodeAnalysis.DocumentationCommentId.CreateDeclarationId symbol" />
+      <MemberSignature Language="C#" Value="public static string? CreateDeclarationId (Microsoft.CodeAnalysis.ISymbol symbol);" FrameworkAlternate="roslyn-dotnet-4.12.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -74,6 +76,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -84,11 +87,12 @@
       <Docs>
         <param name="symbol">To be added.</param>
         <summary>
-            Creates an id string used by external documentation comment files to identify declarations
-            of types, namespaces, methods, properties, etc.
+            Creates an id string used by external documentation comment files to identify declarations of types,
+            namespaces, methods, properties, etc.
             </summary>
-        <returns>To be added.</returns>
+        <returns>The documentation comment Id for this symbol, if it can be created. <see langword="null" /> if it cannot be.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">If <paramref name="symbol" /> is <see langword="null" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="CreateReferenceId">
@@ -123,6 +127,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -133,11 +138,12 @@
       <Docs>
         <param name="symbol">To be added.</param>
         <summary>
-            Creates an id string used to reference type symbols (not strictly declarations, includes
-            arrays, pointers, type parameters, etc.)
+            Creates an id string used to reference type symbols (not strictly declarations, includes arrays, pointers,
+            type parameters, etc.).
             </summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">If <paramref name="symbol" /> is <see langword="null" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetFirstSymbolForDeclarationId">
@@ -147,7 +153,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationCommentId.GetFirstSymbolForDeclarationId(System.String,Microsoft.CodeAnalysis.Compilation)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetFirstSymbolForDeclarationId (id As String, compilation As Compilation) As ISymbol" />
       <MemberSignature Language="F#" Value="static member GetFirstSymbolForDeclarationId : string * Microsoft.CodeAnalysis.Compilation -&gt; Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.DocumentationCommentId.GetFirstSymbolForDeclarationId (id, compilation)" />
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISymbol? GetFirstSymbolForDeclarationId (string id, Microsoft.CodeAnalysis.Compilation compilation);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISymbol? GetFirstSymbolForDeclarationId (string id, Microsoft.CodeAnalysis.Compilation compilation);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -173,6 +179,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -198,7 +205,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.DocumentationCommentId.GetFirstSymbolForReferenceId(System.String,Microsoft.CodeAnalysis.Compilation)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetFirstSymbolForReferenceId (id As String, compilation As Compilation) As ISymbol" />
       <MemberSignature Language="F#" Value="static member GetFirstSymbolForReferenceId : string * Microsoft.CodeAnalysis.Compilation -&gt; Microsoft.CodeAnalysis.ISymbol" Usage="Microsoft.CodeAnalysis.DocumentationCommentId.GetFirstSymbolForReferenceId (id, compilation)" />
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISymbol? GetFirstSymbolForReferenceId (string id, Microsoft.CodeAnalysis.Compilation compilation);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISymbol? GetFirstSymbolForReferenceId (string id, Microsoft.CodeAnalysis.Compilation compilation);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -224,6 +231,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISymbol</ReturnType>
@@ -274,6 +282,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
@@ -324,6 +333,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>

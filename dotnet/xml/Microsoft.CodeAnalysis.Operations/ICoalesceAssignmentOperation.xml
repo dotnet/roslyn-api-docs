@@ -4,7 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.ICoalesceAssignmentOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface ICoalesceAssignmentOperation&#xA;Implements IAssignmentOperation" />
   <TypeSignature Language="F#" Value="type ICoalesceAssignmentOperation = interface&#xA;    interface IAssignmentOperation&#xA;    interface IOperation" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ICoalesceAssignmentOperation implements class Microsoft.CodeAnalysis.IOperation, class Microsoft.CodeAnalysis.Operations.IAssignmentOperation" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ICoalesceAssignmentOperation implements class Microsoft.CodeAnalysis.IOperation, class Microsoft.CodeAnalysis.Operations.IAssignmentOperation" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -29,6 +29,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -41,13 +42,11 @@
   <Docs>
     <summary>
             Represents a coalesce assignment operation with a target and a conditionally-evaluated value:
-            (1) <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" /> is evaluated for null. If it is null, <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Value" /> is evaluated and assigned to target.
-            (2) <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Value" /> is conditionally evaluated if <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" /> is null, and the result is assigned into <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" />.
-            The result of the entire expression is<see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" />, which is only evaluated once.
+            <list type="number"><item><description><see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" /> is evaluated for null. If it is null, <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Value" /> is evaluated and assigned to target</description></item><item><description><see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Value" /> is conditionally evaluated if <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" /> is null, and the result is assigned into <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" /></description></item></list>
+            The result of the entire expression is <see cref="P:Microsoft.CodeAnalysis.Operations.IAssignmentOperation.Target" />, which is only evaluated once.
             <para>
             Current usage:
-             (1) C# null-coalescing assignment operation <code>Target ??= Value</code>.
-            </para></summary>
+            <list type="number"><item><description>C# null-coalescing assignment operation <c>Target ??= Value</c></description></item></list></para></summary>
     <remarks>
       <para>This node is associated with the following operation kinds:</para>
       <list type="bullet">

@@ -16,7 +16,7 @@ The documentation says that this package contains:
 
 - ***Microsoft.CodeAnalysis.CSharp.Workspaces*** (C# Compiler and services)
 - ***Microsoft.CodeAnalysis.VisualBasic.Workspaces*** (VB Compiler and Services)
-- ***Microsoft.CodeAlaysis.Compilers*** (both compilers)
+- ***Microsoft.CodeAnalysis.Compilers*** (both compilers)
 - ***Microsoft.CodeAnalysis.CSharp*** (C# compiler)
 - ***Microsoft.CodeAnalysis.VisualBasic*** (VB compiler
 

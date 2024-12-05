@@ -5,7 +5,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.ICoalesceOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface ICoalesceOperation&#xA;Implements IOperation" />
   <TypeSignature Language="F#" Value="type ICoalesceOperation = interface&#xA;    interface IOperation" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ICoalesceOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ICoalesceOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -31,6 +31,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -40,13 +41,9 @@
   <Docs>
     <summary>
             Represents a coalesce operation with two operands:
-            (1) <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" />, which is the first operand that is unconditionally evaluated and is the result of the operation if non null.
-            (2) <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.WhenNull" />, which is the second operand that is conditionally evaluated and is the result of the operation if <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" /> is null.
-            <para>
+            <list type="number"><item><description><see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" />, which is the first operand that is unconditionally evaluated and is the result of the operation if non null</description></item><item><description><see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.WhenNull" />, which is the second operand that is conditionally evaluated and is the result of the operation if <see cref="P:Microsoft.CodeAnalysis.Operations.ICoalesceOperation.Value" /> is null</description></item></list><para>
             Current usage:
-             (1) C# null-coalescing expression "Value ?? WhenNull".
-             (2) VB binary conditional expression "If(Value, WhenNull)".
-            </para></summary>
+            <list type="number"><item><description>C# null-coalescing expression <c>Value ?? WhenNull</c></description></item><item><description>VB binary conditional expression <c>If(Value, WhenNull)</c></description></item></list></para></summary>
     <remarks>
       <para>This node is associated with the following operation kinds:</para>
       <list type="bullet">
@@ -93,6 +90,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
@@ -137,6 +135,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Operations.CommonConversion</ReturnType>
@@ -184,6 +183,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>
