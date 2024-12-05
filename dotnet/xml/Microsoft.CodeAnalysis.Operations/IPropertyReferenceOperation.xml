@@ -5,7 +5,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IPropertyReferenceOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface IPropertyReferenceOperation&#xA;Implements IMemberReferenceOperation" />
   <TypeSignature Language="F#" Value="type IPropertyReferenceOperation = interface&#xA;    interface IMemberReferenceOperation&#xA;    interface IOperation" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IPropertyReferenceOperation implements class Microsoft.CodeAnalysis.IOperation, class Microsoft.CodeAnalysis.Operations.IMemberReferenceOperation" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IPropertyReferenceOperation implements class Microsoft.CodeAnalysis.IOperation, class Microsoft.CodeAnalysis.Operations.IMemberReferenceOperation" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -31,6 +31,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -45,9 +46,7 @@
             Represents a reference to a property.
             <para>
             Current usage:
-             (1) C# property reference expression.
-             (2) VB property reference expression.
-            </para></summary>
+            <list type="number"><item><description>C# property reference expression</description></item><item><description>VB property reference expression</description></item></list></para></summary>
     <remarks>
       <para>This node is associated with the following operation kinds:</para>
       <list type="bullet">
@@ -94,7 +93,14 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Operations.IArgumentOperation&gt;</ReturnType>
       </ReturnValue>
@@ -141,7 +147,14 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IPropertySymbol</ReturnType>
       </ReturnValue>

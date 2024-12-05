@@ -5,7 +5,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IParameterInitializerOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface IParameterInitializerOperation&#xA;Implements ISymbolInitializerOperation" />
   <TypeSignature Language="F#" Value="type IParameterInitializerOperation = interface&#xA;    interface ISymbolInitializerOperation&#xA;    interface IOperation" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IParameterInitializerOperation implements class Microsoft.CodeAnalysis.IOperation, class Microsoft.CodeAnalysis.Operations.ISymbolInitializerOperation" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IParameterInitializerOperation implements class Microsoft.CodeAnalysis.IOperation, class Microsoft.CodeAnalysis.Operations.ISymbolInitializerOperation" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -31,6 +31,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -45,9 +46,7 @@
             Represents an initialization of a parameter at the point of declaration.
             <para>
             Current usage:
-             (1) C# parameter initializer with equals value clause.
-             (2) VB parameter initializer with equals value clause.
-            </para></summary>
+            <list type="number"><item><description>C# parameter initializer with equals value clause</description></item><item><description>VB parameter initializer with equals value clause</description></item></list></para></summary>
     <remarks>
       <para>This node is associated with the following operation kinds:</para>
       <list type="bullet">
@@ -94,7 +93,14 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IParameterSymbol</ReturnType>
       </ReturnValue>

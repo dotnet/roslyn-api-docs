@@ -30,11 +30,18 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Represents metadata image reference.
@@ -77,6 +84,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="properties" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
@@ -119,6 +127,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -160,7 +169,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReference.CreateFromAssembly(System.Reflection.Assembly,Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromAssembly (assembly As Assembly, properties As MetadataReferenceProperties, Optional documentation As DocumentationProvider = Nothing) As MetadataReference" />
       <MemberSignature Language="F#" Value="static member CreateFromAssembly : System.Reflection.Assembly * Microsoft.CodeAnalysis.MetadataReferenceProperties * Microsoft.CodeAnalysis.DocumentationProvider -&gt; Microsoft.CodeAnalysis.MetadataReference" Usage="Microsoft.CodeAnalysis.MetadataReference.CreateFromAssembly (assembly, properties, documentation)" />
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.MetadataReference CreateFromAssembly (System.Reflection.Assembly assembly, Microsoft.CodeAnalysis.MetadataReferenceProperties properties, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.MetadataReference CreateFromAssembly (System.Reflection.Assembly assembly, Microsoft.CodeAnalysis.MetadataReferenceProperties properties, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -186,6 +195,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -203,7 +213,14 @@
       <Parameters>
         <Parameter Name="assembly" Type="System.Reflection.Assembly" />
         <Parameter Name="properties" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
-        <Parameter Name="documentation" Type="Microsoft.CodeAnalysis.DocumentationProvider" />
+        <Parameter Name="documentation" Type="Microsoft.CodeAnalysis.DocumentationProvider">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="assembly">Path to the module file.</param>
@@ -233,7 +250,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile(System.String,Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromFile (path As String, Optional properties As MetadataReferenceProperties = Nothing, Optional documentation As DocumentationProvider = Nothing) As PortableExecutableReference" />
       <MemberSignature Language="F#" Value="static member CreateFromFile : string * Microsoft.CodeAnalysis.MetadataReferenceProperties * Microsoft.CodeAnalysis.DocumentationProvider -&gt; Microsoft.CodeAnalysis.PortableExecutableReference" Usage="Microsoft.CodeAnalysis.MetadataReference.CreateFromFile (path, properties, documentation)" />
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromFile (string path, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromFile (string path, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -259,6 +276,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
@@ -266,7 +284,14 @@
       <Parameters>
         <Parameter Name="path" Type="System.String" />
         <Parameter Name="properties" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
-        <Parameter Name="documentation" Type="Microsoft.CodeAnalysis.DocumentationProvider" />
+        <Parameter Name="documentation" Type="Microsoft.CodeAnalysis.DocumentationProvider">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="path">Path to the assembly file.</param>
@@ -304,7 +329,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReference.CreateFromImage(System.Collections.Generic.IEnumerable{System.Byte},Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromImage (peImage As IEnumerable(Of Byte), Optional properties As MetadataReferenceProperties = Nothing, Optional documentation As DocumentationProvider = Nothing, Optional filePath As String = Nothing) As PortableExecutableReference" />
       <MemberSignature Language="F#" Value="static member CreateFromImage : seq&lt;byte&gt; * Microsoft.CodeAnalysis.MetadataReferenceProperties * Microsoft.CodeAnalysis.DocumentationProvider * string -&gt; Microsoft.CodeAnalysis.PortableExecutableReference" Usage="Microsoft.CodeAnalysis.MetadataReference.CreateFromImage (peImage, properties, documentation, filePath)" />
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromImage (System.Collections.Generic.IEnumerable&lt;byte&gt; peImage, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromImage (System.Collections.Generic.IEnumerable&lt;byte&gt; peImage, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -330,6 +355,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
@@ -337,8 +363,22 @@
       <Parameters>
         <Parameter Name="peImage" Type="System.Collections.Generic.IEnumerable&lt;System.Byte&gt;" />
         <Parameter Name="properties" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
-        <Parameter Name="documentation" Type="Microsoft.CodeAnalysis.DocumentationProvider" />
-        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="documentation" Type="Microsoft.CodeAnalysis.DocumentationProvider">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="peImage">Assembly image.</param>
@@ -372,7 +412,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReference.CreateFromImage(System.Collections.Immutable.ImmutableArray{System.Byte},Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromImage (peImage As ImmutableArray(Of Byte), Optional properties As MetadataReferenceProperties = Nothing, Optional documentation As DocumentationProvider = Nothing, Optional filePath As String = Nothing) As PortableExecutableReference" />
       <MemberSignature Language="F#" Value="static member CreateFromImage : System.Collections.Immutable.ImmutableArray&lt;byte&gt; * Microsoft.CodeAnalysis.MetadataReferenceProperties * Microsoft.CodeAnalysis.DocumentationProvider * string -&gt; Microsoft.CodeAnalysis.PortableExecutableReference" Usage="Microsoft.CodeAnalysis.MetadataReference.CreateFromImage (peImage, properties, documentation, filePath)" />
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromImage (System.Collections.Immutable.ImmutableArray&lt;byte&gt; peImage, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromImage (System.Collections.Immutable.ImmutableArray&lt;byte&gt; peImage, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -398,12 +438,20 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="peImage" Type="System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;" />
+        <Parameter Name="peImage" Type="System.Collections.Immutable.ImmutableArray&lt;System.Byte&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="properties" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
         <Parameter Name="documentation" Type="Microsoft.CodeAnalysis.DocumentationProvider" />
         <Parameter Name="filePath" Type="System.String" />
@@ -443,7 +491,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.MetadataReference.CreateFromStream(System.IO.Stream,Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromStream (peStream As Stream, Optional properties As MetadataReferenceProperties = Nothing, Optional documentation As DocumentationProvider = Nothing, Optional filePath As String = Nothing) As PortableExecutableReference" />
       <MemberSignature Language="F#" Value="static member CreateFromStream : System.IO.Stream * Microsoft.CodeAnalysis.MetadataReferenceProperties * Microsoft.CodeAnalysis.DocumentationProvider * string -&gt; Microsoft.CodeAnalysis.PortableExecutableReference" Usage="Microsoft.CodeAnalysis.MetadataReference.CreateFromStream (peStream, properties, documentation, filePath)" />
-      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromStream (System.IO.Stream peStream, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.PortableExecutableReference CreateFromStream (System.IO.Stream peStream, Microsoft.CodeAnalysis.MetadataReferenceProperties properties = default, Microsoft.CodeAnalysis.DocumentationProvider? documentation = default, string? filePath = default);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -469,6 +517,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.PortableExecutableReference</ReturnType>
@@ -476,8 +525,22 @@
       <Parameters>
         <Parameter Name="peStream" Type="System.IO.Stream" />
         <Parameter Name="properties" Type="Microsoft.CodeAnalysis.MetadataReferenceProperties" />
-        <Parameter Name="documentation" Type="Microsoft.CodeAnalysis.DocumentationProvider" />
-        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="documentation" Type="Microsoft.CodeAnalysis.DocumentationProvider">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="filePath" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="peStream">Assembly image.</param>
@@ -517,7 +580,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.MetadataReference.Display" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Display As String" />
       <MemberSignature Language="F#" Value="member this.Display : string" Usage="Microsoft.CodeAnalysis.MetadataReference.Display" />
-      <MemberSignature Language="C#" Value="public virtual string? Display { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public virtual string? Display { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -543,7 +606,14 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -587,6 +657,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.MetadataReferenceProperties</ReturnType>
@@ -629,6 +700,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.MetadataReference</ReturnType>
@@ -678,12 +750,20 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.MetadataReference</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="aliases" Type="System.Collections.Immutable.ImmutableArray&lt;System.String&gt;" />
+        <Parameter Name="aliases" Type="System.Collections.Immutable.ImmutableArray&lt;System.String&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
       </Parameters>
       <Docs>
         <param name="aliases">The new aliases for the reference.</param>
@@ -727,6 +807,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.MetadataReference</ReturnType>
@@ -776,6 +857,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.MetadataReference</ReturnType>

@@ -1,0 +1,87 @@
+<Type Name="HostOutputProductionContext" FullName="Microsoft.CodeAnalysis.HostOutputProductionContext">
+  <TypeSignature Language="C#" Value="public readonly struct HostOutputProductionContext" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit HostOutputProductionContext extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.HostOutputProductionContext" />
+  <TypeSignature Language="VB.NET" Value="Public Structure HostOutputProductionContext" />
+  <TypeSignature Language="F#" Value="type HostOutputProductionContext = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.Experimental("RSEXPERIMENTAL004", UrlFormat="https://github.com/dotnet/roslyn/issues/74753")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.Experimental("RSEXPERIMENTAL004", UrlFormat="https://github.com/dotnet/roslyn/issues/74753")&gt;]</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Context passed to an incremental generator when it has registered an output via <see cref="M:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.RegisterHostOutput``1(Microsoft.CodeAnalysis.IncrementalValuesProvider{``0},System.Action{Microsoft.CodeAnalysis.HostOutputProductionContext,``0})" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddOutput">
+      <MemberSignature Language="C#" Value="public void AddOutput (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddOutput(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.HostOutputProductionContext.AddOutput(System.String,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddOutput (name As String, value As Object)" />
+      <MemberSignature Language="F#" Value="member this.AddOutput : string * obj -&gt; unit" Usage="hostOutputProductionContext.AddOutput (name, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the output to be added.</param>
+        <param name="value">The output to be added.</param>
+        <summary>
+            Adds a host specific output
+            </summary>
+        <remarks>
+            A host output has no defined use. It does not contribute to the final compilation in any way. Any outputs registered 
+            here are made available via the <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.HostOutputs" /> collection, and it is up the host to
+            decide how to use them. A host may also disable these outputs altogether if they are not needed. The generator driver
+            otherwise makes no guarantees about how the outputs are used, other than that they will be present if the host has
+            requested they be produced.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.HostOutputProductionContext.CancellationToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CancellationToken As CancellationToken" />
+      <MemberSignature Language="F#" Value="member this.CancellationToken : System.Threading.CancellationToken" Usage="Microsoft.CodeAnalysis.HostOutputProductionContext.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A <see cref="T:System.Threading.CancellationToken" /> that can be checked to see if producing the output should be cancelled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

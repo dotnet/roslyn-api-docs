@@ -30,11 +30,18 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>To be added.</summary>
     <remarks>To be added.</remarks>
@@ -71,6 +78,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt;</ReturnType>
@@ -97,7 +105,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindCallersAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Document},System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindCallersAsync (symbol As ISymbol, solution As Solution, documents As IImmutableSet(Of Document), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of SymbolCallerInfo))" />
       <MemberSignature Language="F#" Value="static member FindCallersAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindCallersAsync (symbol, solution, documents, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;? documents, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt; FindCallersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;? documents, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -123,6 +131,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.SymbolCallerInfo&gt;&gt;</ReturnType>
@@ -130,7 +139,14 @@
       <Parameters>
         <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
         <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
-        <Parameter Name="documents" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;" />
+        <Parameter Name="documents" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -176,6 +192,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -229,6 +246,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -260,8 +278,8 @@
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedClassesAsync (type As INamedTypeSymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of INamedTypeSymbol))" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0" />
       <MemberSignature Language="F#" Value="static member FindDerivedClassesAsync : Microsoft.CodeAnalysis.INamedTypeSymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedClassesAsync (type, solution, projects, cancellationToken)" />
       <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; projects, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedClassesAsync (type As INamedTypeSymbol, solution As Solution, projects As IImmutableSet(Of Project), cancellationToken As CancellationToken) As Task(Of IEnumerable(Of INamedTypeSymbol))" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedClassesAsync (type As INamedTypeSymbol, solution As Solution, projects As IImmutableSet(Of Project), cancellationToken As CancellationToken) As Task(Of IEnumerable(Of INamedTypeSymbol))" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects, System.Threading.CancellationToken cancellationToken);" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -287,9 +305,10 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
+        <Attribute FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -300,7 +319,14 @@
       <Parameters>
         <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" />
         <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
-        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -322,7 +348,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedClassesAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Boolean,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedClassesAsync (type As INamedTypeSymbol, solution As Solution, Optional transitive As Boolean = true, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of INamedTypeSymbol))" />
       <MemberSignature Language="F#" Value="static member FindDerivedClassesAsync : Microsoft.CodeAnalysis.INamedTypeSymbol * Microsoft.CodeAnalysis.Solution * bool * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedClassesAsync (type, solution, transitive, projects, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedClassesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -341,16 +367,24 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="transitive" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="transitive" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
       </Parameters>
       <Docs>
         <param name="type">The symbol to find derived types of.</param>
@@ -372,7 +406,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedInterfacesAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Boolean,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindDerivedInterfacesAsync (type As INamedTypeSymbol, solution As Solution, Optional transitive As Boolean = true, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of INamedTypeSymbol))" />
       <MemberSignature Language="F#" Value="static member FindDerivedInterfacesAsync : Microsoft.CodeAnalysis.INamedTypeSymbol * Microsoft.CodeAnalysis.Solution * bool * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindDerivedInterfacesAsync (type, solution, transitive, projects, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedInterfacesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindDerivedInterfacesAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -391,23 +425,31 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="transitive" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="transitive" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken">To be added.</param>
         <param name="type">The symbol to find derived types of.</param>
         <param name="solution">The solution to search in.</param>
         <param name="transitive">If the search should stop at immediately derived interfaces, or should continue past that.</param>
         <param name="projects">The projects to search. Can be null to search the entire solution.</param>
+        <param name="cancellationToken">To be added.</param>
         <summary>
             Finds the derived interfaces of the given interfaces.
             </summary>
@@ -421,7 +463,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindImplementationsAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindImplementationsAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync (symbol, solution, projects, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementationsAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementationsAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -447,6 +489,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -454,7 +497,14 @@
       <Parameters>
         <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
         <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
-        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -475,7 +525,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync(Microsoft.CodeAnalysis.INamedTypeSymbol,Microsoft.CodeAnalysis.Solution,System.Boolean,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindImplementationsAsync (type As INamedTypeSymbol, solution As Solution, Optional transitive As Boolean = true, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of INamedTypeSymbol))" />
       <MemberSignature Language="F#" Value="static member FindImplementationsAsync : Microsoft.CodeAnalysis.INamedTypeSymbol * Microsoft.CodeAnalysis.Solution * bool * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementationsAsync (type, solution, transitive, projects, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindImplementationsAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt; FindImplementationsAsync (Microsoft.CodeAnalysis.INamedTypeSymbol type, Microsoft.CodeAnalysis.Solution solution, bool transitive = true, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -494,23 +544,31 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.INamedTypeSymbol&gt;&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="transitive" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="type" Type="Microsoft.CodeAnalysis.INamedTypeSymbol" Index="0" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" Index="1" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="transitive" Type="System.Boolean" Index="2" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" Index="3" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="4" FrameworkAlternate="roslyn-dotnet;roslyn-dotnet-3.10.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-3.11.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
       </Parameters>
       <Docs>
-        <param name="cancellationToken">To be added.</param>
         <param name="type">The symbol to find derived types of.</param>
         <param name="solution">The solution to search in.</param>
         <param name="transitive">If the search should stop at immediately derived interfaces, or should continue past that.</param>
         <param name="projects">The projects to search. Can be null to search the entire solution.</param>
+        <param name="cancellationToken">To be added.</param>
         <summary>
             Finds the accessible <see langword="class" /> or <see langword="struct" /> types that implement the given
             interface.
@@ -525,7 +583,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementedInterfaceMembersAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindImplementedInterfaceMembersAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindImplementedInterfaceMembersAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindImplementedInterfaceMembersAsync (symbol, solution, projects, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementedInterfaceMembersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindImplementedInterfaceMembersAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -551,6 +609,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -558,7 +617,14 @@
       <Parameters>
         <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
         <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
-        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -579,7 +645,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindOverridesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Project},System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindOverridesAsync (symbol As ISymbol, solution As Solution, Optional projects As IImmutableSet(Of Project) = Nothing, Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ISymbol))" />
       <MemberSignature Language="F#" Value="static member FindOverridesAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindOverridesAsync (symbol, solution, projects, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindOverridesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt; FindOverridesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;? projects = default, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -605,6 +671,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -612,7 +679,14 @@
       <Parameters>
         <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
         <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
-        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;" />
+        <Parameter Name="projects" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Project&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -658,6 +732,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;</ReturnType>
@@ -684,7 +759,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Document},System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindReferencesAsync (symbol As ISymbol, solution As Solution, documents As IImmutableSet(Of Document), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ReferencedSymbol))" />
       <MemberSignature Language="F#" Value="static member FindReferencesAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync (symbol, solution, documents, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;? documents, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;? documents, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -710,6 +785,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;</ReturnType>
@@ -717,7 +793,14 @@
       <Parameters>
         <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
         <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
-        <Parameter Name="documents" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;" />
+        <Parameter Name="documents" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -738,7 +821,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress,System.Collections.Immutable.IImmutableSet{Microsoft.CodeAnalysis.Document},System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindReferencesAsync (symbol As ISymbol, solution As Solution, progress As IFindReferencesProgress, documents As IImmutableSet(Of Document), Optional cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of ReferencedSymbol))" />
       <MemberSignature Language="F#" Value="static member FindReferencesAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress * System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;seq&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindReferencesAsync (symbol, solution, progress, documents, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress? progress, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;? documents, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt; FindReferencesAsync (Microsoft.CodeAnalysis.ISymbol symbol, Microsoft.CodeAnalysis.Solution solution, Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress? progress, System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;? documents, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -764,6 +847,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.FindSymbols.ReferencedSymbol&gt;&gt;</ReturnType>
@@ -771,8 +855,22 @@
       <Parameters>
         <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
         <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
-        <Parameter Name="progress" Type="Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress" />
-        <Parameter Name="documents" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;" />
+        <Parameter Name="progress" Type="Microsoft.CodeAnalysis.FindSymbols.IFindReferencesProgress">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="documents" Type="System.Collections.Immutable.IImmutableSet&lt;Microsoft.CodeAnalysis.Document&gt;">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
       <Docs>
@@ -820,6 +918,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;TSymbol&gt;</ReturnType>
@@ -829,6 +928,12 @@
           <Constraints>
             <InterfaceName>Microsoft.CodeAnalysis.ISymbol</InterfaceName>
           </Constraints>
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
         </TypeParameter>
       </TypeParameters>
       <Parameters>
@@ -885,6 +990,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -936,6 +1042,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -987,6 +1094,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1040,6 +1148,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1093,6 +1202,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1146,6 +1256,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1199,6 +1310,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1254,6 +1366,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1309,6 +1422,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1364,6 +1478,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1419,6 +1534,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1476,6 +1592,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.ISymbol&gt;&gt;</ReturnType>
@@ -1508,7 +1625,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDefinitionAsync(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindSourceDefinitionAsync (symbol As ISymbol, solution As Solution, Optional cancellationToken As CancellationToken = Nothing) As Task(Of ISymbol)" />
       <MemberSignature Language="F#" Value="static member FindSourceDefinitionAsync : Microsoft.CodeAnalysis.ISymbol * Microsoft.CodeAnalysis.Solution * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;" Usage="Microsoft.CodeAnalysis.FindSymbols.SymbolFinder.FindSourceDefinitionAsync (symbol, solution, cancellationToken)" />
-      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol?&gt; FindSourceDefinitionAsync (Microsoft.CodeAnalysis.ISymbol? symbol, Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol?&gt; FindSourceDefinitionAsync (Microsoft.CodeAnalysis.ISymbol? symbol, Microsoft.CodeAnalysis.Solution solution, System.Threading.CancellationToken cancellationToken = default);" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -1534,12 +1651,20 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol" />
+        <Parameter Name="symbol" Type="Microsoft.CodeAnalysis.ISymbol">
+          <Attributes>
+            <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="solution" Type="Microsoft.CodeAnalysis.Solution" />
         <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
       </Parameters>
@@ -1586,6 +1711,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1645,6 +1771,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
@@ -1694,6 +1821,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.ISymbol&gt;</ReturnType>
