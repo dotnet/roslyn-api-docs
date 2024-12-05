@@ -5,7 +5,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IDynamicInvocationOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface IDynamicInvocationOperation&#xA;Implements IOperation" />
   <TypeSignature Language="F#" Value="type IDynamicInvocationOperation = interface&#xA;    interface IOperation" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IDynamicInvocationOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IDynamicInvocationOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -31,6 +31,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -42,16 +43,16 @@
             Represents a invocation that is dynamically bound.
             <para>
             Current usage:
-             (1) C# dynamic invocation expression.
-             (2) C# dynamic collection element initializer.
-                 For example, in the following collection initializer: <code>new C() { do1, do2, do3 }</code> where
-                 the doX objects are of type dynamic, we'll have 3 <see cref="T:Microsoft.CodeAnalysis.Operations.IDynamicInvocationOperation" /> with do1, do2, and
-                 do3 as their arguments.
-             (3) VB late bound invocation expression.
-             (4) VB dynamic collection element initializer.
-                 Similar to the C# example, <code>New C() From {do1, do2, do3}</code> will generate 3 <see cref="T:Microsoft.CodeAnalysis.Operations.IDynamicInvocationOperation" />
-                 nodes with do1, do2, and do3 as their arguments, respectively.
-            </para></summary>
+            <list type="number"><item><description>C# dynamic invocation expression</description></item><item><description>
+                  C# dynamic collection element initializer.
+                  For example, in the following collection initializer: <c>new C() { do1, do2, do3 }</c> where
+                  the doX objects are of type dynamic, we'll have 3 <see cref="T:Microsoft.CodeAnalysis.Operations.IDynamicInvocationOperation" /> with do1, do2, and
+                  do3 as their arguments
+                </description></item><item><description>VB late bound invocation expression</description></item><item><description>
+                  VB dynamic collection element initializer.
+                  Similar to the C# example, <c>New C() From {do1, do2, do3}</c> will generate 3 <see cref="T:Microsoft.CodeAnalysis.Operations.IDynamicInvocationOperation" />
+                  nodes with do1, do2, and do3 as their arguments, respectively
+                </description></item></list></para></summary>
     <remarks>
       <para>This node is associated with the following operation kinds:</para>
       <list type="bullet">
@@ -98,6 +99,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>
@@ -142,6 +144,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>

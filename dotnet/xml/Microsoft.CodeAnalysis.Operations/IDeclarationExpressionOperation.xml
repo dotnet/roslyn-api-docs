@@ -5,7 +5,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IDeclarationExpressionOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface IDeclarationExpressionOperation&#xA;Implements IOperation" />
   <TypeSignature Language="F#" Value="type IDeclarationExpressionOperation = interface&#xA;    interface IOperation" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IDeclarationExpressionOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IDeclarationExpressionOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -31,6 +31,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -42,11 +43,9 @@
             Represents a declaration expression operation. Unlike a regular variable declaration <see cref="T:Microsoft.CodeAnalysis.Operations.IVariableDeclaratorOperation" /> and <see cref="T:Microsoft.CodeAnalysis.Operations.IVariableDeclarationOperation" />, this operation represents an "expression" declaring a variable.
             <para>
             Current usage:
-             (1) C# declaration expression. For example,
-             (a) "var (x, y)" is a deconstruction declaration expression with variables x and y.
-             (b) "(var x, var y)" is a tuple expression with two declaration expressions.
-             (c) "M(out var x);" is an invocation expression with an out "var x" declaration expression.
-            </para></summary>
+            <list type="number"><item><description>
+                  C# deconstruction assignment expression. For example:
+                  <list type="bullet"><item><description><c>var (x, y)</c> is a deconstruction declaration expression with variables <c>x</c> and <c>y</c></description></item><item><description><c>(var x, var y)</c> is a tuple expression with two declaration expressions</description></item><item><description><c>M(out var x);</c> is an invocation expression with an out <c>var x</c> declaration expression</description></item></list></description></item></list></para></summary>
     <remarks>
       <para>This node is associated with the following operation kinds:</para>
       <list type="bullet">
@@ -93,6 +92,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IOperation</ReturnType>

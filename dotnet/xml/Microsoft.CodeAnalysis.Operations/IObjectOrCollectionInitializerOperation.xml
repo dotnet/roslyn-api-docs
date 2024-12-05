@@ -5,7 +5,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.IObjectOrCollectionInitializerOperation" />
   <TypeSignature Language="VB.NET" Value="Public Interface IObjectOrCollectionInitializerOperation&#xA;Implements IOperation" />
   <TypeSignature Language="F#" Value="type IObjectOrCollectionInitializerOperation = interface&#xA;    interface IOperation" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IObjectOrCollectionInitializerOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IObjectOrCollectionInitializerOperation implements class Microsoft.CodeAnalysis.IOperation" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -31,6 +31,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -42,11 +43,10 @@
             Represents an initialization for an object or collection creation.
             <para>
             Current usage:
-             (1) C# object or collection initializer expression.
-             (2) VB object or collection initializer expression.
-            For example, object initializer "{ X = x }" within object creation "new Class() { X = x }" and
-            collection initializer "{ x, y, 3 }" within collection creation "new MyList() { x, y, 3 }".
-            </para></summary>
+            <list type="number"><item><description>
+                  C# object or collection initializer expression.
+                  For example, object initializer <c>{ X = x }</c> within object creation <c>new Class() { X = x }</c> and
+                  collection initializer <c>{ x, y, 3 }</c> within collection creation <c>new MyList() { x, y, 3 }</c></description></item><item><description>VB object or collection initializer expression</description></item></list></para></summary>
     <remarks>
       <para>This node is associated with the following operation kinds:</para>
       <list type="bullet">
@@ -93,6 +93,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IOperation&gt;</ReturnType>

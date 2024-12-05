@@ -30,6 +30,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Composition.ExportAttribute</BaseTypeName>
@@ -46,10 +47,14 @@
     </Attribute>
   </Attributes>
   <Docs>
+    <param name="serviceType">The type that will be used to retrieve the service from a <see cref="T:Microsoft.CodeAnalysis.Host.HostWorkspaceServices" />.</param>
+    <param name="layer">The layer or workspace kind that the service is specified for; <see cref="F:Microsoft.CodeAnalysis.Host.Mef.ServiceLayer.Default" />, <see cref="F:Microsoft.CodeAnalysis.WorkspaceKind.MiscellaneousFiles" />etc.</param>
     <summary>
             Use this attribute to declare a <see cref="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" /> implementation for inclusion in a MEF-based workspace.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            Declares a <see cref="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" /> implementation for inclusion in a MEF-based workspace.
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -83,6 +88,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="serviceType" Type="System.Type" />
@@ -92,9 +98,11 @@
         <param name="serviceType">The type that will be used to retrieve the service from a <see cref="T:Microsoft.CodeAnalysis.Host.HostWorkspaceServices" />.</param>
         <param name="layer">The layer or workspace kind that the service is specified for; <see cref="F:Microsoft.CodeAnalysis.Host.Mef.ServiceLayer.Default" />, <see cref="F:Microsoft.CodeAnalysis.WorkspaceKind.MiscellaneousFiles" />etc.</param>
         <summary>
-            Declares a <see cref="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" /> implementation for inclusion in a MEF-based workspace.
+            Use this attribute to declare a <see cref="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" /> implementation for inclusion in a MEF-based workspace.
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+            Declares a <see cref="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" /> implementation for inclusion in a MEF-based workspace.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="Layer">
@@ -129,13 +137,14 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The layer that the service is specified for; ServiceLayer.Default, etc.
+            The layer that the service is specified for. Specify a value from <see cref="T:Microsoft.CodeAnalysis.Host.Mef.ServiceLayer" />.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -173,6 +182,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
