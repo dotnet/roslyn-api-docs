@@ -1,10 +1,14 @@
 <Type Name="HostWorkspaceServices" FullName="Microsoft.CodeAnalysis.Host.HostWorkspaceServices">
   <TypeSignature Language="C++ CLI" Value="public ref class HostWorkspaceServices abstract" />
-  <TypeSignature Language="C#" Value="public abstract class HostWorkspaceServices" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HostWorkspaceServices extends System.Object" />
+  <TypeSignature Language="C#" Value="public abstract class HostWorkspaceServices" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HostWorkspaceServices extends System.Object" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Host.HostWorkspaceServices" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class HostWorkspaceServices" />
-  <TypeSignature Language="F#" Value="type HostWorkspaceServices = class" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class HostWorkspaceServices" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="F#" Value="type HostWorkspaceServices = class" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="C#" Value="public abstract class HostWorkspaceServices : IDisposable" FrameworkAlternate="roslyn-dotnet-4.12.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HostWorkspaceServices extends System.Object implements class System.IDisposable" FrameworkAlternate="roslyn-dotnet-4.12.0" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class HostWorkspaceServices&#xA;Implements IDisposable" FrameworkAlternate="roslyn-dotnet-4.12.0" />
+  <TypeSignature Language="F#" Value="type HostWorkspaceServices = class&#xA;    interface IDisposable" FrameworkAlternate="roslyn-dotnet-4.12.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -30,16 +34,57 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="roslyn-dotnet-4.12.0">
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
-            Per workspace services provided by the host environment.
-            </summary>
-    <remarks>To be added.</remarks>
+             Per workspace services provided by the host environment.
+             </summary>
+    <remarks>
+      <para>Workspace services which implement <see cref="T:System.IDisposable" /> are considered ownable, in which case the
+             owner is responsible for disposing of owned instances when they are no longer in use. When
+             <see cref="T:Microsoft.CodeAnalysis.Host.IWorkspaceService" /> or <see cref="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" /> instances are provided directly to the
+             <see cref="T:Microsoft.CodeAnalysis.Host.HostWorkspaceServices" />, the owner of the instances is the type or container (e.g. a MEF export
+             provider) which created the instances. For the specific case of ownable workspace services created by a factory
+             (i.e. instances returned by <see cref="M:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory.CreateService(Microsoft.CodeAnalysis.Host.HostWorkspaceServices)" />), the <see cref="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.Workspace" />
+             is considered the owner of the resulting instance and is expected to be disposed during the call to
+             <see cref="M:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.Dispose" />.</para>
+      <para>
+        <strong>Summary of lifetime rules</strong>
+      </para>
+      <list type="bullet">
+        <item>
+          <description>
+            <strong>
+              <see cref="T:Microsoft.CodeAnalysis.Host.IWorkspaceService" /> instance constructed externally (e.g. MEF):</strong> Owned by the
+               external source, and will not be automatically disposed when <see cref="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.Workspace" /> is disposed.
+             </description>
+        </item>
+        <item>
+          <description>
+            <strong>
+              <see cref="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" /> instance constructed externally (e.g. MEF):</strong> Owned by
+               the external source, and will not be automatically disposed when <see cref="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.Workspace" /> is disposed.
+             </description>
+        </item>
+        <item>
+          <description>
+            <strong>
+              <see cref="T:Microsoft.CodeAnalysis.Host.IWorkspaceService" /> instance constructed by <see cref="T:Microsoft.CodeAnalysis.Host.Mef.IWorkspaceServiceFactory" /> within
+               the context of <see cref="T:Microsoft.CodeAnalysis.Host.HostWorkspaceServices" />:</strong> Owned by <see cref="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.Workspace" />, and
+               <strong>will</strong> be automatically disposed when <see cref="P:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.Workspace" /> is disposed.
+             </description>
+        </item>
+      </list>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -73,7 +118,31 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="hostWorkspaceServices.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
@@ -112,6 +181,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;TLanguageService&gt;</ReturnType>
@@ -164,6 +234,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Host.HostLanguageServices</ReturnType>
@@ -213,6 +284,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TWorkspaceService</ReturnType>
@@ -243,7 +315,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.Host.HostWorkspaceServices.GetService``1" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetService(Of TWorkspaceService As IWorkspaceService) () As TWorkspaceService" />
       <MemberSignature Language="F#" Value="abstract member GetService : unit -&gt; 'WorkspaceService (requires 'WorkspaceService :&gt; Microsoft.CodeAnalysis.Host.IWorkspaceService)" Usage="hostWorkspaceServices.GetService " />
-      <MemberSignature Language="C#" Value="public abstract TWorkspaceService? GetService&lt;TWorkspaceService&gt; () where TWorkspaceService : Microsoft.CodeAnalysis.Host.IWorkspaceService;" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public abstract TWorkspaceService? GetService&lt;TWorkspaceService&gt; () where TWorkspaceService : Microsoft.CodeAnalysis.Host.IWorkspaceService;" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
@@ -269,6 +341,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TWorkspaceService</ReturnType>
@@ -323,6 +396,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Host.HostServices</ReturnType>
@@ -367,6 +441,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -415,9 +490,10 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
           <AttributeName Language="C#">[System.Obsolete("Roslyn no longer exports a mechanism to perform persistence.", true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Roslyn no longer exports a mechanism to perform persistence.", true)&gt;]</AttributeName>
         </Attribute>
@@ -466,6 +542,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
@@ -510,9 +587,10 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
           <AttributeName Language="C#">[System.Obsolete("Roslyn no longer exports a mechanism to store arbitrary data in-memory.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Roslyn no longer exports a mechanism to store arbitrary data in-memory.")&gt;]</AttributeName>
         </Attribute>
@@ -561,6 +639,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Workspace</ReturnType>

@@ -30,6 +30,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -41,25 +42,25 @@
             particular tree <em>in order</em>.  Changes are given a <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> they will apply to in the
             original tree the editor is created for.  The semantics of application are as follows:
             
-            <list type="number"><item><description>
+            <list type="number"><item>
             The original root provided is used as the 'current' root for all operations.  This 'current' root will
             continually be updated, becoming the new 'current' root.  The original root is never changed.
-            </description></item><item><description>
+            </item><item>
             Each change has its given <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> tracked, using a <see cref="T:Microsoft.CodeAnalysis.SyntaxAnnotation" />, producing a
             'current' root that tracks all of them.  This allows that same node to be found after prior changes are applied
             which mutate the tree.
-            </description></item><item><description>
+            </item><item>
             Each change is then applied in order it was added to the editor.
-            </description></item><item><description>
+            </item><item>
             A change first attempts to find its <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> in the 'current' root.  If that node cannot be
             found, the operation will fail with an <see cref="T:System.ArgumentException" />.
-            </description></item><item><description>
+            </item><item>
             The particular change will run on that node, removing, replacing, or inserting around it according to the
             change.  If the change is passed a delegate as its 'compute' argument, it will be given the <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> found in the current root.  The 'current' root will then be updated by replacing the current
             node with the new computed node.
-            </description></item><item><description>
+            </item><item>
             The 'current' root is then returned.
-            </description></item></list></summary>
+            </item></list></summary>
     <remarks>
             The above editing strategy makes it an error for a client of the editor to add a change that updates a parent
             node and then adds a change that updates a child node (unless the parent change is certain to contain the
@@ -89,10 +90,11 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode" Index="0" FrameworkAlternate="roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="services" Type="Microsoft.CodeAnalysis.Host.HostWorkspaceServices" Index="1" FrameworkAlternate="roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode" Index="0" FrameworkAlternate="roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="services" Type="Microsoft.CodeAnalysis.Host.HostWorkspaceServices" Index="1" FrameworkAlternate="roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
       </Parameters>
       <Docs>
         <param name="root">To be added.</param>
@@ -118,10 +120,11 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode" Index="0" FrameworkAlternate="roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
-        <Parameter Name="services" Type="Microsoft.CodeAnalysis.Host.SolutionServices" Index="1" FrameworkAlternate="roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="root" Type="Microsoft.CodeAnalysis.SyntaxNode" Index="0" FrameworkAlternate="roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="services" Type="Microsoft.CodeAnalysis.Host.SolutionServices" Index="1" FrameworkAlternate="roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
       </Parameters>
       <Docs>
         <param name="root">To be added.</param>
@@ -164,9 +167,10 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0">
           <AttributeName Language="C#">[System.Obsolete("Use SyntaxEditor(SyntaxNode, HostWorkspaceServices)")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Use SyntaxEditor(SyntaxNode, HostWorkspaceServices)")&gt;]</AttributeName>
         </Attribute>
@@ -216,6 +220,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.Editing.SyntaxGenerator</ReturnType>
@@ -260,6 +265,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -305,6 +311,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -354,6 +361,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -403,6 +411,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -452,6 +461,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -501,6 +511,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxNode</ReturnType>
@@ -545,6 +556,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -592,6 +604,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -641,6 +654,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -690,6 +704,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -740,6 +755,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

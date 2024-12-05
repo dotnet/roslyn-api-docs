@@ -1,0 +1,192 @@
+<Type Name="SyntaxTokenParser" FullName="Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser">
+  <TypeSignature Language="C#" Value="public sealed class SyntaxTokenParser : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SyntaxTokenParser extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SyntaxTokenParser&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type SyntaxTokenParser = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A token parser that can be used to parse tokens continuously from a source. This parser parses continuously; every call to
+            <see cref="M:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.ParseNextToken" /> will return the next token in the source text, starting from position 0. <see cref="M:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.SkipForwardTo(System.Int32)" />
+            can be used to skip forward in the file to a specific position, and <see cref="M:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.ResetTo(Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result)" /> can be used to reset the parser
+            to a previously-lexed position.
+            </summary>
+    <remarks>
+            This type is safe to double dispose, but it is not safe to use after it has been disposed. Behavior in such scenarios
+            is undefined.
+            <para />
+            This type is not thread safe.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="syntaxTokenParser.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseLeadingTrivia">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result ParseLeadingTrivia ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser/Result ParseLeadingTrivia() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.ParseLeadingTrivia" />
+      <MemberSignature Language="VB.NET" Value="Public Function ParseLeadingTrivia () As SyntaxTokenParser.Result" />
+      <MemberSignature Language="F#" Value="member this.ParseLeadingTrivia : unit -&gt; Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result" Usage="syntaxTokenParser.ParseLeadingTrivia " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser+Result</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Parse the leading trivia of the next token from the input at the current position. This will advance the internal position of the
+            token parser to the end of the leading trivia of the next token. The returned result will have a token with <see cref="M:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind(Microsoft.CodeAnalysis.SyntaxToken)" />
+            of <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.None" />, <see cref="P:Microsoft.CodeAnalysis.SyntaxToken.IsMissing" /> set to <see langword="true" />, and a parent of <see langword="null" />. The
+            parsed trivia will be set as the <see cref="P:Microsoft.CodeAnalysis.SyntaxToken.LeadingTrivia" /> of the token.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseNextToken">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result ParseNextToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser/Result ParseNextToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.ParseNextToken" />
+      <MemberSignature Language="VB.NET" Value="Public Function ParseNextToken () As SyntaxTokenParser.Result" />
+      <MemberSignature Language="F#" Value="member this.ParseNextToken : unit -&gt; Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result" Usage="syntaxTokenParser.ParseNextToken " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser+Result</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Parse the next token from the input at the current position. This will advance the internal position of the token parser to the
+            end of the returned token, including any trailing trivia.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            The returned token will have a parent of <see langword="null" />.
+            <para />
+            Since this API does not create a <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> that owns all produced tokens,
+            the <see cref="M:Microsoft.CodeAnalysis.SyntaxToken.GetLocation" /> API may yield surprising results for
+            the produced tokens and its behavior is generally unspecified.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseTrailingTrivia">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result ParseTrailingTrivia ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser/Result ParseTrailingTrivia() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.ParseTrailingTrivia" />
+      <MemberSignature Language="VB.NET" Value="Public Function ParseTrailingTrivia () As SyntaxTokenParser.Result" />
+      <MemberSignature Language="F#" Value="member this.ParseTrailingTrivia : unit -&gt; Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result" Usage="syntaxTokenParser.ParseTrailingTrivia " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser+Result</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Parse syntax trivia from the current position, according to the rules of trailing syntax trivia. This will advance the internal position of the
+            token parser to the end of the trailing trivia from the current location. The returned result will have a token with <see cref="M:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind(Microsoft.CodeAnalysis.SyntaxToken)" />
+            of <see cref="F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.None" />, <see cref="P:Microsoft.CodeAnalysis.SyntaxToken.IsMissing" /> set to <see langword="true" />, and a parent of <see langword="null" />. The
+            parsed trivia will be set as the <see cref="P:Microsoft.CodeAnalysis.SyntaxToken.TrailingTrivia" /> of the token.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetTo">
+      <MemberSignature Language="C#" Value="public void ResetTo (Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetTo(valuetype Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser/Result result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.ResetTo(Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ResetTo (result As SyntaxTokenParser.Result)" />
+      <MemberSignature Language="F#" Value="member this.ResetTo : Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.Result -&gt; unit" Usage="syntaxTokenParser.ResetTo result" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser+Result" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>
+            Resets the token parser to an earlier position in the input. The parser is reset to the start of the token that was previously
+            parsed, before any leading trivia, with the directive state that existed at the start of the token.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipForwardTo">
+      <MemberSignature Language="C#" Value="public void SkipForwardTo (int position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SkipForwardTo(int32 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser.SkipForwardTo(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SkipForwardTo (position As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SkipForwardTo : int -&gt; unit" Usage="syntaxTokenParser.SkipForwardTo position" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.CSharp</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="position">The absolute location in the original text to move to.</param>
+        <summary>
+            Skip forward in the input to the specified position. Current directive state is preserved during the skip.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">If the given position is less than the current position of the lexer.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

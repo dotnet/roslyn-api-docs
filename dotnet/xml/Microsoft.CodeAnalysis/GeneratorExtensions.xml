@@ -16,6 +16,7 @@
     <AssemblyVersion>4.7.0.0</AssemblyVersion>
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.12.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -26,6 +27,31 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="AsIncrementalGenerator">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.IIncrementalGenerator AsIncrementalGenerator (this Microsoft.CodeAnalysis.ISourceGenerator sourceGenerator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.IIncrementalGenerator AsIncrementalGenerator(class Microsoft.CodeAnalysis.ISourceGenerator sourceGenerator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.GeneratorExtensions.AsIncrementalGenerator(Microsoft.CodeAnalysis.ISourceGenerator)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function AsIncrementalGenerator (sourceGenerator As ISourceGenerator) As IIncrementalGenerator" />
+      <MemberSignature Language="F#" Value="static member AsIncrementalGenerator : Microsoft.CodeAnalysis.ISourceGenerator -&gt; Microsoft.CodeAnalysis.IIncrementalGenerator" Usage="Microsoft.CodeAnalysis.GeneratorExtensions.AsIncrementalGenerator sourceGenerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IIncrementalGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceGenerator" Type="Microsoft.CodeAnalysis.ISourceGenerator" Index="0" FrameworkAlternate="roslyn-dotnet-4.12.0" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="sourceGenerator">The source generator to convert</param>
+        <summary>
+            Converts an <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> into an <see cref="T:Microsoft.CodeAnalysis.IIncrementalGenerator" /></summary>
+        <returns>An incremental generator</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AsSourceGenerator">
       <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.ISourceGenerator AsSourceGenerator (this Microsoft.CodeAnalysis.IIncrementalGenerator incrementalGenerator);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.ISourceGenerator AsSourceGenerator(class Microsoft.CodeAnalysis.IIncrementalGenerator incrementalGenerator) cil managed" />
@@ -45,6 +71,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ISourceGenerator</ReturnType>
@@ -53,10 +80,36 @@
         <Parameter Name="incrementalGenerator" Type="Microsoft.CodeAnalysis.IIncrementalGenerator" RefType="this" />
       </Parameters>
       <Docs>
-        <param name="incrementalGenerator">The incremental generator to wrap</param>
+        <param name="incrementalGenerator">The incremental generator to convert</param>
         <summary>
             Converts an <see cref="T:Microsoft.CodeAnalysis.IIncrementalGenerator" /> into an <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> object that can be used when constructing a <see cref="T:Microsoft.CodeAnalysis.GeneratorDriver" /></summary>
-        <returns>A wrapped generator that can be passed to a generator driver</returns>
+        <returns>An <see cref="T:Microsoft.CodeAnalysis.ISourceGenerator" /> that can be passed to a generator driver</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGeneratorType">
+      <MemberSignature Language="C#" Value="public static Type GetGeneratorType (this Microsoft.CodeAnalysis.IIncrementalGenerator generator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetGeneratorType(class Microsoft.CodeAnalysis.IIncrementalGenerator generator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.GeneratorExtensions.GetGeneratorType(Microsoft.CodeAnalysis.IIncrementalGenerator)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetGeneratorType (generator As IIncrementalGenerator) As Type" />
+      <MemberSignature Language="F#" Value="static member GetGeneratorType : Microsoft.CodeAnalysis.IIncrementalGenerator -&gt; Type" Usage="Microsoft.CodeAnalysis.GeneratorExtensions.GetGeneratorType generator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="generator" Type="Microsoft.CodeAnalysis.IIncrementalGenerator" Index="0" FrameworkAlternate="roslyn-dotnet-4.12.0" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="generator">The generator to get the type of</param>
+        <summary>
+            Returns the underlying type of a given generator
+            </summary>
+        <returns>The underlying generator type</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -79,6 +132,7 @@
         <AssemblyVersion>4.7.0.0</AssemblyVersion>
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.12.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
