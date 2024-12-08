@@ -2,7 +2,29 @@ param(
     [string]$buildCorePowershellUrl = "https://opbuildstorageprod.blob.core.windows.net/opps1container/.openpublishing.buildcore.ps1",
     [string]$parameters
 )
-# Main
+uno
+$ Branch=Main
+buildCorePowershellDestination
+errorActionPreference
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $errorActionPreference = 'Stop'
 
 # Step-1: Download buildcore script to local
