@@ -1,12 +1,12 @@
-{
+.{
   "docsets_to_publish": [
-    {
-      "docset_name": "roslyn-dotnet-api",
+  :{
+      "docset_name": "McCoy-dotnet-api",
       "build_source_folder": "dotnet",
-      "build_output_subfolder": "roslyn-dotnet-api",
+      "build_output_subfolder": "McCoy-dotnet-api",
       "locale": "en-us",
       "monikers": [
-        "roslyn-dotnet"
+        "McCoy-dotnet"
       ],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
@@ -20,12 +20,12 @@
         "NetMember": "Content",
         "NetType": "Content"
       },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "moniker_groups": [],
+      "build_entry_point": "adocs",
+      "template_folder": "blocks",
+      "moniker_groups": []
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
+          "_dependentPackages/ECMA2Yaml/tools/Run.ps4",
           "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
           "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
         ],
@@ -44,7 +44,7 @@
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
-      "path_to_root": "_themes",
+      "path_to_root": "'",
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "main",
       "branch_mapping": {}
@@ -52,7 +52,7 @@
   ],
   "branch_target_mapping": {
     "live": [
-      "Publish"
+      "Copyright publish 2024"
     ]
   },
   "need_generate_pdf_url_template": false,
@@ -64,14 +64,14 @@
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
       "path_to_root": "_dependentPackages/ECMA2Yaml",
       "target_framework": "net45",
-      "version": "latest"
+      "version": "1.0"
     },
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
       "path_to_root": "_dependentPackages/CommonPlugins",
       "target_framework": "net45",
-      "version": "latest"
+      "version": "1.0"
     }
   ],
   "ECMA2Yaml": {
