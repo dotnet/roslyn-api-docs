@@ -17,6 +17,7 @@
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
+    <AssemblyVersion>4.13.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -24,7 +25,7 @@
   <Interfaces />
   <Docs>
     <summary>
-            Options passed to a <see cref="T:Microsoft.CodeAnalysis.GeneratorDriver" /> during creation
+            Options passed to a <see cref="T:Microsoft.CodeAnalysis.GeneratorDriver" /> during creation.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -49,6 +50,7 @@
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.13.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="disabledOutputs" Type="Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind" />
@@ -78,15 +80,67 @@
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.13.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="disabledOutputs" Type="Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind" Index="0" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
-        <Parameter Name="trackIncrementalGeneratorSteps" Type="System.Boolean" Index="1" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0" />
+        <Parameter Name="disabledOutputs" Type="Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind" Index="0" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0" />
+        <Parameter Name="trackIncrementalGeneratorSteps" Type="System.Boolean" Index="1" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0" />
       </Parameters>
       <Docs>
         <param name="disabledOutputs">To be added.</param>
         <param name="trackIncrementalGeneratorSteps">To be added.</param>
         <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeneratorDriverOptions (Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind disabledOutputs = Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.None, bool trackIncrementalGeneratorSteps = false, string? baseDirectory = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind disabledOutputs, bool trackIncrementalGeneratorSteps, string baseDirectory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.GeneratorDriverOptions.#ctor(Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind,System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional disabledOutputs As IncrementalGeneratorOutputKind = Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind.None, Optional trackIncrementalGeneratorSteps As Boolean = false, Optional baseDirectory As String = Nothing)" />
+      <MemberSignature Language="F#" Value="new Microsoft.CodeAnalysis.GeneratorDriverOptions : Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind * bool * string -&gt; Microsoft.CodeAnalysis.GeneratorDriverOptions" Usage="new Microsoft.CodeAnalysis.GeneratorDriverOptions (disabledOutputs, trackIncrementalGeneratorSteps, baseDirectory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="disabledOutputs" Type="Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind" Index="0" FrameworkAlternate="roslyn-dotnet-4.13.0" />
+        <Parameter Name="trackIncrementalGeneratorSteps" Type="System.Boolean" Index="1" FrameworkAlternate="roslyn-dotnet-4.13.0" />
+        <Parameter Name="baseDirectory" Type="System.String" Index="2" FrameworkAlternate="roslyn-dotnet-4.13.0" />
+      </Parameters>
+      <Docs>
+        <param name="disabledOutputs" />
+        <param name="trackIncrementalGeneratorSteps" />
+        <param name="baseDirectory">Absolute path to the base directory used for file paths of generated files.</param>
+        <summary>
+            Creates <see cref="T:Microsoft.CodeAnalysis.GeneratorDriverOptions" />.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="baseDirectory" /> is not an absolute path.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseDirectory">
+      <MemberSignature Language="C#" Value="public string? BaseDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.GeneratorDriverOptions.BaseDirectory" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BaseDirectory As String" />
+      <MemberSignature Language="F#" Value="member this.BaseDirectory : string" Usage="Microsoft.CodeAnalysis.GeneratorDriverOptions.BaseDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.13.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Absolute path to directory that generated source file paths are rooted with, or null to use relative paths for the generated files.
+            Usually the project's output directory unless <see cref="P:Microsoft.CodeAnalysis.CommandLineArguments.GeneratedFilesOutputDirectory" /> is specified.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -110,6 +164,7 @@
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.13.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalGeneratorOutputKind</ReturnType>
@@ -138,6 +193,7 @@
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.13.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
