@@ -4,7 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.ISourceGenerator" />
   <TypeSignature Language="VB.NET" Value="Public Interface ISourceGenerator" />
   <TypeSignature Language="F#" Value="type ISourceGenerator = interface" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ISourceGenerator" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ISourceGenerator" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
@@ -24,6 +24,7 @@
     <AssemblyVersion>4.8.0.0</AssemblyVersion>
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
+    <AssemblyVersion>4.13.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
@@ -62,12 +63,19 @@
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.13.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.13.0">
+          <AttributeName Language="C#">[System.Obsolete("ISourceGenerator is deprecated and should not be implemented. Please implement IIncrementalGenerator instead. See https://github.com/dotnet/roslyn/blob/main/docs/features/incremental-generators.md.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("ISourceGenerator is deprecated and should not be implemented. Please implement IIncrementalGenerator instead. See https://github.com/dotnet/roslyn/blob/main/docs/features/incremental-generators.md.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="context" Type="Microsoft.CodeAnalysis.GeneratorExecutionContext" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.GeneratorExecutionContext" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       </Parameters>
       <Docs>
         <param name="context">The <see cref="T:Microsoft.CodeAnalysis.GeneratorExecutionContext" /> to add source to</param>
@@ -145,12 +153,19 @@
         <AssemblyVersion>4.8.0.0</AssemblyVersion>
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
+        <AssemblyVersion>4.13.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="roslyn-dotnet-4.13.0">
+          <AttributeName Language="C#">[System.Obsolete("ISourceGenerator is deprecated and should not be implemented. Please implement IIncrementalGenerator instead. See https://github.com/dotnet/roslyn/blob/main/docs/features/incremental-generators.md.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("ISourceGenerator is deprecated and should not be implemented. Please implement IIncrementalGenerator instead. See https://github.com/dotnet/roslyn/blob/main/docs/features/incremental-generators.md.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="context" Type="Microsoft.CodeAnalysis.GeneratorInitializationContext" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+        <Parameter Name="context" Type="Microsoft.CodeAnalysis.GeneratorInitializationContext" Index="0" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       </Parameters>
       <Docs>
         <param name="context">The <see cref="T:Microsoft.CodeAnalysis.GeneratorInitializationContext" /> to register callbacks on</param>
