@@ -5,7 +5,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.IEventSymbol" />
   <TypeSignature Language="VB.NET" Value="Public Interface IEventSymbol&#xA;Implements IEquatable(Of ISymbol), ISymbol" />
   <TypeSignature Language="F#" Value="type IEventSymbol = interface&#xA;    interface ISymbol&#xA;    interface IEquatable&lt;ISymbol&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IEventSymbol implements class Microsoft.CodeAnalysis.ISymbol, class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IEventSymbol implements class Microsoft.CodeAnalysis.ISymbol, class System.IEquatable`1&lt;class Microsoft.CodeAnalysis.ISymbol&gt;" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.9.0" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
     <AssemblyVersion>2.9.0.0</AssemblyVersion>
@@ -33,6 +33,7 @@
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
     <AssemblyVersion>4.13.0.0</AssemblyVersion>
+    <AssemblyVersion>4.14.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -59,7 +60,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IEventSymbol.AddMethod" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AddMethod As IMethodSymbol" />
       <MemberSignature Language="F#" Value="member this.AddMethod : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.IEventSymbol.AddMethod" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol? AddMethod { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol? AddMethod { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -87,6 +88,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
@@ -133,6 +135,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.IEventSymbol&gt;</ReturnType>
@@ -145,6 +148,28 @@
         <remarks>
             Properties imported from metadata can explicitly implement more than one event.
             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPartialDefinition">
+      <MemberSignature Language="C#" Value="public bool IsPartialDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPartialDefinition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IEventSymbol.IsPartialDefinition" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsPartialDefinition As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPartialDefinition : bool" Usage="Microsoft.CodeAnalysis.IEventSymbol.IsPartialDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns <see langword="true" /> if this is a partial definition part, otherwise <see langword="false" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="IsWindowsRuntimeEvent">
@@ -181,6 +206,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -225,6 +251,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.NullableAnnotation</ReturnType>
@@ -271,6 +298,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IEventSymbol</ReturnType>
@@ -292,7 +320,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IEventSymbol.OverriddenEvent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OverriddenEvent As IEventSymbol" />
       <MemberSignature Language="F#" Value="member this.OverriddenEvent : Microsoft.CodeAnalysis.IEventSymbol" Usage="Microsoft.CodeAnalysis.IEventSymbol.OverriddenEvent" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IEventSymbol? OverriddenEvent { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IEventSymbol? OverriddenEvent { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -320,6 +348,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IEventSymbol</ReturnType>
@@ -332,6 +361,50 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="PartialDefinitionPart">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IEventSymbol? PartialDefinitionPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IEventSymbol PartialDefinitionPart" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IEventSymbol.PartialDefinitionPart" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PartialDefinitionPart As IEventSymbol" />
+      <MemberSignature Language="F#" Value="member this.PartialDefinitionPart : Microsoft.CodeAnalysis.IEventSymbol" Usage="Microsoft.CodeAnalysis.IEventSymbol.PartialDefinitionPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IEventSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this is a partial event implementation part, returns the corresponding definition part, otherwise <see langword="null" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartialImplementationPart">
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IEventSymbol? PartialImplementationPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.CodeAnalysis.IEventSymbol PartialImplementationPart" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IEventSymbol.PartialImplementationPart" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PartialImplementationPart As IEventSymbol" />
+      <MemberSignature Language="F#" Value="member this.PartialImplementationPart : Microsoft.CodeAnalysis.IEventSymbol" Usage="Microsoft.CodeAnalysis.IEventSymbol.PartialImplementationPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.IEventSymbol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this is a partial event definition part, returns the corresponding implementation part, otherwise <see langword="null" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="RaiseMethod">
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::CodeAnalysis::IMethodSymbol ^ RaiseMethod { Microsoft::CodeAnalysis::IMethodSymbol ^ get(); };" />
       <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol RaiseMethod { get; }" FrameworkAlternate="roslyn-dotnet-3.0;roslyn-dotnet-3.1;roslyn-dotnet-3.2;roslyn-dotnet-3.2.1;roslyn-dotnet-3.3.1" />
@@ -339,7 +412,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IEventSymbol.RaiseMethod" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RaiseMethod As IMethodSymbol" />
       <MemberSignature Language="F#" Value="member this.RaiseMethod : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.IEventSymbol.RaiseMethod" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol? RaiseMethod { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol? RaiseMethod { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -367,6 +440,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
@@ -386,7 +460,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IEventSymbol.RemoveMethod" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoveMethod As IMethodSymbol" />
       <MemberSignature Language="F#" Value="member this.RemoveMethod : Microsoft.CodeAnalysis.IMethodSymbol" Usage="Microsoft.CodeAnalysis.IEventSymbol.RemoveMethod" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol? RemoveMethod { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IMethodSymbol? RemoveMethod { get; }" FrameworkAlternate="roslyn-dotnet-3.10.0;roslyn-dotnet-3.11.0;roslyn-dotnet-3.4.0;roslyn-dotnet-3.5.0;roslyn-dotnet-3.6.0;roslyn-dotnet-3.7.0;roslyn-dotnet-3.8.0;roslyn-dotnet-3.9.0;roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -414,6 +488,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IMethodSymbol</ReturnType>
@@ -460,6 +535,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.ITypeSymbol</ReturnType>

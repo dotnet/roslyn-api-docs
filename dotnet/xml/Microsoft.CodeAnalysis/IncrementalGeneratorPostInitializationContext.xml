@@ -18,6 +18,7 @@
     <AssemblyVersion>4.9.0.0</AssemblyVersion>
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
     <AssemblyVersion>4.13.0.0</AssemblyVersion>
+    <AssemblyVersion>4.14.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -29,6 +30,32 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="AddEmbeddedAttributeDefinition">
+      <MemberSignature Language="C#" Value="public void AddEmbeddedAttributeDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddEmbeddedAttributeDefinition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.IncrementalGeneratorPostInitializationContext.AddEmbeddedAttributeDefinition" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddEmbeddedAttributeDefinition ()" />
+      <MemberSignature Language="F#" Value="member this.AddEmbeddedAttributeDefinition : unit -&gt; unit" Usage="incrementalGeneratorPostInitializationContext.AddEmbeddedAttributeDefinition " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Adds a <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" /> to the compilation containing the definition of <c>Microsoft.CodeAnalysis.EmbeddedAttribute</c>.
+            The source will have a <c>hintName</c> of Microsoft.CodeAnalysis.EmbeddedAttribute. 
+            </summary>
+        <remarks>
+            This attribute can be used to mark a type as being only visible to the current assembly. Most commonly, any types provided during this <see cref="T:Microsoft.CodeAnalysis.IncrementalGeneratorPostInitializationContext" />
+            should be marked with this attribute to prevent them from being used by other assemblies. The attribute will prevent any downstream assemblies from consuming the type.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AddSource">
       <MemberSignature Language="C#" Value="public void AddSource (string hintName, Microsoft.CodeAnalysis.Text.SourceText sourceText);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSource(string hintName, class Microsoft.CodeAnalysis.Text.SourceText sourceText) cil managed" />
@@ -50,6 +77,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -90,6 +118,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -128,6 +157,7 @@
         <AssemblyVersion>4.9.0.0</AssemblyVersion>
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
+        <AssemblyVersion>4.14.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.CancellationToken</ReturnType>
