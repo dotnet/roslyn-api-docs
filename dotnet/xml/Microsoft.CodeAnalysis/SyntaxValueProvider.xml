@@ -19,6 +19,7 @@
     <AssemblyVersion>4.12.0.0</AssemblyVersion>
     <AssemblyVersion>4.13.0.0</AssemblyVersion>
     <AssemblyVersion>4.14.0.0</AssemblyVersion>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -53,6 +54,7 @@
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;T&gt;</ReturnType>
@@ -67,7 +69,7 @@
       <Docs>
         <typeparam name="T">The type of the value the syntax node is transformed into</typeparam>
         <param name="predicate">A function that determines if the given <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" /> should be transformed</param>
-        <param name="transform">A function that performs the transform, when <paramref name="predicate" />returns <c>true</c> for a given node</param>
+        <param name="transform">A function that performs the transform, when <paramref name="predicate" /> returns <c>true</c> for a given node</param>
         <summary>
             Creates an <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that can provide a transform over <see cref="T:Microsoft.CodeAnalysis.SyntaxNode" />s
             </summary>
@@ -94,6 +96,7 @@
         <AssemblyVersion>4.12.0.0</AssemblyVersion>
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;T&gt;</ReturnType>
@@ -102,9 +105,9 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="fullyQualifiedMetadataName" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0" />
-        <Parameter Name="predicate" Type="System.Func&lt;Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,System.Boolean&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0" />
-        <Parameter Name="transform" Type="System.Func&lt;Microsoft.CodeAnalysis.GeneratorAttributeSyntaxContext,System.Threading.CancellationToken,T&gt;" Index="2" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0" />
+        <Parameter Name="fullyQualifiedMetadataName" Type="System.String" Index="0" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
+        <Parameter Name="predicate" Type="System.Func&lt;Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken,System.Boolean&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
+        <Parameter Name="transform" Type="System.Func&lt;Microsoft.CodeAnalysis.GeneratorAttributeSyntaxContext,System.Threading.CancellationToken,T&gt;" Index="2" FrameworkAlternate="roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
       </Parameters>
       <Docs>
         <typeparam name="T">To be added.</typeparam>
@@ -119,7 +122,11 @@
             <c>Attribute</c> suffix.  For example <c>"System.CLSCompliantAttribute"</c> for <see cref="T:System.CLSCompliantAttribute" />.
             </summary>
         <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            In the case of partial types, only the parts of the partial type that have the attribute syntactically
+            declared on them will be returned.  If multiple parts have the same attribute declared on them, then
+            all of those parts will be returned.
+            </remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,0 +1,158 @@
+<Type Name="RefactorAllProvider" FullName="Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider">
+  <TypeSignature Language="C#" Value="public abstract class RefactorAllProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RefactorAllProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class RefactorAllProvider" />
+  <TypeSignature Language="F#" Value="type RefactorAllProvider = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Implement this abstract type to provide refactor all occurrences support for code refactorings.
+            </summary>
+    <remarks>
+            TODO: Make public, tracked with https://github.com/dotnet/roslyn/issues/60703
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RefactorAllProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider Create (Func&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext,Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Optional&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;&gt;,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document?&gt;&gt; refactorAllAsync);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider Create(class System.Func`4&lt;class Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext, class Microsoft.CodeAnalysis.Document, valuetype Microsoft.CodeAnalysis.Optional`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt;&gt;, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt;&gt; refactorAllAsync) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider.Create(System.Func{Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext,Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Optional{System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Text.TextSpan}},System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (refactorAllAsync As Func(Of RefactorAllContext, Document, Optional(Of ImmutableArray(Of TextSpan)), Task(Of Document))) As RefactorAllProvider" />
+      <MemberSignature Language="F#" Value="static member Create : Func&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext, Microsoft.CodeAnalysis.Document, Microsoft.CodeAnalysis.Optional&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;&gt;, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; -&gt; Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider" Usage="Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider.Create refactorAllAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refactorAllAsync" Type="System.Func&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext,Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Optional&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;&gt;,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="refactorAllAsync">
+            Callback that will apply the refactorings present in the provided document.  The document returned will only be
+            examined for its content (e.g. it's <see cref="T:Microsoft.CodeAnalysis.SyntaxTree" /> or <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" />.  No other aspects
+            of it (like attributes), or changes to the <see cref="T:Microsoft.CodeAnalysis.Project" /> or <see cref="T:Microsoft.CodeAnalysis.Solution" /> it points at
+            will be considered.
+            </param>
+        <summary>
+            Create a <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider" /> that refactors documents independently. This can be used in the case
+            where refactoring(s) registered by this provider only affect a single <see cref="T:Microsoft.CodeAnalysis.Document" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider Create (Func&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext,Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Optional&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;&gt;,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document?&gt;&gt; refactorAllAsync, System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope&gt; supportedRefactorAllScopes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider Create(class System.Func`4&lt;class Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext, class Microsoft.CodeAnalysis.Document, valuetype Microsoft.CodeAnalysis.Optional`1&lt;valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.Text.TextSpan&gt;&gt;, class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.Document&gt;&gt; refactorAllAsync, valuetype System.Collections.Immutable.ImmutableArray`1&lt;valuetype Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope&gt; supportedRefactorAllScopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider.Create(System.Func{Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext,Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Optional{System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Text.TextSpan}},System.Threading.Tasks.Task{Microsoft.CodeAnalysis.Document}},System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (refactorAllAsync As Func(Of RefactorAllContext, Document, Optional(Of ImmutableArray(Of TextSpan)), Task(Of Document)), supportedRefactorAllScopes As ImmutableArray(Of RefactorAllScope)) As RefactorAllProvider" />
+      <MemberSignature Language="F#" Value="static member Create : Func&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext, Microsoft.CodeAnalysis.Document, Microsoft.CodeAnalysis.Optional&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;&gt;, System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt; * System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope&gt; -&gt; Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider" Usage="Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider.Create (refactorAllAsync, supportedRefactorAllScopes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refactorAllAsync" Type="System.Func&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext,Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.Optional&lt;System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.Text.TextSpan&gt;&gt;,System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.Document&gt;&gt;" />
+        <Parameter Name="supportedRefactorAllScopes" Type="System.Collections.Immutable.ImmutableArray&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="refactorAllAsync">
+            Callback that will apply the refactorings present in the provided document.  The document returned will only be
+            examined for its content (e.g. it's <see cref="T:Microsoft.CodeAnalysis.SyntaxTree" /> or <see cref="T:Microsoft.CodeAnalysis.Text.SourceText" />.  No other aspects
+            of it (like attributes), or changes to the <see cref="T:Microsoft.CodeAnalysis.Project" /> or <see cref="T:Microsoft.CodeAnalysis.Solution" /> it points at
+            will be considered.
+            </param>
+        <param name="supportedRefactorAllScopes">
+            Supported <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope" />s for the refactor all provider.
+            Note that <see cref="F:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope.Custom" /> is not supported by the <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.DocumentBasedRefactorAllProvider" />
+            and should not be part of the supported scopes.
+            </param>
+        <summary>
+            Create a <see cref="T:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider" /> that refactors documents independently. This can be used in the case
+            where refactoring(s) registered by this provider only affect a single <see cref="T:Microsoft.CodeAnalysis.Document" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRefactoringAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction?&gt; GetRefactoringAsync (Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext refactorAllContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class Microsoft.CodeAnalysis.CodeActions.CodeAction&gt; GetRefactoringAsync(class Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext refactorAllContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider.GetRefactoringAsync(Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetRefactoringAsync (refactorAllContext As RefactorAllContext) As Task(Of CodeAction)" />
+      <MemberSignature Language="F#" Value="abstract member GetRefactoringAsync : Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext -&gt; System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;" Usage="refactorAllProvider.GetRefactoringAsync refactorAllContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;Microsoft.CodeAnalysis.CodeActions.CodeAction&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refactorAllContext" Type="Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllContext" />
+      </Parameters>
+      <Docs>
+        <param name="refactorAllContext">To be added.</param>
+        <summary>
+            Gets refactor all occurrences for the given <paramref name="refactorAllContext" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedRefactorAllScopes">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope&gt; GetSupportedRefactorAllScopes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope&gt; GetSupportedRefactorAllScopes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllProvider.GetSupportedRefactorAllScopes" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetSupportedRefactorAllScopes () As IEnumerable(Of RefactorAllScope)" />
+      <MemberSignature Language="F#" Value="abstract member GetSupportedRefactorAllScopes : unit -&gt; seq&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope&gt;&#xA;override this.GetSupportedRefactorAllScopes : unit -&gt; seq&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope&gt;" Usage="refactorAllProvider.GetSupportedRefactorAllScopes " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CodeAnalysis.Workspaces</AssemblyName>
+        <AssemblyVersion>5.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.CodeAnalysis.CodeRefactorings.RefactorAllScope&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
