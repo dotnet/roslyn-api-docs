@@ -20,6 +20,7 @@
     <AssemblyVersion>4.13.0.0</AssemblyVersion>
     <AssemblyVersion>4.14.0.0</AssemblyVersion>
     <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -55,12 +56,17 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;Microsoft.CodeAnalysis.AdditionalText&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides access to all <see cref="T:Microsoft.CodeAnalysis.AdditionalText" /> files included in the compilation.
+            Additional texts are typically non-code files (like .txt, .json, .xml) that can be used as input for source generation.
+            Each additional text that is added, removed, or modified will trigger a new value in the provider.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -88,12 +94,16 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets an <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides access to the <see cref="P:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.AnalyzerConfigOptionsProvider" /> for the compilation.
+            This can be used to read .editorconfig settings and other analyzer configuration options.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,12 +131,16 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;Microsoft.CodeAnalysis.Compilation&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets an <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides access to the <see cref="T:Microsoft.CodeAnalysis.Compilation" /> being processed.
+            The value of this provider changes whenever the compilation changes (e.g., source files, references, or options are modified).
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -137,10 +151,10 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.MetadataReferencesProvider" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MetadataReferencesProvider As IncrementalValueProvider(Of MetadataReference)" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
       <MemberSignature Language="F#" Value="member this.MetadataReferencesProvider : Microsoft.CodeAnalysis.IncrementalValueProvider&lt;Microsoft.CodeAnalysis.MetadataReference&gt;" Usage="Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.MetadataReferencesProvider" FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0" />
-      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;Microsoft.CodeAnalysis.MetadataReference&gt; MetadataReferencesProvider { get; }" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;class Microsoft.CodeAnalysis.MetadataReference&gt; MetadataReferencesProvider" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MetadataReferencesProvider As IncrementalValuesProvider(Of MetadataReference)" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0" />
-      <MemberSignature Language="F#" Value="member this.MetadataReferencesProvider : Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;Microsoft.CodeAnalysis.MetadataReference&gt;" Usage="Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.MetadataReferencesProvider" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0" />
+      <MemberSignature Language="C#" Value="public Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;Microsoft.CodeAnalysis.MetadataReference&gt; MetadataReferencesProvider { get; }" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.CodeAnalysis.IncrementalValuesProvider`1&lt;class Microsoft.CodeAnalysis.MetadataReference&gt; MetadataReferencesProvider" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MetadataReferencesProvider As IncrementalValuesProvider(Of MetadataReference)" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
+      <MemberSignature Language="F#" Value="member this.MetadataReferencesProvider : Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;Microsoft.CodeAnalysis.MetadataReference&gt;" Usage="Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext.MetadataReferencesProvider" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
@@ -158,13 +172,17 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType FrameworkAlternate="roslyn-dotnet-4.0.1;roslyn-dotnet-4.1.0">Microsoft.CodeAnalysis.IncrementalValueProvider&lt;Microsoft.CodeAnalysis.MetadataReference&gt;</ReturnType>
-        <ReturnType FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0">Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;Microsoft.CodeAnalysis.MetadataReference&gt;</ReturnType>
+        <ReturnType FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0">Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;Microsoft.CodeAnalysis.MetadataReference&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides access to all <see cref="T:Microsoft.CodeAnalysis.MetadataReference" />s in the compilation.
+            Each metadata reference (e.g., referenced assemblies) that is added, removed, or modified will trigger a new value in the provider.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -192,12 +210,16 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;Microsoft.CodeAnalysis.ParseOptions&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets an <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides access to the <see cref="T:Microsoft.CodeAnalysis.ParseOptions" /> for the compilation.
+            The value of this provider changes whenever parse options change (e.g., language version or preprocessor symbols).
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -215,6 +237,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -223,14 +246,20 @@
         <TypeParameter Name="TSource" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
-        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.HostOutputProductionContext,TSource&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.HostOutputProductionContext,TSource&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="action">To be added.</param>
-        <summary>To be added.</summary>
+        <typeparam name="TSource">The type of the value provided by the source provider</typeparam>
+        <param name="source">An <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides the input value</param>
+        <param name="action">An action that receives a <see cref="T:Microsoft.CodeAnalysis.HostOutputProductionContext" /> and the input value, and can add host-specific outputs</param>
+        <summary>
+            Registers an output node that will produce host-specific outputs that are not added to the compilation.
+            Host outputs have no defined use and do not contribute to the final compilation. They are made available to the host
+            (i.e., the development environment or build system running the generator, such as Visual Studio, dotnet build, etc.)
+            via <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.HostOutputs" /> and it is up to the host to decide how to use them.
+            The provided action will be invoked with the value from the provider whenever it changes.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -247,6 +276,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -255,14 +285,20 @@
         <TypeParameter Name="TSource" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
-        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.HostOutputProductionContext,TSource&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" Index="0" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
+        <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.HostOutputProductionContext,TSource&gt;" Index="1" FrameworkAlternate="roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="action">To be added.</param>
-        <summary>To be added.</summary>
+        <typeparam name="TSource">The type of each value provided by the source provider</typeparam>
+        <param name="source">An <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides input values</param>
+        <param name="action">An action that receives a <see cref="T:Microsoft.CodeAnalysis.HostOutputProductionContext" /> and an input value, and can add host-specific outputs</param>
+        <summary>
+            Registers an output node that will produce host-specific outputs that are not added to the compilation.
+            Host outputs have no defined use and do not contribute to the final compilation. They are made available to the host
+            (i.e., the development environment or build system running the generator, such as Visual Studio, dotnet build, etc.)
+            via <see cref="P:Microsoft.CodeAnalysis.GeneratorRunResult.HostOutputs" /> and it is up to the host to decide how to use them.
+            The provided action will be invoked once for each value from the provider whenever they change.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -289,6 +325,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -301,10 +338,14 @@
         <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.SourceProductionContext,TSource&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="action">To be added.</param>
-        <summary>To be added.</summary>
+        <typeparam name="TSource">The type of the value provided by the source provider</typeparam>
+        <param name="source">An <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides the input value</param>
+        <param name="action">An action that receives a <see cref="T:Microsoft.CodeAnalysis.SourceProductionContext" /> and the input value, and can add source files or report diagnostics</param>
+        <summary>
+            Registers an output node that will produce implementation source code to be added to the compilation.
+            Implementation sources are treated differently from regular sources in some scenarios and may be excluded from certain compilation outputs.
+            The provided action will be invoked with the value from the provider whenever it changes.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -331,6 +372,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -343,10 +385,14 @@
         <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.SourceProductionContext,TSource&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="action">To be added.</param>
-        <summary>To be added.</summary>
+        <typeparam name="TSource">The type of each value provided by the source provider</typeparam>
+        <param name="source">An <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides input values</param>
+        <param name="action">An action that receives a <see cref="T:Microsoft.CodeAnalysis.SourceProductionContext" /> and an input value, and can add source files or report diagnostics</param>
+        <summary>
+            Registers an output node that will produce implementation source code to be added to the compilation.
+            Implementation sources are treated differently from regular sources in some scenarios and may be excluded from certain compilation outputs.
+            The provided action will be invoked once for each value from the provider whenever they change.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -373,6 +419,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -381,8 +428,12 @@
         <Parameter Name="callback" Type="System.Action&lt;Microsoft.CodeAnalysis.IncrementalGeneratorPostInitializationContext&gt;" />
       </Parameters>
       <Docs>
-        <param name="callback">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="callback">A callback that receives an <see cref="T:Microsoft.CodeAnalysis.IncrementalGeneratorPostInitializationContext" /> and can add initial source files</param>
+        <summary>
+            Registers a callback that will be invoked once, before any other source generation occurs.
+            This is typically used to add source code that should be available for subsequent generation steps, such as attribute definitions.
+            Use <see cref="M:Microsoft.CodeAnalysis.IncrementalGeneratorPostInitializationContext.AddEmbeddedAttributeDefinition" /> to add the EmbeddedAttribute which marks generated types as internal to the current assembly.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -409,6 +460,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -421,10 +473,13 @@
         <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.SourceProductionContext,TSource&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="action">To be added.</param>
-        <summary>To be added.</summary>
+        <typeparam name="TSource">The type of the value provided by the source provider</typeparam>
+        <param name="source">An <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides the input value</param>
+        <param name="action">An action that receives a <see cref="T:Microsoft.CodeAnalysis.SourceProductionContext" /> and the input value, and can add source files or report diagnostics</param>
+        <summary>
+            Registers an output node that will produce source code to be added to the compilation.
+            The provided action will be invoked with the value from the provider whenever it changes.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -451,6 +506,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -463,10 +519,13 @@
         <Parameter Name="action" Type="System.Action&lt;Microsoft.CodeAnalysis.SourceProductionContext,TSource&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="action">To be added.</param>
-        <summary>To be added.</summary>
+        <typeparam name="TSource">The type of each value provided by the source provider</typeparam>
+        <param name="source">An <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides input values</param>
+        <param name="action">An action that receives a <see cref="T:Microsoft.CodeAnalysis.SourceProductionContext" /> and an input value, and can add source files or report diagnostics</param>
+        <summary>
+            Registers an output node that will produce source code to be added to the compilation.
+            The provided action will be invoked once for each value from the provider whenever they change.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -493,12 +552,16 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.SyntaxValueProvider</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Gets a <see cref="T:Microsoft.CodeAnalysis.SyntaxValueProvider" /> that can be used to create syntax-based input nodes for the incremental generator pipeline.
+            Use this to register callbacks that filter and transform syntax nodes in the compilation.
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

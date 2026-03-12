@@ -20,6 +20,7 @@
     <AssemblyVersion>4.13.0.0</AssemblyVersion>
     <AssemblyVersion>4.14.0.0</AssemblyVersion>
     <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <AssemblyVersion>5.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -53,6 +54,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;System.Collections.Immutable.ImmutableArray&lt;TSource&gt;&gt;</ReturnType>
@@ -64,10 +66,13 @@
         <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" RefType="this" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of each value in the input provider</typeparam>
+        <param name="source">The input provider with multiple values</param>
+        <summary>
+            Collects all values from an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> into a single <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> containing an <see cref="T:System.Collections.Immutable.ImmutableArray`1" />.
+            This is useful when you need to aggregate multiple values into a single collection to process them together.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides an <see cref="T:System.Collections.Immutable.ImmutableArray`1" /> containing all values</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -94,6 +99,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;System.ValueTuple&lt;TLeft,TRight&gt;&gt;</ReturnType>
@@ -113,12 +119,15 @@
         <Parameter Name="provider2" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TRight&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TLeft">To be added.</typeparam>
-        <typeparam name="TRight">To be added.</typeparam>
-        <param name="provider1">To be added.</param>
-        <param name="provider2">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TLeft">The type of the value in the left provider</typeparam>
+        <typeparam name="TRight">The type of the value in the right provider</typeparam>
+        <param name="provider1">The left provider with a single value</param>
+        <param name="provider2">The right provider with a single value</param>
+        <summary>
+            Combines two <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" />s into a new <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> of a tuple.
+            The single values from both providers are paired together.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides a tuple of (TLeft, TRight)</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -145,6 +154,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;System.ValueTuple&lt;TLeft,TRight&gt;&gt;</ReturnType>
@@ -164,12 +174,15 @@
         <Parameter Name="provider2" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TRight&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TLeft">To be added.</typeparam>
-        <typeparam name="TRight">To be added.</typeparam>
-        <param name="provider1">To be added.</param>
-        <param name="provider2">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TLeft">The type of each value in the left provider</typeparam>
+        <typeparam name="TRight">The type of the value in the right provider</typeparam>
+        <param name="provider1">The left provider with multiple values</param>
+        <param name="provider2">The right provider with a single value</param>
+        <summary>
+            Combines an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> with an <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> to create a new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> of tuples.
+            Each value from the left provider is paired with the single value from the right provider.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides tuples of (TLeft, TRight)</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -196,6 +209,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TResult&gt;</ReturnType>
@@ -209,12 +223,15 @@
         <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,TResult&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <typeparam name="TResult">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="selector">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of the input value</typeparam>
+        <typeparam name="TResult">The type of the output value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="selector">A function that transforms a <typeparamref name="TSource" /> into a <typeparamref name="TResult" /></param>
+        <summary>
+            Transforms an <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> into a new <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> by applying a transform function to the value.
+            This is a 1-to-1 transformation where each input value produces exactly one output value.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that provides the transformed value</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -241,6 +258,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
@@ -254,12 +272,15 @@
         <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,TResult&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <typeparam name="TResult">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="selector">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of each input value</typeparam>
+        <typeparam name="TResult">The type of each output value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="selector">A function that transforms each <typeparamref name="TSource" /> into a <typeparamref name="TResult" /></param>
+        <summary>
+            Transforms an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> into a new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> by applying a transform function to each value.
+            This is a 1-to-1 transformation where each input value produces exactly one output value.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides the transformed values</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -286,6 +307,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
@@ -299,12 +321,15 @@
         <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable&lt;TResult&gt;&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <typeparam name="TResult">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="selector">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of the input value</typeparam>
+        <typeparam name="TResult">The type of each output value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="selector">A function that transforms a <typeparamref name="TSource" /> into an <see cref="T:System.Collections.Generic.IEnumerable`1" /></param>
+        <summary>
+            Transforms an <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> into a new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> by applying a transform function that returns zero or more results for the input value.
+            This is a 1-to-many transformation where each input value can produce zero, one, or multiple output values.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides the transformed values</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -331,6 +356,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
@@ -344,12 +370,15 @@
         <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Immutable.ImmutableArray&lt;TResult&gt;&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <typeparam name="TResult">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="selector">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of the input value</typeparam>
+        <typeparam name="TResult">The type of each output value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="selector">A function that transforms a <typeparamref name="TSource" /> into an <see cref="T:System.Collections.Immutable.ImmutableArray`1" /></param>
+        <summary>
+            Transforms an <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> into a new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> by applying a transform function that returns zero or more results for the input value.
+            This is a 1-to-many transformation where each input value can produce zero, one, or multiple output values.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides the transformed values</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -376,6 +405,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
@@ -389,12 +419,15 @@
         <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable&lt;TResult&gt;&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <typeparam name="TResult">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="selector">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of each input value</typeparam>
+        <typeparam name="TResult">The type of each output value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="selector">A function that transforms each <typeparamref name="TSource" /> into an <see cref="T:System.Collections.Generic.IEnumerable`1" /></param>
+        <summary>
+            Transforms an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> into a new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> by applying a transform function that returns zero or more results for each input value.
+            This is a many-to-many transformation where each input value can produce zero, one, or multiple output values.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides the transformed values</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -421,6 +454,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TResult&gt;</ReturnType>
@@ -434,12 +468,15 @@
         <Parameter Name="selector" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Collections.Immutable.ImmutableArray&lt;TResult&gt;&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <typeparam name="TResult">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="selector">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of each input value</typeparam>
+        <typeparam name="TResult">The type of each output value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="selector">A function that transforms each <typeparamref name="TSource" /> into an <see cref="T:System.Collections.Immutable.ImmutableArray`1" /></param>
+        <summary>
+            Transforms an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> into a new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> by applying a transform function that returns zero or more results for each input value.
+            This is a many-to-many transformation where each input value can produce zero, one, or multiple output values.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides the transformed values</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -466,6 +503,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;</ReturnType>
@@ -478,11 +516,13 @@
         <Parameter Name="predicate" Type="System.Func&lt;TSource,System.Boolean&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="predicate">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of each value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="predicate">A function that determines whether a value should be included in the output</param>
+        <summary>
+            Filters values from an <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> based on a predicate, producing a new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> containing only values that satisfy the predicate.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that provides only values where the predicate returns <c>true</c></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -509,6 +549,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;</ReturnType>
@@ -521,11 +562,15 @@
         <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;TSource&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="comparer">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of the value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="comparer">The custom equality comparer to use</param>
+        <summary>
+            Specifies a custom <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> to use when comparing values from this provider for caching purposes.
+            By default, the generator infrastructure uses <see cref="P:System.Collections.Generic.EqualityComparer`1.Default" /> to determine if values have changed.
+            Use this method when you need custom equality logic, such as for complex objects or when you want to control when transformations are re-executed.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> that uses the specified comparer</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -552,6 +597,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;</ReturnType>
@@ -564,11 +610,15 @@
         <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;TSource&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="comparer">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of each value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="comparer">The custom equality comparer to use</param>
+        <summary>
+            Specifies a custom <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> to use when comparing values from this provider for caching purposes.
+            By default, the generator infrastructure uses <see cref="P:System.Collections.Generic.EqualityComparer`1.Default" /> to determine if values have changed.
+            Use this method when you need custom equality logic, such as for complex objects or when you want to control when transformations are re-executed.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> that uses the specified comparer</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -594,6 +644,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;</ReturnType>
@@ -602,15 +653,18 @@
         <TypeParameter Name="TSource" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;" RefType="this" Index="0" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValueProvider&lt;TSource&gt;" RefType="this" Index="0" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="name">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of the value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="name">The tracking name to assign</param>
+        <summary>
+            Assigns a name to this provider step for tracking and debugging purposes.
+            This name can be used in testing and diagnostic scenarios to understand the execution pipeline.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValueProvider`1" /> with the specified tracking name</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -636,6 +690,7 @@
         <AssemblyVersion>4.13.0.0</AssemblyVersion>
         <AssemblyVersion>4.14.0.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
+        <AssemblyVersion>5.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;</ReturnType>
@@ -644,15 +699,18 @@
         <TypeParameter Name="TSource" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" RefType="this" Index="0" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0" />
+        <Parameter Name="source" Type="Microsoft.CodeAnalysis.IncrementalValuesProvider&lt;TSource&gt;" RefType="this" Index="0" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="roslyn-dotnet-4.1.0;roslyn-dotnet-4.2.0;roslyn-dotnet-4.3.0;roslyn-dotnet-4.4.0;roslyn-dotnet-4.5.0;roslyn-dotnet-4.6.0;roslyn-dotnet-4.7.0;roslyn-dotnet-4.8.0;roslyn-dotnet-4.9.0;roslyn-dotnet-4.12.0;roslyn-dotnet-4.13.0;roslyn-dotnet-4.14.0;roslyn-dotnet-5.0.0;roslyn-dotnet-5.3.0" />
       </Parameters>
       <Docs>
-        <typeparam name="TSource">To be added.</typeparam>
-        <param name="source">To be added.</param>
-        <param name="name">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <typeparam name="TSource">The type of each value</typeparam>
+        <param name="source">The input provider</param>
+        <param name="name">The tracking name to assign</param>
+        <summary>
+            Assigns a name to this provider step for tracking and debugging purposes.
+            This name can be used in testing and diagnostic scenarios to understand the execution pipeline.
+            </summary>
+        <returns>A new <see cref="T:Microsoft.CodeAnalysis.IncrementalValuesProvider`1" /> with the specified tracking name</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
