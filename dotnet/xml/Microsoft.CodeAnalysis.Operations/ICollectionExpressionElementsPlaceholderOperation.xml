@@ -1,0 +1,40 @@
+<Type Name="ICollectionExpressionElementsPlaceholderOperation" FullName="Microsoft.CodeAnalysis.Operations.ICollectionExpressionElementsPlaceholderOperation">
+  <TypeSignature Language="C#" Value="public interface ICollectionExpressionElementsPlaceholderOperation : Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ICollectionExpressionElementsPlaceholderOperation implements class Microsoft.CodeAnalysis.IOperation" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CodeAnalysis.Operations.ICollectionExpressionElementsPlaceholderOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ICollectionExpressionElementsPlaceholderOperation&#xA;Implements IOperation" />
+  <TypeSignature Language="F#" Value="type ICollectionExpressionElementsPlaceholderOperation = interface&#xA;    interface IOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CodeAnalysis</AssemblyName>
+    <AssemblyVersion>5.6.0.0</AssemblyVersion>
+    <AssemblyVersion>5.9.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.CodeAnalysis.IOperation</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents the elements of a collection expression as they are passed to some construction method
+            specified by a <c>[CollectionBuilder]</c> attribute.  This is distinct from <see cref="P:Microsoft.CodeAnalysis.Operations.ICollectionExpressionOperation.Elements" />
+            which contains the elements as they appear in source.  This will appear as the 'Value' of an <see cref="T:Microsoft.CodeAnalysis.Operations.IArgumentOperation" />
+            in <see cref="P:Microsoft.CodeAnalysis.Operations.ICollectionExpressionOperation.ConstructArguments" /> when the construction method is a collection builder method,
+            representing the final <c>ReadOnlySpan</c> passed to that construction method containing the fully evaluated elements of the
+            collection expression.
+            </summary>
+    <remarks>
+      <para>This node is associated with the following operation kinds:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="F:Microsoft.CodeAnalysis.OperationKind.CollectionExpressionElementsPlaceholder" />
+          </description>
+        </item>
+      </list>
+      <para>This interface is reserved for implementation by its associated APIs. We reserve the right to
+            change it in the future.</para>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>
